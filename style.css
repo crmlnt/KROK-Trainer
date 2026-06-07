@@ -1,0 +1,247 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+.quiz-container {
+  background: white;
+  width: 100%;
+  max-width: 850px;
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+a {
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.version-text {
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+}
+
+.top-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.danger-zone {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #444;
+}
+
+#clear-errors-btn {
+  background-color: #ef4444;
+  color: white;
+}
+
+
+h1 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+select {
+  height: 40px;  
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 13px;
+}
+
+button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+#question-text {
+  line-height: 1.5;
+  margin-bottom: 25px;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.answer-btn {
+  display: block;
+  width: 100%;
+  margin: 12px 0;
+  padding: 16px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 12px;
+  border: 2px solid #ddd;
+  background: white;
+  transition: all 0.2s ease;
+}
+
+.answer-btn:hover {
+  border-color: #22c55e;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+
+.answer-btn.correct {
+  background-color: #14532d;
+  color: white;
+  border-color: #22c55e;
+}
+
+.answer-btn.wrong {
+  background-color: #7f1d1d;
+  color: white;
+  border-color: #ef4444;
+}
+
+.action-buttons button {
+  min-width: 220px;
+}
+
+#progress-bar {
+  width: 100%;
+  height: 25px;
+  margin-bottom: 20px;
+}
+
+#error-log {
+  max-height: 150px;
+  overflow-y: auto;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.exam-summary {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  background: #f4f4f4;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.exam-summary h2 {
+  margin-bottom: 15px;
+}
+
+.exam-summary h3 {
+  margin-top: 20px;
+  font-size: 24px;
+}
+
+.progress-container {
+  width: 100%;
+  height: 12px;
+  background: #e0e0e0;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 15px 0;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: #22c55e;
+  border-radius: 20px;
+  transition: width 0.3s ease;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+body.dark-mode .quiz-container {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+body.dark-mode select {
+  background-color: #2a2a2a;
+  color: white;
+  border: 1px solid #555;
+  border-radius: 10px;
+}
+
+body.dark-mode button {
+  background-color: #333;
+  color: white;
+}
+
+body.dark-mode .answer-btn {
+  background-color: #2a2a2a;
+  color: white;
+}
+
+body.dark-mode .exam-summary {
+  background-color: #222;
+  color: white;
+}
+
+body.dark-mode .progress-container {
+  background-color: #333;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p,
+body.dark-mode label {
+  color: #f0f0f0;
+}
+
+body.dark-mode select {
+  background-color: #2a2a2a;
+  color: white;
+  border: 1px solid #555;
+}
+
+body.dark-mode #question-text,
+body.dark-mode #question-number,
+body.dark-mode #subject-display {
+  color: #f0f0f0;
+}
+
+body.dark-mode .answer-btn.correct {
+  background-color: #14532d !important;
+  color: white !important;
+  border-color: #22c55e !important;
+}
+
+body.dark-mode .answer-btn.wrong {
+  background-color: #7f1d1d !important;
+  color: white !important;
+  border-color: #ef4444 !important;
+}
