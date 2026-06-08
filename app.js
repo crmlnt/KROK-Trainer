@@ -487,11 +487,22 @@ reviewBtn.addEventListener("click", () => {
 
 
 clearErrorsBtn.addEventListener("click", () => {
+
+  const confirmDelete = confirm(
+    "Are you sure you want to delete the entire Error Log? This action cannot be undone."
+  );
+
+  if (!confirmDelete) {
+    return;
+  }
+
   errors = [];
 
   localStorage.removeItem("errors");
 
   updateErrorLog();
+
+  alert("Error Log deleted.");
 });
 
 
