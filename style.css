@@ -26,7 +26,8 @@ a {
 
 .version-text {
   margin-bottom: 5px;
-  font-size: 1.1rem;
+  font-size: 0.5rem;
+  text-align: right;
 }
 
 .top-controls {
@@ -35,6 +36,21 @@ a {
   gap: 12px;
   flex-wrap: wrap;
   margin: 20px 0;
+}
+
+.guide-btn {
+  padding: 12px 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  background: #eef2ff;
+  color: #111827;
+  transition: all 0.2s ease;
+}
+
+.guide-btn:hover {
+  transform: translateY(-2px);
+  background: #dbeafe;
 }
 
 .controls {
@@ -281,5 +297,10 @@ body.dark-mode .answer-btn.wrong {
 
 body.dark-mode #subject-display {
   background: #2a2a2a;
+  color: white;
+}
+
+body.dark-mode .guide-btn {
+  background: #333;
   color: white;
 }
