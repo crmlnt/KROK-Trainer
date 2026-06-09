@@ -333,3 +333,120 @@ body.dark-mode .guide-btn {
   background: #333;
   color: white;
 }
+
+/*LANDING PAGE*/
+
+.landing-body {
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #f4f7fb, #e8eef7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.landing-container {
+  width: 100%;
+  max-width: 960px;
+  padding: 24px;
+}
+
+.hero-card {
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 48px 32px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(20, 40, 80, 0.12);
+}
+
+.logo-circle {
+  width: 82px;
+  height: 82px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: #eef4ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 42px;
+}
+
+.hero-card h1 {
+  margin: 0;
+  font-size: 2.6rem;
+  color: #1f2937;
+}
+
+.hero-subtitle {
+  margin: 16px auto 8px;
+  max-width: 620px;
+  font-size: 1.15rem;
+  color: #4b5563;
+}
+
+.hero-text {
+  margin: 0 auto 36px;
+  max-width: 680px;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+.exam-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.exam-card {
+  text-decoration: none;
+  color: inherit;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 22px;
+  padding: 28px 22px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border 0.2s ease;
+}
+
+.exam-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 35px rgba(31, 41, 55, 0.12);
+  border-color: #93c5fd;
+}
+
+.exam-icon {
+  font-size: 40px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.exam-card h2 {
+  margin: 0 0 8px;
+  color: #111827;
+}
+
+.exam-card p {
+  margin: 0;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+.exam-card.disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+@media (max-width: 700px) {
+  .hero-card {
+    padding: 36px 22px;
+  }
+
+  .hero-card h1 {
+    font-size: 2rem;
+  }
+
+  .exam-grid {
+    grid-template-columns: 1fr;
+  }
+}

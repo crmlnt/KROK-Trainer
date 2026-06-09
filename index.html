@@ -2,75 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KROK Trainer</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <div class="quiz-container">
-    <div class="top-bar">
-    
-        <div class="header-row">
-            <h1 id="appTitle">KROK Trainer</h1>
-    
-            <div class="top-right-controls">
-                <span class="version-text">
-                    v1.7 created by Carmine Lentini
-                </span>
-    
-                <button id="theme-btn">🌙 Dark Mode</button>
-            </div>
-        </div>
+<body class="landing-body">
 
-    
-        <div class="top-controls">
-            <div class="controls">
-                <label for="subjectFilter">Subject:</label>
-                <select id="subjectFilter">
-                    <option value="all">All Subjects (2890)</option>
-                </select>
-            </div>
-            <button id="homeBtn" class="button">🏠 Home</button>
-            <button id="exam-btn">Start Exam Mode</button>
-            <button id="stats-btn">Statistics</button>
-            <button onclick="window.location.href='guide.html'">Tutorial</button>
-        </div>
-    </div>
-    
-    
-    <div class="progress-container">
-        <div id="progressBar" class="progress-bar"></div>
-    </div>
-    <p id="question-number">Question 1</p>
-    <p id="subject-display">Subject: -</p>
-    <h2 id="question-text">Question text</h2>
+  <main class="landing-container">
+    <section class="hero-card">
+      <div class="logo-circle">🩺</div>
 
-    <div id="answers-container"></div>
+      <h1>KROK Trainer</h1>
 
-    <p id="feedback"></p>
-    <p id="score">Score: 0</p>
-    <p id="stats">Correct: 0 | Wrong: 0 | Accuracy: 0%</p>
-<hr>
+      <p class="hero-subtitle">
+        A simple and focused training app for medical students preparing for the KROK exams.
+      </p>
 
-<p id="error-count">Errors: 0</p>
+      <p class="hero-text">
+        Practice multiple-choice questions, check your answers instantly, review your mistakes,
+        and prepare with a structured exam-style approach.
+      </p>
 
+      <div class="exam-grid">
+        <a href="krok1.html" class="exam-card">
+          <span class="exam-icon">📘</span>
+          <h2>KROK 1</h2>
+          <p>Basic sciences and pre-clinical preparation.</p>
+        </a>
 
-<ul id="error-log" style="display: none;"></ul>
+        <a href="#" class="exam-card disabled">
+          <span class="exam-icon">📗</span>
+          <h2>KROK 2</h2>
+          <p>Clinical sciences preparation. Coming soon.</p>
+        </a>
+      </div>
+    </section>
+  </main>
 
-<div class="action-buttons">
-    <button id="next-btn" class="primary-actions">Next question</button>
-    <div class="export-actions">
-        <button id="review-btn">Review mistakes</button>
-        <button id="export-errors-btn">Export Error Log</button>
-        <button id="exportExamLogBtn" class="button">Export Exam Log</button>
-    </div>
-</div>
-
-<div class="danger-zone">
-    <button id="clear-errors-btn">Clear Error Log</button>
-</div>
-
-  </div>
-
-  <script src="app.js"></script>
 </body>
 </html>
