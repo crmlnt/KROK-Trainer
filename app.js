@@ -60,6 +60,21 @@ async function loadQuestions() {
   showQuestion();
 }
 
+function removeDuplicateQuestions(questionList) {
+  const seen = new Set();
+
+  return questionList.filter(q => {
+    const normalizedQuestion = q.question.trim().toLowerCase();
+
+    if (seen.has(normalizedQuestion)) {
+      return false;
+    }
+
+    seen.add(normalizedQuestion);
+    return true;
+  });
+}
+
 function populateSubjectFilter() {
   const subjectFilter = document.getElementById("subjectFilter");
 
@@ -240,8 +255,9 @@ function startExamMode() {
   reviewMode = false;
 
   const filteredQuestions = getFilteredQuestions();
+  const uniqueQuestions = removeDuplicateQuestions(filteredQuestions);
 
-  if (filteredQuestions.length === 0) {
+  if (uniqueQuestions.length === 0) {
     alert("No questions found for this subject.");
     return;
   }
@@ -257,7 +273,7 @@ function startExamMode() {
   }
 
   if (userChoice.toLowerCase() === "all") {
-    examCount = filteredQuestions.length;
+    examCount = uniqueQuestions.length;
   } else {
     examCount = Number(userChoice);
   }
@@ -267,11 +283,11 @@ function startExamMode() {
     return;
   }
 
-  if (examCount > filteredQuestions.length) {
-    examCount = filteredQuestions.length;
+  if (examCount > uniqueQuestions.length) {
+    examCount = uniqueQuestions.length;
   }
 
-  questions = shuffleArray(filteredQuestions).slice(0, examCount);
+  questions = shuffleArray(uniqueQuestions).slice(0, examCount);
 
   currentQuestionIndex = 0;
   score = 0;
