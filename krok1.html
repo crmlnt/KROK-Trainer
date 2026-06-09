@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>KROK Trainer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="quiz-container">
+    <div class="top-bar">
+    
+        <div class="header-row">
+            <h1 id="appTitle">KROK Trainer</h1>
+    
+            <div class="top-right-controls">
+                <span class="version-text">
+                    v1.7 created by Carmine Lentini
+                </span>
+    
+                <button id="theme-btn">🌙 Dark Mode</button>
+            </div>
+        </div>
+
+    
+        <div class="top-controls">
+            <div class="controls">
+                <label for="subjectFilter">Subject:</label>
+                <select id="subjectFilter">
+                    <option value="all">All Subjects (2890)</option>
+                </select>
+            </div>
+            <button id="homeBtn" class="button">🏠 Home</button>
+            <button id="exam-btn">📖 Start Exam Mode</button>
+            <button id="stats-btn">📊 Statistics</button>
+            <button onclick="window.location.href='guide.html'">🎓 Tutorial</button>
+        </div>
+    </div>
+    
+    
+    <div class="progress-container">
+        <div id="progressBar" class="progress-bar"></div>
+    </div>
+    <p id="question-number">Question 1</p>
+    <p id="subject-display">Subject: -</p>
+    <h2 id="question-text">Question text</h2>
+
+    <div id="answers-container"></div>
+
+    <p id="feedback"></p>
+    <p id="score">Score: 0</p>
+    <p id="stats">Correct: 0 | Wrong: 0 | Accuracy: 0%</p>
+<hr>
+
+<p id="error-count">Errors: 0</p>
+
+
+<ul id="error-log" style="display: none;"></ul>
+
+<div class="action-buttons">
+    <button id="next-btn" class="primary-actions">Next question</button>
+    <div class="export-actions">
+        <button id="review-btn">Review mistakes</button>
+        <button id="export-errors-btn">Export Error Log</button>
+        <button id="exportExamLogBtn" class="button">Export Exam Log</button>
+    </div>
+</div>
+
+<div class="danger-zone">
+    <button id="clear-errors-btn">Clear Error Log</button>
+</div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
