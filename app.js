@@ -10,6 +10,7 @@ let reviewMode = false;
 let correctAnswers = 0;
 let wrongAnswers = 0;
 let examMode = false;
+let examSessionLog = [];
 
 // HTML ELEMENTS
 
@@ -148,6 +149,18 @@ function checkAnswer(button, isCorrect) {
   const currentQuestion = questions[currentQuestionIndex];
   saveSubjectStats(currentQuestion.subject, isCorrect);
 
+  if (examMode) {
+  examSessionLog.push({
+    date: new Date().toLocaleDateString(),
+    id: currentQuestion.id,
+    subject: currentQuestion.subject,
+    question: currentQuestion.question,
+    yourAnswer: button.textContent,
+    correctAnswer: currentQuestion.answers[currentQuestion.correct],
+    result: isCorrect ? "Correct" : "Wrong"
+  });
+}
+
   if (isCorrect) {
     button.classList.add("correct");
     feedback.textContent = "Correct!";
@@ -251,6 +264,7 @@ function getFilteredQuestions() {
 }
 
 function startExamMode() {
+  examSessionLog = [];
   examMode = true;
   reviewMode = false;
 
@@ -426,6 +440,56 @@ function exportErrorLog() {
   alert("Error log copied to clipboard!");
 }
 
+function exportExamLog() {
+  if (examSessionLog.length === 0) {
+    alert("No exam session data available.");
+    return;
+  }
+
+  const headers = [
+    "Date",
+    "Subject",
+    "Question",
+    "Your Answer",
+    "Correct Answer",
+    "Result"
+  ];
+
+  const rows = examSessionLog.map(item => [
+    item.date,
+    item.subject,
+    item.question,
+    item.yourAnswer,
+    item.correctAnswer,
+    item.result
+  ]);
+
+  const csvContent = [
+    headers.join(","),
+    ...rows.map(row =>
+      row.map(value =>
+        `"${String(value).replace(/"/g, '""')}"`
+      ).join(",")
+    )
+  ].join("\n");
+
+  const blob = new Blob([csvContent], {
+    type: "text/csv;charset=utf-8;"
+  });
+
+  const url = URL.createObjectURL(blob);
+
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = `krok_exam_log_${new Date().toISOString().slice(0, 10)}.csv`;
+
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+
+  URL.revokeObjectURL(url);
+}
+
 
 // EVEMT LISTENER
 
@@ -535,6 +599,10 @@ themeBtn.addEventListener("click", () => {
     localStorage.setItem("theme", "light");
   }
 });
+
+document
+  .getElementById("exportExamLogBtn")
+  .addEventListener("click", exportExamLog);
 
 // APP START
 

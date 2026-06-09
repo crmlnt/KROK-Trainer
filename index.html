@@ -8,7 +8,7 @@
 <body>
   <div class="quiz-container">
     <h1>KROK Trainer</h1>
-    <p class="version-text">v1.6.1 created By Carmine Lentini</p> 
+    <p class="version-text">v1.7 created By Carmine Lentini</p> 
     <p>
 
     <div class="top-controls">
@@ -44,9 +44,12 @@
 <ul id="error-log" style="display: none;"></ul>
 
 <div class="action-buttons">
-    <button id="next-btn">Next question</button>
-    <button id="review-btn">Review mistakes</button>
-    <button id="export-errors-btn">Export Error Log</button>
+    <button id="next-btn" class="primary-actions">Next question</button>
+    <div class="export-actions">
+        <button id="review-btn">Review mistakes</button>
+        <button id="export-errors-btn">Export Error Log</button>
+        <button id="exportExamLogBtn" class="button">Export Exam Log</button>
+    </div>
 </div>
 
 <div class="danger-zone">

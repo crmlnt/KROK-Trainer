@@ -61,9 +61,26 @@ a {
 
 .action-buttons {
   display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-  margin-top: 10px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.export-actions {
+  display: flex;
+  gap: 16px;
+}
+
+.primary-actions {
+  background-color: #2563eb;
+  color: white;
+  font-weight: 700;
+}
+
+.secondary-actions {
+  background-color: #e5e7eb;
+  color: #111827;
 }
 
 .danger-zone {
