@@ -490,8 +490,39 @@ function exportExamLog() {
   URL.revokeObjectURL(url);
 }
 
+function goHome() {
+  examMode = false;
+  reviewMode = false;
+  answered = false;
+
+  currentQuestionIndex = 0;
+  score = 0;
+  correctAnswers = 0;
+  wrongAnswers = 0;
+
+  questions = getFilteredQuestions();
+
+  scoreText.textContent = "Score: 0";
+  feedback.textContent = "";
+  nextBtn.style.display = "none";
+  reviewBtn.style.display = "none";
+
+  updateStats();
+
+  if (questions.length > 0) {
+    showQuestion();
+  } else {
+    questionText.textContent = "No questions found for this subject.";
+    questionNumber.textContent = "";
+    subjectDisplay.textContent = "";
+    answersContainer.innerHTML = "";
+    updateProgressBar();
+  }
+}
 
 // EVEMT LISTENER
+
+document.getElementById("homeBtn").addEventListener("click", goHome);
 
 exportErrorsBtn.addEventListener("click", exportErrorLog);
 

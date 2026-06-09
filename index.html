@@ -7,22 +7,35 @@
 </head>
 <body>
   <div class="quiz-container">
-    <h1>KROK Trainer</h1>
-    <p class="version-text">v1.7 created By Carmine Lentini</p> 
-    <p>
-
-    <div class="top-controls">
-        <div class="controls">
-            <label for="subjectFilter">Subject:</label>
-            <select id="subjectFilter">
-                <option value="all">All Subjects (2890)</option>
-            </select>
+    <div class="top-bar">
+    
+        <div class="header-row">
+            <h1 id="appTitle">KROK Trainer</h1>
+    
+            <div class="top-right-controls">
+                <span class="version-text">
+                    v1.7 created by Carmine Lentini
+                </span>
+    
+                <button id="theme-btn">🌙 Dark Mode</button>
+            </div>
         </div>
-        <button id="theme-btn">🌙 Dark Mode</button>
-        <button id="exam-btn">Start Exam Mode</button>
-        <button id="stats-btn">Statistics</button>
-        <button onclick="window.location.href='guide.html'">Tutorial</button>
+
+    
+        <div class="top-controls">
+            <div class="controls">
+                <label for="subjectFilter">Subject:</label>
+                <select id="subjectFilter">
+                    <option value="all">All Subjects (2890)</option>
+                </select>
+            </div>
+            <button id="homeBtn" class="button">🏠 Home</button>
+            <button id="exam-btn">Start Exam Mode</button>
+            <button id="stats-btn">Statistics</button>
+            <button onclick="window.location.href='guide.html'">Tutorial</button>
+        </div>
     </div>
+    
     
     <div class="progress-container">
         <div id="progressBar" class="progress-bar"></div>
