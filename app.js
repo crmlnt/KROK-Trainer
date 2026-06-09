@@ -448,6 +448,7 @@ function exportExamLog() {
 
   const headers = [
     "Date",
+    "ID",
     "Subject",
     "Question",
     "Your Answer",
@@ -457,6 +458,7 @@ function exportExamLog() {
 
   const rows = examSessionLog.map(item => [
     item.date,
+    item.id,
     item.subject,
     item.question,
     item.yourAnswer,
