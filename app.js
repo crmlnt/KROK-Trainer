@@ -11,6 +11,7 @@ let correctAnswers = 0;
 let wrongAnswers = 0;
 let examMode = false;
 let examSessionLog = [];
+let reviewExamIndex = 0;
 
 // HTML ELEMENTS
 
@@ -33,6 +34,10 @@ const progressBar = document.getElementById("progressBar");
 const statsBtn = document.getElementById("stats-btn");
 const themeBtn = document.getElementById("theme-btn");
 const exportErrorsBtn = document.getElementById("export-errors-btn");
+const reviewExamBtn = document.getElementById("reviewExamBtn");
+const prevReviewBtn = document.getElementById("prevReviewBtn");
+const nextReviewBtn = document.getElementById("nextReviewBtn");
+
 
 if (localStorage.getItem("theme") === "dark") {
   document.body.classList.add("dark-mode");
@@ -109,6 +114,11 @@ function showQuestion() {
   answersContainer.innerHTML = "";
   nextBtn.style.display = "none";
   reviewBtn.style.display = "none";
+  reviewExamBtn.style.display = "none";
+  prevReviewBtn.style.display = "none";
+  nextReviewBtn.style.display = "none";
+
+  hideExportActions();
 
   const currentQuestion = questions[currentQuestionIndex];
   subjectDisplay.textContent =
@@ -155,6 +165,7 @@ function checkAnswer(button, isCorrect) {
     id: currentQuestion.id,
     subject: currentQuestion.subject,
     question: currentQuestion.question,
+    answers: currentQuestion.answers,
     yourAnswer: button.textContent,
     correctAnswer: currentQuestion.answers[currentQuestion.correct],
     result: isCorrect ? "Correct" : "Wrong"
@@ -270,6 +281,7 @@ function startExamMode() {
 
   const filteredQuestions = getFilteredQuestions();
   const uniqueQuestions = removeDuplicateQuestions(filteredQuestions);
+
 
   if (uniqueQuestions.length === 0) {
     alert("No questions found for this subject.");
@@ -522,13 +534,104 @@ function goHome() {
   }
 }
 
+function startExamReview() {
+  if (examSessionLog.length === 0) {
+    alert("No exam data available for review.");
+    return;
+  }
+
+  reviewExamIndex = 0;
+  showExamReviewQuestion();
+}
+
+function showExamReviewQuestion() {
+  const item = examSessionLog[reviewExamIndex];
+
+  questionNumber.textContent =
+    `Review Question ${reviewExamIndex + 1} of ${examSessionLog.length}`;
+
+  subjectDisplay.textContent =
+    `Subject: ${item.subject} | ID: ${item.id}`;
+
+  questionText.textContent = item.question;
+
+  answersContainer.innerHTML = "";
+
+  item.answers.forEach((answer) => {
+    const answerDiv = document.createElement("div");
+    answerDiv.classList.add("review-answer");
+
+    answerDiv.textContent = answer;
+
+    if (answer === item.correctAnswer) {
+      answerDiv.classList.add("correct-review-answer");
+    }
+
+    if (answer === item.yourAnswer && item.result === "Wrong") {
+      answerDiv.classList.add("wrong-review-answer");
+    }
+
+    answersContainer.appendChild(answerDiv);
+  });
+
+  feedback.innerHTML = `
+    <div class="exam-review-result">
+      <p><strong>Your answer:</strong> ${item.yourAnswer}</p>
+      <p><strong>Correct answer:</strong> ${item.correctAnswer}</p>
+      <p><strong>Result:</strong> ${item.result}</p>
+    </div>
+  `;
+
+  prevReviewBtn.style.display = reviewExamIndex > 0 ? "inline-block" : "none";
+  nextReviewBtn.style.display = reviewExamIndex < examSessionLog.length - 1 ? "inline-block" : "none";
+
+  nextBtn.style.display = "none";
+  reviewExamBtn.style.display = "none";
+}
+
+function hideExportActions() {
+  document.getElementById("export-errors-btn").style.display = "none";
+  document.getElementById("exportExamLogBtn").style.display = "none";
+  reviewBtn.style.display = "none";
+  reviewExamBtn.style.display = "none";
+}
+
+function showExportActions() {
+  document.getElementById("export-errors-btn").style.display = "inline-block";
+  document.getElementById("exportExamLogBtn").style.display = "inline-block";
+
+  if (errors.length > 0) {
+    reviewBtn.style.display = "inline-block";
+  }
+
+  if (examSessionLog.length > 0) {
+    reviewExamBtn.style.display = "inline-block";
+  }
+}
+
 // EVEMT LISTENER
+
+reviewExamBtn.addEventListener("click", startExamReview);
 
 document.getElementById("homeBtn").addEventListener("click", goHome);
 
 exportErrorsBtn.addEventListener("click", exportErrorLog);
 
 statsBtn.addEventListener("click", showStatistics);
+
+prevReviewBtn.addEventListener("click", () => {
+  if (reviewExamIndex > 0) {
+    reviewExamIndex--;
+    showExamReviewQuestion();
+  }
+});
+
+nextReviewBtn.addEventListener("click", () => {
+  if (reviewExamIndex < examSessionLog.length - 1) {
+    reviewExamIndex++;
+    showExamReviewQuestion();
+  }
+});
 
 nextBtn.addEventListener("click", () => {
   currentQuestionIndex++;
@@ -562,6 +665,8 @@ nextBtn.addEventListener("click", () => {
     <h3>${result}</h3>
   </div>
 `;
+showExportActions();
+reviewExamBtn.style.display = "block";
 
 } else {
 
