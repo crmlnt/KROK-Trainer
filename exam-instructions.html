@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"> 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KROK Trainer - Exam Instructions</title>
+
+  <link rel="stylesheet" href="exam.css" />
+</head>
+
+<body>
+
+  <main class="exam-page">
+
+    <section class="exam-card">
+
+      <h1>KROK 1 — Exam Mode</h1>
+
+      <p class="exam-subtitle">
+        Review the instructions before starting your exam.
+      </p>
+
+      <div class="exam-info">
+
+        <p>
+          <strong>Topic:</strong>
+          <span id="examTopic">-</span>
+        </p>
+
+        <p>
+          <strong>Questions:</strong>
+          <span id="examQuestions">-</span>
+        </p>
+
+        <p>
+          <strong>Time limit:</strong>
+          <span id="examTime">-</span>
+        </p>
+
+      </div>
+
+      <div class="exam-instructions">
+
+        <h2>Before you begin</h2>
+
+        <ul>
+          <li>Select one answer for each question.</li>
+          <li>No immediate correct / wrong feedback is shown during the exam.</li>
+          <li>Your score will be shown only after completing the exam.</li>
+          <li>Unanswered questions are counted as incorrect.</li>
+          <li>The exam will end automatically when the timer expires.</li>
+        </ul>
+
+      </div>
+
+      <button id="startExamNowBtn" class="start-exam-btn">
+        Start Exam Now
+      </button>
+
+      <a href="exam.html" class="back-link">
+        ← Back to Exam Setup
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <script>
+
+    const params = new URLSearchParams(window.location.search);
+
+    const topic = params.get("topic") || "all";
+    const questions = params.get("questions") || "20";
+
+    const topicNames = {
+      "all": "All Subjects",
+      "normal-physiology": "Normal Physiology",
+      "pathophysiology": "Pathophysiology",
+      "pathomorphology": "Pathomorphology",
+      "pharmacology": "Pharmacology",
+      "histology": "Histology"
+    };
+
+    document.getElementById("examTopic").textContent =
+      topicNames[topic] || topic;
+
+    document.getElementById("examQuestions").textContent =
+      questions;
+
+    document.getElementById("examTime").textContent =
+      `${questions} minutes`;
+
+    document
+      .getElementById("startExamNowBtn")
+      .addEventListener("click", () => {
+
+        window.location.href =
+          `practice.html?mode=exam&topic=${encodeURIComponent(topic)}&questions=${encodeURIComponent(questions)}`;
+
+      });
+
+  </script>
+
+</body>
+</html>
