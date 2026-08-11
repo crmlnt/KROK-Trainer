@@ -845,6 +845,22 @@ nextBtn.addEventListener("click", () => {
       ${result}
     </div>
 
+    <div class="exam-summary-actions">
+
+    <a href="exam.html" class="exam-action-primary">
+     Start New Exam
+     </a>
+
+    <a href="krok1.html" class="exam-action-secondary">
+    Back to Study Mode
+    </a>
+
+    <a href="index.html" class="exam-action-link">
+    Back to Exam Selection
+    </a>
+
+  </div>
+
   </div>
 `;
 showExportActions();
