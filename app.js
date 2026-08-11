@@ -59,11 +59,16 @@ async function loadQuestions() {
   );
 
   populateSubjectFilter();
-  questions = [...allQuestions];
 
-  questions = shuffleArray(questions);
+  const params = new URLSearchParams(window.location.search);
 
-  showQuestion();
+  if (params.get("mode") === "exam") {
+    startExamFromUrl(params);
+  } else {
+    questions = [...allQuestions];
+    questions = shuffleArray(questions);
+    showQuestion();
+  }
 }
 
 function removeDuplicateQuestions(questionList) {
@@ -155,33 +160,77 @@ function checkAnswer(button, isCorrect) {
   if (answered) return;
 
   answered = true;
+
   const allButtons = document.querySelectorAll(".answer-btn");
   const currentQuestion = questions[currentQuestionIndex];
+
   saveSubjectStats(currentQuestion.subject, isCorrect);
 
+
+  // =========================
+  // EXAM MODE
+  // =========================
+
   if (examMode) {
-  examSessionLog.push({
-    date: new Date().toLocaleDateString(),
-    id: currentQuestion.id,
-    subject: currentQuestion.subject,
-    question: currentQuestion.question,
-    answers: currentQuestion.answers,
-    yourAnswer: button.textContent,
-    correctAnswer: currentQuestion.answers[currentQuestion.correct],
-    result: isCorrect ? "Correct" : "Wrong"
-  });
-}
+
+    examSessionLog.push({
+      date: new Date().toLocaleDateString(),
+      id: currentQuestion.id,
+      subject: currentQuestion.subject,
+      question: currentQuestion.question,
+      answers: currentQuestion.answers,
+      yourAnswer: button.textContent,
+      correctAnswer: currentQuestion.answers[currentQuestion.correct],
+      result: isCorrect ? "Correct" : "Wrong"
+    });
+
+    button.classList.add("selected");
+
+    // Update score internally
+    if (isCorrect) {
+      score++;
+      correctAnswers++;
+    } else {
+      wrongAnswers++;
+    }
+
+
+    // No immediate feedback during exam
+    feedback.textContent = "";
+
+    // Do not show current score
+    scoreText.textContent = "";
+
+    // Allow user to continue
+    nextBtn.style.display = "block";
+
+    return;
+  }
+
+
+  // =========================
+  // PRACTICE MODE
+  // =========================
 
   if (isCorrect) {
+
     button.classList.add("correct");
+
     feedback.textContent = "Correct!";
+
     score++;
     correctAnswers++;
+
     updateStats();
+
   } else {
+
     button.classList.add("wrong");
+
     feedback.textContent = "Wrong!";
+
     wrongAnswers++;
+
     updateStats();
 
 
@@ -194,16 +243,26 @@ function checkAnswer(button, isCorrect) {
       yourAnswer: button.textContent,
       correctAnswer: currentQuestion.answers[currentQuestion.correct]
     });
+
     updateErrorLog();
 
+
     allButtons.forEach((btn) => {
-      if (btn.textContent === currentQuestion.answers[currentQuestion.correct]) {
+
+      if (
+        btn.textContent ===
+        currentQuestion.answers[currentQuestion.correct]
+      ) {
         btn.classList.add("correct");
       }
+
     });
+
   }
 
+
   scoreText.textContent = `Score: ${score}`;
+
   nextBtn.style.display = "block";
 }
 
@@ -323,6 +382,88 @@ function startExamMode() {
 
   scoreText.textContent = "Score: 0";
   feedback.textContent = "";
+  nextBtn.style.display = "none";
+  reviewBtn.style.display = "none";
+
+  updateStats();
+  showQuestion();
+}
+
+function startExamFromUrl(params) {
+  examSessionLog = [];
+  examMode = true;
+  reviewMode = false;
+
+  const selectedTopic = params.get("topic");
+  const selectedQuestionCount = params.get("questions");
+
+  let filteredQuestions;
+
+  // Select topic
+  if (!selectedTopic || selectedTopic === "all") {
+    filteredQuestions = [...allQuestions];
+  } else {
+
+    const topicMap = {
+      "normal-physiology": "Normal Phisiology",
+      "pathophysiology": "Pathophysiology",
+      "pathomorphology": "Pathomorphology",
+      "pharmacology": "Pharmacology",
+      "histology": "Histology"
+    };
+
+    const subjectName = topicMap[selectedTopic];
+
+    filteredQuestions = allQuestions.filter(
+      q => q.subject === subjectName
+    );
+  }
+
+  // Remove duplicates
+  const uniqueQuestions =
+    removeDuplicateQuestions(filteredQuestions);
+
+  if (uniqueQuestions.length === 0) {
+    alert("No questions found for this subject.");
+    return;
+  }
+
+  // Number of questions
+  let examCount;
+
+  if (
+    !selectedQuestionCount ||
+    selectedQuestionCount === "all"
+  ) {
+    examCount = uniqueQuestions.length;
+  } else {
+    examCount = Number(selectedQuestionCount);
+  }
+
+  if (!examCount || examCount <= 0) {
+    alert("Invalid number of questions.");
+    return;
+  }
+
+  // Prevent requesting more questions than available
+  examCount = Math.min(
+    examCount,
+    uniqueQuestions.length
+  );
+
+  // Prepare exam
+  questions = shuffleArray(uniqueQuestions)
+    .slice(0, examCount);
+
+  currentQuestionIndex = 0;
+  score = 0;
+  correctAnswers = 0;
+  wrongAnswers = 0;
+  answered = false;
+
+  scoreText.textContent = "Score: 0";
+  feedback.textContent = "";
+
   nextBtn.style.display = "none";
   reviewBtn.style.display = "none";
 
@@ -639,7 +780,12 @@ nextBtn.addEventListener("click", () => {
   if (currentQuestionIndex < questions.length) {
     showQuestion();
   } else {
-    questionText.textContent = "Quiz completed!";
+    if (examMode) {
+      questionText.textContent = "";
+    } else {
+      questionText.textContent = "Quiz completed!";
+    }
+
     questionNumber.textContent = "";
     answersContainer.innerHTML = "";
     if (examMode) {
@@ -655,14 +801,50 @@ nextBtn.addEventListener("click", () => {
 
   feedback.innerHTML = `
   <div class="exam-summary">
+
+    <div class="exam-summary-icon">✓</div>
+
     <h2>Exam Completed</h2>
 
-    <p><strong>Questions:</strong> ${questions.length}</p>
-    <p><strong>Correct:</strong> ${correctAnswers}</p>
-    <p><strong>Wrong:</strong> ${wrongAnswers}</p>
-    <p><strong>Accuracy:</strong> ${accuracy}%</p>
+    <p class="exam-summary-subtitle">
+      Your mock examination has been completed.
+    </p>
 
-    <h3>${result}</h3>
+    <div class="exam-score">
+      <span class="exam-score-value">${accuracy}%</span>
+      <span class="exam-score-label">Final Score</span>
+    </div>
+
+    <div class="exam-progress">
+      <div
+        class="exam-progress-fill"
+        style="width: ${accuracy}%;">
+      </div>
+    </div>
+
+    <div class="exam-results-grid">
+
+      <div class="exam-result-item">
+        <strong>${questions.length}</strong>
+        <span>Questions</span>
+      </div>
+
+      <div class="exam-result-item">
+        <strong>${correctAnswers}</strong>
+        <span>Correct</span>
+      </div>
+
+      <div class="exam-result-item">
+        <strong>${wrongAnswers}</strong>
+        <span>Wrong</span>
+      </div>
+
+    </div>
+
+    <div class="exam-status">
+      ${result}
+    </div>
+
   </div>
 `;
 showExportActions();

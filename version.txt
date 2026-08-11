@@ -1,0 +1,41 @@
+KROK Trainer v1.9
+- implementazione schermata selezione tra practice e exam mode
+- rimizione di selezione domanda corretta in exam mode
+- miglioramento card fine test in exam mode
+
+KROK Trainer v1.7.4
+-Miglioramento UX
+-Aggiunta modalità "Review Exam"
+
+
+KROK trainer v1.7
+-Implementazione export exam log
+
+
+KROK trainer v1.6.1
+-Implementazione sistema di creazione Error Log
+-Miglioramento UI 
+-Protezione error log / conferma prima di cancellazione
+-Correzione bug duplicato domande
+
+KROK Trainer v1.5
+-Implementazione dark mode 
+
+KROK Trainer v1.4 stable
+-Implementazione pannello statistiche
+-Implementazione motore statistico
+
+KROK Trainer v1.3
+-Importazione database completo University of Odessa totale 2890 domande 
+-Implementazione Database validator per controllo validità domande nel database
+
+KROK Trainer v1.1
+- Randomizzazione delle domande tra le materie
+
+KROK Trainer v1.0
+- PDF import automatico
+- 475 domande Pathophysiology
+- Error Log
+- Review Mistakes
+- Exam Mode personalizzabile
+

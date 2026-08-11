@@ -1,0 +1,215 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+
+  background: #f4f6f9;
+  color: #1f2937;
+}
+
+.exam-wrapper {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+
+  padding: 50px 20px;
+}
+
+.exam-container {
+  width: 100%;
+  max-width: 760px;
+}
+
+.exam-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.exam-label {
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  font-size: 0.8rem;
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+
+  color: #6b7280;
+}
+
+.exam-header h1 {
+  margin: 0;
+
+  font-size: 2.6rem;
+
+  color: #111827;
+}
+
+.exam-header p {
+  margin-top: 12px;
+
+  font-size: 1.05rem;
+
+  color: #6b7280;
+}
+
+.exam-panel {
+  background: white;
+
+  padding: 34px;
+
+  border-radius: 22px;
+
+  border: 1px solid #e5e7eb;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.exam-section + .exam-section {
+  margin-top: 35px;
+}
+
+.exam-section h2 {
+  margin-top: 0;
+  margin-bottom: 18px;
+
+  font-size: 1.2rem;
+}
+
+.option-row {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 12px 4px;
+
+  cursor: pointer;
+}
+
+.option-row input {
+  width: 18px;
+  height: 18px;
+}
+
+.question-options {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 12px;
+}
+
+.question-card {
+  position: relative;
+
+  cursor: pointer;
+}
+
+.question-card input {
+  position: absolute;
+
+  opacity: 0;
+}
+
+.question-card span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 15px;
+
+  background: #f9fafb;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+
+  font-weight: 600;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.question-card input:checked + span {
+  background: #eff6ff;
+  border-color: #2563eb;
+
+  color: #2563eb;
+}
+
+.start-button {
+  width: 100%;
+
+  margin-top: 36px;
+
+  padding: 16px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: #2563eb;
+  color: white;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.start-button:hover {
+  transform: translateY(-2px);
+  opacity: 0.92;
+}
+
+.back-link {
+  display: block;
+
+  margin-top: 30px;
+
+  text-align: center;
+
+  color: #6b7280;
+
+  text-decoration: none;
+}
+
+.back-link:hover {
+  color: #111827;
+}
+
+@media (max-width: 600px) {
+
+  .exam-panel {
+    padding: 26px 20px;
+  }
+
+  .exam-header h1 {
+    font-size: 2.1rem;
+  }
+
+  .question-options {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}

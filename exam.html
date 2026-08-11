@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>KROK 1 Exam | KROK Trainer</title>
+
+  <link rel="stylesheet" href="exam.css">
+</head>
+
+<body>
+
+  <main class="exam-wrapper">
+
+    <section class="exam-container">
+
+      <div class="exam-header">
+        <span class="exam-label">KROK 1</span>
+
+        <h1>Exam Simulation</h1>
+
+        <p>
+          Configure your mock exam and test your preparation.
+        </p>
+      </div>
+
+
+      <div class="exam-panel">
+
+        <div class="exam-section">
+
+          <h2>Select Topic</h2>
+
+          <label class="option-row">
+            <input type="radio" name="topic" value="all" checked>
+            <span>All Topics</span>
+          </label>
+
+          <label class="option-row">
+            <input type="radio" name="topic" value="normal-physiology">
+            <span>Normal Physiology</span>
+          </label>
+
+          <label class="option-row">
+            <input type="radio" name="topic" value="pathophysiology">
+            <span>Pathophysiology</span>
+          </label>
+
+          <label class="option-row">
+            <input type="radio" name="topic" value="pathomorphology">
+            <span>Pathomorphology</span>
+          </label>
+
+          <label class="option-row">
+            <input type="radio" name="topic" value="pharmacology">
+            <span>Pharmacology</span>
+          </label>
+
+          <label class="option-row">
+            <input type="radio" name="topic" value="histology">
+            <span>Histology</span>
+          </label>
+
+        </div>
+
+
+        <div class="exam-section">
+
+          <h2>Number of Questions</h2>
+
+          <div class="question-options">
+
+            <label class="question-card">
+              <input type="radio" name="questions" value="20" checked>
+              <span>20</span>
+            </label>
+
+            <label class="question-card">
+              <input type="radio" name="questions" value="50">
+              <span>50</span>
+            </label>
+
+            <label class="question-card">
+              <input type="radio" name="questions" value="100">
+              <span>100</span>
+            </label>
+
+            <label class="question-card">
+              <input type="radio" name="questions" value="all">
+              <span>All</span>
+            </label>
+
+          </div>
+
+        </div>
+
+
+        <button id="startExamBtn" class="start-button">
+          Start Exam
+        </button>
+
+      </div>
+
+
+      <a href="krok1.html" class="back-link">
+        ← Back to study mode
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <script>
+    const startExamBtn = document.getElementById("startExamBtn");
+
+    startExamBtn.addEventListener("click", () => {
+
+      const topic =
+        document.querySelector('input[name="topic"]:checked').value;
+
+      const questions =
+        document.querySelector('input[name="questions"]:checked').value;
+
+      const url =
+        `practice.html?mode=exam&topic=${topic}&questions=${questions}`;
+
+      window.location.href = url;
+
+    });
+  </script>
+
+</body>
+</html>
