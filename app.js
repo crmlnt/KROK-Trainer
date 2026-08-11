@@ -646,6 +646,10 @@ function exportExamLog() {
 }
 
 function goHome() {
+    window.location.href = "index.html";
+}
+
+function resetTrainer() {
   examMode = false;
   reviewMode = false;
   answered = false;
