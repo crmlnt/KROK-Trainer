@@ -12,6 +12,8 @@ let wrongAnswers = 0;
 let examMode = false;
 let examSessionLog = [];
 let reviewExamIndex = 0;
+let examTimerInterval = null;
+let examTimeRemaining = 0;
 
 // HTML ELEMENTS
 
@@ -37,6 +39,8 @@ const exportErrorsBtn = document.getElementById("export-errors-btn");
 const reviewExamBtn = document.getElementById("reviewExamBtn");
 const prevReviewBtn = document.getElementById("prevReviewBtn");
 const nextReviewBtn = document.getElementById("nextReviewBtn");
+const examTimer = document.getElementById("examTimer");
+const examTimerText = document.getElementById("examTimerText");
 
 
 if (localStorage.getItem("theme") === "dark") {
@@ -156,6 +160,77 @@ function showQuestion() {
   updateProgressBar();
 }
 
+function startExamTimer(questionCount) {
+  console.log("TIMER STARTED", questionCount);
+
+  // 1 minute per question
+  examTimeRemaining = questionCount * 60;
+
+  examTimer.style.display = "block";
+
+  updateExamTimerDisplay();
+
+  if (examTimerInterval) {
+    clearInterval(examTimerInterval);
+  }
+
+  examTimerInterval = setInterval(() => {
+
+    examTimeRemaining--;
+
+    updateExamTimerDisplay();
+
+    if (examTimeRemaining <= 0) {
+      examTimeRemaining = 0;
+      clearInterval(examTimerInterval);
+      examTimerInterval = null;
+
+      finishExamByTimer();
+    }
+
+  }, 1000);
+}
+
+
+function updateExamTimerDisplay() {
+
+  const hours = Math.floor(examTimeRemaining / 3600);
+
+  const minutes = Math.floor(
+    (examTimeRemaining % 3600) / 60
+  );
+
+  const seconds = examTimeRemaining % 60;
+
+  examTimerText.textContent =
+    `${String(hours).padStart(2, "0")}:` +
+    `${String(minutes).padStart(2, "0")}:` +
+    `${String(seconds).padStart(2, "0")}`;
+}
+
+function stopExamTimer() {
+  if (examTimerInterval) {
+    clearInterval(examTimerInterval);
+    examTimerInterval = null;
+  }
+    examTimer.style.display = "none";
+    console.log("TIMER STOPPED AT:", examTimeRemaining);
+}
+
+function finishExamByTimer() {
+
+  const unanswered =
+    questions.length - correctAnswers - wrongAnswers;
+
+  wrongAnswers += unanswered;
+
+  currentQuestionIndex = questions.length - 1;
+
+  examTimer.style.display = "none";
+
+  nextBtn.click();
+}
+
 function checkAnswer(button, isCorrect) {
   if (answered) return;
 
@@ -170,6 +245,8 @@ function checkAnswer(button, isCorrect) {
   // =========================
   // EXAM MODE
   // =========================
+
+  
 
   if (examMode) {
 
@@ -454,6 +531,9 @@ function startExamFromUrl(params) {
   // Prepare exam
   questions = shuffleArray(uniqueQuestions)
     .slice(0, examCount);
+
+  startExamTimer(questions.length);
+  
 
   currentQuestionIndex = 0;
   score = 0;
@@ -793,6 +873,8 @@ nextBtn.addEventListener("click", () => {
     questionNumber.textContent = "";
     answersContainer.innerHTML = "";
     if (examMode) {
+    
+    stopExamTimer();
 
   const accuracy =
     Math.round((correctAnswers / questions.length) * 100);
