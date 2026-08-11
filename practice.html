@@ -14,7 +14,7 @@
     
             <div class="top-right-controls">
                 <span class="version-text">
-                    v1.9 created by Carmine Lentini
+                    v1.9 August 2026
                 </span>
     
                 <button id="theme-btn">🌙 Dark Mode</button>
@@ -43,12 +43,14 @@
     <div class="progress-container">
         <div id="progressBar" class="progress-bar"></div>
     </div>
-    <p id="question-number">Question 1</p>
-    <p id="subject-display">Subject: -</p>
-    <h2 id="question-text">Question text</h2>
-
-    <div id="answers-container"></div>
-
+    <div class="quiz-card">
+        <p id="question-number">Question 1</p>
+        <p id="subject-display">Subject: -</p>
+        <h2 id="question-text">Question text</h2>
+        <div id="answers-container"></div>
+        <button id="next-btn" class="primary-actions">Next question</button>
+    </div>
+   
     <p id="feedback"></p>
     <p id="score">Score: 0</p>
     <p id="stats">Correct: 0 | Wrong: 0 | Accuracy: 0%</p>
@@ -60,7 +62,6 @@
 <ul id="error-log" style="display: none;"></ul>
 
 <div class="action-buttons">
-    <button id="next-btn" class="primary-actions">Next question</button>
     <div class="export-actions">
         <button id="review-btn">Review mistakes</button>
         <button id="export-errors-btn">Export Error Log</button>
