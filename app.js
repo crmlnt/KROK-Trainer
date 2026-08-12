@@ -50,7 +50,16 @@ if (localStorage.getItem("theme") === "dark") {
 //FUNCTIONS
 
 async function loadQuestions() {
-  const response = await fetch("questions.json");
+  const params = new URLSearchParams(window.location.search);
+
+  const examType = params.get("exam") || "krok1";
+
+  const questionFile =
+    examType === "krok2"
+      ? "krok2/questions-krok2.json"
+      : "questions.json";
+
+  const response = await fetch(questionFile);
 
   const text = await response.text();
 
@@ -63,8 +72,6 @@ async function loadQuestions() {
   );
 
   populateSubjectFilter();
-
-  const params = new URLSearchParams(window.location.search);
 
   if (params.get("mode") === "exam") {
     startExamFromUrl(params);
@@ -92,6 +99,9 @@ function removeDuplicateQuestions(questionList) {
 
 function populateSubjectFilter() {
   const subjectFilter = document.getElementById("subjectFilter");
+
+  subjectFilter.options[0].textContent =
+  `All Subjects (${allQuestions.length})`;
 
   const subjectCounts = {};
 
@@ -477,19 +487,34 @@ function startExamFromUrl(params) {
   let filteredQuestions;
 
   // Select topic
+  const examType = params.get("exam") || "krok1";
+
   if (!selectedTopic || selectedTopic === "all") {
+
     filteredQuestions = [...allQuestions];
+
   } else {
 
-    const topicMap = {
-      "normal-physiology": "Normal Phisiology",
-      "pathophysiology": "Pathophysiology",
-      "pathomorphology": "Pathomorphology",
-      "pharmacology": "Pharmacology",
-      "histology": "Histology"
-    };
+    let subjectName;
 
-    const subjectName = topicMap[selectedTopic];
+    if (examType === "krok2") {
+
+      // In KROK 2 the URL contains the real subject name
+      subjectName = selectedTopic;
+
+    } else {
+
+      // KROK 1 keeps the existing slug system
+      const topicMap = {
+        "normal-physiology": "Normal Phisiology",
+        "pathophysiology": "Pathophysiology",
+        "pathomorphology": "Pathomorphology",
+        "pharmacology": "Pharmacology",
+        "histology": "Histology"
+      };
+
+      subjectName = topicMap[selectedTopic];
+    }
 
     filteredQuestions = allQuestions.filter(
       q => q.subject === subjectName
@@ -575,7 +600,16 @@ function updateProgressBar() {
 }
 
 function saveSubjectStats(subject, isCorrect) {
-  const stats = JSON.parse(localStorage.getItem("subjectStats")) || {};
+  const params = new URLSearchParams(window.location.search);
+  const examType = params.get("exam") || "krok1";
+
+  const storageKey =
+    examType === "krok2"
+      ? "krok2_subjectStats"
+      : "krok1_subjectStats";
+
+  const stats =
+    JSON.parse(localStorage.getItem(storageKey)) || {};
 
   if (!stats[subject]) {
     stats[subject] = {
@@ -590,11 +624,23 @@ function saveSubjectStats(subject, isCorrect) {
     stats[subject].wrong++;
   }
 
-  localStorage.setItem("subjectStats", JSON.stringify(stats));
+  localStorage.setItem(
+    storageKey,
+    JSON.stringify(stats)
+  );
 }
 
 function showStatistics() {
-  const stats = JSON.parse(localStorage.getItem("subjectStats")) || {};
+  const params = new URLSearchParams(window.location.search);
+  const examType = params.get("exam") || "krok1";
+
+  const storageKey =
+    examType === "krok2"
+      ? "krok2_subjectStats"
+      : "krok1_subjectStats";
+
+  const stats =
+    JSON.parse(localStorage.getItem(storageKey)) || {};
 
   if (Object.keys(stats).length === 0) {
     feedback.innerHTML = `
@@ -726,7 +772,14 @@ function exportExamLog() {
 }
 
 function goHome() {
-    window.location.href = "index.html";
+    const params = new URLSearchParams(window.location.search);
+    const examType = params.get("exam") || "krok1";
+
+    if (examType === "krok2") {
+        window.location.href = "krok2.html";
+    } else {
+        window.location.href = "krok1.html";
+    }
 }
 
 function resetTrainer() {

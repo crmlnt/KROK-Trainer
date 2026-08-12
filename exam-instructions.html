@@ -17,7 +17,7 @@
 
     <section class="exam-card">
 
-      <h1>KROK 1 — Exam Mode</h1>
+      <h1 id="examTitle">KROK 1 — Exam Mode</h1>
 
       <p class="exam-subtitle">
         Review the instructions before starting your exam.
@@ -60,7 +60,7 @@
         Start Exam Now
       </button>
 
-      <a href="exam.html" class="back-link">
+      <a id="backLink" href="exam.html" class="back-link">
         ← Back to Exam Setup
       </a>
 
@@ -69,41 +69,95 @@
   </main>
 
 
-  <script>
+<script>
 
-    const params = new URLSearchParams(window.location.search);
+  const params = new URLSearchParams(window.location.search);
 
-    const topic = params.get("topic") || "all";
-    const questions = params.get("questions") || "20";
+  const examType = params.get("exam") || "krok1";
+  const topic = params.get("topic") || "all";
+  const questions = params.get("questions") || "20";
 
-    const topicNames = {
-      "all": "All Subjects",
-      "normal-physiology": "Normal Physiology",
-      "pathophysiology": "Pathophysiology",
-      "pathomorphology": "Pathomorphology",
-      "pharmacology": "Pharmacology",
-      "histology": "Histology"
-    };
 
-    document.getElementById("examTopic").textContent =
-      topicNames[topic] || topic;
+  const examTitle =
+    document.getElementById("examTitle");
 
-    document.getElementById("examQuestions").textContent =
-      questions;
+  const backLink =
+    document.getElementById("backLink");
 
-    document.getElementById("examTime").textContent =
-      `${questions} minutes`;
 
-    document
-      .getElementById("startExamNowBtn")
-      .addEventListener("click", () => {
+  // ==========================================
+  // PAGE CONTEXT
+  // ==========================================
 
-        window.location.href =
-          `practice.html?mode=exam&topic=${encodeURIComponent(topic)}&questions=${encodeURIComponent(questions)}`;
+  if (examType === "krok2") {
 
-      });
+    examTitle.textContent =
+      "KROK 2 — Exam Mode";
 
-  </script>
+    backLink.href =
+      "exam.html?exam=krok2";
+
+  } else {
+
+    examTitle.textContent =
+      "KROK 1 — Exam Mode";
+
+    backLink.href =
+      "exam.html";
+  }
+
+
+  // ==========================================
+  // TOPIC NAME
+  // ==========================================
+
+  const topicNames = {
+    "all": "All Subjects",
+    "normal-physiology": "Normal Physiology",
+    "pathophysiology": "Pathophysiology",
+    "pathomorphology": "Pathomorphology",
+    "pharmacology": "Pharmacology",
+    "histology": "Histology"
+  };
+
+  document.getElementById("examTopic").textContent =
+    examType === "krok2"
+      ? (topic === "all" ? "All Subjects" : topic)
+      : (topicNames[topic] || topic);
+
+
+  document.getElementById("examQuestions").textContent =
+    questions;
+
+  document.getElementById("examTime").textContent =
+    `${questions} minutes`;
+
+
+  // ==========================================
+  // START EXAM
+  // ==========================================
+
+  document
+    .getElementById("startExamNowBtn")
+    .addEventListener("click", () => {
+
+      const nextParams =
+        new URLSearchParams();
+
+      nextParams.set("mode", "exam");
+      nextParams.set("topic", topic);
+      nextParams.set("questions", questions);
+
+      if (examType === "krok2") {
+        nextParams.set("exam", "krok2");
+      }
+
+      window.location.href =
+        `practice.html?${nextParams.toString()}`;
+
+    });
+
+</script>
 
 </body>
 </html>

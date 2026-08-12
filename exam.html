@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>KROK 1 Exam | KROK Trainer</title>
+  <title>KROK Exam | KROK Trainer</title>
 
   <link rel="stylesheet" href="exam.css">
 </head>
@@ -16,7 +16,7 @@
     <section class="exam-container">
 
       <div class="exam-header">
-        <span class="exam-label">KROK 1</span>
+        <span id="examLabel" class="exam-label">KROK 1</span>
 
         <h1>Exam Simulation</h1>
 
@@ -31,6 +31,7 @@
         <div class="exam-section">
 
           <h2>Select Topic</h2>
+          <div id="topicOptions">
 
           <label class="option-row">
             <input type="radio" name="topic" value="all" checked>
@@ -61,6 +62,7 @@
             <input type="radio" name="topic" value="histology">
             <span>Histology</span>
           </label>
+          </div>
 
         </div>
 
@@ -103,7 +105,7 @@
       </div>
 
 
-      <a href="krok1.html" class="back-link">
+      <a id="backLink" href="krok1.html" class="back-link">
         ← Back to study mode
       </a>
 
@@ -113,23 +115,147 @@
 
 
   <script>
-    const startExamBtn = document.getElementById("startExamBtn");
+  const params = new URLSearchParams(window.location.search);
+  const examType = params.get("exam") || "krok1";
 
-    startExamBtn.addEventListener("click", () => {
+  const startExamBtn =
+    document.getElementById("startExamBtn");
 
-      const topic =
-        document.querySelector('input[name="topic"]:checked').value;
+  const examLabel =
+    document.getElementById("examLabel");
 
-      const questions =
-        document.querySelector('input[name="questions"]:checked').value;
+  const topicOptions =
+    document.getElementById("topicOptions");
 
-      const url =
-        `exam-instructions.html?mode=exam&topic=${topic}&questions=${questions}`;
+  const backLink =
+    document.getElementById("backLink");
 
-      window.location.href = url;
 
+  // ==========================================
+  // KROK 2 CONFIGURATION
+  // ==========================================
+
+  if (examType === "krok2") {
+
+    document.title =
+      "KROK 2 Exam | KROK Trainer";
+
+    examLabel.textContent = "KROK 2";
+
+    backLink.href = "krok2.html";
+
+
+    const krok2Subjects = [
+      "Anesthesiology and Emergency Medicine",
+      "Children's Infectious Diseases",
+      "Dermatology",
+      "Forensic Medicine",
+      "Hygiene",
+      "Infectious Diseases",
+      "Internal Medicine",
+      "Neurology",
+      "Obstetrics and Gynecology",
+      "Occupational Diseases",
+      "Oncology",
+      "Ophthalmology",
+      "Otorhinolaryngology",
+      "Pediatric Surgery",
+      "Pediatrics",
+      "Phthisiology",
+      "Psychiatry",
+      "Social Medicine",
+      "Surgery",
+      "Traumatology",
+      "Urology"
+    ];
+
+
+    topicOptions.innerHTML = `
+      <label class="option-row">
+        <input
+          type="radio"
+          name="topic"
+          value="all"
+          checked
+        >
+        <span>All Topics</span>
+      </label>
+    `;
+
+
+    krok2Subjects.forEach(subject => {
+
+      const label =
+        document.createElement("label");
+
+      label.className = "option-row";
+
+
+      const input =
+        document.createElement("input");
+
+      input.type = "radio";
+      input.name = "topic";
+      input.value = subject;
+
+
+      const span =
+        document.createElement("span");
+
+      span.textContent = subject;
+
+
+      label.appendChild(input);
+      label.appendChild(span);
+
+      topicOptions.appendChild(label);
     });
-  </script>
+
+  } else {
+
+    document.title =
+      "KROK 1 Exam | KROK Trainer";
+
+    examLabel.textContent = "KROK 1";
+
+    backLink.href = "krok1.html";
+  }
+
+
+  // ==========================================
+  // START EXAM
+  // ==========================================
+
+  startExamBtn.addEventListener("click", () => {
+
+    const topic =
+      document.querySelector(
+        'input[name="topic"]:checked'
+      ).value;
+
+    const questions =
+      document.querySelector(
+        'input[name="questions"]:checked'
+      ).value;
+
+
+    const nextParams =
+      new URLSearchParams();
+
+    nextParams.set("mode", "exam");
+    nextParams.set("topic", topic);
+    nextParams.set("questions", questions);
+
+    if (examType === "krok2") {
+      nextParams.set("exam", "krok2");
+    }
+
+
+    window.location.href =
+      `exam-instructions.html?${nextParams.toString()}`;
+
+  });
+</script>
 
 </body>
 </html>

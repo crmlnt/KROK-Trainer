@@ -441,6 +441,7 @@ body.dark-mode .guide-btn {
   border-radius: 22px;
   padding: 28px 22px;
   transition: transform 0.2s ease, box-shadow 0.2s ease, border 0.2s ease;
+  position: relative;
 }
 
 .exam-card:hover {
@@ -918,5 +919,34 @@ body.dark-mode .guide-btn {
 
   .quiz-card #question-text {
     font-size: 1.15rem;
+  }
+}
+
+.new-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+
+  padding: 7px 14px;
+
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+
+  color: white;
+  background: #22c55e;
+
+  border-radius: 999px;
+
+  animation: newPulse 2s ease-in-out infinite;
+}
+
+@keyframes newPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.08);
   }
 }
