@@ -950,3 +950,185 @@ body.dark-mode .guide-btn {
     transform: scale(1.08);
   }
 }
+
+/* ==============================
+   MOBILE QUIZ LAYOUT
+   ============================== */
+
+@media (max-width: 768px) {
+
+  body {
+    padding: 0;
+    background: #f4f6f9;
+  }
+
+  .quiz-container {
+    width: 100%;
+    max-width: none;
+    padding: 16px;
+    box-sizing: border-box;
+  }
+
+  .top-bar {
+    margin-bottom: 12px;
+  }
+
+  .header-row {
+    align-items: center;
+    gap: 10px;
+  }
+
+  #appTitle {
+    font-size: 22px;
+    margin: 0;
+  }
+
+  .version-text {
+    display: none;
+  }
+
+  .top-controls {
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .top-controls button,
+  .top-controls select {
+    font-size: 14px;
+  }
+
+  .progress-container {
+    margin: 12px 0 16px;
+  }
+
+  .quiz-card {
+    padding: 22px 18px 100px;
+    border-radius: 18px;
+  }
+
+  #question-number {
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+
+  #subject-display {
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+
+  #question-text {
+    font-size: 24px;
+    line-height: 1.45;
+    margin-bottom: 24px;
+  }
+
+  #answers-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  #answers-container button {
+    width: 100%;
+    min-height: 56px;
+    padding: 11px 14px;
+    font-size: 17px;
+    line-height: 1.35;
+    text-align: left;
+    border-radius: 14px;
+  }
+
+  .exam-timer {
+    position: sticky;
+    top: 8px;
+    z-index: 20;
+    width: fit-content;
+    margin-left: auto;
+    margin-bottom: 10px;
+
+    padding: 8px 12px;
+    border-radius: 999px;
+
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  #next-btn {
+    position: fixed;
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+
+    width: calc(100% - 32px);
+    min-height: 58px;
+
+    z-index: 50;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    border-radius: 14px;
+  }
+
+  #feedback,
+  #score,
+  #stats,
+  #error-count,
+  .action-buttons,
+  .danger-zone {
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+}
+
+/* Compact mobile controls */
+
+.top-controls {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  width: 100%;
+}
+
+.top-controls .controls {
+  grid-column: 1 / -1;
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+#subjectFilter {
+  width: 100%;
+}
+
+.top-controls button {
+  width: 100%;
+  min-width: 0;
+  padding: 10px 4px;
+  font-size: 0;
+  min-height: 44px;
+}
+
+/* Restore only the emoji/icon */
+#homeBtn::after {
+  content: "🏠";
+  font-size: 20px;
+}
+
+#exam-btn::after {
+  content: "📖";
+  font-size: 20px;
+}
+
+#stats-btn::after {
+  content: "📊";
+  font-size: 20px;
+}
+
+/* Tutorial is currently the remaining button */
+.top-controls button[onclick*="guide"]::after {
+  content: "🎓";
+  font-size: 20px;
+}
