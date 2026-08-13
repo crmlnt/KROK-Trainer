@@ -1178,3 +1178,20 @@ body.dark-mode .guide-btn {
 
   box-sizing: border-box;
 }
+
+.exam-summary-actions {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.exam-action-primary,
+.exam-action-secondary,
+.exam-action-link {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.exam-action-primary {
+  margin: 0;
+}
