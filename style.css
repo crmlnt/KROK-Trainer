@@ -1199,3 +1199,19 @@ body.dark-mode .guide-btn {
 .exam-action-primary {
   margin: 0;
 }
+
+/* Extra-small mobile screens */
+@media (max-width: 430px) {
+
+  .exam-summary-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .exam-action-primary,
+  .exam-action-secondary,
+  .exam-action-link {
+    grid-column: 1;
+    width: 100%;
+  }
+
+}
