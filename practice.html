@@ -30,10 +30,9 @@
                     <option value="all">All Subjects</option>
                 </select>
             </div>
-            <button id="homeBtn" class="button">🏠 Home</button>
-            <button id="exam-btn">📖 Start Exam Mode</button>
-            <button id="stats-btn">📊 Statistics</button>
-            <button onclick="window.location.href='guide.html'">🎓 Tutorial</button>
+            <button id="homeBtn" class="button"> Home</button>
+            <button id="stats-btn"> Stats</button>
+            <button onclick="window.location.href='guide.html'"> Tutorial</button>
         </div>
     </div>
     
@@ -51,35 +50,41 @@
         <div id="answers-container"></div>
         <button id="next-btn" class="primary-actions">Next question</button>
     </div>
-   
-    <p id="feedback"></p>
+
+<p id="feedback"></p>
+
+<div id="practice-tools">
+
     <p id="score">Score: 0</p>
     <p id="stats">Correct: 0 | Wrong: 0 | Accuracy: 0%</p>
-<hr>
 
-<p id="error-count">Errors: 0</p>
+    <hr>
 
+    <p id="error-count">Errors: 0</p>
 
-<ul id="error-log" style="display: none;"></ul>
+    <ul id="error-log" style="display: none;"></ul>
 
-<div class="action-buttons">
-    <div class="export-actions">
-        <button id="review-btn">Review mistakes</button>
-        <button id="export-errors-btn">Export Error Log</button>
-        <button id="exportExamLogBtn" class="button">Export Exam Log</button>
-        <button id="reviewExamBtn" class="button" style="display: none;">Review Exam</button>
+    <div class="action-buttons">
+
+        <div class="export-actions">
+            <button id="review-btn">Review mistakes</button>
+            <button id="export-errors-btn">Export Error Log</button>
+            <button id="exportExamLogBtn" class="button">Export Exam Log</button>
+            <button id="reviewExamBtn" class="button" style="display: none;">Review Exam</button>
+        </div>
+
     </div>
-    <div class="review-navigation">
-        <button id="prevReviewBtn" class="button" style="display: none;">⬅️ Previous</button>
-        <button id="nextReviewBtn" class="button" style="display: none;">Next ➡️</button>
+
+    <div class="danger-zone">
+        <button id="clear-errors-btn">Clear Error Log</button>
     </div>
+
 </div>
 
-<div class="danger-zone">
-    <button id="clear-errors-btn">Clear Error Log</button>
+<div class="review-navigation">
+    <button id="prevReviewBtn" class="button" style="display: none;">⬅️ Previous</button>
+    <button id="nextReviewBtn" class="button" style="display: none;">Next ➡️</button>
 </div>
-
-  </div>
 
   <script src="app.js"></script>
 </body>

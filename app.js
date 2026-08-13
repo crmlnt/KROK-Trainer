@@ -31,7 +31,6 @@ const errorCount = document.getElementById("error-count");
 const reviewBtn = document.getElementById("review-btn");
 const clearErrorsBtn = document.getElementById("clear-errors-btn");
 const statsText = document.getElementById("stats");
-const examBtn = document.getElementById("exam-btn");
 const progressBar = document.getElementById("progressBar");
 const statsBtn = document.getElementById("stats-btn");
 const themeBtn = document.getElementById("theme-btn");
@@ -481,6 +480,8 @@ function startExamFromUrl(params) {
   examMode = true;
   reviewMode = false;
 
+  document.getElementById("practice-tools").style.display = "none";
+
   const selectedTopic = params.get("topic");
   const selectedQuestionCount = params.get("questions");
 
@@ -817,7 +818,7 @@ function startExamReview() {
     alert("No exam data available for review.");
     return;
   }
-
+  document.querySelector(".quiz-card").style.display = "block";
   reviewExamIndex = 0;
   showExamReviewQuestion();
 }
@@ -949,7 +950,9 @@ nextBtn.addEventListener("click", () => {
       const studyModeUrl =
         examType === "krok2"
           ? "krok2.html"
-          : "krok1.html";    
+          : "krok1.html";   
+          
+      document.querySelector(".quiz-card").style.display = "none";    
 
   feedback.innerHTML = `
   <div class="exam-summary">
@@ -997,24 +1000,163 @@ nextBtn.addEventListener("click", () => {
       ${result}
     </div>
 
-    <div class="exam-summary-actions">
+      <div class="exam-summary-actions">
 
-    <a href="${newExamUrl}" class="exam-action-primary">
-     Start New Exam
-     </a>
+      <a href="${newExamUrl}" class="exam-action-primary">
+      Start New Exam
+      </a>
 
-    <a href="${studyModeUrl}" class="exam-action-secondary">
-    Back to Study Mode
-    </a>
+      <a href="${studyModeUrl}" class="exam-action-secondary">
+      Back to Study Mode
+      </a>
 
-    <a href="index.html" class="exam-action-link">
-    Back to Exam Selection
-    </a>
+      <a href="index.html" class="exam-action-link">
+      Back to Exam Selection
+      </a>
 
-  </div>
+    </div>
+
+    <button id="examToolsToggle" class="exam-tools-toggle">
+      Review & Export ▼
+    </button>
+
+    <div id="examToolsPanel" class="exam-tools-panel" style="display: none;">
+
+
+        <button id="finalReviewExamBtn" class="exam-tool-card">
+            <span class="exam-tool-icon">
+              <svg viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true">
+                <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+            </span>
+
+          <span class="exam-tool-content">
+            <strong>Review Exam</strong>
+            <small>Review all questions from this exam</small>
+          </span>
+        </button>
+
+
+        <button id="finalExportExamBtn" class="exam-tool-card">
+          <span class="exam-tool-icon">
+            <svg viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <path d="M14 2v6h6"/>
+              <path d="M12 18v-6"/>
+              <path d="m9 15 3 3 3-3"/>
+            </svg>
+          </span>
+
+          <span class="exam-tool-content">
+            <strong>Export Exam Log</strong>
+            <small>Download full exam results (CSV)</small>
+          </span>
+        </button>
+
+
+        <button id="finalExportErrorsBtn" class="exam-tool-card">
+          <span class="exam-tool-icon">
+            <svg viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true">
+              <path d="M10.3 2.9 1.8 17a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 2.9a2 2 0 0 0-3.4 0z"/>
+              <path d="M12 9v4"/>
+              <path d="M12 17h.01"/>
+            </svg>
+          </span>
+
+          <span class="exam-tool-content">
+            <strong>Export Error Log</strong>
+            <small>Download incorrect answers only (CSV)</small>
+          </span>
+        </button>
+
+
+        <button id="finalClearErrorsBtn" class="exam-tool-danger">
+          <span class="exam-tool-icon">
+            <svg viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true">
+              <path d="M3 6h18"/>
+              <path d="M8 6V4h8v2"/>
+              <path d="M19 6l-1 14H6L5 6"/>
+              <path d="M10 11v5"/>
+              <path d="M14 11v5"/>
+            </svg>
+          </span>
+
+          <span class="exam-tool-content">
+            <strong>Clear Error Log</strong>
+            <small>Remove all incorrect answers from the log</small>
+          </span>
+        </button>
+
+
+    </div>
 
   </div>
 `;
+
+
+const examToolsToggle = document.getElementById("examToolsToggle");
+const examToolsPanel = document.getElementById("examToolsPanel");
+
+examToolsToggle.addEventListener("click", () => {
+  const isOpen = examToolsPanel.style.display === "grid";
+
+  examToolsPanel.style.display = isOpen ? "none" : "grid";
+
+  examToolsToggle.textContent = isOpen
+    ? "Review & Export ▼"
+    : "Review & Export ▲";
+});
+
+const finalReviewExamBtn = document.getElementById("finalReviewExamBtn");
+
+finalReviewExamBtn.addEventListener("click", startExamReview);
+
+const finalExportExamBtn = document.getElementById("finalExportExamBtn");
+
+finalExportExamBtn.addEventListener("click", exportExamLog);
+
+const finalExportErrorsBtn = document.getElementById("finalExportErrorsBtn");
+
+finalExportErrorsBtn.addEventListener("click", exportErrorLog);
+
+const finalClearErrorsBtn = document.getElementById("finalClearErrorsBtn");
+finalClearErrorsBtn.addEventListener("click", clearErrorLog);
+
+
+
 showExportActions();
 reviewExamBtn.style.display = "block";
 
@@ -1054,8 +1196,7 @@ reviewBtn.addEventListener("click", () => {
 });
 
 
-clearErrorsBtn.addEventListener("click", () => {
-
+function clearErrorLog() {
   const confirmDelete = confirm(
     "Are you sure you want to delete the entire Error Log? This action cannot be undone."
   );
@@ -1071,12 +1212,11 @@ clearErrorsBtn.addEventListener("click", () => {
   updateErrorLog();
 
   alert("Error Log deleted.");
-});
+}
+
+clearErrorsBtn.addEventListener("click", clearErrorLog);
 
 
-examBtn.addEventListener("click", () => {
-  startExamMode();
-});
 
 themeBtn.addEventListener("click", () => {
   document.body.classList.toggle("dark-mode");
