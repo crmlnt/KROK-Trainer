@@ -1132,3 +1132,49 @@ body.dark-mode .guide-btn {
   content: "🎓";
   font-size: 20px;
 }
+
+/* ==============================
+   MOBILE EXAM SUMMARY ACTIONS
+   ============================== */
+
+.exam-summary-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.exam-action-primary {
+  grid-column: 1 / -1;
+
+  width: 100%;
+  min-height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.exam-action-secondary,
+.exam-action-link {
+  width: 100%;
+  min-height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 10px 8px;
+
+  font-size: 14px;
+  line-height: 1.2;
+  text-align: center;
+
+  box-sizing: border-box;
+}

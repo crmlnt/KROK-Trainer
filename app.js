@@ -938,6 +938,19 @@ nextBtn.addEventListener("click", () => {
     result = "PASSED ✅";
   }
 
+      const params = new URLSearchParams(window.location.search);
+      const examType = params.get("exam") || "krok1";
+
+      const newExamUrl =
+        examType === "krok2"
+          ? "exam.html?exam=krok2"
+          : "exam.html";
+
+      const studyModeUrl =
+        examType === "krok2"
+          ? "krok2.html"
+          : "krok1.html";    
+
   feedback.innerHTML = `
   <div class="exam-summary">
 
@@ -986,11 +999,11 @@ nextBtn.addEventListener("click", () => {
 
     <div class="exam-summary-actions">
 
-    <a href="exam.html" class="exam-action-primary">
+    <a href="${newExamUrl}" class="exam-action-primary">
      Start New Exam
      </a>
 
-    <a href="krok1.html" class="exam-action-secondary">
+    <a href="${studyModeUrl}" class="exam-action-secondary">
     Back to Study Mode
     </a>
 
