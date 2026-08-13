@@ -1141,7 +1141,15 @@ body.dark-mode .guide-btn {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
+
+  width: calc(100% - 16px);
+  max-width: 100%;
+
   margin-top: 20px;
+  margin-left: 8px;
+  margin-right: 8px;
+
+  box-sizing: border-box;
 }
 
 .exam-action-primary {
@@ -1179,13 +1187,6 @@ body.dark-mode .guide-btn {
   box-sizing: border-box;
 }
 
-.exam-summary-actions {
-  width: calc(100% - 6px);
-  max-width: 100%;
-  margin-left: 8px;
-  margin-right: 8px;
-  box-sizing: border-box;
-}
 
 .exam-action-primary,
 .exam-action-secondary,
