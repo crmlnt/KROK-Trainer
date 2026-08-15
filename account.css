@@ -383,6 +383,45 @@ a.account-menu-card:hover {
   line-height: 1.5;
 }
 
+/* ---------- ACCOUNT DELETION ---------- */
+
+.account-delete-info {
+  margin-top: 24px;
+  padding-top: 22px;
+
+  border-top: 1px solid #e5e7eb;
+}
+
+.account-delete-info strong {
+  display: block;
+  margin-bottom: 6px;
+
+  color: #374151;
+
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.account-delete-info p {
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 0.75rem;
+  line-height: 1.6;
+}
+
+.account-delete-info a {
+  color: #16a34a;
+
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.account-delete-info a:hover {
+  text-decoration: underline;
+}
+
 
 /* ---------- MOBILE ---------- */
 
