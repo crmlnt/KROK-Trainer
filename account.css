@@ -1,0 +1,418 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  font-family: "Manrope", sans-serif;
+
+  background: #f4f6f9;
+  color: #111827;
+}
+
+.account-page {
+  width: min(100% - 32px, 760px);
+  margin: 0 auto;
+  padding: 48px 0 70px;
+}
+
+
+/* ---------- PAGE HEADER ---------- */
+
+.account-header {
+  text-align: center;
+  margin-bottom: 34px;
+}
+
+.account-header h1 {
+  margin: 0;
+
+  font-size: clamp(2.2rem, 6vw, 3.2rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.account-header p {
+  margin: 12px auto 0;
+
+  color: #6b7280;
+
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+
+/* ---------- ACCOUNT PANEL ---------- */
+
+#accountPanel {
+  padding: 34px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.account-user-header {
+  margin-bottom: 30px;
+}
+
+.account-eyebrow {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #16a34a;
+
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+
+.account-user-header h2 {
+  margin: 0 0 8px;
+
+  font-size: 1.8rem;
+  letter-spacing: -0.025em;
+}
+
+.account-user-header p {
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 0.9rem;
+}
+
+.account-user-header p strong {
+  color: #374151;
+}
+
+
+/* ---------- ACCOUNT MENU ---------- */
+
+.account-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  margin-bottom: 28px;
+}
+
+.account-menu-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  width: 100%;
+
+  padding: 18px 20px;
+
+  background: #f9fafb;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+
+  color: #111827;
+  text-decoration: none;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+a.account-menu-card:hover {
+  transform: translateY(-1px);
+
+  background: #ffffff;
+  border-color: #bbf7d0;
+
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.05);
+}
+
+.account-menu-card > div {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.account-menu-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 11px;
+
+  font-size: 1.15rem;
+}
+
+.account-menu-card strong {
+  display: block;
+
+  margin-bottom: 3px;
+
+  font-size: 0.95rem;
+}
+
+.account-menu-card div div span {
+  display: block;
+
+  color: #6b7280;
+
+  font-size: 0.8rem;
+}
+
+.account-menu-arrow {
+  color: #16a34a;
+
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.account-menu-card.disabled {
+  cursor: default;
+  opacity: 0.65;
+}
+
+.coming-soon {
+  flex-shrink: 0;
+
+  padding: 6px 9px;
+
+  background: #f3f4f6;
+
+  border-radius: 999px;
+
+  color: #6b7280;
+
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+
+/* ---------- SIGN OUT ---------- */
+
+.logout-btn {
+  width: 100%;
+
+  padding: 13px 18px;
+
+  background: #ffffff;
+  color: #dc2626;
+
+  border: 1px solid #fecaca;
+  border-radius: 11px;
+
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.logout-btn:hover {
+  background: #fef2f2;
+  border-color: #fca5a5;
+}
+
+/* ---------- BACK TO HOME ---------- */
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 24px;
+
+  color: #6b7280;
+  text-decoration: none;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  transition: color 0.2s ease;
+}
+
+.back-link:hover {
+  color: #16a34a;
+}
+
+/* ---------- AUTH FORM ---------- */
+
+#authForm {
+  max-width: 520px;
+  margin: 0 auto;
+
+  padding: 34px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+#authForm label {
+  display: block;
+
+  margin: 0 0 7px;
+
+  color: #374151;
+
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+#authForm input {
+  width: 100%;
+
+  margin-bottom: 18px;
+  padding: 13px 14px;
+
+  background: #f9fafb;
+  color: #111827;
+
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+
+  font-family: inherit;
+  font-size: 0.9rem;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+#authForm input:focus {
+  background: #ffffff;
+
+  border-color: #16a34a;
+
+  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.1);
+}
+
+
+/* ---------- AUTH BUTTONS ---------- */
+
+#loginBtn,
+#signupBtn {
+  width: 100%;
+
+  padding: 13px 18px;
+
+  border-radius: 10px;
+
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+#loginBtn {
+  margin-top: 4px;
+
+  background: #16a34a;
+  color: #ffffff;
+
+  border: 1px solid #16a34a;
+}
+
+#loginBtn:hover {
+  background: #15803d;
+  border-color: #15803d;
+
+  transform: translateY(-1px);
+}
+
+#signupBtn {
+  margin-top: 10px;
+
+  background: #ffffff;
+  color: #374151;
+
+  border: 1px solid #d1d5db;
+}
+
+#signupBtn:hover {
+  border-color: #16a34a;
+  color: #16a34a;
+}
+
+
+/* ---------- AUTH MESSAGE ---------- */
+
+#authMessage {
+  min-height: 20px;
+
+  margin: 16px 0 0;
+
+  text-align: center;
+
+  color: #6b7280;
+
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 600px) {
+
+  .account-page {
+    width: min(100% - 24px, 760px);
+    padding-top: 30px;
+  }
+
+  #accountPanel {
+    padding: 24px 18px;
+    border-radius: 16px;
+  }
+
+  .account-menu-card {
+    padding: 15px;
+  }
+
+  .account-menu-card div div span {
+    font-size: 0.75rem;
+  }
+
+  .coming-soon {
+    display: none;
+  }
+
+}
+
+#authForm {
+  padding: 24px 18px;
+  border-radius: 16px;
+}

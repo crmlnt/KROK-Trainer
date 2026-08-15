@@ -1,0 +1,21 @@
+.DS_Store
+node_modules/
+
+KROKTrainer_GitHub_version/
+Krok trainer future.pages
+
+booklets/
+*.pdf
+
+input.txt
+questions-krok2 copia.json
+
+krok2/exports-krok2/
+krok2/tools/
+krok2/*audit*.json
+krok2/*summary*.json
+krok2/*verification*.json
+krok2/*analysis*.json
+krok2/*duplicates*.json
+krok2/*inventory*.json
+krok2/*validation*.json

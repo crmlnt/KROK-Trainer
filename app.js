@@ -48,6 +48,79 @@ if (localStorage.getItem("theme") === "dark") {
 
 //FUNCTIONS
 
+async function saveExamSession() {
+  try {
+    const {
+      data: { user }
+    } = await supabaseClient.auth.getUser();
+
+    // Se l'utente non è loggato,
+    // l'esame continua normalmente ma non viene salvato.
+    if (!user) {
+      console.log("Exam not saved: user is not logged in.");
+      return;
+    }
+
+    const params = new URLSearchParams(window.location.search);
+
+    const examType = params.get("exam") || "krok1";
+    const topic = params.get("topic") || "all";
+
+    const krokNumber =
+      examType === "krok2" ? 2 : 1;
+
+    const accuracy =
+      Math.round(
+        (correctAnswers / questions.length) * 100
+      );
+
+    let subject = topic;
+
+    // Nomi leggibili per KROK 1
+    const krok1TopicNames = {
+      "all": "All Topics",
+      "normal-physiology": "Normal Physiology",
+      "pathophysiology": "Pathophysiology",
+      "pathomorphology": "Pathomorphology",
+      "pharmacology": "Pharmacology",
+      "histology": "Histology"
+    };
+
+    if (krokNumber === 1) {
+      subject = krok1TopicNames[topic] || topic;
+    }
+
+    if (krokNumber === 2 && topic === "all") {
+      subject = "All Topics";
+    }
+
+    const { error } = await supabaseClient
+      .from("exam_sessions")
+      .insert({
+        user_id: user.id,
+        krok: krokNumber,
+        mode: "exam",
+        subject: subject,
+        questions_total: questions.length,
+        correct: correctAnswers,
+        wrong: wrongAnswers,
+        score: accuracy
+      });
+
+    if (error) {
+      console.error("Error saving exam session:", error);
+      return;
+    }
+
+    console.log("Exam session saved successfully.");
+
+  } catch (error) {
+    console.error("Unexpected error saving exam:", error);
+  }
+}
+
+
+
 async function loadQuestions() {
   const params = new URLSearchParams(window.location.search);
 
@@ -932,6 +1005,8 @@ nextBtn.addEventListener("click", () => {
 
   const accuracy =
     Math.round((correctAnswers / questions.length) * 100);
+
+    saveExamSession();
 
   let result = "FAILED ❌";
 
