@@ -182,6 +182,44 @@ body {
   color: #111827;
 }
 
+/* =========================
+   ACCOUNT BUTTON
+========================= */
+
+.account-link {
+  position: fixed;
+  top: 22px;
+  right: 26px;
+
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+
+  text-decoration: none;
+  font-size: 1.1rem;
+
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+
+  z-index: 999;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.account-link:hover {
+  transform: translateY(-1px);
+  border-color: #16a34a;
+}
+
+/* ***** MEDIA SECTION ******/
 
 @media (max-width: 700px) {
 
