@@ -984,12 +984,12 @@ nextBtn.addEventListener("click", () => {
         <span>Questions</span>
       </div>
 
-      <div class="exam-result-item">
+      <div class="exam-result-item correct-result">
         <strong>${correctAnswers}</strong>
         <span>Correct</span>
       </div>
 
-      <div class="exam-result-item">
+      <div class="exam-result-item wrong-result">
         <strong>${wrongAnswers}</strong>
         <span>Wrong</span>
       </div>

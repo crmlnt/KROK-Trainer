@@ -8,6 +8,45 @@
 </head>
 <body class="landing-body">
 
+  <header class="landing-header">
+
+  <button
+    class="menu-toggle"
+    id="menuToggle"
+    aria-label="Open navigation menu"
+    aria-expanded="false"
+    aria-controls="landingMenu"
+  >
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <nav class="landing-menu" id="landingMenu">
+
+    <a href="guide.html">
+      Tutorial
+    </a>
+
+    <span class="menu-item-disabled">
+      About KROK Trainer
+      <small>Coming soon</small>
+    </span>
+
+    <span class="menu-item-disabled">
+      Privacy
+      <small>Coming soon</small>
+    </span>
+
+    <span class="menu-item-disabled">
+      Account
+      <small>Coming soon</small>
+    </span>
+
+  </nav>
+
+</header>
+
   <main class="landing-container">
     <section class="hero-card">
       <div class="logo-circle">🩺</div>
@@ -87,6 +126,29 @@
 
   
 </footer>
+
+<script>
+  const menuToggle = document.getElementById("menuToggle");
+  const landingMenu = document.getElementById("landingMenu");
+
+  menuToggle.addEventListener("click", () => {
+    const isOpen = landingMenu.classList.toggle("open");
+
+    menuToggle.classList.toggle("open", isOpen);
+    menuToggle.setAttribute("aria-expanded", isOpen);
+  });
+
+  document.addEventListener("click", (event) => {
+    if (
+      !landingMenu.contains(event.target) &&
+      !menuToggle.contains(event.target)
+    ) {
+      landingMenu.classList.remove("open");
+      menuToggle.classList.remove("open");
+      menuToggle.setAttribute("aria-expanded", "false");
+    }
+  });
+</script>
 
 </body>
 </html>
