@@ -10,6 +10,7 @@ const accountPanel = document.getElementById("accountPanel");
 
 const userEmail = document.getElementById("userEmail");
 const authMessage = document.getElementById("authMessage");
+const forgotPasswordLink = document.getElementById("forgotPasswordLink");
 
 
 function showUser(user) {
@@ -43,6 +44,30 @@ async function checkSession() {
   }
 
 }
+
+forgotPasswordLink.addEventListener("click", async (event) => {
+  event.preventDefault();
+
+  const email = emailInput.value.trim();
+
+  if (!email) {
+    authMessage.textContent =
+      "Enter your email address first, then click Forgot password?";
+    return;
+  }
+
+  const { error } = await supabaseClient.auth.resetPasswordForEmail(email, {
+    redirectTo: `${window.location.origin}/KROK-Trainer/reset-password.html`
+  });
+
+  if (error) {
+    authMessage.textContent = error.message;
+    return;
+  }
+
+  authMessage.textContent =
+    "Password reset email sent. Check your inbox.";
+});
 
 
 signupBtn.addEventListener("click", async () => {
