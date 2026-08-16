@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  font-family: "Manrope", sans-serif;
+
+  background: #f4f6f9;
+  color: #111827;
+}
+
+.statistics-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 42px 24px 70px;
+}
+
+
+/* ---------- BACK ---------- */
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+
+  margin-bottom: 24px;
+
+  color: #6b7280;
+  text-decoration: none;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  transition: color 0.2s ease;
+}
+
+.back-link:hover {
+  color: #16a34a;
+}
+
+
+/* ---------- HEADER ---------- */
+
+.statistics-header {
+  text-align: center;
+  margin-bottom: 38px;
+}
+
+.statistics-eyebrow,
+.panel-label {
+  display: inline-block;
+
+  color: #16a34a;
+
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+
+.statistics-header h1 {
+  margin: 8px 0 0;
+
+  font-size: clamp(2.3rem, 5vw, 3.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.statistics-header p {
+  max-width: 620px;
+  margin: 14px auto 0;
+
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+
+/* ---------- OVERVIEW ---------- */
+
+.statistics-overview {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+
+  margin-bottom: 28px;
+}
+
+.stat-card {
+  padding: 24px 18px;
+
+  text-align: center;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+}
+
+.stat-card strong {
+  display: block;
+
+  margin-bottom: 6px;
+
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.stat-card span {
+  color: #6b7280;
+
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+
+/* ---------- PANELS ---------- */
+
+.statistics-panel {
+  margin-bottom: 18px;
+  padding: 28px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.035);
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 22px;
+}
+
+.panel-header h2,
+.weak-topics-preview h2 {
+  margin: 6px 0 0;
+
+  font-size: 1.35rem;
+  letter-spacing: -0.025em;
+}
+
+
+/* ---------- PROGRESS ---------- */
+
+.progress-chart {
+  min-height: 230px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f9fafb;
+
+  border: 1px dashed #d1d5db;
+  border-radius: 14px;
+
+  color: #9ca3af;
+
+  font-size: 0.85rem;
+}
+
+
+/* ---------- SUBJECT STATS ---------- */
+
+.subject-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.subject-stat-row {
+  display: grid;
+  grid-template-columns: minmax(170px, 1fr) 3fr 60px;
+  align-items: center;
+  gap: 14px;
+}
+
+.subject-stat-name {
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.subject-stat-name small {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #9ca3af;
+
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.subject-stat-track {
+  height: 10px;
+
+  overflow: hidden;
+
+  background: #e5e7eb;
+  border-radius: 999px;
+}
+
+.subject-stat-fill {
+  height: 100%;
+  width: 0;
+
+  background: #16a34a;
+  border-radius: 999px;
+}
+
+.subject-stat-value {
+  text-align: right;
+
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+
+/* ---------- KROK BREAKDOWN ---------- */
+
+.krok-breakdown {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.krok-stat-card {
+  padding: 24px;
+
+  text-align: center;
+
+  background: #f9fafb;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+}
+
+.krok-stat-card > span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #6b7280;
+
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.krok-stat-card strong {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.krok-stat-card small {
+  color: #9ca3af;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+
+/* ---------- WEAK TOPICS ---------- */
+
+.weak-topics-preview {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.weak-topics-preview p {
+  margin: 8px 0 0;
+
+  color: #6b7280;
+
+  font-size: 0.9rem;
+}
+
+.coming-soon-badge {
+  flex-shrink: 0;
+
+  padding: 7px 11px;
+
+  background: #f3f4f6;
+
+  border-radius: 999px;
+
+  color: #6b7280;
+
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+
+/* ---------- PAGE STATES ---------- */
+
+#statisticsLoading,
+#loginRequired,
+#emptyStatistics {
+  max-width: 620px;
+  margin: 70px auto;
+
+  padding: 34px;
+
+  text-align: center;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+}
+
+#statisticsLoading p,
+#loginRequired p,
+#emptyStatistics p {
+  color: #6b7280;
+}
+
+#loginRequired a {
+  display: inline-block;
+
+  margin-top: 12px;
+  padding: 10px 18px;
+
+  background: #16a34a;
+  color: #ffffff;
+
+  border-radius: 9px;
+
+  text-decoration: none;
+  font-weight: 700;
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 850px) {
+
+  .statistics-overview {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 650px) {
+
+  .statistics-page {
+    padding: 28px 16px 50px;
+  }
+
+  .statistics-overview {
+    grid-template-columns: 1fr;
+  }
+
+  .statistics-panel {
+    padding: 22px 18px;
+  }
+
+  .subject-stat-row {
+    grid-template-columns: 1fr 50px;
+    gap: 8px 12px;
+  }
+
+  .subject-stat-track {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .subject-stat-value {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .krok-breakdown {
+    grid-template-columns: 1fr;
+  }
+
+  .weak-topics-preview {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+}

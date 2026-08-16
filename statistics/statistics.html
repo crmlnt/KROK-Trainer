@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Statistics — KROK Trainer</title>
+
+  <link rel="stylesheet" href="statistics.css">
+</head>
+
+<body>
+
+  <main class="statistics-page">
+
+    <a href="#" class="back-link" onclick="history.back(); return false;">
+      ← Back
+    </a>
+
+    <header class="statistics-header">
+
+      <span class="statistics-eyebrow">
+        KROK TRAINER
+      </span>
+
+      <h1>Statistics</h1>
+
+      <p>
+        Track your exam performance and monitor your progress over time.
+      </p>
+
+    </header>
+
+
+    <!-- USER NOT LOGGED IN -->
+
+    <section id="loginRequired" hidden>
+
+      <h2>Sign in required</h2>
+
+      <p>
+        Sign in to your KROK Trainer account to view your statistics.
+      </p>
+
+      <a href="../account.html">
+        Sign In
+      </a>
+
+    </section>
+
+
+    <!-- LOADING -->
+
+    <section id="statisticsLoading">
+      <p>Loading your statistics...</p>
+    </section>
+
+
+    <!-- NO DATA -->
+
+    <section id="emptyStatistics" hidden>
+
+      <h2>No statistics yet</h2>
+
+      <p>
+        Complete your first Exam Mode session and your statistics
+        will appear here.
+      </p>
+
+    </section>
+
+
+    <!-- DASHBOARD -->
+
+    <section id="statisticsContent" hidden>
+
+
+      <!-- OVERVIEW -->
+
+      <section class="statistics-overview">
+
+        <div class="stat-card">
+          <strong id="totalExams">0</strong>
+          <span>Exams Completed</span>
+        </div>
+
+        <div class="stat-card">
+          <strong id="totalQuestions">0</strong>
+          <span>Questions Answered</span>
+        </div>
+
+        <div class="stat-card">
+          <strong id="overallAccuracy">0%</strong>
+          <span>Overall Accuracy</span>
+        </div>
+
+        <div class="stat-card">
+          <strong id="bestScore">0%</strong>
+          <span>Best Score</span>
+        </div>
+
+      </section>
+
+
+      <!-- PROGRESS -->
+
+      <section class="statistics-panel">
+
+        <div class="panel-header">
+          <div>
+            <span class="panel-label">PROGRESS</span>
+            <h2>Performance over time</h2>
+          </div>
+        </div>
+
+        <div id="progressChart" class="progress-chart">
+            <canvas id="progressCanvas"></canvas>
+        </div>
+
+      </section>
+
+
+      <!-- SUBJECT PERFORMANCE -->
+
+      <section class="statistics-panel">
+
+        <div class="panel-header">
+          <div>
+            <span class="panel-label">SUBJECTS</span>
+            <h2>Performance by subject</h2>
+          </div>
+        </div>
+
+        <div id="subjectStats" class="subject-stats">
+          <!-- statistics.js -->
+        </div>
+
+      </section>
+
+
+      <!-- KROK BREAKDOWN -->
+
+      <section class="statistics-panel">
+
+        <div class="panel-header">
+          <div>
+            <span class="panel-label">EXAMS</span>
+            <h2>KROK breakdown</h2>
+          </div>
+        </div>
+
+        <div class="krok-breakdown">
+
+          <div class="krok-stat-card">
+
+            <span>KROK 1</span>
+
+            <strong id="krok1Accuracy">
+              —
+            </strong>
+
+            <small id="krok1Exams">
+              0 exams
+            </small>
+
+          </div>
+
+
+          <div class="krok-stat-card">
+
+            <span>KROK 2</span>
+
+            <strong id="krok2Accuracy">
+              —
+            </strong>
+
+            <small id="krok2Exams">
+              0 exams
+            </small>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- FUTURE WEAK TOPICS -->
+
+      <section class="statistics-panel weak-topics-preview">
+
+        <div>
+
+          <span class="panel-label">
+            COMING LATER
+          </span>
+
+          <h2>Weak Topics</h2>
+
+          <p>
+            Identify recurring weak areas based on your exam history.
+          </p>
+
+        </div>
+
+        <span class="coming-soon-badge">
+          Coming soon
+        </span>
+
+      </section>
+
+
+    </section>
+
+  </main>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <script src="../supabase.js"></script>
+
+  <script src="statistics.js"></script>
+
+</body>
+
+</html>

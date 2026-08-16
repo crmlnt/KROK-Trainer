@@ -1567,3 +1567,7 @@ TOGGLE CARD
   transform: translateY(-1px);
   border-color: #16a34a;
 }
+
+.hidden-old-stats {
+  display: none !important;
+}
