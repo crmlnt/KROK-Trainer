@@ -8,19 +8,35 @@
 </head>
 <body class="landing-body">
 
-  <header class="landing-header">
+<header class="landing-header">
 
-  <button
-    class="menu-toggle"
-    id="menuToggle"
-    aria-label="Open navigation menu"
-    aria-expanded="false"
-    aria-controls="landingMenu"
-  >
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
+  <div class="landing-header-inner">
+
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="landingMenu"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <a href="account.html" class="header-account-link">
+      <span class="header-account-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="8" r="4"></circle>
+          <path d="M4 21a8 8 0 0 1 16 0"></path>
+        </svg>
+      </span>
+      <span>Login/Account</span>
+    </a>
+
+  </div>
+
 
   <nav class="landing-menu" id="landingMenu">
 
@@ -46,8 +62,62 @@
 
 </header>
 
-  <main class="landing-container">
-    <section class="hero-card">
+
+<main class="landing-container">
+
+  <section class="hero-card">
+
+    <section id="signupBanner" class="signup-banner">
+
+      <div class="signup-banner-content">
+
+        <div class="signup-banner-icon" aria-hidden="true">
+
+          <svg viewBox="0 0 64 64" width="44" height="44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="39" width="7" height="13" rx="2" fill="currentColor" opacity="0.35" />
+          
+            <rect x="23" y="31" width="7" height="21" rx="2" fill="currentColor" opacity="0.5" />
+          
+            <rect x="36" y="23" width="7" height="29" rx="2" fill="currentColor" opacity="0.7" />
+          
+            <rect x="49" y="14" width="7" height="38" rx="2" fill="currentColor" />
+          
+            <path d="M11 35L25 27L37 30L53 12" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+          
+            <path d="M46 12H53V19" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+
+        </div>
+
+        <div class="signup-banner-text">
+
+          <strong>
+            Unlock advanced statistics
+          </strong>
+
+          <span>
+            Create a free account to save your exam history,
+            track your progress and access advanced performance
+            analytics across devices.
+          </span>
+
+        </div>
+
+      </div>
+
+      <a
+        href="account.html"
+        class="signup-banner-button"
+      >
+        Create free account →
+      </a>
+
+    </section>
+
+
+
+  
       <div class="logo-circle">🩺</div>
 
       <h1>KROK Trainer</h1>
@@ -126,9 +196,33 @@
   
 </footer>
 
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
 <script>
   const menuToggle = document.getElementById("menuToggle");
   const landingMenu = document.getElementById("landingMenu");
+
+  async function updateSignupBanner() {
+  const signupBanner = document.getElementById("signupBanner");
+
+  if (!signupBanner) {
+    return;
+  }
+
+  try {
+    const {
+      data: { user }
+    } = await supabaseClient.auth.getUser();
+
+    signupBanner.style.display = user ? "none" : "flex";
+
+  } catch (error) {
+    console.error("Error checking user session:", error);
+  }
+}
+
+updateSignupBanner();
 
   menuToggle.addEventListener("click", () => {
     const isOpen = landingMenu.classList.toggle("open");

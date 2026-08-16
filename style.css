@@ -3,11 +3,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
 
 body {
+  margin: 0;
+
   font-family: "Manrope", sans-serif;
   background-color: #ffffff;
-  display: flex;
-  justify-content: center;
-  padding: 40px 20px;
+
   min-height: 100vh;
 }
 
@@ -414,15 +414,16 @@ body.dark-mode .guide-btn {
 }
 
 .landing-container {
-  width: 100%;
-  max-width: 960px;
-  padding: 24px;
+  display: flex;
+  justify-content: center;
+
+  padding: 40px 20px;
 }
 
 .hero-card {
   background: #ffffff;
   border-radius: 28px;
-  padding: 48px 32px;
+  padding: 32px;
   text-align: center;
   box-shadow: 0 20px 60px rgba(20, 40, 80, 0.12);
 }
@@ -506,12 +507,38 @@ body.dark-mode .guide-btn {
 }
 
 @media (max-width: 700px) {
+.landing-header-inner {
+    padding: 8px 16px;
+  }
+
+  .landing-container {
+    padding: 20px 12px;
+  }
+
   .hero-card {
     padding: 36px 22px;
   }
 
   .hero-card h1 {
     font-size: 2rem;
+  }
+
+  .signup-banner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+
+    width: 100%;
+    padding: 18px;
+  }
+
+  .signup-banner-content {
+    align-items: flex-start;
+  }
+
+  .signup-banner-button {
+    width: 100%;
+    text-align: center;
   }
 
   .exam-grid {
@@ -1394,20 +1421,41 @@ TOGGLE CARD
 }
 
 
-/* =========================================
-   LANDING — BURGER MENU
-   ========================================= */
+
+/* =========================
+   LANDING TOP BAR
+========================= */
 
 .landing-header {
-  position: fixed;
-  top: 22px;
-  right: 26px;
+  position: sticky;
+  top: 0;
   z-index: 1000;
+
+  width: 100%;
+
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid #e5e7eb;
+
+  backdrop-filter: blur(10px);
 }
 
+.landing-header-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+
+  padding: 8px 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* ---------- BURGER ---------- */
+
 .menu-toggle {
-  width: 44px;
-  height: 44px;
+  width: 42px;
+  height: 42px;
 
   display: flex;
   flex-direction: column;
@@ -1417,17 +1465,14 @@ TOGGLE CARD
 
   padding: 0;
 
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
-  border-radius: 12px;
+  background: transparent;
+  border: none;
 
   cursor: pointer;
-
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
 }
 
 .menu-toggle span {
-  width: 19px;
+  width: 20px;
   height: 2px;
 
   background: #374151;
@@ -1454,13 +1499,37 @@ TOGGLE CARD
 }
 
 
+/* ---------- ACCOUNT ---------- */
+
+.header-account-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #374151;
+  text-decoration: none;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  transition: color 0.2s ease;
+}
+
+.header-account-link:hover {
+  color: #16a34a;
+}
+
+.header-account-icon {
+  font-size: 1rem;
+}
+
 /* Menu panel */
 
 .landing-menu {
   position: absolute;
 
-  top: 54px;
-  right: 0;
+  top: calc(100% + 8px);
+  left: max(24px, calc((100% - 1180px) / 2 + 24px));
 
   width: 230px;
 
@@ -1570,4 +1639,110 @@ TOGGLE CARD
 
 .hidden-old-stats {
   display: none !important;
+}
+
+/* =========================
+   SIGN UP BANNER
+========================= */
+
+.signup-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  padding: 22px 26px;
+
+  background: #eef5ff;
+  border: 1px solid #dbe7f7;
+  border-radius: 18px;
+}
+
+.signup-banner-content {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.signup-banner-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 72px;
+  height: 72px;
+  flex-shrink: 0;
+
+  color: #3b82f6;
+
+  background: #e2edff;
+  border-radius: 16px;
+}
+
+.signup-banner-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.signup-banner-text strong {
+  font-size: 18px;
+  color: #111827;
+}
+
+.signup-banner-text span {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #667085;
+}
+
+.signup-banner-button {
+  flex-shrink: 0;
+
+  padding: 13px 18px;
+
+  background: #16a34a;
+  color: #ffffff;
+
+  border-radius: 12px;
+
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.signup-banner-button:hover {
+  background: #15803d;
+  transform: translateY(-1px);
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+  .signup-banner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+
+    padding: 20px;
+  }
+
+  .signup-banner-content {
+    align-items: flex-start;
+  }
+
+  .signup-banner-button {
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
 }
