@@ -508,6 +508,24 @@ function startExamMode() {
   examMode = true;
   reviewMode = false;
 
+
+  const subjectControls =
+    document.getElementById("subjectFilter")?.closest(".controls");
+
+  if (subjectControls) {
+    subjectControls.style.display = "none";
+  }
+
+  const tutorialBtn = document.querySelector(
+    'button[onclick*="guide.html"]'
+  );
+
+  if (tutorialBtn) {
+    tutorialBtn.style.display = "none";
+  }
+
+
+
   const filteredQuestions = getFilteredQuestions();
   const uniqueQuestions = removeDuplicateQuestions(filteredQuestions);
 
@@ -563,6 +581,50 @@ function startExamFromUrl(params) {
   examSessionLog = [];
   examMode = true;
   reviewMode = false;
+
+
+const homeBtn = document.getElementById("homeBtn");
+
+if (homeBtn) {
+  homeBtn.classList.add("exit-exam-btn");
+
+  homeBtn.innerHTML = `
+    <svg
+      viewBox="0 0 24 24"
+      width="20"
+      height="20"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M10 17l5-5-5-5"></path>
+      <path d="M15 12H3"></path>
+      <path d="M21 19V5a2 2 0 0 0-2-2h-6"></path>
+    </svg>
+
+    <span>Exit Exam</span>
+  `;
+}
+
+
+  const subjectControls =
+    document.getElementById("subjectFilter")?.closest(".controls");
+
+  if (subjectControls) {
+    subjectControls.style.display = "none";
+  }
+
+  const tutorialBtn = document.querySelector(
+    'button[onclick*="guide.html"]'
+  );
+
+  if (tutorialBtn) {
+    tutorialBtn.style.display = "none";
+  }
+
 
   document.getElementById("practice-tools").style.display = "none";
 
@@ -857,14 +919,25 @@ function exportExamLog() {
 }
 
 function goHome() {
-    const params = new URLSearchParams(window.location.search);
-    const examType = params.get("exam") || "krok1";
 
-    if (examType === "krok2") {
-        window.location.href = "krok2.html";
-    } else {
-        window.location.href = "krok1.html";
+  if (examMode) {
+    const confirmExit = confirm(
+      "Exit exam?\n\nYour current exam progress will be lost."
+    );
+
+    if (!confirmExit) {
+      return;
     }
+  }
+
+  const params = new URLSearchParams(window.location.search);
+  const examType = params.get("exam") || "krok1";
+
+  if (examType === "krok2") {
+    window.location.href = "krok2.html";
+  } else {
+    window.location.href = "krok1.html";
+  }
 }
 
 function resetTrainer() {

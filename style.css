@@ -1338,6 +1338,11 @@ TOGGLE CARD
   font-size: 20px;
 }
 
+#homeBtn.exit-exam-btn::before {
+  content: none;
+  display: none;
+}
+
 #stats-btn::before {
   content: "📊";
   font-size: 20px;
@@ -1752,4 +1757,25 @@ TOGGLE CARD
     width: 100%;
     box-sizing: border-box;
   }
+}
+
+.exit-exam-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  background: #fff1f2 !important;
+  color: #dc2626 !important;
+
+  border: 1px solid #fecaca !important;
+}
+
+.exit-exam-btn:hover {
+  background: #fee2e2 !important;
+  border-color: #fca5a5 !important;
+}
+
+.exit-exam-btn svg {
+  display: block;
 }
