@@ -963,6 +963,17 @@ function showExportActions() {
 
 // EVEMT LISTENER
 
+
+const subjectFilter = document.getElementById("subjectFilter");
+
+subjectFilter.addEventListener("change", () => {
+  if (examMode) return;
+
+  resetTrainer();
+});
+
+reviewExamBtn.addEventListener("click", startExamReview);
+
 reviewExamBtn.addEventListener("click", startExamReview);
 
 document.getElementById("homeBtn").addEventListener("click", goHome);
