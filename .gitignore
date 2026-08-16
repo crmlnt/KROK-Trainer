@@ -19,3 +19,24 @@ krok2/*analysis*.json
 krok2/*duplicates*.json
 krok2/*inventory*.json
 krok2/*validation*.json
+
+# Local development / conversion scripts
+convert*.js
+merge.js
+validate.js
+
+# Local npm files
+package.json
+package-lock.json
+
+# Generated exports
+exports/
+
+krok2/batch-krok2.js
+krok2/build-krok2-final.js
+krok2/converter-krok2.js
+krok2/patch-krok2-final.js
+krok2/validate-krok2-final.js
+
+krok2/krok2-duplicate-consolidation.json
+krok2/krok2-exact-duplicate-classification.json
