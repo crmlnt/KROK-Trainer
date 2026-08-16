@@ -49,6 +49,17 @@ if (localStorage.getItem("theme") === "dark") {
 //FUNCTIONS
 
 async function saveExamSession() {
+
+  if (
+    window.location.hostname === "localhost" ||
+    window.location.hostname === "127.0.0.1"
+  ) {
+    console.log(
+      "Local development: exam session not saved to Supabase."
+    );
+    return;
+  }
+  
   try {
     const {
       data: { user }
