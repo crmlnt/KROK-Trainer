@@ -886,138 +886,12 @@ function resetTrainer() {
   }
 }
 
-function startExamReview() {
-  if (examSessionLog.length === 0) {
-    alert("No exam data available for review.");
-    return;
-  }
-  document.querySelector(".quiz-card").style.display = "block";
-  reviewExamIndex = 0;
-  showExamReviewQuestion();
-}
-
-function showExamReviewQuestion() {
-  const item = examSessionLog[reviewExamIndex];
-
-  questionNumber.textContent =
-    `Review Question ${reviewExamIndex + 1} of ${examSessionLog.length}`;
-
-  subjectDisplay.textContent =
-    `Subject: ${item.subject} | ID: ${item.id}`;
-
-  questionText.textContent = item.question;
-
-  answersContainer.innerHTML = "";
-
-  item.answers.forEach((answer) => {
-    const answerDiv = document.createElement("div");
-    answerDiv.classList.add("review-answer");
-
-    answerDiv.textContent = answer;
-
-    if (answer === item.correctAnswer) {
-      answerDiv.classList.add("correct-review-answer");
-    }
-
-    if (answer === item.yourAnswer && item.result === "Wrong") {
-      answerDiv.classList.add("wrong-review-answer");
-    }
-
-    answersContainer.appendChild(answerDiv);
-  });
-
-  feedback.innerHTML = `
-    <div class="exam-review-result">
-      <p><strong>Your answer:</strong> ${item.yourAnswer}</p>
-      <p><strong>Correct answer:</strong> ${item.correctAnswer}</p>
-      <p><strong>Result:</strong> ${item.result}</p>
-    </div>
-  `;
-
-  prevReviewBtn.style.display = reviewExamIndex > 0 ? "inline-block" : "none";
-  nextReviewBtn.style.display = reviewExamIndex < examSessionLog.length - 1 ? "inline-block" : "none";
-
-  nextBtn.style.display = "none";
-  reviewExamBtn.style.display = "none";
-}
-
-function hideExportActions() {
-  document.getElementById("export-errors-btn").style.display = "none";
-  document.getElementById("exportExamLogBtn").style.display = "none";
-  reviewBtn.style.display = "none";
-  reviewExamBtn.style.display = "none";
-}
-
-function showExportActions() {
-  document.getElementById("export-errors-btn").style.display = "inline-block";
-  document.getElementById("exportExamLogBtn").style.display = "inline-block";
-
-  if (errors.length > 0) {
-    reviewBtn.style.display = "inline-block";
-  }
-
-  if (examSessionLog.length > 0) {
-    reviewExamBtn.style.display = "inline-block";
-  }
-}
-
-// EVEMT LISTENER
 
 
-const subjectFilter = document.getElementById("subjectFilter");
-
-subjectFilter.addEventListener("change", () => {
-  if (examMode) return;
-
-  resetTrainer();
-});
-
-reviewExamBtn.addEventListener("click", startExamReview);
-
-reviewExamBtn.addEventListener("click", startExamReview);
-
-document.getElementById("homeBtn").addEventListener("click", goHome);
-
-exportErrorsBtn.addEventListener("click", exportErrorLog);
-
-statsBtn.addEventListener("click", showStatistics);
-
-prevReviewBtn.addEventListener("click", () => {
-  if (reviewExamIndex > 0) {
-    reviewExamIndex--;
-    showExamReviewQuestion();
-  }
-});
-
-nextReviewBtn.addEventListener("click", () => {
-  if (reviewExamIndex < examSessionLog.length - 1) {
-    reviewExamIndex++;
-    showExamReviewQuestion();
-  }
-});
-
-nextBtn.addEventListener("click", () => {
-  currentQuestionIndex++;
-
-  if (currentQuestionIndex < questions.length) {
-    showQuestion();
-  } else {
-    if (examMode) {
-      questionText.textContent = "";
-    } else {
-      questionText.textContent = "Quiz completed!";
-    }
-
-    questionNumber.textContent = "";
-    answersContainer.innerHTML = "";
-    if (examMode) {
-    
-    stopExamTimer();
+function showExamResults() {
 
   const accuracy =
     Math.round((correctAnswers / questions.length) * 100);
-
-    saveExamSession();
 
   let result = "FAILED ❌";
 
@@ -1025,91 +899,94 @@ nextBtn.addEventListener("click", () => {
     result = "PASSED ✅";
   }
 
-      const params = new URLSearchParams(window.location.search);
-      const examType = params.get("exam") || "krok1";
+  const params = new URLSearchParams(window.location.search);
+  const examType = params.get("exam") || "krok1";
 
-      const newExamUrl =
-        examType === "krok2"
-          ? "exam.html?exam=krok2"
-          : "exam.html";
+  const newExamUrl =
+    examType === "krok2"
+      ? "exam.html?exam=krok2"
+      : "exam.html";
 
-      const studyModeUrl =
-        examType === "krok2"
-          ? "krok2.html"
-          : "krok1.html";   
-          
-      document.querySelector(".quiz-card").style.display = "none";    
+  const studyModeUrl =
+    examType === "krok2"
+      ? "krok2.html"
+      : "krok1.html";
+
+  document.querySelector(".quiz-card").style.display = "none";
 
   feedback.innerHTML = `
-  <div class="exam-summary">
+    <div class="exam-summary">
 
-    <div class="exam-summary-icon">✓</div>
+      <div class="exam-summary-icon">✓</div>
 
-    <h2>Exam Completed</h2>
+      <h2>Exam Completed</h2>
 
-    <p class="exam-summary-subtitle">
-      Your mock examination has been completed.
-    </p>
+      <p class="exam-summary-subtitle">
+        Your mock examination has been completed.
+      </p>
 
-    <div class="exam-score">
-      <span class="exam-score-value">${accuracy}%</span>
-      <span class="exam-score-label">Final Score</span>
-    </div>
-
-    <div class="exam-progress">
-      <div
-        class="exam-progress-fill"
-        style="width: ${accuracy}%;">
-      </div>
-    </div>
-
-    <div class="exam-results-grid">
-
-      <div class="exam-result-item">
-        <strong>${questions.length}</strong>
-        <span>Questions</span>
+      <div class="exam-score">
+        <span class="exam-score-value">${accuracy}%</span>
+        <span class="exam-score-label">Final Score</span>
       </div>
 
-      <div class="exam-result-item correct-result">
-        <strong>${correctAnswers}</strong>
-        <span>Correct</span>
+      <div class="exam-progress">
+        <div
+          class="exam-progress-fill"
+          style="width: ${accuracy}%;">
+        </div>
       </div>
 
-      <div class="exam-result-item wrong-result">
-        <strong>${wrongAnswers}</strong>
-        <span>Wrong</span>
+      <div class="exam-results-grid">
+
+        <div class="exam-result-item">
+          <strong>${questions.length}</strong>
+          <span>Questions</span>
+        </div>
+
+        <div class="exam-result-item correct-result">
+          <strong>${correctAnswers}</strong>
+          <span>Correct</span>
+        </div>
+
+        <div class="exam-result-item wrong-result">
+          <strong>${wrongAnswers}</strong>
+          <span>Wrong</span>
+        </div>
+
       </div>
 
-    </div>
-
-    <div class="exam-status">
-      ${result}
-    </div>
+      <div class="exam-status">
+        ${result}
+      </div>
 
       <div class="exam-summary-actions">
 
-      <a href="${newExamUrl}" class="exam-action-primary">
-      Start New Exam
-      </a>
+        <a href="${newExamUrl}" class="exam-action-primary">
+          Start New Exam
+        </a>
 
-      <a href="${studyModeUrl}" class="exam-action-secondary">
-      Back to Study Mode
-      </a>
+        <a href="${studyModeUrl}" class="exam-action-secondary">
+          Back to Study Mode
+        </a>
 
-      <a href="index.html" class="exam-action-link">
-      Back to Exam Selection
-      </a>
+        <a href="index.html" class="exam-action-link">
+          Back to Exam Selection
+        </a>
 
-    </div>
+      </div>
 
-    <button id="examToolsToggle" class="exam-tools-toggle">
-      Review & Export ▼
-    </button>
+      <button id="examToolsToggle" class="exam-tools-toggle">
+        Review & Export ▼
+      </button>
 
-    <div id="examToolsPanel" class="exam-tools-panel" style="display: none;">
+      <div
+        id="examToolsPanel"
+        class="exam-tools-panel"
+        style="display: none;"
+      >
 
-
-        <button id="finalReviewExamBtn" class="exam-tool-card">
+      <button id="finalReviewExamBtn" class="exam-tool-card">
             <span class="exam-tool-icon">
               <svg viewBox="0 0 24 24"
                   width="24"
@@ -1207,44 +1084,222 @@ nextBtn.addEventListener("click", () => {
         </button>
 
 
+      </div>
+
     </div>
-
-  </div>
-`;
+  `;
 
 
-const examToolsToggle = document.getElementById("examToolsToggle");
-const examToolsPanel = document.getElementById("examToolsPanel");
+  const examToolsToggle =
+    document.getElementById("examToolsToggle");
 
-examToolsToggle.addEventListener("click", () => {
-  const isOpen = examToolsPanel.style.display === "grid";
-
-  examToolsPanel.style.display = isOpen ? "none" : "grid";
-
-  examToolsToggle.textContent = isOpen
-    ? "Review & Export ▼"
-    : "Review & Export ▲";
-});
-
-const finalReviewExamBtn = document.getElementById("finalReviewExamBtn");
-
-finalReviewExamBtn.addEventListener("click", startExamReview);
-
-const finalExportExamBtn = document.getElementById("finalExportExamBtn");
-
-finalExportExamBtn.addEventListener("click", exportExamLog);
-
-const finalExportErrorsBtn = document.getElementById("finalExportErrorsBtn");
-
-finalExportErrorsBtn.addEventListener("click", exportErrorLog);
-
-const finalClearErrorsBtn = document.getElementById("finalClearErrorsBtn");
-finalClearErrorsBtn.addEventListener("click", clearErrorLog);
+  const examToolsPanel =
+    document.getElementById("examToolsPanel");
 
 
+  examToolsToggle.addEventListener("click", () => {
+
+    const isOpen =
+      examToolsPanel.style.display === "grid";
+
+    examToolsPanel.style.display =
+      isOpen ? "none" : "grid";
+
+    examToolsToggle.textContent =
+      isOpen
+        ? "Review & Export ▼"
+        : "Review & Export ▲";
+  });
+
+
+const finalReviewExamBtn =
+  document.getElementById("finalReviewExamBtn");
+
+finalReviewExamBtn.addEventListener(
+  "click",
+  startExamReview
+);
+
+
+const finalExportExamBtn =
+  document.getElementById("finalExportExamBtn");
+
+finalExportExamBtn.addEventListener(
+  "click",
+  exportExamLog
+);
+
+
+const finalExportErrorsBtn =
+  document.getElementById("finalExportErrorsBtn");
+
+finalExportErrorsBtn.addEventListener(
+  "click",
+  exportErrorLog
+);
+
+
+const finalClearErrorsBtn =
+  document.getElementById("finalClearErrorsBtn");
+
+finalClearErrorsBtn.addEventListener(
+  "click",
+  clearErrorLog
+);
 
 showExportActions();
 reviewExamBtn.style.display = "block";
+
+}
+
+
+
+
+function startExamReview() {
+  if (examSessionLog.length === 0) {
+    alert("No exam data available for review.");
+    return;
+  }
+  document.querySelector(".quiz-card").style.display = "block";
+  reviewExamIndex = 0;
+  showExamReviewQuestion();
+}
+
+function showExamReviewQuestion() {
+  const item = examSessionLog[reviewExamIndex];
+
+  questionNumber.textContent =
+    `Review Question ${reviewExamIndex + 1} of ${examSessionLog.length}`;
+
+  subjectDisplay.textContent =
+    `Subject: ${item.subject} | ID: ${item.id}`;
+
+  questionText.textContent = item.question;
+
+  answersContainer.innerHTML = "";
+
+  item.answers.forEach((answer) => {
+    const answerDiv = document.createElement("div");
+    answerDiv.classList.add("review-answer");
+
+    answerDiv.textContent = answer;
+
+    if (answer === item.correctAnswer) {
+      answerDiv.classList.add("correct-review-answer");
+    }
+
+    if (answer === item.yourAnswer && item.result === "Wrong") {
+      answerDiv.classList.add("wrong-review-answer");
+    }
+
+    answersContainer.appendChild(answerDiv);
+  });
+
+  feedback.innerHTML = `
+    <div class="exam-review-result">
+      <p><strong>Your answer:</strong> ${item.yourAnswer}</p>
+      <p><strong>Correct answer:</strong> ${item.correctAnswer}</p>
+      <p><strong>Result:</strong> ${item.result}</p>
+    </div>
+
+      <button
+        id="backToExamResultsBtn"
+        class="exam-action-secondary"
+        type="button">
+        ← Back to Exam Results
+      </button>
+
+  `;
+
+  const backToExamResultsBtn =
+    document.getElementById("backToExamResultsBtn");
+
+  backToExamResultsBtn.addEventListener(
+    "click",
+    showExamResults
+  );
+
+  prevReviewBtn.style.display = reviewExamIndex > 0 ? "inline-block" : "none";
+  nextReviewBtn.style.display = reviewExamIndex < examSessionLog.length - 1 ? "inline-block" : "none";
+
+  nextBtn.style.display = "none";
+  reviewExamBtn.style.display = "none";
+}
+
+function hideExportActions() {
+  document.getElementById("export-errors-btn").style.display = "none";
+  document.getElementById("exportExamLogBtn").style.display = "none";
+  reviewBtn.style.display = "none";
+  reviewExamBtn.style.display = "none";
+}
+
+function showExportActions() {
+  document.getElementById("export-errors-btn").style.display = "inline-block";
+  document.getElementById("exportExamLogBtn").style.display = "inline-block";
+
+  if (errors.length > 0) {
+    reviewBtn.style.display = "inline-block";
+  }
+
+  if (examSessionLog.length > 0) {
+    reviewExamBtn.style.display = "inline-block";
+  }
+}
+
+// EVEMT LISTENER
+
+
+const subjectFilter = document.getElementById("subjectFilter");
+
+subjectFilter.addEventListener("change", () => {
+  if (examMode) return;
+
+  resetTrainer();
+});
+
+reviewExamBtn.addEventListener("click", startExamReview);
+
+reviewExamBtn.addEventListener("click", startExamReview);
+
+document.getElementById("homeBtn").addEventListener("click", goHome);
+
+exportErrorsBtn.addEventListener("click", exportErrorLog);
+
+statsBtn.addEventListener("click", showStatistics);
+
+prevReviewBtn.addEventListener("click", () => {
+  if (reviewExamIndex > 0) {
+    reviewExamIndex--;
+    showExamReviewQuestion();
+  }
+});
+
+nextReviewBtn.addEventListener("click", () => {
+  if (reviewExamIndex < examSessionLog.length - 1) {
+    reviewExamIndex++;
+    showExamReviewQuestion();
+  }
+});
+
+nextBtn.addEventListener("click", () => {
+  currentQuestionIndex++;
+
+  if (currentQuestionIndex < questions.length) {
+    showQuestion();
+  } else {
+    if (examMode) {
+      questionText.textContent = "";
+    } else {
+      questionText.textContent = "Quiz completed!";
+    }
+
+    questionNumber.textContent = "";
+    answersContainer.innerHTML = "";
+    if (examMode) {
+    
+    stopExamTimer();
+    saveExamSession();
+    showExamResults();
 
 } else {
 
