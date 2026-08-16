@@ -13,11 +13,18 @@ body {
 
 .quiz-container {
   background: #f4f7fb;
+
   width: 100%;
   max-width: 850px;
+
+  margin: 40px auto;
   padding: 35px;
+
   border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  box-sizing: border-box;
 }
 
 a {
