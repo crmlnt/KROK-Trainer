@@ -14,6 +14,8 @@ let examSessionLog = [];
 let reviewExamIndex = 0;
 let examTimerInterval = null;
 let examTimeRemaining = 0;
+let aiUserAnswer = null;
+let aiExplanationLoaded = false;
 
 // HTML ELEMENTS
 
@@ -212,8 +214,33 @@ function populateSubjectFilter() {
 
 function showQuestion() {
   answered = false;
+  aiUserAnswer = null;
+  aiExplanationLoaded = false;
   feedback.textContent = "";
   answersContainer.innerHTML = "";
+
+  const aiExplainBtn = document.getElementById("aiExplainBtn");
+
+  if (aiExplainBtn) {
+    aiExplainBtn.style.display = "none";
+    aiExplainBtn.textContent = "✨ AI Explain";
+  }
+
+  const aiExplanationBox =
+    document.getElementById("aiExplanationBox");
+
+  const aiExplanationContent =
+    document.getElementById("aiExplanationContent");
+
+  if (aiExplanationBox) {
+    aiExplanationBox.style.display = "none";
+  }
+
+  if (aiExplanationContent) {
+    aiExplanationContent.textContent =
+      "Loading explanation...";
+  }
+
   nextBtn.style.display = "none";
   reviewBtn.style.display = "none";
   reviewExamBtn.style.display = "none";
@@ -328,6 +355,7 @@ function checkAnswer(button, isCorrect) {
   if (answered) return;
 
   answered = true;
+  aiUserAnswer = button.textContent;
 
   const allButtons = document.querySelectorAll(".answer-btn");
   const currentQuestion = questions[currentQuestionIndex];
@@ -430,6 +458,11 @@ function checkAnswer(button, isCorrect) {
 
   }
 
+  const aiExplainBtn = document.getElementById("aiExplainBtn");
+
+  if (aiExplainBtn) {
+    aiExplainBtn.style.display = "inline-flex";
+  }
 
   scoreText.textContent = `Score: ${score}`;
 
@@ -1399,7 +1432,140 @@ nextBtn.addEventListener("click", () => {
   }
 });
 
+const aiExplainBtn = document.getElementById("aiExplainBtn");
 
+if (aiExplainBtn) {
+  aiExplainBtn.addEventListener("click", async () => {
+
+    const aiExplanationBox =
+      document.getElementById("aiExplanationBox");
+
+    const aiExplanationContent =
+      document.getElementById("aiExplanationContent");
+
+    if (aiExplanationLoaded) {
+      aiExplanationBox.style.display = "block";
+      return;
+    }
+
+    if (!aiExplanationBox || !aiExplanationContent) {
+      return;
+    }
+
+    const currentQuestion =
+      questions[currentQuestionIndex];
+
+    if (!currentQuestion || !aiUserAnswer) {
+      aiExplanationBox.style.display = "block";
+
+      aiExplanationContent.textContent =
+        "Unable to generate an explanation for this question.";
+
+      return;
+    }
+
+    aiExplanationBox.style.display = "block";
+
+    aiExplanationContent.textContent =
+      "Loading explanation...";
+
+    aiExplainBtn.disabled = true;
+
+    try {
+
+      const correctAnswer =
+        currentQuestion.answers[currentQuestion.correct];
+
+      const { data, error } =
+        await supabaseClient.functions.invoke(
+          "AI-Explain",
+          {
+            body: {
+              question: currentQuestion.question,
+              answers: currentQuestion.answers,
+              correctAnswer: correctAnswer,
+              userAnswer: aiUserAnswer,
+              subject: currentQuestion.subject
+            }
+          }
+        );
+
+      if (error) {
+        console.error(
+          "AI Explain function error:",
+          error
+        );
+
+        aiExplanationContent.textContent =
+          "Unable to generate the explanation. Please try again.";
+
+        return;
+      }
+
+      if (
+        !data ||
+        !data.correctReason ||
+        !data.userAnswerFeedback ||
+        !data.keyConcept
+      ) {
+        aiExplanationContent.textContent =
+          "No explanation was returned.";
+
+        return;
+      }
+
+      aiExplanationContent.innerHTML = `
+          <div class="ai-section">
+            <h4>✓ Why this answer is correct</h4>
+            <p>${data.correctReason}</p>
+          </div>
+
+            <div class="ai-section">
+              <h4>💭 Your answer</h4>
+              <p>${data.userAnswerFeedback}</p>
+            </div>
+
+            <div class="ai-key-concept">
+              <h4>💡 Key concept</h4>
+              <p>${data.keyConcept}</p>
+            </div>
+          `;
+      aiExplanationLoaded = true;
+      aiExplainBtn.textContent = "✨ Show Explanation";
+
+    } catch (error) {
+
+      console.error(
+        "Unexpected AI Explain error:",
+        error
+      );
+
+      aiExplanationContent.textContent =
+        "Unable to generate the explanation. Please try again.";
+
+    } finally {
+
+      aiExplainBtn.disabled = false;
+
+    }
+  });
+}
+
+const closeAiExplanation =
+  document.getElementById("closeAiExplanation");
+
+if (closeAiExplanation) {
+  closeAiExplanation.addEventListener("click", () => {
+
+    const aiExplanationBox =
+      document.getElementById("aiExplanationBox");
+
+    if (aiExplanationBox) {
+      aiExplanationBox.style.display = "none";
+    }
+
+  });
+}
 
 reviewBtn.addEventListener("click", () => {
   questions = errors.map((error) => {

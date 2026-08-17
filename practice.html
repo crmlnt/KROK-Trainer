@@ -50,12 +50,51 @@
         <div id="progressBar" class="progress-bar"></div>
     </div>
     <div class="quiz-card">
-        <p id="question-number">Question 1</p>
-        <p id="subject-display">Subject: -</p>
-        <h2 id="question-text">Question text</h2>
-        <div id="answers-container"></div>
-        <button id="next-btn" class="primary-actions">Next question</button>
+
+    <div class="question-header">
+        <div class="question-meta">
+            <p id="question-number">Question 1</p>
+            <p id="subject-display">Subject: -</p>
+        </div>
+
+        <button id="aiExplainBtn"
+                class="ai-explain-btn"
+                type="button"
+                style="display: none;">
+            ✨ AI Explain
+        </button>
     </div>
+
+    <div id="aiExplanationBox"
+     class="ai-explanation-box"
+     style="display: none;">
+
+    <div class="ai-explanation-header">
+        <span>✨ AI Explanation</span>
+
+        <button id="closeAiExplanation"
+                class="ai-close-btn"
+                type="button"
+                aria-label="Close AI explanation">
+            ×
+        </button>
+    </div>
+
+    <div id="aiExplanationContent">
+        Loading explanation...
+    </div>
+
+</div>
+
+    <h2 id="question-text">Question text</h2>
+
+    <div id="answers-container"></div>
+
+    <button id="next-btn" class="primary-actions">
+        Next question
+    </button>
+
+</div>
 
 <p id="feedback"></p>
 
