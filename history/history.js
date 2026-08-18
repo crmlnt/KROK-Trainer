@@ -8,6 +8,10 @@ const totalQuestionsEl = document.getElementById("totalQuestions");
 const averageScoreEl = document.getElementById("averageScore");
 const examCountEl = document.getElementById("examCount");
 const examList = document.getElementById("examList");
+const EXAMS_PER_PAGE = 5;
+
+let currentHistoryPage = 1;
+let allExamHistory = [];
 
 
 function hideAllStates() {
@@ -40,32 +44,26 @@ function getScoreClass(score) {
 
 function renderExamHistory(exams) {
 
-  const totalExams = exams.length;
-
-  const totalQuestions = exams.reduce(
-    (sum, exam) => sum + exam.questions_total,
-    0
-  );
-
-  const averageScore =
-    Math.round(
-      exams.reduce((sum, exam) => sum + Number(exam.score), 0) /
-      totalExams
-    );
-
-
-  totalExamsEl.textContent = totalExams;
-  totalQuestionsEl.textContent = totalQuestions;
-  averageScoreEl.textContent = `${averageScore}%`;
-
-  examCountEl.textContent =
-    `${totalExams} ${totalExams === 1 ? "exam" : "exams"}`;
-
-
   examList.innerHTML = "";
 
+  const totalPages =
+    Math.ceil(exams.length / EXAMS_PER_PAGE);
 
-  exams.forEach(exam => {
+  if (currentHistoryPage > totalPages) {
+    currentHistoryPage = totalPages;
+  }
+
+  const startIndex =
+    (currentHistoryPage - 1) * EXAMS_PER_PAGE;
+
+  const endIndex =
+    startIndex + EXAMS_PER_PAGE;
+
+  const examsToShow =
+    exams.slice(startIndex, endIndex);
+
+
+  examsToShow.forEach(exam => {
 
     const card = document.createElement("article");
 
@@ -76,6 +74,7 @@ function renderExamHistory(exams) {
       <div class="exam-history-main">
 
         <div class="exam-history-meta">
+
           <span class="exam-krok">
             KROK ${exam.krok}
           </span>
@@ -83,6 +82,7 @@ function renderExamHistory(exams) {
           <span class="exam-date">
             ${formatDate(exam.created_at)}
           </span>
+
         </div>
 
 
@@ -111,6 +111,7 @@ function renderExamHistory(exams) {
       <div class="exam-history-score ${getScoreClass(Number(exam.score))}">
         ${Math.round(Number(exam.score))}%
       </div>
+
     `;
 
 
@@ -118,8 +119,133 @@ function renderExamHistory(exams) {
 
   });
 
+
+  renderHistoryPagination(totalPages);
+
 }
 
+
+function renderHistoryPagination(totalPages) {
+
+  let pagination =
+    document.getElementById("historyPagination");
+
+
+  if (!pagination) {
+
+    pagination =
+      document.createElement("div");
+
+    pagination.id = "historyPagination";
+
+    examList.after(pagination);
+
+  }
+
+
+  pagination.innerHTML = "";
+
+
+  if (totalPages <= 1) {
+    pagination.style.display = "none";
+    return;
+  }
+
+
+  pagination.style.display = "flex";
+
+
+  // Previous
+
+  const previousBtn =
+    document.createElement("button");
+
+  previousBtn.textContent = "‹";
+
+  previousBtn.className =
+    "pagination-btn pagination-arrow";
+
+  previousBtn.disabled =
+    currentHistoryPage === 1;
+
+
+  previousBtn.addEventListener("click", () => {
+
+    if (currentHistoryPage > 1) {
+
+      currentHistoryPage--;
+
+      renderExamHistory(allExamHistory);
+
+    }
+
+  });
+
+
+  pagination.appendChild(previousBtn);
+
+
+  // Page numbers
+
+  for (let page = 1; page <= totalPages; page++) {
+
+    const pageBtn =
+      document.createElement("button");
+
+    pageBtn.textContent = page;
+
+    pageBtn.className = "pagination-btn";
+
+
+    if (page === currentHistoryPage) {
+      pageBtn.classList.add("active");
+    }
+
+
+    pageBtn.addEventListener("click", () => {
+
+      currentHistoryPage = page;
+
+      renderExamHistory(allExamHistory);
+
+    });
+
+
+    pagination.appendChild(pageBtn);
+
+  }
+
+
+  // Next
+
+  const nextBtn =
+    document.createElement("button");
+
+  nextBtn.textContent = "›";
+
+  nextBtn.className =
+    "pagination-btn pagination-arrow";
+
+  nextBtn.disabled =
+    currentHistoryPage === totalPages;
+
+
+  nextBtn.addEventListener("click", () => {
+
+    if (currentHistoryPage < totalPages) {
+
+      currentHistoryPage++;
+
+      renderExamHistory(allExamHistory);
+
+    }
+
+  });
+
+
+  pagination.appendChild(nextBtn);
+
+}
 
 async function loadExamHistory() {
 
@@ -183,7 +309,10 @@ async function loadExamHistory() {
     }
 
 
-    renderExamHistory(exams);
+    allExamHistory = exams;
+    currentHistoryPage = 1;
+
+    renderExamHistory(allExamHistory);
 
     historyContent.hidden = false;
 

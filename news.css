@@ -207,6 +207,11 @@ body {
   color: #c2410c;
 }
 
+.news-badge.database {
+  background: #fff7ed;
+  color: #c2410c;
+}
+
 
 /* ---------- MOBILE ---------- */
 
@@ -368,4 +373,18 @@ body {
     align-items: flex-start;
   }
 
+}
+
+/* Database review - orange warning style */
+
+.news-entry.database-review::before {
+  background: #f97316;
+}
+
+.news-entry.database-review::after {
+  background: #f97316;
+}
+
+.news-entry.database-review .news-card {
+  border: 1px solid #fdba74;
 }

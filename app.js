@@ -16,6 +16,8 @@ let examTimerInterval = null;
 let examTimeRemaining = 0;
 let aiUserAnswer = null;
 let aiExplanationLoaded = false;
+let selectedAnswerButton = null;
+let selectedAnswerIsCorrect = null;
 
 // HTML ELEMENTS
 
@@ -215,7 +217,23 @@ function populateSubjectFilter() {
 function showQuestion() {
   answered = false;
   aiUserAnswer = null;
+  selectedAnswerButton = null;
+  selectedAnswerIsCorrect = null;
   aiExplanationLoaded = false;
+
+const confirmAnswerBtn =
+
+    document.getElementById("confirmAnswerBtn");
+
+
+
+  if (confirmAnswerBtn) {
+
+    confirmAnswerBtn.style.display = "none";
+
+  }
+
+
   feedback.textContent = "";
   answersContainer.innerHTML = "";
 
@@ -273,8 +291,30 @@ function showQuestion() {
     button.textContent = answer.text;
     button.classList.add("answer-btn");
 
-    button.addEventListener("click", () => checkAnswer(button, answer.isCorrect));
+    
+      button.addEventListener("click", () => {
 
+        if (answered) return;
+
+        document
+          .querySelectorAll(".answer-btn")
+          .forEach(btn => btn.classList.remove("selected"));
+
+        button.classList.add("selected");
+
+        selectedAnswerButton = button;
+        selectedAnswerIsCorrect = answer.isCorrect;
+
+        const confirmAnswerBtn =
+          document.getElementById("confirmAnswerBtn");
+
+        if (confirmAnswerBtn) {
+          confirmAnswerBtn.style.display = "block";
+        }
+
+      });
+    
+    
     answersContainer.appendChild(button);
   });
   updateProgressBar();
@@ -405,6 +445,10 @@ function checkAnswer(button, isCorrect) {
     return;
   }
 
+  // Remove temporary selection style before showing feedback
+  allButtons.forEach((btn) => {
+    btn.classList.remove("selected");
+  });
 
   // =========================
   // PRACTICE MODE
@@ -1622,6 +1666,29 @@ themeBtn.addEventListener("click", () => {
 document
   .getElementById("exportExamLogBtn")
   .addEventListener("click", exportExamLog);
+
+const confirmAnswerBtn =
+  document.getElementById("confirmAnswerBtn");
+
+if (confirmAnswerBtn) {
+  confirmAnswerBtn.addEventListener("click", () => {
+
+    if (
+      !selectedAnswerButton ||
+      selectedAnswerIsCorrect === null
+    ) {
+      return;
+    }
+
+    confirmAnswerBtn.style.display = "none";
+
+    checkAnswer(
+      selectedAnswerButton,
+      selectedAnswerIsCorrect
+    );
+
+  });
+}
 
 // APP START
 
