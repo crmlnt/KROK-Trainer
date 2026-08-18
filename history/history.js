@@ -46,6 +46,41 @@ function renderExamHistory(exams) {
 
   examList.innerHTML = "";
 
+
+  // =========================
+  // HISTORY SUMMARY
+  // =========================
+
+  const totalExams = exams.length;
+
+  const totalQuestions = exams.reduce(
+    (sum, exam) =>
+      sum + Number(exam.questions_total || 0),
+    0
+  );
+
+  const averageScore =
+    totalExams > 0
+      ? exams.reduce(
+          (sum, exam) =>
+            sum + Number(exam.score || 0),
+          0
+        ) / totalExams
+      : 0;
+
+
+  totalExamsEl.textContent = totalExams;
+
+  totalQuestionsEl.textContent = totalQuestions;
+
+  averageScoreEl.textContent =
+    `${Math.round(averageScore)}%`;
+
+
+  // =========================
+  // PAGINATION
+  // =========================
+
   const totalPages =
     Math.ceil(exams.length / EXAMS_PER_PAGE);
 
@@ -63,11 +98,17 @@ function renderExamHistory(exams) {
     exams.slice(startIndex, endIndex);
 
 
+  // =========================
+  // EXAM CARDS
+  // =========================
+
   examsToShow.forEach(exam => {
 
-    const card = document.createElement("article");
+    const card =
+      document.createElement("article");
 
-    card.className = "exam-history-card";
+    card.className =
+      "exam-history-card";
 
 
     card.innerHTML = `
@@ -123,7 +164,6 @@ function renderExamHistory(exams) {
   renderHistoryPagination(totalPages);
 
 }
-
 
 function renderHistoryPagination(totalPages) {
 
