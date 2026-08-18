@@ -1,0 +1,245 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+
+  min-height: 100vh;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+
+  background: #f4f7fb;
+  color: #111827;
+}
+
+
+.privacy-page {
+  width: 100%;
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  padding: 40px 24px 70px;
+}
+
+
+/* BACK */
+
+.privacy-back {
+  display: inline-flex;
+
+  margin-bottom: 26px;
+
+  color: #6b7280;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+.privacy-back:hover {
+  color: #16a34a;
+}
+
+
+/* HEADER */
+
+.privacy-header {
+  text-align: center;
+
+  margin-bottom: 38px;
+}
+
+.privacy-eyebrow {
+  color: #16a34a;
+
+  font-size: 0.72rem;
+  font-weight: 800;
+
+  letter-spacing: 0.14em;
+}
+
+.privacy-header h1 {
+  margin: 8px 0 8px;
+
+  font-size: clamp(2.3rem, 5vw, 3.4rem);
+
+  letter-spacing: -0.04em;
+}
+
+.privacy-header p {
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 0.9rem;
+}
+
+
+/* CARDS */
+
+.privacy-card {
+  margin-bottom: 18px;
+
+  padding: 26px 28px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+
+  box-shadow:
+    0 6px 22px rgba(0, 0, 0, 0.035);
+}
+
+.privacy-card h2 {
+  margin: 0 0 14px;
+
+  font-size: 1.2rem;
+
+  letter-spacing: -0.02em;
+}
+
+.privacy-card p {
+  margin: 0 0 14px;
+
+  color: #4b5563;
+
+  line-height: 1.7;
+}
+
+.privacy-card p:last-child {
+  margin-bottom: 0;
+}
+
+.privacy-card ul {
+  margin: 14px 0;
+
+  padding-left: 22px;
+}
+
+.privacy-card li {
+  margin-bottom: 8px;
+
+  color: #374151;
+
+  line-height: 1.6;
+}
+
+
+/* LINKS */
+
+.privacy-card a {
+  color: #16a34a;
+
+  font-weight: 650;
+
+  text-decoration: none;
+}
+
+.privacy-card a:hover {
+  text-decoration: underline;
+}
+
+
+/* THIRD PARTY SERVICES */
+
+.privacy-service {
+  margin: 16px 0;
+
+  padding: 16px 18px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+}
+
+.privacy-service strong {
+  display: block;
+
+  margin-bottom: 6px;
+}
+
+.privacy-service p {
+  margin: 0;
+}
+
+
+/* MEDICAL DISCLAIMER */
+
+.educational-notice {
+  background: #fffaf0;
+
+  border-color: #fed7aa;
+}
+
+.educational-notice h2 {
+  color: #9a3412;
+}
+
+
+/* CONTACT */
+
+.privacy-contact {
+  display: inline-flex;
+
+  padding: 10px 14px;
+
+  background: #ecfdf3;
+
+  border-radius: 10px;
+
+  color: #166534 !important;
+
+  font-weight: 700;
+}
+
+
+/* FOOTER */
+
+.privacy-footer {
+  margin-top: 34px;
+
+  text-align: center;
+}
+
+.privacy-footer a {
+  color: #16a34a;
+
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+.privacy-footer a:hover {
+  text-decoration: underline;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .privacy-page {
+    padding: 28px 16px 50px;
+  }
+
+  .privacy-card {
+    padding: 22px 18px;
+  }
+
+  .privacy-header {
+    margin-bottom: 30px;
+  }
+
+}
