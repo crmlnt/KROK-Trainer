@@ -95,7 +95,7 @@ signupBtn.addEventListener("click", async () => {
   } else {
 
     authMessage.textContent =
-      "Account created. Check your email to confirm your account.";
+      "Account created! Please check your email to confirm your account. The verification email will be sent by Supabase Auth, our authentication provider. If you don't see it, please check your Spam or Junk folder.";
 
   }
 
