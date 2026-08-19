@@ -57,7 +57,7 @@ forgotPasswordLink.addEventListener("click", async (event) => {
   }
 
   const { error } = await supabaseClient.auth.resetPasswordForEmail(email, {
-    redirectTo: `${window.location.origin}/KROK-Trainer/reset-password.html`
+    redirectTo: `${window.location.origin}/reset-password.html`
   });
 
   if (error) {
