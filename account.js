@@ -1,16 +1,21 @@
 const emailInput = document.getElementById("email");
 const passwordInput = document.getElementById("password");
-
 const loginBtn = document.getElementById("loginBtn");
 const signupBtn = document.getElementById("signupBtn");
 const logoutBtn = document.getElementById("logoutBtn");
-
 const authForm = document.getElementById("authForm");
 const accountPanel = document.getElementById("accountPanel");
-
 const userEmail = document.getElementById("userEmail");
 const authMessage = document.getElementById("authMessage");
 const forgotPasswordLink = document.getElementById("forgotPasswordLink");
+const changePasswordBtn = document.getElementById("changePasswordBtn");
+const changePasswordPanel = document.getElementById("changePasswordPanel");
+const cancelPasswordBtn = document.getElementById("cancelPasswordBtn");
+const currentPasswordInput = document.getElementById("currentPassword");
+const newPasswordInput = document.getElementById("newPassword");
+const confirmNewPasswordInput = document.getElementById("confirmNewPassword");
+const savePasswordBtn = document.getElementById("savePasswordBtn");
+const changePasswordMessage = document.getElementById("changePasswordMessage");
 
 
 function showUser(user) {
@@ -145,6 +150,104 @@ supabaseClient.auth.onAuthStateChange(
 
   }
 );
+
+changePasswordBtn.addEventListener("click", () => {
+  changePasswordPanel.hidden = false;
+});
+
+cancelPasswordBtn.addEventListener("click", () => {
+  changePasswordPanel.hidden = true;
+});
+
+savePasswordBtn.addEventListener("click", async () => {
+
+  changePasswordMessage.textContent = "";
+
+  const currentPassword =
+    currentPasswordInput.value;
+
+  const newPassword =
+    newPasswordInput.value;
+
+  const confirmNewPassword =
+    confirmNewPasswordInput.value;
+
+
+  if (!currentPassword || !newPassword || !confirmNewPassword) {
+
+    changePasswordMessage.textContent =
+      "Please complete all password fields.";
+
+    return;
+  }
+
+
+  if (newPassword !== confirmNewPassword) {
+
+    changePasswordMessage.textContent =
+      "New passwords do not match.";
+
+    return;
+  }
+
+
+  const {
+    data: { session }
+  } = await supabaseClient.auth.getSession();
+
+
+  if (!session) {
+
+    changePasswordMessage.textContent =
+      "Your session has expired. Please sign in again.";
+
+    return;
+  }
+
+
+  const email = session.user.email;
+
+
+  const { error: signInError } =
+    await supabaseClient.auth.signInWithPassword({
+      email,
+      password: currentPassword
+    });
+
+
+  if (signInError) {
+
+    changePasswordMessage.textContent =
+      "Current password is incorrect.";
+
+    return;
+  }
+
+
+  const { error: updateError } =
+    await supabaseClient.auth.updateUser({
+      password: newPassword
+    });
+
+
+  if (updateError) {
+
+    changePasswordMessage.textContent =
+      updateError.message;
+
+    return;
+  }
+
+
+  changePasswordMessage.textContent =
+    "Password updated successfully.";
+
+
+  currentPasswordInput.value = "";
+  newPasswordInput.value = "";
+  confirmNewPasswordInput.value = "";
+
+});
 
 
 checkSession();

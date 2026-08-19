@@ -474,3 +474,122 @@ a.account-menu-card:hover {
   padding: 24px 18px;
   border-radius: 16px;
 }
+
+.change-password-panel {
+  margin-top: 18px;
+  padding: 22px;
+
+  background: #f8fafc;
+
+  border: 1px solid #d1fae5;
+  border-radius: 16px;
+
+  box-shadow:
+    0 6px 20px rgba(0, 0, 0, 0.035);
+}
+
+.change-password-panel h3 {
+  margin: 0 0 8px;
+
+  font-size: 1.15rem;
+  letter-spacing: -0.02em;
+}
+
+.change-password-panel > p {
+  margin: 0 0 18px;
+
+  color: #6b7280;
+
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.change-password-panel label {
+  display: block;
+
+  margin: 14px 0 6px;
+
+  color: #374151;
+
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.change-password-panel input {
+  width: 100%;
+
+  padding: 12px 14px;
+
+  background: #ffffff;
+
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+
+  font: inherit;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.change-password-panel input:focus {
+  border-color: #16a34a;
+
+  box-shadow:
+    0 0 0 3px rgba(22, 163, 74, 0.10);
+}
+
+.change-password-actions {
+  display: flex;
+
+  gap: 10px;
+
+  margin-top: 18px;
+}
+
+.change-password-actions button {
+  flex: 1;
+
+  padding: 11px 14px;
+
+  border-radius: 10px;
+
+  font: inherit;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+#savePasswordBtn {
+  border: none;
+
+  background: #16a34a;
+  color: #ffffff;
+}
+
+#savePasswordBtn:hover {
+  background: #15803d;
+}
+
+.cancel-password-btn {
+  background: #ffffff;
+
+  border: 1px solid #d1d5db;
+
+  color: #374151;
+}
+
+.cancel-password-btn:hover {
+  border-color: #9ca3af;
+
+  background: #f9fafb;
+}
+
+#changePasswordMessage {
+  margin: 14px 0 0;
+
+  font-size: 0.85rem;
+  font-weight: 600;
+}
