@@ -37,35 +37,11 @@
           <h2>Select Topic</h2>
           <div id="topicOptions">
 
-          <label class="option-row">
-            <input type="radio" name="topic" value="all" checked>
-            <span>All Topics</span>
-          </label>
+            <label class="option-row">
+              <input type="radio" name="topic" value="all" checked>
+              <span>All Topics</span>
+            </label>
 
-          <label class="option-row">
-            <input type="radio" name="topic" value="normal-physiology">
-            <span>Normal Physiology</span>
-          </label>
-
-          <label class="option-row">
-            <input type="radio" name="topic" value="pathophysiology">
-            <span>Pathophysiology</span>
-          </label>
-
-          <label class="option-row">
-            <input type="radio" name="topic" value="pathomorphology">
-            <span>Pathomorphology</span>
-          </label>
-
-          <label class="option-row">
-            <input type="radio" name="topic" value="pharmacology">
-            <span>Pharmacology</span>
-          </label>
-
-          <label class="option-row">
-            <input type="radio" name="topic" value="histology">
-            <span>Histology</span>
-          </label>
           </div>
 
         </div>
@@ -135,8 +111,76 @@
     document.getElementById("backLink");
 
 
+  function addSubjectOption(subject) {
+
+    const label =
+      document.createElement("label");
+
+    label.className = "option-row";
+
+
+    const input =
+      document.createElement("input");
+
+    input.type = "radio";
+    input.name = "topic";
+    input.value = subject;
+
+
+    const span =
+      document.createElement("span");
+
+    span.textContent =
+      subject === "Normal Phisiology"
+        ? "Normal Physiology"
+        : subject;
+
+
+    label.appendChild(input);
+    label.appendChild(span);
+
+    topicOptions.appendChild(label);
+  }
+
+
+  async function loadKrok1Subjects() {
+
+    try {
+
+      const response = await fetch("questions.json");
+
+      if (!response.ok) {
+        throw new Error("Unable to load KROK 1 subjects.");
+      }
+
+      const questions = await response.json();
+
+      const subjects = [
+        ...new Set(
+          questions
+            .map(question => question.subject)
+            .filter(Boolean)
+        )
+      ].sort((a, b) => a.localeCompare(b));
+
+
+      subjects.forEach(addSubjectOption);
+
+    } catch (error) {
+
+      console.error("Error loading KROK 1 subjects:", error);
+
+      const message = document.createElement("p");
+      message.textContent =
+        "Subjects could not be loaded. Please refresh the page.";
+
+      topicOptions.appendChild(message);
+    }
+  }
+
+
   // ==========================================
-  // KROK 2 CONFIGURATION
+  // PAGE CONFIGURATION
   // ==========================================
 
   if (examType === "krok2") {
@@ -174,46 +218,7 @@
     ];
 
 
-    topicOptions.innerHTML = `
-      <label class="option-row">
-        <input
-          type="radio"
-          name="topic"
-          value="all"
-          checked
-        >
-        <span>All Topics</span>
-      </label>
-    `;
-
-
-    krok2Subjects.forEach(subject => {
-
-      const label =
-        document.createElement("label");
-
-      label.className = "option-row";
-
-
-      const input =
-        document.createElement("input");
-
-      input.type = "radio";
-      input.name = "topic";
-      input.value = subject;
-
-
-      const span =
-        document.createElement("span");
-
-      span.textContent = subject;
-
-
-      label.appendChild(input);
-      label.appendChild(span);
-
-      topicOptions.appendChild(label);
-    });
+    krok2Subjects.forEach(addSubjectOption);
 
   } else {
 
@@ -223,6 +228,8 @@
     examLabel.textContent = "KROK 1";
 
     backLink.href = "krok1.html";
+
+    loadKrok1Subjects();
   }
 
 
@@ -232,15 +239,22 @@
 
   startExamBtn.addEventListener("click", () => {
 
-    const topic =
+    const selectedTopic =
       document.querySelector(
         'input[name="topic"]:checked'
-      ).value;
+      );
 
-    const questions =
+    const selectedQuestions =
       document.querySelector(
         'input[name="questions"]:checked'
-      ).value;
+      );
+
+    if (!selectedTopic || !selectedQuestions) {
+      return;
+    }
+
+    const topic = selectedTopic.value;
+    const questions = selectedQuestions.value;
 
 
     const nextParams =
