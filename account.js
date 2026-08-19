@@ -36,6 +36,14 @@ function showLogin() {
 }
 
 
+function resetChangePasswordForm() {
+  currentPasswordInput.value = "";
+  newPasswordInput.value = "";
+  confirmNewPasswordInput.value = "";
+  changePasswordMessage.textContent = "";
+}
+
+
 async function checkSession() {
 
   const {
@@ -152,11 +160,20 @@ supabaseClient.auth.onAuthStateChange(
 );
 
 changePasswordBtn.addEventListener("click", () => {
-  changePasswordPanel.hidden = false;
+  const isOpen = !changePasswordPanel.hidden;
+
+  if (isOpen) {
+    changePasswordPanel.hidden = true;
+    resetChangePasswordForm();
+  } else {
+    changePasswordPanel.hidden = false;
+    currentPasswordInput.focus();
+  }
 });
 
 cancelPasswordBtn.addEventListener("click", () => {
   changePasswordPanel.hidden = true;
+  resetChangePasswordForm();
 });
 
 savePasswordBtn.addEventListener("click", async () => {
@@ -242,10 +259,14 @@ savePasswordBtn.addEventListener("click", async () => {
   changePasswordMessage.textContent =
     "Password updated successfully.";
 
-
   currentPasswordInput.value = "";
   newPasswordInput.value = "";
   confirmNewPasswordInput.value = "";
+
+  setTimeout(() => {
+    changePasswordPanel.hidden = true;
+    changePasswordMessage.textContent = "";
+  }, 1400);
 
 });
 
