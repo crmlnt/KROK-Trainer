@@ -7,11 +7,10 @@
 body {
   margin: 0;
   min-height: 100vh;
-
   font-family: "Manrope", sans-serif;
-
   background: #f4f6f9;
   color: #111827;
+  transition: background .2s ease, color .2s ease;
 }
 
 .account-page {
@@ -20,586 +19,111 @@ body {
   padding: 48px 0 70px;
 }
 
-
-/* ---------- PAGE HEADER ---------- */
-
-.account-header {
-  text-align: center;
-  margin-bottom: 34px;
-}
-
-.account-header h1 {
-  margin: 0;
-
-  font-size: clamp(2.2rem, 6vw, 3.2rem);
-  line-height: 1.05;
-  letter-spacing: -0.04em;
-}
-
-.account-header p {
-  margin: 12px auto 0;
-
-  color: #6b7280;
-
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-
-/* ---------- ACCOUNT PANEL ---------- */
+.account-header { text-align: center; margin-bottom: 34px; }
+.account-header h1 { margin: 0; font-size: clamp(2.2rem, 6vw, 3.2rem); line-height: 1.05; letter-spacing: -0.04em; }
+.account-header p { margin: 12px auto 0; color: #6b7280; font-size: 1rem; line-height: 1.6; }
 
 #accountPanel {
   padding: 34px;
-
   background: #ffffff;
-
   border: 1px solid #e5e7eb;
   border-radius: 20px;
-
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
-.account-user-header {
-  margin-bottom: 30px;
-}
-
-.account-eyebrow {
-  display: block;
-
-  margin-bottom: 8px;
-
-  color: #16a34a;
-
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.13em;
-}
-
-.account-user-header h2 {
-  margin: 0 0 8px;
-
-  font-size: 1.8rem;
-  letter-spacing: -0.025em;
-}
-
-.account-user-header p {
-  margin: 0;
-
-  color: #6b7280;
-
-  font-size: 0.9rem;
-}
-
-.account-user-header p strong {
-  color: #374151;
-}
-
-
-/* ---------- ACCOUNT MENU ---------- */
-
-.account-menu {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-
-  margin-bottom: 28px;
-}
-
-.account-menu-card {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-
-  width: 100%;
-
-  padding: 18px 20px;
-
-  background: #f9fafb;
-
-  border: 1px solid #e5e7eb;
-  border-radius: 14px;
-
-  color: #111827;
-  text-decoration: none;
-
-  appearance: none;
-  -webkit-appearance: none;
-
-  transition:
-    transform 0.2s ease,
-    border-color 0.2s ease,
-    box-shadow 0.2s ease,
-    background 0.2s ease;
-}
-
-.account-menu-card:hover {
-  transform: translateY(-1px);
-
-  background: #ffffff;
-  border-color: #bbf7d0;
-
-  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.05);
-}
-
-.account-menu-button {
-  font-family: inherit;
-  font-size: inherit;
-  text-align: left;
-  cursor: pointer;
-}
-
-.account-menu-card > div {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.account-menu-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 42px;
-  height: 42px;
-
-  flex-shrink: 0;
-
-  background: #ffffff;
-
-  border: 1px solid #e5e7eb;
-  border-radius: 11px;
-
-  font-size: 1.15rem;
-}
-
-.account-menu-card strong {
-  display: block;
-
-  margin-bottom: 3px;
-
-  font-size: 0.95rem;
-}
-
-.account-menu-card div div span {
-  display: block;
-
-  color: #6b7280;
-
-  font-size: 0.8rem;
-}
-
-.account-menu-arrow {
-  color: #16a34a;
-
-  font-size: 1.25rem;
-  font-weight: 700;
-}
-
-.account-menu-card.disabled {
-  cursor: default;
-  opacity: 0.65;
-}
-
-.coming-soon {
-  flex-shrink: 0;
-
-  padding: 6px 9px;
-
-  background: #f3f4f6;
-
-  border-radius: 999px;
-
-  color: #6b7280;
-
-  font-size: 0.7rem;
-  font-weight: 700;
-}
-
-
-/* ---------- SIGN OUT ---------- */
-
-.logout-btn {
-  width: 100%;
-
-  padding: 13px 18px;
-
-  background: #ffffff;
-  color: #dc2626;
-
-  border: 1px solid #fecaca;
-  border-radius: 11px;
-
-  font-family: inherit;
-  font-size: 0.9rem;
-  font-weight: 700;
-
-  cursor: pointer;
-
-  transition:
-    background 0.2s ease,
-    border-color 0.2s ease;
-}
-
-.logout-btn:hover {
-  background: #fef2f2;
-  border-color: #fca5a5;
-}
-
-/* ---------- BACK TO HOME ---------- */
-
-.back-link {
-  display: inline-flex;
-  align-items: center;
-  margin-bottom: 24px;
-
-  color: #6b7280;
-  text-decoration: none;
-
-  font-size: 0.9rem;
-  font-weight: 600;
-
-  transition: color 0.2s ease;
-}
-
-.back-link:hover {
-  color: #16a34a;
-}
-
-/* ---------- AUTH FORM ---------- */
-
-#authForm {
-  max-width: 520px;
-  margin: 0 auto;
-
-  padding: 34px;
-
-  background: #ffffff;
-
-  border: 1px solid #e5e7eb;
-  border-radius: 20px;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-}
-
-#authForm label {
-  display: block;
-
-  margin: 0 0 7px;
-
-  color: #374151;
-
-  font-size: 0.82rem;
-  font-weight: 700;
-}
-
-#authForm input {
-  width: 100%;
-
-  margin-bottom: 18px;
-  padding: 13px 14px;
-
-  background: #f9fafb;
-  color: #111827;
-
-  border: 1px solid #d1d5db;
-  border-radius: 10px;
-
-  font-family: inherit;
-  font-size: 0.9rem;
-
-  outline: none;
-
-  transition:
-    border-color 0.2s ease,
-    box-shadow 0.2s ease,
-    background 0.2s ease;
-}
-
-#authForm input:focus {
-  background: #ffffff;
-
-  border-color: #16a34a;
-
-  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.1);
-}
-
-
-/* ---------- AUTH BUTTONS ---------- */
-
-#loginBtn,
-#signupBtn {
-  width: 100%;
-
-  padding: 13px 18px;
-
-  border-radius: 10px;
-
-  font-family: inherit;
-  font-size: 0.9rem;
-  font-weight: 700;
-
-  cursor: pointer;
-
-  transition:
-    background 0.2s ease,
-    border-color 0.2s ease,
-    transform 0.2s ease;
-}
-
-#loginBtn {
-  margin-top: 4px;
-
-  background: #16a34a;
-  color: #ffffff;
-
-  border: 1px solid #16a34a;
-}
-
-#loginBtn:hover {
-  background: #15803d;
-  border-color: #15803d;
-
-  transform: translateY(-1px);
-}
-
-#signupBtn {
-  margin-top: 10px;
-
-  background: #ffffff;
-  color: #374151;
-
-  border: 1px solid #d1d5db;
-}
-
-#signupBtn:hover {
-  border-color: #16a34a;
-  color: #16a34a;
-}
-
-
-/* ---------- AUTH MESSAGE ---------- */
-
-#authMessage {
-  min-height: 20px;
-
-  margin: 16px 0 0;
-
-  text-align: center;
-
-  color: #6b7280;
-
-  font-size: 0.8rem;
-  line-height: 1.5;
-}
-
-/* ---------- ACCOUNT DELETION ---------- */
-
-.account-delete-info {
-  margin-top: 24px;
-  padding-top: 22px;
-
-  border-top: 1px solid #e5e7eb;
-}
-
-.account-delete-info strong {
-  display: block;
-  margin-bottom: 6px;
-
-  color: #374151;
-
-  font-size: 0.82rem;
-  font-weight: 700;
-}
-
-.account-delete-info p {
-  margin: 0;
-
-  color: #6b7280;
-
-  font-size: 0.75rem;
-  line-height: 1.6;
-}
-
-.account-delete-info a {
-  color: #16a34a;
-
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.account-delete-info a:hover {
-  text-decoration: underline;
-}
-
-/* ---------- FORGOT PASSWORD ---------- */
-
-.forgot-password {
-  display: block;
-  width: fit-content;
-
-  margin: -8px 0 18px auto;
-
-  color: #16a34a;
-  text-decoration: none;
-
-  font-size: 0.78rem;
-  font-weight: 600;
-}
-
-.forgot-password:hover {
-  text-decoration: underline;
-}
-
-
-/* ---------- MOBILE ---------- */
+.account-user-header { margin-bottom: 30px; }
+.account-eyebrow { display:block; margin-bottom:8px; color:#16a34a; font-size:.72rem; font-weight:800; letter-spacing:.13em; }
+.account-user-header h2 { margin:0 0 8px; font-size:1.8rem; letter-spacing:-.025em; }
+.account-user-header p { margin:0; color:#6b7280; font-size:.9rem; }
+.account-user-header p strong { color:#374151; }
+
+.account-menu { display:flex; flex-direction:column; gap:12px; margin-bottom:28px; }
+.account-menu-card { display:flex; align-items:center; justify-content:space-between; gap:20px; width:100%; padding:18px 20px; background:#f9fafb; border:1px solid #e5e7eb; border-radius:14px; color:#111827; text-decoration:none; appearance:none; -webkit-appearance:none; transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease,background .2s ease; }
+.account-menu-card:hover { transform:translateY(-1px); background:#fff; border-color:#bbf7d0; box-shadow:0 7px 20px rgba(0,0,0,.05); }
+.account-menu-button { font-family:inherit; font-size:inherit; text-align:left; cursor:pointer; }
+.account-menu-card > div { display:flex; align-items:center; gap:14px; }
+.account-menu-icon { display:flex; align-items:center; justify-content:center; width:42px; height:42px; flex-shrink:0; background:#fff; border:1px solid #e5e7eb; border-radius:11px; font-size:1.15rem; }
+.account-menu-card strong { display:block; margin-bottom:3px; font-size:.95rem; }
+.account-menu-card div div span { display:block; color:#6b7280; font-size:.8rem; }
+.account-menu-arrow { color:#16a34a; font-size:1.25rem; font-weight:700; }
+.account-menu-card.disabled { cursor:default; opacity:.65; }
+.coming-soon { flex-shrink:0; padding:6px 9px; background:#f3f4f6; border-radius:999px; color:#6b7280; font-size:.7rem; font-weight:700; }
+
+.logout-btn { width:100%; padding:13px 18px; background:#fff; color:#dc2626; border:1px solid #fecaca; border-radius:11px; font-family:inherit; font-size:.9rem; font-weight:700; cursor:pointer; transition:background .2s ease,border-color .2s ease; }
+.logout-btn:hover { background:#fef2f2; border-color:#fca5a5; }
+
+.back-link { display:inline-flex; align-items:center; margin-bottom:24px; color:#6b7280; text-decoration:none; font-size:.9rem; font-weight:600; transition:color .2s ease; }
+.back-link:hover { color:#16a34a; }
+
+#authForm { max-width:520px; margin:0 auto; padding:24px 18px; background:#fff; border:1px solid #e5e7eb; border-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,.05); }
+#authForm label { display:block; margin:0 0 7px; color:#374151; font-size:.82rem; font-weight:700; }
+#authForm input { width:100%; margin-bottom:18px; padding:13px 14px; background:#f9fafb; color:#111827; border:1px solid #d1d5db; border-radius:10px; font-family:inherit; font-size:.9rem; outline:none; transition:border-color .2s ease,box-shadow .2s ease,background .2s ease; }
+#authForm input:focus { background:#fff; border-color:#16a34a; box-shadow:0 0 0 3px rgba(22,163,74,.1); }
+
+#loginBtn,#signupBtn { width:100%; padding:13px 18px; border-radius:10px; font-family:inherit; font-size:.9rem; font-weight:700; cursor:pointer; transition:background .2s ease,border-color .2s ease,transform .2s ease; }
+#loginBtn { margin-top:4px; background:#16a34a; color:#fff; border:1px solid #16a34a; }
+#loginBtn:hover { background:#15803d; border-color:#15803d; transform:translateY(-1px); }
+#signupBtn { margin-top:10px; background:#fff; color:#374151; border:1px solid #d1d5db; }
+#signupBtn:hover { border-color:#16a34a; color:#16a34a; }
+#authMessage { min-height:20px; margin:16px 0 0; text-align:center; color:#6b7280; font-size:.8rem; line-height:1.5; }
+
+.account-delete-info { margin-top:24px; padding-top:22px; border-top:1px solid #e5e7eb; }
+.account-delete-info strong { display:block; margin-bottom:6px; color:#374151; font-size:.82rem; font-weight:700; }
+.account-delete-info p { margin:0; color:#6b7280; font-size:.75rem; line-height:1.6; }
+.account-delete-info a { color:#16a34a; font-weight:600; text-decoration:none; }
+.account-delete-info a:hover { text-decoration:underline; }
+
+.forgot-password { display:block; width:fit-content; margin:-8px 0 18px auto; color:#16a34a; text-decoration:none; font-size:.78rem; font-weight:600; }
+.forgot-password:hover { text-decoration:underline; }
+
+.change-password-panel { margin-top:18px; padding:22px; background:#f8fafc; border:1px solid #d1fae5; border-radius:16px; box-shadow:0 6px 20px rgba(0,0,0,.035); }
+.change-password-panel h3 { margin:0 0 8px; font-size:1.15rem; letter-spacing:-.02em; }
+.change-password-panel > p { margin:0 0 18px; color:#6b7280; font-size:.9rem; line-height:1.5; }
+.change-password-panel label { display:block; margin:14px 0 6px; color:#374151; font-size:.85rem; font-weight:700; }
+.change-password-panel input { width:100%; padding:12px 14px; background:#fff; color:#111827; border:1px solid #d1d5db; border-radius:10px; font:inherit; outline:none; transition:border-color .2s ease,box-shadow .2s ease; }
+.change-password-panel input:focus { border-color:#16a34a; box-shadow:0 0 0 3px rgba(22,163,74,.1); }
+.change-password-actions { display:flex; gap:10px; margin-top:18px; }
+.change-password-actions button { flex:1; padding:11px 14px; border-radius:10px; font:inherit; font-weight:700; cursor:pointer; }
+#savePasswordBtn { border:none; background:#16a34a; color:#fff; }
+#savePasswordBtn:hover { background:#15803d; }
+.cancel-password-btn { background:#fff; border:1px solid #d1d5db; color:#374151; }
+.cancel-password-btn:hover { border-color:#9ca3af; background:#f9fafb; }
+#changePasswordMessage { margin:14px 0 0; font-size:.85rem; font-weight:600; }
+
+body.dark-mode { background:#101214; color:#f3f4f6; }
+body.dark-mode #accountPanel,
+body.dark-mode #authForm { background:#171a1d; border-color:#2a2e33; box-shadow:none; }
+body.dark-mode .account-user-header p,
+body.dark-mode .account-menu-card div div span,
+body.dark-mode #authMessage,
+body.dark-mode .account-delete-info p,
+body.dark-mode .change-password-panel > p { color:#9ca3af; }
+body.dark-mode .account-user-header p strong,
+body.dark-mode #authForm label,
+body.dark-mode .account-delete-info strong,
+body.dark-mode .change-password-panel label { color:#d1d5db; }
+body.dark-mode .account-menu-card { background:#1d2024; border-color:#2a2e33; color:#f3f4f6; }
+body.dark-mode .account-menu-card:hover { background:#22262a; border-color:#2e7d46; box-shadow:none; }
+body.dark-mode .account-menu-icon { background:#171a1d; border-color:#30343a; }
+body.dark-mode #authForm input,
+body.dark-mode .change-password-panel input { background:#111417; color:#f3f4f6; border-color:#343941; }
+body.dark-mode #authForm input:focus,
+body.dark-mode .change-password-panel input:focus { background:#15191c; }
+body.dark-mode #signupBtn,
+body.dark-mode .logout-btn,
+body.dark-mode .cancel-password-btn { background:#171a1d; }
+body.dark-mode #signupBtn { color:#d1d5db; border-color:#343941; }
+body.dark-mode .logout-btn { border-color:#7f1d1d; }
+body.dark-mode .logout-btn:hover { background:#2a1719; border-color:#991b1b; }
+body.dark-mode .account-delete-info { border-color:#2a2e33; }
+body.dark-mode .change-password-panel { background:#171d19; border-color:#245a34; box-shadow:none; }
+body.dark-mode .cancel-password-btn { color:#d1d5db; border-color:#343941; }
+body.dark-mode .cancel-password-btn:hover { background:#202428; }
 
 @media (max-width: 600px) {
-
-  .account-page {
-    width: min(100% - 24px, 760px);
-    padding-top: 30px;
-  }
-
-  #accountPanel {
-    padding: 24px 18px;
-    border-radius: 16px;
-  }
-
-  .account-menu-card {
-    padding: 15px;
-  }
-
-  .account-menu-card div div span {
-    font-size: 0.75rem;
-  }
-
-  .coming-soon {
-    display: none;
-  }
-
-}
-
-#authForm {
-  padding: 24px 18px;
-  border-radius: 16px;
-}
-
-.change-password-panel {
-  margin-top: 18px;
-  padding: 22px;
-
-  background: #f8fafc;
-
-  border: 1px solid #d1fae5;
-  border-radius: 16px;
-
-  box-shadow:
-    0 6px 20px rgba(0, 0, 0, 0.035);
-}
-
-.change-password-panel h3 {
-  margin: 0 0 8px;
-
-  font-size: 1.15rem;
-  letter-spacing: -0.02em;
-}
-
-.change-password-panel > p {
-  margin: 0 0 18px;
-
-  color: #6b7280;
-
-  font-size: 0.9rem;
-  line-height: 1.5;
-}
-
-.change-password-panel label {
-  display: block;
-
-  margin: 14px 0 6px;
-
-  color: #374151;
-
-  font-size: 0.85rem;
-  font-weight: 700;
-}
-
-.change-password-panel input {
-  width: 100%;
-
-  padding: 12px 14px;
-
-  background: #ffffff;
-
-  border: 1px solid #d1d5db;
-  border-radius: 10px;
-
-  font: inherit;
-
-  outline: none;
-
-  transition:
-    border-color 0.2s ease,
-    box-shadow 0.2s ease;
-}
-
-.change-password-panel input:focus {
-  border-color: #16a34a;
-
-  box-shadow:
-    0 0 0 3px rgba(22, 163, 74, 0.10);
-}
-
-.change-password-actions {
-  display: flex;
-
-  gap: 10px;
-
-  margin-top: 18px;
-}
-
-.change-password-actions button {
-  flex: 1;
-
-  padding: 11px 14px;
-
-  border-radius: 10px;
-
-  font: inherit;
-  font-weight: 700;
-
-  cursor: pointer;
-}
-
-#savePasswordBtn {
-  border: none;
-
-  background: #16a34a;
-  color: #ffffff;
-}
-
-#savePasswordBtn:hover {
-  background: #15803d;
-}
-
-.cancel-password-btn {
-  background: #ffffff;
-
-  border: 1px solid #d1d5db;
-
-  color: #374151;
-}
-
-.cancel-password-btn:hover {
-  border-color: #9ca3af;
-
-  background: #f9fafb;
-}
-
-#changePasswordMessage {
-  margin: 14px 0 0;
-
-  font-size: 0.85rem;
-  font-weight: 600;
+  .account-page { width:min(100% - 24px,760px); padding-top:76px; }
+  #accountPanel { padding:24px 18px; border-radius:16px; }
+  .account-menu-card { padding:15px; }
+  .account-menu-card div div span { font-size:.75rem; }
+  .coming-soon { display:none; }
 }
