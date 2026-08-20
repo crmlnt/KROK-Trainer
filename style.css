@@ -417,7 +417,7 @@ body.dark-mode .guide-btn {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "Manrope", sans-serif;
 }
 
 .landing-container {
