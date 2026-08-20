@@ -1,101 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>KROK 2 | KROK Trainer</title>
-
+  <link rel="stylesheet" href="components/sidebar.css">
+  <link rel="stylesheet" href="components/breadcrumb.css">
   <link rel="stylesheet" href="mode.css">
 </head>
-
 <body>
-  <a href="account.html" class="account-link" aria-label="My Account">
-    👤
-  </a>
-
-  <main class="mode-wrapper">
-
-    <section class="mode-container">
-
-      <div class="mode-header">
-
-        <span class="exam-label">
-          KROK TRAINER
-        </span>
-
-        <h1>KROK 2</h1>
-
-        <p>
-          Choose how you want to prepare for your exam.
-        </p>
-
-      </div>
-
-
-      <div class="mode-grid">
-
-        <!-- PRACTICE MODE -->
-        <a
-          href="practice.html?exam=krok2"
-          class="mode-card"
-        >
-
-          <div class="mode-icon">
-            📚
-          </div>
-          <span class="ai-feature-badge">
-            ✨ NOW WITH AI
-          </span>
-
-          <h2>Practice Mode</h2>
-
-          <p>
-            Practice questions by subject, review your answers
-            and study at your own pace.
-          </p>
-
-          <span class="mode-action">
-            Start Practice →
-          </span>
-
-        </a>
-
-
-        <!-- EXAM MODE -->
-        <a
-          href="exam.html?exam=krok2"
-          class="mode-card"
-        >
-
-          <div class="mode-icon">
-            📝
-          </div>
-
-          <h2>Exam Mode</h2>
-
-          <p>
-            Test yourself with questions from a single topic
-            or from all available subjects.
-          </p>
-
-          <span class="mode-action">
-            Start Exam →
-          </span>
-
-        </a>
-
-      </div>
-
-
-      <a href="index.html" class="back-link">
-        ← Back to exam selection
-      </a>
-
-    </section>
-
-  </main>
-
+  <aside id="appSidebar" data-root="" data-active="krok2"></aside>
+  <div class="sidebar-page-shell">
+    <main class="mode-wrapper">
+      <section class="mode-container">
+        <nav id="appBreadcrumb" data-root="" data-page="KROK 2"></nav>
+        <div class="mode-header">
+          <span class="exam-label">KROK TRAINER</span>
+          <h1>KROK 2</h1>
+          <p>Choose how you want to prepare for your exam.</p>
+        </div>
+        <div class="mode-grid">
+          <a href="practice.html?exam=krok2" class="mode-card">
+            <div class="mode-icon">📚</div>
+            <span class="ai-feature-badge">✨ NOW WITH AI</span>
+            <h2>Practice Mode</h2>
+            <p>Practice questions by subject, review your answers and study at your own pace.</p>
+            <span class="mode-action">Start Practice →</span>
+          </a>
+          <a href="exam.html?exam=krok2" class="mode-card">
+            <div class="mode-icon">📝</div>
+            <h2>Exam Mode</h2>
+            <p>Test yourself with questions from a single topic or from all available subjects.</p>
+            <span class="mode-action">Start Exam →</span>
+          </a>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase.js"></script>
+  <script src="components/sidebar.js"></script>
+  <script src="components/breadcrumb.js"></script>
 </body>
 </html>
