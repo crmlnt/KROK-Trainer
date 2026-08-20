@@ -4,6 +4,10 @@
 
   const root = host.dataset.root || "";
   const active = host.dataset.active || "";
+  const drawerOnly = host.dataset.drawerOnly === "true";
+  const externalTriggerId = host.dataset.trigger || "";
+
+  if (drawerOnly) document.body.classList.add("sidebar-drawer-only");
 
   const icon = (name) => {
     const icons = {
@@ -41,7 +45,6 @@
       <button id="sidebarCollapseBtn" class="sidebar-collapse" type="button" aria-label="Collapse sidebar">‹</button>
       <button id="sidebarMobileCloseBtn" class="sidebar-mobile-close" type="button" aria-label="Close menu">×</button>
     </div>
-
     <div class="sidebar-scroll">
       <div class="sidebar-section">${link("home", "index.html", "Home", "home")}</div>
       <div class="sidebar-section sidebar-krok-section">
@@ -69,13 +72,16 @@
   overlay.setAttribute("aria-hidden", "true");
   document.body.appendChild(overlay);
 
-  const mobileMenuBtn = document.createElement("button");
-  mobileMenuBtn.className = "sidebar-mobile-menu-btn";
-  mobileMenuBtn.type = "button";
-  mobileMenuBtn.setAttribute("aria-label", "Open navigation menu");
+  let mobileMenuBtn = externalTriggerId ? document.getElementById(externalTriggerId) : null;
+  if (!mobileMenuBtn) {
+    mobileMenuBtn = document.createElement("button");
+    mobileMenuBtn.className = "sidebar-mobile-menu-btn";
+    mobileMenuBtn.type = "button";
+    mobileMenuBtn.setAttribute("aria-label", "Open navigation menu");
+    mobileMenuBtn.innerHTML = '<span></span><span></span><span></span>';
+    document.body.appendChild(mobileMenuBtn);
+  }
   mobileMenuBtn.setAttribute("aria-expanded", "false");
-  mobileMenuBtn.innerHTML = '<span></span><span></span><span></span>';
-  document.body.appendChild(mobileMenuBtn);
 
   const collapseBtn = document.getElementById("sidebarCollapseBtn");
   const mobileCloseBtn = document.getElementById("sidebarMobileCloseBtn");
@@ -84,45 +90,91 @@
   const themeIcon = document.getElementById("sidebarThemeIcon");
   const themeLabel = document.getElementById("sidebarThemeLabel");
 
-  if (localStorage.getItem("krokSidebarCollapsed") === "true") document.body.classList.add("sidebar-collapsed");
+  if (!drawerOnly && localStorage.getItem("krokSidebarCollapsed") === "true") document.body.classList.add("sidebar-collapsed");
   if (localStorage.getItem("theme") === "dark") document.body.classList.add("dark-mode");
 
-  const renderTheme = () => { const dark = document.body.classList.contains("dark-mode"); themeIcon.innerHTML = icon(dark ? "sun" : "moon"); themeLabel.textContent = dark ? "Light Mode" : "Dark Mode"; };
+  const renderTheme = () => {
+    const dark = document.body.classList.contains("dark-mode");
+    themeIcon.innerHTML = icon(dark ? "sun" : "moon");
+    themeLabel.textContent = dark ? "Light Mode" : "Dark Mode";
+  };
   renderTheme();
 
   const closeMobileMenu = () => {
     document.body.classList.remove("sidebar-mobile-open");
     mobileMenuBtn.setAttribute("aria-expanded", "false");
+    mobileMenuBtn.classList?.remove("open");
   };
   const openMobileMenu = () => {
     document.body.classList.remove("sidebar-collapsed");
     document.body.classList.add("sidebar-mobile-open");
     mobileMenuBtn.setAttribute("aria-expanded", "true");
+    mobileMenuBtn.classList?.add("open");
   };
 
-  mobileMenuBtn.addEventListener("click", openMobileMenu);
+  mobileMenuBtn.addEventListener("click", () => {
+    document.body.classList.contains("sidebar-mobile-open") ? closeMobileMenu() : openMobileMenu();
+  });
   mobileCloseBtn?.addEventListener("click", closeMobileMenu);
   overlay.addEventListener("click", closeMobileMenu);
   document.addEventListener("keydown", event => { if (event.key === "Escape") closeMobileMenu(); });
-  host.querySelectorAll("a.sidebar-link, .sidebar-user, .sidebar-brand").forEach(item => item.addEventListener("click", () => { if (window.innerWidth <= 900) closeMobileMenu(); }));
+  host.querySelectorAll("a.sidebar-link, .sidebar-user, .sidebar-brand").forEach(item => item.addEventListener("click", () => {
+    if (drawerOnly || window.innerWidth <= 900) closeMobileMenu();
+  }));
 
   const krokToggles = [...host.querySelectorAll(".sidebar-krok-toggle")];
   krokToggles.forEach(toggle => toggle.addEventListener("click", () => {
-    const id = toggle.dataset.krok; const panel = host.querySelector(`[data-krok-panel="${id}"]`); const willOpen = !toggle.classList.contains("open");
-    krokToggles.forEach(other => { const otherPanel = host.querySelector(`[data-krok-panel="${other.dataset.krok}"]`); other.classList.remove("open"); other.setAttribute("aria-expanded", "false"); otherPanel?.classList.remove("open"); });
-    if (willOpen) { toggle.classList.add("open"); toggle.setAttribute("aria-expanded", "true"); panel?.classList.add("open"); }
+    const id = toggle.dataset.krok;
+    const panel = host.querySelector(`[data-krok-panel="${id}"]`);
+    const willOpen = !toggle.classList.contains("open");
+    krokToggles.forEach(other => {
+      const otherPanel = host.querySelector(`[data-krok-panel="${other.dataset.krok}"]`);
+      other.classList.remove("open");
+      other.setAttribute("aria-expanded", "false");
+      otherPanel?.classList.remove("open");
+    });
+    if (willOpen) {
+      toggle.classList.add("open");
+      toggle.setAttribute("aria-expanded", "true");
+      panel?.classList.add("open");
+    }
   }));
 
-  collapseBtn?.addEventListener("click", () => { document.body.classList.toggle("sidebar-collapsed"); localStorage.setItem("krokSidebarCollapsed", document.body.classList.contains("sidebar-collapsed")); });
-  krokCollapsedBtn?.addEventListener("click", () => { document.body.classList.remove("sidebar-collapsed"); localStorage.setItem("krokSidebarCollapsed", "false"); });
-  themeBtn?.addEventListener("click", () => { document.body.classList.toggle("dark-mode"); localStorage.setItem("theme", document.body.classList.contains("dark-mode") ? "dark" : "light"); renderTheme(); window.dispatchEvent(new CustomEvent("krok-theme-change")); });
+  collapseBtn?.addEventListener("click", () => {
+    if (drawerOnly) return;
+    document.body.classList.toggle("sidebar-collapsed");
+    localStorage.setItem("krokSidebarCollapsed", document.body.classList.contains("sidebar-collapsed"));
+  });
+  krokCollapsedBtn?.addEventListener("click", () => {
+    document.body.classList.remove("sidebar-collapsed");
+    localStorage.setItem("krokSidebarCollapsed", "false");
+  });
+  themeBtn?.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    localStorage.setItem("theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
+    renderTheme();
+    window.dispatchEvent(new CustomEvent("krok-theme-change"));
+  });
 
-  window.addEventListener("resize", () => { if (window.innerWidth > 900) closeMobileMenu(); });
+  window.addEventListener("resize", () => {
+    if (!drawerOnly && window.innerWidth > 900) closeMobileMenu();
+  });
 
   async function renderUser() {
-    const userEl = document.getElementById("sidebarUser"); const emailEl = document.getElementById("sidebarUserEmail"); const statusEl = document.getElementById("sidebarUserStatus");
+    const userEl = document.getElementById("sidebarUser");
+    const emailEl = document.getElementById("sidebarUserEmail");
+    const statusEl = document.getElementById("sidebarUserStatus");
     if (typeof supabaseClient === "undefined" || !supabaseClient.auth) return;
-    try { const { data: { user } } = await supabaseClient.auth.getUser(); if (!user) return; userEl.classList.add("signed-in"); emailEl.textContent = user.email || "Signed in"; emailEl.title = user.email || ""; statusEl.textContent = "Signed in"; } catch (error) { console.warn("Sidebar auth status unavailable:", error); }
+    try {
+      const { data: { user } } = await supabaseClient.auth.getUser();
+      if (!user) return;
+      userEl.classList.add("signed-in");
+      emailEl.textContent = user.email || "Signed in";
+      emailEl.title = user.email || "";
+      statusEl.textContent = "Signed in";
+    } catch (error) {
+      console.warn("Sidebar auth status unavailable:", error);
+    }
   }
   renderUser();
 })();
