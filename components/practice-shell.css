@@ -1,5 +1,28 @@
 /* Practice Mode shell overrides kept separate from the quiz engine. */
 
+/* The global sidebar now provides Home, Tutorial and theme controls.
+   Hide the legacy copies only during Practice Mode; Exam Mode keeps its
+   existing controls until the dedicated Exam integration is completed. */
+body.practice-session .top-right-controls {
+  display: none;
+}
+
+body.practice-session .top-controls > button {
+  display: none !important;
+}
+
+body.practice-session .top-controls {
+  display: block;
+}
+
+body.practice-session .top-controls .controls {
+  width: 100%;
+}
+
+body.practice-session #subjectFilter {
+  width: 100%;
+}
+
 body.dark-mode .ai-explanation-box {
   background: #1b1f23;
   border-color: #343a40;
