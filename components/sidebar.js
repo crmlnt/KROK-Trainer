@@ -22,11 +22,14 @@
     return icons[name] || "";
   };
 
-  const link = (key, href, label, iconName) => `
-    <a class="sidebar-link ${active === key ? "active" : ""}" href="${root}${href}" ${active === key ? 'aria-current="page"' : ""}>
+  const link = (key, href, label, iconName, child = false) => `
+    <a class="sidebar-link ${child ? "sidebar-child-link" : ""} ${active === key ? "active" : ""}" href="${root}${href}" ${active === key ? 'aria-current="page"' : ""}>
       <span class="sidebar-icon">${icon(iconName)}</span>
       <span class="sidebar-link-label">${label}</span>
     </a>`;
+
+  const krok1Active = active.startsWith("krok1-");
+  const krok2Active = active.startsWith("krok2-");
 
   host.className = "app-sidebar";
   host.innerHTML = `
@@ -41,16 +44,24 @@
     <div class="sidebar-scroll">
       <div class="sidebar-section">${link("home", "index.html", "Home", "home")}</div>
 
-      <div class="sidebar-section">
-        <span class="sidebar-section-title">KROK 1</span>
-        ${link("krok1-practice", "practice.html", "Practice Mode", "book")}
-        ${link("krok1-exam", "exam.html", "Exam Mode", "exam")}
-      </div>
+      <div class="sidebar-section sidebar-krok-section">
+        <span class="sidebar-section-title">KROK</span>
 
-      <div class="sidebar-section">
-        <span class="sidebar-section-title">KROK 2</span>
-        ${link("krok2-practice", "practice.html?exam=krok2", "Practice Mode", "book")}
-        ${link("krok2-exam", "exam.html?exam=krok2", "Exam Mode", "exam")}
+        <button class="sidebar-krok-toggle ${krok1Active ? "open" : ""}" type="button" data-krok="1" aria-expanded="${krok1Active}">
+          <span>KROK 1</span><span class="sidebar-chevron">›</span>
+        </button>
+        <div class="sidebar-krok-children ${krok1Active ? "open" : ""}" data-krok-panel="1">
+          ${link("krok1-practice", "practice.html", "Practice Mode", "book", true)}
+          ${link("krok1-exam", "exam.html", "Exam Mode", "exam", true)}
+        </div>
+
+        <button class="sidebar-krok-toggle ${krok2Active ? "open" : ""}" type="button" data-krok="2" aria-expanded="${krok2Active}">
+          <span>KROK 2</span><span class="sidebar-chevron">›</span>
+        </button>
+        <div class="sidebar-krok-children ${krok2Active ? "open" : ""}" data-krok-panel="2">
+          ${link("krok2-practice", "practice.html?exam=krok2", "Practice Mode", "book", true)}
+          ${link("krok2-exam", "exam.html?exam=krok2", "Exam Mode", "exam", true)}
+        </div>
       </div>
 
       <div class="sidebar-section">
@@ -77,13 +88,9 @@
         <span id="sidebarThemeIcon" class="sidebar-icon"></span>
         <span id="sidebarThemeLabel" class="sidebar-theme-label">Dark Mode</span>
       </button>
-
       <a id="sidebarUser" class="sidebar-user" href="${root}account.html">
         <span class="sidebar-status-dot" aria-hidden="true"></span>
-        <span class="sidebar-user-copy">
-          <strong id="sidebarUserEmail">Not signed in</strong>
-          <span id="sidebarUserStatus">Sign in →</span>
-        </span>
+        <span class="sidebar-user-copy"><strong id="sidebarUserEmail">Not signed in</strong><span id="sidebarUserStatus">Sign in →</span></span>
       </a>
     </div>`;
 
@@ -92,21 +99,37 @@
   const themeIcon = document.getElementById("sidebarThemeIcon");
   const themeLabel = document.getElementById("sidebarThemeLabel");
 
-  if (localStorage.getItem("krokSidebarCollapsed") === "true") {
-    document.body.classList.add("sidebar-collapsed");
-  }
-
-  if (localStorage.getItem("theme") === "dark") {
-    document.body.classList.add("dark-mode");
-  }
+  if (localStorage.getItem("krokSidebarCollapsed") === "true") document.body.classList.add("sidebar-collapsed");
+  if (localStorage.getItem("theme") === "dark") document.body.classList.add("dark-mode");
 
   const renderTheme = () => {
     const dark = document.body.classList.contains("dark-mode");
     themeIcon.innerHTML = icon(dark ? "sun" : "moon");
     themeLabel.textContent = dark ? "Light Mode" : "Dark Mode";
   };
-
   renderTheme();
+
+  const krokToggles = [...host.querySelectorAll(".sidebar-krok-toggle")];
+  krokToggles.forEach(toggle => {
+    toggle.addEventListener("click", () => {
+      const id = toggle.dataset.krok;
+      const panel = host.querySelector(`[data-krok-panel="${id}"]`);
+      const willOpen = !toggle.classList.contains("open");
+
+      krokToggles.forEach(other => {
+        const otherPanel = host.querySelector(`[data-krok-panel="${other.dataset.krok}"]`);
+        other.classList.remove("open");
+        other.setAttribute("aria-expanded", "false");
+        otherPanel?.classList.remove("open");
+      });
+
+      if (willOpen) {
+        toggle.classList.add("open");
+        toggle.setAttribute("aria-expanded", "true");
+        panel?.classList.add("open");
+      }
+    });
+  });
 
   collapseBtn?.addEventListener("click", () => {
     document.body.classList.toggle("sidebar-collapsed");
@@ -124,13 +147,10 @@
     const userEl = document.getElementById("sidebarUser");
     const emailEl = document.getElementById("sidebarUserEmail");
     const statusEl = document.getElementById("sidebarUserStatus");
-
     if (typeof supabaseClient === "undefined" || !supabaseClient.auth) return;
-
     try {
       const { data: { user } } = await supabaseClient.auth.getUser();
       if (!user) return;
-
       userEl.classList.add("signed-in");
       emailEl.textContent = user.email || "Signed in";
       emailEl.title = user.email || "";
@@ -139,6 +159,5 @@
       console.warn("Sidebar auth status unavailable:", error);
     }
   }
-
   renderUser();
 })();
