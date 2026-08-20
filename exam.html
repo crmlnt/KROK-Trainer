@@ -3,277 +3,89 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>KROK Exam | KROK Trainer</title>
-
   <link rel="stylesheet" href="exam.css">
+  <link rel="stylesheet" href="components/sidebar.css">
 </head>
-
 <body>
-
-  <a href="account.html" class="account-link" aria-label="My Account">
-    👤
-  </a>
-
-  <main class="exam-wrapper">
-
-    <section class="exam-container">
-
-      <div class="exam-header">
-        <span id="examLabel" class="exam-label">KROK 1</span>
-
-        <h1>Exam Simulation</h1>
-
-        <p>
-          Configure your mock exam and test your preparation.
-        </p>
-      </div>
-
-
-      <div class="exam-panel">
-
-        <div class="exam-section">
-
-          <h2>Select Topic</h2>
-          <div id="topicOptions">
-
-            <label class="option-row">
-              <input type="radio" name="topic" value="all" checked>
-              <span>All Topics</span>
-            </label>
-
-          </div>
-
+  <aside id="appSidebar" data-root="" data-active="krok1-exam"></aside>
+  <div class="sidebar-page-shell">
+    <a href="account.html" class="account-link" aria-label="My Account">👤</a>
+    <main class="exam-wrapper">
+      <section class="exam-container">
+        <div class="exam-header">
+          <span id="examLabel" class="exam-label">KROK 1</span>
+          <h1>Exam Simulation</h1>
+          <p>Configure your mock exam and test your preparation.</p>
         </div>
-
-
-        <div class="exam-section">
-
-          <h2>Number of Questions</h2>
-
-          <div class="question-options">
-
-            <label class="question-card">
-              <input type="radio" name="questions" value="10" checked>
-              <span>10</span>
-            </label>
-
-            <label class="question-card">
-              <input type="radio" name="questions" value="50">
-              <span>50</span>
-            </label>
-
-            <label class="question-card">
-              <input type="radio" name="questions" value="150">
-              <span>150</span>
-            </label>
-
-            <label class="question-card">
-              <input type="radio" name="questions" value="200">
-              <span>200</span>
-            </label>
-
+        <div class="exam-panel">
+          <div class="exam-section">
+            <h2>Select Topic</h2>
+            <div id="topicOptions">
+              <label class="option-row"><input type="radio" name="topic" value="all" checked><span>All Topics</span></label>
+            </div>
           </div>
-
+          <div class="exam-section">
+            <h2>Number of Questions</h2>
+            <div class="question-options">
+              <label class="question-card"><input type="radio" name="questions" value="10" checked><span>10</span></label>
+              <label class="question-card"><input type="radio" name="questions" value="50"><span>50</span></label>
+              <label class="question-card"><input type="radio" name="questions" value="150"><span>150</span></label>
+              <label class="question-card"><input type="radio" name="questions" value="200"><span>200</span></label>
+            </div>
+          </div>
+          <button id="startExamBtn" class="start-button">Start Exam</button>
         </div>
-
-
-        <button id="startExamBtn" class="start-button">
-          Start Exam
-        </button>
-
-      </div>
-
-
-      <a id="backLink" href="krok1.html" class="back-link">
-        ← Back to study mode
-      </a>
-
-    </section>
-
-  </main>
-
-
+        <a id="backLink" href="krok1.html" class="back-link">← Back to study mode</a>
+      </section>
+    </main>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase.js"></script>
   <script>
   const params = new URLSearchParams(window.location.search);
   const examType = params.get("exam") || "krok1";
-
-  const startExamBtn =
-    document.getElementById("startExamBtn");
-
-  const examLabel =
-    document.getElementById("examLabel");
-
-  const topicOptions =
-    document.getElementById("topicOptions");
-
-  const backLink =
-    document.getElementById("backLink");
-
-
+  const examSidebar = document.getElementById("appSidebar");
+  if (examSidebar) examSidebar.dataset.active = examType === "krok2" ? "krok2-exam" : "krok1-exam";
+  const startExamBtn = document.getElementById("startExamBtn");
+  const examLabel = document.getElementById("examLabel");
+  const topicOptions = document.getElementById("topicOptions");
+  const backLink = document.getElementById("backLink");
   function addSubjectOption(subject) {
-
-    const label =
-      document.createElement("label");
-
-    label.className = "option-row";
-
-
-    const input =
-      document.createElement("input");
-
-    input.type = "radio";
-    input.name = "topic";
-    input.value = subject;
-
-
-    const span =
-      document.createElement("span");
-
-    span.textContent =
-      subject === "Normal Phisiology"
-        ? "Normal Physiology"
-        : subject;
-
-
-    label.appendChild(input);
-    label.appendChild(span);
-
-    topicOptions.appendChild(label);
+    const label = document.createElement("label"); label.className = "option-row";
+    const input = document.createElement("input"); input.type = "radio"; input.name = "topic"; input.value = subject;
+    const span = document.createElement("span"); span.textContent = subject === "Normal Phisiology" ? "Normal Physiology" : subject;
+    label.appendChild(input); label.appendChild(span); topicOptions.appendChild(label);
   }
-
-
   async function loadKrok1Subjects() {
-
     try {
-
       const response = await fetch("questions.json");
-
-      if (!response.ok) {
-        throw new Error("Unable to load KROK 1 subjects.");
-      }
-
+      if (!response.ok) throw new Error("Unable to load KROK 1 subjects.");
       const questions = await response.json();
-
-      const subjects = [
-        ...new Set(
-          questions
-            .map(question => question.subject)
-            .filter(Boolean)
-        )
-      ].sort((a, b) => a.localeCompare(b));
-
-
+      const subjects = [...new Set(questions.map(question => question.subject).filter(Boolean))].sort((a,b)=>a.localeCompare(b));
       subjects.forEach(addSubjectOption);
-
     } catch (error) {
-
       console.error("Error loading KROK 1 subjects:", error);
-
-      const message = document.createElement("p");
-      message.textContent =
-        "Subjects could not be loaded. Please refresh the page.";
-
-      topicOptions.appendChild(message);
+      const message = document.createElement("p"); message.textContent = "Subjects could not be loaded. Please refresh the page."; topicOptions.appendChild(message);
     }
   }
-
-
-  // ==========================================
-  // PAGE CONFIGURATION
-  // ==========================================
-
   if (examType === "krok2") {
-
-    document.title =
-      "KROK 2 Exam | KROK Trainer";
-
-    examLabel.textContent = "KROK 2";
-
-    backLink.href = "krok2.html";
-
-
-    const krok2Subjects = [
-      "Anesthesiology and Emergency Medicine",
-      "Children's Infectious Diseases",
-      "Dermatology",
-      "Forensic Medicine",
-      "Hygiene",
-      "Infectious Diseases",
-      "Internal Medicine",
-      "Neurology",
-      "Obstetrics and Gynecology",
-      "Occupational Diseases",
-      "Oncology",
-      "Ophthalmology",
-      "Otorhinolaryngology",
-      "Pediatric Surgery",
-      "Pediatrics",
-      "Phthisiology",
-      "Psychiatry",
-      "Social Medicine",
-      "Surgery",
-      "Traumatology",
-      "Urology"
-    ];
-
-
+    document.title = "KROK 2 Exam | KROK Trainer"; examLabel.textContent = "KROK 2"; backLink.href = "krok2.html";
+    const krok2Subjects = ["Anesthesiology and Emergency Medicine","Children's Infectious Diseases","Dermatology","Forensic Medicine","Hygiene","Infectious Diseases","Internal Medicine","Neurology","Obstetrics and Gynecology","Occupational Diseases","Oncology","Ophthalmology","Otorhinolaryngology","Pediatric Surgery","Pediatrics","Phthisiology","Psychiatry","Social Medicine","Surgery","Traumatology","Urology"];
     krok2Subjects.forEach(addSubjectOption);
-
   } else {
-
-    document.title =
-      "KROK 1 Exam | KROK Trainer";
-
-    examLabel.textContent = "KROK 1";
-
-    backLink.href = "krok1.html";
-
-    loadKrok1Subjects();
+    document.title = "KROK 1 Exam | KROK Trainer"; examLabel.textContent = "KROK 1"; backLink.href = "krok1.html"; loadKrok1Subjects();
   }
-
-
-  // ==========================================
-  // START EXAM
-  // ==========================================
-
   startExamBtn.addEventListener("click", () => {
-
-    const selectedTopic =
-      document.querySelector(
-        'input[name="topic"]:checked'
-      );
-
-    const selectedQuestions =
-      document.querySelector(
-        'input[name="questions"]:checked'
-      );
-
-    if (!selectedTopic || !selectedQuestions) {
-      return;
-    }
-
-    const topic = selectedTopic.value;
-    const questions = selectedQuestions.value;
-
-
-    const nextParams =
-      new URLSearchParams();
-
-    nextParams.set("mode", "exam");
-    nextParams.set("topic", topic);
-    nextParams.set("questions", questions);
-
-    if (examType === "krok2") {
-      nextParams.set("exam", "krok2");
-    }
-
-
-    window.location.href =
-      `exam-instructions.html?${nextParams.toString()}`;
-
+    const selectedTopic = document.querySelector('input[name="topic"]:checked');
+    const selectedQuestions = document.querySelector('input[name="questions"]:checked');
+    if (!selectedTopic || !selectedQuestions) return;
+    const nextParams = new URLSearchParams();
+    nextParams.set("mode","exam"); nextParams.set("topic",selectedTopic.value); nextParams.set("questions",selectedQuestions.value);
+    if (examType === "krok2") nextParams.set("exam","krok2");
+    window.location.href = `exam-instructions.html?${nextParams.toString()}`;
   });
-</script>
-
+  </script>
+  <script src="components/sidebar.js"></script>
 </body>
 </html>
