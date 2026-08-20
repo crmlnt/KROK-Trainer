@@ -4,225 +4,153 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="components/sidebar.css">
   <link rel="stylesheet" href="account.css">
   <title>KROK Trainer — Account</title>
 </head>
 
 <body>
 
-  <body>
-  
-  <main class="account-page">
-    <a href="index.html" class="back-link">
-      ← HOME 
-    </a>
-    <div class="account-card">
+  <aside id="appSidebar" data-root="" data-active="account"></aside>
 
-      <h1>KROK Trainer</h1>
-      <h2>My Account</h2>
+  <div class="sidebar-page-shell">
+    <main class="account-page">
+      <div class="account-card">
 
-      <p class="account-subtitle">
-        Sign in to save your sessions and track your progress.
-      </p>
+        <h1>KROK Trainer</h1>
+        <h2>My Account</h2>
 
-      <div id="authForm">
+        <p class="account-subtitle">
+          Sign in to save your sessions and track your progress.
+        </p>
 
-        <label for="email">Email</label>
-        <input
-          type="email"
-          id="email"
-          placeholder="you@example.com"
-          autocomplete="email"
-        >
+        <div id="authForm">
 
-        <label for="password">Password</label>
-        <input
-          type="password"
-          id="password"
-          placeholder="Password"
-          autocomplete="current-password"
-        >
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="you@example.com"
+            autocomplete="email"
+          >
 
-        <a href="#" id="forgotPasswordLink" class="forgot-password">
-          Forgot password?
-        </a>
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            autocomplete="current-password"
+          >
 
-        <button id="loginBtn">
-          Sign In
-        </button>
+          <a href="#" id="forgotPasswordLink" class="forgot-password">
+            Forgot password?
+          </a>
 
-        <button id="signupBtn">
-          Create Account
-        </button>
+          <button id="loginBtn">
+            Sign In
+          </button>
 
-        <p id="authMessage"></p>
+          <button id="signupBtn">
+            Create Account
+          </button>
 
-      </div>
+          <p id="authMessage"></p>
 
+        </div>
 
-      <div id="accountPanel" hidden>
+        <div id="accountPanel" hidden>
 
-  <div class="account-user-header">
+          <div class="account-user-header">
+            <span class="account-eyebrow">MY ACCOUNT</span>
+            <h2>Welcome back</h2>
+            <p>
+              Signed in as
+              <strong id="userEmail"></strong>
+            </p>
+          </div>
 
-    <span class="account-eyebrow">
-      MY ACCOUNT
-    </span>
+          <div class="account-menu">
 
-    <h2>Welcome back</h2>
+            <a href="history/history.html" class="account-menu-card">
+              <div>
+                <span class="account-menu-icon">📋</span>
+                <div>
+                  <strong>Exam History</strong>
+                  <span>Review your completed exams</span>
+                </div>
+              </div>
+              <span class="account-menu-arrow">→</span>
+            </a>
 
-    <p>
-      Signed in as
-      <strong id="userEmail"></strong>
-    </p>
+            <a href="statistics/statistics.html" class="account-menu-card">
+              <div>
+                <span class="account-menu-icon">📊</span>
+                <div>
+                  <strong>Statistics</strong>
+                  <span>Track your performance over time</span>
+                </div>
+              </div>
+              <span class="account-menu-arrow">→</span>
+            </a>
 
-  </div>
+            <button type="button" id="changePasswordBtn" class="account-menu-card account-menu-button">
+              <div>
+                <span class="account-menu-icon">🔑</span>
+                <div>
+                  <strong>Change Password</strong>
+                  <span>Update your account password</span>
+                </div>
+              </div>
+              <span class="account-menu-arrow">→</span>
+            </button>
 
+          </div>
 
-  <div class="account-menu">
+          <div id="changePasswordPanel" class="change-password-panel" hidden>
+            <h3>Change Password</h3>
+            <p>Enter your current password and choose a new one.</p>
 
-    <a
-      href="history/history.html"
-      class="account-menu-card"
-    >
+            <label for="currentPassword">Current password</label>
+            <input type="password" id="currentPassword" autocomplete="current-password">
 
-      <div>
-        <span class="account-menu-icon">
-          📋
-        </span>
+            <label for="newPassword">New password</label>
+            <input type="password" id="newPassword" autocomplete="new-password">
 
-        <div>
-          <strong>Exam History</strong>
+            <label for="confirmNewPassword">Confirm new password</label>
+            <input type="password" id="confirmNewPassword" autocomplete="new-password">
 
-          <span>
-            Review your completed exams
-          </span>
+            <p id="changePasswordMessage"></p>
+
+            <div class="change-password-actions">
+              <button id="savePasswordBtn">Update Password</button>
+              <button id="cancelPasswordBtn" type="button" class="cancel-password-btn">Cancel</button>
+            </div>
+          </div>
+
+          <button id="logoutBtn" class="logout-btn">
+            Sign Out
+          </button>
+
+          <div class="account-delete-info">
+            <strong>Delete your account</strong>
+            <p>
+              To request account deletion, please send an email from the
+              address used to register your account to
+              <a href="mailto:hello.kroktrainer@protonmail.com">
+                hello.kroktrainer@protonmail.com
+              </a>.
+            </p>
+          </div>
+
         </div>
       </div>
-
-      <span class="account-menu-arrow">
-        →
-      </span>
-
-    </a>
-
-
-    <a href="statistics/statistics.html" class="account-menu-card">
-    
-      <div>
-        <span class="account-menu-icon">
-          📊
-        </span>
-    
-        <div>
-          <strong>Statistics</strong>
-    
-          <span>
-            Track your performance over time
-          </span>
-        </div>
-      </div>
-    
-      <span class="account-menu-arrow">
-        →
-      </span>
-    
-    </a>
-    <button type="button" id="changePasswordBtn" class="account-menu-card account-menu-button">
-    
-      <div>
-        <span class="account-menu-icon">
-          🔑
-        </span>
-    
-        <div>
-          <strong>Change Password</strong>
-    
-          <span>
-            Update your account password
-          </span>
-        </div>
-      </div>
-    
-      <span class="account-menu-arrow">
-        →
-      </span>
-    
-    </button>
+    </main>
   </div>
-
-  
-  <div id="changePasswordPanel" class="change-password-panel" hidden>
-  
-    <h3>Change Password</h3>
-  
-    <p>
-      Enter your current password and choose a new one.
-    </p>
-  
-    <label for="currentPassword">
-      Current password
-    </label>
-  
-    <input type="password" id="currentPassword" autocomplete="current-password">
-  
-    <label for="newPassword">
-      New password
-    </label>
-  
-    <input type="password" id="newPassword" autocomplete="new-password">
-  
-    <label for="confirmNewPassword">
-      Confirm new password
-    </label>
-  
-    <input type="password" id="confirmNewPassword" autocomplete="new-password">
-  
-    <p id="changePasswordMessage"></p>
-  
-    <div class="change-password-actions">
-  
-      <button id="savePasswordBtn">
-        Update Password
-      </button>
-  
-      <button id="cancelPasswordBtn" type="button" class="cancel-password-btn">
-        Cancel
-      </button>
-  
-    </div>
-  
-  </div>
-  
-
-
-  <button id="logoutBtn" class="logout-btn">
-    Sign Out
-  </button>
-
-  <div class="account-delete-info">
-  <strong>Delete your account</strong>
-
-  <p>
-    To request account deletion, please send an email from the
-    address used to register your account to
-    <a href="mailto:hello.kroktrainer@protonmail.com">
-      hello.kroktrainer@protonmail.com
-    </a>.
-  </p>
-</div>
-
-</div>
-
-    </div>
-
-  </main>
-
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="supabase.js"></script>
+  <script src="components/sidebar.js"></script>
   <script src="account.js"></script>
-
-</body>
 
 </body>
 
