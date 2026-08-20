@@ -1,15 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
   min-height: 100vh;
-
   font-family: "Manrope", sans-serif;
-
   background: #f4f6f9;
   color: #111827;
 }
@@ -20,423 +16,208 @@ body {
   padding: 42px 24px 70px;
 }
 
-
-/* ---------- HEADER ---------- */
-
-.history-header {
-  margin-bottom: 34px;
-}
+.history-header { margin-bottom: 34px; }
 
 .back-link {
   display: inline-flex;
   align-items: center;
-
   margin-bottom: 24px;
-
   color: #6b7280;
   text-decoration: none;
-
   font-size: 0.9rem;
   font-weight: 600;
-
   transition: color 0.2s ease;
 }
+.back-link:hover { color: #16a34a; }
 
-.back-link:hover {
-  color: #16a34a;
-}
-
-.history-title {
-  text-align: center;
-}
-
+.history-title { text-align: center; }
 .history-eyebrow {
   display: inline-block;
-
   margin-bottom: 8px;
-
   color: #16a34a;
-
   font-size: 0.75rem;
   font-weight: 800;
   letter-spacing: 0.13em;
 }
-
 .history-title h1 {
   margin: 0;
-
   font-size: clamp(2.2rem, 5vw, 3.4rem);
   line-height: 1.05;
   letter-spacing: -0.04em;
 }
-
 .history-title p {
   max-width: 620px;
   margin: 14px auto 0;
-
   color: #6b7280;
-
   font-size: 1rem;
   line-height: 1.6;
 }
-
-
-/* ---------- SUMMARY ---------- */
 
 .history-summary {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 14px;
-
   margin-bottom: 42px;
 }
-
 .history-summary > div {
   padding: 24px 20px;
-
   text-align: center;
-
   background: #ffffff;
-
   border: 1px solid #e5e7eb;
   border-radius: 16px;
-
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
 }
-
 .history-summary strong {
   display: block;
-
   margin-bottom: 4px;
-
   font-size: 2rem;
   font-weight: 800;
   line-height: 1;
 }
-
 .history-summary span {
   color: #6b7280;
-
   font-size: 0.85rem;
   font-weight: 600;
 }
-
-
-/* ---------- LIST HEADER ---------- */
 
 .history-list-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   margin-bottom: 14px;
 }
+.history-list-header h2 { margin: 0; font-size: 1.3rem; }
+.history-list-header span { color: #6b7280; font-size: 0.85rem; font-weight: 600; }
 
-.history-list-header h2 {
-  margin: 0;
-
-  font-size: 1.3rem;
-}
-
-.history-list-header span {
-  color: #6b7280;
-
-  font-size: 0.85rem;
-  font-weight: 600;
-}
-
-
-/* ---------- EXAM LIST ---------- */
-
-.exam-list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
+.exam-list { display: flex; flex-direction: column; gap: 12px; }
 .exam-history-card {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-
   padding: 20px 22px;
-
   background: #ffffff;
-
   border: 1px solid #e5e7eb;
   border-radius: 15px;
-
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.035);
-
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease,
-    border-color 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
-
 .exam-history-card:hover {
   transform: translateY(-1px);
-
   border-color: #d1d5db;
-
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
 }
-
-.exam-history-main {
-  min-width: 0;
-}
-
-.exam-history-meta {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-
-  margin-bottom: 8px;
-}
-
+.exam-history-main { min-width: 0; }
+.exam-history-meta { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
 .exam-krok {
   display: inline-flex;
-
   padding: 5px 9px;
-
   background: #ecfdf5;
-
   border-radius: 999px;
-
   color: #15803d;
-
   font-size: 0.72rem;
   font-weight: 800;
 }
-
-.exam-date {
-  color: #9ca3af;
-
-  font-size: 0.78rem;
-  font-weight: 600;
-}
-
-.exam-history-card h3 {
-  margin: 0 0 10px;
-
-  font-size: 1.05rem;
-}
-
-.exam-history-stats {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-
-  color: #6b7280;
-
-  font-size: 0.82rem;
-  font-weight: 600;
-}
-
-.correct-text {
-  color: #16a34a;
-}
-
-.wrong-text {
-  color: #dc2626;
-}
-
-
-/* ---------- SCORE ---------- */
+.exam-date { color: #9ca3af; font-size: 0.78rem; font-weight: 600; }
+.exam-history-card h3 { margin: 0 0 10px; font-size: 1.05rem; }
+.exam-history-stats { display: flex; flex-wrap: wrap; gap: 14px; color: #6b7280; font-size: 0.82rem; font-weight: 600; }
+.correct-text { color: #16a34a; }
+.wrong-text { color: #dc2626; }
 
 .exam-history-score {
   flex-shrink: 0;
-
   min-width: 88px;
-
   padding: 14px 12px;
-
   text-align: center;
-
   border-radius: 12px;
-
   font-size: 1.35rem;
   font-weight: 800;
 }
-
-.score-pass {
-  background: #f0fdf4;
-  color: #15803d;
-
-  border: 1px solid #bbf7d0;
-}
-
-.score-fail {
-  background: #fef2f2;
-  color: #dc2626;
-
-  border: 1px solid #fecaca;
-}
-
-
-/* ---------- PAGE STATES ---------- */
+.score-pass { background: #f0fdf4; color: #15803d; border: 1px solid #bbf7d0; }
+.score-fail { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
 
 #historyLoading,
 #loginRequired,
 #emptyHistory {
   max-width: 620px;
   margin: 70px auto;
-
   padding: 34px;
-
   text-align: center;
-
   background: #ffffff;
-
   border: 1px solid #e5e7eb;
   border-radius: 16px;
 }
-
 #historyLoading p,
 #loginRequired p,
-#emptyHistory p {
-  color: #6b7280;
-}
-
+#emptyHistory p { color: #6b7280; }
 #loginRequired a {
   display: inline-block;
-
   margin-top: 12px;
-
   padding: 10px 18px;
-
   background: #16a34a;
   color: #ffffff;
-
   border-radius: 9px;
-
   text-decoration: none;
   font-weight: 700;
 }
-
-/* =========================
-   ACCOUNT BUTTON
-========================= */
-
-.account-link {
-  position: fixed;
-  top: 22px;
-  right: 26px;
-
-  width: 44px;
-  height: 44px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
-  border-radius: 12px;
-
-  text-decoration: none;
-  font-size: 1.1rem;
-
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
-
-  z-index: 999;
-
-  transition:
-    transform 0.2s ease,
-    border-color 0.2s ease;
-}
-
-.account-link:hover {
-  transform: translateY(-1px);
-  border-color: #16a34a;
-}
-
-
-/* ---------- MOBILE ---------- */
-
-@media (max-width: 700px) {
-
-  .history-page {
-    padding: 28px 16px 50px;
-  }
-
-  .history-summary {
-    grid-template-columns: 1fr;
-  }
-
-  .exam-history-card {
-    align-items: flex-start;
-  }
-
-  .exam-history-stats {
-    gap: 8px 12px;
-  }
-
-  .exam-history-score {
-    min-width: 72px;
-    font-size: 1.1rem;
-  }
-
-}
-
-/* =========================
-   EXAM HISTORY PAGINATION
-   ========================= */
 
 #historyPagination {
   display: flex;
   align-items: center;
   justify-content: center;
-
   gap: 8px;
-
   margin-top: 24px;
 }
-
 .pagination-btn {
   min-width: 38px;
   height: 38px;
-
   padding: 0 10px;
-
   border: 1px solid #dbe3ea;
   border-radius: 10px;
-
   background: #ffffff;
   color: #374151;
-
   font-size: 14px;
   font-weight: 700;
-
   cursor: pointer;
-
-  transition:
-    background 0.2s ease,
-    color 0.2s ease,
-    border-color 0.2s ease,
-    transform 0.2s ease;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
+.pagination-btn:hover:not(:disabled) { border-color: #16a34a; color: #16a34a; transform: translateY(-1px); }
+.pagination-btn.active { background: #16a34a; border-color: #16a34a; color: #ffffff; }
+.pagination-btn:disabled { opacity: 0.35; cursor: default; }
+.pagination-arrow { font-size: 20px; }
 
-.pagination-btn:hover:not(:disabled) {
-  border-color: #16a34a;
-  color: #16a34a;
-
-  transform: translateY(-1px);
+body.dark-mode {
+  background: #0f1113;
+  color: #f3f4f6;
 }
-
-.pagination-btn.active {
-  background: #16a34a;
-  border-color: #16a34a;
-
-  color: #ffffff;
+body.dark-mode .history-title p,
+body.dark-mode .history-summary span,
+body.dark-mode .history-list-header span,
+body.dark-mode .exam-history-stats,
+body.dark-mode #historyLoading p,
+body.dark-mode #loginRequired p,
+body.dark-mode #emptyHistory p,
+body.dark-mode .back-link { color: #9ca3af; }
+body.dark-mode .history-summary > div,
+body.dark-mode .exam-history-card,
+body.dark-mode #historyLoading,
+body.dark-mode #loginRequired,
+body.dark-mode #emptyHistory,
+body.dark-mode .pagination-btn {
+  background: #171a1d;
+  border-color: #2a2e33;
+  color: #f3f4f6;
 }
+body.dark-mode .exam-history-card:hover { border-color: #3b4046; }
+body.dark-mode .exam-krok { background: #17311f; color: #86efac; }
+body.dark-mode .score-pass { background: #17311f; color: #86efac; border-color: #24552f; }
+body.dark-mode .score-fail { background: #35191b; color: #fca5a5; border-color: #5d2529; }
+body.dark-mode .pagination-btn.active { background: #16a34a; border-color: #16a34a; color: #ffffff; }
 
-.pagination-btn:disabled {
-  opacity: 0.35;
-  cursor: default;
-}
-
-.pagination-arrow {
-  font-size: 20px;
+@media (max-width: 700px) {
+  .history-page { padding: 76px 16px 50px; }
+  .history-summary { grid-template-columns: 1fr; }
+  .exam-history-card { align-items: flex-start; }
+  .exam-history-stats { gap: 8px 12px; }
+  .exam-history-score { min-width: 72px; font-size: 1.1rem; }
 }
