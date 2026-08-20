@@ -6,6 +6,7 @@
   <title>KROK Trainer</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="components/sidebar.css" />
+  <link rel="stylesheet" href="components/breadcrumb.css" />
   <link rel="stylesheet" href="components/practice-shell.css" />
 </head>
 <body>
@@ -18,6 +19,7 @@
   <aside id="appSidebar" data-root="" data-active="krok1-practice"></aside>
   <div class="sidebar-page-shell">
   <div class="quiz-container">
+    <nav id="appBreadcrumb" data-root="" data-section="KROK 1" data-section-href="krok1.html" data-page="Practice Mode"></nav>
     <div class="top-bar">
         <div class="header-row">
             <h1 id="appTitle">KROK Trainer</h1>
@@ -69,11 +71,24 @@
   <script src="components/practice-shell.js"></script>
   <script>
     const practiceSidebar = document.getElementById("appSidebar");
+    const practiceBreadcrumb = document.getElementById("appBreadcrumb");
+    const practiceParams = new URLSearchParams(window.location.search);
+    const isKrok2 = practiceParams.get("exam") === "krok2";
+    const isExamMode = practiceParams.get("mode") === "exam";
+
     if (practiceSidebar) {
-      const practiceParams = new URLSearchParams(window.location.search);
-      practiceSidebar.dataset.active = practiceParams.get("exam") === "krok2" ? "krok2-practice" : "krok1-practice";
+      practiceSidebar.dataset.active = isKrok2
+        ? (isExamMode ? "krok2-exam" : "krok2-practice")
+        : (isExamMode ? "krok1-exam" : "krok1-practice");
+    }
+
+    if (practiceBreadcrumb) {
+      practiceBreadcrumb.dataset.section = isKrok2 ? "KROK 2" : "KROK 1";
+      practiceBreadcrumb.dataset.sectionHref = isKrok2 ? "krok2.html" : "krok1.html";
+      practiceBreadcrumb.dataset.page = isExamMode ? "Exam Mode" : "Practice Mode";
     }
   </script>
   <script src="components/sidebar.js"></script>
+  <script src="components/breadcrumb.js"></script>
 </body>
 </html>
