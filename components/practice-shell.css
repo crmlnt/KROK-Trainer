@@ -1,0 +1,45 @@
+/* Practice Mode shell overrides kept separate from the quiz engine. */
+
+body.dark-mode .ai-explanation-box {
+  background: #1b1f23;
+  border-color: #343a40;
+  color: #f3f4f6;
+}
+
+body.dark-mode .ai-explanation-header,
+body.dark-mode .ai-section h4 {
+  color: #f3f4f6;
+}
+
+body.dark-mode .ai-section p {
+  color: #d1d5db;
+}
+
+body.dark-mode .ai-key-concept {
+  background: #2a2412;
+  border-color: #6b5a1f;
+}
+
+body.dark-mode .ai-key-concept h4 {
+  color: #fbbf24;
+}
+
+body.dark-mode .ai-key-concept p {
+  color: #fde68a;
+}
+
+body.dark-mode .ai-close-btn {
+  background: #30343a;
+  color: #f3f4f6;
+}
+
+body.dark-mode .ai-close-btn:hover {
+  background: #3a4047;
+}
+
+body.dark-mode #feedback,
+body.dark-mode #score,
+body.dark-mode #stats,
+body.dark-mode #error-count {
+  color: #e5e7eb;
+}
