@@ -1,39 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Statistics — KROK Trainer</title>
-
   <link rel="stylesheet" href="../components/sidebar.css">
+  <link rel="stylesheet" href="../components/breadcrumb.css">
   <link rel="stylesheet" href="statistics.css">
 </head>
-
 <body>
-
   <aside id="appSidebar" data-root="../" data-active="statistics"></aside>
-
   <div class="sidebar-page-shell">
     <main class="statistics-page">
+      <nav id="appBreadcrumb" data-root="../" data-section="My Account" data-section-href="account.html" data-page="Statistics"></nav>
 
-      <a href="#" class="back-link" onclick="history.back(); return false;">
-        ← Back
-      </a>
+      <a href="#" class="back-link" onclick="history.back(); return false;">← Back</a>
 
       <header class="statistics-header">
-
-        <span class="statistics-eyebrow">
-          KROK TRAINER
-        </span>
-
+        <span class="statistics-eyebrow">KROK TRAINER</span>
         <h1>Statistics</h1>
-
-        <p>
-          Track your exam performance and monitor your progress over time.
-        </p>
-
+        <p>Track your exam performance and monitor your progress over time.</p>
       </header>
 
       <section id="loginRequired" hidden>
@@ -42,101 +28,40 @@
         <a href="../account.html">Sign In</a>
       </section>
 
-      <section id="statisticsLoading">
-        <p>Loading your statistics...</p>
-      </section>
-
-      <section id="emptyStatistics" hidden>
-        <h2>No statistics yet</h2>
-        <p>
-          Complete your first Exam Mode session and your statistics
-          will appear here.
-        </p>
-      </section>
+      <section id="statisticsLoading"><p>Loading your statistics...</p></section>
+      <section id="emptyStatistics" hidden><h2>No statistics yet</h2><p>Complete your first Exam Mode session and your statistics will appear here.</p></section>
 
       <section id="statisticsContent" hidden>
-
         <section class="statistics-overview">
-          <div class="stat-card">
-            <strong id="totalExams">0</strong>
-            <span>Exams Completed</span>
-          </div>
-
-          <div class="stat-card">
-            <strong id="totalQuestions">0</strong>
-            <span>Questions Answered</span>
-          </div>
-
-          <div class="stat-card">
-            <strong id="overallAccuracy">0%</strong>
-            <span>Overall Accuracy</span>
-          </div>
-
-          <div class="stat-card">
-            <strong id="bestScore">0%</strong>
-            <span>Best Score</span>
-          </div>
+          <div class="stat-card"><strong id="totalExams">0</strong><span>Exams Completed</span></div>
+          <div class="stat-card"><strong id="totalQuestions">0</strong><span>Questions Answered</span></div>
+          <div class="stat-card"><strong id="overallAccuracy">0%</strong><span>Overall Accuracy</span></div>
+          <div class="stat-card"><strong id="bestScore">0%</strong><span>Best Score</span></div>
         </section>
 
         <section class="statistics-panel">
-          <div class="panel-header">
-            <div>
-              <span class="panel-label">PROGRESS</span>
-              <h2>Performance over time</h2>
-            </div>
-          </div>
-
-          <div id="progressChart" class="progress-chart">
-            <canvas id="progressCanvas"></canvas>
-          </div>
+          <div class="panel-header"><div><span class="panel-label">PROGRESS</span><h2>Performance over time</h2></div></div>
+          <div id="progressChart" class="progress-chart"><canvas id="progressCanvas"></canvas></div>
         </section>
 
         <section class="statistics-panel">
-          <div class="panel-header">
-            <div>
-              <span class="panel-label">SUBJECTS</span>
-              <h2>Performance by subject</h2>
-            </div>
-          </div>
-
+          <div class="panel-header"><div><span class="panel-label">SUBJECTS</span><h2>Performance by subject</h2></div></div>
           <div id="subjectStats" class="subject-stats"></div>
         </section>
 
         <section class="statistics-panel">
-          <div class="panel-header">
-            <div>
-              <span class="panel-label">EXAMS</span>
-              <h2>KROK breakdown</h2>
-            </div>
-          </div>
-
+          <div class="panel-header"><div><span class="panel-label">EXAMS</span><h2>KROK breakdown</h2></div></div>
           <div class="krok-breakdown">
-            <div class="krok-stat-card">
-              <span>KROK 1</span>
-              <strong id="krok1Accuracy">—</strong>
-              <small id="krok1Exams">0 exams</small>
-            </div>
-
-            <div class="krok-stat-card">
-              <span>KROK 2</span>
-              <strong id="krok2Accuracy">—</strong>
-              <small id="krok2Exams">0 exams</small>
-            </div>
+            <div class="krok-stat-card"><span>KROK 1</span><strong id="krok1Accuracy">—</strong><small id="krok1Exams">0 exams</small></div>
+            <div class="krok-stat-card"><span>KROK 2</span><strong id="krok2Accuracy">—</strong><small id="krok2Exams">0 exams</small></div>
           </div>
         </section>
 
         <section class="statistics-panel weak-topics-preview">
-          <div>
-            <span class="panel-label">COMING LATER</span>
-            <h2>Weak Topics</h2>
-            <p>Identify recurring weak areas based on your exam history.</p>
-          </div>
-
+          <div><span class="panel-label">COMING LATER</span><h2>Weak Topics</h2><p>Identify recurring weak areas based on your exam history.</p></div>
           <span class="coming-soon-badge">Coming soon</span>
         </section>
-
       </section>
-
     </main>
   </div>
 
@@ -144,8 +69,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="../supabase.js"></script>
   <script src="../components/sidebar.js"></script>
+  <script src="../components/breadcrumb.js"></script>
   <script src="statistics.js"></script>
-
 </body>
-
 </html>
