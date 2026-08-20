@@ -72,8 +72,15 @@
   mobileMenuBtn.addEventListener("click", () => { document.body.classList.contains("sidebar-mobile-open") ? closeMobileMenu() : openMobileMenu(); });
   mobileCloseBtn?.addEventListener("click", closeMobileMenu); overlay.addEventListener("click", closeMobileMenu); document.addEventListener("keydown", event => { if (event.key === "Escape") closeMobileMenu(); });
 
+  const examIsStillRunning = () => {
+    if (!isActiveExamSession) return false;
+    const resultsVisible = !!document.querySelector("#feedback .exam-summary");
+    const reviewVisible = !!document.getElementById("backToExamResultsBtn");
+    return !resultsVisible && !reviewVisible;
+  };
+
   host.querySelectorAll("a.sidebar-link, .sidebar-user, .sidebar-brand").forEach(item => item.addEventListener("click", event => {
-    if (isActiveExamSession) {
+    if (examIsStillRunning()) {
       const shouldExit = window.confirm("Exit exam?\n\nYour current exam session will be terminated and will not be saved.");
       if (!shouldExit) { event.preventDefault(); return; }
     }
