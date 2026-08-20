@@ -64,6 +64,8 @@
         </div>
       </div>
 
+      <button id="sidebarKrokCollapsedBtn" class="sidebar-krok-collapsed-btn" type="button" aria-label="Open KROK menu" title="KROK">K</button>
+
       <div class="sidebar-section">
         <span class="sidebar-section-title">My Account</span>
         ${link("account", "account.html", "Account", "user")}
@@ -95,6 +97,7 @@
     </div>`;
 
   const collapseBtn = document.getElementById("sidebarCollapseBtn");
+  const krokCollapsedBtn = document.getElementById("sidebarKrokCollapsedBtn");
   const themeBtn = document.getElementById("sidebarThemeBtn");
   const themeIcon = document.getElementById("sidebarThemeIcon");
   const themeLabel = document.getElementById("sidebarThemeLabel");
@@ -134,6 +137,11 @@
   collapseBtn?.addEventListener("click", () => {
     document.body.classList.toggle("sidebar-collapsed");
     localStorage.setItem("krokSidebarCollapsed", document.body.classList.contains("sidebar-collapsed"));
+  });
+
+  krokCollapsedBtn?.addEventListener("click", () => {
+    document.body.classList.remove("sidebar-collapsed");
+    localStorage.setItem("krokSidebarCollapsed", "false");
   });
 
   themeBtn?.addEventListener("click", () => {
