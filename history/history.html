@@ -7,123 +7,82 @@
 
   <title>Exam History — KROK Trainer</title>
 
+  <link rel="stylesheet" href="../components/sidebar.css">
   <link rel="stylesheet" href="history.css">
 </head>
 
 <body>
 
-  <a href="../account.html" class="account-link" aria-label="My Account">
-    👤
-  </a>
+  <aside id="appSidebar" data-root="../" data-active="history"></aside>
 
-  <main class="history-page">
+  <div class="sidebar-page-shell">
+    <main class="history-page">
 
-    <header class="history-header">
+      <header class="history-header">
 
-      <a href="#" class="back-link" onclick="history.back(); return false;">
-        ← Back
-      </a>
+        <a href="#" class="back-link" onclick="history.back(); return false;">
+          ← Back
+        </a>
 
-      <div class="history-title">
-        <span class="history-eyebrow">KROK TRAINER</span>
+        <div class="history-title">
+          <span class="history-eyebrow">KROK TRAINER</span>
 
-        <h1>Exam History</h1>
+          <h1>Exam History</h1>
 
-        <p>
-          Review your completed exams and track your progress over time.
-        </p>
-      </div>
-
-    </header>
-
-
-    <!-- User not logged in -->
-
-    <section id="loginRequired" hidden>
-
-      <h2>Sign in required</h2>
-
-      <p>
-        Sign in to your KROK Trainer account to view your exam history.
-      </p>
-
-      <a href="../account.html">
-        Sign In
-      </a>
-
-    </section>
-
-
-    <!-- Loading -->
-
-    <section id="historyLoading">
-      <p>Loading your exam history...</p>
-    </section>
-
-
-    <!-- No exams -->
-
-    <section id="emptyHistory" hidden>
-
-      <h2>No exams yet</h2>
-
-      <p>
-        Complete your first Exam Mode session and it will appear here.
-      </p>
-
-    </section>
-
-
-    <!-- Exam history -->
-
-    <section id="historyContent" hidden>
-
-      <div class="history-summary">
-
-        <div>
-          <strong id="totalExams">0</strong>
-          <span>Exams</span>
+          <p>
+            Review your completed exams and track your progress over time.
+          </p>
         </div>
 
-        <div>
-          <strong id="totalQuestions">0</strong>
-          <span>Questions</span>
+      </header>
+
+      <section id="loginRequired" hidden>
+        <h2>Sign in required</h2>
+        <p>Sign in to your KROK Trainer account to view your exam history.</p>
+        <a href="../account.html">Sign In</a>
+      </section>
+
+      <section id="historyLoading">
+        <p>Loading your exam history...</p>
+      </section>
+
+      <section id="emptyHistory" hidden>
+        <h2>No exams yet</h2>
+        <p>Complete your first Exam Mode session and it will appear here.</p>
+      </section>
+
+      <section id="historyContent" hidden>
+
+        <div class="history-summary">
+          <div>
+            <strong id="totalExams">0</strong>
+            <span>Exams</span>
+          </div>
+          <div>
+            <strong id="totalQuestions">0</strong>
+            <span>Questions</span>
+          </div>
+          <div>
+            <strong id="averageScore">0%</strong>
+            <span>Average Score</span>
+          </div>
         </div>
 
-        <div>
-          <strong id="averageScore">0%</strong>
-          <span>Average Score</span>
+        <div class="history-list-header">
+          <h2>Completed Exams</h2>
+          <span id="examCount"></span>
         </div>
 
-      </div>
+        <div id="examList" class="exam-list"></div>
 
+      </section>
 
-      <div class="history-list-header">
-
-        <h2>Completed Exams</h2>
-
-        <span id="examCount"></span>
-
-      </div>
-
-
-      <div id="examList" class="exam-list">
-        <!-- history.js will generate exam cards here -->
-      </div>
-
-    </section>
-
-  </main>
-
-
-  <!-- Supabase -->
+    </main>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-
-  <!-- ../ because history.html is inside /history -->
-
   <script src="../supabase.js"></script>
-
+  <script src="../components/sidebar.js"></script>
   <script src="history.js"></script>
 
 </body>
