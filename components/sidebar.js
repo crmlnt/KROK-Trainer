@@ -39,9 +39,7 @@
     </div>
 
     <div class="sidebar-scroll">
-      <div class="sidebar-section">
-        ${link("home", "index.html", "Home", "home")}
-      </div>
+      <div class="sidebar-section">${link("home", "index.html", "Home", "home")}</div>
 
       <div class="sidebar-section">
         <span class="sidebar-section-title">KROK 1</span>
@@ -127,10 +125,10 @@
     const emailEl = document.getElementById("sidebarUserEmail");
     const statusEl = document.getElementById("sidebarUserStatus");
 
-    if (!window.supabaseClient?.auth) return;
+    if (typeof supabaseClient === "undefined" || !supabaseClient.auth) return;
 
     try {
-      const { data: { user } } = await window.supabaseClient.auth.getUser();
+      const { data: { user } } = await supabaseClient.auth.getUser();
       if (!user) return;
 
       userEl.classList.add("signed-in");
