@@ -58,19 +58,87 @@
     </div>
     <div class="sidebar-footer"><button id="sidebarThemeBtn" class="sidebar-theme-btn" type="button"><span id="sidebarThemeIcon" class="sidebar-icon"></span><span id="sidebarThemeLabel" class="sidebar-theme-label">Dark Mode</span></button><a id="sidebarUser" class="sidebar-user" href="${root}account.html"><span class="sidebar-status-dot" aria-hidden="true"></span><span class="sidebar-user-copy"><strong id="sidebarUserEmail">Not signed in</strong><span id="sidebarUserStatus">Sign in →</span></span></a></div>`;
 
-  const overlay = document.createElement("div"); overlay.className = "sidebar-mobile-overlay"; overlay.setAttribute("aria-hidden", "true"); document.body.appendChild(overlay);
+  const overlay = document.createElement("div");
+  overlay.className = "sidebar-mobile-overlay";
+  overlay.setAttribute("aria-hidden", "true");
+  document.body.appendChild(overlay);
+
   let mobileMenuBtn = externalTriggerId ? document.getElementById(externalTriggerId) : null;
-  if (!mobileMenuBtn) { mobileMenuBtn = document.createElement("button"); mobileMenuBtn.className = "sidebar-mobile-menu-btn"; mobileMenuBtn.type = "button"; mobileMenuBtn.setAttribute("aria-label", "Open navigation menu"); mobileMenuBtn.innerHTML = '<span></span><span></span><span></span>'; document.body.appendChild(mobileMenuBtn); }
+  if (!mobileMenuBtn) {
+    mobileMenuBtn = document.createElement("button");
+    mobileMenuBtn.className = "sidebar-mobile-menu-btn";
+    mobileMenuBtn.type = "button";
+    mobileMenuBtn.setAttribute("aria-label", "Open navigation menu");
+    mobileMenuBtn.innerHTML = '<span></span><span></span><span></span>';
+    document.body.appendChild(mobileMenuBtn);
+  }
   mobileMenuBtn.setAttribute("aria-expanded", "false");
 
-  const collapseBtn = document.getElementById("sidebarCollapseBtn"); const mobileCloseBtn = document.getElementById("sidebarMobileCloseBtn"); const krokCollapsedBtn = document.getElementById("sidebarKrokCollapsedBtn"); const themeBtn = document.getElementById("sidebarThemeBtn"); const themeIcon = document.getElementById("sidebarThemeIcon"); const themeLabel = document.getElementById("sidebarThemeLabel");
+  const backToTopBtn = document.createElement("button");
+  backToTopBtn.className = "app-back-to-top";
+  backToTopBtn.type = "button";
+  backToTopBtn.setAttribute("aria-label", "Back to top");
+  backToTopBtn.setAttribute("title", "Back to top");
+  backToTopBtn.innerHTML = '<span aria-hidden="true">↑</span><span class="app-back-to-top-label">Top</span>';
+  document.body.appendChild(backToTopBtn);
+
+  const backToTopStyle = document.createElement("style");
+  backToTopStyle.textContent = `
+    .app-back-to-top{position:fixed;right:24px;bottom:24px;z-index:950;display:flex;align-items:center;gap:7px;padding:10px 14px;border:1px solid var(--sidebar-border);border-radius:999px;background:var(--sidebar-bg);color:var(--sidebar-text);font-family:"Manrope",sans-serif;font-size:.78rem;font-weight:700;box-shadow:0 8px 24px rgba(15,23,42,.12);cursor:pointer;opacity:0;visibility:hidden;transform:translateY(10px);transition:opacity .2s ease,visibility .2s ease,transform .2s ease,background .2s ease,color .2s ease,border-color .2s ease}
+    .app-back-to-top.visible{opacity:1;visibility:visible;transform:translateY(0)}
+    .app-back-to-top:hover{color:var(--sidebar-green);background:var(--sidebar-hover);transform:translateY(-2px)}
+    .app-back-to-top span:first-child{font-size:1rem;line-height:1}
+    @media(max-width:700px){.app-back-to-top{right:16px;bottom:16px;width:44px;height:44px;padding:0;justify-content:center;border-radius:50%}.app-back-to-top-label{display:none}.app-back-to-top span:first-child{font-size:1.15rem}}
+  `;
+  document.head.appendChild(backToTopStyle);
+
+  const collapseBtn = document.getElementById("sidebarCollapseBtn");
+  const mobileCloseBtn = document.getElementById("sidebarMobileCloseBtn");
+  const krokCollapsedBtn = document.getElementById("sidebarKrokCollapsedBtn");
+  const themeBtn = document.getElementById("sidebarThemeBtn");
+  const themeIcon = document.getElementById("sidebarThemeIcon");
+  const themeLabel = document.getElementById("sidebarThemeLabel");
+
   if (!drawerOnly && localStorage.getItem("krokSidebarCollapsed") === "true") document.body.classList.add("sidebar-collapsed");
   if (localStorage.getItem("theme") === "dark") document.body.classList.add("dark-mode");
-  const renderTheme = () => { const dark = document.body.classList.contains("dark-mode"); themeIcon.innerHTML = icon(dark ? "sun" : "moon"); themeLabel.textContent = dark ? "Light Mode" : "Dark Mode"; }; renderTheme();
-  const closeMobileMenu = () => { document.body.classList.remove("sidebar-mobile-open"); mobileMenuBtn.setAttribute("aria-expanded", "false"); mobileMenuBtn.classList?.remove("open"); };
-  const openMobileMenu = () => { document.body.classList.remove("sidebar-collapsed"); document.body.classList.add("sidebar-mobile-open"); mobileMenuBtn.setAttribute("aria-expanded", "true"); mobileMenuBtn.classList?.add("open"); };
-  mobileMenuBtn.addEventListener("click", () => { document.body.classList.contains("sidebar-mobile-open") ? closeMobileMenu() : openMobileMenu(); });
-  mobileCloseBtn?.addEventListener("click", closeMobileMenu); overlay.addEventListener("click", closeMobileMenu); document.addEventListener("keydown", event => { if (event.key === "Escape") closeMobileMenu(); });
+
+  const renderTheme = () => {
+    const dark = document.body.classList.contains("dark-mode");
+    themeIcon.innerHTML = icon(dark ? "sun" : "moon");
+    themeLabel.textContent = dark ? "Light Mode" : "Dark Mode";
+  };
+  renderTheme();
+
+  const closeMobileMenu = () => {
+    document.body.classList.remove("sidebar-mobile-open");
+    mobileMenuBtn.setAttribute("aria-expanded", "false");
+    mobileMenuBtn.classList?.remove("open");
+  };
+
+  const openMobileMenu = () => {
+    document.body.classList.remove("sidebar-collapsed");
+    document.body.classList.add("sidebar-mobile-open");
+    mobileMenuBtn.setAttribute("aria-expanded", "true");
+    mobileMenuBtn.classList?.add("open");
+  };
+
+  const renderBackToTop = () => {
+    backToTopBtn.classList.toggle("visible", window.scrollY > 450);
+  };
+
+  window.addEventListener("scroll", renderBackToTop, { passive: true });
+  renderBackToTop();
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  mobileMenuBtn.addEventListener("click", () => {
+    document.body.classList.contains("sidebar-mobile-open") ? closeMobileMenu() : openMobileMenu();
+  });
+  mobileCloseBtn?.addEventListener("click", closeMobileMenu);
+  overlay.addEventListener("click", closeMobileMenu);
+  document.addEventListener("keydown", event => { if (event.key === "Escape") closeMobileMenu(); });
 
   const examIsStillRunning = () => {
     if (!isActiveExamSession) return false;
@@ -82,18 +150,70 @@
   host.querySelectorAll("a.sidebar-link, .sidebar-user, .sidebar-brand").forEach(item => item.addEventListener("click", event => {
     if (examIsStillRunning()) {
       const shouldExit = window.confirm("Exit exam?\n\nYour current exam session will be terminated and will not be saved.");
-      if (!shouldExit) { event.preventDefault(); return; }
+      if (!shouldExit) {
+        event.preventDefault();
+        return;
+      }
     }
     if (drawerOnly || window.innerWidth <= 900) closeMobileMenu();
   }));
 
   const krokToggles = [...host.querySelectorAll(".sidebar-krok-toggle")];
-  krokToggles.forEach(toggle => toggle.addEventListener("click", () => { const id = toggle.dataset.krok; const panel = host.querySelector(`[data-krok-panel="${id}"]`); const willOpen = !toggle.classList.contains("open"); krokToggles.forEach(other => { const otherPanel = host.querySelector(`[data-krok-panel="${other.dataset.krok}"]`); other.classList.remove("open"); other.setAttribute("aria-expanded", "false"); otherPanel?.classList.remove("open"); }); if (willOpen) { toggle.classList.add("open"); toggle.setAttribute("aria-expanded", "true"); panel?.classList.add("open"); } }));
-  collapseBtn?.addEventListener("click", () => { if (drawerOnly) return; document.body.classList.toggle("sidebar-collapsed"); localStorage.setItem("krokSidebarCollapsed", document.body.classList.contains("sidebar-collapsed")); });
-  krokCollapsedBtn?.addEventListener("click", () => { document.body.classList.remove("sidebar-collapsed"); localStorage.setItem("krokSidebarCollapsed", "false"); });
-  themeBtn?.addEventListener("click", () => { document.body.classList.toggle("dark-mode"); localStorage.setItem("theme", document.body.classList.contains("dark-mode") ? "dark" : "light"); renderTheme(); window.dispatchEvent(new CustomEvent("krok-theme-change")); });
-  window.addEventListener("resize", () => { if (!drawerOnly && window.innerWidth > 900) closeMobileMenu(); });
+  krokToggles.forEach(toggle => toggle.addEventListener("click", () => {
+    const id = toggle.dataset.krok;
+    const panel = host.querySelector(`[data-krok-panel="${id}"]`);
+    const willOpen = !toggle.classList.contains("open");
+    krokToggles.forEach(other => {
+      const otherPanel = host.querySelector(`[data-krok-panel="${other.dataset.krok}"]`);
+      other.classList.remove("open");
+      other.setAttribute("aria-expanded", "false");
+      otherPanel?.classList.remove("open");
+    });
+    if (willOpen) {
+      toggle.classList.add("open");
+      toggle.setAttribute("aria-expanded", "true");
+      panel?.classList.add("open");
+    }
+  }));
 
-  async function renderUser() { const userEl = document.getElementById("sidebarUser"); const emailEl = document.getElementById("sidebarUserEmail"); const statusEl = document.getElementById("sidebarUserStatus"); if (typeof supabaseClient === "undefined" || !supabaseClient.auth) return; try { const { data: { user } } = await supabaseClient.auth.getUser(); if (!user) return; userEl.classList.add("signed-in"); emailEl.textContent = user.email || "Signed in"; emailEl.title = user.email || ""; statusEl.textContent = "Signed in"; } catch (error) { console.warn("Sidebar auth status unavailable:", error); } }
+  collapseBtn?.addEventListener("click", () => {
+    if (drawerOnly) return;
+    document.body.classList.toggle("sidebar-collapsed");
+    localStorage.setItem("krokSidebarCollapsed", document.body.classList.contains("sidebar-collapsed"));
+  });
+
+  krokCollapsedBtn?.addEventListener("click", () => {
+    document.body.classList.remove("sidebar-collapsed");
+    localStorage.setItem("krokSidebarCollapsed", "false");
+  });
+
+  themeBtn?.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    localStorage.setItem("theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
+    renderTheme();
+    window.dispatchEvent(new CustomEvent("krok-theme-change"));
+  });
+
+  window.addEventListener("resize", () => {
+    if (!drawerOnly && window.innerWidth > 900) closeMobileMenu();
+  });
+
+  async function renderUser() {
+    const userEl = document.getElementById("sidebarUser");
+    const emailEl = document.getElementById("sidebarUserEmail");
+    const statusEl = document.getElementById("sidebarUserStatus");
+    if (typeof supabaseClient === "undefined" || !supabaseClient.auth) return;
+    try {
+      const { data: { user } } = await supabaseClient.auth.getUser();
+      if (!user) return;
+      userEl.classList.add("signed-in");
+      emailEl.textContent = user.email || "Signed in";
+      emailEl.title = user.email || "";
+      statusEl.textContent = "Signed in";
+    } catch (error) {
+      console.warn("Sidebar auth status unavailable:", error);
+    }
+  }
+
   renderUser();
 })();
