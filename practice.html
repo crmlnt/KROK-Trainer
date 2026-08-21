@@ -41,6 +41,15 @@
     <div id="examTimer" class="exam-timer" style="display: none;">⏱ <span id="examTimerText">00:00:00</span></div>
     <div class="progress-container"><div id="progressBar" class="progress-bar"></div></div>
     <div class="quiz-card">
+      <div id="reviewMistakesBanner" class="review-mistakes-banner" hidden>
+        <div>
+          <span class="review-mistakes-eyebrow">REVIEW MODE</span>
+          <strong>Review Mistakes</strong>
+          <p>Revisit the questions you answered incorrectly without affecting your Practice Mode statistics.</p>
+        </div>
+        <button id="backToPracticeBtn" type="button">← Back to Practice Mode</button>
+      </div>
+
       <div class="question-header">
         <div class="question-meta"><p id="question-number">Question 1</p><p id="subject-display">Subject: -</p></div>
         <button id="aiExplainBtn" class="ai-explain-btn" type="button" style="display: none;">✨ AI Explain</button>
@@ -53,12 +62,23 @@
       <div id="answers-container"></div>
       <button id="confirmAnswerBtn" class="primary-actions" type="button" style="display: none;">Confirm Answer</button>
       <button id="next-btn" class="primary-actions">Next question</button>
+
+      <div id="reviewMistakesLauncher" class="review-mistakes-launcher" hidden>
+        <div class="review-mistakes-launcher-copy">
+          <span class="review-mistakes-launcher-icon" aria-hidden="true">↻</span>
+          <div>
+            <strong>Review your mistakes</strong>
+            <span>Go back through questions you answered incorrectly in Practice Mode.</span>
+          </div>
+        </div>
+        <button id="review-btn" type="button">Review Mistakes →</button>
+      </div>
     </div>
     <p id="feedback"></p>
     <div id="practice-tools">
       <p id="score">Score: 0</p><p id="stats">Correct: 0 | Wrong: 0 | Accuracy: 0%</p><hr><p id="error-count">Errors: 0</p>
       <ul id="error-log" style="display: none;"></ul>
-      <div class="action-buttons"><div class="export-actions"><button id="review-btn">Review mistakes</button><button id="export-errors-btn">Export Error Log</button><button id="exportExamLogBtn" class="button">Export Exam Log</button><button id="reviewExamBtn" class="button" style="display: none;">Review Exam</button></div></div>
+      <div class="action-buttons"><div class="export-actions"><button id="export-errors-btn">Export Error Log</button><button id="exportExamLogBtn" class="button">Export Exam Log</button><button id="reviewExamBtn" class="button" style="display: none;">Review Exam</button></div></div>
       <div class="danger-zone"><button id="clear-errors-btn">Clear Error Log</button></div>
     </div>
     <div class="review-navigation"><button id="prevReviewBtn" class="button" style="display: none;">⬅️ Previous</button><button id="nextReviewBtn" class="button" style="display: none;">Next ➡️</button></div>
