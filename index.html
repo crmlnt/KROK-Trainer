@@ -58,7 +58,7 @@
 
     <section class="landing-hero">
       <div class="landing-hero-copy">
-        <h1>KROK Trainer</h1>
+        <h1>Prepare smarter for your <span>KROK</span> exam.</h1>
         <p class="hero-subtitle">A simple and focused training app for medical students preparing for the KROK exams.</p>
         <p class="hero-text">Practice multiple-choice questions, check your answers instantly, review your mistakes, and prepare with a structured exam-style approach.</p>
 
@@ -68,7 +68,7 @@
         </div>
       </div>
 
-      <div class="landing-hero-visual" aria-hidden="true">
+      <div id="landingHeroVisual" class="landing-hero-visual" aria-hidden="true">
         <img src="assets/undraw_medicine_hqqg.svg" alt="" />
       </div>
     </section>
@@ -113,7 +113,33 @@
       console.error("Error checking user session:", error);
     }
   }
+
+  async function recolorLandingIllustration() {
+    const host = document.getElementById("landingHeroVisual");
+    if (!host) return;
+
+    try {
+      const response = await fetch("assets/undraw_medicine_hqqg.svg");
+      if (!response.ok) return;
+
+      const svg = (await response.text())
+        .replaceAll("#6c63ff", "#16a34a")
+        .replaceAll("#6C63FF", "#16A34A");
+
+      host.innerHTML = svg;
+      const inlineSvg = host.querySelector("svg");
+      if (inlineSvg) {
+        inlineSvg.removeAttribute("width");
+        inlineSvg.removeAttribute("height");
+        inlineSvg.setAttribute("aria-hidden", "true");
+      }
+    } catch (error) {
+      console.warn("Landing illustration recolor unavailable:", error);
+    }
+  }
+
   updateLandingAuthState();
+  recolorLandingIllustration();
 </script>
 <script src="components/sidebar.js"></script>
 </body>
