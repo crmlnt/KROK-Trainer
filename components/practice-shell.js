@@ -46,12 +46,10 @@
     correctAnswers = practiceSnapshot.correctAnswers;
     wrongAnswers = practiceSnapshot.wrongAnswers;
 
-    if (Array.isArray(practiceSnapshot.errors)) {
-      errors = practiceSnapshot.errors.map(item => ({ ...item }));
-      updateErrorLog();
-    }
-
+    errors = practiceSnapshot.errors.map(item => ({ ...item }));
+    updateErrorLog();
     updateStats();
+
     const scoreEl = document.getElementById("score");
     if (scoreEl) scoreEl.textContent = `Score: ${score}`;
   };
@@ -95,14 +93,19 @@
     queueMicrotask(syncReviewUi);
   });
 
+  /* Capture the Practice session before app.js handles the Review button. */
   reviewBtn.addEventListener("click", () => {
     practiceSnapshot = {
+      questions: questions.map(question => ({ ...question, answers: [...question.answers] })),
+      currentQuestionIndex,
       score,
       correctAnswers,
       wrongAnswers,
-      errors: errors.map(item => ({ ...item }))
+      errors: errors.map(item => ({ ...item, answers: [...item.answers] }))
     };
+  }, true);
 
+  reviewBtn.addEventListener("click", () => {
     reviewingMistakes = true;
     setBreadcrumbLabel("Review Mistakes");
 
@@ -127,13 +130,23 @@
     reviewingMistakes = false;
     setBreadcrumbLabel("Practice Mode");
 
-    restorePracticeCounters();
-    practiceSnapshot = null;
+    if (practiceSnapshot) {
+      questions = practiceSnapshot.questions.map(question => ({ ...question, answers: [...question.answers] }));
+      currentQuestionIndex = Math.min(practiceSnapshot.currentQuestionIndex, Math.max(questions.length - 1, 0));
+      reviewMode = false;
+      answered = false;
 
-    if (typeof resetTrainer === "function") {
+      restorePracticeCounters();
+
+      if (questions.length > 0) {
+        feedbackEl.textContent = "";
+        showQuestion();
+      }
+    } else if (typeof resetTrainer === "function") {
       resetTrainer();
     }
 
+    practiceSnapshot = null;
     syncReviewUi();
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
