@@ -40,7 +40,7 @@
   host.className = "app-sidebar";
   host.innerHTML = `
     <div class="sidebar-top">
-      <a class="sidebar-brand" href="${root}index.html" aria-label="KROK Trainer Home"><span class="sidebar-brand-mark">K</span><span class="sidebar-brand-text"><strong>KROK</strong><span>Trainer</span></span></a>
+      <a class="sidebar-brand" href="${root}index.html" aria-label="KROK Trainer Home"><img class="sidebar-brand-mark" src="${root}assets/logoK.png" alt="" aria-hidden="true"><span class="sidebar-brand-text"><strong>KROK</strong><span>Trainer</span></span></a>
       <button id="sidebarCollapseBtn" class="sidebar-collapse" type="button" aria-label="Collapse sidebar">‹</button>
       <button id="sidebarMobileCloseBtn" class="sidebar-mobile-close" type="button" aria-label="Close menu">×</button>
     </div>
