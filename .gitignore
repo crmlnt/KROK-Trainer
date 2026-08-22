@@ -40,3 +40,6 @@ krok2/validate-krok2-final.js
 
 krok2/krok2-duplicate-consolidation.json
 krok2/krok2-exact-duplicate-classification.json
+# Local database-cleaner workspace
+database-cleaner/
+questions.original.json
