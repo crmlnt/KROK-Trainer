@@ -1,85 +1,12 @@
-const reviewLoading = document.getElementById("reviewLoading");
-const reviewUnavailable = document.getElementById("reviewUnavailable");
-const reviewUnavailableText = document.getElementById("reviewUnavailableText");
-const reviewContent = document.getElementById("reviewContent");
-const reviewSubtitle = document.getElementById("reviewSubtitle");
-const reviewSummary = document.getElementById("reviewSummary");
-const reviewQuestions = document.getElementById("reviewQuestions");
-const showAllBtn = document.getElementById("showAllBtn");
-const showWrongBtn = document.getElementById("showWrongBtn");
-
-let savedQuestions = [];
-let questionBank = [];
-
-function escapeHtml(value) {
-  return String(value ?? "").replace(/[&<>'"]/g, char => ({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"})[char]);
-}
-
-function showUnavailable(message) {
-  reviewLoading.hidden = true;
-  reviewContent.hidden = true;
-  reviewUnavailableText.textContent = message;
-  reviewUnavailable.hidden = false;
-}
-
-function findQuestion(saved) {
-  return questionBank.find(q => String(q.id) === String(saved.question_id));
-}
-
-function renderQuestions(mistakesOnly = false) {
-  const rows = mistakesOnly ? savedQuestions.filter(item => !item.is_correct) : savedQuestions;
-  reviewQuestions.innerHTML = "";
-
-  rows.forEach((saved, index) => {
-    const source = findQuestion(saved);
-    const card = document.createElement("article");
-    card.className = `review-question-card ${saved.is_correct ? "review-correct" : "review-wrong"}`;
-    const questionText = source?.question || "Question text is not available in the current question bank.";
-    const unanswered = !saved.user_answer;
-
-    card.innerHTML = `
-      <div class="review-question-meta"><span>Question ${index + 1}</span><span>${escapeHtml(saved.subject)}</span><span class="review-result">${saved.is_correct ? "Correct" : "Incorrect"}</span></div>
-      <h3>${escapeHtml(questionText)}</h3>
-      <div class="review-answer review-user-answer"><strong>Your answer</strong><span>${unanswered ? "Not answered" : escapeHtml(saved.user_answer)}</span></div>
-      <div class="review-answer review-correct-answer"><strong>Correct answer</strong><span>${escapeHtml(saved.correct_answer)}</span></div>`;
-    reviewQuestions.appendChild(card);
-  });
-
-  if (!rows.length) reviewQuestions.innerHTML = '<div class="review-empty">No incorrect answers in this exam. Great job!</div>';
-}
-
-async function loadReview() {
-  const sessionId = new URLSearchParams(window.location.search).get("id");
-  if (!sessionId || !/^\d+$/.test(sessionId)) return showUnavailable("Invalid exam session.");
-
-  try {
-    const { data: { user } } = await supabaseClient.auth.getUser();
-    if (!user) return showUnavailable("Sign in to review this exam.");
-
-    const { data: session, error: sessionError } = await supabaseClient.from("exam_sessions").select("*").eq("id", sessionId).single();
-    if (sessionError || !session) return showUnavailable("This exam could not be found.");
-
-    const { data: rows, error: rowsError } = await supabaseClient.from("exam_session_questions").select("*").eq("exam_session_id", sessionId).order("id", { ascending: true });
-    if (rowsError) throw rowsError;
-    if (!rows || !rows.length) return showUnavailable("Detailed review is not available for this older exam because its individual answers were not saved.");
-
-    const bankPath = Number(session.krok) === 2 ? "../krok2/questions-krok2.json" : "../questions.json";
-    const response = await fetch(bankPath);
-    if (response.ok) questionBank = await response.json();
-
-    savedQuestions = rows;
-    const score = Math.round(Number(session.score || 0));
-    reviewSubtitle.textContent = `KROK ${session.krok} · ${session.subject} · ${session.questions_total} questions`;
-    reviewSummary.innerHTML = `<div><strong>${score}%</strong><span>Score</span></div><div><strong>${session.correct}</strong><span>Correct</span></div><div><strong>${session.wrong}</strong><span>Wrong</span></div>`;
-    renderQuestions(false);
-    reviewLoading.hidden = true;
-    reviewContent.hidden = false;
-  } catch (error) {
-    console.error("Exam review error:", error);
-    showUnavailable("Unable to load this exam review.");
-  }
-}
-
-showAllBtn.addEventListener("click", () => { showAllBtn.classList.add("active"); showWrongBtn.classList.remove("active"); renderQuestions(false); });
-showWrongBtn.addEventListener("click", () => { showWrongBtn.classList.add("active"); showAllBtn.classList.remove("active"); renderQuestions(true); });
-loadReview();
+const reviewLoading=document.getElementById("reviewLoading"),reviewUnavailable=document.getElementById("reviewUnavailable"),reviewUnavailableText=document.getElementById("reviewUnavailableText"),reviewContent=document.getElementById("reviewContent"),reviewSubtitle=document.getElementById("reviewSubtitle"),reviewSummary=document.getElementById("reviewSummary"),reviewQuestions=document.getElementById("reviewQuestions"),showAllBtn=document.getElementById("showAllBtn"),showWrongBtn=document.getElementById("showWrongBtn"),retryWrongBtn=document.getElementById("retryWrongBtn"),retryContent=document.getElementById("retryContent"),retryProgress=document.getElementById("retryProgress"),retrySubject=document.getElementById("retrySubject"),retryQuestion=document.getElementById("retryQuestion"),retryAnswers=document.getElementById("retryAnswers"),retryFeedback=document.getElementById("retryFeedback"),retryNextBtn=document.getElementById("retryNextBtn"),retryResult=document.getElementById("retryResult"),backToReviewBtn=document.getElementById("backToReviewBtn");
+let savedQuestions=[],questionBank=[],retryQuestions=[],retryIndex=0,retryCorrect=0,retryAnswered=false;
+function escapeHtml(v){return String(v??"").replace(/[&<>'"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"})[c]);}
+function showUnavailable(m){reviewLoading.hidden=true;reviewContent.hidden=true;reviewUnavailableText.textContent=m;reviewUnavailable.hidden=false;}
+function findQuestion(s){return questionBank.find(q=>String(q.id)===String(s.question_id));}
+function renderQuestions(mistakesOnly=false){const rows=mistakesOnly?savedQuestions.filter(i=>!i.is_correct):savedQuestions;reviewQuestions.innerHTML="";rows.forEach((s,i)=>{const q=findQuestion(s),card=document.createElement("article");card.className=`review-question-card ${s.is_correct?"review-correct":"review-wrong"}`;card.innerHTML=`<div class="review-question-meta"><span>Question ${i+1}</span><span>${escapeHtml(s.subject)}</span><span class="review-result">${s.is_correct?"Correct":"Incorrect"}</span></div><h3>${escapeHtml(q?.question||"Question text is not available in the current question bank.")}</h3><div class="review-answer review-user-answer"><strong>Your answer</strong><span>${s.user_answer?escapeHtml(s.user_answer):"Not answered"}</span></div><div class="review-answer review-correct-answer"><strong>Correct answer</strong><span>${escapeHtml(s.correct_answer)}</span></div>`;reviewQuestions.appendChild(card);});if(!rows.length)reviewQuestions.innerHTML='<div class="review-empty">No incorrect answers in this exam. Great job!</div>';}
+function buildRetryQuestions(){return savedQuestions.filter(s=>!s.is_correct).map(s=>findQuestion(s)).filter(Boolean);}
+function showRetryQuestion(){retryAnswered=false;retryFeedback.textContent="";retryNextBtn.hidden=true;const q=retryQuestions[retryIndex];retryProgress.textContent=`Question ${retryIndex+1} of ${retryQuestions.length}`;retrySubject.textContent=q.subject||"";retryQuestion.textContent=q.question;retryAnswers.innerHTML="";q.answers.map((text,index)=>({text,isCorrect:index===q.correct})).sort(()=>Math.random()-.5).forEach(a=>{const b=document.createElement("button");b.type="button";b.className="retry-answer-btn";b.textContent=a.text;b.addEventListener("click",()=>{if(retryAnswered)return;retryAnswered=true;if(a.isCorrect){retryCorrect++;b.classList.add("correct");retryFeedback.textContent="Correct!";}else{b.classList.add("wrong");retryFeedback.textContent=`Correct answer: ${q.answers[q.correct]}`;[...retryAnswers.children].forEach(x=>{if(x.textContent===q.answers[q.correct])x.classList.add("correct");});}retryNextBtn.hidden=false;});retryAnswers.appendChild(b);});}
+function startRetry(){retryQuestions=buildRetryQuestions();if(!retryQuestions.length)return;retryIndex=0;retryCorrect=0;retryResult.hidden=true;reviewContent.hidden=true;retryContent.hidden=false;reviewSubtitle.textContent="Study-only retry session";showRetryQuestion();window.scrollTo({top:0,behavior:"smooth"});}
+function finishRetry(){document.querySelector(".retry-card").hidden=true;retryResult.hidden=false;retryResult.innerHTML=`<strong>${retryCorrect}/${retryQuestions.length}</strong><span>correct on retry</span><p>This study session was not added to your performance statistics.</p>`;}
+async function loadReview(){const id=new URLSearchParams(location.search).get("id");if(!id||!/^\d+$/.test(id))return showUnavailable("Invalid exam session.");try{const{data:{user}}=await supabaseClient.auth.getUser();if(!user)return showUnavailable("Sign in to review this exam.");const{data:session,error:e1}=await supabaseClient.from("exam_sessions").select("*").eq("id",id).single();if(e1||!session)return showUnavailable("This exam could not be found.");const{data:rows,error:e2}=await supabaseClient.from("exam_session_questions").select("*").eq("exam_session_id",id).order("id",{ascending:true});if(e2)throw e2;if(!rows?.length)return showUnavailable("Detailed review is not available for this older exam because its individual answers were not saved.");const r=await fetch(Number(session.krok)===2?"../krok2/questions-krok2.json":"../questions.json");if(r.ok)questionBank=await r.json();savedQuestions=rows;reviewSubtitle.textContent=`KROK ${session.krok} · ${session.subject} · ${session.questions_total} questions`;reviewSummary.innerHTML=`<div><strong>${Math.round(Number(session.score||0))}%</strong><span>Score</span></div><div><strong>${session.correct}</strong><span>Correct</span></div><div><strong>${session.wrong}</strong><span>Wrong</span></div>`;retryWrongBtn.hidden=!savedQuestions.some(i=>!i.is_correct);renderQuestions(false);reviewLoading.hidden=true;reviewContent.hidden=false;}catch(e){console.error(e);showUnavailable("Unable to load this exam review.");}}
+showAllBtn.addEventListener("click",()=>{showAllBtn.classList.add("active");showWrongBtn.classList.remove("active");renderQuestions(false);});showWrongBtn.addEventListener("click",()=>{showWrongBtn.classList.add("active");showAllBtn.classList.remove("active");renderQuestions(true);});retryWrongBtn.addEventListener("click",startRetry);retryNextBtn.addEventListener("click",()=>{retryIndex++;if(retryIndex>=retryQuestions.length)finishRetry();else showRetryQuestion();});backToReviewBtn.addEventListener("click",()=>{retryContent.hidden=true;document.querySelector(".retry-card").hidden=false;reviewContent.hidden=false;reviewSubtitle.textContent="Review your completed exam and revisit your mistakes.";window.scrollTo({top:0,behavior:"smooth"});});loadReview();
