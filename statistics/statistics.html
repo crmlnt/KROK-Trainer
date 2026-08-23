@@ -21,8 +21,11 @@
         <section class="statistics-overview"><div class="stat-card"><strong id="totalExams">0</strong><span>Exams Completed</span></div><div class="stat-card"><strong id="totalQuestions">0</strong><span>Questions Answered</span></div><div class="stat-card"><strong id="overallAccuracy">0%</strong><span>Overall Accuracy</span></div><div class="stat-card"><strong id="bestScore">0%</strong><span>Best Score</span></div></section>
         <section class="statistics-panel"><div class="panel-header"><div><span class="panel-label">PROGRESS</span><h2>Performance over time</h2></div></div><div id="progressChart" class="progress-chart"><canvas id="progressCanvas"></canvas></div></section>
         <section class="statistics-panel"><div class="panel-header"><div><span class="panel-label">SUBJECTS</span><h2>Performance by subject</h2></div></div><div id="subjectStats" class="subject-stats"></div></section>
+        <section class="statistics-panel weak-subjects-panel">
+          <div class="panel-header weak-subjects-header"><div><span class="panel-label">FOCUS AREAS</span><h2>Weak Subjects</h2><p>Subjects are classified after at least 10 answered exam questions. The current KROK pass threshold is 64%.</p></div><div class="weak-legend"><span class="weak-legend-item weak">Weak &lt;50%</span><span class="weak-legend-item risk">At risk 50–63%</span><span class="weak-legend-item strong">On track ≥64%</span></div></div>
+          <div id="weakSubjects" class="weak-subjects"></div>
+        </section>
         <section class="statistics-panel"><div class="panel-header"><div><span class="panel-label">EXAMS</span><h2>KROK breakdown</h2></div></div><div class="krok-breakdown"><div class="krok-stat-card"><span>KROK 1</span><strong id="krok1Accuracy">—</strong><small id="krok1Exams">0 exams</small></div><div class="krok-stat-card"><span>KROK 2</span><strong id="krok2Accuracy">—</strong><small id="krok2Exams">0 exams</small></div></div></section>
-        <section class="statistics-panel weak-topics-preview"><div><span class="panel-label">COMING LATER</span><h2>Weak Topics</h2><p>Identify recurring weak areas based on your exam history.</p></div><span class="coming-soon-badge">Coming soon</span></section>
       </section>
     </main>
   </div>
