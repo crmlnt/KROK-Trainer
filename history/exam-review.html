@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exam Review — KROK Trainer</title>
+  <link rel="stylesheet" href="../components/sidebar.css">
+  <link rel="stylesheet" href="../components/breadcrumb.css">
+  <link rel="stylesheet" href="history.css">
+</head>
+<body>
+  <aside id="appSidebar" data-root="../" data-active="history"></aside>
+  <div class="sidebar-page-shell">
+    <main class="history-page review-page">
+      <nav id="appBreadcrumb" data-root="../" data-section="Exam History" data-section-href="history/history.html" data-page="Exam Review"></nav>
+      <header class="history-header">
+        <div class="history-title"><span class="history-eyebrow">KROK TRAINER</span><h1>Exam Review</h1><p id="reviewSubtitle">Loading your completed exam...</p></div>
+      </header>
+      <section id="reviewLoading"><p>Loading exam review...</p></section>
+      <section id="reviewUnavailable" hidden><h2>Review unavailable</h2><p id="reviewUnavailableText">Detailed review is not available for this exam.</p><a class="review-back-btn" href="history.html">← Back to Exam History</a></section>
+      <section id="reviewContent" hidden>
+        <div id="reviewSummary" class="review-summary"></div>
+        <div class="review-toolbar"><button id="showAllBtn" class="review-filter active" type="button">All questions</button><button id="showWrongBtn" class="review-filter" type="button">Mistakes only</button></div>
+        <div id="reviewQuestions" class="review-questions"></div>
+      </section>
+    </main>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../supabase.js"></script>
+  <script src="../components/sidebar.js"></script>
+  <script src="../components/breadcrumb.js"></script>
+  <script src="exam-review.js"></script>
+</body>
+</html>
