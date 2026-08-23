@@ -19,6 +19,8 @@ const progressCanvas = document.getElementById("progressCanvas");
 
 const WEAK_SUBJECT_MIN_QUESTIONS = 10;
 const KROK_PASS_THRESHOLD = 64;
+const WEAK_SUBJECT_PREVIEW_COUNT = 2;
+let weakSubjectsExpanded = false;
 
 function getWeakSubjectStatus(stat) {
   if (stat.questions < WEAK_SUBJECT_MIN_QUESTIONS) return "insufficient";
@@ -44,7 +46,11 @@ function renderWeakSubjects(subjectStats) {
     return b.questions - a.questions;
   });
 
-  ranked.forEach(stat => {
+  const visibleSubjects = weakSubjectsExpanded
+    ? ranked
+    : ranked.slice(0, WEAK_SUBJECT_PREVIEW_COUNT);
+
+  visibleSubjects.forEach(stat => {
     const status = getWeakSubjectStatus(stat);
     const remaining = Math.max(0, WEAK_SUBJECT_MIN_QUESTIONS - stat.questions);
     const card = document.createElement("article");
@@ -78,6 +84,23 @@ function renderWeakSubjects(subjectStats) {
 
     weakSubjectsEl.appendChild(card);
   });
+
+  if (ranked.length > WEAK_SUBJECT_PREVIEW_COUNT) {
+    const toggle = document.createElement("button");
+    toggle.type = "button";
+    toggle.className = "weak-subjects-toggle";
+    toggle.setAttribute("aria-expanded", String(weakSubjectsExpanded));
+    toggle.innerHTML = `
+      <span>${weakSubjectsExpanded ? "Show less" : `Show all subjects (${ranked.length})`}</span>
+      <svg class="weak-subjects-chevron${weakSubjectsExpanded ? " expanded" : ""}" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="m6 9 6 6 6-6"></path>
+      </svg>`;
+    toggle.addEventListener("click", () => {
+      weakSubjectsExpanded = !weakSubjectsExpanded;
+      renderWeakSubjects(subjectStats);
+    });
+    weakSubjectsEl.appendChild(toggle);
+  }
 }
 
 async function loadStatistics() {
