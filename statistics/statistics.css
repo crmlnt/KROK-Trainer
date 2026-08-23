@@ -247,6 +247,27 @@ body {
 .status-insufficient .weak-subject-score { color: #6b7280; }
 .weak-subjects-empty { padding: 24px; text-align: center; color: #6b7280; background: #f9fafb; border: 1px dashed #d1d5db; border-radius: 14px; }
 
+.weak-subjects-toggle {
+  align-self: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 2px;
+  padding: 9px 14px;
+  border: 0;
+  background: transparent;
+  color: #4b5563;
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.weak-subjects-toggle:hover { color: #16a34a; }
+.weak-subjects-chevron { transition: transform .2s ease; }
+.weak-subjects-chevron.expanded { transform: rotate(180deg); }
+
 .krok-breakdown {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -323,6 +344,7 @@ body.dark-mode .krok-stat-card small,
 body.dark-mode .weak-subjects-header p,
 body.dark-mode .weak-subject-meta,
 body.dark-mode .weak-subject-detail,
+body.dark-mode .weak-subjects-toggle,
 body.dark-mode #statisticsLoading p,
 body.dark-mode #loginRequired p,
 body.dark-mode #emptyStatistics p {
@@ -351,6 +373,7 @@ body.dark-mode .subject-stat-track,
 body.dark-mode .weak-subject-track { background: #30353b; }
 body.dark-mode .subject-stat-name small { color: #8b929b; }
 body.dark-mode .status-insufficient .weak-subject-badge { background: #25292e; color: #aab0b8; }
+body.dark-mode .weak-subjects-toggle:hover { color: #86efac; }
 
 @media (max-width: 850px) {
   .statistics-overview { grid-template-columns: repeat(2, 1fr); }
