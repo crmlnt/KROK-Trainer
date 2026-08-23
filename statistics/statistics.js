@@ -14,7 +14,71 @@ const krok1ExamsEl = document.getElementById("krok1Exams");
 const krok2AccuracyEl = document.getElementById("krok2Accuracy");
 const krok2ExamsEl = document.getElementById("krok2Exams");
 const subjectStatsEl = document.getElementById("subjectStats");
+const weakSubjectsEl = document.getElementById("weakSubjects");
 const progressCanvas = document.getElementById("progressCanvas");
+
+const WEAK_SUBJECT_MIN_QUESTIONS = 10;
+const KROK_PASS_THRESHOLD = 64;
+
+function getWeakSubjectStatus(stat) {
+  if (stat.questions < WEAK_SUBJECT_MIN_QUESTIONS) return "insufficient";
+  if (stat.accuracy < 50) return "weak";
+  if (stat.accuracy < KROK_PASS_THRESHOLD) return "risk";
+  return "strong";
+}
+
+function renderWeakSubjects(subjectStats) {
+  if (!weakSubjectsEl) return;
+  weakSubjectsEl.innerHTML = "";
+
+  if (!subjectStats.length) {
+    weakSubjectsEl.innerHTML = '<div class="weak-subjects-empty">Complete Exam Mode sessions to start identifying your focus areas.</div>';
+    return;
+  }
+
+  const ranked = [...subjectStats].sort((a, b) => {
+    const aEligible = a.questions >= WEAK_SUBJECT_MIN_QUESTIONS;
+    const bEligible = b.questions >= WEAK_SUBJECT_MIN_QUESTIONS;
+    if (aEligible !== bEligible) return aEligible ? -1 : 1;
+    if (aEligible && bEligible && a.accuracy !== b.accuracy) return a.accuracy - b.accuracy;
+    return b.questions - a.questions;
+  });
+
+  ranked.forEach(stat => {
+    const status = getWeakSubjectStatus(stat);
+    const remaining = Math.max(0, WEAK_SUBJECT_MIN_QUESTIONS - stat.questions);
+    const card = document.createElement("article");
+    card.className = `weak-subject-card status-${status}`;
+
+    let badge = "Not enough data";
+    let detail = `${remaining} more question${remaining === 1 ? "" : "s"} needed`;
+
+    if (status === "weak") {
+      badge = "Weak";
+      detail = "Priority review recommended";
+    } else if (status === "risk") {
+      badge = "At risk";
+      detail = `Below the ${KROK_PASS_THRESHOLD}% pass threshold`;
+    } else if (status === "strong") {
+      badge = "On track";
+      detail = `At or above the ${KROK_PASS_THRESHOLD}% pass threshold`;
+    }
+
+    card.innerHTML = `
+      <div class="weak-subject-main">
+        <div class="weak-subject-title-row">
+          <h3>${stat.subject}</h3>
+          <span class="weak-subject-badge">${badge}</span>
+        </div>
+        <div class="weak-subject-meta">${stat.questions} questions · ${stat.correct} correct · ${stat.exams} ${stat.exams === 1 ? "exam" : "exams"}</div>
+        <div class="weak-subject-track" aria-hidden="true"><div class="weak-subject-fill" style="width:${Math.min(stat.accuracy, 100)}%"></div></div>
+        <div class="weak-subject-detail">${detail}</div>
+      </div>
+      <div class="weak-subject-score">${stat.accuracy}%</div>`;
+
+    weakSubjectsEl.appendChild(card);
+  });
+}
 
 async function loadStatistics() {
   const { data: { user }, error: userError } = await supabaseClient.auth.getUser();
@@ -24,8 +88,6 @@ async function loadStatistics() {
   if (error) { console.error("Error loading statistics:", error); loadingSection.innerHTML = "<p>Unable to load statistics.</p>"; return; }
   if (!sessions || sessions.length === 0) { loadingSection.hidden = true; emptyStatistics.hidden = false; return; }
 
-  // Question-level rows are the source of truth for subject performance.
-  // This makes questions from All Topics exams count toward their real subjects.
   const { data: questionRows, error: questionError } = await supabaseClient
     .from("exam_session_questions")
     .select("exam_session_id, subject, is_correct")
@@ -60,7 +122,6 @@ async function loadStatistics() {
       subjectMap[subject].sessionIds.add(String(row.exam_session_id));
     });
   } else {
-    // Compatibility fallback for accounts whose historical sessions predate question-level storage.
     sessions.forEach(session => {
       const subject = session.subject || "Unknown";
       if (subject === "All Topics") return;
@@ -102,6 +163,8 @@ async function loadStatistics() {
       subjectStatsEl.appendChild(row);
     });
   }
+
+  renderWeakSubjects(subjectStats);
 
   new Chart(progressCanvas, {
     type: "line",
