@@ -2,6 +2,8 @@
 // Loaded after app.js so it can reuse the current exam state without changing
 // the existing quiz/exam flow.
 
+const KROK_PASS_THRESHOLD = 64;
+
 saveExamSession = async function saveExamSession() {
   if (
     window.location.hostname === "localhost" ||
@@ -117,4 +119,23 @@ saveExamSession = async function saveExamSession() {
   } catch (error) {
     console.error("Unexpected error saving exam:", error);
   }
+};
+
+// Keep the legacy exam renderer intact, but normalize pass/fail to the
+// current official threshold after it renders the results screen.
+const legacyShowExamResults = showExamResults;
+showExamResults = function showExamResultsWithOfficialThreshold() {
+  legacyShowExamResults();
+
+  const statusEl = document.querySelector(".exam-status");
+  if (!statusEl || questions.length === 0) return;
+
+  const accuracy = Math.round(
+    (correctAnswers / questions.length) * 100
+  );
+
+  statusEl.textContent =
+    accuracy >= KROK_PASS_THRESHOLD
+      ? "PASSED ✅"
+      : "FAILED ❌";
 };
