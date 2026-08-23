@@ -13,6 +13,7 @@
   <div class="sidebar-page-shell">
     <main class="history-page review-page">
       <nav id="appBreadcrumb" data-root="../" data-section="Exam History" data-section-href="history/history.html" data-page="Exam Review"></nav>
+      <a class="review-top-back" href="history.html">← Back to Exam History</a>
       <header class="history-header">
         <div class="history-title"><span class="history-eyebrow">KROK TRAINER</span><h1>Exam Review</h1><p id="reviewSubtitle">Loading your completed exam...</p></div>
       </header>
@@ -20,8 +21,15 @@
       <section id="reviewUnavailable" hidden><h2>Review unavailable</h2><p id="reviewUnavailableText">Detailed review is not available for this exam.</p><a class="review-back-btn" href="history.html">← Back to Exam History</a></section>
       <section id="reviewContent" hidden>
         <div id="reviewSummary" class="review-summary"></div>
-        <div class="review-toolbar"><button id="showAllBtn" class="review-filter active" type="button">All questions</button><button id="showWrongBtn" class="review-filter" type="button">Mistakes only</button></div>
+        <div class="review-toolbar"><div class="review-filters"><button id="showAllBtn" class="review-filter active" type="button">All questions</button><button id="showWrongBtn" class="review-filter" type="button">Mistakes only</button></div><button id="retryWrongBtn" class="retry-wrong-btn" type="button">↻ Retry Wrong Answers</button></div>
         <div id="reviewQuestions" class="review-questions"></div>
+      </section>
+      <section id="retryContent" class="retry-content" hidden>
+        <div class="retry-header"><span class="history-eyebrow">STUDY MODE</span><h2>Retry Wrong Answers</h2><p>This retry session is for study only and does not affect your statistics.</p></div>
+        <div id="retryProgress" class="retry-progress"></div>
+        <article class="retry-card"><div id="retrySubject" class="retry-subject"></div><h3 id="retryQuestion"></h3><div id="retryAnswers" class="retry-answers"></div><p id="retryFeedback" class="retry-feedback"></p><button id="retryNextBtn" class="retry-next-btn" type="button" hidden>Next question →</button></article>
+        <div id="retryResult" class="retry-result" hidden></div>
+        <button id="backToReviewBtn" class="review-back-secondary" type="button">← Back to Exam Review</button>
       </section>
     </main>
   </div>
