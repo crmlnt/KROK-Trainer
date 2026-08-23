@@ -8,12 +8,13 @@ const averageScoreEl = document.getElementById("averageScore");
 const examCountEl = document.getElementById("examCount");
 const examList = document.getElementById("examList");
 const EXAMS_PER_PAGE = 5;
+const KROK_PASS_THRESHOLD = 64;
 let currentHistoryPage = 1;
 let allExamHistory = [];
 
 function hideAllStates() { historyLoading.hidden = true; loginRequired.hidden = true; emptyHistory.hidden = true; historyContent.hidden = true; }
 function formatDate(dateString) { return new Date(dateString).toLocaleDateString("en-GB", { day: "2-digit", month: "short", year: "numeric" }); }
-function getScoreClass(score) { return score >= 60 ? "score-pass" : "score-fail"; }
+function getScoreClass(score) { return score >= KROK_PASS_THRESHOLD ? "score-pass" : "score-fail"; }
 
 function renderExamHistory(exams) {
   examList.innerHTML = "";
