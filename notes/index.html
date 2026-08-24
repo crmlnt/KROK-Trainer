@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Notes — KROK Trainer</title>
+  <link rel="stylesheet" href="../components/sidebar.css" />
+  <link rel="stylesheet" href="../components/breadcrumb.css" />
+  <link rel="stylesheet" href="notes.css" />
+</head>
+<body>
+  <aside id="appSidebar" data-root="../" data-active="notes"></aside>
+  <div class="sidebar-page-shell">
+    <main class="notes-page">
+      <nav id="appBreadcrumb" data-root="../" data-section="My Account" data-page="My Notes"></nav>
+
+      <header class="notes-header">
+        <span class="notes-eyebrow">PERSONAL STUDY LIBRARY</span>
+        <h1>My Notes</h1>
+        <p>Your saved notes from KROK questions, synced across devices.</p>
+      </header>
+
+      <section id="notesAuthGate" class="notes-empty" hidden>
+        <h2>Sign in to view your notes</h2>
+        <p>My Notes is available to registered users so your study notes can be saved securely in the cloud.</p>
+        <a href="../account.html" class="notes-primary-link">Sign in →</a>
+      </section>
+
+      <section id="notesContent" hidden>
+        <div class="notes-toolbar">
+          <input id="notesSearch" type="search" placeholder="Search notes or questions…" aria-label="Search notes" />
+          <select id="notesKrokFilter" aria-label="Filter by KROK">
+            <option value="all">All KROK</option>
+            <option value="1">KROK 1</option>
+            <option value="2">KROK 2</option>
+          </select>
+          <select id="notesSubjectFilter" aria-label="Filter by subject">
+            <option value="all">All subjects</option>
+          </select>
+        </div>
+
+        <div class="notes-summary"><span id="notesCount">0 notes</span></div>
+        <div id="notesList" class="notes-list"></div>
+        <div id="notesEmpty" class="notes-empty" hidden>
+          <h2>No notes yet</h2>
+          <p>Add notes while studying in Practice Mode and they will appear here automatically.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../supabase.js"></script>
+  <script src="notes.js"></script>
+  <script src="../components/sidebar.js"></script>
+  <script src="../components/breadcrumb.js"></script>
+</body>
+</html>
