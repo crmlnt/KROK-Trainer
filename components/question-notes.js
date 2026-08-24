@@ -12,6 +12,7 @@
   let user = null;
   let currentNote = null;
   let requestToken = 0;
+  let ready = false;
 
   const params = new URLSearchParams(window.location.search);
   const isExamMode = params.get("mode") === "exam";
@@ -33,7 +34,6 @@
   }
 
   function activeQuestion() {
-    if (!Array.isArray(window.questions) && typeof questions === "undefined") return null;
     try { return questions[currentQuestionIndex] || null; } catch (_) { return null; }
   }
 
@@ -44,110 +44,63 @@
   }
 
   async function loadForCurrentQuestion() {
+    if (!ready) return;
     const token = ++requestToken;
     currentNote = null;
     setState(false);
-    const question = activeQuestion();
-    const key = questionKey(question);
+    const key = questionKey(activeQuestion());
     if (!key || !user) return;
 
-    const { data, error } = await supabaseClient
-      .from("question_notes")
-      .select("id,note,updated_at")
-      .eq("user_id", user.id)
-      .eq("question_id", key)
-      .maybeSingle();
-
+    const { data, error } = await supabaseClient.from("question_notes").select("id,note,updated_at").eq("user_id", user.id).eq("question_id", key).maybeSingle();
     if (token !== requestToken) return;
-    if (error) {
-      console.error("Error loading question note:", error);
-      return;
-    }
+    if (error) { console.error("Error loading question note:", error); return; }
     currentNote = data || null;
     setState(!!currentNote);
   }
 
   function openModal() {
-    const question = activeQuestion();
-    if (!question) return;
-
+    if (!activeQuestion()) return;
     if (!user) {
       title.textContent = "My note";
       helper.innerHTML = 'Notes are available with a free account. <a href="account.html">Sign in to save personal notes across devices.</a>';
-      textarea.value = "";
-      textarea.disabled = true;
-      saveBtn.hidden = true;
-      deleteBtn.hidden = true;
+      textarea.value = ""; textarea.disabled = true; saveBtn.hidden = true; deleteBtn.hidden = true;
     } else {
       title.textContent = currentNote ? "My note" : "Add note";
       helper.textContent = currentNote ? "Edit your personal note for this question." : "Add a personal note to this question.";
-      textarea.disabled = false;
-      textarea.value = currentNote?.note || "";
-      saveBtn.hidden = false;
-      saveBtn.textContent = currentNote ? "Save changes" : "Save note";
-      deleteBtn.hidden = !currentNote;
+      textarea.disabled = false; textarea.value = currentNote?.note || ""; saveBtn.hidden = false;
+      saveBtn.textContent = currentNote ? "Save changes" : "Save note"; deleteBtn.hidden = !currentNote;
       setTimeout(() => textarea.focus(), 50);
     }
-
     modal.hidden = false;
     document.body.classList.add("question-note-modal-open");
   }
 
-  function closeModal() {
-    modal.hidden = true;
-    document.body.classList.remove("question-note-modal-open");
-  }
+  function closeModal() { modal.hidden = true; document.body.classList.remove("question-note-modal-open"); }
 
   async function saveNote() {
     if (!user) return;
-    const question = activeQuestion();
-    const key = questionKey(question);
+    const key = questionKey(activeQuestion());
     const note = textarea.value.trim();
-    if (!key || !note) {
-      textarea.focus();
-      return;
-    }
-
-    saveBtn.disabled = true;
-    saveBtn.textContent = "Saving…";
-    const { data, error } = await supabaseClient
-      .from("question_notes")
-      .upsert({ user_id: user.id, question_id: key, krok, note }, { onConflict: "user_id,question_id" })
-      .select("id,note,updated_at")
-      .single();
+    if (!key || !note) { textarea.focus(); return; }
+    saveBtn.disabled = true; saveBtn.textContent = "Saving…";
+    const { data, error } = await supabaseClient.from("question_notes").upsert({ user_id: user.id, question_id: key, krok, note }, { onConflict: "user_id,question_id" }).select("id,note,updated_at").single();
     saveBtn.disabled = false;
-
     if (error) {
       console.error("Error saving question note:", error);
       saveBtn.textContent = currentNote ? "Save changes" : "Save note";
       helper.textContent = "We couldn't save this note. Please try again.";
       return;
     }
-
-    currentNote = data;
-    setState(true);
-    closeModal();
+    currentNote = data; setState(true); closeModal();
   }
 
   async function deleteNote() {
     if (!user || !currentNote) return;
     deleteBtn.disabled = true;
-    const { error } = await supabaseClient
-      .from("question_notes")
-      .delete()
-      .eq("id", currentNote.id)
-      .eq("user_id", user.id);
+    const { error } = await supabaseClient.from("question_notes").delete().eq("id", currentNote.id).eq("user_id", user.id);
     deleteBtn.disabled = false;
-
-    if (error) {
-      console.error("Error deleting question note:", error);
-      helper.textContent = "We couldn't delete this note. Please try again.";
-      return;
-    }
-
-    currentNote = null;
-    setState(false);
-    closeModal();
+    if (error) { console.error("Error deleting question note:", error); helper.textContent = "We couldn't delete this note. Please try again."; return; }
+    currentNote = null; setState(false); closeModal();
   }
 
   noteBtn.addEventListener("click", openModal);
@@ -157,13 +110,13 @@
   modal.addEventListener("click", event => { if (event.target === modal) closeModal(); });
   document.addEventListener("keydown", event => { if (event.key === "Escape" && !modal.hidden) closeModal(); });
 
+  const questionNumber = document.getElementById("question-number");
+  if (questionNumber) new MutationObserver(() => loadForCurrentQuestion()).observe(questionNumber, { childList: true, characterData: true, subtree: true });
+
   async function init() {
-    try {
-      const { data } = await supabaseClient.auth.getUser();
-      user = data.user || null;
-    } catch (error) {
-      console.error("Error checking Notes authentication:", error);
-    }
+    try { const { data } = await supabaseClient.auth.getUser(); user = data.user || null; }
+    catch (error) { console.error("Error checking Notes authentication:", error); }
+    ready = true;
     loadForCurrentQuestion();
   }
 
