@@ -8,115 +8,47 @@
   <link rel="stylesheet" href="components/sidebar.css" />
   <link rel="stylesheet" href="components/breadcrumb.css" />
   <link rel="stylesheet" href="components/practice-shell.css" />
+  <link rel="stylesheet" href="components/question-notes.css" />
 </head>
 <body>
-  <script>
-    const pageParams = new URLSearchParams(window.location.search);
-    if (pageParams.get("mode") !== "exam") {
-      document.body.classList.add("practice-session");
-    }
-  </script>
+  <script>const pageParams=new URLSearchParams(window.location.search);if(pageParams.get("mode")!=="exam")document.body.classList.add("practice-session");</script>
   <aside id="appSidebar" data-root="" data-active="krok1-practice"></aside>
-  <div class="sidebar-page-shell">
-  <div class="quiz-container">
+  <div class="sidebar-page-shell"><div class="quiz-container">
     <nav id="appBreadcrumb" data-root="" data-section="KROK 1" data-section-href="krok1.html" data-page="Practice Mode"></nav>
-    <div class="top-bar">
-        <div class="header-row">
-            <h1 id="appTitle">KROK Trainer</h1>
-            <div class="top-right-controls">
-                <span class="version-text">v1.9 August 2026</span>
-                <button id="theme-btn" hidden aria-hidden="true" tabindex="-1">Dark Mode</button>
-            </div>
-        </div>
-        <div class="top-controls">
-            <div class="controls">
-                <label for="subjectFilter">Subject:</label>
-                <select id="subjectFilter"><option value="all">All Subjects</option></select>
-            </div>
-            <button id="homeBtn" class="button"><span id="homeBtnText">Home</span></button>
-            <button id="stats-btn" class="hidden-old-stats"> Stats</button>
-            <button onclick="window.location.href='guide.html'"> Tutorial</button>
-        </div>
+    <div class="top-bar"><div class="header-row"><h1 id="appTitle">KROK Trainer</h1><div class="top-right-controls"><span class="version-text">v1.9 August 2026</span><button id="theme-btn" hidden aria-hidden="true" tabindex="-1">Dark Mode</button></div></div>
+      <div class="top-controls"><div class="controls"><label for="subjectFilter">Subject:</label><select id="subjectFilter"><option value="all">All Subjects</option></select></div><button id="homeBtn" class="button"><span id="homeBtnText">Home</span></button><button id="stats-btn" class="hidden-old-stats"> Stats</button><button onclick="window.location.href='guide.html'"> Tutorial</button></div>
     </div>
-    <div id="examTimer" class="exam-timer" style="display: none;">⏱ <span id="examTimerText">00:00:00</span></div>
+    <div id="examTimer" class="exam-timer" style="display:none;">⏱ <span id="examTimerText">00:00:00</span></div>
     <div class="progress-container"><div id="progressBar" class="progress-bar"></div></div>
     <div class="quiz-card">
-      <div id="reviewMistakesBanner" class="review-mistakes-banner" hidden>
-        <div>
-          <span class="review-mistakes-eyebrow">REVIEW MODE</span>
-          <strong>Review Mistakes</strong>
-          <p>Revisit the questions you answered incorrectly without affecting your Practice Mode statistics.</p>
-        </div>
-        <button id="backToPracticeBtn" type="button">← Back to Practice Mode</button>
-      </div>
-
+      <div id="reviewMistakesBanner" class="review-mistakes-banner" hidden><div><span class="review-mistakes-eyebrow">REVIEW MODE</span><strong>Review Mistakes</strong><p>Revisit the questions you answered incorrectly without affecting your Practice Mode statistics.</p></div><button id="backToPracticeBtn" type="button">← Back to Practice Mode</button></div>
       <div class="question-header">
         <div class="question-meta"><p id="question-number">Question 1</p><p id="subject-display">Subject: -</p></div>
-        <button id="aiExplainBtn" class="ai-explain-btn" type="button" style="display: none;">✨ AI Explain</button>
+        <div class="question-header-actions"><button id="questionNoteBtn" class="question-note-btn" type="button" aria-label="Add note" title="Add note"></button><button id="aiExplainBtn" class="ai-explain-btn" type="button" style="display:none;">✨ AI Explain</button></div>
       </div>
-      <div id="aiExplanationBox" class="ai-explanation-box" style="display: none;">
-        <div class="ai-explanation-header"><span>✨ AI Explanation</span><button id="closeAiExplanation" class="ai-close-btn" type="button" aria-label="Close AI explanation">×</button></div>
-        <div id="aiExplanationContent">Loading explanation...</div>
-      </div>
-      <h2 id="question-text">Question text</h2>
-      <div id="answers-container"></div>
-      <button id="confirmAnswerBtn" class="primary-actions" type="button" style="display: none;">Confirm Answer</button>
-      <button id="next-btn" class="primary-actions">Next question</button>
+      <div id="aiExplanationBox" class="ai-explanation-box" style="display:none;"><div class="ai-explanation-header"><span>✨ AI Explanation</span><button id="closeAiExplanation" class="ai-close-btn" type="button" aria-label="Close AI explanation">×</button></div><div id="aiExplanationContent">Loading explanation...</div></div>
+      <h2 id="question-text">Question text</h2><div id="answers-container"></div><button id="confirmAnswerBtn" class="primary-actions" type="button" style="display:none;">Confirm Answer</button><button id="next-btn" class="primary-actions">Next question</button>
+      <div id="reviewMistakesLauncher" class="review-mistakes-launcher" hidden><div class="review-mistakes-launcher-copy"><span class="review-mistakes-launcher-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5h6"/><path d="M9 3h6a2 2 0 0 1 2 2v1h2a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h2V5a2 2 0 0 1 2-2Z"/><path d="m8 13 2 2 5-5"/><path d="M8 18h8"/></svg></span><div><strong>Review your mistakes</strong><span>Go back through questions you answered incorrectly in Practice Mode.</span></div></div><button id="review-btn" type="button">Review Mistakes →</button></div>
+    </div>
+    <p id="feedback"></p><div id="practice-tools"><p id="score">Score: 0</p><p id="stats">Correct: 0 | Wrong: 0 | Accuracy: 0%</p><hr><p id="error-count">Errors: 0</p><ul id="error-log" style="display:none;"></ul><div class="action-buttons"><div class="export-actions"><button id="export-errors-btn">Export Error Log</button><button id="exportExamLogBtn" class="button">Export Exam Log</button><button id="reviewExamBtn" class="button" style="display:none;">Review Exam</button></div></div><div class="danger-zone"><button id="clear-errors-btn">Clear Error Log</button></div></div>
+    <div class="review-navigation"><button id="prevReviewBtn" class="button" style="display:none;">⬅️ Previous</button><button id="nextReviewBtn" class="button" style="display:none;">Next ➡️</button></div>
+  </div></div>
 
-      <div id="reviewMistakesLauncher" class="review-mistakes-launcher" hidden>
-        <div class="review-mistakes-launcher-copy">
-          <span class="review-mistakes-launcher-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M9 5h6" />
-              <path d="M9 3h6a2 2 0 0 1 2 2v1h2a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h2V5a2 2 0 0 1 2-2Z" />
-              <path d="m8 13 2 2 5-5" />
-              <path d="M8 18h8" />
-            </svg>
-          </span>
-          <div>
-            <strong>Review your mistakes</strong>
-            <span>Go back through questions you answered incorrectly in Practice Mode.</span>
-          </div>
-        </div>
-        <button id="review-btn" type="button">Review Mistakes →</button>
-      </div>
+  <div id="questionNoteModal" class="question-note-modal" hidden>
+    <div class="question-note-dialog" role="dialog" aria-modal="true" aria-labelledby="questionNoteTitle">
+      <div class="question-note-dialog-header"><h3 id="questionNoteTitle">Add note</h3><button class="question-note-close" type="button" data-close-question-note aria-label="Close note">×</button></div>
+      <p id="questionNoteHelper" class="question-note-helper">Add a personal note to this question.</p>
+      <textarea id="questionNoteText" class="question-note-text" maxlength="5000" placeholder="Write your note…"></textarea>
+      <div class="question-note-actions"><button id="deleteQuestionNoteBtn" class="question-note-delete" type="button" hidden>Delete note</button><button class="question-note-cancel" type="button" data-close-question-note>Cancel</button><button id="saveQuestionNoteBtn" class="question-note-save" type="button">Save note</button></div>
     </div>
-    <p id="feedback"></p>
-    <div id="practice-tools">
-      <p id="score">Score: 0</p><p id="stats">Correct: 0 | Wrong: 0 | Accuracy: 0%</p><hr><p id="error-count">Errors: 0</p>
-      <ul id="error-log" style="display: none;"></ul>
-      <div class="action-buttons"><div class="export-actions"><button id="export-errors-btn">Export Error Log</button><button id="exportExamLogBtn" class="button">Export Exam Log</button><button id="reviewExamBtn" class="button" style="display: none;">Review Exam</button></div></div>
-      <div class="danger-zone"><button id="clear-errors-btn">Clear Error Log</button></div>
-    </div>
-    <div class="review-navigation"><button id="prevReviewBtn" class="button" style="display: none;">⬅️ Previous</button><button id="nextReviewBtn" class="button" style="display: none;">Next ➡️</button></div>
   </div>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="supabase.js"></script>
-  <script src="app.js"></script>
-  <script src="exam-persistence.js"></script>
-  <script src="exam-subjects.js"></script>
-  <script src="components/practice-shell.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="supabase.js"></script><script src="app.js"></script><script src="exam-persistence.js"></script><script src="exam-subjects.js"></script><script src="components/practice-shell.js"></script><script src="components/question-notes.js"></script>
   <script>
-    const practiceSidebar = document.getElementById("appSidebar");
-    const practiceBreadcrumb = document.getElementById("appBreadcrumb");
-    const practiceParams = new URLSearchParams(window.location.search);
-    const isKrok2 = practiceParams.get("exam") === "krok2";
-    const isExamMode = practiceParams.get("mode") === "exam";
-
-    if (practiceSidebar) {
-      practiceSidebar.dataset.active = isKrok2
-        ? (isExamMode ? "krok2-exam" : "krok2-practice")
-        : (isExamMode ? "krok1-exam" : "krok1-practice");
-    }
-
-    if (practiceBreadcrumb) {
-      practiceBreadcrumb.dataset.section = isKrok2 ? "KROK 2" : "KROK 1";
-      practiceBreadcrumb.dataset.sectionHref = isKrok2 ? "krok2.html" : "krok1.html";
-      practiceBreadcrumb.dataset.page = isExamMode ? "Exam Mode" : "Practice Mode";
-    }
+    const practiceSidebar=document.getElementById("appSidebar"),practiceBreadcrumb=document.getElementById("appBreadcrumb"),practiceParams=new URLSearchParams(window.location.search),isKrok2=practiceParams.get("exam")==="krok2",isExamMode=practiceParams.get("mode")==="exam";
+    if(practiceSidebar)practiceSidebar.dataset.active=isKrok2?(isExamMode?"krok2-exam":"krok2-practice"):(isExamMode?"krok1-exam":"krok1-practice");
+    if(practiceBreadcrumb){practiceBreadcrumb.dataset.section=isKrok2?"KROK 2":"KROK 1";practiceBreadcrumb.dataset.sectionHref=isKrok2?"krok2.html":"krok1.html";practiceBreadcrumb.dataset.page=isExamMode?"Exam Mode":"Practice Mode";}
   </script>
-  <script src="components/sidebar.js"></script>
-  <script src="components/breadcrumb.js"></script>
+  <script src="components/sidebar.js"></script><script src="components/breadcrumb.js"></script>
 </body>
 </html>
