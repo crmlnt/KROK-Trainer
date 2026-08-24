@@ -53,7 +53,7 @@
         <div class="sidebar-krok-children ${krok2Active ? "open" : ""}" data-krok-panel="2">${link("krok2-practice", "practice.html?exam=krok2", "Practice Mode", "book", true)}${link("krok2-exam", "exam.html?exam=krok2", "Exam Mode", "exam", true)}</div>
       </div>
       <button id="sidebarKrokCollapsedBtn" class="sidebar-krok-collapsed-btn" type="button" aria-label="Open KROK menu" title="KROK">K</button>
-      <div class="sidebar-section"><span class="sidebar-section-title">My Account</span>${link("account", "account.html", "Account", "user")}${link("history", "history/history.html", "Exam History", "history")}${link("statistics", "statistics/statistics.html", "Statistics", "stats")}<div class="sidebar-disabled" aria-disabled="true"><span class="sidebar-icon">${icon("notes")}</span><span class="sidebar-link-label">Your Notes</span><span class="sidebar-badge">COMING SOON</span></div></div>
+      <div class="sidebar-section"><span class="sidebar-section-title">My Account</span>${link("account", "account.html", "Account", "user")}${link("history", "history/history.html", "Exam History", "history")}${link("statistics", "statistics/statistics.html", "Statistics", "stats")}${link("notes", "notes/index.html", "My Notes", "notes")}</div>
       <div class="sidebar-section"><span class="sidebar-section-title">Resources</span>${link("tutorial", "guide.html", "Tutorial", "tutorial")}${link("news", "news.html", "News / Updates", "news")}</div>
     </div>
     <div class="sidebar-footer"><button id="sidebarThemeBtn" class="sidebar-theme-btn" type="button"><span id="sidebarThemeIcon" class="sidebar-icon"></span><span id="sidebarThemeLabel" class="sidebar-theme-label">Dark Mode</span></button><a id="sidebarUser" class="sidebar-user" href="${root}account.html"><span class="sidebar-status-dot" aria-hidden="true"></span><span class="sidebar-user-copy"><strong id="sidebarUserEmail">Not signed in</strong><span id="sidebarUserStatus">Sign in →</span></span></a></div>`;
@@ -148,39 +148,22 @@
   };
 
   host.querySelectorAll("a.sidebar-link, .sidebar-user, .sidebar-brand").forEach(item => item.addEventListener("click", event => {
-    if (examIsStillRunning()) {
-      const shouldExit = window.confirm("Exit exam?\n\nYour current exam session will be terminated and will not be saved.");
-      if (!shouldExit) {
-        event.preventDefault();
-        return;
-      }
-    }
-    if (drawerOnly || window.innerWidth <= 900) closeMobileMenu();
-  }));
-
-  const krokToggles = [...host.querySelectorAll(".sidebar-krok-toggle")];
-  krokToggles.forEach(toggle => toggle.addEventListener("click", () => {
-    const id = toggle.dataset.krok;
-    const panel = host.querySelector(`[data-krok-panel="${id}"]`);
-    const willOpen = !toggle.classList.contains("open");
-    krokToggles.forEach(other => {
-      const otherPanel = host.querySelector(`[data-krok-panel="${other.dataset.krok}"]`);
-      other.classList.remove("open");
-      other.setAttribute("aria-expanded", "false");
-      otherPanel?.classList.remove("open");
-    });
-    if (willOpen) {
-      toggle.classList.add("open");
-      toggle.setAttribute("aria-expanded", "true");
-      panel?.classList.add("open");
-    }
+    if (examIsStillRunning() && !confirm("Leave this exam? Your current progress will be lost.")) event.preventDefault();
   }));
 
   collapseBtn?.addEventListener("click", () => {
-    if (drawerOnly) return;
     document.body.classList.toggle("sidebar-collapsed");
     localStorage.setItem("krokSidebarCollapsed", document.body.classList.contains("sidebar-collapsed"));
   });
+
+  host.querySelectorAll(".sidebar-krok-toggle").forEach(toggle => toggle.addEventListener("click", () => {
+    const krok = toggle.dataset.krok;
+    const panel = host.querySelector(`[data-krok-panel="${krok}"]`);
+    const willOpen = !panel.classList.contains("open");
+    host.querySelectorAll(".sidebar-krok-children").forEach(p => p.classList.remove("open"));
+    host.querySelectorAll(".sidebar-krok-toggle").forEach(t => { t.classList.remove("open"); t.setAttribute("aria-expanded", "false"); });
+    if (willOpen) { panel.classList.add("open"); toggle.classList.add("open"); toggle.setAttribute("aria-expanded", "true"); }
+  }));
 
   krokCollapsedBtn?.addEventListener("click", () => {
     document.body.classList.remove("sidebar-collapsed");
@@ -191,29 +174,15 @@
     document.body.classList.toggle("dark-mode");
     localStorage.setItem("theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
     renderTheme();
-    window.dispatchEvent(new CustomEvent("krok-theme-change"));
   });
 
-  window.addEventListener("resize", () => {
-    if (!drawerOnly && window.innerWidth > 900) closeMobileMenu();
-  });
-
-  async function renderUser() {
-    const userEl = document.getElementById("sidebarUser");
-    const emailEl = document.getElementById("sidebarUserEmail");
-    const statusEl = document.getElementById("sidebarUserStatus");
-    if (typeof supabaseClient === "undefined" || !supabaseClient.auth) return;
-    try {
-      const { data: { user } } = await supabaseClient.auth.getUser();
-      if (!user) return;
-      userEl.classList.add("signed-in");
-      emailEl.textContent = user.email || "Signed in";
-      emailEl.title = user.email || "";
-      statusEl.textContent = "Signed in";
-    } catch (error) {
-      console.warn("Sidebar auth status unavailable:", error);
+  try {
+    if (typeof supabaseClient !== "undefined") {
+      supabaseClient.auth.getUser().then(({ data: { user } }) => {
+        const email = document.getElementById("sidebarUserEmail");
+        const status = document.getElementById("sidebarUserStatus");
+        if (user) { email.textContent = user.email || "Signed in"; status.textContent = "My Account →"; }
+      }).catch(() => {});
     }
-  }
-
-  renderUser();
+  } catch (_) {}
 })();
