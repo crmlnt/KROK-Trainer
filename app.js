@@ -165,6 +165,41 @@ async function loadQuestions() {
   } else {
     questions = [...allQuestions];
     questions = shuffleArray(questions);
+
+    const questionParam = params.get("question");
+    if (questionParam) {
+      const rawId = questionParam.trim();
+      let normalizedId = null;
+
+      if (examType === "krok2") {
+        if (/^krok2-\d+$/i.test(rawId)) {
+          normalizedId = rawId.toLowerCase();
+        } else if (/^\d+$/.test(rawId)) {
+          normalizedId = `krok2-${rawId.padStart(4, "0")}`;
+        }
+      } else {
+        if (/^krok1-\d+$/i.test(rawId)) {
+          normalizedId = String(parseInt(rawId.slice(6), 10));
+        } else if (/^\d+$/.test(rawId)) {
+          normalizedId = String(parseInt(rawId, 10));
+        }
+      }
+
+      if (normalizedId !== null) {
+        const targetQuestion = allQuestions.find(
+          q => String(q.id).toLowerCase() === normalizedId
+        );
+
+        if (targetQuestion) {
+          const targetIndex = questions.indexOf(targetQuestion);
+          if (targetIndex > -1) {
+            questions.splice(targetIndex, 1);
+          }
+          questions.unshift(targetQuestion);
+        }
+      }
+    }
+
     showQuestion();
   }
 }
