@@ -40,6 +40,10 @@ krok2/validate-krok2-final.js
 
 krok2/krok2-duplicate-consolidation.json
 krok2/krok2-exact-duplicate-classification.json
-# Local database-cleaner workspace
-database-cleaner/
-questions.original.json
+# Database Cleaner
+database-cleaner/sources/
+database-cleaner/**/.DS_Store
+database-cleaner/krok1/clean_sample.json
+database-cleaner/krok1/safe_validation_sample.csv
+database-cleaner/krok1/lexical_tokens.csv
+/questions.original.json

@@ -1,0 +1,1459 @@
+token,status,proposed,note
+a-adrcnergic,REVIEW,,Context reviewed; source verification required before normalization.
+abcesses,REVIEW,,Context reviewed; source verification required before normalization.
+absorbtion,REVIEW,,Context reviewed; source verification required before normalization.
+accomodative,REVIEW,,Context reviewed; source verification required before normalization.
+acctyltransferase,REVIEW,,Context reviewed; source verification required before normalization.
+accumulati-on,REVIEW,,Unrecognized lexical token; verify against source
+acetylsalicilic,REVIEW,,Context reviewed; source verification required before normalization.
+acetylsalicinic,REVIEW,,Context reviewed; source verification required before normalization.
+achyphylaxis,REVIEW,,Context reviewed; source verification required before normalization.
+acialis,REVIEW,,Context reviewed; source verification required before normalization.
+acid-bace,LIKELY_TYPO,acid-base,Probable spelling error
+acidbase,REVIEW,,Unrecognized lexical token; verify against source
+acidogenesis,REVIEW,,Context reviewed; source verification required before normalization
+acidrains,REVIEW,,Context reviewed; source verification required before normalization.
+acines,REVIEW,,Context reviewed; source verification required before normalization.
+activityof,REVIEW,,Context reviewed; source verification required before normalization.
+activty,REVIEW,,Context reviewed; source verification required before normalization.
+actrapid,REVIEW,,Context reviewed; source verification required before normalization.
+aculomotorius,REVIEW,,Context reviewed; source verification required before normalization.
+addison,REVIEW,,Unrecognized lexical token; verify against source
+addison-biermer,REVIEW,,Context reviewed; source verification required before normalization
+admini-stered,LIKELY_TYPO,administered,Probable PDF hyphenation artifact
+admini-stering,REVIEW,administering,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+admistered,REVIEW,,Context reviewed; source verification required before normalization.
+admitetd,REVIEW,,Context reviewed; source verification required before normalization.
+adolescaria,REVIEW,,Context reviewed; source verification required before normalization.
+adrcncrgic,REVIEW,,Context reviewed; source verification required before normalization.
+adrenalglands,REVIEW,,Context reviewed; source verification required before normalization.
+adrenergc,REVIEW,,Context reviewed; source verification required before normalization.
+adrenergicblockers,REVIEW,,Context reviewed; source verification required before normalization.
+adrenoblocker,REVIEW,,Context reviewed; source verification required before normalization.
+adrenoceptors,REVIEW,,Context reviewed; source verification required before normalization.
+adrenomimetics,REVIEW,,Context reviewed; source verification required before normalization.
+adrenoreceptors,VALID,,Valid medical term
+advi-sable,REVIEW,advisable,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+adynamy,REVIEW,,Context reviewed; source verification required before normalization
+aerogenig,REVIEW,,Context reviewed; source verification required before normalization.
+aeron,REVIEW,,Context reviewed; source verification required before normalization.
+aethimizolum,REVIEW,,Context reviewed; source verification required before normalization.
+affixion,REVIEW,,Context reviewed; source verification required before normalization.
+africa,REVIEW,,Context reviewed; source verification required before normalization.
+aftcr,REVIEW,,Context reviewed; source verification required before normalization.
+agammaglobuli-naemia,REVIEW,agammaglobulinaemia,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+agitati-on,REVIEW,agitation,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+agmatine,REVIEW,,Context reviewed; source verification required before normalization.
+albumine,REVIEW,,Unrecognized lexical token; verify against source
+albuminosis,REVIEW,,Context reviewed; source verification required before normalization.
+alcochol,REVIEW,,Context reviewed; source verification required before normalization.
+aldosteron,REVIEW,,Context reviewed; source verification required before normalization
+alkaliearth,REVIEW,,Context reviewed; source verification required before normalization.
+allochol,REVIEW,,Context reviewed; source verification required before normalization.
+almagel,REVIEW,,Context reviewed; source verification required before normalization.
+alpha-adrenomimetics,REVIEW,alphaadrenomimetics,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+alvcolocytcs,REVIEW,,Context reviewed; source verification required before normalization.
+alveococcosis,REVIEW,,Context reviewed; source verification required before normalization.
+alveolarcapillary,REVIEW,,Unrecognized lexical token; verify against source
+alveolocyte,REVIEW,,Context reviewed; source verification required before normalization.
+alveolocytes,REVIEW,,Context reviewed; source verification required before normalization.
+amben,REVIEW,,Context reviewed; source verification required before normalization.
+ambroxol,VALID,,"Accepted as KROK/source-specific medical, pharmacological, scientific, or project term."
+ameri-ca,REVIEW,america,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+aminoacid,REVIEW,,Context reviewed; source verification required before normalization.
+aminoacids,REVIEW,,Context reviewed; source verification required before normalization.
+aminoacyl-trna-melhionine,REVIEW,,Context reviewed; source verification required before normalization.
+aminocapronic,REVIEW,,Context reviewed; source verification required before normalization.
+aminooacid,REVIEW,,Context reviewed; source verification required before normalization.
+ammoniogenesis,REVIEW,,Context reviewed; source verification required before normalization
+amnioticstalk,REVIEW,,Context reviewed; source verification required before normalization.
+ampiox,REVIEW,,Context reviewed; source verification required before normalization.
+amyodarone,REVIEW,,Context reviewed; source verification required before normalization.
+anaesthesin,REVIEW,,Context reviewed; source verification required before normalization.
+analgene,REVIEW,,Context reviewed; source verification required before normalization.
+analgin,VALID,,"Accepted as KROK/source-specific medical, pharmacological, scientific, or project term."
+analizator,REVIEW,,Context reviewed; source verification required before normalization.
+analizer,REVIEW,,Context reviewed; source verification required before normalization.
+analyzator,REVIEW,,Context reviewed; source verification required before normalization.
+anaprilin,VALID,,"Accepted as KROK/source-specific medical, pharmacological, scientific, or project term."
+androgeninsensitivity,REVIEW,,Context reviewed; source verification required before normalization.
+andyolksacs,REVIEW,,Context reviewed; source verification required before normalization.
+angiotensin-ii,REVIEW,,Unrecognized lexical token; verify against source
+angiotensine,REVIEW,,Context reviewed; source verification required before normalization.
+anhistic,REVIEW,,Context reviewed; source verification required before normalization.
+antegastrial,REVIEW,,Context reviewed; source verification required before normalization.
+anthraxinduced,REVIEW,,Context reviewed; source verification required before normalization.
+anthraxine,REVIEW,,Context reviewed; source verification required before normalization.
+anthroponoses,REVIEW,,Context reviewed; source verification required before normalization.
+anthropozoonoses,REVIEW,,Context reviewed; source verification required before normalization.
+anti-rh,REVIEW,,Context reviewed; source verification required before normalization.
+antibotulinic,REVIEW,,Context reviewed; source verification required before normalization.
+antidiphtheric,REVIEW,,Context reviewed; source verification required before normalization.
+antidiphtheritic,REVIEW,,Context reviewed; source verification required before normalization.
+antierythrocytic,REVIEW,,Context reviewed; source verification required before normalization.
+antihi,REVIEW,,Context reviewed; source verification required before normalization.
+antii,REVIEW,,Context reviewed; source verification required before normalization.
+antioxidan,REVIEW,,Context reviewed; source verification required before normalization.
+antitetanus,REVIEW,,Unrecognized lexical token; verify against source
+antracis,REVIEW,,Context reviewed; source verification required before normalization.
+antracisl,REVIEW,,Context reviewed; source verification required before normalization.
+anulocytes,REVIEW,,Verify terminology against source
+apicale,REVIEW,,Context reviewed; source verification required before normalization.
+apneistic,REVIEW,,Unrecognized lexical token; verify against source
+apoа,REVIEW,,Contains Cyrillic confusable character; verify source before normalization
+apparatu,REVIEW,,Context reviewed; source verification required before normalization.
+apparatys,REVIEW,,Context reviewed; source verification required before normalization.
+appered,REVIEW,,Context reviewed; source verification required before normalization.
+apressin,REVIEW,,Context reviewed; source verification required before normalization.
+apropriate,REVIEW,,Context reviewed; source verification required before normalization.
+arnmonia,REVIEW,,Context reviewed; source verification required before normalization.
+arterior,REVIEW,,Context reviewed; source verification required before normalization.
+arthery,REVIEW,,Context reviewed; source verification required before normalization.
+aschner,REVIEW,,Context reviewed; source verification required before normalization.
+aschoff-talalayev,REVIEW,aschofftalalayev,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+ascoli,REVIEW,,Context reviewed; source verification required before normalization.
+asparcam,REVIEW,,Context reviewed; source verification required before normalization.
+asutosomal,REVIEW,,Context reviewed; source verification required before normalization.
+atherocalcinosis,REVIEW,,Context reviewed; source verification required before normalization.
+atreticum,REVIEW,,Context reviewed; source verification required before normalization.
+atriventricular,REVIEW,,Context reviewed; source verification required before normalization
+atypi-sm,REVIEW,atypism,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+audi-tory,REVIEW,auditory,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+auloinfection,REVIEW,,Context reviewed; source verification required before normalization.
+aurococcus,REVIEW,,Context reviewed; source verification required before normalization.
+australia,REVIEW,,Context reviewed; source verification required before normalization.
+autoantigens,VALID,,Valid medical/scientific term in context
+autolytia,REVIEW,,Context reviewed; source verification required before normalization.
+automati-cally,REVIEW,automatically,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+autoreduplication,REVIEW,,Context reviewed; source verification required before normalization.
+autoresponsiveness,REVIEW,,Unrecognized lexical token; verify against source
+autovaccines,REVIEW,,Context reviewed; source verification required before normalization.
+avulsive,REVIEW,,Context reviewed; source verification required before normalization.
+awaxy,REVIEW,,Context reviewed; source verification required before normalization.
+axostyles,REVIEW,,Context reviewed; source verification required before normalization.
+azidothimidine,REVIEW,,Context reviewed; source verification required before normalization.
+b-lymphocytcs,REVIEW,,Context reviewed; source verification required before normalization.
+b-lymphocytes,REVIEW,,Unrecognized lexical token; verify against source
+babinski-frohlich,REVIEW,babinskifrohlich,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+bacillof,REVIEW,,Context reviewed; source verification required before normalization.
+bactcrioscopy,REVIEW,,Context reviewed; source verification required before normalization.
+barbamylum,REVIEW,,Context reviewed; source verification required before normalization.
+basalioma,REVIEW,,Context reviewed; source verification required before normalization.
+basketshaped,REVIEW,,Context reviewed; source verification required before normalization.
+basocytes,REVIEW,,Context reviewed; source verification required before normalization
+basophi-ls,REVIEW,basophils,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+beclometasone,REVIEW,,Context reviewed; source verification required before normalization.
+benzohexonium,REVIEW,,Context reviewed; source verification required before normalization.
+beresovsky-sternberg,REVIEW,beresovskysternberg,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+beri-beri,REVIEW,beriberi,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+berkitt,REVIEW,,Context reviewed; source verification required before normalization.
+berotec,REVIEW,,Context reviewed; source verification required before normalization.
+bezredka,REVIEW,,Unrecognized lexical token; verify against source
+bi-septol,REVIEW,biseptol,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+bichromatid,REVIEW,,Context reviewed; source verification required before normalization.
+bifurcational,REVIEW,,Context reviewed; source verification required before normalization.
+bigluconate,REVIEW,,Context reviewed; source verification required before normalization.
+bijochinol,REVIEW,,Context reviewed; source verification required before normalization.
+biliculture,REVIEW,,Context reviewed; source verification required before normalization.
+bilipid,REVIEW,,Context reviewed; source verification required before normalization.
+bilrubin,LIKELY_TYPO,bilirubin,Probable spelling error
+biogeoceonotic,VALID,,"Accepted as KROK/source-specific medical, pharmacological, scientific, or project term."
+bioigenic,REVIEW,,Context reviewed; source verification required before normalization.
+biolectrical,REVIEW,,Context reviewed; source verification required before normalization.
+bioptate,REVIEW,,Context reviewed; source verification required before normalization.
+biosy,REVIEW,,Context reviewed; source verification required before normalization.
+bioterrorist,REVIEW,,Context reviewed; source verification required before normalization.
+bioßavonoids,REVIEW,,Context reviewed; source verification required before normalization.
+biseptol,VALID,,"Accepted as KROK/source-specific medical, pharmacological, scientific, or project term."
+blastopathy,REVIEW,,Context reviewed; source verification required before normalization.
+bloodsample,REVIEW,,Context reviewed; source verification required before normalization.
+bluishred,REVIEW,,Context reviewed; source verification required before normalization.
+bottlefed,REVIEW,,Context reviewed; source verification required before normalization.
+botulinic,REVIEW,,Context reviewed; source verification required before normalization.
+branchgo,REVIEW,,Context reviewed; source verification required before normalization.
+branchiols,REVIEW,,Context reviewed; source verification required before normalization.
+breasts,REVIEW,,Context reviewed; source verification required before normalization.
+breviflexors,REVIEW,,Context reviewed; source verification required before normalization.
+bromisoval,REVIEW,,Context reviewed; source verification required before normalization.
+broncholytics,REVIEW,,Context reviewed; source verification required before normalization.
+burnettii,REVIEW,,Context reviewed; source verification required before normalization.
+burri,REVIEW,,Context reviewed; source verification required before normalization.
+burri-gins,REVIEW,burrigins,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+butadion,REVIEW,,Context reviewed; source verification required before normalization.
+butadiounum,REVIEW,,Context reviewed; source verification required before normalization.
+butamide,REVIEW,,Context reviewed; source verification required before normalization.
+byeffects,REVIEW,,Context reviewed; source verification required before normalization.
+c-reactive,REVIEW,,Unrecognized lexical token; verify against source
+caicitonin,REVIEW,,Context reviewed; source verification required before normalization.
+calci-nosis,REVIEW,calcinosis,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+calori-metry,REVIEW,calorimetry,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+calymmatohacterium,REVIEW,,Context reviewed; source verification required before normalization.
+campilobacter,REVIEW,,Context reviewed; source verification required before normalization.
+campilobacteria,REVIEW,,Context reviewed; source verification required before normalization.
+candidomycosis,REVIEW,,Context reviewed; source verification required before normalization.
+carbacholine,REVIEW,,Context reviewed; source verification required before normalization.
+carbonlabeled,REVIEW,,Context reviewed; source verification required before normalization.
+carboxypcptidase,REVIEW,,Context reviewed; source verification required before normalization.
+cardi-ac,REVIEW,,Unrecognized lexical token; verify against source
+cardi-opulmonary,REVIEW,cardiopulmonary,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+cardi-otonics,REVIEW,cardiotonics,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+cardinale,REVIEW,,Context reviewed; source verification required before normalization.
+cardiomyocyte,VALID,,Valid medical/scientific term in context
+cardiospecific,REVIEW,,Context reviewed; source verification required before normalization.
+cari-es,REVIEW,caries,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+cartilagenous,REVIEW,,Context reviewed; source verification required before normalization.
+catabolim,LIKELY_TYPO,catabolism,High-confidence lexical/OCR correction candidate; verify before applying.
+catalyzation,REVIEW,,Context reviewed; source verification required before normalization.
+catarral,REVIEW,,Context reviewed; source verification required before normalization.
+cene,REVIEW,,Context reviewed; source verification required before normalization.
+centrosomc,REVIEW,,Context reviewed; source verification required before normalization.
+cerigel,REVIEW,,Context reviewed; source verification required before normalization.
+changeswill,REVIEW,,Context reviewed; source verification required before normalization.
+characreri-zed,REVIEW,characrerized,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+characteri-zed,REVIEW,characterized,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+characteristiclly,REVIEW,,Context reviewed; source verification required before normalization.
+charcterized,REVIEW,,Context reviewed; source verification required before normalization.
+chemicalfertilizers,REVIEW,,Context reviewed; source verification required before normalization.
+chemotrypsin,LIKELY_TYPO,chymotrypsin,Probable spelling/OCR error
+chernogubov,REVIEW,,Context reviewed; source verification required before normalization.
+cherryred,REVIEW,,Context reviewed; source verification required before normalization.
+chfordiazepoxide,REVIEW,,Context reviewed; source verification required before normalization.
+chi-ld,REVIEW,child,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+chingamin,VALID,,"Accepted as KROK/source-specific medical, pharmacological, scientific, or project term."
+chinoxydin,REVIEW,,Context reviewed; source verification required before normalization.
+chiorpromazine,REVIEW,,Context reviewed; source verification required before normalization.
+chlamidia,REVIEW,,Context reviewed; source verification required before normalization.
+chledocholithiasis,REVIEW,,Context reviewed; source verification required before normalization.
+chloridinum,REVIEW,,Context reviewed; source verification required before normalization.
+chloropyramine,VALID,,"Accepted as KROK/source-specific medical, pharmacological, scientific, or project term."
+choce,REVIEW,,Context reviewed; source verification required before normalization.
+cholalemia,REVIEW,,Context reviewed; source verification required before normalization
+cholecystokininpancreozymin,REVIEW,,Verify historical or source terminology
+cholenzyme,REVIEW,,Context reviewed; source verification required before normalization.
+cholesterine,REVIEW,,Context reviewed; source verification required before normalization
+cholinoblocker,REVIEW,,Context reviewed; source verification required before normalization.
+cholinomimetics,REVIEW,,Context reviewed; source verification required before normalization.
+cholinoreceptors,REVIEW,,Context reviewed; source verification required before normalization.
+cholosas,REVIEW,,Context reviewed; source verification required before normalization.
+chornobyl,REVIEW,,Context reviewed; source verification required before normalization.
+cicatricially-changed,REVIEW,cicatriciallychanged,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+cient,REVIEW,,Context reviewed; source verification required before normalization.
+ck-mm,REVIEW,,Context reviewed; source verification required before normalization.
+clamidiosis,REVIEW,,Context reviewed; source verification required before normalization.
+cleanrice,REVIEW,,Context reviewed; source verification required before normalization.
+cli-mber,REVIEW,,Unrecognized lexical token; verify against source
+cli-nical,REVIEW,clinical,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+clini-cal,REVIEW,clinical,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+cllaboratory,REVIEW,,Context reviewed; source verification required before normalization.
+cloctridia,LIKELY_TYPO,clostridia,High-confidence lexical/OCR correction candidate; verify before applying.
+cloudytiquidhows,REVIEW,,Context reviewed; source verification required before normalization.
+clubcells,REVIEW,,Context reviewed; source verification required before normalization.
+clublike,REVIEW,,Context reviewed; source verification required before normalization.
+cningamine,REVIEW,,Context reviewed; source verification required before normalization.
+cntry,REVIEW,,Context reviewed; source verification required before normalization.
+co-contraction,REVIEW,,Context reviewed; source verification required before normalization.
+co-infection,REVIEW,,Context reviewed; source verification required before normalization.
+co-trimoxazole,REVIEW,,Context reviewed; source verification required before normalization.
+coamid,REVIEW,,Context reviewed; source verification required before normalization.
+cobolamin,REVIEW,,Context reviewed; source verification required before normalization.
+coenzym,REVIEW,,Context reviewed; source verification required before normalization.
+colienteritis,REVIEW,,Context reviewed; source verification required before normalization.
+collagene,REVIEW,,Context reviewed; source verification required before normalization.
+collagenesis,REVIEW,,Context reviewed; source verification required before normalization.
+collaptoid,REVIEW,,Context reviewed; source verification required before normalization.
+collitis,REVIEW,,Context reviewed; source verification required before normalization.
+comatous,VALID,,Valid English medical adjective
+commaless,REVIEW,,Context reviewed; source verification required before normalization.
+complai-ns,REVIEW,complains,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+componet,REVIEW,,Context reviewed; source verification required before normalization.
+compressi-on,REVIEW,compression,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+concomi-tant,REVIEW,concomitant,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+concrements,REVIEW,,Context reviewed; source verification required before normalization.
+condi-tion,LIKELY_TYPO,condition,Probable PDF hyphenation artifact
+conditionis,REVIEW,,Context reviewed; source verification required before normalization.
+congesti-on,REVIEW,congestion,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+conlirm,REVIEW,,Context reviewed; source verification required before normalization.
+consti-tution,REVIEW,constitution,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+conten,LIKELY_TYPO,content,Missing final t
+contracti-on,REVIEW,contraction,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+contracti-ons,REVIEW,,Unrecognized lexical token; verify against source
+contrical,REVIEW,,Context reviewed; source verification required before normalization
+contrykal,REVIEW,,Context reviewed; source verification required before normalization.
+convariant,REVIEW,,Context reviewed; source verification required before normalization.
+convulsi-ons,REVIEW,,Unrecognized lexical token; verify against source
+coproculture,REVIEW,,Context reviewed; source verification required before normalization.
+coprological,REVIEW,,Unrecognized lexical token; verify against source
+cordiamin,VALID,,"Accepted as KROK/source-specific medical, pharmacological, scientific, or project term."
+corglycon,VALID,,"Accepted as KROK/source-specific medical, pharmacological, scientific, or project term."
+corglyconum,REVIEW,,Context reviewed; source verification required before normalization.
+coronarodilator,REVIEW,,Context reviewed; source verification required before normalization.
+coronarolytics,REVIEW,,Context reviewed; source verification required before normalization.
+cortico-nuclearis,REVIEW,corticonuclearis,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+corticoliberin,REVIEW,,Context reviewed; source verification required before normalization.
+corticopontinus,REVIEW,,Context reviewed; source verification required before normalization.
+corticostatin,REVIEW,,Context reviewed; source verification required before normalization.
+corticotropine,REVIEW,,Context reviewed; source verification required before normalization.
+cortricospinal,REVIEW,,Context reviewed; source verification required before normalization.
+cosynthase,REVIEW,,Context reviewed; source verification required before normalization.
+coversion,LIKELY_TYPO,conversion,High-confidence lexical/OCR correction candidate; verify before applying.
+coxsacki-virus,REVIEW,coxsackivirus,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+cri-du-chat,REVIEW,,Context reviewed; source verification required before normalization.
+cristarum,REVIEW,,Context reviewed; source verification required before normalization.
+cropous,REVIEW,,Context reviewed; source verification required before normalization.
+crossingover,REVIEW,,Context reviewed; source verification required before normalization.
+culteres,REVIEW,,Context reviewed; source verification required before normalization.
+curantyl,REVIEW,,Context reviewed; source verification required before normalization.
+cxamincs,REVIEW,,Context reviewed; source verification required before normalization.
+cyclocerine,REVIEW,,Context reviewed; source verification required before normalization.
+cyclodol,REVIEW,,Context reviewed; source verification required before normalization.
+cyclodole,REVIEW,,Context reviewed; source verification required before normalization.
+cyclometazide,REVIEW,,Context reviewed; source verification required before normalization.
+cyclooxigenase,REVIEW,,Context reviewed; source verification required before normalization.
+cyclooxygenasc,REVIEW,,Context reviewed; source verification required before normalization.
+cyclophosphan,REVIEW,,Context reviewed; source verification required before normalization.
+cyli-ndruria,REVIEW,,Unrecognized lexical token; verify against source
+cyncytiotrophoblast,REVIEW,,Context reviewed; source verification required before normalization.
+cyprofloxacin,REVIEW,,Context reviewed; source verification required before normalization.
+cystinase,REVIEW,,Context reviewed; source verification required before normalization.
+cystyca,REVIEW,,Context reviewed; source verification required before normalization.
+cythemolytic,REVIEW,,Verify terminology against source
+cytitonum,REVIEW,,Context reviewed; source verification required before normalization.
+cytolemma,REVIEW,,Context reviewed; source verification required before normalization.
+cytomedins,REVIEW,,Context reviewed; source verification required before normalization.
+cytoplasma,REVIEW,,Context reviewed; source verification required before normalization.
+cytorcceptors,REVIEW,,Context reviewed; source verification required before normalization.
+cytoreceptors,REVIEW,,Verify terminology against source
+d-bridement,REVIEW,,Context reviewed; source verification required before normalization.
+dagnini-aschner,REVIEW,dagniniaschner,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+dangerousin,REVIEW,,Context reviewed; source verification required before normalization.
+darkred,REVIEW,,Unrecognized lexical token; verify against source
+dcscending,REVIEW,,Context reviewed; source verification required before normalization.
+ddee,REVIEW,,Context reviewed; source verification required before normalization.
+de-nol,REVIEW,denol,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+decarboxylatin,REVIEW,,Context reviewed; source verification required before normalization.
+decondense,REVIEW,,Context reviewed; source verification required before normalization.
+deelopent,REVIEW,,Context reviewed; source verification required before normalization.
+defici-ency,REVIEW,deficiency,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+degenerationof,REVIEW,,Context reviewed; source verification required before normalization.
+degeniration,REVIEW,,Context reviewed; source verification required before normalization.
+dehelmintization,REVIEW,,Context reviewed; source verification required before normalization.
+dehydratati-on,REVIEW,dehydratation,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+dehydratation,REVIEW,,Context reviewed; source verification required before normalization
+dehydrofolate,REVIEW,,Context reviewed; source verification required before normalization.
+dehydromine,REVIEW,,Context reviewed; source verification required before normalization.
+dehydropeptidasc,REVIEW,,Context reviewed; source verification required before normalization.
+dehydropholate,REVIEW,,Context reviewed; source verification required before normalization.
+dehydrostase,REVIEW,,Context reviewed; source verification required before normalization.
+deintoxicative,REVIEW,,Context reviewed; source verification required before normalization.
+deiters,REVIEW,,Context reviewed; source verification required before normalization.
+delayedtype,REVIEW,,Context reviewed; source verification required before normalization
+delects,REVIEW,,Context reviewed; source verification required before normalization.
+deli-vered,REVIEW,delivered,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+dentatorubralis,REVIEW,,Context reviewed; source verification required before normalization.
+deparment,REVIEW,,Context reviewed; source verification required before normalization.
+deposi-ts,REVIEW,deposits,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+dermatovisceral,REVIEW,,Unrecognized lexical token; verify against source
+dermopapillary,REVIEW,,Context reviewed; source verification required before normalization.
+desamination,REVIEW,,Context reviewed; source verification required before normalization.
+descase,REVIEW,,Context reviewed; source verification required before normalization.
+descri-bed,REVIEW,described,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+desease,REVIEW,,Context reviewed; source verification required before normalization.
+despiralization,REVIEW,,Context reviewed; source verification required before normalization.
+detecti-ng,REVIEW,detecting,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+determi-ned,REVIEW,determined,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+detoxicationofharmfulsubstances,REVIEW,,Context reviewed; source verification required before normalization.
+develoment,LIKELY_TYPO,development,Probable spelling error
+di-abetes,REVIEW,diabetes,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+di-ameter,REVIEW,diameter,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+di-ffuse,LIKELY_TYPO,diffuse,Probable PDF hyphenation artifact
+di-sorder,REVIEW,disorder,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+di-srupted,REVIEW,,Unrecognized lexical token; verify against source
+di-sturbance,REVIEW,disturbance,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+di-sturbed,LIKELY_TYPO,disturbed,Probable PDF hyphenation artifact
+diacarb,VALID,,"Accepted as KROK/source-specific medical, pharmacological, scientific, or project term."
+diagnosticum,REVIEW,,Context reviewed; source verification required before normalization.
+diagnosticums,REVIEW,,Context reviewed; source verification required before normalization.
+diahetes,REVIEW,,Context reviewed; source verification required before normalization.
+diasease,REVIEW,,Context reviewed; source verification required before normalization.
+diazolin,REVIEW,,Context reviewed; source verification required before normalization.
+dibasolum,REVIEW,,Context reviewed; source verification required before normalization.
+dibazole,REVIEW,,Context reviewed; source verification required before normalization.
+dicain,REVIEW,,Context reviewed; source verification required before normalization.
+dichlothiazide,REVIEW,,Context reviewed; source verification required before normalization.
+dichlothiazidum,REVIEW,,Context reviewed; source verification required before normalization.
+dichydroxycholecalciferol,REVIEW,,Context reviewed; source verification required before normalization.
+didn’t,REVIEW,,Context reviewed; source verification required before normalization
+differentsixed,REVIEW,,Context reviewed; source verification required before normalization.
+differons,REVIEW,,Context reviewed; source verification required before normalization.
+diffrent,REVIEW,,Context reviewed; source verification required before normalization.
+digestesion,LIKELY_TYPO,digestion,High-confidence lexical/OCR correction candidate; verify before applying.
+digluconate,REVIEW,,Context reviewed; source verification required before normalization.
+dimedrol,VALID,,"Accepted as KROK/source-specific medical, pharmacological, scientific, or project term."
+dimercaptopropansulfonate,REVIEW,,Context reviewed; source verification required before normalization.
+dimethylsulfoxide,REVIEW,,Context reviewed; source verification required before normalization.
+dimexid,REVIEW,,Context reviewed; source verification required before normalization.
+dioxotetrahydrooxytetrahydrohaphthaline,REVIEW,,Context reviewed; source verification required before normalization.
+dioxotetrahydrooxytetrahydronaphthaline,REVIEW,,Context reviewed; source verification required before normalization.
+dioxyphenylalanine,REVIEW,,Context reviewed; source verification required before normalization.
+diphcnin,REVIEW,,Context reviewed; source verification required before normalization.
+diphenhudramine,REVIEW,,Context reviewed; source verification required before normalization.
+diphenine,REVIEW,,Context reviewed; source verification required before normalization.
+diphteria,REVIEW,,Context reviewed; source verification required before normalization.
+diphylobotrium,REVIEW,,Context reviewed; source verification required before normalization.
+dipiridamol,REVIEW,,Context reviewed; source verification required before normalization.
+diprazine,VALID,,"Accepted as KROK/source-specific medical, pharmacological, scientific, or project term."
+disapparance,REVIEW,,Context reviewed; source verification required before normalization.
+disbacteriosis,REVIEW,,Context reviewed; source verification required before normalization.
+disbalance,REVIEW,,Verify source wording
+discirculatory,REVIEW,,Context reviewed; source verification required before normalization.
+disesase,REVIEW,,Context reviewed; source verification required before normalization.
+disi-ntegration,REVIEW,,Unrecognized lexical token; verify against source
+disproteinemia,REVIEW,,Context reviewed; source verification required before normalization
+disregulation,REVIEW,,Unrecognized lexical token; verify against source
+disregulative,REVIEW,,Verify terminology against source
+disregulatory,REVIEW,,Verify terminology against source
+distantia,REVIEW,,Context reviewed; source verification required before normalization.
+distuhiancesln,REVIEW,,Context reviewed; source verification required before normalization.
+dithylin,REVIEW,,Context reviewed; source verification required before normalization.
+dithyline,REVIEW,,Context reviewed; source verification required before normalization.
+dithylinum,VALID,,"Accepted as KROK/source-specific medical, pharmacological, scientific, or project term."
+don’t,REVIEW,,Context reviewed; source verification required before normalization
+dorsallis,REVIEW,,Context reviewed; source verification required before normalization.
+downsyndrome,REVIEW,,Context reviewed; source verification required before normalization.
+doxacycline,REVIEW,,Context reviewed; source verification required before normalization.
+dramaic,LIKELY_TYPO,dramatic,Probable spelling error
+drasti-cally,REVIEW,drastically,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+drotaverine,VALID,,"Accepted as KROK/source-specific medical, pharmacological, scientific, or project term."
+dubrosii,REVIEW,,Context reviewed; source verification required before normalization.
+duri-ng,LIKELY_TYPO,during,Probable PDF/OCR hyphenation artifact
+dutlonii,REVIEW,,Context reviewed; source verification required before normalization.
+dysbacteriosis,REVIEW,,Context reviewed; source verification required before normalization.
+dysbiosis,REVIEW,,Context reviewed; source verification required before normalization.
+dyshormonal,REVIEW,,Context reviewed; source verification required before normalization
+dysimmunoglobulinemia,REVIEW,,Unrecognized lexical token; verify against source
+dysregulatory,REVIEW,,Unrecognized lexical token; verify against source
+eartier,REVIEW,,Context reviewed; source verification required before normalization.
+edematic,REVIEW,,Context reviewed; source verification required before normalization.
+edwardssyndrome,REVIEW,,Context reviewed; source verification required before normalization.
+eervical,REVIEW,,Context reviewed; source verification required before normalization.
+egion,REVIEW,,Context reviewed; source verification required before normalization.
+elbrus,REVIEW,,Unrecognized lexical token; verify against source
+electrophysical,REVIEW,,Context reviewed; source verification required before normalization.
+elemetary,REVIEW,,Context reviewed; source verification required before normalization.
+elesticity,REVIEW,,Context reviewed; source verification required before normalization.
+elliptocytes,VALID,,Valid medical/scientific term in context
+elween,REVIEW,,Context reviewed; source verification required before normalization.
+embryotoxic,REVIEW,,Context reviewed; source verification required before normalization.
+emergengy,REVIEW,,Context reviewed; source verification required before normalization.
+emulgation,REVIEW,,Verify terminology against source
+enanthesis,REVIEW,,Context reviewed; source verification required before normalization.
+endocrinocytes,VALID,,Valid medical term
+endomyometritis,REVIEW,,Context reviewed; source verification required before normalization.
+endoplasmatic,REVIEW,,Context reviewed; source verification required before normalization.
+endotheliocytes,VALID,,Valid medical term
+endothrombovasculitis,REVIEW,,Context reviewed; source verification required before normalization.
+endovasciilitis,REVIEW,,Context reviewed; source verification required before normalization.
+endovasculites,REVIEW,,Context reviewed; source verification required before normalization.
+enterocytes,REVIEW,,Context reviewed; source verification required before normalization.
+enteroendocrine,REVIEW,,Context reviewed; source verification required before normalization.
+enterohemorrhagic,REVIEW,,Context reviewed; source verification required before normalization.
+eosi-nophilic,REVIEW,eosinophilic,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+eosi-nophils,REVIEW,,Unrecognized lexical token; verify against source
+epidemilogically,REVIEW,,Context reviewed; source verification required before normalization.
+epigastral,REVIEW,,Verify wording against source
+epitheli-al,REVIEW,epithelial,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+epitheli-um,REVIEW,epithelium,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+ergotal,REVIEW,,Context reviewed; source verification required before normalization.
+ersinia,REVIEW,,Context reviewed; source verification required before normalization.
+ervthrocytes,REVIEW,,Context reviewed; source verification required before normalization.
+erythromycine,REVIEW,,Context reviewed; source verification required before normalization.
+erythromyelosis,REVIEW,,Context reviewed; source verification required before normalization
+escherihia,REVIEW,,Context reviewed; source verification required before normalization.
+etacrynic,REVIEW,,Context reviewed; source verification required before normalization.
+ethaminal,REVIEW,,Context reviewed; source verification required before normalization.
+ethosuxemide,REVIEW,,Context reviewed; source verification required before normalization.
+etimizole,REVIEW,,Context reviewed; source verification required before normalization.
+etiopathogenetic,VALID,,Valid medical/scientific term in context
+eubiolic,REVIEW,,Context reviewed; source verification required before normalization.
+eubiotic,REVIEW,,Context reviewed; source verification required before normalization.
+euphyllin,REVIEW,,Context reviewed; source verification required before normalization.
+evacuatory,REVIEW,,Context reviewed; source verification required before normalization.
+evelof-the,REVIEW,evelofthe,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+evri,REVIEW,,Context reviewed; source verification required before normalization.
+exami-nation,REVIEW,,Unrecognized lexical token; verify against source
+examiantion,REVIEW,,Context reviewed; source verification required before normalization.
+examinati-on,REVIEW,examination,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+excees,REVIEW,,Context reviewed; source verification required before normalization.
+excreti-on,REVIEW,excretion,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+exept,REVIEW,,Context reviewed; source verification required before normalization.
+exhaustfumes,REVIEW,,Context reviewed; source verification required before normalization.
+exmination,REVIEW,,Context reviewed; source verification required before normalization.
+exocrinocytes,VALID,,Valid medical term
+exocrinous,REVIEW,,Context reviewed; source verification required before normalization.
+experimantal,REVIEW,,Context reviewed; source verification required before normalization.
+expiremental,LIKELY_TYPO,experimental,Probable spelling error
+explai-ned,REVIEW,explained,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+exrection,REVIEW,,Context reviewed; source verification required before normalization.
+exreted,REVIEW,,Context reviewed; source verification required before normalization.
+extability,REVIEW,,Context reviewed; source verification required before normalization.
+extable,REVIEW,,Context reviewed; source verification required before normalization.
+extcrnal,REVIEW,,Context reviewed; source verification required before normalization.
+extention,REVIEW,,Context reviewed; source verification required before normalization.
+exteroreceptive,REVIEW,,Context reviewed; source verification required before normalization.
+extrapetitoneally,REVIEW,,Context reviewed; source verification required before normalization.
+extremitis,LIKELY_TYPO,extremities,Probable spelling error
+eyesocket,REVIEW,,Context reviewed; source verification required before normalization.
+fai-lure,REVIEW,failure,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+ferbitol,REVIEW,,Context reviewed; source verification required before normalization.
+fercoven,REVIEW,,Context reviewed; source verification required before normalization.
+fercovenum,REVIEW,,Context reviewed; source verification required before normalization.
+fetotoxical,REVIEW,,Context reviewed; source verification required before normalization.
+fetotoxicity,REVIEW,,Context reviewed; source verification required before normalization.
+fi-ber,REVIEW,fiber,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+fi-ltration,REVIEW,,Unrecognized lexical token; verify against source
+fi-nely,REVIEW,finely,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+fibergastroscopy,REVIEW,,Context reviewed; source verification required before normalization.
+fibri-nogenesis,LIKELY_TYPO,fibrinogenesis,Probable PDF hyphenation artifact
+fibrilsare,REVIEW,,Context reviewed; source verification required before normalization.
+fibrinohemorrhagic,REVIEW,,Context reviewed; source verification required before normalization.
+fibrinstabilizing,REVIEW,,Context reviewed; source verification required before normalization.
+fibrocavernous,REVIEW,,Context reviewed; source verification required before normalization.
+fibrocavitary,VALID,,Valid medical/scientific term in context
+fibrogastroscopy,REVIEW,,Context reviewed; source verification required before normalization.
+fibularrs,REVIEW,,Context reviewed; source verification required before normalization.
+ficxion,REVIEW,,Context reviewed; source verification required before normalization.
+filiformes,REVIEW,,Context reviewed; source verification required before normalization.
+filtartion,LIKELY_TYPO,filtration,Probable spelling error
+finegrained,REVIEW,,Context reviewed; source verification required before normalization.
+fith,REVIEW,,Context reviewed; source verification required before normalization.
+flexibacteria,REVIEW,,Context reviewed; source verification required before normalization.
+follistatine,REVIEW,,Context reviewed; source verification required before normalization.
+followi-ng,REVIEW,,Unrecognized lexical token; verify against source
+followng,REVIEW,,Context reviewed; source verification required before normalization.
+folowing,REVIEW,,Context reviewed; source verification required before normalization.
+formationofmaturationspindle,REVIEW,,Context reviewed; source verification required before normalization.
+formationofokazakifragments,REVIEW,,Context reviewed; source verification required before normalization.
+freshlysalted,REVIEW,,Context reviewed; source verification required before normalization.
+fromtee,REVIEW,,Context reviewed; source verification required before normalization.
+fron,REVIEW,,Context reviewed; source verification required before normalization.
+fullv,REVIEW,,Context reviewed; source verification required before normalization.
+functi-onal,REVIEW,functional,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+fungiformes,REVIEW,,Context reviewed; source verification required before normalization.
+furacilin,REVIEW,,Context reviewed; source verification required before normalization.
+furacillin,REVIEW,,Context reviewed; source verification required before normalization.
+furasolidone,REVIEW,,Context reviewed; source verification required before normalization.
+furazolidonum,REVIEW,,Context reviewed; source verification required before normalization.
+gaba-ergic,REVIEW,gabaergic,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+galactocerebrosidase,REVIEW,,Context reviewed; source verification required before normalization.
+gametocytc,REVIEW,,Context reviewed; source verification required before normalization.
+gametopathy,REVIEW,,Context reviewed; source verification required before normalization.
+gammaaminobutyric,REVIEW,,Context reviewed; source verification required before normalization.
+ganglioblockers,REVIEW,,Context reviewed; source verification required before normalization.
+ganglioneurinoma,REVIEW,,Context reviewed; source verification required before normalization.
+gasdischarge,REVIEW,,Unrecognized lexical token; verify against source
+gasro-duodenalis,REVIEW,gasroduodenalis,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+gaston,REVIEW,,Context reviewed; source verification required before normalization.
+gastrobiopsy,REVIEW,,Context reviewed; source verification required before normalization.
+gastroenterocolites,REVIEW,,Context reviewed; source verification required before normalization.
+gastroi-ntestinal,LIKELY_TYPO,gastrointestinal,Probable PDF hyphenation artifact
+gastromucoprotein,REVIEW,,Context reviewed; source verification required before normalization.
+geneamplification,REVIEW,,Context reviewed; source verification required before normalization.
+genehas,REVIEW,,Context reviewed; source verification required before normalization.
+geneticrecombination,REVIEW,,Context reviewed; source verification required before normalization.
+george,REVIEW,,Unrecognized lexical token; verify against source
+germanica,REVIEW,,Context reviewed; source verification required before normalization.
+giucose,REVIEW,,Context reviewed; source verification required before normalization.
+glibenclamid,REVIEW,,Context reviewed; source verification required before normalization.
+glibutid,REVIEW,,Context reviewed; source verification required before normalization.
+glibutide,REVIEW,,Context reviewed; source verification required before normalization.
+glibutidum,REVIEW,,Context reviewed; source verification required before normalization.
+glome-rular,REVIEW,glomerular,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+glomerulonephrit,REVIEW,,Context reviewed; source verification required before normalization
+glucocercbrosidase,REVIEW,,Context reviewed; source verification required before normalization.
+glucosc,REVIEW,,Context reviewed; source verification required before normalization.
+glucoze,REVIEW,,Context reviewed; source verification required before normalization.
+glucuronyltransferase,VALID,,Valid medical term
+glutamiltransferase,REVIEW,,Context reviewed; source verification required before normalization.
+glutamin,REVIEW,,Context reviewed; source verification required before normalization.
+glycerylkinase,REVIEW,,Context reviewed; source verification required before normalization.
+glycogene,REVIEW,,Context reviewed; source verification required before normalization.
+glycogenogenesis,REVIEW,,Context reviewed; source verification required before normalization.
+glycogeny,REVIEW,,Context reviewed; source verification required before normalization.
+glycometide,REVIEW,,Context reviewed; source verification required before normalization.
+glycosidas,REVIEW,,Context reviewed; source verification required before normalization.
+gonades,REVIEW,,Context reviewed; source verification required before normalization.
+gonnorrhoeae,REVIEW,,Context reviewed; source verification required before normalization.
+gonorroeae,REVIEW,,Context reviewed; source verification required before normalization.
+gram-sinov,REVIEW,gramsinov,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+grampositive,REVIEW,,Context reviewed; source verification required before normalization.
+grayishred,REVIEW,,Context reviewed; source verification required before normalization.
+greately,LIKELY_TYPO,greatly,Probable spelling error
+groupmates,REVIEW,,Context reviewed; source verification required before normalization.
+grouth,REVIEW,,Context reviewed; source verification required before normalization.
+hadn,REVIEW,,Context reviewed; source verification required before normalization.
+haemagglutination,REVIEW,,Context reviewed; source verification required before normalization.
+haematocrite,REVIEW,,Unrecognized lexical token; verify against source
+haemoblast,REVIEW,,Unrecognized lexical token; verify against source
+haemodynamics,REVIEW,,Context reviewed; source verification required before normalization.
+hallucrs,REVIEW,,Context reviewed; source verification required before normalization.
+hba-dna,REVIEW,hbadna,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+hbsm,REVIEW,,Context reviewed; source verification required before normalization.
+hcag,REVIEW,,Context reviewed; source verification required before normalization.
+hcmocapillary,REVIEW,,Context reviewed; source verification required before normalization.
+hcpp,REVIEW,,Context reviewed; source verification required before normalization
+healfhy,REVIEW,,Context reviewed; source verification required before normalization.
+heari-ng,REVIEW,hearing,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+helicobacteriosis,REVIEW,,Context reviewed; source verification required before normalization.
+helycobacter,REVIEW,,Context reviewed; source verification required before normalization.
+hematopietic,LIKELY_TYPO,hematopoietic,Probable spelling error
+hematoporphvrin,REVIEW,,Context reviewed; source verification required before normalization.
+hemeprotein,REVIEW,,Context reviewed; source verification required before normalization.
+hemeralopy,REVIEW,,Context reviewed; source verification required before normalization.
+hemocapillary,REVIEW,,Context reviewed; source verification required before normalization
+hemodynamie,REVIEW,,Context reviewed; source verification required before normalization.
+hemoglobinogenic,REVIEW,,Context reviewed; source verification required before normalization.
+hemomelanosis,REVIEW,,Context reviewed; source verification required before normalization.
+hemoplexin,REVIEW,,Context reviewed; source verification required before normalization.
+hemorrhrage,REVIEW,,Context reviewed; source verification required before normalization.
+henle’sloop,REVIEW,,Context reviewed; source verification required before normalization.
+hepatoduoduodenale,REVIEW,,Context reviewed; source verification required before normalization.
+herpeszoster,REVIEW,,Context reviewed; source verification required before normalization.
+hi-gh,REVIEW,,Unrecognized lexical token; verify against source
+hi-stological,REVIEW,histological,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+hippocamp,REVIEW,,Context reviewed; source verification required before normalization.
+hirudine,REVIEW,,Context reviewed; source verification required before normalization.
+hislopathological,REVIEW,,Context reviewed; source verification required before normalization.
+histochcmical,REVIEW,,Context reviewed; source verification required before normalization.
+histologi-cally,REVIEW,histologically,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+histoschi-zontocidal,REVIEW,histoschizontocidal,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+homopolysaccharides,REVIEW,,Context reviewed; source verification required before normalization.
+hori-sontal,REVIEW,horisontal,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+hormome,REVIEW,,Context reviewed; source verification required before normalization.
+hormon-sensitive,REVIEW,hormonsensitive,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+hormonesensitive,REVIEW,,Context reviewed; source verification required before normalization.
+horseshoeshaped,REVIEW,,Context reviewed; source verification required before normalization.
+hospi-talized,REVIEW,,Unrecognized lexical token; verify against source
+hospiali-zed,REVIEW,,Likely contains spelling and PDF hyphenation corruption; verify source
+huperdiuresis,REVIEW,,Context reviewed; source verification required before normalization.
+hydratione,REVIEW,,Context reviewed; source verification required before normalization.
+hydroadenoma,REVIEW,,Context reviewed; source verification required before normalization.
+hydrocarbonate,REVIEW,,Unrecognized lexical token; verify against source
+hydrochlorthiazide,REVIEW,,Context reviewed; source verification required before normalization.
+hydrooxide,REVIEW,,Unrecognized lexical token; verify against source
+hydropia,REVIEW,,Context reviewed; source verification required before normalization.
+hydrotartrate,REVIEW,,Context reviewed; source verification required before normalization.
+hypcrchromic,REVIEW,,Context reviewed; source verification required before normalization.
+hypcrcmic,REVIEW,,Context reviewed; source verification required before normalization.
+hypehydration,REVIEW,,Context reviewed; source verification required before normalization.
+hyperacidic,REVIEW,,Unrecognized lexical token; verify against source
+hyperbili-rubinemia,REVIEW,,Unrecognized lexical token; verify against source
+hypercorticoid,REVIEW,,Context reviewed; source verification required before normalization
+hyperi-nsulinemia,REVIEW,hyperinsulinemia,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+hyperli-pidemia,LIKELY_TYPO,hyperlipidemia,Probable PDF hyphenation artifact
+hyperlipoidemia,REVIEW,,Unrecognized lexical token; verify against source
+hyperproduced,REVIEW,,Unrecognized lexical token; verify against source
+hyperregenerative,REVIEW,,Unrecognized lexical token; verify against source
+hypersensitivi-ty,REVIEW,hypersensitivity,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+hypertensic,REVIEW,,Verify source terminology/spelling
+hyperuri-cemy,REVIEW,hyperuricemy,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+hyperuricemy,REVIEW,,Context reviewed; source verification required before normalization
+hypoactivation,REVIEW,,Unrecognized lexical token; verify against source
+hypocholic,REVIEW,,Unrecognized lexical token; verify against source
+hypoglobulinemia,REVIEW,,Context reviewed; source verification required before normalization.
+hypoinsulinemic,REVIEW,,Context reviewed; source verification required before normalization
+hypoosmolar,VALID,,Valid medical term
+hypoparathyroi-dism,LIKELY_TYPO,hypoparathyroidism,Probable PDF hyphenation artifact
+hypoploasia,LIKELY_TYPO,hypoplasia,Probable spelling/OCR error
+hyposmolar,REVIEW,,Unrecognized lexical token; verify against source
+hyposynthesis,REVIEW,,Context reviewed; source verification required before normalization.
+hypothiazide,REVIEW,,Context reviewed; source verification required before normalization.
+hypoxanthineguanine,REVIEW,,Context reviewed; source verification required before normalization.
+hypoxanthinephosphoribosyltransferase,REVIEW,,Context reviewed; source verification required before normalization.
+hystiocyte,VALID,,Valid medical term
+hystiocytes,VALID,,Valid medical term
+hystological,REVIEW,,Context reviewed; source verification required before normalization.
+hystolytica,REVIEW,,Context reviewed; source verification required before normalization.
+icteritiousness,REVIEW,,Unrecognized lexical token; verify against source
+ihbular,REVIEW,,Context reviewed; source verification required before normalization.
+iibrogastroscopy,REVIEW,,Context reviewed; source verification required before normalization.
+imanine,REVIEW,,Context reviewed; source verification required before normalization.
+imizin,REVIEW,,Context reviewed; source verification required before normalization.
+imizine,REVIEW,,Context reviewed; source verification required before normalization.
+immidiately,REVIEW,,Context reviewed; source verification required before normalization.
+immmunity,LIKELY_TYPO,immunity,Probable spelling/OCR error
+immunodefi-ciency,REVIEW,immunodeficiency,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+immunodeficie,REVIEW,,Context reviewed; source verification required before normalization.
+immunoglobuli-ns,REVIEW,immunoglobulins,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+immunosuppressors,REVIEW,,Context reviewed; source verification required before normalization.
+impai-red,REVIEW,impaired,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+inabihu,REVIEW,,Context reviewed; source verification required before normalization.
+inclusi-ons,REVIEW,inclusions,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+incressed,REVIEW,,Context reviewed; source verification required before normalization.
+indi-ces,REVIEW,indices,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+indi-vidual,REVIEW,individual,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+indicati-ve,REVIEW,indicative,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+indometacin,REVIEW,,Context reviewed; source verification required before normalization.
+induvidual,LIKELY_TYPO,individual,Probable spelling/OCR error
+infarcti-on,REVIEW,infarction,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+infecti-on,REVIEW,infection,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+infectional,REVIEW,,Context reviewed; source verification required before normalization.
+infiltrationand,LIKELY_TYPO,infiltration and,Probable missing-space artifact
+inflammati-on,REVIEW,,Unrecognized lexical token; verify against source
+injuiry,REVIEW,,Context reviewed; source verification required before normalization.
+inlerphalangeal,LIKELY_TYPO,interphalangeal,Probable spelling/OCR error
+inliltrate,REVIEW,,Context reviewed; source verification required before normalization
+inscision,REVIEW,,Context reviewed; source verification required before normalization.
+interaponeurotic,REVIEW,,Context reviewed; source verification required before normalization.
+interaponeuroticum,REVIEW,,Context reviewed; source verification required before normalization.
+interation,REVIEW,,Context reviewed; source verification required before normalization.
+interleukin-i,REVIEW,,Context reviewed; source verification required before normalization
+interpterygoid,REVIEW,,Context reviewed; source verification required before normalization.
+interscalenum,REVIEW,,Context reviewed; source verification required before normalization.
+intersigmoidal,REVIEW,,Context reviewed; source verification required before normalization.
+intersti-tial,REVIEW,interstitial,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+intersticium,REVIEW,,Context reviewed; source verification required before normalization.
+intracellulardigestion,REVIEW,,Context reviewed; source verification required before normalization.
+intrapcritoneally,REVIEW,,Context reviewed; source verification required before normalization.
+introducted,REVIEW,,Context reviewed; source verification required before normalization.
+investigati-ng,REVIEW,investigating,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+inßamed,REVIEW,,Context reviewed; source verification required before normalization.
+inßammation,REVIEW,,Context reviewed; source verification required before normalization.
+inßammatory,REVIEW,,OCR character corruption detected; verify source before correction
+inßuence,REVIEW,,Context reviewed; source verification required before normalization.
+irregularlyshaped,REVIEW,,Context reviewed; source verification required before normalization.
+irregularshaped,REVIEW,,Context reviewed; source verification required before normalization.
+isadrin,REVIEW,,Context reviewed; source verification required before normalization.
+isadrine,REVIEW,,Context reviewed; source verification required before normalization.
+isadrinum,VALID,,"Accepted as KROK/source-specific medical, pharmacological, scientific, or project term."
+ishimic,REVIEW,,Context reviewed; source verification required before normalization.
+isindicated,REVIEW,,Unrecognized lexical token; verify against source
+isoosmolar,VALID,,Valid medical/scientific term in context
+itsenko-cushing,REVIEW,,Unrecognized lexical token; verify against source
+itsenkocushing,REVIEW,,Context reviewed; source verification required before normalization.
+ivolve,REVIEW,,Context reviewed; source verification required before normalization.
+jeuni,REVIEW,,Context reviewed; source verification required before normalization.
+jjoth,REVIEW,,Context reviewed; source verification required before normalization.
+joi-nt,REVIEW,joint,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+juxtacapillary,REVIEW,,Context reviewed; source verification required before normalization.
+juxtavascular,REVIEW,,Context reviewed; source verification required before normalization.
+karakurt,REVIEW,,Context reviewed; source verification required before normalization.
+karbamoyl,REVIEW,,Context reviewed; source verification required before normalization.
+kaunsilmen,REVIEW,,Context reviewed; source verification required before normalization.
+kerati-nized,LIKELY_TYPO,keratinized,Probable PDF/OCR hyphenation artifact
+ketoacidotic,VALID,,Valid medical/scientific term in context
+ketoderivatives,REVIEW,,Context reviewed; source verification required before normalization.
+kidny,LIKELY_TYPO,kidney,Probable spelling/OCR error
+kitt-tarozzi,REVIEW,kitttarozzi,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+kleinfelter,REVIEW,,Context reviewed; source verification required before normalization.
+klinefeltersyndrome,REVIEW,,Context reviewed; source verification required before normalization.
+kozlovsky,REVIEW,,Context reviewed; source verification required before normalization.
+kreatinine,REVIEW,,Context reviewed; source verification required before normalization.
+krok,VALID,,"Accepted as KROK/source-specific medical, pharmacological, scientific, or project term."
+labi-lity,REVIEW,lability,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+labrocytes,REVIEW,,Context reviewed; source verification required before normalization.
+lactacidemic,REVIEW,,Verify terminology against source
+lactosemia,REVIEW,,Context reviewed; source verification required before normalization.
+laevomycetin,REVIEW,,Context reviewed; source verification required before normalization.
+laferon,REVIEW,,Context reviewed; source verification required before normalization.
+laterulis,REVIEW,,Context reviewed; source verification required before normalization.
+layerwise,REVIEW,,Context reviewed; source verification required before normalization.
+ldh-isoenzymc,REVIEW,ldhisoenzymc,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+lecithovitellinous,REVIEW,,Context reviewed; source verification required before normalization.
+leffler,REVIEW,,Context reviewed; source verification required before normalization.
+leidig,REVIEW,,Context reviewed; source verification required before normalization.
+leikopoiesis,REVIEW,,Unrecognized lexical token; verify against source
+leucoplacia,REVIEW,,Context reviewed; source verification required before normalization.
+leukopoietins,REVIEW,,Context reviewed; source verification required before normalization.
+leukosytes,REVIEW,,Context reviewed; source verification required before normalization.
+levenshtein-yessen,REVIEW,levenshteinyessen,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+levolloxacin,REVIEW,,Context reviewed; source verification required before normalization.
+levomycetin,REVIEW,,Context reviewed; source verification required before normalization
+lexor,REVIEW,,Context reviewed; source verification required before normalization.
+li-gament,REVIEW,ligament,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+li-ver,REVIEW,liver,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+libcrins,REVIEW,,Context reviewed; source verification required before normalization.
+liberins,REVIEW,,Context reviewed; source verification required before normalization.
+libexin,REVIEW,,Context reviewed; source verification required before normalization.
+lidase,REVIEW,,Context reviewed; source verification required before normalization.
+likey,REVIEW,,Context reviewed; source verification required before normalization.
+limitcd,REVIEW,,Context reviewed; source verification required before normalization.
+limphocytes,REVIEW,,Context reviewed; source verification required before normalization.
+linex,REVIEW,,Context reviewed; source verification required before normalization.
+lingualare,REVIEW,,Context reviewed; source verification required before normalization.
+lingvalis,REVIEW,,Context reviewed; source verification required before normalization.
+liposclerosis,REVIEW,,Unrecognized lexical token; verify against source
+lipotropics,REVIEW,,Context reviewed; source verification required before normalization.
+lluid,REVIEW,,Context reviewed; source verification required before normalization.
+longu,REVIEW,,Context reviewed; source verification required before normalization.
+lplace,REVIEW,,Context reviewed; source verification required before normalization.
+lydase,REVIEW,,Context reviewed; source verification required before normalization.
+lymphcapillary,REVIEW,,Context reviewed; source verification required before normalization.
+lymphnode,REVIEW,,Context reviewed; source verification required before normalization.
+lymphocites,REVIEW,,Context reviewed; source verification required before normalization.
+lymphocytemediated,REVIEW,,Context reviewed; source verification required before normalization.
+lymphocytes-supressors,REVIEW,lymphocytessupressors,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+lymphocytic-macrophageal,REVIEW,lymphocyticmacrophageal,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+lympholeucosis,REVIEW,,Context reviewed; source verification required before normalization.
+m-cholinomimetics,REVIEW,,Context reviewed; source verification required before normalization.
+m-cholinoreceptors,REVIEW,,Context reviewed; source verification required before normalization.
+macardle,REVIEW,,Context reviewed; source verification required before normalization.
+macroergic,REVIEW,,Context reviewed; source verification required before normalization.
+macrofocal,REVIEW,,Context reviewed; source verification required before normalization.
+macrophagal,REVIEW,,Context reviewed; source verification required before normalization.
+macrophags,REVIEW,,Context reviewed; source verification required before normalization.
+malignization,REVIEW,,Context reviewed; source verification required before normalization.
+maltasc,REVIEW,,Context reviewed; source verification required before normalization.
+manithol,REVIEW,,Context reviewed; source verification required before normalization.
+massi-ve,LIKELY_TYPO,massive,Probable PDF hyphenation artifact
+mayfe,REVIEW,,Context reviewed; source verification required before normalization.
+mb-fraction,REVIEW,mbfraction,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+mcardle,REVIEW,,Context reviewed; source verification required before normalization.
+mcdulla,REVIEW,,Context reviewed; source verification required before normalization.
+mcgaloblasts,REVIEW,,Context reviewed; source verification required before normalization.
+mcllitus,REVIEW,,Context reviewed; source verification required before normalization.
+mealus,REVIEW,,Context reviewed; source verification required before normalization.
+mebhydrolin,REVIEW,,Context reviewed; source verification required before normalization.
+mechamism,REVIEW,,Context reviewed; source verification required before normalization.
+mechamisms,LIKELY_TYPO,mechanisms,Probable spelling error
+medicati-on,REVIEW,medication,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+medivcations,REVIEW,,Context reviewed; source verification required before normalization.
+megalocytes,VALID,,Valid medical term
+melaniebrady,REVIEW,,Context reviewed; source verification required before normalization.
+melictine,REVIEW,,Context reviewed; source verification required before normalization.
+melitus,REVIEW,,Context reviewed; source verification required before normalization.
+melli-tus,REVIEW,mellitus,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+mellitns,REVIEW,,Context reviewed; source verification required before normalization.
+membranogenic,REVIEW,,Context reviewed; source verification required before normalization
+membranopathy,REVIEW,,Unrecognized lexical token; verify against source
+mercazolilum,REVIEW,,Context reviewed; source verification required before normalization.
+meridil,REVIEW,,Context reviewed; source verification required before normalization.
+meropencm,REVIEW,,Context reviewed; source verification required before normalization.
+mesangi-oproliferative,REVIEW,mesangioproliferative,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+mesaton,REVIEW,,Context reviewed; source verification required before normalization.
+mesatonum,REVIEW,,Context reviewed; source verification required before normalization.
+mesocarb,REVIEW,,Context reviewed; source verification required before normalization.
+mesoperitaneally,REVIEW,,Context reviewed; source verification required before normalization.
+mesosomas,REVIEW,,Context reviewed; source verification required before normalization.
+metabolis,REVIEW,,Context reviewed; source verification required before normalization.
+metaholic,REVIEW,,Context reviewed; source verification required before normalization.
+metamizole,VALID,,"Accepted as KROK/source-specific medical, pharmacological, scientific, or project term."
+metamyelocytes,VALID,,Valid medical term
+metasympathetic,REVIEW,,Unrecognized lexical token; verify against source
+metemizole,REVIEW,,Context reviewed; source verification required before normalization.
+methacin,REVIEW,,Context reviewed; source verification required before normalization.
+methamorphoses,REVIEW,,Context reviewed; source verification required before normalization.
+methylalion,REVIEW,,Context reviewed; source verification required before normalization.
+mi-crocephaly,REVIEW,microcephaly,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+mi-cron,REVIEW,micron,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+mi-nutes,REVIEW,minutes,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+mi-scarriages,REVIEW,miscarriages,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+miatintestine,REVIEW,,Context reviewed; source verification required before normalization.
+micobacterium,REVIEW,,Context reviewed; source verification required before normalization.
+microbal,LIKELY_TYPO,microbial,High-confidence lexical/OCR correction candidate; verify before applying.
+microbs,REVIEW,,Context reviewed; source verification required before normalization.
+microconcentric,REVIEW,,Context reviewed; source verification required before normalization.
+micromol,REVIEW,,Context reviewed; source verification required before normalization
+microorganisn,REVIEW,,Context reviewed; source verification required before normalization.
+microplania,REVIEW,,Verify terminology against source
+microscopial,REVIEW,,Context reviewed; source verification required before normalization.
+microscopicaly,REVIEW,,Context reviewed; source verification required before normalization.
+microspcopic,REVIEW,,Context reviewed; source verification required before normalization.
+microspecimen,REVIEW,,Context reviewed; source verification required before normalization.
+microspherocytic,REVIEW,,Unrecognized lexical token; verify against source
+microvasculaturc,REVIEW,,Context reviewed; source verification required before normalization
+microvessels,VALID,,Valid medical term
+microßora,REVIEW,,Context reviewed; source verification required before normalization.
+midantan,REVIEW,,Context reviewed; source verification required before normalization.
+middlc,REVIEW,,Context reviewed; source verification required before normalization.
+mildronate,REVIEW,,Context reviewed; source verification required before normalization.
+mimmi,REVIEW,,Context reviewed; source verification required before normalization.
+minerali-zation,REVIEW,mineralization,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+minkowsky-shauffard,REVIEW,,Unrecognized lexical token; verify against source
+miocardial,LIKELY_TYPO,myocardial,Probable spelling error
+mitochondrions,REVIEW,,Context reviewed; source verification required before normalization.
+moderatly,REVIEW,,Context reviewed; source verification required before normalization.
+monoaminedicarboxylic,REVIEW,,Context reviewed; source verification required before normalization.
+monoamino-oxidase,REVIEW,monoaminooxidase,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+monocarbon,REVIEW,,Context reviewed; source verification required before normalization.
+monochromatid,REVIEW,,Context reviewed; source verification required before normalization.
+monopht,REVIEW,,Context reviewed; source verification required before normalization.
+morrissyndrome,REVIEW,,Context reviewed; source verification required before normalization.
+mosmol,REVIEW,,Context reviewed; source verification required before normalization.
+mosmole,REVIEW,,Context reviewed; source verification required before normalization
+mosqui-tos,REVIEW,mosquitos,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+motorvisceral,REVIEW,,Unrecognized lexical token; verify against source
+mucocytes,REVIEW,,Context reviewed; source verification required before normalization.
+multirowed,REVIEW,,Context reviewed; source verification required before normalization.
+musclc,REVIEW,,Context reviewed; source verification required before normalization.
+muscolocutaneus,REVIEW,,Context reviewed; source verification required before normalization.
+musculocutaneu,REVIEW,,Context reviewed; source verification required before normalization.
+muselcs,REVIEW,,Context reviewed; source verification required before normalization.
+myeloleukemia,REVIEW,,Unrecognized lexical token; verify against source
+myeloleukosis,REVIEW,,Context reviewed; source verification required before normalization
+myocard,REVIEW,,Context reviewed; source verification required before normalization.
+myocardal,REVIEW,,Context reviewed; source verification required before normalization.
+myocardi-um,REVIEW,myocardium,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+myocardiocyte,REVIEW,,Context reviewed; source verification required before normalization.
+myocardiocytes,VALID,,Valid medical term
+myoepitheliocytes,REVIEW,,Context reviewed; source verification required before normalization.
+myorelaxant,REVIEW,,Context reviewed; source verification required before normalization.
+myosatellite,REVIEW,,Context reviewed; source verification required before normalization.
+mytochondria,REVIEW,,Context reviewed; source verification required before normalization.
+n-cholinomimetics,REVIEW,,Context reviewed; source verification required before normalization.
+naphtaquinone,REVIEW,,Context reviewed; source verification required before normalization.
+narcological,REVIEW,,Context reviewed; source verification required before normalization.
+natriuria,REVIEW,,Unrecognized lexical token; verify against source
+necronephrosis,REVIEW,,Unrecognized lexical token; verify against source
+necrotization,REVIEW,,Context reviewed; source verification required before normalization.
+neodicumarin,REVIEW,,Context reviewed; source verification required before normalization.
+nephri-tic,REVIEW,,Unrecognized lexical token; verify against source
+nephrothelium,REVIEW,,Context reviewed; source verification required before normalization.
+nerv,REVIEW,,Context reviewed; source verification required before normalization.
+netoglubarate,REVIEW,,Context reviewed; source verification required before normalization.
+neuroalbumin,REVIEW,,Context reviewed; source verification required before normalization.
+neurocytes,REVIEW,,Context reviewed; source verification required before normalization.
+neurodystrophy,REVIEW,,Unrecognized lexical token; verify against source
+neuroglobulin,REVIEW,,Context reviewed; source verification required before normalization.
+neurostromin,REVIEW,,Context reviewed; source verification required before normalization.
+neurotransmi-ssion,REVIEW,neurotransmission,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+neutrophi-ls,LIKELY_TYPO,neutrophils,Probable PDF/OCR hyphenation artifact
+nflammation,LIKELY_TYPO,inflammation,Probable spelling/OCR error
+nflammatory,REVIEW,,Context reviewed; source verification required before normalization.
+nicodinum,REVIEW,,Context reviewed; source verification required before normalization.
+nigeria,REVIEW,,Context reviewed; source verification required before normalization.
+nimesulide,REVIEW,,Context reviewed; source verification required before normalization.
+nipples,REVIEW,,Context reviewed; source verification required before normalization.
+nitriglycerin,REVIEW,,Context reviewed; source verification required before normalization.
+nitrofural,REVIEW,,Context reviewed; source verification required before normalization.
+nlarged,REVIEW,,Context reviewed; source verification required before normalization.
+noadrenalin,REVIEW,,Context reviewed; source verification required before normalization.
+nonclosure,REVIEW,,Context reviewed; source verification required before normalization.
+nonkeratinous,REVIEW,,Context reviewed; source verification required before normalization.
+nonmuscular,REVIEW,,Context reviewed; source verification required before normalization.
+nootropil,REVIEW,,Context reviewed; source verification required before normalization.
+normergic,REVIEW,,Verify source terminology
+normocytes,VALID,,Valid medical term
+normosmolar,REVIEW,,Unrecognized lexical token; verify against source
+noshpa,REVIEW,,Context reviewed; source verification required before normalization.
+novo,REVIEW,,Context reviewed; source verification required before normalization.
+nucleicacidsynthesis,REVIEW,,Context reviewed; source verification required before normalization.
+nucleosoma,REVIEW,,Context reviewed; source verification required before normalization.
+nullisomy,REVIEW,,Context reviewed; source verification required before normalization.
+o-anligen,REVIEW,,Context reviewed; source verification required before normalization.
+o-diagnosticum,REVIEW,,Context reviewed; source verification required before normalization.
+o-lymphocytcs,REVIEW,,Context reviewed; source verification required before normalization.
+objecti-ve,REVIEW,,Unrecognized lexical token; verify against source
+obliqus,REVIEW,,Context reviewed; source verification required before normalization.
+obturational,REVIEW,,Unrecognized lexical token; verify against source
+obturative,REVIEW,,Unrecognized lexical token; verify against source
+occured,REVIEW,,Context reviewed; source verification required before normalization.
+occurences,REVIEW,,Context reviewed; source verification required before normalization.
+occuring,REVIEW,,Context reviewed; source verification required before normalization.
+octadine,REVIEW,,Context reviewed; source verification required before normalization.
+oculornolor,REVIEW,,Context reviewed; source verification required before normalization.
+ocytocin,REVIEW,,Context reviewed; source verification required before normalization.
+oeroids,REVIEW,,Context reviewed; source verification required before normalization.
+offi-ce,REVIEW,office,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+ofthe,REVIEW,,Context reviewed; source verification required before normalization.
+oliencephalon,REVIEW,,Unrecognized lexical token; verify against source
+olthese,REVIEW,,Context reviewed; source verification required before normalization.
+omnopon,REVIEW,,Context reviewed; source verification required before normalization.
+openining,REVIEW,,Context reviewed; source verification required before normalization.
+ophtalmic,REVIEW,,Context reviewed; source verification required before normalization.
+opsono-phagocytic,REVIEW,opsonophagocytic,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+opsonophagocytic,REVIEW,,Context reviewed; source verification required before normalization.
+oramen,REVIEW,,Context reviewed; source verification required before normalization.
+organellas,REVIEW,,Context reviewed; source verification required before normalization.
+organi-sm,REVIEW,organism,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+orgarv,REVIEW,,Context reviewed; source verification required before normalization.
+ori-entation,REVIEW,,Unrecognized lexical token; verify against source
+orientative,REVIEW,,Context reviewed; source verification required before normalization
+ormis,REVIEW,,Context reviewed; source verification required before normalization.
+ornithinic,REVIEW,,Context reviewed; source verification required before normalization.
+ornithodorus,REVIEW,,Context reviewed; source verification required before normalization.
+ornitodorus,REVIEW,,Context reviewed; source verification required before normalization.
+orotaciduria,REVIEW,,Context reviewed; source verification required before normalization.
+osmiophil,REVIEW,,Context reviewed; source verification required before normalization.
+osteolaterism,REVIEW,,Context reviewed; source verification required before normalization.
+osteomielitis,REVIEW,,Context reviewed; source verification required before normalization.
+osteomyeli-tis,REVIEW,osteomyelitis,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+ovarv,REVIEW,,Context reviewed; source verification required before normalization.
+ovoalbumin,REVIEW,,Context reviewed; source verification required before normalization.
+ovoscopic,REVIEW,,Context reviewed; source verification required before normalization.
+oxoline,REVIEW,,Context reviewed; source verification required before normalization.
+oxyacyl-coa,REVIEW,oxyacylcoa,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+oxydalforf,REVIEW,,Context reviewed; source verification required before normalization.
+oxydation,REVIEW,,Context reviewed; source verification required before normalization.
+oxygenconsumption,LIKELY_TYPO,oxygen consumption,Probable missing-space artifact
+oxygendifference,REVIEW,,Context reviewed; source verification required before normalization.
+oxylysine,REVIEW,,Context reviewed; source verification required before normalization.
+oxyphilia,REVIEW,,Context reviewed; source verification required before normalization.
+oxyproline,VALID,,"Accepted as KROK/source-specific medical, pharmacological, scientific, or project term."
+oxytryptofane,REVIEW,,Context reviewed; source verification required before normalization.
+oxytryptophan,REVIEW,,Context reviewed; source verification required before normalization.
+ozheshko,REVIEW,,Context reviewed; source verification required before normalization.
+paathology,REVIEW,,Context reviewed; source verification required before normalization.
+painfullness,REVIEW,,Context reviewed; source verification required before normalization.
+palestinian,REVIEW,,Context reviewed; source verification required before normalization
+palmuris,REVIEW,,Context reviewed; source verification required before normalization.
+palpitati-ons,LIKELY_TYPO,palpitations,Probable PDF hyphenation artifact
+panangin,REVIEW,,Context reviewed; source verification required before normalization.
+panangine,REVIEW,,Context reviewed; source verification required before normalization.
+panbronchitis,REVIEW,,Context reviewed; source verification required before normalization.
+pancreatectotny,REVIEW,,Context reviewed; source verification required before normalization.
+pancreatine,REVIEW,,Context reviewed; source verification required before normalization.
+pancreatius,REVIEW,,Context reviewed; source verification required before normalization.
+papaveretum,REVIEW,,Context reviewed; source verification required before normalization.
+papillipes,REVIEW,,Context reviewed; source verification required before normalization.
+papu,REVIEW,,Context reviewed; source verification required before normalization.
+paracephalia,REVIEW,,Context reviewed; source verification required before normalization.
+paradontosis,REVIEW,,Context reviewed; source verification required before normalization.
+parastcrnal,REVIEW,,Context reviewed; source verification required before normalization.
+parathy,REVIEW,,Context reviewed; source verification required before normalization.
+parathyreoidinum,REVIEW,,Context reviewed; source verification required before normalization.
+parenchimatous,REVIEW,,Context reviewed; source verification required before normalization.
+parodontitis,REVIEW,,Unrecognized lexical token; verify against source
+parodontosis,REVIEW,,Context reviewed; source verification required before normalization.
+parti-culars,REVIEW,particulars,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+parvula,REVIEW,,Context reviewed; source verification required before normalization.
+pastous,REVIEW,,Context reviewed; source verification required before normalization.
+pathjlogy,LIKELY_TYPO,pathology,Probable spelling/OCR error
+pathohistological,REVIEW,,Context reviewed; source verification required before normalization
+pathologyhistology,REVIEW,,Context reviewed; source verification required before normalization.
+pathometabolism,REVIEW,,Unrecognized lexical token; verify against source
+patien,REVIEW,,Context reviewed; source verification required before normalization.
+patient’sbones,REVIEW,,Context reviewed; source verification required before normalization.
+patternthat,REVIEW,,Context reviewed; source verification required before normalization.
+pearshaped,REVIEW,,Context reviewed; source verification required before normalization.
+pectinale,REVIEW,,Context reviewed; source verification required before normalization.
+pecularities,REVIEW,,Context reviewed; source verification required before normalization.
+pecularity,REVIEW,,Context reviewed; source verification required before normalization.
+peeli-ng,REVIEW,peeling,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+pemridine,REVIEW,,Context reviewed; source verification required before normalization.
+penomenon,LIKELY_TYPO,phenomenon,Probable spelling/OCR error
+pentaminum,REVIEW,,Context reviewed; source verification required before normalization.
+pentosephosphate,REVIEW,,Context reviewed; source verification required before normalization.
+peri-toneal,REVIEW,peritoneal,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+periferal,REVIEW,,Context reviewed; source verification required before normalization.
+periodi-cal,REVIEW,,Unrecognized lexical token; verify against source
+peripherial,LIKELY_TYPO,peripheral,Probable spelling/OCR error
+peritheral,REVIEW,,Context reviewed; source verification required before normalization.
+persulcatu,REVIEW,,Context reviewed; source verification required before normalization.
+pfeiffer,REVIEW,,Context reviewed; source verification required before normalization.
+ph-metry,REVIEW,,Unrecognized lexical token; verify against source
+phagotyping,REVIEW,,Context reviewed; source verification required before normalization.
+phenazepam,REVIEW,,Context reviewed; source verification required before normalization.
+phenomenonindicates,REVIEW,,Context reviewed; source verification required before normalization.
+phenotherol,REVIEW,,Context reviewed; source verification required before normalization.
+phenylin,REVIEW,,Context reviewed; source verification required before normalization.
+phenylkelonuria,REVIEW,,Context reviewed; source verification required before normalization.
+phlebotominae,REVIEW,,Context reviewed; source verification required before normalization.
+pholate,REVIEW,,Context reviewed; source verification required before normalization.
+phosphacole,REVIEW,,Context reviewed; source verification required before normalization.
+phosphaturidine,REVIEW,,Context reviewed; source verification required before normalization.
+phosphofructomutase,REVIEW,,Context reviewed; source verification required before normalization.
+phosphorilation,REVIEW,,Context reviewed; source verification required before normalization.
+photosensory,REVIEW,,Context reviewed; source verification required before normalization.
+phthalazol,REVIEW,,Context reviewed; source verification required before normalization.
+phtirus,REVIEW,,Context reviewed; source verification required before normalization.
+pictus,REVIEW,,Context reviewed; source verification required before normalization.
+pipolphen,REVIEW,,Context reviewed; source verification required before normalization.
+pirilenum,REVIEW,,Context reviewed; source verification required before normalization.
+pirogov,REVIEW,,Context reviewed; source verification required before normalization.
+plantari,REVIEW,,Context reviewed; source verification required before normalization.
+plaqueshaped,REVIEW,,Context reviewed; source verification required before normalization.
+plasmablastic,REVIEW,,Context reviewed; source verification required before normalization.
+plasmablasts,REVIEW,,Context reviewed; source verification required before normalization.
+plasmacytes,REVIEW,,Context reviewed; source verification required before normalization
+plasmoblasts,REVIEW,,Context reviewed; source verification required before normalization.
+plasmocoagulase,REVIEW,,Context reviewed; source verification required before normalization.
+plasmocytes,REVIEW,,Unrecognized lexical token; verify against source
+plasmodiae,REVIEW,,Context reviewed; source verification required before normalization.
+plasmodiums,REVIEW,,Context reviewed; source verification required before normalization.
+plasturgie,VALID,,"Accepted as KROK/source-specific medical, pharmacological, scientific, or project term."
+platyphyllin,REVIEW,,Context reviewed; source verification required before normalization.
+plephora,REVIEW,,Unrecognized lexical token; verify against source
+plephoric,REVIEW,,Context reviewed; source verification required before normalization.
+ploskirev,REVIEW,,Context reviewed; source verification required before normalization.
+ploskyrev,REVIEW,,Context reviewed; source verification required before normalization.
+pneumofibrosis,VALID,,Valid medical term
+pneumonie,REVIEW,,Context reviewed; source verification required before normalization.
+pneumosclerosis,VALID,,Valid medical term
+pnmary,REVIEW,,Context reviewed; source verification required before normalization.
+poisoni-ng,REVIEW,poisoning,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+polessye,REVIEW,,Context reviewed; source verification required before normalization.
+policiq,REVIEW,,Context reviewed; source verification required before normalization.
+policis,REVIEW,,Context reviewed; source verification required before normalization.
+polychromatophils,REVIEW,,Context reviewed; source verification required before normalization
+polyomaviruses,VALID,,"Accepted as KROK/source-specific medical, pharmacological, scientific, or project term."
+poorlylocalized,REVIEW,,Unrecognized lexical token; verify against source
+popov,REVIEW,,Context reviewed; source verification required before normalization.
+posi-tive,REVIEW,positive,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+positi-ve,REVIEW,positive,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+postenor,REVIEW,,Context reviewed; source verification required before normalization.
+posteri-or,REVIEW,posterior,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+postishemic,REVIEW,,Unrecognized lexical token; verify against source
+postlysosomes,REVIEW,,Context reviewed; source verification required before normalization.
+posttranslative,REVIEW,,Context reviewed; source verification required before normalization.
+ppreliminary,REVIEW,,Context reviewed; source verification required before normalization.
+praegastrica,REVIEW,,Context reviewed; source verification required before normalization.
+praimary,REVIEW,,Context reviewed; source verification required before normalization.
+prasosin,REVIEW,,Context reviewed; source verification required before normalization.
+prazosinum,REVIEW,,Context reviewed; source verification required before normalization.
+preagony,REVIEW,,Context reviewed; source verification required before normalization
+precipitaion,REVIEW,,Context reviewed; source verification required before normalization.
+precomatose,REVIEW,,Context reviewed; source verification required before normalization.
+prenoxdiazine,REVIEW,,Context reviewed; source verification required before normalization.
+preparati-ons,REVIEW,preparations,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+prescri,REVIEW,,Context reviewed; source verification required before normalization.
+prescri-bed,REVIEW,prescribed,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+presense,REVIEW,,Context reviewed; source verification required before normalization.
+preshock,REVIEW,,Unrecognized lexical token; verify against source
+presribed,REVIEW,,Context reviewed; source verification required before normalization.
+prestart,REVIEW,,Context reviewed; source verification required before normalization.
+pretacheal,REVIEW,,Context reviewed; source verification required before normalization.
+prethreshold,REVIEW,,Context reviewed; source verification required before normalization.
+pretracheale,REVIEW,,Context reviewed; source verification required before normalization.
+previsceral,REVIEW,,Context reviewed; source verification required before normalization.
+primari-ly,LIKELY_TYPO,primarily,Probable PDF hyphenation artifact
+primase,REVIEW,,Context reviewed; source verification required before normalization.
+proli-feration,REVIEW,proliferation,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+promedol,VALID,,"Accepted as KROK/source-specific medical, pharmacological, scientific, or project term."
+promonocytes,REVIEW,,Context reviewed; source verification required before normalization.
+promyelocytes,VALID,,Valid medical/scientific term in context
+proopiomelanocortin,REVIEW,,Context reviewed; source verification required before normalization.
+propranalol,REVIEW,,Context reviewed; source verification required before normalization.
+proprioreceptors,REVIEW,,Context reviewed; source verification required before normalization.
+proscrin,REVIEW,,Context reviewed; source verification required before normalization.
+proserin,VALID,,"Accepted as KROK/source-specific medical, pharmacological, scientific, or project term."
+proserine,REVIEW,,Context reviewed; source verification required before normalization.
+proteinsynthesis,REVIEW,,Context reviewed; source verification required before normalization.
+prothromboplastin,REVIEW,,Context reviewed; source verification required before normalization.
+pryce,REVIEW,,Context reviewed; source verification required before normalization.
+pseudocovered,REVIEW,,Context reviewed; source verification required before normalization.
+pseudoerosion,REVIEW,,Context reviewed; source verification required before normalization.
+pseudolobules,REVIEW,,Context reviewed; source verification required before normalization.
+pseudonutmeg,REVIEW,,Context reviewed; source verification required before normalization.
+psychoemotional,REVIEW,,Unrecognized lexical token; verify against source
+pulmonological,REVIEW,,Context reviewed; source verification required before normalization
+pumbing,LIKELY_TYPO,pumping,Probable spelling error
+punction,REVIEW,,Context reviewed; source verification required before normalization.
+pyoinflammatory,REVIEW,,Context reviewed; source verification required before normalization.
+pyracetam,REVIEW,,Context reviewed; source verification required before normalization.
+pyrimidin,REVIEW,,Context reviewed; source verification required before normalization.
+pyrroxanum,REVIEW,,Context reviewed; source verification required before normalization.
+quanity,LIKELY_TYPO,quantity,Probable spelling/OCR error
+radiati-ng,REVIEW,radiating,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+raspiratory,REVIEW,,Context reviewed; source verification required before normalization.
+rcabsorption,LIKELY_TYPO,reabsorption,Probable spelling/OCR error
+rcinlorccmcnt,REVIEW,,Context reviewed; source verification required before normalization.
+reacti-on,REVIEW,reaction,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+reacti-ons,REVIEW,reactions,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+reagine,REVIEW,,Context reviewed; source verification required before normalization.
+recei-ved,REVIEW,,Unrecognized lexical token; verify against source
+redbonemarrow,REVIEW,,Context reviewed; source verification required before normalization.
+reflectory,REVIEW,,Possible nonstandard wording or typo
+regon,REVIEW,,Context reviewed; source verification required before normalization.
+rehydron,REVIEW,,Context reviewed; source verification required before normalization.
+reperfusion,VALID,,Valid medical term
+resently,REVIEW,,Context reviewed; source verification required before normalization
+reserpin,REVIEW,,Context reviewed; source verification required before normalization.
+resilts,REVIEW,,Context reviewed; source verification required before normalization.
+respi-ration,REVIEW,,Unrecognized lexical token; verify against source
+respi-ratory,REVIEW,respiratory,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+respiratoty,LIKELY_TYPO,respiratory,Probable spelling error
+responce,LIKELY_TYPO,response,Probable spelling error
+responces,REVIEW,,Context reviewed; source verification required before normalization.
+restrictase,REVIEW,,Context reviewed; source verification required before normalization.
+retabolil,VALID,,"Accepted as KROK/source-specific medical, pharmacological, scientific, or project term."
+retrovi-scerale,REVIEW,retroviscerale,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+rezul,REVIEW,,Context reviewed; source verification required before normalization.
+reßectory,REVIEW,,OCR character corruption detected; verify source before correction
+reßectrory,REVIEW,,OCR character corruption detected; verify source before correction
+reßex,REVIEW,,Context reviewed; source verification required before normalization.
+reßexes,REVIEW,,Context reviewed; source verification required before normalization.
+rh-negative,REVIEW,,Context reviewed; source verification required before normalization.
+rh-positive,REVIEW,,Context reviewed; source verification required before normalization.
+rhini-tis,REVIEW,rhinitis,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+ri-ght,REVIEW,right,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+ri-ha,REVIEW,,Context reviewed; source verification required before normalization.
+riased,REVIEW,,Context reviewed; source verification required before normalization.
+riboßavin,REVIEW,,Context reviewed; source verification required before normalization.
+richomonas,REVIEW,,Context reviewed; source verification required before normalization.
+riedel,REVIEW,,Unrecognized lexical token; verify against source
+romanovskygiemsa,REVIEW,,Context reviewed; source verification required before normalization.
+roteus,REVIEW,,Context reviewed; source verification required before normalization.
+rypanosoma,REVIEW,,Context reviewed; source verification required before normalization.
+sabstance,REVIEW,,Context reviewed; source verification required before normalization.
+saginatus,REVIEW,,Context reviewed; source verification required before normalization.
+samarqand,REVIEW,,Context reviewed; source verification required before normalization.
+saught,REVIEW,,Context reviewed; source verification required before normalization.
+scgmcntal,REVIEW,,Context reviewed; source verification required before normalization.
+schizocytes,REVIEW,,Unrecognized lexical token; verify against source
+scin,REVIEW,,Context reviewed; source verification required before normalization.
+sedati-ve,REVIEW,sedative,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+segmentonuclear,REVIEW,,Context reviewed; source verification required before normalization
+selfadministered,REVIEW,,Context reviewed; source verification required before normalization.
+sensibilized,REVIEW,,Context reviewed; source verification required before normalization
+sensoepithelial,REVIEW,,Context reviewed; source verification required before normalization.
+sensori,REVIEW,,Context reviewed; source verification required before normalization.
+senstive,REVIEW,,Context reviewed; source verification required before normalization.
+serotonine,REVIEW,,Context reviewed; source verification required before normalization.
+serousmucous,REVIEW,,Context reviewed; source verification required before normalization.
+serratiform,REVIEW,,Context reviewed; source verification required before normalization.
+seudomonas,REVIEW,,Context reviewed; source verification required before normalization.
+si-gnificant,REVIEW,significant,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+si-gns,REVIEW,,Unrecognized lexical token; verify against source
+sibazon,REVIEW,,Context reviewed; source verification required before normalization.
+sickpeople,REVIEW,,Context reviewed; source verification required before normalization.
+sidé,REVIEW,,Context reviewed; source verification required before normalization.
+siechenov,REVIEW,,Context reviewed; source verification required before normalization.
+siliborum,REVIEW,,Context reviewed; source verification required before normalization.
+simptoms,REVIEW,,Context reviewed; source verification required before normalization.
+singlelayer,REVIEW,,Context reviewed; source verification required before normalization.
+sino-atrial,REVIEW,,Unrecognized lexical token; verify against source
+sinusoidhemocapillary,REVIEW,,Context reviewed; source verification required before normalization.
+sistem,REVIEW,,Context reviewed; source verification required before normalization.
+sitc,REVIEW,,Context reviewed; source verification required before normalization.
+skinrash,REVIEW,,Context reviewed; source verification required before normalization.
+solifugae,REVIEW,,Context reviewed; source verification required before normalization.
+soluti-ons,REVIEW,,Unrecognized lexical token; verify against source
+somatoliberin,REVIEW,,Context reviewed; source verification required before normalization.
+someti-mes,REVIEW,sometimes,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+sorface,REVIEW,,Context reviewed; source verification required before normalization.
+spamolytics,REVIEW,,Context reviewed; source verification required before normalization.
+spesify,REVIEW,,Context reviewed; source verification required before normalization.
+sphate,REVIEW,,Context reviewed; source verification required before normalization.
+sphinctct,REVIEW,,Context reviewed; source verification required before normalization.
+sphingolipids,REVIEW,,Context reviewed; source verification required before normalization.
+spinalcord,REVIEW,,Context reviewed; source verification required before normalization.
+spinalnerveof,REVIEW,,Context reviewed; source verification required before normalization.
+spinarum,REVIEW,,Context reviewed; source verification required before normalization.
+spinned,REVIEW,,Context reviewed; source verification required before normalization.
+spinothalarnic,REVIEW,,Context reviewed; source verification required before normalization.
+spiralized,REVIEW,,Context reviewed; source verification required before normalization.
+spirochaetae,VALID,,"Accepted as KROK/source-specific medical, pharmacological, scientific, or project term."
+splemc,REVIEW,,Context reviewed; source verification required before normalization.
+sporification,REVIEW,,Context reviewed; source verification required before normalization.
+sprctding,REVIEW,,Context reviewed; source verification required before normalization.
+sromach,LIKELY_TYPO,stomach,Probable spelling/OCR error
+sscl,REVIEW,,Context reviewed; source verification required before normalization.
+staminic,REVIEW,,Context reviewed; source verification required before normalization.
+stapedins,REVIEW,,Context reviewed; source verification required before normalization.
+sti-muli,REVIEW,,Unrecognized lexical token; verify against source
+stratilied,REVIEW,,Context reviewed; source verification required before normalization.
+streatorrhea,REVIEW,,Context reviewed; source verification required before normalization.
+streprococcic,REVIEW,,Context reviewed; source verification required before normalization.
+streptocide,REVIEW,,Context reviewed; source verification required before normalization.
+striatopallidal,REVIEW,,Context reviewed; source verification required before normalization.
+strophanthine,REVIEW,,Context reviewed; source verification required before normalization.
+stumulate,LIKELY_TYPO,stimulate,Probable spelling/OCR error
+stumulation,REVIEW,,Context reviewed; source verification required before normalization.
+subfebrile,REVIEW,,Context reviewed; source verification required before normalization
+sufferi-ng,REVIEW,suffering,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+sulfalen,REVIEW,,Context reviewed; source verification required before normalization.
+sulfanamides,REVIEW,,Unrecognized lexical token; verify against source
+sulfhydric,REVIEW,,Context reviewed; source verification required before normalization.
+sulfocamphocainum,REVIEW,,Context reviewed; source verification required before normalization.
+sulfocamphoric,REVIEW,,Context reviewed; source verification required before normalization.
+superdistended,REVIEW,,Context reviewed; source verification required before normalization.
+superficiali,REVIEW,,Context reviewed; source verification required before normalization.
+superi-or,REVIEW,superior,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+superinfeclion,REVIEW,,Context reviewed; source verification required before normalization.
+superlaryngeal,REVIEW,,Context reviewed; source verification required before normalization.
+suppressi-on,LIKELY_TYPO,suppression,Probable PDF hyphenation artifact
+suppurati-ng,REVIEW,suppurating,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+supracutaneous,REVIEW,,Context reviewed; source verification required before normalization.
+supramarginalis,REVIEW,,Context reviewed; source verification required before normalization.
+suprapiriforme,REVIEW,,Context reviewed; source verification required before normalization.
+suprastin,VALID,,"Accepted as KROK/source-specific medical, pharmacological, scientific, or project term."
+supression,REVIEW,,Context reviewed; source verification required before normalization.
+supressor,REVIEW,,Context reviewed; source verification required before normalization.
+surfacehas,REVIEW,,Context reviewed; source verification required before normalization.
+surfase,REVIEW,,Context reviewed; source verification required before normalization.
+sustac,REVIEW,,Context reviewed; source verification required before normalization.
+sustakforte,REVIEW,,Context reviewed; source verification required before normalization.
+sustenocytes,REVIEW,,Context reviewed; source verification required before normalization.
+swelli-ng,REVIEW,,Unrecognized lexical token; verify against source
+sydnocarb,REVIEW,,Context reviewed; source verification required before normalization.
+syffering,REVIEW,,Context reviewed; source verification required before normalization.
+sympatheticadrenal,REVIEW,,Verify terminology against source
+synaflan,REVIEW,,Context reviewed; source verification required before normalization.
+syncumar,REVIEW,,Context reviewed; source verification required before normalization.
+synthesi-ze,REVIEW,synthesize,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+synyhesis,REVIEW,,Context reviewed; source verification required before normalization.
+t-lymphocytcs,REVIEW,,Context reviewed; source verification required before normalization.
+t-lymphocytes,REVIEW,,Context reviewed; source verification required before normalization
+t-lymphocytes-supressors,REVIEW,,Context reviewed; source verification required before normalization.
+tabte,REVIEW,,Context reviewed; source verification required before normalization.
+tachyarrythmia,REVIEW,,Context reviewed; source verification required before normalization.
+tachypnoe,REVIEW,,Verify source terminology/spelling
+tactors,REVIEW,,Context reviewed; source verification required before normalization.
+taeniarhynchosis,REVIEW,,Context reviewed; source verification required before normalization.
+talkati-veness,REVIEW,talkativeness,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+tavegil,REVIEW,,Context reviewed; source verification required before normalization.
+tavegyl,REVIEW,,Context reviewed; source verification required before normalization.
+techni-que,REVIEW,technique,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+tehran,REVIEW,,Context reviewed; source verification required before normalization.
+tesncuiaris,REVIEW,,Context reviewed; source verification required before normalization.
+tetracocci,REVIEW,,Context reviewed; source verification required before normalization.
+teturamum,REVIEW,,Context reviewed; source verification required before normalization.
+tgyroxin,LIKELY_TYPO,thyroxin,High-confidence lexical/OCR correction candidate; verify before applying.
+thafis,REVIEW,,Context reviewed; source verification required before normalization.
+thanatogenesis,REVIEW,,Context reviewed; source verification required before normalization.
+thctptace,REVIEW,,Context reviewed; source verification required before normalization.
+theml,REVIEW,,Context reviewed; source verification required before normalization.
+thermo,REVIEW,,Context reviewed; source verification required before normalization.
+thermoragulation,LIKELY_TYPO,thermoregulation,Probable spelling error
+thi-rst,REVIEW,thirst,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+thiminase,REVIEW,,Context reviewed; source verification required before normalization.
+thinlimbs,REVIEW,,Context reviewed; source verification required before normalization.
+thirdpregnancy,REVIEW,,Context reviewed; source verification required before normalization.
+thoracodiaphragmatic,REVIEW,,Context reviewed; source verification required before normalization.
+throchanterica,REVIEW,,Context reviewed; source verification required before normalization.
+thromboembolas,REVIEW,,Context reviewed; source verification required before normalization.
+thromboemboly,REVIEW,,Context reviewed; source verification required before normalization.
+thrombs,REVIEW,,Context reviewed; source verification required before normalization.
+throracodiaphragmatic,REVIEW,,Context reviewed; source verification required before normalization
+throracodorsal,REVIEW,,Context reviewed; source verification required before normalization.
+thymalin,REVIEW,,Context reviewed; source verification required before normalization.
+thymomegaly,REVIEW,,Context reviewed; source verification required before normalization.
+thyreoglobulin,REVIEW,,Context reviewed; source verification required before normalization.
+thyreotoxicosis,REVIEW,,Context reviewed; source verification required before normalization
+thyroliberin,VALID,,Valid medical term
+thyrosine,REVIEW,,Context reviewed; source verification required before normalization.
+ti-ssue,LIKELY_TYPO,tissue,Probable PDF/OCR hyphenation artifact
+tochondria,REVIEW,,Context reviewed; source verification required before normalization.
+tocolytics,REVIEW,,Context reviewed; source verification required before normalization.
+tonsi-ls,REVIEW,tonsils,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+tonsilli-tis,REVIEW,,Unrecognized lexical token; verify against source
+totransfer,REVIEW,,Context reviewed; source verification required before normalization.
+toxicoinfection,REVIEW,,Context reviewed; source verification required before normalization.
+toxicologi-cal,REVIEW,toxicological,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+toxigenity,REVIEW,,Context reviewed; source verification required before normalization.
+toxoplasms,REVIEW,,Context reviewed; source verification required before normalization.
+trabecules,REVIEW,,Context reviewed; source verification required before normalization
+tranfer,REVIEW,,Context reviewed; source verification required before normalization.
+transaminatin,REVIEW,,Context reviewed; source verification required before normalization.
+transcorrin,REVIEW,,Context reviewed; source verification required before normalization.
+transmiltion,REVIEW,,Context reviewed; source verification required before normalization.
+traumatologi-cal,REVIEW,traumatological,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+triacylglycerides,REVIEW,,Context reviewed; source verification required before normalization.
+triacylglycerols,VALID,,Valid medical/scientific term in context
+triatomine,REVIEW,,Context reviewed; source verification required before normalization.
+triftazine,REVIEW,,Context reviewed; source verification required before normalization.
+trimeperidine,REVIEW,,Context reviewed; source verification required before normalization.
+tripsin,LIKELY_TYPO,trypsin,Probable spelling error
+trombus,REVIEW,,Context reviewed; source verification required before normalization.
+tructs,REVIEW,,Context reviewed; source verification required before normalization.
+ttrlrv,REVIEW,,Context reviewed; source verification required before normalization.
+tuberculine,REVIEW,,Context reviewed; source verification required before normalization.
+tuberkculosis,REVIEW,,Context reviewed; source verification required before normalization.
+tuberulosis,REVIEW,,Context reviewed; source verification required before normalization.
+tubocurarin,REVIEW,,Context reviewed; source verification required before normalization.
+tularin,REVIEW,,Context reviewed; source verification required before normalization.
+tularinum,REVIEW,,Context reviewed; source verification required before normalization.
+tumourous,REVIEW,,Context reviewed; source verification required before normalization.
+tuncus,REVIEW,,Context reviewed; source verification required before normalization.
+turnersyndrome,REVIEW,,Context reviewed; source verification required before normalization.
+twilightvision,REVIEW,,Context reviewed; source verification required before normalization.
+typhusinduced,REVIEW,,Context reviewed; source verification required before normalization.
+ubiqui-none,REVIEW,ubiquinone,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+uconscious,LIKELY_TYPO,unconscious,Probable spelling error
+udp-glucuronil,REVIEW,udpglucuronil,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+udpglucoronyltransferase,REVIEW,,Context reviewed; source verification required before normalization.
+ukraine,REVIEW,,Context reviewed; source verification required before normalization.
+ukrainian,REVIEW,,Context reviewed; source verification required before normalization.
+ulceropolyposa,REVIEW,,Context reviewed; source verification required before normalization.
+ulsation,REVIEW,,Context reviewed; source verification required before normalization.
+umng,REVIEW,,Context reviewed; source verification required before normalization.
+undecremental,REVIEW,,Context reviewed; source verification required before normalization.
+undena,REVIEW,,Context reviewed; source verification required before normalization.
+ungergoes,REVIEW,,Context reviewed; source verification required before normalization.
+ural,REVIEW,,Context reviewed; source verification required before normalization.
+urarchus,REVIEW,,Context reviewed; source verification required before normalization.
+urinoculturc,REVIEW,,Context reviewed; source verification required before normalization.
+urolesan,REVIEW,,Context reviewed; source verification required before normalization.
+urosulfanum,REVIEW,,Context reviewed; source verification required before normalization.
+uv-irradiated,REVIEW,uvirradiated,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+vaccin,REVIEW,,Context reviewed; source verification required before normalization.
+vagoinsular,REVIEW,,Context reviewed; source verification required before normalization.
+validol,REVIEW,,Context reviewed; source verification required before normalization.
+vasodilatating,REVIEW,,Context reviewed; source verification required before normalization.
+vasopresine,REVIEW,,Context reviewed; source verification required before normalization.
+vatet,REVIEW,,Context reviewed; source verification required before normalization.
+veilonella,REVIEW,,Context reviewed; source verification required before normalization.
+veneral,REVIEW,,Context reviewed; source verification required before normalization.
+venoconstriction,REVIEW,,Context reviewed; source verification required before normalization
+venti-lation,REVIEW,,Unrecognized lexical token; verify against source
+ventncles,REVIEW,,Context reviewed; source verification required before normalization.
+ventricale,REVIEW,,Context reviewed; source verification required before normalization.
+vero,REVIEW,,Context reviewed; source verification required before normalization.
+verocai,REVIEW,,Context reviewed; source verification required before normalization.
+verterbralis,REVIEW,,Context reviewed; source verification required before normalization.
+vesels,REVIEW,,Context reviewed; source verification required before normalization.
+vestibuloreceptors,REVIEW,,Context reviewed; source verification required before normalization.
+vgilehra,REVIEW,,Context reviewed; source verification required before normalization.
+vi-diagnosticum,REVIEW,vidiagnosticum,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+vi-sited,REVIEW,visited,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+vi-vii,REVIEW,vivii,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+vicasol,VALID,,"Accepted as KROK/source-specific medical, pharmacological, scientific, or project term."
+vicasolum,REVIEW,,Context reviewed; source verification required before normalization.
+viii-ix,REVIEW,viiiix,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+vikasolum,REVIEW,,Context reviewed; source verification required before normalization.
+vincent,REVIEW,,Context reviewed; source verification required before normalization.
+vinpocetine,REVIEW,,Context reviewed; source verification required before normalization.
+visceralhemocapillary,REVIEW,,Context reviewed; source verification required before normalization.
+viscerodermal,REVIEW,,Unrecognized lexical token; verify against source
+viscerovisceral,REVIEW,,Unrecognized lexical token; verify against source
+visi-on,REVIEW,vision,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+vity,REVIEW,,Context reviewed; source verification required before normalization.
+voli-tional,REVIEW,,Unrecognized lexical token; verify against source
+volutine,REVIEW,,Context reviewed; source verification required before normalization.
+vomiti-ng,REVIEW,,Unrecognized lexical token; verify against source
+wagncr-unvcrricht,REVIEW,,Context reviewed; source verification required before normalization
+waii,REVIEW,,Context reviewed; source verification required before normalization.
+waiis,REVIEW,,Context reviewed; source verification required before normalization.
+warfarine,REVIEW,,Context reviewed; source verification required before normalization.
+wasaccelerated,REVIEW,,Unrecognized lexical token; verify against source
+water-electrolite,LIKELY_TYPO,water-electrolyte,Probable spelling error
+waterelectrolytic,REVIEW,,Unrecognized lexical token; verify against source
+wemicke-korsakoff,REVIEW,wemickekorsakoff,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+whaf,REVIEW,,Context reviewed; source verification required before normalization.
+wharton,REVIEW,,Context reviewed; source verification required before normalization.
+whath,REVIEW,,Context reviewed; source verification required before normalization.
+whatisthesourceofinvasioninthiscase,REVIEW,,Context reviewed; source verification required before normalization.
+whatsequence,REVIEW,,Context reviewed; source verification required before normalization.
+whcrc,REVIEW,,Context reviewed; source verification required before normalization.
+wheeupon,REVIEW,,Context reviewed; source verification required before normalization
+whi-ch,REVIEW,,Unrecognized lexical token; verify against source
+whi-te,REVIEW,white,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+whiti-sh,REVIEW,whitish,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+whixh,REVIEW,,Context reviewed; source verification required before normalization.
+wi-th,LIKELY_TYPO,with,Probable PDF hyphenation artifact
+worki-ng,REVIEW,working,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+x-linked,REVIEW,,Context reviewed; source verification required before normalization
+x-linkeddominant,REVIEW,,Context reviewed; source verification required before normalization.
+x-linkedrecessive,REVIEW,,Context reviewed; source verification required before normalization.
+x-ray,REVIEW,,Context reviewed; source verification required before normalization
+x-rayexmination,REVIEW,,Context reviewed; source verification required before normalization.
+xanthome,VALID,,"Accepted as KROK/source-specific medical, pharmacological, scientific, or project term."
+xantinol,REVIEW,,Context reviewed; source verification required before normalization.
+y-linkcd,REVIEW,,Context reviewed; source verification required before normalization.
+ycar,REVIEW,,Context reviewed; source verification required before normalization.
+ycar-old,LIKELY_TYPO,year-old,Probable spelling/OCR error
+yearold,REVIEW,,Context reviewed; source verification required before normalization.
+yellowcolored,REVIEW,,Context reviewed; source verification required before normalization.
+yer-old,REVIEW,yerold,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+yperchromic,REVIEW,,Context reviewed; source verification required before normalization.
+zichl-nielsen,REVIEW,zichlnielsen,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+ziehl-neclsen,REVIEW,ziehlneclsen,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+ziel-neelsen,REVIEW,zielneelsen,Possible PDF mid-word hyphenation. Proposed joined form requires source verification.
+zoneis,REVIEW,,Context reviewed; source verification required before normalization.
+zygonema,REVIEW,,Context reviewed; source verification required before normalization.
+zygornatic,REVIEW,,Context reviewed; source verification required before normalization.
+ßabby,REVIEW,,OCR character corruption detected; verify source before correction
+ßaccid,REVIEW,,Context reviewed; source verification required before normalization.
+ßowering,REVIEW,,Context reviewed; source verification required before normalization.
+ßuid,REVIEW,,OCR character corruption detected; verify source before correction
+крок,REVIEW,,Cyrillic KROK token; preserve until source/context policy is decided
