@@ -49,7 +49,7 @@
     "subject": "Pathophysiology",
     "year": 2023,
     "topic": "RENAL PATHOPHYSIOLOGY",
-    "question": "A patient with chronic renal failure presents with reduced inulin clearance of ml/min. The following renal function is disturbed:",
+    "question": "A patient with chronic renal failure presents with reduced inulin clearance of 60 ml/min. The following renal function is disturbed:",
     "answers": [
       "Glomerular filtration",
       "Tubular secretion",
@@ -111,8 +111,8 @@
     "topic": "THE GASTROINTESTINAL TRACT",
     "question": "A patient has addressed a doctor with complaint of gastric ulcer exacerbation. The following membrane cytoreceptors should be blocked in the course of the patient’s complex therapy:",
     "answers": [
-      "Н2-histamine",
-      "Н1-histamine",
+      "H2-histamine",
+      "H1-histamine",
       "α -adrenergic receptor",
       "β 1-adrenergic receptor",
       "β 2-adrenergic receptor"
@@ -303,7 +303,7 @@
     "id": 21,
     "subject": "Pathophysiology",
     "year": 2023,
-    "topic": "pathophysiology of aCID-base BALANCE",
+    "topic": "pathophysiology of acid-base BALANCE",
     "question": "A 30-year-old comatous patient with type I diabetes mellitus had been admitted to a hospital. Laboratory tests revealed hyperglycemia, ketonemia. Which of the following metabolic disorders might be found in this patient?",
     "answers": [
       "Metabolic acidosis",
@@ -1069,7 +1069,7 @@
     "subject": "Pathophysiology",
     "year": 2016,
     "topic": "blood PATHOPHYSIOLOGY",
-    "question": "A 59-year-old woman has been hospiali-zed in a surgical ward due to exacerbation of chronic osteomyelitis of the left shin. Blood test: leukocytes - 15, 0 · 109/l. Leukogram: myelocytes - 0%, metamyelocytes - 8%, stab neutrophils - 28%, segmented neutrophils - 32%, lymphocytes - 29%, monocytes - 3%. Such blood count would be called:",
+    "question": "A 59-year-old woman has been hospitalized in a surgical ward due to exacerbation of chronic osteomyelitis of the left shin. Blood test: leukocytes - 15, 0 · 109/l. Leukogram: myelocytes - 0%, metamyelocytes - 8%, stab neutrophils - 28%, segmented neutrophils - 32%, lymphocytes - 29%, monocytes - 3%. Such blood count would be called:",
     "answers": [
       "Regenerative left shift",
       "Right shift",
@@ -2044,7 +2044,7 @@
     "subject": "Pathophysiology",
     "year": 2014,
     "topic": "PATHOPHYSIOLOGY of cns",
-    "question": "During an animal experiment,surgical damage of certain brain structures has caused deep prolonged sleep. What structure is most likely to cause such condition, if damaged?",
+    "question": "During an animal experiment, surgical damage of certain brain structures has caused deep prolonged sleep. What structure is most likely to cause such condition, if damaged?",
     "answers": [
       "Reticular formation",
       "Basal ganglion",
@@ -2193,7 +2193,7 @@
     "id": 147,
     "subject": "Pathophysiology",
     "year": 2014,
-    "topic": "aLLERgy",
+    "topic": "Allergy",
     "question": "In allergic diseases, a dramaic increase in basophilic leukocyte number in patients’ blood is observed. This phenomenon is due to the following basophil function:",
     "answers": [
       "Participation of heparin and histamine in metabolism",
@@ -3729,7 +3729,7 @@
       "Central paralysis",
       "Peripheral paralysis",
       "Peripheral paresis",
-      "Reßectrory paresis",
+      "Reflectrory paresis",
       "Central paresis"
     ],
     "correct": 0
@@ -3964,7 +3964,7 @@
     "subject": "Pathophysiology",
     "year": 2009,
     "topic": "PATHOPHYSIOLOGY of vessels",
-    "question": "In response to a change in body position from horizontal to vertical blood circulation system develops reßectory pressor reaction. Which of the following is its compulsory component?",
+    "question": "In response to a change in body position from horizontal to vertical blood circulation system develops reflectory pressor reaction. Which of the following is its compulsory component?",
     "answers": [
       "Systemic constriction of the venous vessels",
       "Systemic dilatation of the arterial resistive vessels",
@@ -6169,7 +6169,7 @@
     "subject": "Pathophysiology",
     "year": 2019,
     "topic": "pathophysiology",
-    "question": "A 56-year-old man presents for a checkup. The patient says he has to urinate quite frequently, but denies any dysuria or pain on urination. Past medical history is significant for diabetes mellitus type 2 and hypertension, both managed medically. Current medications are metformin, aspirin, rosuvastatin, captopril and furosemide. Laboratory findings are significant for the following: Glycated Hemoglobin (Hb Ale) 8.0%, Fasting Blood Glucose - 12 mmol/L. His doctor decides to add glibenclamide to the therapy. Which of the following is the most likely mechanism of this drug’s action?",
+    "question": "A 56-year-old man presents for a checkup. The patient says he has to urinate quite frequently, but denies any dysuria or pain on urination. Past medical history is significant for diabetes mellitus type 2 and hypertension, both managed medically. Current medications are metformin, aspirin, rosuvastatin, captopril and furosemide. Laboratory findings are significant for the following: Glycated Hemoglobin (Hb A1c) 8.0%, Fasting Blood Glucose - 12 mmol/L. His doctor decides to add glibenclamide to the therapy. Which of the following is the most likely mechanism of this drug’s action?",
     "answers": [
       "Facilitation of glucose absorption in the intestine",
       "Stimulation of insulin release",
@@ -6177,7 +6177,7 @@
       "Inhibition of insulin release",
       "-"
     ],
-    "correct": 0
+    "correct": 1
   },
   {
     "id": 413,
@@ -6304,7 +6304,7 @@
     "subject": "Pathophysiology",
     "year": 2020,
     "topic": "pathophysiology",
-    "question": "Clinical blood testing is recommended to be done in the morning and on an empty stomach. What change in the blood composition is likely if a blood sample was obtained after a meal? .",
+    "question": "Clinical blood testing is recommended to be done in the morning and on an empty stomach. What change in the blood composition is likely if a blood sample was obtained after a meal?",
     "answers": [
       "Decreased erythrocyte count",
       "Increased number of plasma proteins",
@@ -7984,7 +7984,7 @@
     "subject": "Pathomorphology",
     "year": 2016,
     "topic": "Tuberculosis.",
-    "question": "A man is 28 years old. Histological investigation of the cervical lymph node revealed a change of its pattern due to proliferation of epithelioid, lymphoid cells and macrophages with horseshoe-shaped nuclei. In the center of some cell clusters there were non- structured light-pink areas with fragments of nuclei. What disease are these changes typical of?",
+    "question": "A man is 28 years old. Histological investigation of the cervical lymph node revealed a change of its pattern due to proliferation of epithelioid, lymphoid cells and macrophages with horseshoe-shaped nuclei. In the center of some cell clusters there were non-structured light-pink areas with fragments of nuclei. What disease are these changes typical of?",
     "answers": [
       "Tuberculosis",
       "Hodgkin’s disease",
@@ -8704,7 +8704,7 @@
     "subject": "Pathomorphology",
     "year": 2014,
     "topic": "The metabolic disorders and metabolism. The morphology of abnormal accumulation of endogenous and exogenous pigments. The morphology of disorders of mineral metabolism.",
-    "question": "A male patient is 28 years old. Histological study of a cervical lymph node revealed a change of its pattern due to the proliferation of epithelioid, lymphoid cells and macrophages having nuclei in form of a horseshoe. In the center of some cell clusters there were non- structured light-pink areas with fragments of nuclei. What disease are these changes typical for?",
+    "question": "A male patient is 28 years old. Histological study of a cervical lymph node revealed a change of its pattern due to the proliferation of epithelioid, lymphoid cells and macrophages having nuclei in form of a horseshoe. In the center of some cell clusters there were non-structured light-pink areas with fragments of nuclei. What disease are these changes typical for?",
     "answers": [
       "Tuberculosis",
       "Hodgkin’s disease",
@@ -8719,7 +8719,7 @@
     "subject": "Pathomorphology",
     "year": 2014,
     "topic": "Viral airborne infection. HIV infection. Rabies.",
-    "question": "During autopsy the following has been revealed: the meninges of the upper cerebral hemispheres are extremely plethoric, of yellow- green color and are soaked with purulent effluent. What kind of meningitis is characterised by such clinical presentations?",
+    "question": "During autopsy the following has been revealed: the meninges of the upper cerebral hemispheres are extremely plethoric, of yellow-green color and are soaked with purulent effluent. What kind of meningitis is characterised by such clinical presentations?",
     "answers": [
       "Meningococcal meningitis",
       "Tuberculous meningitis",
@@ -9769,7 +9769,7 @@
     "subject": "Pathomorphology",
     "year": 2011,
     "topic": "General doctrine of inflammation. Exudative inflammation. The morphology of exudative inflammation",
-    "question": "Autopsy of a patient who suffered from croupous pneumonia and died from pneumococcal sepsis revealed 900 ml of turbid greenish- yellow liquid in the right pleural cavity. Pleural leaves are dull, plephoric. Name the clinicopathological form of inflammation in the pleural cavity:",
+    "question": "Autopsy of a patient who suffered from croupous pneumonia and died from pneumococcal sepsis revealed 900 ml of turbid greenish-yellow liquid in the right pleural cavity. Pleural leaves are dull, plephoric. Name the clinicopathological form of inflammation in the pleural cavity:",
     "answers": [
       "Empyema",
       "Fibrinous inflammation",
@@ -10024,7 +10024,7 @@
     "subject": "Pathomorphology",
     "year": 2011,
     "topic": "General doctrine of inflammation. Exudative inflammation. The morphology of exudative inflammation",
-    "question": "A 49-year-old patient with croupous pneumonia died from pneumococcal septicemia. Autopsy revealed up to 700 ml of turbid greenish- yellow foul-smelling liquid in the left pleural cavity. The pleural leaflets were dull and plethoric. What form of pleural inflammation is it?",
+    "question": "A 49-year-old patient with croupous pneumonia died from pneumococcal septicemia. Autopsy revealed up to 700 ml of turbid greenish-yellow foul-smelling liquid in the left pleural cavity. The pleural leaflets were dull and plethoric. What form of pleural inflammation is it?",
     "answers": [
       "Empyema",
       "Chronic abscess",
@@ -10225,7 +10225,7 @@
       "Tuberculosis",
       "Bronchopneumonia",
       "Interstitial pneumonia",
-      "PneumoFIbrosis"
+      "Pneumofibrosis"
     ],
     "correct": 0
   },
@@ -10249,7 +10249,7 @@
     "subject": "Pathomorphology",
     "year": 2009,
     "topic": "Systemic connective tissue disease with autoimmunization.",
-    "question": "Autopsy of a 49-year-old woman who died from chronic renal insufficiency, revealed: kidneys were dense, reduced, multicoloured, with haemorrhagic areas. Microscopic examination revealed some hematoxylin bodies in the nuclei of the renal tubule epithelium; \"wire- loop\"thickening of the glomerular capillary basement membrane; here and there in the capillaries some hyaline thrombi and foci of FIbrinoid necrosis were present. What is the most likely diagnosis?",
+    "question": "Autopsy of a 49-year-old woman who died from chronic renal insufficiency, revealed: kidneys were dense, reduced, multicoloured, with haemorrhagic areas. Microscopic examination revealed some hematoxylin bodies in the nuclei of the renal tubule epithelium; \"wire-loop\"thickening of the glomerular capillary basement membrane; here and there in the capillaries some hyaline thrombi and foci of FIbrinoid necrosis were present. What is the most likely diagnosis?",
     "answers": [
       "Systemic lupus erythematosus",
       "Rheumatism",
@@ -10324,7 +10324,7 @@
     "subject": "Pathomorphology",
     "year": 2009,
     "topic": "Diseases of the esophagus, stomach and intestines.",
-    "question": "A pathologyhistology laboratory received a vermiform appendix up to 2,0 cm thick. Its serous membrane was pale, thick and covered with yellowish-green FIlms. The wall was flaccid, of grayishred colour. The appendix lumen was dilated and FIlled with yellowish- green substance. Histological examination revealed that the appendix wall was infiltrated with neutrophils. Specify the appendix disease:",
+    "question": "A pathologyhistology laboratory received a vermiform appendix up to 2,0 cm thick. Its serous membrane was pale, thick and covered with yellowish-green FIlms. The wall was flaccid, of grayishred colour. The appendix lumen was dilated and FIlled with yellowish-green substance. Histological examination revealed that the appendix wall was infiltrated with neutrophils. Specify the appendix disease:",
     "answers": [
       "Acute phlegmonous appendicitis",
       "Acute gangrenous appendicitis",
@@ -11254,7 +11254,7 @@
     "subject": "Pathomorphology",
     "year": 2010,
     "topic": "For pituitary disease. Diabetes mellitus. Diseases of the thyroid gland. Diseases of the adrenal glands.",
-    "question": "Examination of a 42 year old patient revealed a tumour of adenohypophysis. Objectively: the patient’s weight is 117 kg, he has moon- like hyperemic face, red-blue striae of skin distension on his belly. Osteoporosis and muscle dystrophy are present. AP is 210/140 mm Hg. What is the most probable diagnosis?",
+    "question": "Examination of a 42 year old patient revealed a tumour of adenohypophysis. Objectively: the patient’s weight is 117 kg, he has moon-like hyperemic face, red-blue striae of skin distension on his belly. Osteoporosis and muscle dystrophy are present. AP is 210/140 mm Hg. What is the most probable diagnosis?",
     "answers": [
       "Cushing’s disease",
       "Cushing’s syndrome",
@@ -11809,7 +11809,7 @@
     "subject": "Pathomorphology",
     "year": 2018,
     "topic": "Kidney disease.",
-    "question": "Renal examination shows the kidney to be swollen and plethoric, with easily removable capsule. Renal pelvis and calyces are dilated and filled with turbid urine; their mucosa is dull and has hemorrhagic foci. On section the renal tissue is variegated, there are yellow- gray areas surrounded with plethoric and hemorrhagic zone. What disease can be characterized by such results of macroscopic examination?",
+    "question": "Renal examination shows the kidney to be swollen and plethoric, with easily removable capsule. Renal pelvis and calyces are dilated and filled with turbid urine; their mucosa is dull and has hemorrhagic foci. On section the renal tissue is variegated, there are yellow-gray areas surrounded with plethoric and hemorrhagic zone. What disease can be characterized by such results of macroscopic examination?",
     "answers": [
       "Acute pyelonephritis",
       "Acute glomerulonephritis",
@@ -11959,7 +11959,7 @@
     "subject": "Pathomorphology",
     "year": 2018,
     "topic": "Tumors of the central nervous system",
-    "question": "A young woman presents with a tumor along the auditory nerve. The tumor is node-shaped, 3 cm in diameter, soft and elastic, pink- white colored, and has homogeneous structure. Microscopically the tumor contains bundles of cells with oval nuclei. These cellular fibrous bundles form regular structures made up of parallel rows of regularly oriented cells arranged in the form of a palisade with acellular homogeneous area in between (Verocay bodies). Name this type of tumor:",
+    "question": "A young woman presents with a tumor along the auditory nerve. The tumor is node-shaped, 3 cm in diameter, soft and elastic, pink-white colored, and has homogeneous structure. Microscopically the tumor contains bundles of cells with oval nuclei. These cellular fibrous bundles form regular structures made up of parallel rows of regularly oriented cells arranged in the form of a palisade with acellular homogeneous area in between (Verocay bodies). Name this type of tumor:",
     "answers": [
       "Neurinoma",
       "Malignant neurinoma",
@@ -12334,7 +12334,7 @@
     "subject": "Pathomorphology",
     "year": 2021,
     "topic": "Diseases of the endocrine glands",
-    "question": "Autopsy of the body of a 45- year-old woman, who was suffering from upper-body obesity, steroid-induced diabetes mellitus, arterial hypertension,and secondary ovarian dysfunction,shaws hypertrichosis, hirsutism, and striae on the skin of the thighs and abdomen. In the anterior part to the pituitary gland, there is a tumor (microscopically it is a basophilic adenoma). In the adrenalglands, hyperplasia of the fascicular zoneis observed. What diagnosis is the most likely?",
+    "question": "Autopsy of the body of a 45- year-old woman, who was suffering from upper-body obesity, steroid-induced diabetes mellitus, arterial hypertension, and secondary ovarian dysfunction,shaws hypertrichosis, hirsutism, and striae on the skin of the thighs and abdomen. In the anterior part to the pituitary gland, there is a tumor (microscopically it is a basophilic adenoma). In the adrenalglands, hyperplasia of the fascicular zoneis observed. What diagnosis is the most likely?",
     "answers": [
       "Cushing disease",
       "Cushing syndrome",
@@ -12453,7 +12453,7 @@
     "id": 831,
     "subject": "Pathomorphology",
     "year": 2021,
-    "topic": "Diseaseы of the endocrine glands",
+    "topic": "Diseases of the endocrine glands",
     "question": "When examining a biopsy material obtained from the thyroid gland, the pathologist discovered lymphocyte infiltration of the thyroid tissues and destruction of the parenchymal elements. Diffuse lymphocyte infiltration with lymphoid follicles was detected in the stroma. What is the most likely diagnosis?",
     "answers": [
       "Hashimoto’s thyroiditis (chronic lymphocytic thyroiditis)",
@@ -12544,7 +12544,7 @@
     "subject": "Pathomorphology",
     "year": null,
     "topic": "Diseases of kidny",
-    "question": "Autopsy of the body of a 40- year-old woman, who died of uremia, shows enlarged variegated kidneys. In the kidneys, the glomerular capillary membranes are thickened and resemble «wire loops»; there are foci of fibrinoid necrosis in their walls and hyaline thrombi in their lumina. In the nuclei, there arc hematoxylin bodies. In the heart, Libman- Sacks endocarditis is observed. What renal disorder is the most likely in this case?",
+    "question": "Autopsy of the body of a 40- year-old woman, who died of uremia, shows enlarged variegated kidneys. In the kidneys, the glomerular capillary membranes are thickened and resemble «wire loops»; there are foci of fibrinoid necrosis in their walls and hyaline thrombi in their lumina. In the nuclei, there arc hematoxylin bodies. In the heart, Libman-Sacks endocarditis is observed. What renal disorder is the most likely in this case?",
     "answers": [
       "Terminal glomerulonephritis",
       "Cholera glomerulonephritis",
@@ -14059,7 +14059,7 @@
     "subject": "Normal Phisiology",
     "year": 2014,
     "topic": "CENTRAL NERVOUS SYSTEM",
-    "question": "During an animal experiment,surgical damage of certain brain structures has caused deep prolonged sleep. What structure is most likely to cause such condition, if damaged?",
+    "question": "During an animal experiment, surgical damage of certain brain structures has caused deep prolonged sleep. What structure is most likely to cause such condition, if damaged?",
     "answers": [
       "Reticular formation",
       "Basal ganglion",
@@ -15754,7 +15754,7 @@
     "subject": "Normal Phisiology",
     "year": 2009,
     "topic": "CENTRAL NERVOUS SYSTEM",
-    "question": "During an experiment the myotatic reßex has been studied in frogs. After extension in a skeletal muscle its reßectory contraction was absent. The reason for it might be a dysfunction of the following receptors:",
+    "question": "During an experiment the myotatic reflex has been studied in frogs. After extension in a skeletal muscle its reflectory contraction was absent. The reason for it might be a dysfunction of the following receptors:",
     "answers": [
       "Muscle spindles",
       "Nociceptors",
@@ -15784,7 +15784,7 @@
     "subject": "Normal Phisiology",
     "year": 2009,
     "topic": "HAEMODYNAMICS",
-    "question": "In response to a change in body position from horizontal to vertical blood circulation system develops reßectory pressor reaction. Which of the following is its compulsory component?",
+    "question": "In response to a change in body position from horizontal to vertical blood circulation system develops reflectory pressor reaction. Which of the following is its compulsory component?",
     "answers": [
       "Systemic constriction of the venous vessels",
       "Systemic dilatation of the arterial resistive vessels",
@@ -16879,7 +16879,7 @@
     "subject": "Normal Phisiology",
     "year": 2018,
     "topic": "Blood",
-    "question": "A 25-year-old woman at her third pregnancy with impending miscarriage was brought to the hospital. What combination of Rh- factor of the mother and the fetus can be the cause of this condition?",
+    "question": "A 25-year-old woman at her third pregnancy with impending miscarriage was brought to the hospital. What combination of Rh-factor of the mother and the fetus can be the cause of this condition?",
     "answers": [
       "Mother Rh (-), fetus Rh (+)",
       "Mother Rh (-), fetus Rh (-)",
@@ -18604,7 +18604,7 @@
     "subject": "Microbiology",
     "year": 2017,
     "topic": "Retroviruses. HIV.",
-    "question": "T-lymphocytes are determined to be affected with HIV. In this case viral enzyme reverse transcriptase (RNA-dependent DNA- polymerase) catalyzes the synthesis of:",
+    "question": "T-lymphocytes are determined to be affected with HIV. In this case viral enzyme reverse transcriptase (RNA-dependent DNA-polymerase) catalyzes the synthesis of:",
     "answers": [
       "DNA based on the viral RNA matrix",
       "Viral RNA based on the DNA matrix",
@@ -19024,7 +19024,7 @@
     "subject": "Microbiology",
     "year": 2016,
     "topic": "Yersinia. Bacillus anthracis",
-    "question": "A worker of an agricultural enterprise had been suffering from an acute disease with aggravating intoxication signs, which resulted in his death. On autopsy: the spleen is enlarged, flaccid, dark cherry-red in the section, yields excessive pulp scrape. Soft meninges of fornix and base of the brain are edematous and saturated with blood (”cardinal’s cap”). Microscopically: serous- hemorrhagic inflammation of meninges and cerebral tissues. Make the diagnosis:",
+    "question": "A worker of an agricultural enterprise had been suffering from an acute disease with aggravating intoxication signs, which resulted in his death. On autopsy: the spleen is enlarged, flaccid, dark cherry-red in the section, yields excessive pulp scrape. Soft meninges of fornix and base of the brain are edematous and saturated with blood (”cardinal’s cap”). Microscopically: serous-hemorrhagic inflammation of meninges and cerebral tissues. Make the diagnosis:",
     "answers": [
       "Anthrax",
       "Tularemia",
@@ -19189,7 +19189,7 @@
     "subject": "Microbiology",
     "year": 2016,
     "topic": "Vibrio. Campylobacter. Helicobacter.",
-    "question": "Impression smear of mucosa biopsy material has been obtained from a patient with peptic ulcer disease of the stomach. Gram- negative arcuate bent microorganisms were detected, urease activity test was positive. What microorganisms were detected in the patient?",
+    "question": "Impression smear of mucosa biopsy material has been obtained from a patient with peptic ulcer disease of the stomach. Gram-negative arcuate bent microorganisms were detected, urease activity test was positive. What microorganisms were detected in the patient?",
     "answers": [
       "Helicobacter",
       "Spirochete",
@@ -19579,7 +19579,7 @@
     "subject": "Microbiology",
     "year": 2014,
     "topic": "Staphylococcus and streptococcus",
-    "question": "A 10-year-old child has painful swallowing, neck edema, temperature rise up to 39, 0o C, the whole body is covered with bright- red petechial rash. Back of the throat and tonsils are hyperemic, the tongue is crimson-colored. Tonsillar surface is covered with isolated grayish-colored necrosis nidi. What disease is it?",
+    "question": "A 10-year-old child has painful swallowing, neck edema, temperature rise up to 39, 0o C, the whole body is covered with bright-red petechial rash. Back of the throat and tonsils are hyperemic, the tongue is crimson-colored. Tonsillar surface is covered with isolated grayish-colored necrosis nidi. What disease is it?",
     "answers": [
       "Scarlet fever",
       "Meningococcal nasopharyngitis",
@@ -19624,7 +19624,7 @@
     "subject": "Microbiology",
     "year": 2014,
     "topic": "Methods of laboratory diagnosis of bacterial infections. Meningococcus and gonococcus",
-    "question": "A young woman suddenly developed fever up to 39o C accompanied by a strong headache. Examination revealed marked nuchal rigidity. Spinal puncture was performed. Gram-stained smear of cerebrospinal fluid contained many neutrophils and Gram- positive diplococci. What bacteria could be the cause of this disease?",
+    "question": "A young woman suddenly developed fever up to 39o C accompanied by a strong headache. Examination revealed marked nuchal rigidity. Spinal puncture was performed. Gram-stained smear of cerebrospinal fluid contained many neutrophils and Gram-positive diplococci. What bacteria could be the cause of this disease?",
     "answers": [
       "Neisseria meningitidis",
       "Streptococcus pneumonia",
@@ -20254,7 +20254,7 @@
     "subject": "Microbiology",
     "year": 2011,
     "topic": "corynebacteria. Pertussis",
-    "question": "During examination of a 6-year- old child a doctor revealed greyish films on the pharyngeal tonsils. Their removal provoked moderate haemorrhage. Bacterioscopy revealed gram-positive clublike bacteria. What symptoms will develop in this child within the next few days if no specific treatment is provided?",
+    "question": "During examination of a 6-year-old child a doctor revealed greyish films on the pharyngeal tonsils. Their removal provoked moderate haemorrhage. Bacterioscopy revealed gram-positive clublike bacteria. What symptoms will develop in this child within the next few days if no specific treatment is provided?",
     "answers": [
       "Toxic lesions of myocard, liver and kidney",
       "Pulmonary edema",
@@ -20464,7 +20464,7 @@
     "subject": "Microbiology",
     "year": 2011,
     "topic": "corynebacteria. Pertussis",
-    "question": "After inoculation of the material obtained from the pharynx of an angina patient onto the blood-tellurite agar, grey colonies could be observed. They were 4-5 mm in diameter, radially striated (in form of rosettes). Microscopical examination revealed gram- positive bacilli with clavate swollen ends arranged in form of wide-spread fingers. Identify these microorganisms:",
+    "question": "After inoculation of the material obtained from the pharynx of an angina patient onto the blood-tellurite agar, grey colonies could be observed. They were 4-5 mm in diameter, radially striated (in form of rosettes). Microscopical examination revealed gram-positive bacilli with clavate swollen ends arranged in form of wide-spread fingers. Identify these microorganisms:",
     "answers": [
       "Diphtheria corynebacteria",
       "Clostridium botulinum",
@@ -20689,7 +20689,7 @@
     "subject": "Microbiology",
     "year": 2008,
     "topic": "Staphylococci and streptococci",
-    "question": "Examination of a patient with pustular skin lesions allowed to isolate a causative agent that forms in the blood agar roundish yellow middle-sized colonies surrounded by haemolysis zone. Smears from the colonies contain irregularshaped clusters of gram- positive cocci. The culture is oxidase- and catalase-positive, ferments mannitol and synthesizes plasmocoagulase. What causative agent was isolated?",
+    "question": "Examination of a patient with pustular skin lesions allowed to isolate a causative agent that forms in the blood agar roundish yellow middle-sized colonies surrounded by haemolysis zone. Smears from the colonies contain irregularshaped clusters of gram-positive cocci. The culture is oxidase- and catalase-positive, ferments mannitol and synthesizes plasmocoagulase. What causative agent was isolated?",
     "answers": [
       "Staphylococcus aureus",
       "Streptococcus agalactiae",
@@ -21843,7 +21843,7 @@
     "id": 1457,
     "subject": "Microbiology",
     "year": 2019,
-    "topic": "Serological method of diagnostics. Serological tests for detection of antigens and antibodies. Serological tests for express- diagnostics. Diagnostic antigens. Diagnostic antisera.",
+    "topic": "Serological method of diagnostics. Serological tests for detection of antigens and antibodies. Serological tests for express-diagnostics. Diagnostic antigens. Diagnostic antisera.",
     "question": "A family has two children. The younger child is under a year. The child has developed spastic cough attacks. Similar clinical presentation was observed in the elder preschool child one month ago. The doctor suspects pertussis infection. What method enables retrospective diagnostics of this disease?",
     "answers": [
       "Serological",
@@ -24055,7 +24055,7 @@
       "Occipital lobe",
       "Temporal lobe",
       "Precentral gyrus",
-      "E.Cerebellum"
+      "E. Cerebellum"
     ],
     "correct": 0
   },
@@ -24130,7 +24130,7 @@
       "Colon transversum",
       "Colon descendens",
       "Colon sigmoideum",
-      "E.Caecum"
+      "E. Caecum"
     ],
     "correct": 0
   },
@@ -24459,8 +24459,8 @@
       "Pars descendens duodeni",
       "Pars horizontalis duodeni",
       "Pars ascendens duodeni",
-      "D.jejunum",
-      "E.Distal ileum"
+      "D. jejunum",
+      "E. Distal ileum"
     ],
     "correct": 0
   },
@@ -24489,8 +24489,8 @@
       "Crystalline lens",
       "Vitreous body",
       "Ciliary body",
-      "D.Cornea",
-      "E.Sclera"
+      "D. Cornea",
+      "E. Sclera"
     ],
     "correct": 0
   },
@@ -24563,9 +24563,9 @@
     "answers": [
       "Medial membranous artery",
       "Medial cerebral artery",
-      "C.Superficial temporal artery",
-      "D.Anterior membranous artery",
-      "E.Posterior auricular artery"
+      "C. Superficial temporal artery",
+      "D. Anterior membranous artery",
+      "E. Posterior auricular artery"
     ],
     "correct": 0
   },
@@ -24580,7 +24580,7 @@
       "Corti’s organ - closer to the oval foramen",
       "Median part of the Corti’s organ",
       "Muscles of the middle ear",
-      "E.Eardrum"
+      "E. Eardrum"
     ],
     "correct": 0
   },
@@ -25269,8 +25269,8 @@
       "Colon descendens",
       "Colon ascendens",
       "Colon transverses",
-      "D.Caecum",
-      "E.Rectum"
+      "D. Caecum",
+      "E. Rectum"
     ],
     "correct": 0
   },
@@ -25294,7 +25294,7 @@
     "subject": "Anatomy",
     "year": 2009,
     "topic": "Joints",
-    "question": "It is necessary to take the cerebrospinal fluid from a patient with suspected inßammation of brain tunics. Diagnostic puncture was performed between the arches of the lumbar vertebras. During the puncture the needle went through the following ligament:",
+    "question": "It is necessary to take the cerebrospinal fluid from a patient with suspected inflammation of brain tunics. Diagnostic puncture was performed between the arches of the lumbar vertebras. During the puncture the needle went through the following ligament:",
     "answers": [
       "Yellow (flaval)",
       "Iliolumbar",
@@ -26001,11 +26001,11 @@
     "topic": "Heart. Vascular system.",
     "question": "A 70 y.o. man has cut an abscess off in the area of mammiform process during shaving. Two days later he was admitted to the hospital with inflammation of arachnoid membranes. How did the infection penetrate into the cavity of skull?",
     "answers": [
-      "A.V.emissaria mastoidea",
-      "B.V.v.labyrinthi",
-      "C.V.v.tympanicae",
-      "D.V.f acialis",
-      "E.V.v.auriculares"
+      "A. V.emissaria mastoidea",
+      "B. V.v.labyrinthi",
+      "C. V.v.tympanicae",
+      "D. V.f acialis",
+      "E. V.v.auriculares"
     ],
     "correct": 0
   },
@@ -26079,8 +26079,8 @@
       "Sinister colic",
       "Median colic",
       "Dexter colic",
-      "D.Ileocolic",
-      "E.Superior mesenteric artery"
+      "D. Ileocolic",
+      "E. Superior mesenteric artery"
     ],
     "correct": 0
   },
@@ -26200,7 +26200,7 @@
       "Aponeurosis of abdominal external oblique muscle",
       "Inguinal ligament",
       "Loose inferior edge of transverse abdominal muscle",
-      "E.Peritoneum"
+      "E. Peritoneum"
     ],
     "correct": 0
   },
@@ -28114,7 +28114,7 @@
     "subject": "Pharmacology",
     "year": 2017,
     "topic": "Drugs acting on the CNS",
-    "question": "A patient with signs of emotional lability that result in troubled sleep has been prescribed nitrazepam. Specify the sleep- inducing mechanism of this drug:",
+    "question": "A patient with signs of emotional lability that result in troubled sleep has been prescribed nitrazepam. Specify the sleep-inducing mechanism of this drug:",
     "answers": [
       "GABA-ergic system activation",
       "Blockade of opiate receptors",
@@ -28864,7 +28864,7 @@
     "subject": "Pharmacology",
     "year": 2013,
     "topic": "Drugs acting on the CNS",
-    "question": "A patient has been administered an antiinflammatory drug that blocks the action of cyclooxygenase. Specify this anti- inflammatory agent:",
+    "question": "A patient has been administered an antiinflammatory drug that blocks the action of cyclooxygenase. Specify this anti-inflammatory agent:",
     "answers": [
       "Aspirin",
       "Analgene",
@@ -29689,7 +29689,7 @@
     "subject": "Pharmacology",
     "year": 2009,
     "topic": "Agents influencing on afferent and efferent innervations",
-    "question": "A patient with a limb fracture must be administered a depolarizing drug from the myorelaxant group for the purpose of a short- time surgery. What drug is it?",
+    "question": "A patient with a limb fracture must be administered a depolarizing drug from the myorelaxant group for the purpose of a short-time surgery. What drug is it?",
     "answers": [
       "Dithylinum",
       "Tubocurarine chloride",
@@ -30499,7 +30499,7 @@
     "subject": "Pharmacology",
     "year": 2018,
     "topic": "Agents influencing on afferent and efferent innervations",
-    "question": "The first-aid center has received a victim of a traffic accident diagnosed with closed displaced fracture of the middle third of the thigh. For repositioning of bone fragments the patient received 10 ml of 2% dithylinum solution intravenously, which resulted in prolonged period of apnoea and muscle relaxation. What enzyme is deficient, resulting in such pharmacogenetic",
+    "question": "The first-aid center has received a victim of a traffic accident diagnosed with closed displaced fracture of the middle third of the thigh. For repositioning of bone fragments the patient received 10 ml of 2% dithylinum solution intravenously, which resulted in prolonged period of apnoea and muscle relaxation. What enzyme is deficient, resulting in such pharmacogenetic enzymopathy?",
     "answers": [
       "Pseudocholinesterase",
       "Uridine diphosphate glucuronyltransferase",
@@ -32134,7 +32134,7 @@
     "subject": "Biology",
     "year": 2017,
     "topic": "SECTION 3. POPULATION, SPECIES, BIOGEOCEONOTIC AND BIOSPHERE LEVELS OF LIVING MATTER",
-    "question": "During dehelmintization there was a 3,5-meter-long tapeworm produced from the patient’s intestine.There are 4 suckers and hooks on the tapeworm’s scolex. Mature segments of the tapeworm are immobile and have up to 12 uterine branches. What disease is it?",
+    "question": "During dehelmintization there was a 3,5-meter-long tapeworm produced from the patient’s intestine. There are 4 suckers and hooks on the tapeworm’s scolex. Mature segments of the tapeworm are immobile and have up to 12 uterine branches. What disease is it?",
     "answers": [
       "Teniasis",
       "Echinococcosis",
@@ -32614,7 +32614,7 @@
     "subject": "Biology",
     "year": 2014,
     "topic": "SECTION 2. INHERITANCE AND VARIATION IN HUMANS",
-    "question": "An 18-year-old male has been diagnosed with Marfan syndrome. Examination revealed a developmental disorder of connective tissue and eye lens structure,abnormalities of the cardiovascular system, arachnodactylia. What genetic phenomenon has caused the",
+    "question": "An 18-year-old male has been diagnosed with Marfan syndrome. Examination revealed a developmental disorder of connective tissue and eye lens structure, abnormalities of the cardiovascular system, arachnodactylia. What genetic phenomenon has caused the",
     "answers": [
       "Pleiotropy",
       "Complementarity",
@@ -33829,7 +33829,7 @@
     "subject": "Biology",
     "year": 2018,
     "topic": ". inheritance and variation in humans",
-    "question": "A 25-year-old woman at her thirdpregnancy with impending miscarriage was brought to the hospital. What combination of Rh- factor of the mother and the fetus can be the cause of this condition?",
+    "question": "A 25-year-old woman at her thirdpregnancy with impending miscarriage was brought to the hospital. What combination of Rh-factor of the mother and the fetus can be the cause of this condition?",
     "answers": [
       "Mother Rh (-), fetus Rh (+)",
       "Mother Rh (-), fetus Rh (-)",
@@ -34069,7 +34069,7 @@
     "subject": "Biology",
     "year": 2019,
     "topic": "biological peculiarities of human activities",
-    "question": "A team of medical students is performing research on phases of cell cycle. During one of the mitotic phases the cell is nearly done dividing, the chromosomes decondense and two nuclei begin to form around them. Which of the following phases most likely takes",
+    "question": "A team of medical students is performing research on phases of cell cycle. During one of the mitotic phases the cell is nearly done dividing, the chromosomes decondense and two nuclei begin to form around them. Which of the following phases most likely takes place in the cell?",
     "answers": [
       "Telophase",
       "Anaphase",
@@ -34324,7 +34324,7 @@
     "subject": "Biology",
     "year": 2021,
     "topic": "biological peculiarities of human activities",
-    "question": "A mutation has occurred :n a cell in the first exon of the structural cene. The number of nucleotide pair's changed from 290 to 250.",
+    "question": "A mutation has occurred in a cell in the first exon of the structural gene. The number of nucleotide pairs changed from 290 to 250.",
     "answers": [
       "Deletion",
       "Nullisomy",
@@ -34609,7 +34609,7 @@
     "subject": "Histology",
     "year": 2007,
     "topic": "Krok 2007-2017",
-    "question": "101. Hospital has received a 24-year-old man, who had received a penetrating wound to the eye,which has caused the vitreous body to run out. As the result of this, retinal detachment occurred. What retinal layer was tightly adherent to the vascular tunic of the eye and did not detach?",
+    "question": "101. Hospital has received a 24-year-old man, who had received a penetrating wound to the eye, which has caused the vitreous body to run out. As the result of this, retinal detachment occurred. What retinal layer was tightly adherent to the vascular tunic of the eye and did not detach?",
     "answers": [
       "Retinal pigment epithelium",
       "Layer of rods and cones",
@@ -35644,7 +35644,7 @@
     "subject": "Histology",
     "year": 2007,
     "topic": "Krok 2007-2017",
-    "question": "72. A 12-year-old patient has white non- pigmented spots on the skin. The spots appeared after the patient became 10 years old, and they constantly grow. This spots appeared due to the lack of the following skin cells:",
+    "question": "72. A 12-year-old patient has white non-pigmented spots on the skin. The spots appeared after the patient became 10 years old, and they constantly grow. This spots appeared due to the lack of the following skin cells:",
     "answers": [
       "Melanocytes",
       "Adipocytes",
@@ -35706,7 +35706,7 @@
     "topic": "Krok 2007-2017",
     "question": "76. A microslide presents a tissue with spherical cells, each of them containing a large fat drop covered with thin cytoplasm layer in its center. Nucleus is compressed and situated at the cell periphery. What tissue is it?",
     "answers": [
-      "A.White adipose tissue",
+      "A. White adipose tissue",
       "Brown adipose tissue",
       "Mucous tissue",
       "Pigmented tissue",
@@ -35779,7 +35779,7 @@
     "subject": "Histology",
     "year": 2007,
     "topic": "Krok 2007-2017",
-    "question": "80. Histological specimen of a hemopoietic organ shows clusters of node-and band- shaped lymphocytes that along with stroma elements compose cortical and medullar substances . Name this organ:",
+    "question": "80. Histological specimen of a hemopoietic organ shows clusters of node-and band-shaped lymphocytes that along with stroma elements compose cortical and medullar substances. Name this organ:",
     "answers": [
       "Lymph node",
       "Spleen",
@@ -36394,7 +36394,7 @@
     "subject": "Histology",
     "year": 2019,
     "topic": "bone tissue",
-    "question": "A 14-year old girl presents to the emergency department for evaluation of an ’’infected leg’.’ She states there is no history of trauma but mentions she had a history of sickle cell disease. On physical examination, her upper part of right shin is very painful, red, swollen and hot. Her temperature is 39.2°C.An X-ray shows focal bony lysis and loss of trabecular architecture in the metaphysis of right tibia. Increased activity of which of the following cells is the most likely cause of bone reabsorption in this patient?",
+    "question": "A 14-year old girl presents to the emergency department for evaluation of an ’’infected leg’.’ She states there is no history of trauma but mentions she had a history of sickle cell disease. On physical examination, her upper part of right shin is very painful, red, swollen and hot. Her temperature is 39.2°C. An X-ray shows focal bony lysis and loss of trabecular architecture in the metaphysis of right tibia. Increased activity of which of the following cells is the most likely cause of bone reabsorption in this patient?",
     "answers": [
       "Osteoclasts",
       "Osteocytes",
@@ -36528,7 +36528,7 @@
     "id": 2436,
     "subject": "Histology",
     "year": 2020,
-    "topic": "uRINARY SYSTEM",
+    "topic": "Urinary SYSTEM",
     "question": "An electronic microphotograph shows a fragment of the renal corpuscle. In the photograph there is a large epithelial cell with numerous appendages. The appendages are attached to the basement membrane of the capillaries. What type of cell is it?",
     "answers": [
       "Podocyte",
@@ -36604,7 +36604,7 @@
     "subject": "Histology",
     "year": 2021,
     "topic": "cardiovascular system",
-    "question": "A histological specimen demonstrates a vessel with the wall that consists of endothelium, basement membrane, and loose connective tissueю.TTRlrv&sscl belongs to the following type",
+    "question": "Histological specimen presents a vessel the wall of which consists of endothelium, basal membrane and loose connective tissue. What type of vessel is it?",
     "answers": [
       "Non-muscular vein",
       "Lymph capillary",
@@ -37494,7 +37494,7 @@
       "Increased activity of adipose triglyceride lipase",
       "Accumulation of palmitoyl-CoA in cytosol",
       "Activation of ketone bodies utilization",
-      "Activation of apoА1, apoА2, and apoА4 apolipoprotein synthesis",
+      "Activation of apoA1, apoA2, and apoA4 apolipoprotein synthesis",
       "Decreased activity of plasma phosphatidylcholine-cholesterol-acyltransferase"
     ],
     "correct": 0
@@ -38389,7 +38389,7 @@
     "subject": "Biochemistry",
     "year": 2015,
     "topic": "Nutrition biochemistry and vitamins fundamental",
-    "question": "A patient, who has been suffering for a long time from intestine disbacteriosis, has increased hemorrhaging caused by disruption of posttranslational modification of blood-coagulation factors II, VII, IХ, and Х in the liver. What vitamin deficiency is the cause of this condition?",
+    "question": "A patient, who has been suffering for a long time from intestine disbacteriosis, has increased hemorrhaging caused by disruption of posttranslational modification of blood-coagulation factors II, VII, IX, and X in the liver. What vitamin deficiency is the cause of this condition?",
     "answers": [
       "К",
       "12",
@@ -41151,7 +41151,7 @@
     "topic": "Nutrition biochemistry and vitamins fundamental",
     "question": "Examination of a man who hadn’t been consuming fats but had been getting enough carbohydrates and proteins for a long time revealed dermatitis, poor wound healing, vision impairment. What is the probable cause of metabolic disorder?",
     "answers": [
-      "Lack of linoleic acid, vitamins A, D, E,K",
+      "Lack of linoleic acid, vitamins A, D, E, K",
       "Lack of palmitic acid",
       "Lack of vitamins P P, H",
       "Low caloric value of diet",
