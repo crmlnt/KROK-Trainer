@@ -1062,7 +1062,7 @@ function resetTrainer() {
   correctAnswers = 0;
   wrongAnswers = 0;
 
-  questions = getFilteredQuestions();
+  questions = shuffleArray(getFilteredQuestions());
 
   scoreText.textContent = "Score: 0";
   feedback.textContent = "";
