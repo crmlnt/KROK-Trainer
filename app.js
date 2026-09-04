@@ -1536,6 +1536,7 @@ if (aiExplainBtn) {
 
     if (!currentQuestion || !aiUserAnswer) {
       aiExplanationBox.style.display = "block";
+      aiExplanationBox.classList.remove("ai-loading");
 
       aiExplanationContent.textContent =
         "Unable to generate an explanation for this question.";
@@ -1544,9 +1545,21 @@ if (aiExplainBtn) {
     }
 
     aiExplanationBox.style.display = "block";
+    aiExplanationBox.classList.add("ai-loading");
 
-    aiExplanationContent.textContent =
-      "Loading explanation...";
+    aiExplanationContent.innerHTML = `
+      <div class="ai-loading-content">
+        <div class="ai-loading-text">
+          Generating a detailed explanation for this question...
+        </div>
+        <div class="ai-loading-dots" aria-label="Loading">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="ai-loading-note">
+          This may take a few seconds...
+        </div>
+      </div>
+    `;
 
     aiExplainBtn.disabled = true;
 
@@ -1575,6 +1588,7 @@ if (aiExplainBtn) {
           error
         );
 
+        aiExplanationBox.classList.remove("ai-loading");
         aiExplanationContent.textContent =
           "Unable to generate the explanation. Please try again.";
 
@@ -1587,12 +1601,14 @@ if (aiExplainBtn) {
         !data.userAnswerFeedback ||
         !data.keyConcept
       ) {
+        aiExplanationBox.classList.remove("ai-loading");
         aiExplanationContent.textContent =
           "No explanation was returned.";
 
         return;
       }
 
+      aiExplanationBox.classList.remove("ai-loading");
       aiExplanationContent.innerHTML = `
           <div class="ai-section">
             <h4>✓ Why this answer is correct</h4>
@@ -1619,6 +1635,7 @@ if (aiExplainBtn) {
         error
       );
 
+      aiExplanationBox.classList.remove("ai-loading");
       aiExplanationContent.textContent =
         "Unable to generate the explanation. Please try again.";
 

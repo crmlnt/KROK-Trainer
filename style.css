@@ -2043,3 +2043,78 @@ TOGGLE CARD
   cursor: wait;
   transform: none;
 }
+/* AI Explain Loading State */
+.ai-explanation-box.ai-loading {
+  background: linear-gradient(135deg, #1e1b4b, #312e81, #172554);
+  background-size: 200% 200%;
+  animation: aiGradientMove 6s ease infinite;
+  border-color: #4f46e5;
+  box-shadow: 0 0 15px rgba(79, 70, 229, 0.2);
+  color: #ffffff;
+}
+
+@keyframes aiGradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.ai-explanation-box.ai-loading .ai-explanation-header span {
+  color: #ffffff;
+}
+.ai-explanation-box.ai-loading .ai-close-btn {
+  color: #94a3b8;
+}
+.ai-explanation-box.ai-loading .ai-close-btn:hover {
+  color: #ffffff;
+}
+
+.ai-loading-content {
+  text-align: center;
+  padding: 10px 0 20px;
+}
+
+.ai-loading-text {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  color: #e2e8f0;
+}
+
+.ai-loading-dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+.ai-loading-dots span {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #818cf8;
+  animation: aiDotsPulse 1.4s infinite ease-in-out both;
+}
+.ai-loading-dots span:nth-child(1) { animation-delay: -0.32s; }
+.ai-loading-dots span:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes aiDotsPulse {
+  0%, 80%, 100% { transform: scale(0); opacity: 0.4; }
+  40% { transform: scale(1); opacity: 1; }
+}
+
+.ai-loading-note {
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ai-explanation-box.ai-loading {
+    animation: none;
+    background-size: auto;
+  }
+  .ai-loading-dots span {
+    animation: none;
+    opacity: 1;
+    transform: scale(1);
+  }
+}

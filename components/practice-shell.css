@@ -239,3 +239,9 @@ body.dark-mode #error-count {
     width: 100%;
   }
 }
+
+body.dark-mode .ai-explanation-box.ai-loading {
+  background: linear-gradient(135deg, #1e1b4b, #312e81, #172554);
+  border-color: #4f46e5;
+  color: #ffffff;
+}
