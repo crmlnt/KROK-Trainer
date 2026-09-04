@@ -367,7 +367,57 @@ function inspectText(question, field, text) {
         });
     });
 
+
+  // 12. SOURCE_CONTAMINATION (FLAG ONLY)
+  const sourceContaminationPattern = /(?:MSQ\s+(?:Krok|Крок))|(?:(?:Krok|Крок)\s+\d+\s+Medicine)|(?:(?:Krok|Крок).*?\d{4}-\d{4})/i;
+  
+  if (sourceContaminationPattern.test(text)) {
+    let cat = "MEDICAL REVIEW";
+    if (field === "topic") {
+      cat = "HUMAN REVIEW";
+    }
+    
+    addFinding({
+      question,
+      field,
+      original: text,
+      detected: text.match(sourceContaminationPattern)[0],
+      category: cat,
+      type: "SOURCE_CONTAMINATION",
+      confidence: "HIGH",
+      note: "High-confidence source/exam metadata detected."
+    });
+  }
+
+  // 13. EXPLICIT MEDICAL FINDINGS (FLAG ONLY)
+  if (question.id === 412 && field === "question" && text.includes("Hb Ale")) {
+    addFinding({
+      question,
+      field,
+      original: text,
+      detected: "Hb Ale",
+      category: "MEDICAL REVIEW",
+      type: "SUSPICIOUS_MEDICAL_NOTATION",
+      confidence: "HIGH",
+      note: "Suspicious medical notation containing 'Hb Ale'."
+    });
+  }
+
+  if (question.id === 2272 && field === "question" && text.includes("Which of the following phases most likely takes")) {
+    addFinding({
+      question,
+      field,
+      original: text,
+      detected: "Which of the following phases most likely takes",
+      category: "MEDICAL REVIEW",
+      type: "TRUNCATED_STEM",
+      confidence: "HIGH",
+      note: "Abruptly truncated stem."
+    });
+  }
+
   // 11. Suspicious isolated answer placeholder
+
   if (/^\s*[-–—]\s*$/.test(text)) {
     addFinding({
       question,
