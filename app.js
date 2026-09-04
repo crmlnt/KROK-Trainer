@@ -309,6 +309,12 @@ const confirmAnswerBtn =
   questionNumber.textContent = `Question ${currentQuestionIndex + 1} of ${questions.length}`;
   questionText.textContent = currentQuestion.question;
 
+  const questionIdDisplay = document.getElementById("question-id-display");
+  if (questionIdDisplay) {
+    questionIdDisplay.textContent = `ID: ${currentQuestion.id}`;
+    questionIdDisplay.style.display = "inline-block";
+  }
+
   //progressBar.value =
    // ((currentQuestionIndex + 1) / questions.length) * 100;
 
