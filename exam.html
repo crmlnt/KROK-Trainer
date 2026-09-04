@@ -4,6 +4,7 @@
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KROK Exam | KROK Trainer</title>
   <link rel="stylesheet" href="exam.css"><link rel="stylesheet" href="components/sidebar.css"><link rel="stylesheet" href="components/breadcrumb.css">
+<link rel="stylesheet" href="components/feedback.css">
 </head>
 <body>
   <aside id="appSidebar" data-root="" data-active="krok1-exam"></aside>
@@ -32,4 +33,5 @@
   startExamBtn.addEventListener("click",()=>{ const selectedTopic=document.querySelector('input[name="topic"]:checked'); const selectedQuestions=document.querySelector('input[name="questions"]:checked'); if(!selectedTopic||!selectedQuestions)return; const nextParams=new URLSearchParams(); nextParams.set("mode","exam"); nextParams.set("topic",selectedTopic.value); nextParams.set("questions",selectedQuestions.value); if(examType==="krok2")nextParams.set("exam","krok2"); window.location.href=`exam-instructions.html?${nextParams.toString()}`; });
   </script>
   <script src="components/sidebar.js"></script><script src="components/breadcrumb.js"></script>
+<script src="components/feedback.js"></script>
 </body></html>

@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="components/breadcrumb.css" />
   <link rel="stylesheet" href="components/practice-shell.css" />
   <link rel="stylesheet" href="components/question-notes.css" />
+<link rel="stylesheet" href="components/feedback.css">
 </head>
 <body>
   <script>const pageParams=new URLSearchParams(window.location.search);if(pageParams.get("mode")!=="exam")document.body.classList.add("practice-session");</script>
@@ -50,5 +51,6 @@
     if(practiceBreadcrumb){practiceBreadcrumb.dataset.section=isKrok2?"KROK 2":"KROK 1";practiceBreadcrumb.dataset.sectionHref=isKrok2?"krok2.html":"krok1.html";practiceBreadcrumb.dataset.page=isExamMode?"Exam Mode":"Practice Mode";}
   </script>
   <script src="components/sidebar.js"></script><script src="components/breadcrumb.js"></script>
+<script src="components/feedback.js"></script>
 </body>
 </html>
