@@ -7173,7 +7173,7 @@
     "id": 479,
     "subject": "Pathomorphology",
     "year": 2023,
-    "topic": "Chronic inflammation MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+    "topic": "Chronic inflammation",
     "question": "Microscopy of the kidney biopsy material detected foci with granular eosinophilic masses in their center, surrounded by an infiltrate consisting of lymphocytes, epithelioid cells, and isolated Langhans cells. What pathological process corresponds with the described changes?",
     "answers": [
       "Granulomatous inflammation",
@@ -7221,7 +7221,7 @@
     "topic": "Bacterial infection",
     "question": "Five days after a diarrhea onset, colonoscopy detected gray-green filmy deposits tightly attached to the underlying tissue in the inflamed rectal mucosa of the patient. What disease can be characterized by these pathological changes?",
     "answers": [
-      "Dysentery MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+      "Dysentery",
       "Crohn’s disease",
       "Salmonellosis",
       "Nonspecific ulcerative colitis",
@@ -7268,7 +7268,7 @@
     "answers": [
       "Tuberculosis",
       "-",
-      "Lymphosarcoma MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+      "Lymphosarcoma",
       "Lymphogranulomatosis",
       "Lymphocytic leukemia"
     ],
@@ -7314,7 +7314,7 @@
       "Pericanalicular fibroadenoma",
       "Adenocarcinoma",
       "Sarcoma",
-      "Cancer MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+      "Cancer",
       "Dyshormonal disorders"
     ],
     "correct": 0
@@ -7360,7 +7360,7 @@
       "Ankylosing spondylitis (Bekhterev’s disease)",
       "Osteoarthrosis",
       "Rheumatic arthritis",
-      "Systemic lupus erythematosus MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY"
+      "Systemic lupus erythematosus"
     ],
     "correct": 0
   },
@@ -7504,7 +7504,7 @@
     "subject": "Pathomorphology",
     "year": 2017,
     "topic": "Nomenclature and morphological features of tumors from epithelium.",
-    "question": "A 67-year-old patient with clinical diagnosis of chronic bronchitis, pneumosclerosis, and cardiopulmonary decompensation has the biopsy material taken from the suspicious area in his right bronchus mucosa. Cellular and tissue atypism along with pearly bodies can be histologically detected. What pathologic process is characterized by the described histological changes? MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+    "question": "A 67-year-old patient with clinical diagnosis of chronic bronchitis, pneumosclerosis, and cardiopulmonary decompensation has the biopsy material taken from the suspicious area in his right bronchus mucosa. Cellular and tissue atypism along with pearly bodies can be histologically detected. What pathologic process is characterized by the described histological changes?",
     "answers": [
       "Squamous cell carcinoma of bronchus with keratinization",
       "Polypoid chronic bronchitis",
@@ -7554,7 +7554,7 @@
       "Alveolar tendency to recede",
       "Decreased airways resistance",
       "Decreased work of expiratory muscles",
-      "Increased pulmonary ventilation MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+      "Increased pulmonary ventilation",
       "Hyperoxemia"
     ],
     "correct": 0
@@ -7653,7 +7653,7 @@
     "id": 511,
     "subject": "Pathomorphology",
     "year": 2017,
-    "topic": "For pituitary disease. Diabetes mellitus. Diseases of the thyroid gland. Diseases of the adrenal glands. MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+    "topic": "For pituitary disease. Diabetes mellitus. Diseases of the thyroid gland. Diseases of the adrenal glands.",
     "question": "A 40-year-old woman has undergone thyroidectomy. Histological study of thyroid gland found the follicles to be of different size and contain foamy colloid, follicle epi-thelium is high and forms papillae, there is focal lymphocytic infiltration in the stroma. Diagnose the thyroid gland disease:",
     "answers": [
       "Basedow’s disease",
@@ -7698,7 +7698,7 @@
     "id": 514,
     "subject": "Pathomorphology",
     "year": 2017,
-    "topic": "Tuberculosis MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+    "topic": "Tuberculosis",
     "question": "A 40-year-old prisoner died of tuberculosis in the corrective labor camp. Autopsy of the body revealed deformation and diminishing of both lung apices; in the both upper lobes there are multiple cavi-ties with dense walls 2-3 mm thick; in the lower lung lobes there are disseminated foci of caseous necrosis varying from 5 mm to 2 cm in diameter. Diagnose the type of tuberculosis:",
     "answers": [
       "Secondary fibro-cavitary tuberculosis",
@@ -7878,7 +7878,7 @@
     "id": 526,
     "subject": "Pathomorphology",
     "year": 2017,
-    "topic": "Nomenclature and morphological features of tumors from epithelium. MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+    "topic": "Nomenclature and morphological features of tumors from epithelium.",
     "question": "On bronchoscopy there is a polypoid growth 1,0 cm in diameter with ulcer in its center in the upper lobe of the right lung. Histological investigation revealed a tumor composed of lymphocyte-like cells with hyperchromic nuclei, the cells form layers and bands. What is the most likely tumor type?",
     "answers": [
       "Undifferentiated small cell carcinoma",
@@ -7923,7 +7923,7 @@
     "id": 529,
     "subject": "Pathomorphology",
     "year": 2016,
-    "topic": "Diseases of the respiratory system. MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+    "topic": "Diseases of the respiratory system.",
     "question": "A patient suffers from high fever, apnoea, pain in the thorax on the right. Pleurocentesis yielded 700 ml of yellow-green viscous liquid. Make the diagnosis:",
     "answers": [
       "Pleural empyema",
@@ -7969,7 +7969,7 @@
     "subject": "Pathomorphology",
     "year": 2016,
     "topic": "Atherosclerosis and arteriosclerosis. Coronary heart disease.",
-    "question": "A 60-year-old patient with a long hi-story of atherosclerosis and a previous myocardial infarction developed an attack of retrosternal pain. 3 days later the patient was hospitalized and then died of progressive cardiovascular insufficiency. During autopsy a white fibrous depressed area about 3 cm in diameter with clear margins was found within the area of posterior wall of the left ventricle and interventricular septum. The dissector considered these changes to be: MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+    "question": "A 60-year-old patient with a long hi-story of atherosclerosis and a previous myocardial infarction developed an attack of retrosternal pain. 3 days later the patient was hospitalized and then died of progressive cardiovascular insufficiency. During autopsy a white fibrous depressed area about 3 cm in diameter with clear margins was found within the area of posterior wall of the left ventricle and interventricular septum. The dissector considered these changes to be:",
     "answers": [
       "Focal cardiosclerosis",
       "Myocardial ischemia",
@@ -8018,7 +8018,7 @@
     "answers": [
       "Fibrous cavernous tuberculosis",
       "Fibrous focal tuberculosis",
-      "Tuberculoma MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+      "Tuberculoma",
       "Acute focal tuberculosis",
       "Acute cavernous tuberculosis"
     ],
@@ -8063,7 +8063,7 @@
     "answers": [
       "Secondary systemic",
       "Primary systemic",
-      "Localized (focal) MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+      "Localized (focal)",
       "Hereditary (genetic)",
       "Senile"
     ],
@@ -8118,7 +8118,7 @@
     "id": 542,
     "subject": "Pathomorphology",
     "year": 2016,
-    "topic": "Infectious and parasitic diseases. Characterization of the infectious process. Intestinal infectious diseases. MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+    "topic": "Infectious and parasitic diseases. Characterization of the infectious process. Intestinal infectious diseases.",
     "question": "A worker of an agricultural enterprise had been suffering from an acute disease with aggravating intoxication signs, which resulted in his death. On autopsy: the spleen is enlarged, flaccid, dark cherry-red in the section, yields excessive pulp scrape. Soft meninges of fornix and base of the brain are edematous and saturated with blood (”cardinal’s cap”). Microscopically: serous-hemorrhagic inflammation of meninges and cerebral tissues. Make the diagnosis:",
     "answers": [
       "Anthrax",
@@ -8163,7 +8163,7 @@
     "id": 545,
     "subject": "Pathomorphology",
     "year": 2016,
-    "topic": "Tumors. MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+    "topic": "Tumors.",
     "question": "A patient died of cancerous cachexia with primary localization of cancer in the stomach. Autopsy revealed acutely enlarged liver with uneven surface and numerous protruding nodes; the nodes had clear margins in the section, rounded shape, gray-pink color, varying density, sometimes contained necrotic foci. Histologically: there are atypical cells in the nodes. What pathologic process occurred in the liver?",
     "answers": [
       "Cancer metastases",
@@ -8208,7 +8208,7 @@
     "id": 548,
     "subject": "Pathomorphology",
     "year": 2016,
-    "topic": "Violation of hemostasis. Thrombosis, disseminated intravascular coagulation. Embolism. MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+    "topic": "Violation of hemostasis. Thrombosis, disseminated intravascular coagulation. Embolism.",
     "question": "A man has suffered multiple bone fractures of his lower extremities during a traffic accident. During transportation to a hospital his condition was further aggravated: blood pressure decreased, there were signs of pulmonary artery embolism. What kind of embolism is the most likely in the given case?",
     "answers": [
       "Fat embolism",
@@ -8253,7 +8253,7 @@
     "id": 551,
     "subject": "Pathomorphology",
     "year": 2016,
-    "topic": "Morphology of reversible and irreversible damage of cells and tissues. Extracellular accumulation of proteins, carbohydrates and lipids. MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+    "topic": "Morphology of reversible and irreversible damage of cells and tissues. Extracellular accumulation of proteins, carbohydrates and lipids.",
     "question": "During pathomorphological renal investigation of a patient, who for a long time had been suffering from osteomyelitis and died of progressing renal failure, the following was revealed: deposits of homogeneous eosinophilic masses in glomerular mesangium, arterial and arteriolar walls, and stroma, which colored red when stained with Congo red. What pathological process is this?",
     "answers": [
       "Amyloidosis",
@@ -8298,7 +8298,7 @@
     "id": 554,
     "subject": "Pathomorphology",
     "year": 2015,
-    "topic": "The metabolic disorders and metabolism. The morphology of abnormal accumulation of endogenous and exogenous pigments. The morphology of disorders of mineral metabolism. MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+    "topic": "The metabolic disorders and metabolism. The morphology of abnormal accumulation of endogenous and exogenous pigments. The morphology of disorders of mineral metabolism.",
     "question": "A 12-year-old patient has white non-pigmented spots on the skin. The spots appeared after the patient became 10 years old, and they constantly grow. This spots appeared due to the lack of the following skin cells:",
     "answers": [
       "Melanocytes",
@@ -8343,7 +8343,7 @@
     "id": 557,
     "subject": "Pathomorphology",
     "year": 2015,
-    "topic": "Pathomorphology of the immune system. Reactions and mechanisms of hypersensitivity. The autoimmune disease. Immunodeficiency States. MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+    "topic": "Pathomorphology of the immune system. Reactions and mechanisms of hypersensitivity. The autoimmune disease. Immunodeficiency States.",
     "question": "Several minutes after a dentist administered novocaine for local anaesthesia of a patient’s tooth, the following symptoms sharply developed in the patient: fatigue, skin itching. Objectively the following can be observed: skin hyperemia, tachycardia, BP dropped down to 70/40 mm Hg. What kind of allergic reaction is this pathology?",
     "answers": [
       "Anaphylactic",
@@ -8388,7 +8388,7 @@
     "id": 560,
     "subject": "Pathomorphology",
     "year": 2015,
-    "topic": "Leukemias (leukemia) and lymphomas. MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+    "topic": "Leukemias (leukemia) and lymphomas.",
     "question": "During hystological analysis of the lymph node situated in the posterior neck triangle of an 18-year-old patient a morphologist detected a cluster of cells including the following: isolated multinucleate Reed-Sternberg cells, large and small Hodgkin’s cells and numerous lymphocytes, isolated plasma cells, eosinophils. What disease has developed in the patient?",
     "answers": [
       "Lymphogranulomatosis",
@@ -8433,7 +8433,7 @@
     "id": 563,
     "subject": "Pathomorphology",
     "year": 2015,
-    "topic": "Tuberculosis MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+    "topic": "Tuberculosis",
     "question": "A 3-year-old child with meningeal symptoms died. Postmortem macroscopy of the pia matter revealed miliary nodules which were microscopically represented by a focus of caseous necrosis with masses of epithelioid and lymphoid cells with large cells containing crescent-shaped peripheral nuclei situated between them. Specify the type of meningitis in the child:",
     "answers": [
       "Tuberculous",
@@ -8478,7 +8478,7 @@
     "id": 566,
     "subject": "Pathomorphology",
     "year": 2015,
-    "topic": "Violation of hemostasis. Thrombosis, disseminated intravascular coagulation. Embolism. MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+    "topic": "Violation of hemostasis. Thrombosis, disseminated intravascular coagulation. Embolism.",
     "question": "During intravenous saline transfusion a patient’s condition deteriorated drastically, and the patient died from asphyxiation. Autopsy revealed acute venous congestion of internal organs with sharp right heart dilatation. When the right ventricle was punctured underwater, the bubbles escaped. What pathological process occurred in the patient?",
     "answers": [
       "Air embolism",
@@ -8523,7 +8523,7 @@
     "id": 569,
     "subject": "Pathomorphology",
     "year": 2015,
-    "topic": "Viral airborne infection. HIV infection. Rabies. MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+    "topic": "Viral airborne infection. HIV infection. Rabies.",
     "question": "An HIV-positive patient’s cause of death is acute pulmonary insufficiency resulting from pneumonia. Pathohistological investigation of lungs has revealed interstitial pneumonia, alveolocyte desquamation and methamorphoses: alveolocyte enlargement, large intranuclear inclusions surrounded by lightly-coloured areas. Transformed cells resemble owl’s eye. Name the causative agent of pneumonia:",
     "answers": [
       "Cytomegalovirus",
@@ -8569,7 +8569,7 @@
     "subject": "Pathomorphology",
     "year": 2015,
     "topic": "General doctrine of inflammation. Exudative inflammation. The morphology of exudative inflammation",
-    "question": "A 53-year-old man suffering from diabetes mellitus has developed a painful conical induration, bluishred with yellow center, on the skin of his neck. Such changes are characteristic of: MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+    "question": "A 53-year-old man suffering from diabetes mellitus has developed a painful conical induration, bluishred with yellow center, on the skin of his neck. Such changes are characteristic of:",
     "answers": [
       "Furuncle",
       "Abscess",
@@ -8617,7 +8617,7 @@
     "question": "A 9-year-old boy has acute onset of di-sease: sore throat, body temperature rise up to 39, 5o C; on the second day diffuse skin rash was detected all over his skin exept for nasolabial triangle. On examination of oral cavity: crimson tongue, \"flaming pharynx\", necrotic tonsillitis. What diagnosis is the most likely?",
     "answers": [
       "Scarlet fever",
-      "Measles MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+      "Measles",
       "Diphtheria",
       "Influenza",
       "Meningococcemia"
@@ -8661,7 +8661,7 @@
     "topic": "Pathomorphology of the immune system. Reactions and mechanisms of hypersensitivity. The autoimmune disease. Immunodeficiency States.",
     "question": "During autopsy of a 9-month-old girl’s body, who died due to severe pneumonia complicated with sepsis, lack of thymus is observed. In the lymph nodes the lymphoid follicles and cortical substance are absent; follicles of spleen are reduced in size with no light zones and plasma cells. What is the cause of such structural changes?",
     "answers": [
-      "Thymus agenesis MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+      "Thymus agenesis",
       "Accidental involution of thymus",
       "Thymus hypoplasia",
       "Thymus atrophy",
@@ -8708,7 +8708,7 @@
     "answers": [
       "Tuberculosis",
       "Hodgkin’s disease",
-      "Actinomycosis MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+      "Actinomycosis",
       "Tumor metastasis",
       "Syphilis"
     ],
@@ -8755,7 +8755,7 @@
       "Meningococcal nasopharyngitis",
       "Diphtheria",
       "Influenza",
-      "Measles MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY"
+      "Measles"
     ],
     "correct": 0
   },
@@ -8808,7 +8808,7 @@
     "id": 588,
     "subject": "Pathomorphology",
     "year": 2014,
-    "topic": "Nomenclature and morphological features of tumors from epithelium. MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+    "topic": "Nomenclature and morphological features of tumors from epithelium.",
     "question": "Autopsy of a 50-year-old male who had tuberculosis revealed a dense gray-white nidus in form of a nodule 2 cm in diameter in the subpleural portion of the upper right lobe. The pleura in this region was thickened, in the pleural cavity there was a small amount of serous hemorrhagic fluid. Histological study of the region revealed some glandular structures with signs of cellular atypia and abnormal mitoses, which were found within the fibrous connective tissue. What other pathology had developed in the lungs?",
     "answers": [
       "Adenocarcinoma",
@@ -8898,7 +8898,7 @@
     "id": 594,
     "subject": "Pathomorphology",
     "year": 2014,
-    "topic": "Diseases of the female and male reproductive system. MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+    "topic": "Diseases of the female and male reproductive system.",
     "question": "A 35-year-old female patient has undergone biopsy of the breast nodules. Histological examination has revealed enhanced proliferation of the small duct and acini epithelial cells, accompanied by the formation of glandular structures of various shapes and sizes, which were located in the fibrous stroma. What is the most likely diagnosis?",
     "answers": [
       "Fibroadenoma",
@@ -8944,7 +8944,7 @@
     "subject": "Pathomorphology",
     "year": 2013,
     "topic": "Pre - & perinatal pathology.",
-    "question": "Examination of an 18-year-old girl revealed the following features: hypoplasia of the ovaries, broad shoulders, narrow pelvis, shortening of the lower extremities, \"sphinx neck\". Mental development is normal. The girl was diagnosed with Turner’s syndrome. What kind of chromosome abnormality is it? MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+    "question": "Examination of an 18-year-old girl revealed the following features: hypoplasia of the ovaries, broad shoulders, narrow pelvis, shortening of the lower extremities, \"sphinx neck\". Mental development is normal. The girl was diagnosed with Turner’s syndrome. What kind of chromosome abnormality is it?",
     "answers": [
       "Monosomy X",
       "Trisomy X",
@@ -8992,7 +8992,7 @@
     "question": "At autopsy the occipital lobe of brain was found to have a cavity 2,5x1,5 cm large filled with a transparent liquid. The cavity had smooth brownish walls. What process had developed in the brain?",
     "answers": [
       "Cyst on the site of a hemorrhage",
-      "Softening of the cerebrocortical grey matter MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+      "Softening of the cerebrocortical grey matter",
       "Brain abscess",
       "Paracephalia",
       "A cyst on the site of the softening of the cerebrocortical grey matter"
@@ -9040,7 +9040,7 @@
       "Acute interstitial nephritis",
       "Lipoid nephrosis",
       "Acute pyelonephritis",
-      "Necrotizing nephrosis MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY"
+      "Necrotizing nephrosis"
     ],
     "correct": 0
   },
@@ -9141,7 +9141,7 @@
     "topic": "Nomenclature and morphological features of tumors from epithelium.",
     "question": "Histological examination of the removed skin neoplasm revealed clusters and cords of atypical cells of stratified squamous epithelium, growing into the underlying tissue. What diagnosis can be assumed?",
     "answers": [
-      "Non-keratinizing squamous cell carcinoma MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+      "Non-keratinizing squamous cell carcinoma",
       "Keratinizing squamous cell carcinoma",
       "Carcinoma in situ",
       "Papilloma",
@@ -9187,7 +9187,7 @@
     "question": "A 65-year-old male suddenly lost the vision in one eye due to the retinal detachment. The patient underwent enucleation. Histological examination of the removed eye retina and choroid revealed clusters of atypical cells with marked polymorphism of cells and nuclei, with a moderate number of mitoses including the pathological ones. The cell cytoplasm and intercellular medium contained brown pigment giving a positive DOPA reaction. Perls’ reaction was negative. What is the most likely diagnosis?",
     "answers": [
       "Melanoma",
-      "Pigmented mole MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+      "Pigmented mole",
       "Hemorrhage",
       "Cysticercosis",
       "Wilson’s disease"
@@ -9233,7 +9233,7 @@
     "answers": [
       "Atopy (local anaphylaxis)",
       "Systemic anaphylaxis",
-      "Cellular cytotoxicity MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+      "Cellular cytotoxicity",
       "Immune complex hypersensitivity",
       ". Antibody-dependent cell-mediated cytolysis"
     ],
@@ -9279,7 +9279,7 @@
       "Chronic purulent bronchitis",
       "Acute bronchitis",
       "Polypoid chronic bronchitis",
-      "Acute purulent bronchitis MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+      "Acute purulent bronchitis",
       "Chronic bronchitis"
     ],
     "correct": 0
@@ -9333,7 +9333,7 @@
     "id": 623,
     "subject": "Pathomorphology",
     "year": 2012,
-    "topic": "Processes of adaptation and compensation. MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+    "topic": "Processes of adaptation and compensation.",
     "question": "Chronic inflammation and transformation of the one-layer ciliated epithelium into multiple-layers flat epithelium was revealed in the thickened mucous membrane of the bronchus bioptate of the patient with smoke abuse. Which of the processes is the most likely?",
     "answers": [
       "Metaplasia",
@@ -9381,7 +9381,7 @@
     "topic": "Leukemias (leukemia) and lymphomas.",
     "question": "A 62 year old woman complains of frequent pain attacks in the area of her chest and backbone, rib fractures. Her doctor suspected myeloma (plasmocytoma). What of the following laboratory characteristics will be of the greatest diagnostic importance?",
     "answers": [
-      "Paraproteinemia MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+      "Paraproteinemia",
       "Hyperalbuminemia",
       "Proteinuria",
       "Hypoglobulinemia",
@@ -9483,7 +9483,7 @@
     "id": 633,
     "subject": "Pathomorphology",
     "year": 2012,
-    "topic": "Circulatory disorders: hyperemia, ischemia, infarction, hemorrhage, hemorrhage, stasis, plasturgie. Shock. Violation of lymph circulation. MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+    "topic": "Circulatory disorders: hyperemia, ischemia, infarction, hemorrhage, hemorrhage, stasis, plasturgie. Shock. Violation of lymph circulation.",
     "question": "A 63 year old male patient who had been suffering from chronic diffuse obstructive disease, pulmonary emphysema, for 15 years died from cardiac insufficiency. Autopsy revealed nutmeg liver cirrhosis, cyanotic induration of kidneys and spleen, ascites, edemata of lower limbs. These changes of internal organs are typical for the following disease:",
     "answers": [
       "Chronic right-ventricular insufficiency",
@@ -9528,7 +9528,7 @@
     "id": 636,
     "subject": "Pathomorphology",
     "year": 2012,
-    "topic": "Circulatory disorders: hyperemia, ischemia, infarction, hemorrhage, hemorrhage, stasis, plasturgie. Shock. Violation of lymph circulation. MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+    "topic": "Circulatory disorders: hyperemia, ischemia, infarction, hemorrhage, hemorrhage, stasis, plasturgie. Shock. Violation of lymph circulation.",
     "question": "A 42 year old patient complains of pain in the epigastral area, vomiting; vomit masses have the colour of \"coffee-grounds\", the patient has also melena. Anamnesis records gastric ulcer. Blood formula: erythrocytes - 2, 8 · 1012/l, leukocytes - 8 · 109/l, Hb- 90 g/l. What complication is it?",
     "answers": [
       "Haemorrhage",
@@ -9573,7 +9573,7 @@
     "id": 639,
     "subject": "Pathomorphology",
     "year": 2012,
-    "topic": "The General doctrine about the tumors. Morphological features of tumor tissues derived mesenchyme. MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+    "topic": "The General doctrine about the tumors. Morphological features of tumor tissues derived mesenchyme.",
     "question": "Examination of a 55 year old woman revealed under the skin of submandibular area a movable slowly growing pasty formation with distinct borders 1,0x0,7 cm large. Histological examination revealed lipocytes that form segments of diffrent forms and sizes separated from each other by thin layers of connective tissue with vessels. What is the most probable diagnosis?",
     "answers": [
       "Lipoma",
@@ -9618,7 +9618,7 @@
     "id": 642,
     "subject": "Pathomorphology",
     "year": 2012,
-    "topic": "Infectious and parasitic diseases. Characterization of the infectious process. Intestinal infectious diseases. MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+    "topic": "Infectious and parasitic diseases. Characterization of the infectious process. Intestinal infectious diseases.",
     "question": "A 71 year old man had been presenting with diarrhea for 10 days. The feces had admixtures of blood and mucus. He was delivered to a hospital in grave condition and died 2 days later. Autopsy of the body revealed the following: diphtheritic colitis with multiple irregularlyshaped ulcers of different depth in both sigmoid colon and rectus. Bacteriological analysis revealed Shigella. What was the main disease?",
     "answers": [
       "Dysentery",
@@ -9663,7 +9663,7 @@
     "id": 645,
     "subject": "Pathomorphology",
     "year": 2012,
-    "topic": "Kidney Disease MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+    "topic": "Kidney Disease",
     "question": "Acute renal impairment caused death of a bleeding patient. Autopsy revealed enlarged kidneys with a broad pale pink cortical layer expressively demarcated from dark red renal pyramids. Macroscopic examination revealed lack of epithelial nuclei of convoluted tubules, tubulorrhexis, phlebostasis. The cell nuclei of choroid glomus and straight tubules were present. What pathology is it?",
     "answers": [
       "Necronephrosis",
@@ -9708,7 +9708,7 @@
     "id": 648,
     "subject": "Pathomorphology",
     "year": 2012,
-    "topic": "Processes of adaptation and compensation MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+    "topic": "Processes of adaptation and compensation",
     "question": "A patient who abuses smoking has chronic bronchitis. Biopsy of his primary bronchus revealed multilayer pavement epithelium. What pathological process was revealed in the bronchus?",
     "answers": [
       "Metaplasia",
@@ -9757,7 +9757,7 @@
     "question": "Extensive thromboembolic infarction of the left cerebral hemispheres, large septic spleen, immunocomplex glomerulonephritis, ulcers on the edges of the aortic valves, covered with polypous thrombus with colonies of staphylococcus were revealed on autopsy of the young man who died in coma. What disease caused cerebral thromboemboly?",
     "answers": [
       "Septic bacterial endocarditis",
-      "Septicemia MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+      "Septicemia",
       "Acute rheumatic valvulitis",
       "Septicopyemia",
       "Rheumatic thromboendocarditis"
@@ -9803,7 +9803,7 @@
     "answers": [
       "Vanishing of elastic fibers",
       "Vanishing of collagen fibers",
-      "Muscle layer atrophy MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+      "Muscle layer atrophy",
       "Intima changes by shagreen leather type",
       "Vascularization"
     ],
@@ -9850,7 +9850,7 @@
       "Lymphogranulomatosis",
       "Lymphosarcoma",
       "Myeloid leukosis",
-      "Multiple myeloma MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY"
+      "Multiple myeloma"
     ],
     "correct": 0
   },
@@ -9994,7 +9994,7 @@
     "subject": "Pathomorphology",
     "year": 2011,
     "topic": "Pathomorphology of the immune system. Reactions and mechanisms of hypersensitivity. The autoimmune disease. Immunodeficiency States.",
-    "question": "During surgical manipulations a patient has been given novocaine injection for anesthesia. 10 minutes later the patient developed paleness, dyspnea, hypotension. What type of allergic reaction is it? MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+    "question": "During surgical manipulations a patient has been given novocaine injection for anesthesia. 10 minutes later the patient developed paleness, dyspnea, hypotension. What type of allergic reaction is it?",
     "answers": [
       "Anaphylactic immune reaction",
       "Cellulotoxic immune reaction",
@@ -10042,7 +10042,7 @@
     "question": "A 45-year-old woman has breast cancer. Her left arm has symptoms of lymphatic system insufficiency - limb edema, lymph node enlargement. What form of lymphatic circulation insufficiency is it?",
     "answers": [
       "Mechanic insufficiency",
-      "Dynamic insufficiency MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+      "Dynamic insufficiency",
       "Resorption insufficiency",
       "Combined insufficiency",
       "-"
@@ -10090,7 +10090,7 @@
       "Tuberculosis, mycobacteriosis",
       "Poliomyelitis, type A hepatitis",
       "Dysentery, cholera",
-      "Q-febris, epidemic typhus MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY"
+      "Q-febris, epidemic typhus"
     ],
     "correct": 0
   },
@@ -10143,7 +10143,7 @@
     "id": 677,
     "subject": "Pathomorphology",
     "year": 2009,
-    "topic": "Leukemias (leukemia) and lymphomas. MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+    "topic": "Leukemias (leukemia) and lymphomas.",
     "question": "A 62-year-old female patient complains about frequent pains in the region of thorax and vertebral column, rib fractures. A physician suspected myelomatosis (plasmocytoma). Which of the following laboratory indices will be of the greatest diagnostic importance?",
     "answers": [
       "Paraproteinemia",
@@ -10188,7 +10188,7 @@
     "id": 680,
     "subject": "Pathomorphology",
     "year": 2009,
-    "topic": "For pituitary disease. Diabetes mellitus. Diseases of the thyroid gland. Diseases of the adrenal glands. MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+    "topic": "For pituitary disease. Diabetes mellitus. Diseases of the thyroid gland. Diseases of the adrenal glands.",
     "question": "A patient with android-type obesity had been suffering from arterial hypertension, hyperglycemia, glycosuria for a long time and died from the cerebral haemorrhage. Pathologic examination revealed pituitary basophil adenoma, adrenal cortex hyperplasia. What is the most likely diagnosis?",
     "answers": [
       "Itsenko-Cushing’s syndrome",
@@ -10234,7 +10234,7 @@
     "subject": "Pathomorphology",
     "year": 2009,
     "topic": "Morphology of reversible and irreversible damage of cells and tissues. Extracellular accumulation of proteins, carbohydrates and lipids.",
-    "question": "Autopsy of a man, who had been suffering from the multiple bronchiectasis for 5 years and died from chronic renal insufficiency, revealed that kidneys were dense and enlarged, with thickened cortical layer of white colour with greasy lustre. What renal disease might be suspected? MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+    "question": "Autopsy of a man, who had been suffering from the multiple bronchiectasis for 5 years and died from chronic renal insufficiency, revealed that kidneys were dense and enlarged, with thickened cortical layer of white colour with greasy lustre. What renal disease might be suspected?",
     "answers": [
       "Secondary amyloidosis",
       "Glomerulonephritis",
@@ -10282,7 +10282,7 @@
     "question": "Gynecological examination of the uterine cervix in a 30-year-old woman revealed some bright-red lustrous spots that easily bleed when touched. Biopsy showed that a part of the uterine cervix was covered with cylindrical epithelium with papillary outgrowths; in the depth of tissue the growth of glands was present. What pathology of the uterine cervix was revealed?",
     "answers": [
       "Pseudoerosion",
-      "True erosion MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+      "True erosion",
       "Endocervicitis",
       "Glandular hyperplasia",
       "Leukoplakia"
@@ -10327,7 +10327,7 @@
     "question": "A pathologyhistology laboratory received a vermiform appendix up to 2,0 cm thick. Its serous membrane was pale, thick and covered with yellowish-green FIlms. The wall was flaccid, of grayishred colour. The appendix lumen was dilated and FIlled with yellowish- green substance. Histological examination revealed that the appendix wall was infiltrated with neutrophils. Specify the appendix disease:",
     "answers": [
       "Acute phlegmonous appendicitis",
-      "Acute gangrenous appendicitis MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+      "Acute gangrenous appendicitis",
       "Acute superficial appendicitis",
       "Acute simple appendicitis",
       "Chronic appendicitis"
@@ -10372,7 +10372,7 @@
     "question": "Examination of a young woman revealed a tumour up to 3 cm in diameter in form of a knot localized along the acoustic nerve. The tumour is homogenous, soft and elastic, of pink-and-white colour. Microscopically the tumour contains clusters of cells with oval nuclei. Fibrous cell clusters form regular structures made up by parallel rows of regularly oriented cells arranged in form of a palisade. Zones between the rows of cells are acellular and homogenous (Verocai bodies). What tumour is it?",
     "answers": [
       "Neurinoma",
-      "Malignant neurinoma MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+      "Malignant neurinoma",
       "Ganglioneuroma",
       "Neuroblastoma",
       "Ganglioneuroblastoma"
@@ -10418,7 +10418,7 @@
     "answers": [
       "Uric acid",
       "Cholesterol",
-      "Bilirubin MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+      "Bilirubin",
       "Urea",
       "Cystine"
     ],
@@ -10518,7 +10518,7 @@
     "id": 702,
     "subject": "Pathomorphology",
     "year": 2008,
-    "topic": "Kidney Disease. MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+    "topic": "Kidney Disease.",
     "question": "A 30 year old woman has face edemata. Examination revealed proteinuria (5,87 g/l), hypoproteinemia, dysproteinemia, hyperlipidemia. What condition is the set of these symptoms typical for?",
     "answers": [
       "Nephrotic syndrome",
@@ -10564,7 +10564,7 @@
     "subject": "Pathomorphology",
     "year": 2008,
     "topic": "Violation of hemostasis. Thrombosis, disseminated intravascular coagulation. Embolism.",
-    "question": "A patient ill with thrombophlebitis of his lower limbs had chest pain, blood spitting, progressing respiratory insufficiency that led to his death. Autopsy diagnosed multiple lung infarctions. What is the most probable cause of their development? MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+    "question": "A patient ill with thrombophlebitis of his lower limbs had chest pain, blood spitting, progressing respiratory insufficiency that led to his death. Autopsy diagnosed multiple lung infarctions. What is the most probable cause of their development?",
     "answers": [
       "Thromboembolism of pulmonary artery branches",
       "Thrombosis of pulmonary artery branches",
@@ -10611,7 +10611,7 @@
     "topic": "Viral airborne infection. HIV infection. Rabies.",
     "question": "In course of severe respiratory viral infection there appeared clinical signs of progressing cardiac insufficiency that caused death of a patient in the 2nd week of disease. Autopsy revealed that the heart was sluggish, with significant cavity dilatation. Histological examination of myocardium revealed plephora of microvessels and diffuse infiltration of stroma by lymphocytes and histiocytes. What disease corresponds with the described picture?",
     "answers": [
-      "Myocarditis MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+      "Myocarditis",
       "Stenocardia",
       "Acute coronary insufficiency",
       "Myocardium infarction",
@@ -10656,7 +10656,7 @@
     "topic": "The accumulation of proteins, carbohydrates and lipids. Morphology of reversible and irreversible damage of cells and tissues. Intracellular accumulation of proteins, carbohydrates and lipids.",
     "question": "A 6 year old child was delivered to a hospital. Examination revealed that the child couldn’t fix his eyes, didn’t keep his eyes on toys, eye ground had the cherryred spot sign. Laboratory analyses showed that brain, liver and spleen had high rate of ganglioside glycometide. What congenital disease is the child ill with?",
     "answers": [
-      "Tay-Sachs disease MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+      "Tay-Sachs disease",
       "Wilson’s syndrome",
       "Turner’s syndrome",
       "Niemann-Pick disease",
@@ -10704,7 +10704,7 @@
       "Autotransplantation",
       "Allotransplantation",
       "Xenotransplantation",
-      "Isotransplantation MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+      "Isotransplantation",
       "Heterotransplantation"
     ],
     "correct": 0
@@ -10748,7 +10748,7 @@
     "answers": [
       "Croupous pneumonia",
       "Interstitial pneumonia",
-      "Pulmonary abscess MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+      "Pulmonary abscess",
       "Focal pneumonia",
       "Influenzal pneumonia"
     ],
@@ -10794,7 +10794,7 @@
       "Fibrinoid swelling",
       "Fibrinous inflammation",
       "Mucoid swelling",
-      "Hyalinosis MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+      "Hyalinosis",
       "Amyloidosis"
     ],
     "correct": 0
@@ -10839,7 +10839,7 @@
       "IV",
       "I",
       "II",
-      "III MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+      "III",
       "V"
     ],
     "correct": 0
@@ -10938,7 +10938,7 @@
     "id": 730,
     "subject": "Pathomorphology",
     "year": 2007,
-    "topic": "Tuberculosis. MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+    "topic": "Tuberculosis.",
     "question": "Autopsy of a 48 y.o. man revealed a round formation 5 cm in diameter with clearcut outlines in the region of the 1st segment of his right lung. This formation was encircled with a thin layer of connective tissue full of white brittle masses. Make a diagnosis of the secondary tuberculosis form:",
     "answers": [
       "Tuberculoma",
@@ -10983,7 +10983,7 @@
     "id": 733,
     "subject": "Pathomorphology",
     "year": 2007,
-    "topic": "Diseases of the respiratory system. MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+    "topic": "Diseases of the respiratory system.",
     "question": "A forensic medical expert examines the body of a 58 y.o. man who had been consuming large amounts of alcochol for a long time and died at home. Microscopicaly: the right lung is dense and enlarged, its incision revealed that the tissue is greyish and homogenous, pleura is covered with greyish layers. Microscopically - alveolar cavities contain fibrin, hemolyzed erythrocytes. Make a diagnosis:",
     "answers": [
       "Croupous pneumonia",
@@ -11029,7 +11029,7 @@
     "subject": "Pathomorphology",
     "year": 2007,
     "topic": "Liver Disease",
-    "question": "Analysis of a punction biopsy material of liver revealed hepatocyte dystrophy with necroses as well as sclerosis with disorder of beam and lobulous structure, with formation of pseudolobules and regenerative nodes. What is the most probable diagnosis: MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+    "question": "Analysis of a punction biopsy material of liver revealed hepatocyte dystrophy with necroses as well as sclerosis with disorder of beam and lobulous structure, with formation of pseudolobules and regenerative nodes. What is the most probable diagnosis:",
     "answers": [
       "Liver cirrhosis",
       "Chronic hepatosis",
@@ -11073,7 +11073,7 @@
     "id": 739,
     "subject": "Pathomorphology",
     "year": 2007,
-    "topic": "General doctrine of inflammation. Exudative inflammation. The morphology of exudative inflammation MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+    "topic": "General doctrine of inflammation. Exudative inflammation. The morphology of exudative inflammation",
     "question": "Autopsy of a man who died from influenza revealed that his heart was slightly enlarged, pastous, myocardium was dull and had specks. Microscopical examination of myocardium revealed signs of parenchymatous adipose and hydropic dystrophy; stroma was edematic with poor macrophagal and lymphocytic infiltration, vessels were plethoric; perivascular analysis revealed petechial hemorrhages. What type of myocarditis was developed in this case?",
     "answers": [
       "Serous diffuse",
@@ -11118,7 +11118,7 @@
     "id": 742,
     "subject": "Pathomorphology",
     "year": 2010,
-    "topic": "Kidney Disease. MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+    "topic": "Kidney Disease.",
     "question": "Autopsy of a man who died from burn disease revealed brain edema, liver enlargement as well as enlargement of kidneys with wide light-grey cortical layer and plethoric medullary area. Microscopic examination revealed necrosis of tubules of main segments along with destruction of basal membranes, intersticium edema with leukocytic infiltration and haemorrhages. What is the most probable postmortem diagnosis?",
     "answers": [
       "Necrotic nephrosis",
@@ -11163,7 +11163,7 @@
     "id": 745,
     "subject": "Pathomorphology",
     "year": 2010,
-    "topic": "Pathomorphology of the immune system. Reactions and mechanisms of hypersensitivity. The autoimmune disease. Immunodeficiency States. MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+    "topic": "Pathomorphology of the immune system. Reactions and mechanisms of hypersensitivity. The autoimmune disease. Immunodeficiency States.",
     "question": "Histological examination of a 40 year old man’s thymus revealed reduced share of parenchymatous elements, increased share of adipose and loose connective tissue, its enrichment with thymus bodies. The organ’s mass was unchanged. What is this phenomenon called?",
     "answers": [
       "Age involution",
@@ -11209,7 +11209,7 @@
     "subject": "Pathomorphology",
     "year": 2010,
     "topic": "Tuberculosis.",
-    "question": "A 46 year old patient who had been suffering from tuberculosis for 6 years died from massive pulmonary haemorrhage. Autopsy revealed differentsixed foci of sclerosis and caseous necrosis in lungs, in the upper part of the right lung there was a cavity 5 cm in diameter with dense grey walls, the cavity contained liquid blood and blood clots. What type of tuberculosis is it? MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+    "question": "A 46 year old patient who had been suffering from tuberculosis for 6 years died from massive pulmonary haemorrhage. Autopsy revealed differentsixed foci of sclerosis and caseous necrosis in lungs, in the upper part of the right lung there was a cavity 5 cm in diameter with dense grey walls, the cavity contained liquid blood and blood clots. What type of tuberculosis is it?",
     "answers": [
       "Fibrocavernous",
       "Acute cavernous",
@@ -11257,7 +11257,7 @@
     "question": "Examination of a 42 year old patient revealed a tumour of adenohypophysis. Objectively: the patient’s weight is 117 kg, he has moon- like hyperemic face, red-blue striae of skin distension on his belly. Osteoporosis and muscle dystrophy are present. AP is 210/140 mm Hg. What is the most probable diagnosis?",
     "answers": [
       "Cushing’s disease",
-      "Cushing’s syndrome MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+      "Cushing’s syndrome",
       "Conn’s disease",
       "Diabetes mellitus",
       "Essential hypertension"
@@ -11305,7 +11305,7 @@
       "Chemotherapy",
       "Ultrasound",
       "Enzymes",
-      "X-ray therapy MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY"
+      "X-ray therapy"
     ],
     "correct": 0
   },
@@ -11358,7 +11358,7 @@
     "id": 758,
     "subject": "Pathomorphology",
     "year": 2010,
-    "topic": "Pre - & perinatal pathology. MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+    "topic": "Pre - & perinatal pathology.",
     "question": "An alcoholic woman has born a girl with mental and physical developmental lag. Doctors diagnosed the girl with fetal alcohol syndrome. What effect is the cause of the girl’s state?",
     "answers": [
       "Teratogenic",
@@ -11406,7 +11406,7 @@
     "topic": "Tumors of the central nervous system",
     "question": "Autopsy of a 3-year-old child shows a tumor in the cerebellum. The tumor has no clear margins separating it from the surrounding tissues. Histologically it is made of small atypical cells with yperchromic nuclei. This tumor is most likely a:",
     "answers": [
-      "Medulloblastoma MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+      "Medulloblastoma",
       "Medullary sarcoma",
       "Cancer metastasis",
       "Sarcoma metastasis",
@@ -11453,7 +11453,7 @@
     "answers": [
       "Skin cancer",
       "Sarcoma",
-      "Papilloma MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+      "Papilloma",
       "Trophic ulcer",
       "Fibroma"
     ],
@@ -11553,7 +11553,7 @@
     "id": 771,
     "subject": "Pathomorphology",
     "year": 2019,
-    "topic": "Respiratory diseases. MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+    "topic": "Respiratory diseases.",
     "question": "Autopsy of a 58-year-old man, who for a long time has been drinking alcohol in large amounts and died at home, is being conducted. Macroscopically the right lung is dense and enlarged, its tissue is gray and homogeneous on section, its pleura is covered with grayish membranous deposits. Microscopically the alveolar cavities contain fibrin threads, neutrophils, and hemolysed erythrocytes. Make the diagnosis:",
     "answers": [
       "Croupous pneumonia",
@@ -11598,7 +11598,7 @@
     "id": 774,
     "subject": "Pathomorphology",
     "year": 2019,
-    "topic": "Benign and malignant non-epithelial (mesenchymal) tumors. MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+    "topic": "Benign and malignant non-epithelial (mesenchymal) tumors.",
     "question": "A 27-year-old woman has undergone a sector resection of mammary gland tissue. Macroscopy detects a dense white node, 4 cm in diameter, with clear margins in the excised tissue. Immediate histological analysis shows the tumor to consist of a large amount of fibrous stroma with stromal proliferation around the small canaliculi. Canalicular epithelium overlays the basement membrane and retains its polarity. Make the diagnosis:",
     "answers": [
       "Pericanalicular fibroadenoma",
@@ -11643,7 +11643,7 @@
     "id": 777,
     "subject": "Pathomorphology",
     "year": 2018,
-    "topic": "Systemic connective tissue diseases with auto immunization MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+    "topic": "Systemic connective tissue diseases with auto immunization",
     "question": "Autopsy of a woman revealed the following morphologic changes: stenosis of the atrioventricular opening, mitral insufficiency. Histologically there are focal cardiosclerosis and ”blooming” Aschoff nodules in the myocardium. What is the most likely diagnosis?",
     "answers": [
       "Rheumatism",
@@ -11691,7 +11691,7 @@
     "topic": "Acute systemic circulatory disorders",
     "question": "A 45-year-old man diagnosed with hepatic cirrhosis and ascites underwent drainage of 5 liters of fluid from his abdominal cavity, which resulted in development of syncopal state due to insufficient blood supply to the brain. What circulatory disorder occurred in the abdominal cavity in this case?",
     "answers": [
-      "Arterial hyperemia MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+      "Arterial hyperemia",
       "Ischemia",
       "Venous hyperemia",
       "Thrombosis",
@@ -11738,7 +11738,7 @@
     "answers": [
       "Serous",
       "Proliferative",
-      "Croupous MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+      "Croupous",
       "Granulomatous",
       "Diphtheritic"
     ],
@@ -11838,7 +11838,7 @@
     "id": 790,
     "subject": "Pathomorphology",
     "year": 2018,
-    "topic": "Particularly dangerous (convection, quarantine) infections MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+    "topic": "Particularly dangerous (convection, quarantine) infections",
     "question": "A 34-year-old man died in a comatose state. According to his family after a business trip to an African country he developed periodical jaundice attacks. Autopsy shows the following: dense enlarged spleen with slate-black pulp; enlarged plethoric liver, gray-black on section; cerebral gray matter is brown-gray; cerebral white matter contains numerous small hemorrhages. What infectious disease can be suspected?",
     "answers": [
       "Malaria",
@@ -11883,7 +11883,7 @@
     "id": 793,
     "subject": "Pathomorphology",
     "year": 2018,
-    "topic": "General concepts of human infectious pathology. Classification of infectious diseases. Intestinal infectious diseases. MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+    "topic": "General concepts of human infectious pathology. Classification of infectious diseases. Intestinal infectious diseases.",
     "question": "Autopsy of the body revealed waxy degeneration of the rectus abdominis muscles. In the terminal segment of the small intestine there are ulcers 3-5 cm in diameter. The ulcer walls are covered in a crumbling grayish-white substance. The ulcer edges are markedly raised above the mucosa. Widal test is positive. Make the diagnosis:",
     "answers": [
       "Typhoid fever",
@@ -11928,7 +11928,7 @@
     "id": 796,
     "subject": "Pathomorphology",
     "year": 2018,
-    "topic": "Inflammation: causes, morphogenesis. Pathomorphology of exudative inflammation MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+    "topic": "Inflammation: causes, morphogenesis. Pathomorphology of exudative inflammation",
     "question": "Autopsy of a patient, who died of bi-lateral bronchopneumonia, shows in the left lung lower lobe a cavity 5 cm in diameter, filled with yellowish-white liquid. What complication of the patient’s pneumonia had developed?",
     "answers": [
       "Abscess",
@@ -11973,7 +11973,7 @@
     "id": 799,
     "subject": "Pathomorphology",
     "year": 2018,
-    "topic": "Hypo thalamo-pituitary disorders. Pathology of the adrenal glands. Pathology of the thyroid gland. Pathology of the endocrine system of the pancreas. MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+    "topic": "Hypo thalamo-pituitary disorders. Pathology of the adrenal glands. Pathology of the thyroid gland. Pathology of the endocrine system of the pancreas.",
     "question": "When examining a biopsy material-al obtained from the thyroid gland, the pathologist discovered lymphocyte infiltration of the thyroid tissues and destruction-on of the parenchymal elements. Diffuse lymphocyte infiltration with lymphoid follicles was detected in the stroma. What is the most likely diagnosis?",
     "answers": [
       "Hashimoto’s thyroiditis (chronic lymphocytic thyroiditis)",
@@ -12018,7 +12018,7 @@
     "id": 802,
     "subject": "Pathomorphology",
     "year": 2020,
-    "topic": ". Infections of childhood. MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+    "topic": ". Infections of childhood.",
     "question": "A 6-year-old child had acute onset of the disease that started as catarrhal nasopharyngitis. 2 days later the patient died. Autopsy of the body shows markedly plethoric and swollen pia mater that is soaked with thick turbid yellow-green fluid. The brain is swollen, the cerebellar tonsils are enlarged, and there is a clearly visible ligature mark on the brain. The described changes are characteristic of:",
     "answers": [
       "Meningococcosis",
@@ -12063,7 +12063,7 @@
     "id": 805,
     "subject": "Pathomorphology",
     "year": 2020,
-    "topic": "Sepsis. MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+    "topic": "Sepsis.",
     "question": "A patient developed a purulent inflammatory process in the periodontal tissues. The process was caused by activation of the microorganisms inherent in the body, which are a part of oral mucosal microflora. What type of infection is it?",
     "answers": [
       "Reinfection",
@@ -12111,7 +12111,7 @@
     "topic": "Necrosis. Clinical and morphological forms of necrosis.",
     "question": "Autopsy of the body revealed a large wedge-shaped patch of a dense dark red tissue with clear margins in the upper lobe of the right lung. Histological examination detected there necrosis of the alveolar walls; the alveolar lumen is tightly packed with erythrocytes. What process occurred in the lungs?",
     "answers": [
-      "Hemorrhagic infarction MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+      "Hemorrhagic infarction",
       "Gangrene",
       "Atelectasis",
       "Hemorrhage",
@@ -12158,7 +12158,7 @@
     "answers": [
       "Hemolytic",
       "Obstructive",
-      "Absorption MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+      "Absorption",
       "Hepatocellular",
       "Conjugated"
     ],
@@ -12261,7 +12261,7 @@
     "topic": "Rheumatic diseases",
     "question": "Histology of the cardiac auricle in a patient with mitral valve stenosis reveled Aschoff-Talalayev granulomas. What genesis of heart disease is in this case evident, according to this histological study?",
     "answers": [
-      "Rheumatic MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+      "Rheumatic",
       "Congenital",
       "Atherosclerotic",
       "Septic",
@@ -12304,7 +12304,7 @@
     "subject": "Pathomorphology",
     "year": 2021,
     "topic": "Diseases of kidny",
-    "question": "Autopsy of the body of a 61- year-old man with rheumatoid arthritis shows enlarged and dense yellow-white kidneys with awaxy sheen and areas of cicatricial depressions on their surface. Congo red-staining-reveals deposition _of homogeneous-pink masses in the capillary loops, of the glomeruli, in the walls of the arterioles and arteries, in the basement membrane of the tubules, and in the stroma. In this case, rheumatoid arthritis was complicated by the development of the following process: MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+    "question": "Autopsy of the body of a 61- year-old man with rheumatoid arthritis shows enlarged and dense yellow-white kidneys with awaxy sheen and areas of cicatricial depressions on their surface. Congo red-staining-reveals deposition _of homogeneous-pink masses in the capillary loops, of the glomeruli, in the walls of the arterioles and arteries, in the basement membrane of the tubules, and in the stroma. In this case, rheumatoid arthritis was complicated by the development of the following process:",
     "answers": [
       "Secondary renal amyloidosis",
       "Postinfectious glomerulonephritis",
@@ -12351,7 +12351,7 @@
     "topic": "Necrosis",
     "question": "Examination of the femoral bone detected chronic suppurative inflammation of the compact substance and bone marrow, formation of bone sequestra. What disease is associated with such changes?",
     "answers": [
-      "Osteomyelitis MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+      "Osteomyelitis",
       "Reticulosarcoma",
       "Multiple myeloma",
       "Periostitis",
@@ -12399,7 +12399,7 @@
       "Pulmonary arteries",
       "Brain",
       "Portal vein",
-      "Lower limb veins MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+      "Lower limb veins",
       "Left ventricle of the heart"
     ],
     "correct": 0
@@ -12445,7 +12445,7 @@
       "Exudative inflammation",
       "Leprosy inflammation",
       "Alterative inflammation",
-      "Typical productive inflammation MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY"
+      "Typical productive inflammation"
     ],
     "correct": 0
   },
@@ -12576,7 +12576,7 @@
     "topic": "Embolism. Thrombosis",
     "question": "After an open scapular fracture, a man suddenly died. Early autopsy detects frothy blood in the right ventricle and pulmonary arteries. What was the cause of death in this case?",
     "answers": [
-      "Air embolism MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+      "Air embolism",
       "Pulmonary edema",
       "Bacterial embolism",
       "Fat embolism",
@@ -12624,7 +12624,7 @@
       "Influenza",
       "Adenovirus infection",
       "Cropous pneumonia",
-      "Bronchiectasis MSQ Крок 1 Medicine 2007-2021-PATHOMORPHOLOGY",
+      "Bronchiectasis",
       "Raspiratory syncytial infection"
     ],
     "correct": 0
@@ -22776,7 +22776,7 @@
     "topic": "Shoulder muscles",
     "question": "After falling from a tree, a person has problems with extending an arm into a horizontal position. What muscle most likely has been injured in this case?",
     "answers": [
-      "M. deltoideus MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+      "M. deltoideus",
       "M. triceps brachii",
       "M. coracobrachialis",
       "M. anconeus",
@@ -22833,7 +22833,7 @@
     "id": 1523,
     "subject": "Anatomy",
     "year": 2023,
-    "topic": "Lumbar plexus MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+    "topic": "Lumbar plexus",
     "question": "A man was hospitalized with an injury to the psoas major muscle. He has lost the ability to extend the lower leg in the knee joint. What nerve is damaged in this case?",
     "answers": [
       "Femoral",
@@ -22883,7 +22883,7 @@
     "answers": [
       "Quadriceps femoris muscle",
       "Adductor magnus muscle",
-      "Sartorius muscle MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+      "Sartorius muscle",
       "Adductor longus muscle",
       "Biceps femoris muscle"
     ],
@@ -22939,7 +22939,7 @@
     "subject": "Anatomy",
     "year": 2023,
     "topic": "Abdominal aorta",
-    "question": "During a surgery for a splenic injury, the surgeon must ligate the artery that supplies the spleen with blood. This artery is a branch of: MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+    "question": "During a surgery for a splenic injury, the surgeon must ligate the artery that supplies the spleen with blood. This artery is a branch of:",
     "answers": [
       "Truncus coeliacus",
       "A. gastroduodenalis",
@@ -22990,7 +22990,7 @@
       "Jejunum",
       "Duodenum",
       "Ileum",
-      "Sigmoid colon MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY"
+      "Sigmoid colon"
     ],
     "correct": 0
   },
@@ -23046,7 +23046,7 @@
     "topic": "Central nervous system.",
     "question": "Examination of the patient with traumatic brain injury revealed that he has lost the ability to discern the movement of an object on the skin. What part of the cerebral cortex is damaged?",
     "answers": [
-      "Posterior central gyrus MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+      "Posterior central gyrus",
       "Occipital lobe",
       "Parietal lobe",
       "Frontal lobe",
@@ -23094,7 +23094,7 @@
       "Adrenal gland",
       "Kidney",
       "Lymph node",
-      "Thymus MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+      "Thymus",
       "Thyroid gland"
     ],
     "correct": 0
@@ -23149,7 +23149,7 @@
     "subject": "Anatomy",
     "year": 2017,
     "topic": "Urogenital system.",
-    "question": "A young man came to a hospital with complaints of disturbed urination. Examination of his external genitalia revealed the urethra to be split on the top, with urine flowing out of this opening. What type of external genitalia maldevelopment is observed in this case? MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+    "question": "A young man came to a hospital with complaints of disturbed urination. Examination of his external genitalia revealed the urethra to be split on the top, with urine flowing out of this opening. What type of external genitalia maldevelopment is observed in this case?",
     "answers": [
       "Epispadia",
       "Phimosis",
@@ -23200,7 +23200,7 @@
       "Spatium interaponeuroticum suprasternale",
       "Mediastinum anterius",
       "Spatium pretracheale",
-      "Spatium interscalenum MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY"
+      "Spatium interscalenum"
     ],
     "correct": 0
   },
@@ -23254,7 +23254,7 @@
     "subject": "Anatomy",
     "year": 2017,
     "topic": "Digestive system.",
-    "question": "A woman was delivered to a gynecological unit with signs of acute abdomen and suspected extrauterine pregnancy with oviduct rupture. Where will the blood accumulate in this case? MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+    "question": "A woman was delivered to a gynecological unit with signs of acute abdomen and suspected extrauterine pregnancy with oviduct rupture. Where will the blood accumulate in this case?",
     "answers": [
       "Rectouterine pouch",
       "Vesicouterine pouch",
@@ -23363,7 +23363,7 @@
     "answers": [
       "Thoracic cavity - anterior mediastinum",
       "Thoracic cavity - middle mediastinum",
-      "Thoracic cavity - posterior mediastinum MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+      "Thoracic cavity - posterior mediastinum",
       "Retrovisceral space",
       "Interaponeurotic suprasternal space"
     ],
@@ -23418,7 +23418,7 @@
     "id": 1562,
     "subject": "Anatomy",
     "year": 2016,
-    "topic": "Central nervous system. MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+    "topic": "Central nervous system.",
     "question": "Due to destruction of certain structures of the brainstem an animal has lost its orientation reflexes in response to strong light stimuli. What structures were destroyed?",
     "answers": [
       "Anterior quadrigeminal bodies",
@@ -23468,7 +23468,7 @@
     "answers": [
       "Lymph node",
       "Thymus",
-      "Spleen MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+      "Spleen",
       "Red bone marrow",
       "Tonsils"
     ],
@@ -23524,7 +23524,7 @@
     "subject": "Anatomy",
     "year": 2016,
     "topic": "Organs of immune and endocrine systems",
-    "question": "Histological specimen of a hemopoietic organ shows clusters of node- and band-shaped lymphocytes that along with stroma elements compose cortical and medullar substances. Name this organ: MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+    "question": "Histological specimen of a hemopoietic organ shows clusters of node- and band-shaped lymphocytes that along with stroma elements compose cortical and medullar substances. Name this organ:",
     "answers": [
       "Lymph node",
       "Spleen",
@@ -23633,7 +23633,7 @@
     "answers": [
       "Rectouterine pouch",
       "Utriculosaccular chamber",
-      "Recto-vesical pouch MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+      "Recto-vesical pouch",
       "Retropubic space",
       "Intersigmoidal recess"
     ],
@@ -23689,7 +23689,7 @@
     "subject": "Anatomy",
     "year": 2016,
     "topic": "Heart. Vascular system.",
-    "question": "A 29-year-old man with a knife wound of the neck presents with bleeding. During the initial d-bridement of the wound a surgeon revealed the injury of a vessel situated along the lateral edge of the sternocleidomastoid muscle. Specify this vessel: MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+    "question": "A 29-year-old man with a knife wound of the neck presents with bleeding. During the initial d-bridement of the wound a surgeon revealed the injury of a vessel situated along the lateral edge of the sternocleidomastoid muscle. Specify this vessel:",
     "answers": [
       "V. jugularis externa",
       "V. jugularis anterior",
@@ -23740,7 +23740,7 @@
       "8",
       "6",
       "5",
-      "4 MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY"
+      "4"
     ],
     "correct": 0
   },
@@ -23796,7 +23796,7 @@
     "topic": "Central nervous system.",
     "question": "As a result of a continuous chronic encephalopathy a patient has developed spontaneous motions and disorder of torso muscle tone. These are the symptoms of the disorder of the following conduction tract:",
     "answers": [
-      "Tractus rubrospinalis MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+      "Tractus rubrospinalis",
       "Tractus corticospinalis",
       "Tractus corticonuclearis",
       "Tractus spinothalamicus",
@@ -23944,7 +23944,7 @@
     "subject": "Anatomy",
     "year": 2015,
     "topic": "Heart. Vascular system.",
-    "question": "A patient has been found to have a marked dilatation of the saphenous veins in the region of anterior abdominal wall around the navel. This is symptomatic of pressure increase in the following vessel: MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+    "question": "A patient has been found to have a marked dilatation of the saphenous veins in the region of anterior abdominal wall around the navel. This is symptomatic of pressure increase in the following vessel:",
     "answers": [
       "V. portae hepatis",
       "V. cava superior",
@@ -24053,7 +24053,7 @@
     "answers": [
       "Postcentral gyrus",
       "Occipital lobe",
-      "Temporal lobe MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+      "Temporal lobe",
       "Precentral gyrus",
       "E.Cerebellum"
     ],
@@ -24108,7 +24108,7 @@
     "id": 1608,
     "subject": "Anatomy",
     "year": 2014,
-    "topic": "Heart. Vascular system. MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+    "topic": "Heart. Vascular system.",
     "question": "Angiocardiography of a 60-year-old male patient revealed constriction of a vessel located in the left coronary sulcus of the heart. What is the pathological vessel called?",
     "answers": [
       "Ramus circumflexus",
@@ -24159,7 +24159,7 @@
       "Olfactory",
       "Tactile",
       "Gustatory",
-      "Visual MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+      "Visual",
       "Auditory"
     ],
     "correct": 0
@@ -24214,7 +24214,7 @@
     "subject": "Anatomy",
     "year": 2014,
     "topic": "Sensory organs.",
-    "question": "During the air and bone conducti-on tests it was revealed that in the left ear the tones were louder by bone conduction. This might be associated with the disease of: MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+    "question": "During the air and bone conducti-on tests it was revealed that in the left ear the tones were louder by bone conduction. This might be associated with the disease of:",
     "answers": [
       "Left middle ear",
       "Right middle ear",
@@ -24324,7 +24324,7 @@
       "n. medianus",
       "n. musculocutaneus",
       "n. ulnaris",
-      "n. cutaneus antebrachii medialis MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+      "n. cutaneus antebrachii medialis",
       "n. Radialis"
     ],
     "correct": 0
@@ -24379,7 +24379,7 @@
     "subject": "Anatomy",
     "year": 2013,
     "topic": "Central nervous system.",
-    "question": "A male with a lesion of one of the CNS parts has asthenia, muscular dystonia, balance disorder. Which CNS part has been affected? MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+    "question": "A male with a lesion of one of the CNS parts has asthenia, muscular dystonia, balance disorder. Which CNS part has been affected?",
     "answers": [
       "Cerebellum",
       "Black substance",
@@ -24430,7 +24430,7 @@
       "Trachea",
       "Left main bronchus",
       "Heart",
-      "Pericardium MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY"
+      "Pericardium"
     ],
     "correct": 0
   },
@@ -24487,7 +24487,7 @@
     "question": "A histological specimen of the eyeball shows a biconvex structure connected to the ciliary body by the fibers of the Zinn’s zonule and covered with a transparent capsule. Name this structure:",
     "answers": [
       "Crystalline lens",
-      "Vitreous body MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+      "Vitreous body",
       "Ciliary body",
       "D.Cornea",
       "E.Sclera"
@@ -24543,7 +24543,7 @@
     "id": 1637,
     "subject": "Anatomy",
     "year": 2013,
-    "topic": "Urogenital system. MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+    "topic": "Urogenital system.",
     "question": "A patient has been hospitalized for a suspected tumor of the prostate. During the surgery, it was revealed that the tumor invaded the bladder. Which part of the bladder was affected?",
     "answers": [
       "Cervix",
@@ -24593,7 +24593,7 @@
     "answers": [
       "Left principal",
       "Right principal",
-      "Right upper lobar MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+      "Right upper lobar",
       "Left upper lobar",
       "Middle lobar"
     ],
@@ -24648,7 +24648,7 @@
     "id": 1644,
     "subject": "Anatomy",
     "year": 2012,
-    "topic": "Sensory organs. MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+    "topic": "Sensory organs.",
     "question": "A 60 year old patient has impaired perception of high-frequency sounds. These changes were caused by damage of the following auditory analyzer structures:",
     "answers": [
       "Main cochlea membrane near the oval window",
@@ -24698,7 +24698,7 @@
     "answers": [
       "Ductus choledochus",
       "Ductus cysticus",
-      "Ductus hepaticus communis MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+      "Ductus hepaticus communis",
       "Ductus hepaticus dexter",
       "Ductus hepaticus sinister"
     ],
@@ -24753,7 +24753,7 @@
     "id": 1651,
     "subject": "Anatomy",
     "year": 2012,
-    "topic": "Heart. Vascular system. MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+    "topic": "Heart. Vascular system.",
     "question": "A 70 year old female patient was diagnosed with fracture of left femoral neck accompanied by disruption of ligament of head of femur. The branch of the following artery is damaged:",
     "answers": [
       "Obturator",
@@ -24804,7 +24804,7 @@
       "Bladder floor",
       "Bladder cervix",
       "Bladder apex",
-      "Bladder body MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+      "Bladder body",
       "Bladder isthmus"
     ],
     "correct": 0
@@ -24859,7 +24859,7 @@
     "subject": "Anatomy",
     "year": 2012,
     "topic": "Heart. Vascular system.",
-    "question": "Preventive examination of a patient revealed an enlarged lymph node of metastatic origin on the medial wall of the left axillary crease. Specify the most likely localization of the primary tumour: MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+    "question": "Preventive examination of a patient revealed an enlarged lymph node of metastatic origin on the medial wall of the left axillary crease. Specify the most likely localization of the primary tumour:",
     "answers": [
       "Mammary gland",
       "Submandibular salivary gland",
@@ -24910,7 +24910,7 @@
       "Anterior spinocerebellar tract",
       "Rubrospinal tract",
       "Reticulospinal tract",
-      "Tectospinal tract MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY"
+      "Tectospinal tract"
     ],
     "correct": 0
   },
@@ -24967,7 +24967,7 @@
     "question": "A man with a stab wound in the region of the quadrilateral foramen consulted a doctor about it. Examination revealed that the injured couldn’t abduct his arm from the body. What nerve is most likely damaged?",
     "answers": [
       "n. axillaris",
-      "n. medianus MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+      "n. medianus",
       "n. radialis",
       "n. ulnaris",
       "n. subclavius"
@@ -25069,7 +25069,7 @@
     "subject": "Anatomy",
     "year": 2011,
     "topic": "Digestive system.",
-    "question": "While examining the oral cavity a stomatologist revealed inflammation of papillae on the border of the median and posterior third of the back of tongue. What papillae are inflamed? MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+    "question": "While examining the oral cavity a stomatologist revealed inflammation of papillae on the border of the median and posterior third of the back of tongue. What papillae are inflamed?",
     "answers": [
       "Papillae vallatae",
       "Papillae fungiformes",
@@ -25177,7 +25177,7 @@
     "question": "A patient underwent an extraction of a part of a CNS structures by medical indications. As a result of the extraction the patient developed atony, astasia, intention tremor, ataxy and adiadochokinesis. Which part of CNS structure had been extracted?",
     "answers": [
       "Cerebellum",
-      "Amygdaloid corpus MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+      "Amygdaloid corpus",
       "Hippocamp",
       "Basal ganglions",
       "Limbic system"
@@ -25233,7 +25233,7 @@
     "id": 1683,
     "subject": "Anatomy",
     "year": 2011,
-    "topic": "Cranial nerves MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+    "topic": "Cranial nerves",
     "question": "A patient consulted a doctor about a sensation of imbalance which appeared after a trauma. Which nerve is damaged?",
     "answers": [
       "Vestibulocochlear nerve",
@@ -25284,7 +25284,7 @@
       "Aorta and pulmonary trunk",
       "Pulmonary trunk and pulmonary veins",
       "Superior cava and aorta",
-      "Superior cava and pulmonary trunk MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+      "Superior cava and pulmonary trunk",
       "Aorta and pulmonary veins"
     ],
     "correct": 0
@@ -25339,7 +25339,7 @@
     "subject": "Anatomy",
     "year": 2009,
     "topic": "Heart. Vascular system.",
-    "question": "A patient complains about edemata of legs, skin cyanosis, small ulcers on one side of the lateral condyle. Examination revealed a swelling, enlarged veins, formation of nodes. The pathological process has started in the following vein: MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+    "question": "A patient complains about edemata of legs, skin cyanosis, small ulcers on one side of the lateral condyle. Examination revealed a swelling, enlarged veins, formation of nodes. The pathological process has started in the following vein:",
     "answers": [
       "V. saphena parva",
       "V. saphena magna",
@@ -25390,7 +25390,7 @@
       "Sustenocytes",
       "Sertoli’s cells",
       "Sustentacular cells",
-      "Spermatozoa MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY"
+      "Spermatozoa"
     ],
     "correct": 0
   },
@@ -25447,7 +25447,7 @@
     "question": "A man with an injury in the nuchal region (regio nuchae) was admitted to the resuscitation department. What muscle occupies this region?",
     "answers": [
       "m. trapezius",
-      "m. sternocleidomastoideus MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+      "m. sternocleidomastoideus",
       "m. latissimus dorsi",
       "m. rhomboideus minor",
       "m. scalenus anterior"
@@ -25503,7 +25503,7 @@
     "id": 1701,
     "subject": "Anatomy",
     "year": 2008,
-    "topic": "Sensory organs. MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+    "topic": "Sensory organs.",
     "question": "Inflammation of the tympanic cavity(purulent otitis media) was complicated by inflammation of mammillary process sockets. What wall of tympanic cavity did the pus penetrate into the sockets through?",
     "answers": [
       "Posterior",
@@ -25553,7 +25553,7 @@
     "answers": [
       "Anterior tubercles of quadrigeminal plate",
       "Posterior tubercles of quadrigeminal plate",
-      "Red nuclei MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+      "Red nuclei",
       "Vestibular nuclei",
       "Black substance"
     ],
@@ -25703,7 +25703,7 @@
     "answers": [
       "Ureter",
       "Uterine tube",
-      "Round ligament of uterus MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+      "Round ligament of uterus",
       "Internal iliac vein",
       "Urethra"
     ],
@@ -25758,7 +25758,7 @@
     "id": 1718,
     "subject": "Anatomy",
     "year": 2007,
-    "topic": "Digestive system. MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+    "topic": "Digestive system.",
     "question": "A patient with a stab wound of the anterior stomach wall is in surgical care. What formation of abdominal cavity did the stomach contents get into?",
     "answers": [
       "Antegastrial bursa",
@@ -25808,7 +25808,7 @@
     "answers": [
       "Quadriceps muscle of thigh",
       "Biceps muscle of thigh",
-      "Triceps muscle of thigh MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+      "Triceps muscle of thigh",
       "Semitendinous muscle",
       "Semimembranous muscle"
     ],
@@ -25863,7 +25863,7 @@
     "id": 1725,
     "subject": "Anatomy",
     "year": 2007,
-    "topic": "Sensory organs. MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+    "topic": "Sensory organs.",
     "question": "After a 2 y.o. child has had flu, there appeared complaints about ear ache. A doctor revealed hearing impairment and inflammation of the middle ear. How did the infection penetrate into the middle ear?",
     "answers": [
       "Through the auditory tube",
@@ -25913,7 +25913,7 @@
     "answers": [
       "Femoral nerve",
       "Superior gluteal nerve",
-      "Big fibular nerve MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+      "Big fibular nerve",
       "Obturator nerve",
       "Inferior gluteal nerve"
     ],
@@ -25968,7 +25968,7 @@
     "id": 1732,
     "subject": "Anatomy",
     "year": 2007,
-    "topic": "Sensory organs. MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+    "topic": "Sensory organs.",
     "question": "Vitamin A deficit results in the impairment of twilight vision. Name the cells that have the above-mentioned photoreceptor function:",
     "answers": [
       "Rod receptor cell",
@@ -26020,7 +26020,7 @@
       "Visual",
       "Auditory",
       "Olfactory",
-      "Auditory and visual MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY"
+      "Auditory and visual"
     ],
     "correct": 0
   },
@@ -26076,7 +26076,7 @@
     "topic": "Heart. Vascular system.",
     "question": "In course of laparotomy a surgeon revealed gangrenous lesion of descending colon. It was caused by thrombosis of the following artery:",
     "answers": [
-      "Sinister colic MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+      "Sinister colic",
       "Median colic",
       "Dexter colic",
       "D.Ileocolic",
@@ -26182,7 +26182,7 @@
     "question": "X-ray examination of skull base bones revealed enlargement of sellar cavity, thinning of anterior clinoid processes, destruction of different parts, destruction of different parts of sella turcica. Such bone destruction might be caused by a tumour of the following",
     "answers": [
       "Hypophysis",
-      "Epiphysis MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+      "Epiphysis",
       "Thymus gland",
       "Adrenal glands",
       "Thyroid gland"
@@ -26238,7 +26238,7 @@
     "id": 1750,
     "subject": "Anatomy",
     "year": 2010,
-    "topic": "Respiratory system. MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+    "topic": "Respiratory system.",
     "question": "A foreign body (a button) closed space of the right superior lobar bronchus. What segments of the right lung won’t be supplied with air?",
     "answers": [
       "Apical, posterior, anterior",
@@ -26288,7 +26288,7 @@
     "answers": [
       "Transverse colon",
       "Jejunum",
-      "Duodenum MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+      "Duodenum",
       "Ileum",
       "Sigmoid colon"
     ],
@@ -26343,7 +26343,7 @@
     "id": 1757,
     "subject": "Anatomy",
     "year": 2018,
-    "topic": "The temporal bone MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+    "topic": "The temporal bone",
     "question": "A child diagnosed with purulent inflammation of the middle ear was brought to the otolaryngology department. The disease started with the inflammation of the nasopharynx. It was determined that the infection had reached the tympanic cavity through the eustachian tube that is located in the:",
     "answers": [
       "Canalis musculotubarius",
@@ -26393,7 +26393,7 @@
     "answers": [
       "Substantia nigra",
       "Thalamus",
-      "Red nuclei MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+      "Red nuclei",
       "Cerebellum",
       "Reticular formation"
     ],
@@ -26449,7 +26449,7 @@
     "subject": "Anatomy",
     "year": 2018,
     "topic": "Abdominal aorta",
-    "question": "An oncology patient is to undergo a surgery on the descending colon. Name the main source of blood supply to this organ: MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+    "question": "An oncology patient is to undergo a surgery on the descending colon. Name the main source of blood supply to this organ:",
     "answers": [
       "Inferior mesenteric artery",
       "Superior mesenteric artery",
@@ -26557,7 +26557,7 @@
     "question": "After a hand fracture the man has lost the ability to touch his little finger with the thumb on the affected hand. Examination of the palmar surface shows one of the palmar muscles to be atrophied. Name the affected muscle:",
     "answers": [
       "M. opponens policis",
-      "Mm. lumbricales MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+      "Mm. lumbricales",
       "Mm. interossei",
       "M. flexor digiti minimi",
       "M. palmaris brevis"
@@ -26613,7 +26613,7 @@
     "id": 1775,
     "subject": "Anatomy",
     "year": 2019,
-    "topic": "Heart. Vascular system. MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+    "topic": "Heart. Vascular system.",
     "question": "The brain trauma unit received a patient with damaged greater wing of the sphenoid bone. The fracture line crosses the spinous foramen of the sphenoid. What vessel was damaged?",
     "answers": [
       "Middle meningeal artery",
@@ -26664,7 +26664,7 @@
       "V. jugularis anterior",
       "V. jugularis externa",
       "V. jugularis interna",
-      "A. carotis externa MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+      "A. carotis externa",
       "A. thyroidea superior"
     ],
     "correct": 0
@@ -26721,7 +26721,7 @@
     "topic": "Heart. Vascular system.",
     "question": "While examining foot blood supply a doctor checks the pulsation of a large artery running in the separate fibrous channel in front of articulatio talocruralis between the tendons of long extensor muscles of hallux and toes. What artery is it?",
     "answers": [
-      "A. dorsalis pedis MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+      "A. dorsalis pedis",
       "A. tibialis anterior",
       "A. tarsea medialis",
       "A. tarsea lateralis",
@@ -26770,7 +26770,7 @@
       "Ramus interventricularis posterior",
       "A. coronaria dextra",
       "V. cordis parva",
-      "Ramus interventricularis anterior MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY"
+      "Ramus interventricularis anterior"
     ],
     "correct": 0
   },
@@ -26826,7 +26826,7 @@
     "topic": "Muscles",
     "question": "A patient has been delivered into a surgical ward with an incised wound of the anterior surface of the shoulder in its lower one-third. Flexing function was disrupted in the shoulder and elbow joints, which is caused by the damage to the:",
     "answers": [
-      "Biceps muscle of the arm MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+      "Biceps muscle of the arm",
       "Triceps muscle of the arm",
       "Anconeus muscle",
       "Deltoid muscle",
@@ -26883,7 +26883,7 @@
     "id": 1793,
     "subject": "Anatomy",
     "year": 2020,
-    "topic": "The organ of vision MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+    "topic": "The organ of vision",
     "question": "A 25-ycar old woman complains of deteriorating vision. Examination revealed a defect in accommodation, the pupil is diluted and unresponsive to light. What muscles are functionally disturbed in this",
     "answers": [
       "Iris sphincter muscle, ciliary muscle",
@@ -26934,7 +26934,7 @@
       "Dcscending",
       "Inferior (horizontal)",
       "Ascending",
-      "Ampulla of Vatet MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+      "Ampulla of Vatet",
       "Super'10t"
     ],
     "correct": 0
@@ -26993,7 +26993,7 @@
     "answers": [
       "Facial nerve",
       "Mandibular nerve",
-      "Maxillary nerve MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+      "Maxillary nerve",
       "Oculornolor nerve",
       "Ophthalmic nerve"
     ],
@@ -27048,7 +27048,7 @@
     "id": 1804,
     "subject": "Anatomy",
     "year": 2020,
-    "topic": "External carotid artery MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+    "topic": "External carotid artery",
     "question": "A person received a head wound. To temporarily stop the bleeding, the doctor pressed with finger an arterial vessel located in front of the auditory mealuS and above the zygornatic arch, Name the damaged artery:",
     "answers": [
       "A. temporalis superficialis",
@@ -27097,7 +27097,7 @@
     "question": "The doctor cxamincs a patient with diabetes mcllitus. He needs to check the ulsation of an artery thal enters the foot elween the tendons Of extensor digitorum longus and extensor hallucrs longu.s, What artery IS it?",
     "answers": [
       "A. dorsallis pedis",
-      "A. plantaris medialis MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+      "A. plantaris medialis",
       "A. plantari5 laterulis",
       "A. fibularrs",
       "-"
@@ -27153,7 +27153,7 @@
     "id": 1811,
     "subject": "Anatomy",
     "year": 2021,
-    "topic": "Genital system MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+    "topic": "Genital system",
     "question": "A 28-year-old woman was admitted to the gynecological deparment with complaints of abdominal pain. An ovarian tumor was clinically detected. Its surgical removal is indicated. During such surgery, it is necessary to cut the ligament connecting the ovarv with the uterus What ligament must the surgeon cut in this case?",
     "answers": [
       "Lig. ovarii proprium",
@@ -27201,7 +27201,7 @@
     "topic": "Sensori organs",
     "question": "A man presents with convergent strabismus. What muscle of the eyeball is damaged in this case?",
     "answers": [
-      "Musculus rectus oculi lateralis MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+      "Musculus rectus oculi lateralis",
       "Musculus rectus oculi medialis",
       "Musculus rectus oculi inferior",
       "Musculus rectus oculi superior",
@@ -27258,7 +27258,7 @@
     "id": 1818,
     "subject": "Anatomy",
     "year": 2021,
-    "topic": "Periferal nervous system MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+    "topic": "Periferal nervous system",
     "question": "A patient with an injury of the greater psoas muscle was delivered to the traumatology center. The patien lost the ability flex the leg in the knee joint. Which nerv is damaged?",
     "answers": [
       "Femoral nerve",
@@ -27308,7 +27308,7 @@
     "answers": [
       "Anterior interventricular branch of the left coronary artery",
       "Posterior interventricular branch of the right coronary artery",
-      "Right coronary artery MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+      "Right coronary artery",
       "Circumflex branch of the left coronary artery",
       "Atrial branches of the left coronary artery"
     ],
@@ -27355,7 +27355,7 @@
       "Chorda tympani branch of the facial nerve",
       "Mandibular branch of the trigeminal nerve",
       "Ophthalmic branch of the trigeminal nerve",
-      "Greater petrosal nerve from the facial nerve MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY"
+      "Greater petrosal nerve from the facial nerve"
     ],
     "correct": 0
   },
@@ -27484,7 +27484,7 @@
     "subject": "Anatomy",
     "year": 2021,
     "topic": "Cranial nerves",
-    "question": "On examiantion a men sents with convergent strabismus, inward deviation of the eyeball and inabihu t move the eyeball outward. What nerv damaged? MSQ Крок 1 Medicine 2007-2021 - NORMAL ANATOMY",
+    "question": "On examiantion a men sents with convergent strabismus, inward deviation of the eyeball and inabihu t move the eyeball outward. What nerv damaged?",
     "answers": [
       "Abducent nerve",
       "Trochlear nerve",
@@ -36844,7 +36844,7 @@
     "subject": "Biochemistry",
     "year": 2023,
     "topic": "Nucleic acid exchange. Protein synthesis",
-    "question": "In the nucleus of a cell, a molecule of mature mRNA, which is smaller in size, was formed from a larger molecule of immature mRNA. The stages of this transformation together are called: Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+    "question": "In the nucleus of a cell, a molecule of mature mRNA, which is smaller in size, was formed from a larger molecule of immature mRNA. The stages of this transformation together are called:",
     "answers": [
       "Processing",
       "Replication",
@@ -36895,7 +36895,7 @@
       "Gluconeogenesis",
       "Anaerobic glycogenolysis",
       "Amino acid decarboxylation",
-      "Amino acid deamination Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY"
+      "Amino acid deamination"
     ],
     "correct": 0
   },
@@ -36953,7 +36953,7 @@
     "answers": [
       "DNA synthesis inhibition",
       "Translation inhibition",
-      "Transcription inhibition Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+      "Transcription inhibition",
       "Replication catalysis",
       "DNase stimulation"
     ],
@@ -37009,7 +37009,7 @@
     "subject": "Biochemistry",
     "year": 2023,
     "topic": "Nutritional biochemistry and general characteristics of vitamins",
-    "question": "A man was hospitalized with provisional diagnosis of acute pancreatitis. What enzyme activity must be measured in the patient’s blood and urine to confirm this diagnosis? Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+    "question": "A man was hospitalized with provisional diagnosis of acute pancreatitis. What enzyme activity must be measured in the patient’s blood and urine to confirm this diagnosis?",
     "answers": [
       "αamylase",
       "AST",
@@ -37117,7 +37117,7 @@
     "question": "A 55-year-old patient complains of pain in the joints that becomes worse before changes in the weather. Blood tests detect high levels of uric acid. What substance is breaking down, likely causing this condition in the patient?",
     "answers": [
       "Adenosine monophosphate",
-      "- Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+      "-",
       "Thymidine monophosphate",
       "Cytidine monophosphate",
       "Uridine monophosphate"
@@ -37173,7 +37173,7 @@
     "id": 2479,
     "subject": "Biochemistry",
     "year": 2023,
-    "topic": "Hormonal regulation of metabolism Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+    "topic": "Hormonal regulation of metabolism",
     "question": "Chemically, thyroid hormones (thyroxine and triiodothyronine) are amino acid derivatives. Name this amino acid.",
     "answers": [
       "Tyrosine",
@@ -37223,7 +37223,7 @@
     "answers": [
       "Pyridoxine",
       "Folic acid",
-      "Tocopherol Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+      "Tocopherol",
       "Ascorbic acid",
       "Cobalamin"
     ],
@@ -37279,7 +37279,7 @@
     "subject": "Biochemistry",
     "year": 2023,
     "topic": "Hormonal regulation of metabolism",
-    "question": "A 55-ycar-old patient is being monitored by an endocrinologist for disturbed endocrine function of the pancreas, which manifests as a decrease in glucagon levels in the blood. What pancreatic cells are dysfunctional in this case? Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+    "question": "A 55-ycar-old patient is being monitored by an endocrinologist for disturbed endocrine function of the pancreas, which manifests as a decrease in glucagon levels in the blood. What pancreatic cells are dysfunctional in this case?",
     "answers": [
       "Alpha cells of the islets of Langerhans",
       "Delta-1 cells of the islets of Langerhans",
@@ -37386,7 +37386,7 @@
     "topic": "Functional and clinical biochemistry of liver",
     "question": "A 46-year-old woman suffering from cholelithiasis developed jaundice. Her urine became dark yellow, while feces are light-colored. What substance will be the most increased in concentration in the blood serum in this case?",
     "answers": [
-      "Conjugated bilirubin Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+      "Conjugated bilirubin",
       "Unconjugated bilirubin",
       "Biliverdine",
       "Mesobilirubin",
@@ -37443,7 +37443,7 @@
     "id": 2497,
     "subject": "Biochemistry",
     "year": 2017,
-    "topic": "Characteristics of the hemostasis system and immune processes Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+    "topic": "Characteristics of the hemostasis system and immune processes",
     "question": "After pancreatic surgery the patient developed hemorrhagic syndrome with disturbed 3rd stage of blood clotting. What will be the most likely mechanism of the hemostatic disorder?",
     "answers": [
       "Fibrinolysis activation",
@@ -37494,7 +37494,7 @@
       "Increased activity of adipose triglyceride lipase",
       "Accumulation of palmitoyl-CoA in cytosol",
       "Activation of ketone bodies utilization",
-      "Activation of apoА1, apoА2, and apoА4 apolipoprotein synthesis Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+      "Activation of apoА1, apoА2, and apoА4 apolipoprotein synthesis",
       "Decreased activity of plasma phosphatidylcholine-cholesterol-acyltransferase"
     ],
     "correct": 0
@@ -37549,7 +37549,7 @@
     "subject": "Biochemistry",
     "year": 2017,
     "topic": "Functional and clinical biochemistry of muscle, nervous and connective tissues",
-    "question": "Depression and emotional disturbances result from the lack of noradrenaline, serotonin, and other biogenic amines in the brain. Their content in the synapses can be increased through administration of antidepressants that inhibit the following enzyme: Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+    "question": "Depression and emotional disturbances result from the lack of noradrenaline, serotonin, and other biogenic amines in the brain. Their content in the synapses can be increased through administration of antidepressants that inhibit the following enzyme:",
     "answers": [
       "Monoamine oxidase",
       "Diamine oxidase",
@@ -37657,7 +37657,7 @@
     "question": "Streptomycin and other aminoglycosides prevent the joining of formyl-methionyl-tRNA by bonding with the 30S ribosomal subunit. This effect leads to disruption of the following process:",
     "answers": [
       "Translation initiation in procaryotes",
-      "Translation initiation in eucaryotes Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+      "Translation initiation in eucaryotes",
       "Transcription initiation in procaryotes",
       "Transcription initiation in eucaryotes",
       "Replication initiation in procaryotes"
@@ -37713,7 +37713,7 @@
     "id": 2515,
     "subject": "Biochemistry",
     "year": 2017,
-    "topic": "Nutrition biochemistry and vitamins fundamental Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+    "topic": "Nutrition biochemistry and vitamins fundamental",
     "question": "An infant, who was on synthetic formula feeding, developed signs of vitamin B 1 deficiency. What reactions does this vitamin take part in?",
     "answers": [
       "Keto acids oxidative decarboxylation",
@@ -37762,7 +37762,7 @@
     "question": "The process of metabolism in the human body produces active forms of oxygen, including superoxide anion radical − 2. This anion is inactivated by the following enzyme:",
     "answers": [
       "Superoxide dismutase",
-      "Catalase Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+      "Catalase",
       "Peroxidase",
       "Glutathione peroxidase",
       "Glutathione reductase"
@@ -37818,7 +37818,7 @@
     "id": 2522,
     "subject": "Biochemistry",
     "year": 2016,
-    "topic": "Nutrition biochemistry and vitamins fundamental Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+    "topic": "Nutrition biochemistry and vitamins fundamental",
     "question": "It has been determined that one of a pesticide components is sodium arsenate that blocks lipoic acid. Enzyme activity can be impaired by this pesticide. Name this enzyme:",
     "answers": [
       "Pyruvate dehydrogenase complex",
@@ -37866,7 +37866,7 @@
     "topic": "Functional and clinical biochemistry of liver",
     "question": "A 16-year-old adolescent is diagnosed with hereditary UDP (uridine diphosphate) glucuronyltransferase deficiency. Laboratory tests revealed hyperbilirubinemia caused mostly by increased blood content of the following substance:",
     "answers": [
-      "Unconjugated bilirubin Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+      "Unconjugated bilirubin",
       "Conjugated bilirubin",
       "Urobilinogen",
       "Stercobilinogen",
@@ -37923,7 +37923,7 @@
     "id": 2529,
     "subject": "Biochemistry",
     "year": 2016,
-    "topic": "Characteristics and intracellular lipid metabolism Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+    "topic": "Characteristics and intracellular lipid metabolism",
     "question": "The key reaction of fatty acid synthesis is production of malonyl-CoA. What metabolite is the source of malonyl-CoA synthesis?",
     "answers": [
       "Acetyl-CoA",
@@ -37974,7 +37974,7 @@
       "Repair",
       "Replication",
       "Transcription",
-      "Reverse transcription Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+      "Reverse transcription",
       "Translation"
     ],
     "correct": 0
@@ -38029,7 +38029,7 @@
     "subject": "Biochemistry",
     "year": 2016,
     "topic": "Nucleotide metabolism",
-    "question": "A therapeutist has an appointment with a 40-year-old patient complaining of recurrent pain attacks in his hallux joints and their swelling. Urine analysis revealed its marked acidity and pink color. What substances can cause such changes in urine? Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+    "question": "A therapeutist has an appointment with a 40-year-old patient complaining of recurrent pain attacks in his hallux joints and their swelling. Urine analysis revealed its marked acidity and pink color. What substances can cause such changes in urine?",
     "answers": [
       "Uric acid salt",
       "Chlorides",
@@ -38138,7 +38138,7 @@
     "answers": [
       "Creatine phosphokinase",
       "Lactate dehydrogenase",
-      "Pyruvate dehydrogenase Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+      "Pyruvate dehydrogenase",
       "Glutamate dehydrogenase",
       "Adenylate cyclase"
     ],
@@ -38194,7 +38194,7 @@
     "subject": "Biochemistry",
     "year": 2015,
     "topic": "Functional and clinical biochemistry of liver",
-    "question": "A 16-year-old adolescent is diagnosed with hereditary UDP (uridine diphosphate) glucuronyltransferase deficiency. Laboratory tests revealed hyperbilirubinemia caused mostly by increased blood content of the following substance: Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+    "question": "A 16-year-old adolescent is diagnosed with hereditary UDP (uridine diphosphate) glucuronyltransferase deficiency. Laboratory tests revealed hyperbilirubinemia caused mostly by increased blood content of the following substance:",
     "answers": [
       "Unconjugated bilirubin",
       "Conjugated bilirubin",
@@ -38245,7 +38245,7 @@
       "Cholesterol",
       "Bilirubin",
       "Urea",
-      "Cystine Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY"
+      "Cystine"
     ],
     "correct": 0
   },
@@ -38302,7 +38302,7 @@
     "question": "During regular check-up a child is detected with interrupted mineralization of the bones. What vitamin deficiency can be the cause?",
     "answers": [
       "Calciferol",
-      "Riboflavin Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+      "Riboflavin",
       "Tocopherol",
       "Folic acid",
       "Cobalamin"
@@ -38350,7 +38350,7 @@
       "Pyruvic acid",
       "Glutamic acid",
       "Citric acid",
-      "Fumaric acid Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY"
+      "Fumaric acid"
     ],
     "correct": 0
   },
@@ -38406,7 +38406,7 @@
     "topic": "Characteristics and intracellular lipid metabolism",
     "question": "Obesity is a common disease. The aim of its treatment is to lower content of neutral fats in the body. What hormon-sensitive enzyme is the most important for intracellular lipolysis?",
     "answers": [
-      "Triacylglycerol lipase Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+      "Triacylglycerol lipase",
       "Protein kinase",
       "Adenylate kinase",
       "Diacylglycerol lipase",
@@ -38494,7 +38494,7 @@
     "subject": "Biochemistry",
     "year": 2014,
     "topic": "Nucleotide metabolism",
-    "question": "A 46-year-old female patient consulted a doctor about pain in the small joints of the upper and lower limbs. The joints are enlarged and shaped like thickened nodes. Serum test revealed an increase in urate concentration. This might be caused by a disorder in metabolism of: Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+    "question": "A 46-year-old female patient consulted a doctor about pain in the small joints of the upper and lower limbs. The joints are enlarged and shaped like thickened nodes. Serum test revealed an increase in urate concentration. This might be caused by a disorder in metabolism of:",
     "answers": [
       "Purines",
       "Carbohydrates",
@@ -38545,7 +38545,7 @@
       "Oxygenase and hydroxylase",
       "Cytochrome oxidase, cytochrome B5",
       "Oxygenase and catalase",
-      "Flavin-dependent oxidase Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY"
+      "Flavin-dependent oxidase"
     ],
     "correct": 0
   },
@@ -38602,7 +38602,7 @@
     "question": "A patient with hereditary hyperammonemia due to a disorder of ornithine cycle has developed secondary orotaciduria. The increased synthesis of orotic acid is caused by an increase in the following metabolite of ornithine cycle:",
     "answers": [
       "Carbamoyl phosphate",
-      "Citrulline Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+      "Citrulline",
       "Ornithine",
       "Urea",
       "Argininosuccinate"
@@ -38650,7 +38650,7 @@
       "Uroporphyrinogen I synthase",
       "Delta-aminolevulinate synthase",
       "Uroporphyrinogen decarboxylase",
-      "Ferrochelatase Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY"
+      "Ferrochelatase"
     ],
     "correct": 0
   },
@@ -38703,7 +38703,7 @@
     "id": 2581,
     "subject": "Biochemistry",
     "year": 2014,
-    "topic": "Nucleic acid metabolism. Protein synthesis Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+    "topic": "Nucleic acid metabolism. Protein synthesis",
     "question": "During cell division, DNA replication occurs by a signal from the cytoplasm, and a certain portion of the DNA helix unwinds and splits into two individual strains. What enzyme facilitates this process?",
     "answers": [
       "Helicase",
@@ -38753,7 +38753,7 @@
     "answers": [
       "rRNA",
       "tRNA",
-      "mRNA Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+      "mRNA",
       "snRNA",
       "tRNA + rRNA"
     ],
@@ -38808,7 +38808,7 @@
     "id": 2588,
     "subject": "Biochemistry",
     "year": 2014,
-    "topic": "Functional and clinical biochemistry of muscle, nervous and connective tissues Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+    "topic": "Functional and clinical biochemistry of muscle, nervous and connective tissues",
     "question": "Disruption of nerve fiber myelinogenesis causes neurological disorders and mental retardation. These symptoms are typical for hereditary and acquired alterations in the metabolism of:",
     "answers": [
       "Sphingolipids",
@@ -38858,7 +38858,7 @@
     "answers": [
       "It inhibits GP and activates GS",
       "It activates both GP and GS",
-      "It inhibits both GP and GS Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+      "It inhibits both GP and GS",
       "It activates GP and inhibits GS",
       "It does not affect the activity of GP and GS"
     ],
@@ -38904,7 +38904,7 @@
       "DNA",
       "Protein",
       "Homopolysaccharides",
-      "Gangliosides Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+      "Gangliosides",
       "Glycosaminoglycans"
     ],
     "correct": 0
@@ -38959,7 +38959,7 @@
     "subject": "Biochemistry",
     "year": 2013,
     "topic": "Nutrition biochemistry and vitamins fundamental",
-    "question": "A number of diseases can be diagnosed by evaluating activity of blood transaminases. What vitamin is one of cofactors of these enzymes? Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+    "question": "A number of diseases can be diagnosed by evaluating activity of blood transaminases. What vitamin is one of cofactors of these enzymes?",
     "answers": [
       "B 6",
       "B 2",
@@ -39009,7 +39009,7 @@
       "Indole",
       "Bilirubin",
       "Cadaverine",
-      "Agmatine Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+      "Agmatine",
       "Putrescine"
     ],
     "correct": 0
@@ -39064,7 +39064,7 @@
     "subject": "Biochemistry",
     "year": 2013,
     "topic": "Nucleic acid metabolism. Protein synthesis",
-    "question": "Infectious diseases are treated with antibiotics (streptomycin, erythromycin, chloramphenicol). They inhibit the following stage of protein synthesis: Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+    "question": "Infectious diseases are treated with antibiotics (streptomycin, erythromycin, chloramphenicol). They inhibit the following stage of protein synthesis:",
     "answers": [
       "Translation",
       "Transcription",
@@ -39112,7 +39112,7 @@
     "question": "The genetic defect of pyruvate carboxylase deficiency is the cause of delayed physical and mental development and early death in children. This defect is characterized by lacticemia, lactaciduria, disorder of a number of metabolic pathways. In particular, the following process is inhibited:",
     "answers": [
       "Citric acid cycle and gluconeogenesis",
-      "Glycolysis and glycogenolysis Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+      "Glycolysis and glycogenolysis",
       "Glycogenesis and glycogenolysis",
       "Lipolysis and lipogenesis",
       "Pentose phosphate pathway and glycolysis"
@@ -39168,7 +39168,7 @@
     "id": 2612,
     "subject": "Biochemistry",
     "year": 2013,
-    "topic": "Nutrition biochemistry and vitamins fundamental Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+    "topic": "Nutrition biochemistry and vitamins fundamental",
     "question": "Due to the blockage of the common bile duct (which was radiographically confirmed), the biliary flow to the duodenum was stopped. We should expect the impairment of:",
     "answers": [
       "Fat emulsification",
@@ -39217,7 +39217,7 @@
     "question": "Characteristic sign of glycogenosis is muscle pain during physical work. Blood examination reveals usually hypoglycemia. This pathology is caused by congenital deficiency of the following enzyme:",
     "answers": [
       "Glycogen phosphorylase",
-      "Glucose 6-phosphate dehydrogenase Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+      "Glucose 6-phosphate dehydrogenase",
       "Alpha amylase",
       "Gamma amylase",
       "Lysosomal glycosidas"
@@ -39322,7 +39322,7 @@
     "question": "A 36 year old female patient has a history of collagen disease. Urine analysis is likely to reveal an increased concentration of the following metabolite:",
     "answers": [
       "Oxyproline",
-      "Indican Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+      "Indican",
       "Creatinine",
       "Urea",
       "Urobilinogen"
@@ -39378,7 +39378,7 @@
     "id": 2626,
     "subject": "Biochemistry",
     "year": 2012,
-    "topic": "Specific ways of amino acids metabolism Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+    "topic": "Specific ways of amino acids metabolism",
     "question": "A patient has been diagnosed with alkaptonuria. Choose an enzyme whose deficiency can be the reason for this pathology:",
     "answers": [
       "Homogentisic acid oxidase",
@@ -39429,7 +39429,7 @@
       "Dehydropholate reductase",
       "Thiaminase",
       "Deaminase",
-      "Pholate oxidase Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+      "Pholate oxidase",
       "Pholate decarboxylase"
     ],
     "correct": 0
@@ -39484,7 +39484,7 @@
     "subject": "Biochemistry",
     "year": 2012,
     "topic": "Functional and clinical biochemistry of liver",
-    "question": "An infectious disease unit admitted a patient with signs of jaundice caused by hepatitis virus. Select an indicator that is specific only for parenchymatous jaundice: Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+    "question": "An infectious disease unit admitted a patient with signs of jaundice caused by hepatitis virus. Select an indicator that is specific only for parenchymatous jaundice:",
     "answers": [
       "Increase in ALT and AST rate",
       "Hyperbilirubinemia",
@@ -39535,7 +39535,7 @@
       "Transaminase",
       "Decarboxylase",
       "Peptidase",
-      "Lyase Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY"
+      "Lyase"
     ],
     "correct": 0
   },
@@ -39589,7 +39589,7 @@
     "subject": "Biochemistry",
     "year": 2011,
     "topic": "Specific ways of amino acids metabolism",
-    "question": "A patient has pellagra. Interrogation revealed that he had lived mostly on maize for a long time and eaten little meat. This disease had been caused by the deficit of the following substance in the maize: Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+    "question": "A patient has pellagra. Interrogation revealed that he had lived mostly on maize for a long time and eaten little meat. This disease had been caused by the deficit of the following substance in the maize:",
     "answers": [
       "Tryptophan",
       "Tyrosine",
@@ -39638,7 +39638,7 @@
     "answers": [
       "Vitamin U",
       "Pantothenic acid",
-      "Vitamin C Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+      "Vitamin C",
       "Vitamin B 1",
       "Vitamin K"
     ],
@@ -39693,7 +39693,7 @@
     "id": 2647,
     "subject": "Biochemistry",
     "year": 2011,
-    "topic": "Functional and clinical biochemistry of muscle, nervous and connective tissues Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+    "topic": "Functional and clinical biochemistry of muscle, nervous and connective tissues",
     "question": "A 36-year-old female patient has a history of collagen disease. Urine analysis is likely to reveal an increased concentration of the following metabolite:",
     "answers": [
       "Oxyproline",
@@ -39742,7 +39742,7 @@
     "question": "A patient has an increased pyruvate concentration in blood, most of it is excreted with the urine. What kind of avitaminosis has this patient?",
     "answers": [
       "B 1",
-      "E Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+      "E",
       "B 3",
       "B 6",
       "B 2"
@@ -39847,7 +39847,7 @@
     "question": "Blood plasma of a healthy man contains several dozens of proteins. During an illness new proteins can originate, namely the protein of \"acute phase\". Select such protein from the listed below:",
     "answers": [
       "C-reactive protein",
-      "Prothrombin Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+      "Prothrombin",
       "Fibrinogen",
       "G immunoglobulin",
       "A immunoglobulin"
@@ -39903,7 +39903,7 @@
     "id": 2661,
     "subject": "Biochemistry",
     "year": 2011,
-    "topic": "Nucleic acid metabolism. Protein synthesis Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+    "topic": "Nucleic acid metabolism. Protein synthesis",
     "question": "Life cycle of a cell includes the process of DNA autoreduplication. As a result of it monochromatid chromosomes turn into bichromatid ones. What period of cell cycle does this phenomenon fall into?",
     "answers": [
       "S",
@@ -39952,7 +39952,7 @@
     "question": "Some students developed myodynia after continuous physical activity during physical education. The reason for such condition was accumulation of lactic acid in the skeletal muscles. It was generated in the students’ bodies after activation of the following process:",
     "answers": [
       "Glycolysis",
-      "Gluconeogenesis Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+      "Gluconeogenesis",
       "Pentose-phosphate cycle",
       "Lipolysis",
       "Glycogeny"
@@ -40008,7 +40008,7 @@
     "id": 2668,
     "subject": "Biochemistry",
     "year": 2011,
-    "topic": "The mechanism of tissue respiration. Peroxide and microsomal oxidation Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+    "topic": "The mechanism of tissue respiration. Peroxide and microsomal oxidation",
     "question": "Study of conversion of a food colouring agent revealed that neutralization of this xenobiotic takes place only in one phase - microsomal oxydation. Name a component of this phase:",
     "answers": [
       "Cytochrome Р450",
@@ -40056,7 +40056,7 @@
     "topic": "Nucleic acid metabolism. Protein synthesis",
     "question": "A patient’s organism has decreased concentration of magnesium ions that are necessary for attachment of ribosomes to the granular endoplasmatic reticulum. It is known that this causes protein biosynthesis disturbance. What stage of protein biosynthesis will be disturbed?",
     "answers": [
-      "Translation Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+      "Translation",
       "Transcription",
       "Replication",
       "Amino acid activation",
@@ -40105,7 +40105,7 @@
       "Transport of FFA from fat depots to the tissues",
       "It takes part in one of reactions of FFA beta-oxidation",
       "FFA activation",
-      "Activation of intracellular lipolysis Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY"
+      "Activation of intracellular lipolysis"
     ],
     "correct": 0
   },
@@ -40159,7 +40159,7 @@
     "subject": "Biochemistry",
     "year": 2009,
     "topic": "Nutrition biochemistry and vitamins fundamental",
-    "question": "Examination of a patient with frequent haemorrhages from the internal organs and mucous membranes revealed proline and lysine within the collagen FIbers. Disorder of their hydroxylation is caused by lack of the following vitamin: Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+    "question": "Examination of a patient with frequent haemorrhages from the internal organs and mucous membranes revealed proline and lysine within the collagen FIbers. Disorder of their hydroxylation is caused by lack of the following vitamin:",
     "answers": [
       "Vitamin C",
       "Vitamin K",
@@ -40208,7 +40208,7 @@
     "answers": [
       "ItsenkoCushing’s syndrome",
       "Diabetes mellitus",
-      "Acromegalia Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+      "Acromegalia",
       "Pituitary nanism",
       "Adiposogenital dystrophy"
     ],
@@ -40264,7 +40264,7 @@
     "subject": "Biochemistry",
     "year": 2009,
     "topic": "Functional and clinical biochemistry of muscle, nervous and connective tissues",
-    "question": "After a sprint an untrained person develops muscle hypoxia. This leads to the accumulation of the following metabolite in muscles: Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+    "question": "After a sprint an untrained person develops muscle hypoxia. This leads to the accumulation of the following metabolite in muscles:",
     "answers": [
       "Lactate",
       "Ketone bodies",
@@ -40315,7 +40315,7 @@
       "Somatotropin",
       "Vasopressin",
       "Thyrocalcitonin",
-      "Glucagon Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY"
+      "Glucagon"
     ],
     "correct": 0
   },
@@ -40369,7 +40369,7 @@
     "subject": "Biochemistry",
     "year": 2009,
     "topic": "Functional and clinical biochemistry of liver",
-    "question": "After a disease a 16-year-old boy is presenting with decreased function of protein synthesis in the liver as a result of vitamin K deficiency. This may cause disorder of: Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+    "question": "After a disease a 16-year-old boy is presenting with decreased function of protein synthesis in the liver as a result of vitamin K deficiency. This may cause disorder of:",
     "answers": [
       "Blood coagulation",
       "Erythrocyte sedimentation rate",
@@ -40459,7 +40459,7 @@
     "subject": "Biochemistry",
     "year": 2008,
     "topic": "Nutrition biochemistry and vitamins fundamental",
-    "question": "After consumption of rich food a patient has nausea and heartburn, steatorrhea. This condition might be caused by: Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+    "question": "After consumption of rich food a patient has nausea and heartburn, steatorrhea. This condition might be caused by:",
     "answers": [
       "Bile acid deficiency",
       "Increased lipase secretion",
@@ -40509,7 +40509,7 @@
       "Processing",
       "Initiation",
       "Reparation",
-      "Mutation Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+      "Mutation",
       "Replication"
     ],
     "correct": 0
@@ -40564,7 +40564,7 @@
     "subject": "Biochemistry",
     "year": 2008,
     "topic": "Blood fundamental",
-    "question": "A patient has yellow skin colour, dark urine, dark-yellow feces. What substance will have strengthened concentration in the blood serum? Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+    "question": "A patient has yellow skin colour, dark urine, dark-yellow feces. What substance will have strengthened concentration in the blood serum?",
     "answers": [
       "Unconjugated bilirubin",
       "Conjugated bilirubin",
@@ -40614,7 +40614,7 @@
       "C-reactive protein",
       "Uric acid",
       "Urea",
-      "Creatinine Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+      "Creatinine",
       "Transferrin"
     ],
     "correct": 0
@@ -40668,7 +40668,7 @@
     "id": 2712,
     "subject": "Biochemistry",
     "year": 2008,
-    "topic": "Transamination and ammonia coversion Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+    "topic": "Transamination and ammonia coversion",
     "question": "A cerebral trauma caused increased ammonia generation. What amino acid participates in the excretion of ammonia from the cerebral tissue?",
     "answers": [
       "Glutamic",
@@ -40717,7 +40717,7 @@
     "question": "As a result of posttranslative modifications some proteins taking part in blood coagulation, particularly prothrombin, become capable of calcium binding. The following vitamin takes part in this process:",
     "answers": [
       "K",
-      "C Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+      "C",
       "A",
       "B 1",
       "B 2"
@@ -40765,7 +40765,7 @@
       "Collagen",
       "Porphyrin",
       "Myoglobin",
-      "Calmodulin Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY"
+      "Calmodulin"
     ],
     "correct": 0
   },
@@ -40818,7 +40818,7 @@
     "id": 2722,
     "subject": "Biochemistry",
     "year": 2008,
-    "topic": "Characteristics and intracellular lipid metabolism Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+    "topic": "Characteristics and intracellular lipid metabolism",
     "question": "A 6 year old child was delivered to a hospital. Examination revealed that the child couldn’t fix his eyes, didn’t keep his eyes on toys, eye ground had the cherryred spot sign. Laboratory analyses showed that brain, liver and spleen had high rate of ganglioside glycometide. What congenital disease is the child ill with?",
     "answers": [
       "Tay-Sachs disease",
@@ -40867,7 +40867,7 @@
     "question": "A patient had hemorrhagic stroke. Blood examination revealed strengthened kinin concentration. The patient was prescribed contrical. It was administered in order to inhibit the following proteinase:",
     "answers": [
       "Kallikrein",
-      "Pepsin Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+      "Pepsin",
       "Trypsin",
       "Chemotrypsin",
       "Collagenase"
@@ -40969,7 +40969,7 @@
     "subject": "Biochemistry",
     "year": 2007,
     "topic": "Functional and clinical biochemistry of muscle, nervous and connective tissues",
-    "question": "A patient presents high activity of LDH 1, 2, aspartate aminotransferase, creatine phosphokinase. In what organ (organs) is the development of a pathological process the most probable? Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+    "question": "A patient presents high activity of LDH 1, 2, aspartate aminotransferase, creatine phosphokinase. In what organ (organs) is the development of a pathological process the most probable?",
     "answers": [
       "In the heart muscle (initial stage of myocardium infarction)",
       "In skeletal muscles (dystrophy, atrophy)",
@@ -41020,7 +41020,7 @@
       "Lysine",
       "Proline",
       "Histidine",
-      "Alanine Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY"
+      "Alanine"
     ],
     "correct": 0
   },
@@ -41074,7 +41074,7 @@
     "subject": "Biochemistry",
     "year": 2007,
     "topic": "Nutrition biochemistry and vitamins fundamental",
-    "question": "A woman who has been keeping to a cleanrice diet for a long time was diagnosed with polyneuritis (beriberi). What vitamin deficit results in development of this disease? Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+    "question": "A woman who has been keeping to a cleanrice diet for a long time was diagnosed with polyneuritis (beriberi). What vitamin deficit results in development of this disease?",
     "answers": [
       "Thiamine",
       "Ascorbic acid",
@@ -41124,7 +41124,7 @@
       "Low (absent) activity of glycogene phosphorylase in liver",
       "Low (absent) activity of hexokinase",
       "High activity of glycogen synthetase",
-      "Low (absent) activity of glucose 6-phosphatase Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+      "Low (absent) activity of glucose 6-phosphatase",
       "Deficit of a gene that is responsible for synthesis of glucose 1-phosphaturidine transferase"
     ],
     "correct": 0
@@ -41179,7 +41179,7 @@
     "subject": "Biochemistry",
     "year": 2007,
     "topic": "Nutrition biochemistry and vitamins fundamental",
-    "question": "Examination of a patient with frequent hemorrhages from internals and mucous membranes revealed proline and lysine being a part of collagene fibers. What vitamin absence caused disturbance of their hydroxylation? Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+    "question": "Examination of a patient with frequent hemorrhages from internals and mucous membranes revealed proline and lysine being a part of collagene fibers. What vitamin absence caused disturbance of their hydroxylation?",
     "answers": [
       "Vitamin C",
       "Vitamin K",
@@ -41229,7 +41229,7 @@
       "Disjunction, oxydation and phosphorilation",
       "Inhibition of respiratory ferment synthesis",
       "Competitive inhibition of respiratory ferments",
-      "Intensification of respiratory ferment synthesis Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+      "Intensification of respiratory ferment synthesis",
       "Specific binding of active centres of respiratory ferments"
     ],
     "correct": 0
@@ -41287,7 +41287,7 @@
     "question": "Glutamate decarboxylation results in formation of inhibitory transmitter in CNS. Name it:",
     "answers": [
       "GABA",
-      "Glutathione Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+      "Glutathione",
       "Histamine",
       "Serotonin",
       "Asparagine"
@@ -41344,7 +41344,7 @@
     "subject": "Biochemistry",
     "year": 2007,
     "topic": "Catabolism of carbohydrates",
-    "question": "A child’s blood presents high content of galactose, glucose concentration is low. There are such presentations as cataract, mental deficiency, adipose degeneration of liver. What disease is it? Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+    "question": "A child’s blood presents high content of galactose, glucose concentration is low. There are such presentations as cataract, mental deficiency, adipose degeneration of liver. What disease is it?",
     "answers": [
       "Galactosemia",
       "Diabetes mellitus",
@@ -41394,7 +41394,7 @@
       "Transporting of fatty acids to mitochondrions",
       "Regulation of Ca 2+ rate in mitochondrions",
       "Substrate phosphorylation",
-      "Lactic acid utilization Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+      "Lactic acid utilization",
       "Actin and myosin synthesis"
     ],
     "correct": 0
@@ -41449,7 +41449,7 @@
     "subject": "Biochemistry",
     "year": 2010,
     "topic": "Functional and clinical biochemistry of liver",
-    "question": "A full-term newborn child has yellowish skin and mucous membranes. This might be probably caused by temporary deficiency of the following enzyme: Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+    "question": "A full-term newborn child has yellowish skin and mucous membranes. This might be probably caused by temporary deficiency of the following enzyme:",
     "answers": [
       "UDPglucoronyltransferase",
       "Uridine transferase",
@@ -41484,7 +41484,7 @@
       "Purines",
       "Collagen",
       "Cholesterol",
-      "Pyrimidines Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+      "Pyrimidines",
       "Carbohydrates"
     ],
     "correct": 0
@@ -41538,7 +41538,7 @@
     "id": 2770,
     "subject": "Biochemistry",
     "year": 2010,
-    "topic": "Nutrition biochemistry and vitamins fundamental Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+    "topic": "Nutrition biochemistry and vitamins fundamental",
     "question": "A clinic observes a 49 year old patient with significant prolongation of coagulation time, gastrointestinal haemorrhages, subcutaneous hematomas. These symptoms might be explained by the deficiency of the following vitamin:",
     "answers": [
       "K",
@@ -41587,7 +41587,7 @@
     "question": "Emotional stress causes activation of hormon-sensitive triglyceride lipase in the adipocytes. What secondary mediator takes part in this process?",
     "answers": [
       "Cyclic adenosine monophosphate",
-      "Cyclic guanosine monophosphate Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+      "Cyclic guanosine monophosphate",
       "Adenosine monophosphate",
       "Diacylglycerol",
       "Ions of 2+"
@@ -41635,7 +41635,7 @@
       "Aminotransferase",
       "Glucose-6-phosphatase",
       "Phosphofructokinase",
-      "Phosphofructomutase Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY"
+      "Phosphofructomutase"
     ],
     "correct": 0
   },
@@ -41691,7 +41691,7 @@
     "topic": "Functional and clinical biochemistry of muscle, nervous and connective tissues",
     "question": "Collagenosis patients typically present with connective tissue destruction processes. The presence of these processes can be confirmed by the increase in:",
     "answers": [
-      "Blood oxyproline and oxylysine Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+      "Blood oxyproline and oxylysine",
       "Blood creatine and creatinine",
       "LDH-isoenzyme activity in the blood",
       "Transaminase activity in the blood",
@@ -41798,7 +41798,7 @@
     "answers": [
       "Proteins",
       "Fats",
-      "Carbohydrates Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+      "Carbohydrates",
       "Vitamins",
       "Minerals"
     ],
@@ -41853,7 +41853,7 @@
     "id": 2791,
     "subject": "Biochemistry",
     "year": 2018,
-    "topic": "Anabolism of carbohydrates Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+    "topic": "Anabolism of carbohydrates",
     "question": "During intensive physical exertion, one of the energy sources for the working muscles is glucose produced as the result of gluconeogenesis. This process is the most intensive in the following organ:",
     "answers": [
       "Liver",
@@ -41903,7 +41903,7 @@
     "answers": [
       "Ornithine cycle",
       "Tricarboxylic acid cycle",
-      "Glycolysis Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+      "Glycolysis",
       "Gluconeogenesis",
       "Cori cycle"
     ],
@@ -41958,7 +41958,7 @@
     "id": 2798,
     "subject": "Biochemistry",
     "year": 2018,
-    "topic": "Lipid metabolism and its regulation Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+    "topic": "Lipid metabolism and its regulation",
     "question": "A 3-year-old girl with mental retardation has been diagnosed with sphingomyelin lipidosis (Niemann-Pick disease). In this condition the synthesis of the following substance is disturbed:",
     "answers": [
       "Sphingomyelinase",
@@ -42008,7 +42008,7 @@
     "answers": [
       "Ascorbic acid",
       "Riboflavin",
-      "Thiamine Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+      "Thiamine",
       "Retinol",
       "Folic acid"
     ],
@@ -42063,7 +42063,7 @@
     "id": 2805,
     "subject": "Biochemistry",
     "year": 2019,
-    "topic": "Cholesterol metabolism. Ketone bodies Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+    "topic": "Cholesterol metabolism. Ketone bodies",
     "question": "During diabetes mellitus and starvation, the number of acetone bodies in blood increases. These bodies are used as a source of energy and are synthesized from the following substance:",
     "answers": [
       "Acetyl-CoA",
@@ -42113,7 +42113,7 @@
     "answers": [
       "Arachidonic acid",
       "Homogentisic acid",
-      "Acetic acid Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+      "Acetic acid",
       "Glutamic acid",
       "Malonic acid"
     ],
@@ -42168,7 +42168,7 @@
     "id": 2812,
     "subject": "Biochemistry",
     "year": 2019,
-    "topic": "Mechanism of steroid hormones action Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+    "topic": "Mechanism of steroid hormones action",
     "question": "Chronic overdose of glucocorticoids leads to the development of hyperglycemia in a patient. Name the process of carbohydrate metabolism that results in elevated blood glucose levels:",
     "answers": [
       "Gluconeogenesis",
@@ -42218,7 +42218,7 @@
     "answers": [
       "Liver",
       "Heart",
-      "Kidneys Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+      "Kidneys",
       "Spleen",
       "Lungs"
     ],
@@ -42263,7 +42263,7 @@
     "answers": [
       "Sphingomyelinase",
       "Phenylalanine-hydroxylase",
-      "Glucocerebrosidase Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+      "Glucocerebrosidase",
       "Glucose-6-phosphatase",
       "Galactocerebrosidase"
     ],
@@ -42309,7 +42309,7 @@
       "They are a part of cellular membranes",
       "They arc a part of cellular ion channels",
       "They are a part of cellular ion pumps",
-      "They are a part of cellular receptors Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+      "They are a part of cellular receptors",
       "They are a part of glycocalyx"
     ],
     "correct": 0
@@ -42363,7 +42363,7 @@
     "id": 2825,
     "subject": "Biochemistry",
     "year": 2020,
-    "topic": "Nucleic acid metabolism. Protein synthesis Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+    "topic": "Nucleic acid metabolism. Protein synthesis",
     "question": "It has been found experimentally that activation of amino acids and their binding to the tRNA is an important stage of preparation for protein synthesis in the cells. What substance takes part in this process?",
     "answers": [
       "ATP",
@@ -42413,7 +42413,7 @@
     "answers": [
       "Castle factor",
       "Biotin",
-      "Pyridoxine Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+      "Pyridoxine",
       "Thiamine",
       "Calciferol"
     ],
@@ -42468,7 +42468,7 @@
     "id": 2832,
     "subject": "Biochemistry",
     "year": 2020,
-    "topic": "Gaseous metabolism mechanism Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+    "topic": "Gaseous metabolism mechanism",
     "question": "Mother of a 5-year-old child complains that her child develops itching skin, erythema, and vesicular rash after exposure to the sun. Blood test revealed low levels of iron in the blood serum. Urine contains increased levels of uroporphyrinogen I. What hereditary pathology is the most likely in this child?",
     "answers": [
       "Erythropoietic porphyria",
@@ -42518,7 +42518,7 @@
     "answers": [
       "DNA on the viral RNA matrix",
       "Viral RNA on the DNA matrix",
-      "Viral DNA on the DNA matrix Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+      "Viral DNA on the DNA matrix",
       "Viral protein on the viral RNA matrix",
       "Informational RNA on the viral protein matrix"
     ],
@@ -42573,7 +42573,7 @@
     "id": 2839,
     "subject": "Biochemistry",
     "year": 2020,
-    "topic": "Nutrition biochemistry and vitamins fundamentals. Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+    "topic": "Nutrition biochemistry and vitamins fundamentals.",
     "question": "A 60-year-old man complains of pain in his lower abdomen and frequent stools. Stool analysis shows increased levels of neutral fats in the patient’s feces. Incomplete digestion of fats is caused by the deficiency of a certain enzyme. Name this enzyme:",
     "answers": [
       "Lipase",
@@ -42623,7 +42623,7 @@
     "answers": [
       "Glucocerebrosidase",
       "βgalactosidase",
-      "Hexosaminidase Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+      "Hexosaminidase",
       "Sphingomyelinase",
       "Hyaluronidase"
     ],
@@ -42728,7 +42728,7 @@
     "answers": [
       "Metabolic acidosis",
       "Metabolic alkalosis",
-      "Respiratory alkalosis Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+      "Respiratory alkalosis",
       "Mixed alkalosis",
       "Respiratory acidosis"
     ],
@@ -42783,7 +42783,7 @@
     "id": 2853,
     "subject": "Biochemistry",
     "year": 2021,
-    "topic": "Hormonal regulation of metabolism Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+    "topic": "Hormonal regulation of metabolism",
     "question": "Cushing disease (hyperfunction of the Adrenal cortex with increased production of corticosteroids) leads to the development of hyperglycemia. What process is stimulated in this case?",
     "answers": [
       "Gluconeogenesis",
@@ -42833,7 +42833,7 @@
     "answers": [
       "Anaerobic glycolysis",
       "Amino acid deamination",
-      "Oxidative phosphorylation Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+      "Oxidative phosphorylation",
       "Peroxide decomposition",
       "Tissue respiration"
     ],
@@ -42888,7 +42888,7 @@
     "id": 2860,
     "subject": "Biochemistry",
     "year": 2021,
-    "topic": "Functional and clinical biochemistry of muscles, nervous and connective tissues Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+    "topic": "Functional and clinical biochemistry of muscles, nervous and connective tissues",
     "question": "A man has asked a cosmetologist to remove a tattoo from his shoulder. What substance, contained in the connective tissue, limits the spread of the dye?",
     "answers": [
       "Hyaluronic acid",
@@ -42939,7 +42939,7 @@
       "Redox reactions",
       "Reactions of transaminatin",
       "Reactions of decarboxylatin",
-      "Reactions of deamination Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+      "Reactions of deamination",
       "Reactions of hydratione"
     ],
     "correct": 0
@@ -42996,7 +42996,7 @@
     "topic": "Specific ways of amino acid exchange",
     "question": "An infant presents with colored sclerae and mucous membranes. The infant’s urine becomes dark when exposed to air. Homogentisic acid was detected in blood and urine. What disease is likely to be the cause of the infant’s condition?",
     "answers": [
-      "Alcaptonuria Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+      "Alcaptonuria",
       "Histidinemia",
       "Galactosemia",
       "Albinism",
@@ -43045,7 +43045,7 @@
       "Ribosomes",
       "Golgi apparatu",
       "Peroxisomes",
-      "Mitochondria Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY"
+      "Mitochondria"
     ],
     "correct": 0
   },
@@ -43101,7 +43101,7 @@
     "topic": "Water- and fat-soluble vitamins\".",
     "question": "Wemicke-Korsakoff syndrome often develops in chronic alcoholics, who have a low-vitamin diet. Decreased transketolase activity can be observed in the course of this disease. What vitamin deficiency causes this development?",
     "answers": [
-      "Thiamine Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+      "Thiamine",
       "Riboflavin",
       "Retinol",
       "Cobalamin",
@@ -43208,7 +43208,7 @@
     "answers": [
       "Cyclic adenosine monophosphate",
       "Cyclic guanosine monopht sphate",
-      "Inositol triphosphate Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+      "Inositol triphosphate",
       "Ca2+",
       "Diacylglycerol"
     ],
@@ -43263,7 +43263,7 @@
     "id": 2885,
     "subject": "Biochemistry",
     "year": 2021,
-    "topic": "\"Water- and fat-soluble vitamins\". Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+    "topic": "\"Water- and fat-soluble vitamins\".",
     "question": "A newborn had seizures that stopped after vitamin B6 was prescribed. This effect was most likey observed, because vitamin B6 takes part in formation of:",
     "answers": [
       "Gamma-aminobutyric acid (GABA)",
@@ -43313,7 +43313,7 @@
     "answers": [
       "Creatinine",
       "Glutamine",
-      "Indole Крок 2 Medicine (англомовний варiант, iноземнi студенти) 2017-2007 - BIOCHEMISTRY",
+      "Indole",
       "Hydrogen carbonate",
       "Uric acid"
     ],
