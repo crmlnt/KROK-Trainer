@@ -11,6 +11,33 @@
   let notes = [];
   let questionMap = new Map();
 
+  const NOTES_PAGE_SIZE = 20;
+  let visibleNotesCount = NOTES_PAGE_SIZE;
+
+  const loadMoreContainer = document.createElement("div");
+  loadMoreContainer.style.textAlign = "center";
+  loadMoreContainer.style.marginTop = "24px";
+  loadMoreContainer.hidden = true;
+  
+  const loadMoreBtn = document.createElement("button");
+  loadMoreBtn.className = "notes-primary-link";
+  loadMoreBtn.style.border = "none";
+  loadMoreBtn.style.background = "none";
+  loadMoreBtn.style.cursor = "pointer";
+  loadMoreBtn.style.padding = "12px 24px";
+  loadMoreBtn.style.fontFamily = "inherit";
+  loadMoreBtn.style.fontSize = "0.9rem";
+  loadMoreBtn.textContent = "Load more notes ↓";
+  
+  loadMoreContainer.appendChild(loadMoreBtn);
+  list.parentNode.insertBefore(loadMoreContainer, list.nextSibling);
+
+  loadMoreBtn.addEventListener("click", () => {
+    visibleNotesCount += NOTES_PAGE_SIZE;
+    render();
+  });
+
+
   const normalizeKey = (krok, id) => {
     const raw = String(id);
     if (Number(krok) === 2) return raw.startsWith("krok2-") ? raw : `krok2-${raw}`;
@@ -59,8 +86,10 @@
       return matchesText && matchesKrok && matchesSubject;
     });
 
+    const notesToRender = filtered.slice(0, visibleNotesCount);
+    
     count.textContent = `${filtered.length} ${filtered.length === 1 ? "note" : "notes"}`;
-    list.innerHTML = filtered.map(note => {
+    list.innerHTML = notesToRender.map(note => {
       const q = questionMap.get(note.question_id);
       const subjectName = q?.subject || "Unknown subject";
       const questionText = q?.question || `Question ${note.question_id}`;
@@ -73,6 +102,7 @@
       </article>`;
     }).join("");
 
+    loadMoreContainer.hidden = visibleNotesCount >= filtered.length;
     empty.hidden = filtered.length !== 0;
   }
 
@@ -106,8 +136,13 @@
     }
   }
 
-  search.addEventListener("input", render);
-  krokFilter.addEventListener("change", render);
-  subjectFilter.addEventListener("change", render);
+  function handleFilterChange() {
+    visibleNotesCount = NOTES_PAGE_SIZE;
+    render();
+  }
+
+  search.addEventListener("input", handleFilterChange);
+  krokFilter.addEventListener("change", handleFilterChange);
+  subjectFilter.addEventListener("change", handleFilterChange);
   init();
 })();
