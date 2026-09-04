@@ -60,11 +60,8 @@ body {
 #authForm input { width:100%; margin-bottom:18px; padding:13px 14px; background:#f9fafb; color:#111827; border:1px solid #d1d5db; border-radius:10px; font-family:inherit; font-size:.9rem; outline:none; transition:border-color .2s ease,box-shadow .2s ease,background .2s ease; }
 #authForm input:focus { background:#fff; border-color:#16a34a; box-shadow:0 0 0 3px rgba(22,163,74,.1); }
 
-#loginBtn,#signupBtn { width:100%; padding:13px 18px; border-radius:10px; font-family:inherit; font-size:.9rem; font-weight:700; cursor:pointer; transition:background .2s ease,border-color .2s ease,transform .2s ease; }
-#loginBtn { margin-top:4px; background:#16a34a; color:#fff; border:1px solid #16a34a; }
-#loginBtn:hover { background:#15803d; border-color:#15803d; transform:translateY(-1px); }
-#signupBtn { margin-top:10px; background:#fff; color:#374151; border:1px solid #d1d5db; }
-#signupBtn:hover { border-color:#16a34a; color:#16a34a; }
+#loginBtn, #signupBtn { width:100%; padding:13px 18px; border-radius:10px; font-family:inherit; font-size:.9rem; font-weight:700; cursor:pointer; transition:background .2s ease,border-color .2s ease,transform .2s ease; margin-top:4px; background:#16a34a; color:#fff; border:1px solid #16a34a; }
+#loginBtn:hover, #signupBtn:hover { background:#15803d; border-color:#15803d; transform:translateY(-1px); }
 #authMessage { min-height:20px; margin:16px 0 0; text-align:center; color:#6b7280; font-size:.8rem; line-height:1.5; }
 
 .account-delete-info { margin-top:24px; padding-top:22px; border-top:1px solid #e5e7eb; }
@@ -109,10 +106,8 @@ body.dark-mode #authForm input,
 body.dark-mode .change-password-panel input { background:#111417; color:#f3f4f6; border-color:#343941; }
 body.dark-mode #authForm input:focus,
 body.dark-mode .change-password-panel input:focus { background:#15191c; }
-body.dark-mode #signupBtn,
 body.dark-mode .logout-btn,
 body.dark-mode .cancel-password-btn { background:#171a1d; }
-body.dark-mode #signupBtn { color:#d1d5db; border-color:#343941; }
 body.dark-mode .logout-btn { border-color:#7f1d1d; }
 body.dark-mode .logout-btn:hover { background:#2a1719; border-color:#991b1b; }
 body.dark-mode .account-delete-info { border-color:#2a2e33; }
@@ -126,4 +121,54 @@ body.dark-mode .cancel-password-btn:hover { background:#202428; }
   .account-menu-card { padding:15px; }
   .account-menu-card div div span { font-size:.75rem; }
   .coming-soon { display:none; }
+}
+
+.password-wrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 18px;
+}
+.password-wrapper input {
+  margin-bottom: 0 !important;
+  padding-right: 60px !important;
+}
+.pwd-toggle {
+  position: absolute;
+  right: 12px;
+  top: 13px;
+  background: none;
+  border: none;
+  color: #6b7280;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+  text-transform: uppercase;
+}
+.pwd-toggle:hover {
+  color: #111827;
+}
+body.dark-mode .pwd-toggle:hover {
+  color: #f3f4f6;
+}
+
+.auth-switch {
+  margin-top: 18px;
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.85rem;
+}
+.link-btn {
+  background: none;
+  border: none;
+  color: #16a34a;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: none;
+}
+.link-btn:hover {
+  text-decoration: underline;
 }

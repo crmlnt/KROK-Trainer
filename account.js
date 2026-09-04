@@ -1,5 +1,11 @@
 const emailInput = document.getElementById("email");
 const passwordInput = document.getElementById("password");
+const confirmPasswordInput = document.getElementById("confirmPassword");
+const signupFields = document.getElementById("signupFields");
+const loginStateActions = document.getElementById("loginStateActions");
+const signupStateActions = document.getElementById("signupStateActions");
+const switchToSignupBtn = document.getElementById("switchToSignupBtn");
+const switchToLoginBtn = document.getElementById("switchToLoginBtn");
 const loginBtn = document.getElementById("loginBtn");
 const signupBtn = document.getElementById("signupBtn");
 const logoutBtn = document.getElementById("logoutBtn");
@@ -18,6 +24,37 @@ const savePasswordBtn = document.getElementById("savePasswordBtn");
 const changePasswordMessage = document.getElementById("changePasswordMessage");
 
 
+
+switchToSignupBtn.addEventListener("click", () => {
+  signupFields.hidden = false;
+  loginStateActions.hidden = true;
+  signupStateActions.hidden = false;
+  forgotPasswordLink.hidden = true;
+  authMessage.textContent = "";
+});
+
+switchToLoginBtn.addEventListener("click", () => {
+  signupFields.hidden = true;
+  loginStateActions.hidden = false;
+  signupStateActions.hidden = true;
+  forgotPasswordLink.hidden = false;
+  authMessage.textContent = "";
+});
+
+document.querySelectorAll(".pwd-toggle").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const targetId = btn.getAttribute("data-target");
+    const input = document.getElementById(targetId);
+    if (input.type === "password") {
+      input.type = "text";
+      btn.textContent = "Hide";
+    } else {
+      input.type = "password";
+      btn.textContent = "Show";
+    }
+  });
+});
+
 function showUser(user) {
 
   authForm.hidden = true;
@@ -32,6 +69,11 @@ function showLogin() {
 
   authForm.hidden = false;
   accountPanel.hidden = true;
+  signupFields.hidden = true;
+  loginStateActions.hidden = false;
+  signupStateActions.hidden = true;
+  forgotPasswordLink.hidden = false;
+  authMessage.textContent = "";
 
 }
 
@@ -89,6 +131,12 @@ signupBtn.addEventListener("click", async () => {
 
   const email = emailInput.value.trim();
   const password = passwordInput.value;
+  const confirmPassword = confirmPasswordInput.value;
+
+  if (password !== confirmPassword) {
+    authMessage.textContent = "Passwords do not match.";
+    return;
+  }
 
   const { data, error } =
     await supabaseClient.auth.signUp({

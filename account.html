@@ -21,11 +21,37 @@
         <div id="authForm">
           <label for="email">Email</label>
           <input type="email" id="email" placeholder="you@example.com" autocomplete="email">
+          
           <label for="password">Password</label>
-          <input type="password" id="password" placeholder="Password" autocomplete="current-password">
+          <div class="password-wrapper">
+            <input type="password" id="password" placeholder="Password" autocomplete="current-password">
+            <button type="button" class="pwd-toggle" data-target="password" aria-label="Show password">Show</button>
+          </div>
+
+          <div id="signupFields" hidden>
+            <label for="confirmPassword">Confirm password</label>
+            <div class="password-wrapper">
+              <input type="password" id="confirmPassword" placeholder="Confirm password" autocomplete="new-password">
+              <button type="button" class="pwd-toggle" data-target="confirmPassword" aria-label="Show password">Show</button>
+            </div>
+          </div>
+
           <a href="#" id="forgotPasswordLink" class="forgot-password">Forgot password?</a>
-          <button id="loginBtn">Sign In</button>
-          <button id="signupBtn">Create Account</button>
+
+          <div id="loginStateActions">
+            <button id="loginBtn">Log In</button>
+            <div class="auth-switch">
+              Don't have an account? <button type="button" id="switchToSignupBtn" class="link-btn">Create account</button>
+            </div>
+          </div>
+
+          <div id="signupStateActions" hidden>
+            <button id="signupBtn">Create Account</button>
+            <div class="auth-switch">
+              Already have an account? <button type="button" id="switchToLoginBtn" class="link-btn">Log in</button>
+            </div>
+          </div>
+
           <p id="authMessage"></p>
         </div>
 
