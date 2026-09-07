@@ -20,6 +20,69 @@
       <div class="top-controls"><div class="controls"><label for="subjectFilter">Subject:</label><select id="subjectFilter"><option value="all">All Subjects</option></select></div><button id="homeBtn" class="button"><span id="homeBtnText">Home</span></button><button id="stats-btn" class="hidden-old-stats"> Stats</button><button onclick="window.location.href='guide.html'"> Tutorial</button></div>
     </div>
     <div id="examTimer" class="exam-timer" style="display:none;">⏱ <span id="examTimerText">00:00:00</span></div>
+    <!-- SETUP UI -->
+    <div id="practiceSetupUI" class="practice-setup-ui" hidden>
+      <div class="setup-header">
+        <span class="setup-eyebrow">PRACTICE MODE</span>
+        <h2 class="setup-title">Practice your way.</h2>
+        <p class="setup-subtitle">Choose a subject, set your session length, and start practicing.</p>
+      </div>
+      <div class="setup-controls">
+        <div class="setup-group">
+          <label>Subject:</label>
+          <select id="setupSubjectFilter" style="display:none;"><option value="all">All Subjects</option></select>
+          <div class="custom-select" id="customSubjectSelect" tabindex="0">
+            <div class="custom-select-trigger">
+              <span id="customSubjectSelectValue">All Subjects</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+            <div class="custom-select-options" id="customSubjectSelectOptions">
+              <div class="custom-option selected" data-value="all">All Subjects</div>
+            </div>
+          </div>
+        </div>
+        <div class="setup-group">
+          <label>Session length:</label>
+          <div class="segmented-control">
+            <input type="radio" name="sessionLength" id="len10" value="10">
+            <label for="len10">10</label>
+            
+            <input type="radio" name="sessionLength" id="len20" value="20" checked>
+            <label for="len20">20</label>
+            
+            <input type="radio" name="sessionLength" id="len50" value="50">
+            <label for="len50">50</label>
+            
+            <input type="radio" name="sessionLength" id="lenInf" value="unlimited">
+            <label for="lenInf">∞</label>
+          </div>
+        </div>
+        <button id="startPracticeBtn" class="primary-actions start-practice-btn">Start Practice</button>
+      </div>
+      <div class="setup-illustration">
+        <img src="assets/practice-setup.svg" alt="Practice setup illustration">
+      </div>
+    </div>
+
+    <!-- COMPLETION UI -->
+    <div id="practiceCompletionUI" class="practice-completion-ui" hidden>
+      <div class="setup-header">
+        <span class="setup-eyebrow">PRACTICE MODE</span>
+        <h2 class="setup-title">Practice complete!</h2>
+        <p id="completionMessage" class="setup-subtitle">You've completed your practice session.</p>
+      </div>
+      <div class="setup-illustration">
+        <img src="assets/practice-completion.svg" alt="Practice session completed successfully" />
+      </div>
+      <div class="completion-actions">
+        <button id="tryExamBtn" class="primary-actions">Try Exam Mode</button>
+        <button id="reviewSessionMistakesBtn" class="secondary-actions" hidden>Review Mistakes</button>
+        <button id="backToSetupBtn" class="tertiary-actions">Back to Practice Mode</button>
+      </div>
+    </div>
+
+    <!-- SESSION UI -->
+    <div id="practiceSessionUI">
     <div class="progress-container"><div id="progressBar" class="progress-bar"></div></div>
     <div class="quiz-card">
       <div id="reviewMistakesBanner" class="review-mistakes-banner" hidden><div><span class="review-mistakes-eyebrow">REVIEW MODE</span><strong>Review Mistakes</strong><p>Revisit the questions you answered incorrectly without affecting your Practice Mode statistics.</p></div><button id="backToPracticeBtn" type="button">← Back to Practice Mode</button></div>
@@ -33,6 +96,7 @@
     </div>
     <p id="feedback"></p><div id="practice-tools"><p id="score">Score: 0</p><p id="stats">Correct: 0 | Wrong: 0 | Accuracy: 0%</p><hr><p id="error-count">Errors: 0</p><ul id="error-log" style="display:none;"></ul><div class="action-buttons"><div class="export-actions"><button id="export-errors-btn">Export Error Log</button><button id="exportExamLogBtn" class="button">Export Exam Log</button><button id="reviewExamBtn" class="button" style="display:none;">Review Exam</button></div></div><div class="danger-zone"><button id="clear-errors-btn">Clear Error Log</button></div></div>
     <div class="review-navigation"><button id="prevReviewBtn" class="button" style="display:none;">⬅️ Previous</button><button id="nextReviewBtn" class="button" style="display:none;">Next ➡️</button></div>
+    </div> <!-- end practiceSessionUI -->
   </div></div>
 
   <div id="questionNoteModal" class="question-note-modal" hidden>

@@ -2,6 +2,8 @@
 //VARIABLES
 let questions = [];
 let allQuestions = [];
+let sessionLength = "unlimited";
+let sessionErrors = [];
 let currentQuestionIndex = 0;
 let score = 0;
 let errors = JSON.parse(localStorage.getItem("errors")) || [];
@@ -198,9 +200,25 @@ async function loadQuestions() {
           questions.unshift(targetQuestion);
         }
       }
+      // Deep link skips setup
+      document.getElementById("practiceSessionUI").style.display = "block";
+      if (document.getElementById("practiceSetupUI")) document.getElementById("practiceSetupUI").hidden = true;
+      showQuestion();
+    } else {
+      // Show setup UI
+      if (document.getElementById("practiceSetupUI")) {
+        document.getElementById("practiceSessionUI").style.display = "none";
+        document.getElementById("practiceSetupUI").hidden = false;
+        
+        // Hide subjectFilter in top-bar during setup
+        const topSubjectFilter = document.getElementById("subjectFilter");
+        if (topSubjectFilter && topSubjectFilter.parentElement) {
+          topSubjectFilter.parentElement.style.display = "none";
+        }
+      } else {
+        showQuestion();
+      }
     }
-
-    showQuestion();
   }
 }
 
@@ -221,6 +239,7 @@ function removeDuplicateQuestions(questionList) {
 
 function populateSubjectFilter() {
   const subjectFilter = document.getElementById("subjectFilter");
+  const setupSubjectFilter = document.getElementById("setupSubjectFilter");
 
   subjectFilter.options[0].textContent =
   `All Subjects (${allQuestions.length})`;
@@ -246,6 +265,21 @@ function populateSubjectFilter() {
     option.textContent = `${subject} (${subjectCounts[subject]})`;
 
     subjectFilter.appendChild(option);
+    if (setupSubjectFilter) {
+      const option2 = document.createElement("option");
+      option2.value = subject;
+      option2.textContent = subject;
+      setupSubjectFilter.appendChild(option2);
+      
+      const customOptions = document.getElementById("customSubjectSelectOptions");
+      if (customOptions) {
+        const div = document.createElement("div");
+        div.className = "custom-option";
+        div.dataset.value = subject;
+        div.textContent = subject;
+        customOptions.appendChild(div);
+      }
+    }
   });
 }
 
@@ -518,6 +552,15 @@ function checkAnswer(button, isCorrect) {
 
 
     errors.push({
+      date: new Date().toLocaleDateString(),
+      subject: currentQuestion.subject,
+      question: currentQuestion.question,
+      answers: currentQuestion.answers,
+      correct: currentQuestion.correct,
+      userAnswer: aiUserAnswer,
+      questionId: currentQuestion.id
+    });
+    sessionErrors.push({
       date: new Date().toLocaleDateString(),
       subject: currentQuestion.subject,
       question: currentQuestion.question,
@@ -1058,7 +1101,7 @@ function goHome() {
   }
 }
 
-function resetTrainer() {
+function resetTrainer(fromSetup = false) {
   examMode = false;
   reviewMode = false;
   answered = false;
@@ -1068,7 +1111,13 @@ function resetTrainer() {
   correctAnswers = 0;
   wrongAnswers = 0;
 
-  questions = shuffleArray(getFilteredQuestions());
+  let filtered = shuffleArray(getFilteredQuestions());
+  if (sessionLength !== "unlimited" && fromSetup) {
+    const len = parseInt(sessionLength, 10);
+    questions = filtered.slice(0, len);
+  } else {
+    questions = filtered;
+  }
 
   scoreText.textContent = "Score: 0";
   feedback.textContent = "";
@@ -1491,29 +1540,27 @@ nextBtn.addEventListener("click", () => {
   } else {
     if (examMode) {
       questionText.textContent = "";
+      questionNumber.textContent = "";
+      answersContainer.innerHTML = "";
+      stopExamTimer();
+      saveExamSession();
+      showExamResults();
+      nextBtn.style.display = "none";
     } else {
-      questionText.textContent = "Quiz completed!";
+      // Practice Completion
+      document.getElementById("practiceSessionUI").style.display = "none";
+      const completionUI = document.getElementById("practiceCompletionUI");
+      if (completionUI) {
+        completionUI.hidden = false;
+        const msg = document.getElementById("completionMessage");
+        if (msg) msg.textContent = sessionLength === "unlimited" ? "You've completed your open-ended practice session." : `You've completed your ${sessionLength}-question practice session.`;
+        
+        const rsmBtn = document.getElementById("reviewSessionMistakesBtn");
+        if (rsmBtn) {
+          rsmBtn.hidden = sessionErrors.length === 0 || reviewMode === true;
+        }
+      }
     }
-
-    questionNumber.textContent = "";
-    answersContainer.innerHTML = "";
-    if (examMode) {
-    
-    stopExamTimer();
-    saveExamSession();
-    showExamResults();
-
-} else {
-
-  feedback.textContent =
-    `Final score: ${score} / ${questions.length}`;
-
-}
-    nextBtn.style.display = "none";
-
-    if (errors.length > 0 && reviewMode === false) {
-  reviewBtn.style.display = "block";
-}
   }
 });
 
@@ -1753,3 +1800,156 @@ if (confirmAnswerBtn) {
 updateErrorLog();
 updateStats();
 loadQuestions();
+// --- Practice Mode 2.0 UI Handlers ---
+
+const startPracticeBtn = document.getElementById("startPracticeBtn");
+if (startPracticeBtn) {
+  startPracticeBtn.addEventListener("click", () => {
+    const setupSubject = document.getElementById("setupSubjectFilter");
+    const topSubject = document.getElementById("subjectFilter");
+    if (setupSubject && topSubject) {
+      topSubject.value = setupSubject.value;
+      // Show it back in top bar if we want, or keep hidden. We'll keep it hidden during finite to avoid resets, 
+      // but let's reveal it for unlimited.
+    }
+    
+    const lengthRadios = document.getElementsByName("sessionLength");
+    for (let r of lengthRadios) {
+      if (r.checked) sessionLength = r.value;
+    }
+    
+    // Hide setup, show session
+    document.getElementById("practiceSetupUI").hidden = true;
+    document.getElementById("practiceSessionUI").style.display = "block";
+    
+    // Clear session errors
+    sessionErrors = [];
+    
+    // Start session
+    resetTrainer(true);
+  });
+}
+
+const tryExamBtn = document.getElementById("tryExamBtn");
+if (tryExamBtn) {
+  tryExamBtn.addEventListener("click", () => {
+    const params = new URLSearchParams(window.location.search);
+    const isKrok2 = params.get("exam") === "krok2";
+    if (isKrok2) {
+      window.location.href = "exam.html?exam=krok2";
+    } else {
+      window.location.href = "exam.html";
+    }
+  });
+}
+
+const backToSetupBtn = document.getElementById("backToSetupBtn");
+if (backToSetupBtn) {
+  backToSetupBtn.addEventListener("click", () => {
+    document.getElementById("practiceCompletionUI").hidden = true;
+    document.getElementById("practiceSetupUI").hidden = false;
+  });
+}
+
+const reviewSessionMistakesBtn = document.getElementById("reviewSessionMistakesBtn");
+if (reviewSessionMistakesBtn) {
+  reviewSessionMistakesBtn.addEventListener("click", () => {
+    // Reuse the existing Review Mistakes system by temporarily overriding the global errors array
+    const originalErrors = errors;
+    errors = sessionErrors;
+    
+    const legacyReviewBtn = document.getElementById("review-btn");
+    if (legacyReviewBtn) {
+      legacyReviewBtn.click();
+    }
+    
+    // Restore global errors
+    errors = originalErrors;
+    
+    // Switch views
+    document.getElementById("practiceCompletionUI").hidden = true;
+    document.getElementById("practiceSessionUI").style.display = "block";
+  });
+}
+
+
+// --- Custom Subject Select Logic ---
+const customSelect = document.getElementById("customSubjectSelect");
+const customSelectValue = document.getElementById("customSubjectSelectValue");
+const customSelectOptions = document.getElementById("customSubjectSelectOptions");
+const hiddenSubjectSelect = document.getElementById("setupSubjectFilter");
+
+if (customSelect && customSelectValue && customSelectOptions && hiddenSubjectSelect) {
+  // Toggle dropdown
+  customSelect.addEventListener("click", (e) => {
+    // If clicking an option
+    if (e.target.classList.contains("custom-option")) {
+      const val = e.target.dataset.value;
+      const text = e.target.textContent;
+      
+      customSelectValue.textContent = text;
+      hiddenSubjectSelect.value = val;
+      
+      // Update selected class
+      const allOpts = customSelectOptions.querySelectorAll(".custom-option");
+      allOpts.forEach(opt => opt.classList.remove("selected"));
+      e.target.classList.add("selected");
+      
+      customSelect.classList.remove("open");
+      return;
+    }
+    
+    customSelect.classList.toggle("open");
+  });
+
+  // Close when clicking outside
+  document.addEventListener("click", (e) => {
+    if (!customSelect.contains(e.target)) {
+      customSelect.classList.remove("open");
+    }
+  });
+
+  // Keyboard accessibility
+  customSelect.addEventListener("keydown", (e) => {
+    const allOpts = Array.from(customSelectOptions.querySelectorAll(".custom-option"));
+    if (allOpts.length === 0) return;
+    
+    let currentIndex = allOpts.findIndex(opt => opt.classList.contains("selected"));
+    if (currentIndex === -1) currentIndex = 0;
+
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      if (!customSelect.classList.contains("open")) {
+        customSelect.classList.add("open");
+      } else {
+        customSelect.classList.remove("open");
+      }
+    } else if (e.key === "ArrowDown") {
+      e.preventDefault();
+      if (!customSelect.classList.contains("open")) {
+        customSelect.classList.add("open");
+      } else {
+        const nextIndex = Math.min(currentIndex + 1, allOpts.length - 1);
+        updateSelection(allOpts[nextIndex], allOpts);
+      }
+    } else if (e.key === "ArrowUp") {
+      e.preventDefault();
+      if (customSelect.classList.contains("open")) {
+        const prevIndex = Math.max(currentIndex - 1, 0);
+        updateSelection(allOpts[prevIndex], allOpts);
+      }
+    } else if (e.key === "Escape") {
+      customSelect.classList.remove("open");
+    }
+  });
+
+  function updateSelection(targetOpt, allOpts) {
+    if (!targetOpt) return;
+    allOpts.forEach(opt => opt.classList.remove("selected"));
+    targetOpt.classList.add("selected");
+    
+    customSelectValue.textContent = targetOpt.textContent;
+    hiddenSubjectSelect.value = targetOpt.dataset.value;
+    targetOpt.scrollIntoView({ block: "nearest" });
+  }
+}
