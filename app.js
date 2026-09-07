@@ -84,6 +84,8 @@ async function saveExamSession() {
 
     const examType = params.get("exam") || "krok1";
     const topic = params.get("topic") || "all";
+    let year = params.get("year");
+    if (examType === "krok2") year = null;
 
     const krokNumber =
       examType === "krok2" ? 2 : 1;
@@ -95,22 +97,26 @@ async function saveExamSession() {
 
     let subject = topic;
 
-    // Nomi leggibili per KROK 1
-    const krok1TopicNames = {
-      "all": "All Topics",
-      "normal-physiology": "Normal Physiology",
-      "pathophysiology": "Pathophysiology",
-      "pathomorphology": "Pathomorphology",
-      "pharmacology": "Pharmacology",
-      "histology": "Histology"
-    };
+    if (year) {
+      subject = `Past Paper ${year}`;
+    } else {
+      // Nomi leggibili per KROK 1
+      const krok1TopicNames = {
+        "all": "All Topics",
+        "normal-physiology": "Normal Physiology",
+        "pathophysiology": "Pathophysiology",
+        "pathomorphology": "Pathomorphology",
+        "pharmacology": "Pharmacology",
+        "histology": "Histology"
+      };
 
-    if (krokNumber === 1) {
-      subject = krok1TopicNames[topic] || topic;
-    }
+      if (krokNumber === 1) {
+        subject = krok1TopicNames[topic] || topic;
+      }
 
-    if (krokNumber === 2 && topic === "all") {
-      subject = "All Topics";
+      if (krokNumber === 2 && topic === "all") {
+        subject = "All Topics";
+      }
     }
 
     const { error } = await supabaseClient
@@ -144,25 +150,35 @@ async function loadQuestions() {
   const params = new URLSearchParams(window.location.search);
 
   const examType = params.get("exam") || "krok1";
+  let year = params.get("year");
+  if (examType === "krok2") year = null;
+  const validYears = ["2015", "2016", "2017", "2018", "2020", "2023"];
+  const isPastPaper = year && validYears.includes(year);
 
-  const questionFile =
-    examType === "krok2"
-      ? "krok2/questions-krok2.json"
-      : "questions.json";
+  const questionFile = isPastPaper
+    ? `past-papers/data/${year}.json`
+    : (examType === "krok2" ? "krok2/questions-krok2.json" : "questions.json");
 
   const response = await fetch(questionFile);
-
   const text = await response.text();
-
   console.log(text);
+  
+  const parsed = JSON.parse(text);
 
-  allQuestions = JSON.parse(text);
-  console.log(
-  "Subjects found:",
-  [...new Set(allQuestions.map(q => q.subject))]
-  );
-
-  populateSubjectFilter();
+  if (isPastPaper) {
+    allQuestions = parsed.questions.map(q => ({
+      ...q,
+      id: `${year}-${q.number}`,
+      subject: `Past Paper ${year}`
+    }));
+  } else {
+    allQuestions = parsed;
+    console.log(
+      "Subjects found:",
+      [...new Set(allQuestions.map(q => q.subject))]
+    );
+    populateSubjectFilter();
+  }
 
   if (params.get("mode") === "exam") {
     startExamFromUrl(params);
@@ -339,8 +355,11 @@ const confirmAnswerBtn =
   hideExportActions();
 
   const currentQuestion = questions[currentQuestionIndex];
-  subjectDisplay.textContent =
-  `Subject: ${currentQuestion.subject}`;
+  if (currentQuestion.subject && currentQuestion.subject.startsWith("Past Paper")) {
+    subjectDisplay.textContent = currentQuestion.subject.replace("Past Paper", "Past Paper:");
+  } else {
+    subjectDisplay.textContent = `Subject: ${currentQuestion.subject}`;
+  }
 
   questionNumber.textContent = `Question ${currentQuestionIndex + 1} of ${questions.length}`;
   questionText.textContent = currentQuestion.question;
@@ -477,8 +496,14 @@ function checkAnswer(button, isCorrect) {
   const allButtons = document.querySelectorAll(".answer-btn");
   const currentQuestion = questions[currentQuestionIndex];
 
-  saveSubjectStats(currentQuestion.subject, isCorrect);
-
+  const params = new URLSearchParams(window.location.search);
+  const examType = params.get("exam") || "krok1";
+  let year = params.get("year");
+  if (examType === "krok2") year = null;
+  
+  if (!year) {
+    saveSubjectStats(currentQuestion.subject, isCorrect);
+  }
 
   // =========================
   // EXAM MODE
@@ -809,28 +834,23 @@ if (homeBtn) {
 
   const selectedTopic = params.get("topic");
   const selectedQuestionCount = params.get("questions");
+  const examType = params.get("exam") || "krok1";
+  
+  let selectedYear = params.get("year");
+  if (examType === "krok2") selectedYear = null;
 
   let filteredQuestions;
 
   // Select topic
-  const examType = params.get("exam") || "krok1";
-
-  if (!selectedTopic || selectedTopic === "all") {
-
+  if (selectedYear) {
     filteredQuestions = [...allQuestions];
-
+  } else if (!selectedTopic || selectedTopic === "all") {
+    filteredQuestions = [...allQuestions];
   } else {
-
     let subjectName;
-
     if (examType === "krok2") {
-
-      // In KROK 2 the URL contains the real subject name
       subjectName = selectedTopic;
-
     } else {
-
-      // KROK 1 keeps the existing slug system
       const topicMap = {
         "normal-physiology": "Normal Phisiology",
         "pathophysiology": "Pathophysiology",
@@ -838,18 +858,15 @@ if (homeBtn) {
         "pharmacology": "Pharmacology",
         "histology": "Histology"
       };
-
       subjectName = topicMap[selectedTopic];
     }
-
     filteredQuestions = allQuestions.filter(
       q => q.subject === subjectName
     );
   }
 
   // Remove duplicates
-  const uniqueQuestions =
-    removeDuplicateQuestions(filteredQuestions);
+  const uniqueQuestions = selectedYear ? filteredQuestions : removeDuplicateQuestions(filteredQuestions);
 
   if (uniqueQuestions.length === 0) {
     alert("No questions found for this subject.");
@@ -859,7 +876,9 @@ if (homeBtn) {
   // Number of questions
   let examCount;
 
-  if (
+  if (selectedYear) {
+    examCount = uniqueQuestions.length;
+  } else if (
     !selectedQuestionCount ||
     selectedQuestionCount === "all"
   ) {
@@ -1440,8 +1459,11 @@ function showExamReviewQuestion() {
   questionNumber.textContent =
     `Review Question ${reviewExamIndex + 1} of ${examSessionLog.length}`;
 
-  subjectDisplay.textContent =
-    `Subject: ${item.subject} | ID: ${item.id}`;
+  if (item.subject && item.subject.startsWith("Past Paper")) {
+    subjectDisplay.textContent = `${item.subject.replace("Past Paper", "Past Paper:")} | ID: ${item.id}`;
+  } else {
+    subjectDisplay.textContent = `Subject: ${item.subject} | ID: ${item.id}`;
+  }
 
   questionText.textContent = item.question;
 
