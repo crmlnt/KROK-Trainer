@@ -12,8 +12,26 @@
     <nav id="appBreadcrumb" data-root="" data-section="KROK 1" data-section-href="krok1.html" data-page="Exam Mode"></nav>
     <div class="exam-header"><span id="examLabel" class="exam-label">KROK 1</span><h1>Exam Simulation</h1><p>Configure your mock exam and test your preparation.</p></div>
     <div class="exam-panel">
-      <div class="exam-section"><h2>Select Topic</h2><div id="topicOptions"><label class="option-row"><input type="radio" name="topic" value="all" checked><span>All Topics</span></label></div></div>
-      <div class="exam-section"><h2>Number of Questions</h2><div class="question-options"><label class="question-card"><input type="radio" name="questions" value="10" checked><span>10</span></label><label class="question-card"><input type="radio" name="questions" value="50"><span>50</span></label><label class="question-card"><input type="radio" name="questions" value="150"><span>150</span></label><label class="question-card"><input type="radio" name="questions" value="200"><span>200</span></label></div></div>
+      <div class="exam-section" id="examTypeSection">
+        <h2>Exam Type</h2>
+        <div class="question-options" id="examTypeOptions">
+          <label class="question-card"><input type="radio" name="exam_type" value="subject" checked><span>By Subject</span></label>
+          <label class="question-card"><input type="radio" name="exam_type" value="year"><span>By Year</span></label>
+        </div>
+      </div>
+      <div class="exam-section" id="sectionTopic"><h2>Select Topic</h2><div id="topicOptions"><label class="option-row"><input type="radio" name="topic" value="all" checked><span>All Topics</span></label></div></div>
+      <div class="exam-section" id="sectionYear" style="display: none;">
+        <h2>Select Year</h2>
+        <div class="question-options" id="yearOptions">
+          <label class="question-card"><input type="radio" name="year" value="2015" checked><span>2015</span></label>
+          <label class="question-card"><input type="radio" name="year" value="2016"><span>2016</span></label>
+          <label class="question-card"><input type="radio" name="year" value="2017"><span>2017</span></label>
+          <label class="question-card"><input type="radio" name="year" value="2018"><span>2018</span></label>
+          <label class="question-card"><input type="radio" name="year" value="2020"><span>2020</span></label>
+          <label class="question-card"><input type="radio" name="year" value="2023"><span>2023</span></label>
+        </div>
+      </div>
+      <div class="exam-section" id="sectionQuestions"><h2>Number of Questions</h2><div class="question-options"><label class="question-card"><input type="radio" name="questions" value="10" checked><span>10</span></label><label class="question-card"><input type="radio" name="questions" value="50"><span>50</span></label><label class="question-card"><input type="radio" name="questions" value="150"><span>150</span></label><label class="question-card"><input type="radio" name="questions" value="200"><span>200</span></label></div></div>
       <button id="startExamBtn" class="start-button">Start Exam</button>
     </div>
   </section></main></div>
@@ -27,10 +45,61 @@
   const startExamBtn = document.getElementById("startExamBtn");
   const examLabel = document.getElementById("examLabel");
   const topicOptions = document.getElementById("topicOptions");
+  const examTypeOptions = document.getElementsByName("exam_type");
+  const sectionTopic = document.getElementById("sectionTopic");
+  const sectionYear = document.getElementById("sectionYear");
+  const sectionQuestions = document.getElementById("sectionQuestions");
+
+  examTypeOptions.forEach(radio => {
+    radio.addEventListener("change", (e) => {
+      if (e.target.value === "year") {
+        sectionTopic.style.display = "none";
+        sectionQuestions.style.display = "none";
+        sectionYear.style.display = "block";
+      } else {
+        sectionTopic.style.display = "block";
+        sectionQuestions.style.display = "block";
+        sectionYear.style.display = "none";
+      }
+    });
+  });
+
   function addSubjectOption(subject) { const label=document.createElement("label"); label.className="option-row"; const input=document.createElement("input"); input.type="radio"; input.name="topic"; input.value=subject; const span=document.createElement("span"); span.textContent=subject === "Normal Phisiology" ? "Normal Physiology" : subject; label.appendChild(input); label.appendChild(span); topicOptions.appendChild(label); }
   async function loadKrok1Subjects() { try { const response=await fetch("questions.json"); if(!response.ok) throw new Error("Unable to load KROK 1 subjects."); const questions=await response.json(); const subjects=[...new Set(questions.map(question=>question.subject).filter(Boolean))].sort((a,b)=>a.localeCompare(b)); subjects.forEach(addSubjectOption); } catch(error) { console.error("Error loading KROK 1 subjects:",error); const message=document.createElement("p"); message.textContent="Subjects could not be loaded. Please refresh the page."; topicOptions.appendChild(message); } }
-  if (examType === "krok2") { document.title="KROK 2 Exam | KROK Trainer"; examLabel.textContent="KROK 2"; breadcrumb.dataset.section="KROK 2"; breadcrumb.dataset.sectionHref="krok2.html"; const krok2Subjects=["Anesthesiology and Emergency Medicine","Children's Infectious Diseases","Dermatology","Forensic Medicine","Hygiene","Infectious Diseases","Internal Medicine","Neurology","Obstetrics and Gynecology","Occupational Diseases","Oncology","Ophthalmology","Otorhinolaryngology","Pediatric Surgery","Pediatrics","Phthisiology","Psychiatry","Social Medicine","Surgery","Traumatology","Urology"]; krok2Subjects.forEach(addSubjectOption); } else { document.title="KROK 1 Exam | KROK Trainer"; examLabel.textContent="KROK 1"; loadKrok1Subjects(); }
-  startExamBtn.addEventListener("click",()=>{ const selectedTopic=document.querySelector('input[name="topic"]:checked'); const selectedQuestions=document.querySelector('input[name="questions"]:checked'); if(!selectedTopic||!selectedQuestions)return; const nextParams=new URLSearchParams(); nextParams.set("mode","exam"); nextParams.set("topic",selectedTopic.value); nextParams.set("questions",selectedQuestions.value); if(examType==="krok2")nextParams.set("exam","krok2"); window.location.href=`exam-instructions.html?${nextParams.toString()}`; });
+  
+  if (examType === "krok2") { 
+    document.title="KROK 2 Exam | KROK Trainer"; 
+    examLabel.textContent="KROK 2"; 
+    breadcrumb.dataset.section="KROK 2"; 
+    breadcrumb.dataset.sectionHref="krok2.html"; 
+    const krok2Subjects=["Anesthesiology and Emergency Medicine","Children's Infectious Diseases","Dermatology","Forensic Medicine","Hygiene","Infectious Diseases","Internal Medicine","Neurology","Obstetrics and Gynecology","Occupational Diseases","Oncology","Ophthalmology","Otorhinolaryngology","Pediatric Surgery","Pediatrics","Phthisiology","Psychiatry","Social Medicine","Surgery","Traumatology","Urology"]; 
+    krok2Subjects.forEach(addSubjectOption); 
+    document.getElementById("examTypeSection").style.display = "none";
+  } else { 
+    document.title="KROK 1 Exam | KROK Trainer"; 
+    examLabel.textContent="KROK 1"; 
+    loadKrok1Subjects(); 
+  }
+  
+  startExamBtn.addEventListener("click",()=>{
+    const mode = examType === "krok2" ? "subject" : document.querySelector('input[name="exam_type"]:checked').value;
+    const nextParams = new URLSearchParams();
+    nextParams.set("mode","exam");
+    if(examType==="krok2")nextParams.set("exam","krok2");
+    
+    if (mode === "year") {
+      const selectedYear = document.querySelector('input[name="year"]:checked');
+      if (!selectedYear) return;
+      nextParams.set("year", selectedYear.value);
+    } else {
+      const selectedTopic=document.querySelector('input[name="topic"]:checked');
+      const selectedQuestions=document.querySelector('input[name="questions"]:checked');
+      if(!selectedTopic||!selectedQuestions)return;
+      nextParams.set("topic",selectedTopic.value);
+      nextParams.set("questions",selectedQuestions.value);
+    }
+    window.location.href=`exam-instructions.html?${nextParams.toString()}`;
+  });
   </script>
   <script src="components/sidebar.js"></script><script src="components/breadcrumb.js"></script>
 <script src="components/feedback.js"></script>

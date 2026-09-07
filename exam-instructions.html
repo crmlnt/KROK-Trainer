@@ -72,91 +72,81 @@
 <script>
 
   const params = new URLSearchParams(window.location.search);
-
   const examType = params.get("exam") || "krok1";
-  const topic = params.get("topic") || "all";
-  const questions = params.get("questions") || "20";
+  let year = params.get("year");
+  if (examType === "krok2") year = null;
 
-
-  const examTitle =
-    document.getElementById("examTitle");
-
-  const backLink =
-    document.getElementById("backLink");
-
+  const examTitle = document.getElementById("examTitle");
+  const backLink = document.getElementById("backLink");
 
   // ==========================================
   // PAGE CONTEXT
   // ==========================================
-
   if (examType === "krok2") {
-
-    examTitle.textContent =
-      "KROK 2 — Exam Mode";
-
-    backLink.href =
-      "exam.html?exam=krok2";
-
+    examTitle.textContent = "KROK 2 — Exam Mode";
+    backLink.href = "exam.html?exam=krok2";
   } else {
-
-    examTitle.textContent =
-      "KROK 1 — Exam Mode";
-
-    backLink.href =
-      "exam.html";
+    examTitle.textContent = "KROK 1 — Exam Mode";
+    backLink.href = "exam.html";
   }
 
-
   // ==========================================
-  // TOPIC NAME
+  // TOPIC & START URL
   // ==========================================
+  const startExamNowBtn = document.getElementById("startExamNowBtn");
 
-  const topicNames = {
-    "all": "All Subjects",
-    "normal-physiology": "Normal Physiology",
-    "Normal Phisiology": "Normal Physiology",
-    "pathophysiology": "Pathophysiology",
-    "pathomorphology": "Pathomorphology",
-    "pharmacology": "Pharmacology",
-    "histology": "Histology"
-  };
+  if (year) {
+    const yearCounts = { "2015": 200, "2016": 200, "2017": 200, "2018": 200, "2020": 150, "2023": 150 };
+    const count = yearCounts[year] || 150;
 
-  document.getElementById("examTopic").textContent =
-    examType === "krok2"
-      ? (topic === "all" ? "All Subjects" : topic)
-      : (topicNames[topic] || topic);
+    const topicSpan = document.getElementById("examTopic");
+    topicSpan.parentElement.innerHTML = `<strong>Exam:</strong> <span id="examTopic">Past Paper ${year}</span>`;
+    
+    document.getElementById("examQuestions").textContent = count;
+    document.getElementById("examTime").textContent = `${count} minutes`;
 
-
-  document.getElementById("examQuestions").textContent =
-    questions;
-
-  document.getElementById("examTime").textContent =
-    `${questions} minutes`;
-
-
-  // ==========================================
-  // START EXAM
-  // ==========================================
-
-  document
-    .getElementById("startExamNowBtn")
-    .addEventListener("click", () => {
-
-      const nextParams =
-        new URLSearchParams();
-
+    startExamNowBtn.addEventListener("click", () => {
+      const nextParams = new URLSearchParams();
       nextParams.set("mode", "exam");
-      nextParams.set("topic", topic);
-      nextParams.set("questions", questions);
-
+      nextParams.set("year", year);
       if (examType === "krok2") {
         nextParams.set("exam", "krok2");
       }
-
-      window.location.href =
-        `practice.html?${nextParams.toString()}`;
-
+      window.location.href = `practice.html?${nextParams.toString()}`;
     });
+  } else {
+    const topic = params.get("topic") || "all";
+    const questions = params.get("questions") || "20";
+
+    const topicNames = {
+      "all": "All Subjects",
+      "normal-physiology": "Normal Physiology",
+      "Normal Phisiology": "Normal Physiology",
+      "pathophysiology": "Pathophysiology",
+      "pathomorphology": "Pathomorphology",
+      "pharmacology": "Pharmacology",
+      "histology": "Histology"
+    };
+
+    document.getElementById("examTopic").textContent =
+      examType === "krok2"
+        ? (topic === "all" ? "All Subjects" : topic)
+        : (topicNames[topic] || topic);
+
+    document.getElementById("examQuestions").textContent = questions;
+    document.getElementById("examTime").textContent = `${questions} minutes`;
+
+    startExamNowBtn.addEventListener("click", () => {
+      const nextParams = new URLSearchParams();
+      nextParams.set("mode", "exam");
+      nextParams.set("topic", topic);
+      nextParams.set("questions", questions);
+      if (examType === "krok2") {
+        nextParams.set("exam", "krok2");
+      }
+      window.location.href = `practice.html?${nextParams.toString()}`;
+    });
+  }
 
 </script>
 

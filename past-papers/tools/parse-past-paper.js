@@ -71,7 +71,19 @@ async function parsePdf() {
       continue;
     }
 
-    const optMatch = line.match(/^([A-E])\.\s+(.*)/);
+    const fallbackMatch = line.match(/^G\s+(.+)/);
+    if (currentQuestion && 
+        currentQuestion.options.A !== undefined && 
+        currentQuestion.options.B !== undefined && 
+        currentQuestion.options.C === undefined && 
+        currentQuestion.options.D === undefined && 
+        fallbackMatch) {
+      state = 4;
+      currentQuestion.options['C'] = fallbackMatch[1];
+      continue;
+    }
+
+    const optMatch = line.match(/^([A-E])\s*\.\s+(.*)/);
     if (optMatch && currentQuestion) {
       const optLetter = optMatch[1];
       if (optLetter === 'A') state = 2;

@@ -26,6 +26,8 @@ saveExamSession = async function saveExamSession() {
     const params = new URLSearchParams(window.location.search);
     const examType = params.get("exam") || "krok1";
     const topic = params.get("topic") || "all";
+    let year = params.get("year");
+    if (examType === "krok2") year = null;
     const krokNumber = examType === "krok2" ? 2 : 1;
 
     const accuracy = Math.round(
@@ -34,21 +36,25 @@ saveExamSession = async function saveExamSession() {
 
     let subject = topic;
 
-    const krok1TopicNames = {
-      "all": "All Topics",
-      "normal-physiology": "Normal Physiology",
-      "pathophysiology": "Pathophysiology",
-      "pathomorphology": "Pathomorphology",
-      "pharmacology": "Pharmacology",
-      "histology": "Histology"
-    };
+    if (year) {
+      subject = `Past Paper ${year}`;
+    } else {
+      const krok1TopicNames = {
+        "all": "All Topics",
+        "normal-physiology": "Normal Physiology",
+        "pathophysiology": "Pathophysiology",
+        "pathomorphology": "Pathomorphology",
+        "pharmacology": "Pharmacology",
+        "histology": "Histology"
+      };
 
-    if (krokNumber === 1) {
-      subject = krok1TopicNames[topic] || topic;
-    }
+      if (krokNumber === 1) {
+        subject = krok1TopicNames[topic] || topic;
+      }
 
-    if (krokNumber === 2 && topic === "all") {
-      subject = "All Topics";
+      if (krokNumber === 2 && topic === "all") {
+        subject = "All Topics";
+      }
     }
 
     const { data: examSession, error: sessionError } = await supabaseClient

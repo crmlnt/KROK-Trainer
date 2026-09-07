@@ -1,0 +1,2408 @@
+{
+  "exam": "KROK 1 Medicine",
+  "year": 2018,
+  "language": "English",
+  "sourceType": "past-paper",
+  "questions": [
+    {
+      "number": 1,
+      "question": "A 40-year-old woman on examinati- on presents with intensified basal metabolic rate. What hormone present in excess leads to such condition?",
+      "correct": 0,
+      "answers": [
+        "Triiodothyronine",
+        "Thyrocalcitonin",
+        "Glucagon",
+        "Aldosterone",
+        "Somatostatin"
+      ]
+    },
+    {
+      "number": 2,
+      "question": "Autopsy of a woman revealed the followi- ng morphologic changes: stenosis of the atrioventricular \topening, \tmitral \tinsuffici- ency. Histologically there are focal cardi- osclerosis and ”blooming” Aschoff nodules in the myocardium. What is the most likely diagnosis?",
+      "correct": 0,
+      "answers": [
+        "Rheumatism",
+        "Scleroderma",
+        "Dermatomyositis",
+        "Polyarteritis nodosa",
+        "Systemic lupus erythematosus"
+      ]
+    },
+    {
+      "number": 3,
+      "question": "After a \tcase \tof \tsepsis \ta \t27-year-old woman \tdeveloped \t”bronzed” \tskin \tdi- scoloration characteristic of Addison’s di- sease. \tHyperpigmentation \tmechanism \tin this case is based on increased secretion of:",
+      "correct": 0,
+      "answers": [
+        "Melanocyte-stimulating hormone",
+        "Somatotropin",
+        "Gonadotropin",
+        "β-lipotropin",
+        "Thyroid-stimulating hormone"
+      ]
+    },
+    {
+      "number": 4,
+      "question": "A 16-year-old girl presents with no hair on the pubis and in the armpits, her mammary glands are underdeveloped, no menstruati- ons. What hormone imbalance can it be indicative of?",
+      "correct": 0,
+      "answers": [
+        "Ovarian failure",
+        "Hyperthyroidism",
+        "Hypothyroidism",
+        "Pancreatic islet failure",
+        "Adrenal medulla hyperfunction"
+      ]
+    },
+    {
+      "number": 5,
+      "question": "From \tthe \tfeces \tof \ta \tpatient \twith acute \tgastroenteritis \ta \tpure \tculture \tof microorganisms \twas \tobtained. \tThe \tmi- croorganisms \tare \tsmall \tmobile \tslightly curved gram-negative bacilli that within 6 hours grow into a light blue film on the 1% alkaline peptone water. Such properties are characteristic of the following microorgani- sm:",
+      "correct": 0,
+      "answers": [
+        "Vibrio",
+        "Spirochaete",
+        "Clostridium",
+        "Bacillus",
+        "Spirilla"
+      ]
+    },
+    {
+      "number": 6,
+      "question": "A patient was brought into the infecti- onal diseases hospital on the 8th day since the disease onset. The patient complains of headache, malaise, and weakness. A sample of blood was taken for the serological test. Widal agglutination test results with blood sample diluted 1:200 and typhoid fever O- diagnosticum were positive. What diagnosis can be made based on the results of this test?",
+      "correct": 0,
+      "answers": [
+        "Typhoid fever",
+        "Dysentery",
+        "Cholera",
+        "Leptospirosis",
+        "Tuberculosis"
+      ]
+    },
+    {
+      "number": 7,
+      "question": "Protective function of saliva is based on \tseveral \tmechanisms, \tincluding \tthe presence \tof \tenzyme \tthat \thas \tbacterici- dal \taction \tand \tcauses \tlysis \tof \tcomplex capsular polysaccharides of staphylococci and streptococci. Name this enzyme:",
+      "correct": 0,
+      "answers": [
+        "Lysozyme",
+        "α-amylase",
+        "Oligo-1,6-glucosidase",
+        "Collagenase",
+        "β-glucuronidase"
+      ]
+    },
+    {
+      "number": 8,
+      "question": "In the process of hemoglobin catabolism iron is released and then as a part of speci- al transport protein is returned to the bone marrow, to be used again for hemoglobin synthesis. Name this transport protein:",
+      "correct": 0,
+      "answers": [
+        "Transferrin",
+        "Transcobalamin",
+        "Haptoglobin",
+        "Ceruloplasmin",
+        "Albumin"
+      ]
+    },
+    {
+      "number": 9,
+      "question": "The first-aid center has received a vi- ctim of a traffic accident diagnosed with closed displaced fracture of the middle thi- rd of the thigh. For repositioning of bone fragments the patient received 10 ml of 2% dithylinum solution intravenously, whi- ch resulted in prolonged period of apnoea and muscle relaxation. What enzyme is defi- cient, resulting in such pharmacogenetic enzymopathy?",
+      "correct": 0,
+      "answers": [
+        "Pseudocholinesterase",
+        "Uridine \tdiphosphate glucuronyltransferase",
+        "Glucose 6-phosphate dehydrogenase",
+        "Methemoglobin reductase",
+        "N-acetyltransferase"
+      ]
+    },
+    {
+      "number": 10,
+      "question": "An 18-year-old student presents wi- th enlarged thyroid gland accompanied by accelerated metabolism and increased heart rate. These signs can be observed during hypersecretion of thyroxin. What organelles of thyroid cells are primarily responsible for hormone production and secretion?",
+      "correct": 0,
+      "answers": [
+        "Golgi apparatus",
+        "Mitochondria",
+        "Ribosomes",
+        "Centrosomes",
+        "Lysosomes"
+      ]
+    },
+    {
+      "number": 11,
+      "question": "A patient complains of pain in the upper umbilical region. On palpation there is a mobile painful intestine. What intestine is being palpated by the doctor?",
+      "correct": 0,
+      "answers": [
+        "Transverse colon",
+        "Jejunum",
+        "Duodenum",
+        "Ileum",
+        "Sigmoid colon"
+      ]
+    },
+    {
+      "number": 12,
+      "question": "A \tlaboratory \texperiment \ton \ta \tdog was used to study central parts of audi- tory system. One of the mesencephalon structures was destroyed. The dog has lost the orienting response to auditory signals. What structure was destroyed?",
+      "correct": 0,
+      "answers": [
+        "Inferior colliculi of corpora quadrigemina",
+        "Superior colliculi of corpora quadrigemi- na",
+        "Substantia nigra",
+        "Reticular formation nuclei",
+        "Red nucleus"
+      ]
+    },
+    {
+      "number": 13,
+      "question": "Histological investigation of the uterine scrape of the 45-year-old woman with di- sturbed ovarian menstrual cycle revealed increased number of endometrial glands, some of which are serrated, while others are dilated and cyst-like. Make the diagnosis:",
+      "correct": 0,
+      "answers": [
+        "Endometrial cystic glandular hyperplasia",
+        "Placental polyp",
+        "Atypical endometrial hyperplasia",
+        "Glandular endometrial polyp",
+        "Endometrial adenocarcinoma"
+      ]
+    },
+    {
+      "number": 14,
+      "question": "A \t45-year-old \tman \tdiagnosed \twith hepatic \tcirrhosis \tand \tascites \tunderwent drainage of 5 liters of fluid from his abdomi- nal cavity, which resulted in development of syncopal state due to insufficient blood supply to the brain. What circulatory di- sorder occurred in the abdominal cavity in this case?",
+      "correct": 0,
+      "answers": [
+        "Arterial hyperemia",
+        "Ischemia",
+        "Venous hyperemia",
+        "Thrombosis",
+        "Embolism"
+      ]
+    },
+    {
+      "number": 15,
+      "question": "During \tcholecystectomy \tbesides \ta. cystyca another artery was pulled into the ligature. Ligation of this artery resulted in right-sided necrosis of the liver which led to the death of the patient. What artery was mistakenly ligated along with a. cystyca?",
+      "correct": 0,
+      "answers": [
+        "Ramus dexter a. hepatica propria",
+        "А. hepatica communis",
+        "А. gasro-duodenalis",
+        "Ramus sinister a. hepatica propria",
+        "А. pancreato-duodenalis sup"
+      ]
+    },
+    {
+      "number": 16,
+      "question": "Microscopy \tof \tthe \tpuncture \tsample obtained from the inflammation focus of the patient with cutaneous abscess revealed numerous blood cells of different types. What cells are the first to transfer from vessels to tissues during inflammation?",
+      "correct": 0,
+      "answers": [
+        "Neutrophils",
+        "Monocytes",
+        "Basocytes",
+        "Eosinophils",
+        "Lymphocytes"
+      ]
+    },
+    {
+      "number": 17,
+      "question": "During the first year of life an infant presents with disturbed process of breast milk curdling. What cells of the proper gastric glands are functionally disturbed?",
+      "correct": 0,
+      "answers": [
+        "Main exocrinocytes",
+        "Parietal exocrinocytes",
+        "Cervical mucous cells",
+        "Accessory mucous cells",
+        "Exocrinocytes"
+      ]
+    },
+    {
+      "number": 18,
+      "question": "A lab rat has subcutaneously received mercury(II) chloride in the amount of 5 mg/kg. 24 hours later the plasma creatini- ne concentration increased several times. What mechanism of retention azotemia is observed in this case?",
+      "correct": 0,
+      "answers": [
+        "Decreased glomerular filtration",
+        "Increased creatinine production in the muscles",
+        "Increased creatinine reabsorption",
+        "Increased glomerular filtration",
+        "Increased creatinine production in the renal tubules"
+      ]
+    },
+    {
+      "number": 19,
+      "question": "Collagenosis patients typically present with \tconnective \ttissue \tdestruction processes. The presence of these processes can be confirmed by the increase in:",
+      "correct": 0,
+      "answers": [
+        "Blood oxyproline and oxylysine",
+        "Blood creatine and creatinine",
+        "LDH-isoenzyme activity in the blood",
+        "Transaminase activity in the blood",
+        "Blood urates"
+      ]
+    },
+    {
+      "number": 20,
+      "question": "A \t63-year-old \tman \tsuffers \tfrom esophageal \tcarcinoma, \tpresents \twith metastases \tinto \tthe \tmediastinal \tlymph nodes \tand \tcancerous \tcachexia. \tWhat pathogenetic stage of neoplastic process is observed in the patient?",
+      "correct": 0,
+      "answers": [
+        "Progression",
+        "Promotion",
+        "Transformation",
+        "Initiation",
+        "-"
+      ]
+    },
+    {
+      "number": 21,
+      "question": "After an \tX-ray \texamination \tof \tthe tuberculosis clinic patient, he was diagnosed with tumor of the right lung. During operati- on the surgeon removed the middle lobe of the patient’s right lung. This lobe includes:",
+      "correct": 0,
+      "answers": [
+        "Segmentum laterale et segmentum mediale",
+        "Segmentum basale anterius et posterius",
+        "Segmentum anterius et segmentum apicale",
+        "Segmentum lingualare superius et inferius",
+        "Segmentum \tapicale \t(superius) \tet segmentum basale mediale"
+      ]
+    },
+    {
+      "number": 22,
+      "question": "A 2-year-old child presents with physical retardation and frequent pneumonias. The child was diagnosed with non-closure of the arterial canal. Hemodynamics disturbance in this case is caused by communication between the:",
+      "correct": 0,
+      "answers": [
+        "Aorta and pulmonary trunk",
+        "Pulmonary trunk and pulmonary veins",
+        "Superior vena cava and aorta",
+        "Superior vena cava and pulmonary trunk",
+        "Aorta and pulmonary veins"
+      ]
+    },
+    {
+      "number": 23,
+      "question": "A \tchild \tdiagnosed \twith \tpurulent inflammation of the middle ear was brought to the otolaryngology department. The di- sease started with the inflammation of the nasopharynx. It was determined that the infection had reached the tympanic cavity through the eustachian tube that is located in the:",
+      "correct": 0,
+      "answers": [
+        "Canalis musculotubarius",
+        "Сanaliculus tympanicus",
+        "Сanalis caroticus",
+        "Сanaliculus chordae tympani",
+        "Сanaliculi caroticо tympanici"
+      ]
+    },
+    {
+      "number": 24,
+      "question": "During the prestart period an athlete develops \tincreased \tfrequency \tand \tforce of cardiac contractions. These changes are caused by intensification of the following reflex responces:",
+      "correct": 0,
+      "answers": [
+        "Sympathetic conditioned",
+        "Sympathetic unconditioned",
+        "Parasympathetic conditioned",
+        "Parasympathetic unconditioned",
+        "Peripheral"
+      ]
+    },
+    {
+      "number": 25,
+      "question": "Due to trauma the patient has lost 25% of circulating blood volume. Name the emergency compensatory mechanism agai- nst blood loss:",
+      "correct": 0,
+      "answers": [
+        "Interstitial fluid inflow to the vessels",
+        "Restoration of blood protein composition",
+        "Increase of reticulocyte number",
+        "Restoration of erythrocyte number",
+        "Erythropoiesis activation"
+      ]
+    },
+    {
+      "number": 26,
+      "question": "ECG analysis of the patient shows that the T waves are positive in the second standard limb \tlead and their amplitude and duration is normal. The conclusion can be made that the following process occurs normally in the patient’s ventricles:",
+      "correct": 0,
+      "answers": [
+        "Repolarization",
+        "Depolarization",
+        "Excitation",
+        "Contraction",
+        "Relaxation"
+      ]
+    },
+    {
+      "number": 27,
+      "question": "A patient demonstrates sharp decrease of pulmonary surfactant activity. This condi- tion can result in:",
+      "correct": 0,
+      "answers": [
+        "Alveolar tendency to recede",
+        "Decreased airways resistance",
+        "Decreased work of expiratory muscles",
+        "Increased pulmonary ventilation",
+        "Hyperoxemia"
+      ]
+    },
+    {
+      "number": 28,
+      "question": "After a case of common cold the patient developed numbness of the right side of the face. Examination revealed disturbed pain and thermal sensitivity in the right half of the face. What nerve was damaged?",
+      "correct": 0,
+      "answers": [
+        "Trigeminal",
+        "Facial",
+        "Glossopharyngeal",
+        "Vagus",
+        "Hypoglossal"
+      ]
+    },
+    {
+      "number": 29,
+      "question": "X-ray exmination of a 57-year-old man indicates local areas of hard bone tissue resorption in some of the patient’s bones. These \tchanges \tcan \tbe \tassociated \twith increased activity of:",
+      "correct": 0,
+      "answers": [
+        "Osteoclasts",
+        "Chondroblasts",
+        "Osteocytes",
+        "Osteoblasts",
+        "Chondrocytes"
+      ]
+    },
+    {
+      "number": 30,
+      "question": "A patient presents with acute attack of cholelithiasis. Laboratory examination of the patient’s feces will show the following in this case:",
+      "correct": 0,
+      "answers": [
+        "Negative reaction to stercobilin",
+        "Positive reaction to stercobilin",
+        "Connective tissue",
+        "Partially digested cellulose",
+        "Starch granules"
+      ]
+    },
+    {
+      "number": 31,
+      "question": "During autopsy of a 34-year-old man, who died of chronic kidney failure due to renal amyloidosis, in the lungs (mai- nly \tin \tthe lower \tlobes) \tthe pathologist detected multiple bronchial dilations filled with purulent masses accumulated in the bronchial lumen. Surface of the lungs secti- on has fine-meshed pattern and resembles a honeycomb. Histologically there is a chronic inflammation detected in the bronchial wall, muscle fibers are replaced with connective tissue. These changes in the lungs can be defined as:",
+      "correct": 0,
+      "answers": [
+        "Bronchiectases",
+        "Bronchopneumonia",
+        "Chronic bronchitis",
+        "Chronic pneumonia",
+        "Lung abscesses"
+      ]
+    },
+    {
+      "number": 32,
+      "question": "Initial \tinoculation \tof \twater \tin \t1% peptone water resulted in growth of a thin film on the medium surface in 6 hours. Such cultural properties are characteristic of causative agent of the following disease:",
+      "correct": 0,
+      "answers": [
+        "Cholera",
+        "Plague",
+        "Tuberculosis",
+        "Dysentery",
+        "Pseudotuberculosis"
+      ]
+    },
+    {
+      "number": 33,
+      "question": "A \t30-year-old \tman \tcomplains \tof suffocation, heaviness in the chest on the right, general weakness. Body temperature is \t38.9oC. Objectively the right side \tof the chest lags behind the left side during respiration. Pleurocentesis yielded exudate. What is the leading factor of exudation in the patient?",
+      "correct": 0,
+      "answers": [
+        "Increased permeability of the vessel wall",
+        "Increased blood pressure",
+        "Hypoproteinemia",
+        "Erythrocyte aggregation",
+        "Decreased resorption of pleural fluid"
+      ]
+    },
+    {
+      "number": 34,
+      "question": "A 42-year-old man with gout presents with high content of uric acid in blood. The patient was prescribed allopurinol to lower the concentration of uric acid. Allopurinol is a competitive inhibitor of the following enzyme:",
+      "correct": 0,
+      "answers": [
+        "Xanthine oxidase",
+        "Adenosine deaminase",
+        "Adenine phosphoribosyltransferase",
+        "Hypoxanthine phosphoribosyltransferase",
+        "Guanine deaminase"
+      ]
+    },
+    {
+      "number": 35,
+      "question": "Autopsy revealed a large wedge-shaped patch of a dense dark red tissue with clear margins in the upper lobe of the right lung. Histological \texamination \tdetected \tthere necrosis of the alveolar walls; the alveolar lumen is tightly packed with erythrocytes. What process occurred in the lungs?",
+      "correct": 0,
+      "answers": [
+        "Hemorrhagic infarction",
+        "Carneous degeneration",
+        "Gangrene",
+        "Hemorrhage",
+        "Atelectasis"
+      ]
+    },
+    {
+      "number": 36,
+      "question": "A patient complains of dizziness, thirst, difficult swallowing, and impaired vision of close objects. Objectively: respiratory rate is increased, pupils are dilated, general agi- tation, talkativeness, though the speech is indistinct. BP is 110/70 mm Hg, heart rate is 110/min. Given symptoms can indicate overdosage of the following drug:",
+      "correct": 0,
+      "answers": [
+        "Atropine",
+        "Morphine",
+        "Ephedrine",
+        "Aminazine",
+        "Caffeine"
+      ]
+    },
+    {
+      "number": 37,
+      "question": "A \tpatient presents with indigestion, stomachaches, and excessive salivation. Si- milar simptoms had already been observed in \tthis \tpatient \tpreviously. \tLaboratory analysis detected oval eggs covered with lumpy capsules in the patient’s feces. What is the most likely cause of the patient’s di- sorder?",
+      "correct": 0,
+      "answers": [
+        "Ascariasis",
+        "Trichocephaliasis",
+        "Diphyllobothriasis",
+        "Enterobiasis",
+        "Fascioliasis"
+      ]
+    },
+    {
+      "number": 38,
+      "question": "Regional lymph nodes surrounding an infected wound are enlarged. Histological examination shows increased number of macrophages, lymphocytes, and lymphatic follicles, as well as a large amount of plasma cells, in the cortical layer of the lymph nodes. What process in the lymph nodes is indicated by these histologic changes?",
+      "correct": 0,
+      "answers": [
+        "Antigen stimulation",
+        "Acquired deficiency of lymphoid tissue",
+        "Congenital deficiency of lymphoid tissue",
+        "Neoplastic aberration",
+        "Transplant rejection"
+      ]
+    },
+    {
+      "number": 39,
+      "question": "During \tremoval \tof \tthe \thyperplastic thyroid \tgland \tof \ta \t47-year-old \twoman, the \tparathyroid \tgland \twas \tdamaged. One \tmonth \tafter \tthe \tsurgery \tthe \tpati- ent \tdeveloped \tsigns \tof \thypoparathyroi- dism: frequent convulsions, hyperreflexia, laryngospasm. What is the most likely cause of the patient’s condition?",
+      "correct": 0,
+      "answers": [
+        "Hypocalcemia",
+        "Hyponatremia",
+        "Hyperchlorhydria",
+        "Hypophosphatemia",
+        "Hyperkalemia"
+      ]
+    },
+    {
+      "number": 40,
+      "question": "On examination the patient presents with hirsutism, moon-shaped face, stretch marks \ton \tthe \tabdomen. \tBP \tis \t190/100 mm \tHg, \tblood \tglucose \tis \t17.6 \tmmol/L. What pathology is such clinical presentation characteristic of?",
+      "correct": 0,
+      "answers": [
+        "Adrenocortical hyperfunction",
+        "Hyperthyroidism",
+        "Hypothyroidism",
+        "Gonadal hypofunction",
+        "Hyperfunction of the insular apparatus"
+      ]
+    },
+    {
+      "number": 41,
+      "question": "A 45-year-old woman presents with breast cancer. Metastases can spread in this case to the following regional lymph nodes:",
+      "correct": 0,
+      "answers": [
+        "Axillary, parasternal",
+        "Abdominal, cervical",
+        "Cervical, parasternal",
+        "Parasternal, mediastinal",
+        "Aortic, mediastinal"
+      ]
+    },
+    {
+      "number": 42,
+      "question": "A \t40-year-old \tpregnant \twoman underwent \tamniocentesis. \tExamination determined the fetal karyotype to be 47, XY+21. What fetal pathology was detected?",
+      "correct": 0,
+      "answers": [
+        "Down syndrome",
+        "Klinefelter syndrome",
+        "Turner syndrome",
+        "Phenylketonuria",
+        "Patau syndrome"
+      ]
+    },
+    {
+      "number": 43,
+      "question": "A \tpatient \tused \tan \tindirect-acting adrenergic agonist to treat rhinitis. After the patient has been putting in the nose drops for several days, the vasoconstrictive effect of the drug gradually diminished. Name this phenomenon:",
+      "correct": 0,
+      "answers": [
+        "Tachyphylaxis",
+        "Idiosyncrasy",
+        "Teratogenicity",
+        "Allergy",
+        "Cumulation"
+      ]
+    },
+    {
+      "number": 44,
+      "question": "In a township there was registered an outbreak of hepatitis, which had supposedly spread \tthrough \tthe \twater \tsupply. \tWhat hepatitis virus could be the cause of the outbreak in this township?",
+      "correct": 0,
+      "answers": [
+        "Hepatitis E virus",
+        "Hepatitis C virus",
+        "Hepatitis D virus",
+        "Hepatitis G virus",
+        "Hepatitis B virus"
+      ]
+    },
+    {
+      "number": 45,
+      "question": "A \tmedical \tstudent was hospitalized into the infectious diseases unit on the 2nd day after the disease onset; the patient is suspected to have infectious mononucleosis. What \tresults \tof \tlaboratory \tanalysis \tcan confirm this diagnosis immediately on the day of the hospitalization?",
+      "correct": 0,
+      "answers": [
+        "IgM antibodies to Epstein-Barr virus were detected",
+        "IgM antibodies to herpes simplex virus were detected",
+        "Fourfold increase in number of antibodies to Epstein-Barr virus was detected",
+        "Herpesvirus was isolated",
+        "Cytomegalovirus \tantibodies \twere detected"
+      ]
+    },
+    {
+      "number": 46,
+      "question": "A 64-year-old woman presents with di- sturbed fine motor function of her fingers, marked muscle rigidity, and tremor. The neurologist diagnosed her with Parkinson’s disease. What brain structures are damaged resulting in this disease?",
+      "correct": 0,
+      "answers": [
+        "Substantia nigra",
+        "Thalamus",
+        "Red nuclei",
+        "Cerebellum",
+        "Reticular formation"
+      ]
+    },
+    {
+      "number": 47,
+      "question": "A \t20-year-old \tyoung \tman \twith \ttall stature, \tasthenic \tbody \ttype, \tsigns \tof hypogonadism and gynecomastia, and low sperm count (azoospermia) has karyotype 47, XXY. What hereditary syndrome can be \tcharacterized \tby \tthis \tchromosomal anomaly?",
+      "correct": 0,
+      "answers": [
+        "Klinefelter syndrome",
+        "Wiskott-Aldrich syndrome",
+        "Turner syndrome",
+        "Louis-Bar \tsyndrome \t(ataxia- telangiectasia)",
+        "Down syndrome"
+      ]
+    },
+    {
+      "number": 48,
+      "question": "Pathogenic staphylococcus was obtained from the purulent wound of the patient. Its antibiotic sensitivity was determined to be as follows: penicillin growth inhibition zone - 8 mm; oxacillin - 9 mm, ampicillin - 10 mm, gentamicin - 22 mm, lincomycin - 11 mm. What antibiotic should be chosen for treatment in this case?",
+      "correct": 0,
+      "answers": [
+        "Gentamicin",
+        "Oxacillin",
+        "Ampicillin",
+        "Penicillin",
+        "Lincomycin"
+      ]
+    },
+    {
+      "number": 49,
+      "question": "A patient presents with dilated blood vessels of the anterior medial surface of the lower leg. This condition resulted from the dilation of the following blood vessel:",
+      "correct": 0,
+      "answers": [
+        "V. saphena magna",
+        "А. tibialis anterior",
+        "V. saphena parva",
+        "А. tibialis posterior",
+        "V. poplitea"
+      ]
+    },
+    {
+      "number": 50,
+      "question": "A patient, who had received a thermal burn, developed painful boils filled with turbid liquid on the skin. What morphologi- cal type of inflammation has developed in the patient?",
+      "correct": 0,
+      "answers": [
+        "Serous",
+        "Proliferative",
+        "Croupous",
+        "Granulomatous",
+        "Diphtheritic"
+      ]
+    },
+    {
+      "number": 51,
+      "question": "Nitrogen is being excreted from the body mainly as urea. When activity of a certain enzyme in the liver is low, it results in inhibition of urea synthesis and nitrogen accumulation in blood and tissues. Name this enzyme:",
+      "correct": 0,
+      "answers": [
+        "Carbamoyl phosphate synthetase",
+        "Aspartate aminotransferase",
+        "Urease",
+        "Amylase",
+        "Pepsin"
+      ]
+    },
+    {
+      "number": 52,
+      "question": "Coronary artery thrombosis resulted in development of myocardial infarction. What mechanisms of cell damage are leadi- ng in this disease?",
+      "correct": 0,
+      "answers": [
+        "Calcium",
+        "Lipid",
+        "Acidotic",
+        "Electroosmotic",
+        "Protein"
+      ]
+    },
+    {
+      "number": 53,
+      "question": "People, who for a long time remained in hypodynamic state, develop intense pain in the muscles after a physical exertion. What is the most likely cause of this pain?",
+      "correct": 0,
+      "answers": [
+        "Accumulation of lactic acid in muscles",
+        "Intensive breakdown of muscle proteins",
+        "Accumulation of creatinine in muscles",
+        "Decreased content of lipids in muscles",
+        "Increased content of ADP in muscles"
+      ]
+    },
+    {
+      "number": 54,
+      "question": "Histological \tspecimen \tshows \torgan parenchyma to consist of lymphoid tissue that \tforms \tlymph \tnodules; \tthe \tnodules are located diffusely and have a central artery. What anatomical structure has such morphological characteristics?",
+      "correct": 0,
+      "answers": [
+        "Spleen",
+        "Tonsil",
+        "Lymph node",
+        "Thymus",
+        "Red bone marrow"
+      ]
+    },
+    {
+      "number": 55,
+      "question": "A 25-year-old woman complains of vi- sual impairment. Examination revealed di- sturbed eye accommodation, the pupil is dilated and unresponsive to light. What muscles are functionally disturbed in this case?",
+      "correct": 0,
+      "answers": [
+        "Iris sphincter muscle, ciliary muscle",
+        "Iris dilator muscle, ciliary muscle",
+        "Superior oblique muscle, ciliary muscle",
+        "Lateral \trectus \tmuscle, \tiris \tsphincter muscle",
+        "Iris sphincter and iris dilator muscles"
+      ]
+    },
+    {
+      "number": 56,
+      "question": "A patient with hypochromic anemia has hair with split ends and suffers from hair loss. The nails are brittle. Gustatory sensati- ons are affected. What is the mechanism of development of these symptoms?",
+      "correct": 0,
+      "answers": [
+        "Iron enzymes deficiency",
+        "Vitamin B12 deficiency",
+        "Low production of parathyroid hormone",
+        "Vitamin A deficiency",
+        "Low production of thyroid hormones"
+      ]
+    },
+    {
+      "number": 57,
+      "question": "A patient suffers from hepatic cirrhosis. What substance excreted in urine should be analyzed to characterize the antitoxic function of liver?",
+      "correct": 0,
+      "answers": [
+        "Hippuric acid",
+        "Ammonium salts",
+        "Creatinine",
+        "Uric acid",
+        "Amino acids"
+      ]
+    },
+    {
+      "number": 58,
+      "question": "A 65-year-old woman, who had been suffering from deep vein thrombophlebi- tis of the lower leg, suddenly died when awaiting her appointment with the doctor. Autopsy revealed loose friable red masses with corrugated dull surface in the main pulmonary artery and its bifurcation. What pathologic process was discovered by the pathologist in the pulmonary artery?",
+      "correct": 0,
+      "answers": [
+        "Thromboembolism",
+        "Thrombosis",
+        "Tissue embolism",
+        "Foreign body embolism",
+        "Fat embolism"
+      ]
+    },
+    {
+      "number": 59,
+      "question": "Blood of the patients with diabetes mellitus shows increased content of free fatty acids. Name the most likely cause of this:",
+      "correct": 0,
+      "answers": [
+        "Increased activity of adipose triglyceride lipase",
+        "Accumulation \tof \tpalmitoyl-CoA \tin cytosol",
+        "Activation of ketone bodies utilization",
+        "Activation of apoА1, apoА2, and apoА4 apolipoprotein synthesis",
+        "Decreased \tactivity \tof \tplasma phosphatidylcholine-cholesterol- acyltransferase"
+      ]
+    },
+    {
+      "number": 60,
+      "question": "Representatives of a certain human population \tcan \tbe \tcharacterized \tby elongated body, height variability, decreased volume of muscle mass, increased length of limbs, decreased size and volume of rib cage, increased perspiration, decreased indi- ces of base metabolism and fat synthesis. What type of adaptive evolution is it?",
+      "correct": 0,
+      "answers": [
+        "Tropical",
+        "Arctic",
+        "Moderate",
+        "Intermediate",
+        "Mountain"
+      ]
+    },
+    {
+      "number": 61,
+      "question": "A 56-year-old man complains of thirst and frequent urination. The endocrinologist diagnosed this patient with diabetes melli- tus and prescribed him glibenclamide. What mechanism of action does this drug have?",
+      "correct": 0,
+      "answers": [
+        "Stimulation \tof \tβ-cells \tof \tislets \tof Langerhans",
+        "Facilitates glucose uptake by the tissues",
+        "Facilitates glucose transport through cell membranes",
+        "Suppression \tof \tα-cells \tof \tislets \tof Langerhans",
+        "Inhibits glucose absorption in the intestine"
+      ]
+    },
+    {
+      "number": 62,
+      "question": "Patients with bile duct obstruction typi- cally present with inhibited blood clotting and develop hemorrhages due to insuffici- ent assimilation of vitamin:",
+      "correct": 0,
+      "answers": [
+        "K",
+        "A",
+        "D",
+        "E",
+        "C"
+      ]
+    },
+    {
+      "number": 63,
+      "question": "A \ttest \tanimal \treceives \telectrical impulses that irritate the sympathetic nerve that innervates blood vessels of the skin. What reaction will it cause in the blood vessels?",
+      "correct": 0,
+      "answers": [
+        "Arterial and venous constriction",
+        "No reaction",
+        "Arterial dilation",
+        "Arterial and venous dilation",
+        "Venous dilation"
+      ]
+    },
+    {
+      "number": 64,
+      "question": "Examination of the coronary arteries revealed atherosclerotic plaques with calci- nosis that narrow the arterial opening by 1/3. In the muscle there are numerous whi- tish layers of connective tissue. Name the process detected in the myocardium:",
+      "correct": 0,
+      "answers": [
+        "Diffuse cardiosclerosis",
+        "Tiger heart",
+        "Postinfarction cardiosclerosis",
+        "Myocarditis",
+        "Myocardial infarction"
+      ]
+    },
+    {
+      "number": 65,
+      "question": "A \tperson \thas \tincreased \tpulmonary ventilation due to physical exertion. What indicator of external respiration will be si- gnificantly increased compared to the resti- ng state?",
+      "correct": 0,
+      "answers": [
+        "Respiratory volume",
+        "Vital lung capacity",
+        "Inspiratory reserve volume",
+        "Expiratory reserve volume",
+        "Total lung capacity"
+      ]
+    },
+    {
+      "number": 66,
+      "question": "The carotid bodies on both sides were removed in a test animal. Which of the li- sted factors WILL NOT be able to cause hyperventilation in the test animal?",
+      "correct": 0,
+      "answers": [
+        "Hypoxemia",
+        "Physical exertion",
+        "Hypercapnia",
+        "Acidosis",
+        "Increase of core body temperature"
+      ]
+    },
+    {
+      "number": 67,
+      "question": "Due to prolonged stay in the mountai- ns at the altitude of 3000 m above the sea level, a person developed increased oxygen capacity of blood, which was directly caused by intensified production of:",
+      "correct": 0,
+      "answers": [
+        "Erythropoietins",
+        "Leukopoietins",
+        "Carbaminohemoglobin",
+        "Catecholamines",
+        "2,3-bisphosphoglycerate"
+      ]
+    },
+    {
+      "number": 68,
+      "question": "A woman has been limiting the amount of products in her diet to lose some weight. 3 months later she developed edemas and her diuresis increased. What dietary component deficiency is the cause of this?",
+      "correct": 0,
+      "answers": [
+        "Proteins",
+        "Fats",
+        "Carbohydrates",
+        "Vitamins",
+        "Minerals"
+      ]
+    },
+    {
+      "number": 69,
+      "question": "A microslide of the lung tissue sample taken from a patient with pneumonia shows damage to the cells that carry out respi- ratory function. What cells of the alveolar wall are damaged?",
+      "correct": 0,
+      "answers": [
+        "Type 2 alveolar cells",
+        "Type 1 alveolar cells",
+        "Macrophages",
+        "Club cells",
+        "Lymphocytes"
+      ]
+    },
+    {
+      "number": 70,
+      "question": "After \ta \tpsychic \ttrauma \ta \twoman developed \tperiodical \tincreases \tin \ther blood pressure accompanied by headache, palpitations, and general weakness. What mechanism of hypertension development does this woman have?",
+      "correct": 0,
+      "answers": [
+        "Increased arteriolar tone",
+        "Increased circulating blood volume",
+        "Decreased cardiac output",
+        "Tachycardia",
+        "Venoconstriction"
+      ]
+    },
+    {
+      "number": 71,
+      "question": "An electron micrograph of a nephron segment \tshows \tcuboidal \tcells \twith \tcili- ated lining on their apical surfaces; their basal surfaces have basal striation with mi- tochondria located between the cytolemma invaginations. Name the described nephron segment:",
+      "correct": 0,
+      "answers": [
+        "Proximal tubule",
+        "Collecting ducts",
+        "Distal tubule",
+        "Thin limbs of Henle’s loop",
+        "Glomerular capsule"
+      ]
+    },
+    {
+      "number": 72,
+      "question": "A patient has been taking bisacodyl for a long time to treat chronic constipation. However, several weeks later the aperient effect of the drug diminished. What is the possible cause of this?",
+      "correct": 0,
+      "answers": [
+        "Acquired tolerance",
+        "Drug dependence",
+        "Material cumulation",
+        "Functional cumulation",
+        "Sensitization"
+      ]
+    },
+    {
+      "number": 73,
+      "question": "A force generated by the muscle is not enough to lift a load. What type of muscle contraction occurs in this case?",
+      "correct": 0,
+      "answers": [
+        "Isometric",
+        "Tetanic",
+        "Isotonic",
+        "Eccentric",
+        "Concentric"
+      ]
+    },
+    {
+      "number": 74,
+      "question": "Condition of a patient with diabetes mellitus sharply deteriorated after a regular injection of insulin. The patient became anxious and broke out in cold sweat; tremor of the extremities, general weakness, and dizziness \tappeared. \tWhat \tmedicine \tcan remove these symptoms?",
+      "correct": 0,
+      "answers": [
+        "Adrenaline",
+        "Tolbutamide",
+        "Caffeine",
+        "Noradrenaline",
+        "Glibutid (Buformin)"
+      ]
+    },
+    {
+      "number": 75,
+      "question": "Microscopy of the myocardium of a girl, who died of diphtheria due to heart failure, shows fatty degeneration, multiple foci of cardiomyocytes necrosis, and small foci of cellular infiltrates in the interstitium. What type of myocarditis is it?",
+      "correct": 0,
+      "answers": [
+        "Alterative",
+        "Diffuse exudative",
+        "Focal exudative",
+        "Interstitial",
+        "Granulomatous"
+      ]
+    },
+    {
+      "number": 76,
+      "question": "A schizophrenia patient was prescribed aminazine. What pharmacodynamic action of this drug is the grounds for its prescripti- on in this case?",
+      "correct": 0,
+      "answers": [
+        "Antipsychotic",
+        "Antiemetic",
+        "Hypothermic",
+        "Muscle relaxant",
+        "Hypotensive"
+      ]
+    },
+    {
+      "number": 77,
+      "question": "A \t40-year-old \tman \tdeveloped \tskin redness \tand \tswelling \tin \tthe \tneck \tarea, where eventually a small abscess appeared. On section the focus is dense and yellow- green colored. In the purulent masses there are \twhite \tgranules. \tHistologically \tthere are fungal druses, plasma and xanthome cells, and macrophages detected. Specify the most correct etiological name of this pathological process:",
+      "correct": 0,
+      "answers": [
+        "Actinomycosis",
+        "Furuncle",
+        "Carbuncle",
+        "Syphilis",
+        "Leprosy"
+      ]
+    },
+    {
+      "number": 78,
+      "question": "A patient was hospitalized into the infectious diseases unit on the 11th day si- nce the disease onset and provisionally di- agnosed with typhoid fever. What biological material should be collected from the pati- ent for the analyzes at this stage?",
+      "correct": 0,
+      "answers": [
+        "Blood serum",
+        "Urine",
+        "Feces",
+        "Bile",
+        "Roseola secretion"
+      ]
+    },
+    {
+      "number": 79,
+      "question": "A man with ischemic heart disease has been taking his medicine too often throughout a day, which resulted in poisoni- ng. Examination detects cyanosis of skin and mucosa, sharp drop of blood pressure, tachycardia, \tand \trespiratory \tdepression. Blood methemoglobin is high. What type of medicine did the patient overdose on?",
+      "correct": 0,
+      "answers": [
+        "Organic nitrates",
+        "α-adrenergic blockers",
+        "Calcium channel blockers",
+        "Adenosine-based drugs",
+        "Myotropic antispasmodics"
+      ]
+    },
+    {
+      "number": 80,
+      "question": "General structure of eukaryotic genes is as follows: exon-intron-exon. Such functi- onal structure of a gene leads to certain specifics of the transcription process. What sequence will correspond with precursor mRNA (immature)?",
+      "correct": 0,
+      "answers": [
+        "Exon-intron-exon",
+        "Exon-exon-intron",
+        "Exon-exon",
+        "Intron-exon",
+        "Exon-intron"
+      ]
+    },
+    {
+      "number": 81,
+      "question": "Atria of a test animal were superdi- stended \twith \tblood, \twhich \tresulted \tin decreased reabsorption of Na+ and water in renal tubules. This can be explained by the effect of the following factor on the ki- dneys:",
+      "correct": 0,
+      "answers": [
+        "Natriuretic hormone",
+        "Aldosterone",
+        "Renin",
+        "Angiotensin",
+        "Vasopressin"
+      ]
+    },
+    {
+      "number": 82,
+      "question": "A patient with clinical signs of a pri- mary immunodeficiency has functionally di- sturbed mechanism of antigen-presentation to the immunocompetent cells. What cells are likely to have structural defects?",
+      "correct": 0,
+      "answers": [
+        "Macrophages, monocytes",
+        "T-lymphocyte",
+        "B-lymphocyte",
+        "Fibroblasts",
+        "O-lymphocytes"
+      ]
+    },
+    {
+      "number": 83,
+      "question": "During intensive muscle work there is a large amount of ammonia produced in the muscles. What amino acid plays the main role in the transportation of ammonia to the liver and participates in gluconeogenesis reactions?",
+      "correct": 0,
+      "answers": [
+        "Alanine",
+        "Arginine",
+        "Lysine",
+        "Ornithine",
+        "Aspartate"
+      ]
+    },
+    {
+      "number": 84,
+      "question": "Encephalopathy has developed in a chi- ld with hemolytic disease of the newborn. What substance had increased in the child’s blood, resulting in damage to the CNS?",
+      "correct": 0,
+      "answers": [
+        "Unconjugated bilirubin",
+        "Bilirubin-albumin complex",
+        "Bilirubin glucuronide",
+        "Verdohemoglobin",
+        "Bile acids"
+      ]
+    },
+    {
+      "number": 85,
+      "question": "Renal examination shows the kidney to be swollen and plethoric, with easily removable capsule. Renal pelvis and calyces are dilated and filled with turbid urine; their mucosa is dull and has hemorrhagic foci. On section the renal tissue is variegated, there are yellow-gray areas surrounded with plethoric and hemorrhagic zone. What di- sease can be characterized by such results of macroscopic examination?",
+      "correct": 0,
+      "answers": [
+        "Acute pyelonephritis",
+        "Acute glomerulonephritis",
+        "Renal amyloidosis",
+        "Nephrolithiasis",
+        "Polycystic kidney"
+      ]
+    },
+    {
+      "number": 86,
+      "question": "A 54-year-old man complains of general weakness, \tfrequent \tcolds, \tand \tbruises constantly appearing on his body. Blood test: erythrocytes - 2.5 · 1012/L; Hb- 80 g/L; color index - 0.9; reticulocytes - absent; platelets - 50 · 109/L; leukocytes - 58 · 109/L; leukogram: basocytes - 5%, eosinophils - 15%, myeloblasts - 6%, myelocytes - 10%, juvenile - 18%, stab neutrophils - 26%, segmented neutrophils - 10%, lymphocytes - 8%, monocytes - 2%, ESR - 40 mm/hour. What hematologic conclusion can be made?",
+      "correct": 0,
+      "answers": [
+        "Chronic myelogenous leukemia",
+        "Leukemoid response",
+        "Myeloblastic leukemia",
+        "Chronic lymphocytic leukemia",
+        "Basophilic eosinophilic leukocytosis"
+      ]
+    },
+    {
+      "number": 87,
+      "question": "A mutation has occurred in a cell in the first exon of the structural gene. The number of nucleotide pairs changed from 290 to 250. Name this type of mutation:",
+      "correct": 0,
+      "answers": [
+        "Deletion",
+        "Inversion",
+        "Duplication",
+        "Translocation",
+        "Nullisomy"
+      ]
+    },
+    {
+      "number": 88,
+      "question": "The dorsal root of the spinal nerve of a test animal was severed. What changes will occur in the innervation area?",
+      "correct": 0,
+      "answers": [
+        "Loss of sensitivity",
+        "Loss of motor function",
+        "Decreased muscle tone",
+        "Increased muscle tone",
+        "Loss of sensitivity and motor function"
+      ]
+    },
+    {
+      "number": 89,
+      "question": "Due to destruction of certain structures of the brainstem a test animal has lost its ori- entation reflexes in response to strong light stimuli. What structures were destroyed?",
+      "correct": 0,
+      "answers": [
+        "Anterior quadrigeminal bodies",
+        "Posterior quadrigeminal bodies",
+        "Red nuclei",
+        "Vestibular nuclei",
+        "Substantia nigra"
+      ]
+    },
+    {
+      "number": 90,
+      "question": "A \ttoxin \tneutralized \twith \t0.4% formaldehyde under 37-40oC for 4 weeks is used for vaccination. This preparation was first used by Gaston Ramon for diphtheria prevention. Name this preparation:",
+      "correct": 0,
+      "answers": [
+        "Anatoxin",
+        "Immunoglobulin",
+        "Antitoxic serum",
+        "Adjuvant",
+        "Inactivated vaccine"
+      ]
+    },
+    {
+      "number": 91,
+      "question": "24 hours after an appendectomy the patient’s \tblood \ttest \tshows \tneutrophilic leukocytosis with a regenerative shift. What is the most likely mechanism of absolute leukocytosis development in the patient’s peripheral blood?",
+      "correct": 0,
+      "answers": [
+        "Intensification of leukopoiesis",
+        "Leukocyte redistribution",
+        "Decreased leukocyte disintegration",
+        "Deceleration of leukocyte migration to the tissues",
+        "Immunity activation"
+      ]
+    },
+    {
+      "number": 92,
+      "question": "The right leg of a 40-year-old woman measured at the shin level is by 2 cm smaller in the diameter than the left leg. Ankle- jerk (Achilles) and knee-jerk reflexes are absent on the right. What is the most likely mechanism \tof \thyporeflexia \tdevelopment during peripheral paralysis?",
+      "correct": 0,
+      "answers": [
+        "Disturbed conduction of stimulation",
+        "Inhibition of pyramidal motoneuron",
+        "Disturbed synaptic impulse transmission",
+        "Activation of excitatory impulses from the CNS",
+        "Disturbed perception of stimulation"
+      ]
+    },
+    {
+      "number": 93,
+      "question": "A \t38-year-old \tman, \twho \thas been \tsuffering \tfrom \tsystemic \tlupus erythematosus for 3 years, developed di- ffuse renal lesions accompanied by massi- ve edemas, marked proteinuria, hyperli- pidemia, \tand \tdysproteinemia. \tWhat \tis the most likely mechanism of proteinuria develoment in this case?",
+      "correct": 0,
+      "answers": [
+        "Autoimmune damage to the nephrons",
+        "Inflammatory damage to the nephrons",
+        "Ischemic damage to the tubules",
+        "Increased blood proteins",
+        "Morbid affection of the urinary tracts"
+      ]
+    },
+    {
+      "number": 94,
+      "question": "A 59-year-old man, a business manager, developed intense burning retrosternal pain that irradiates to the left arm. The pain occurred in the evening after the tax audit. 15 minutes later the patient’s condition normalized. \tWhat \tmechanism \tof \tangina pectoris development is leading in this pati- ent?",
+      "correct": 0,
+      "answers": [
+        "Increased level of blood catecholamines",
+        "Coronary atherosclerosis",
+        "Intravascular aggregation of blood cells",
+        "Coronary artery thrombosis",
+        "Functional cardiac overload"
+      ]
+    },
+    {
+      "number": 95,
+      "question": "A \t25-year-old \twoman \tat \ther \tthird pregnancy with impending miscarriage was brought to the hospital. What combination of Rh-factor of the mother and the fetus can be the cause of this condition?",
+      "correct": 0,
+      "answers": [
+        "Mother Rh (-), fetus Rh (+)",
+        "Mother Rh (-), fetus Rh (-)",
+        "Mother Rh (+), fetus Rh (-)",
+        "Mother Rh (+), fetus Rh (+)",
+        "-"
+      ]
+    },
+    {
+      "number": 96,
+      "question": "A specimen of a 10-day-old human embryo \tshows \ttwo \tinterconnected \tsacs (amniotic \tand \tyolk \tsacs). \tName \tthe structure located in the place where these two sacs connect:",
+      "correct": 0,
+      "answers": [
+        "Embryonic shield",
+        "Floor of the amniotic sac",
+        "Roof of the amniotic sac",
+        "Amniotic stalk",
+        "Extraembryonic mesoderm"
+      ]
+    },
+    {
+      "number": 97,
+      "question": "A woman with the III (В), Rh (-) blood group gave birth to a child with the II (А) blood group. The child is diagnosed with hemolytic disease of newborn caused by rhesus incompatibility. What blood group and Rh does the father have?",
+      "correct": 0,
+      "answers": [
+        "II (А), Rh (+)",
+        "I (0), Rh (+)",
+        "III (B), Rh (+)",
+        "I (0), Rh (-)",
+        "II (A), Rh (-)"
+      ]
+    },
+    {
+      "number": 98,
+      "question": "A \t40-year-old \twoman \tsuffers \tfrom Cushing’s \tdisease \t- \tsteroid \tdiabetes. On \tbiochemical \texamination \tshe \thas hyperglycemia and hypochloremia. What process activates in the first place in such patients?",
+      "correct": 0,
+      "answers": [
+        "Gluconeogenesis",
+        "Glycogenolysis",
+        "Glucose reabsorption",
+        "Glucose transport to the cells",
+        "Glycolysis"
+      ]
+    },
+    {
+      "number": 99,
+      "question": "A patient with a chemical burn has developed esophageal stenosis. The pati- ent presents with acute weight loss due to \tproblematic \tfood \tintake. \tBlood \ttest: erythrocytes - 3.0 · 1012/L, Hb- 106 g/L, total protein - 57 g/L. What type of starvation does this patient suffer from?",
+      "correct": 0,
+      "answers": [
+        "Incomplete starvation",
+        "Protein starvation",
+        "Complete starvation",
+        "Water starvation",
+        "Absolute starvation"
+      ]
+    },
+    {
+      "number": 100,
+      "question": "Autopsy of the body of a man, who for a long time had been working at the factory with high content of silicon dioxide in the air, revealed enlarged dense lungs wi- th numerous round and oval sclerotic foci. The foci were miliary and larger in size and colored gray or gray-black. What is the most likely diagnosis?",
+      "correct": 0,
+      "answers": [
+        "Nodular silicosis",
+        "Diffuse sclerotic silicosis",
+        "Anthracosilicosis",
+        "Silicoanthracosis",
+        "Asbestosis"
+      ]
+    },
+    {
+      "number": 101,
+      "question": "Autopsy of the body of a 50-year- old man, who had been suffering from tuberculosis and died of cardiopulmonary decompensation, shows lobar affection of the lungs: the upper lobe of the right lung is enlarged, dense, yellow on section, crumbli- ng, with pleural fibrin deposition. What type of secondary tuberculosis can be characteri- zed by this pathology?",
+      "correct": 0,
+      "answers": [
+        "Caseous pneumonia",
+        "Fibrous focal tuberculosis",
+        "Infiltrative tuberculosis",
+        "Tuberculoma",
+        "Acute focal tuberculosis"
+      ]
+    },
+    {
+      "number": 102,
+      "question": "A woman has come to the hospital wi- th complaints of general weakness, dizzi- ness, and dyspnea. Resently she has been taking levomycetin (chloramphenicol) for prevention of enteric infection. Blood test: erythrocytes - 1.9 · 1012/L, hemoglobin - 58 g/L, color index - 0.9, leukocytes - 2.2 G/L, reticulocytes - 0.3%. What type of anemia is it indicative of?",
+      "correct": 0,
+      "answers": [
+        "Hypoplastic",
+        "Metaplastic",
+        "Aplastic",
+        "Hemolytic",
+        "Iron-deficiency"
+      ]
+    },
+    {
+      "number": 103,
+      "question": "Preoperative \texamination \trevealed prothrombin deficiency in the blood of the patient. What drug should be preliminarily prescribed to mitigate blood loss in the pati- ent during the surgery?",
+      "correct": 0,
+      "answers": [
+        "Vicasol (Menadione)",
+        "Thrombin",
+        "Aminocapronic acid",
+        "Phenylin (Phenindione)",
+        "Contrykal (Aprotinin)"
+      ]
+    },
+    {
+      "number": 104,
+      "question": "A patient with streptococcal infecti- on of the gingiva was prescribed a drug with β-lactam ring in its structure. What drug of those listed below belongs to this pharmacological group?",
+      "correct": 0,
+      "answers": [
+        "Benzylpenicillin",
+        "Rifampicin",
+        "Erythromycin",
+        "Streptomycin sulfate",
+        "Levomycetin (Chloramphenicol)"
+      ]
+    },
+    {
+      "number": 105,
+      "question": "A microslide of the skin sample taken from the finger of a child shows that epi- dermis is insufficiently developed. What germ layer was damaged in the process of embryo development?",
+      "correct": 0,
+      "answers": [
+        "Ectoderm",
+        "Mesoderm",
+        "Endoderm",
+        "Mesenchyme",
+        "Ectomesenchyme"
+      ]
+    },
+    {
+      "number": 106,
+      "question": "Neutralization of xenobiotics and acti- ve endogenous metabolites often occurs via introduction of an oxygen atom into the substrate molecule. What process occurs as the result?",
+      "correct": 0,
+      "answers": [
+        "Hydroxylation",
+        "Decarboxylation",
+        "Transamination",
+        "Phosphorilation",
+        "Deaminization"
+      ]
+    },
+    {
+      "number": 107,
+      "question": "In \tthe \tprocess \tof \tan \texperiment, vascular resistance to the blood flow was measured \tin \tthe \tdifferent \tareas \tof \tci- rculatory system. The highest resistance was detected in the:",
+      "correct": 0,
+      "answers": [
+        "Arterioles",
+        "Arteries",
+        "Capillaries",
+        "Venules",
+        "Veins"
+      ]
+    },
+    {
+      "number": 108,
+      "question": "A 34-year-old man died in a comatose state. According to his family after a busi- ness trip to an African country he developed periodical jaundice attacks. Autopsy shows the following: dense enlarged spleen with slate-black pulp; enlarged plethoric liver, gray-black on section; cerebral gray matter is brown-gray; cerebral white matter contai- ns \tnumerous \tsmall \themorrhages. \tWhat infectious disease can be suspected?",
+      "correct": 0,
+      "answers": [
+        "Malaria",
+        "Meningococcemia",
+        "Prion infection",
+        "Generalized herpetic infection",
+        "Generalized cryptococcosis"
+      ]
+    },
+    {
+      "number": 109,
+      "question": "What diagnostic method should be used in industry to test the raw leather for presence of B. antracis?",
+      "correct": 0,
+      "answers": [
+        "Ascoli’s thermo precipitation test",
+        "Microscopy with Burry-Gins stain",
+        "Microscopy with Aujeszky stain",
+        "Bacteriological analysis",
+        "Serological test"
+      ]
+    },
+    {
+      "number": 110,
+      "question": "A 46-year-old patient suffering from ulcer disease of the stomach is diagnosed with \trheumatoid \tarthritis. \tWhat \tantii- nflammatory drug would be the most advi- sable in this case?",
+      "correct": 0,
+      "answers": [
+        "Celecoxib",
+        "Prednisolone",
+        "Analgin (Metamizole)",
+        "Promedol (Trimeperidine)",
+        "Paracetamol"
+      ]
+    },
+    {
+      "number": 111,
+      "question": "A patient with myocardial infarction has acute heart failure. Among the drugs that increase the force of heart contractions the least dangerous in this case will be:",
+      "correct": 0,
+      "answers": [
+        "Dobutamine",
+        "Adrenaline",
+        "Isadrinum (Isoprenaline)",
+        "Euphyllin (Aminophylline)",
+        "Caffeine"
+      ]
+    },
+    {
+      "number": 112,
+      "question": "During \tintensive \tphysical \texertion, one of the energy sources for the working muscles is glucose produced as the result of gluconeogenesis. This process is the most intensive in the following organ:",
+      "correct": 0,
+      "answers": [
+        "Liver",
+        "Brain",
+        "Lungs",
+        "Muscles",
+        "Stomach"
+      ]
+    },
+    {
+      "number": 113,
+      "question": "During inflienza epidemic, morbidity in the schoolchildren, who did not participate in sports, was 40%, while in the schoolchi- ldren, who engaged in regular physical aci- vities, morbidity did not exceed 20%. What adaptation mechanism ensured low morbi- dity in the physically active schoolchildren?",
+      "correct": 0,
+      "answers": [
+        "Cross-adaptation",
+        "Specific adaptation",
+        "Physiological adaptation",
+        "Biochemical adaptation",
+        "Genetic adaptation"
+      ]
+    },
+    {
+      "number": 114,
+      "question": "Monoamine \toxidase \tinhibitors \tare widely \tused \tas \tpsychopharmacological drugs. They change the level of nearly all \tneurotransmitters \tin \tsynapses, \twith the following neurotransmitter being the exception:",
+      "correct": 0,
+      "answers": [
+        "Acetylcholine",
+        "Noradrenaline",
+        "Adrenaline",
+        "Dopamine",
+        "Serotonin"
+      ]
+    },
+    {
+      "number": 115,
+      "question": "A 17-year-old girl suffers from periodi- cal palpitations that last several minutes. Her heart rate is 200/min., rhythmic. What heart rhythm disorder developed in this patient?",
+      "correct": 0,
+      "answers": [
+        "Paroxysmal tachycardia",
+        "Sinus tachycardia",
+        "Sinus bradycardia",
+        "Extrasystole",
+        "Atrioventricular block"
+      ]
+    },
+    {
+      "number": 116,
+      "question": "Kidney X-ray image obtained by means of pyelography shows that the minor calyces converge to form 2 major calyces that adjoin to the renal pelvis, from which the ureter exits. What type of urinary tract is it?",
+      "correct": 0,
+      "answers": [
+        "Mature",
+        "Embryonic",
+        "Bicornuate",
+        "Cystic",
+        "Fetal"
+      ]
+    },
+    {
+      "number": 117,
+      "question": "A patient has been brought into a surgical ward with an incised wound of the anterior surface of the shoulder in its lower one-third. Flexing function was disturbed in the shoulder and elbow joints, which is caused by the damage to the:",
+      "correct": 0,
+      "answers": [
+        "Biceps muscle of the arm",
+        "Triceps muscle of the arm",
+        "Anconeus muscle",
+        "Deltoid muscle",
+        "Coracobrachial muscle"
+      ]
+    },
+    {
+      "number": 118,
+      "question": "A patient suffers from acute cardi- opulmonary failure with pulmonary edema. What diuretic should be prescribed in the given case?",
+      "correct": 0,
+      "answers": [
+        "Furosemide",
+        "Triamterene",
+        "Spironolactone",
+        "Hydrochlorothiazide (Dichlothiazidum)",
+        "Acetazolamide (Diacarb)"
+      ]
+    },
+    {
+      "number": 119,
+      "question": "Ketosis develops in the patients with di- abetes mellitus, as the result of activation of fatty acids oxidation processes. What acid- base imbalance can result from accumulati- on of excessive ketone bodies in the blood?",
+      "correct": 0,
+      "answers": [
+        "Metabolic acidosis",
+        "Metabolic alkalosis",
+        "No imbalance occurs",
+        "Respiratory acidosis",
+        "Respiratory alkalosis"
+      ]
+    },
+    {
+      "number": 120,
+      "question": "A \t5-year-old \tchild \tis \tdiagnosed with \tBruton \tsyndrome \t(X-linked agammaglobulinemia) that manifests itself as \tsevere \tclinical \tcourse \tof \tbacterial infections and absence of B lymphocytes and \tplasma \tcells. \tWhat \tchanges \tof immunoglobulin content can be observed in blood serum of the child with immunodefi- ciency?",
+      "correct": 0,
+      "answers": [
+        "Decreased IgA, IgM",
+        "Increased IgA, IgM",
+        "Decreased IgD, IgE",
+        "Increased IgD, IgE",
+        "No changes"
+      ]
+    },
+    {
+      "number": 121,
+      "question": "During the skill-building session in mi- crobiology the students need to stain the prepared and fixed sputum smears obtained form a tuberculosis patient. What staining technique should be used in this case?",
+      "correct": 0,
+      "answers": [
+        "Ziehl-Neelsen",
+        "Burry",
+        "Giemsa",
+        "Gins",
+        "Gram"
+      ]
+    },
+    {
+      "number": 122,
+      "question": "A \twoman \twith \thypophyseal \tdi- abetes insipidus developed a water-mineral imbalance. \tWhat \ttype \tof \twater-mineral imbalance develops in such cases?",
+      "correct": 0,
+      "answers": [
+        "Hyperosmolar dehydration",
+        "Hypoosmolar dehydration",
+        "Isoosmolar dehydration",
+        "Hypoosmolar hyperhydration",
+        "Hyperosmolar hyperhydration"
+      ]
+    },
+    {
+      "number": 123,
+      "question": "First-year schoolchildren have received tuberculin skin test (Mantoux test) at the school nurse’s office. The purpose of this test was:",
+      "correct": 0,
+      "answers": [
+        "To determine the children that need to receive BCG vaccination",
+        "To \tpreventively \tvaccinate \tagainst tuberculosis",
+        "To \tmeasure \timmunity \tstress \ttoward diphtheria",
+        "To \tmeasure \tallergization \trate \ttoward rickettsia",
+        "To detect parotitis in the schoolchildren"
+      ]
+    },
+    {
+      "number": 124,
+      "question": "In an experiment it is necessary to assess neuromotor and muscle excitability. What value shoud be measured to make the assessment?",
+      "correct": 0,
+      "answers": [
+        "Sensory threshold",
+        "Action potential amplitude",
+        "Resting potential",
+        "Threshold potential",
+        "Action potential duration"
+      ]
+    },
+    {
+      "number": 125,
+      "question": "Vestibular receptors of semicircular canals of a test animal have been destroyed. What reflexes will disappear as a result?",
+      "correct": 0,
+      "answers": [
+        "Statokinetic \treflex \tduring \tmovements with angular acceleration",
+        "Statokinetic \treflex \tduring \tmovements with linear acceleration",
+        "Head-righting reflex",
+        "Body-righting reflex",
+        "Primary orienting reflex"
+      ]
+    },
+    {
+      "number": 126,
+      "question": "Acute renal impairment caused death of \ta \tpatient \twith \themorrhage. \tAutopsy revealed enlarged kidneys with broad pale pink cortical layer expressively demarcated from dark red renal pyramids. Macroscopic examination \trevealed \tlack \tof \tepitheli- al \tnuclei \tof \tthe \tconvoluted \ttubules, tubulorrhexis, phlebostasis. The cell nuclei of the choroid glomus and straight tubules were present. What pathology is it?",
+      "correct": 0,
+      "answers": [
+        "Necronephrosis",
+        "Infarction",
+        "Glomerulonephritis",
+        "Pyelonephritis",
+        "Nephrosis"
+      ]
+    },
+    {
+      "number": 127,
+      "question": "A boxer had sustained a blow to the left parotid area, after which he developed paralysis of the facial muscles on this side. What nerve had been damaged?",
+      "correct": 0,
+      "answers": [
+        "Facial",
+        "Ophthalmic",
+        "Maxillary",
+        "Mandibular",
+        "Lesser petrosal"
+      ]
+    },
+    {
+      "number": 128,
+      "question": "A patient has an open facial wound wi- th undermined edges; tissue necrosis with gradually developing partial gangrene that nearly reaches the bone tissue is observed. On close examination the wound contains live larvae. The patient is diagnosed with tissue myiasis. What Diptera larvae are the causative agents of this disease?",
+      "correct": 0,
+      "answers": [
+        "Wohlfahrtia magnifica",
+        "Glossina palpalis",
+        "Musca domestica",
+        "Phlebotomus pappatachi",
+        "Stomoxys calcitrans"
+      ]
+    },
+    {
+      "number": 129,
+      "question": "A \thereditary \tdisease \t- \thomocysti- nuria - is caused by disturbed transformati- on \tof \thomocysteine \tinto \tmethionine. Accumulated homocysteine forms its di- mer (homocystine) that can be found in uri- ne. What vitamin preparation can decrease homocysteine production?",
+      "correct": 0,
+      "answers": [
+        "Vitamin B12",
+        "Vitamin C",
+        "Vitamin B1",
+        "Vitamin B2",
+        "Vitamin P P"
+      ]
+    },
+    {
+      "number": 130,
+      "question": "During hypersensitivity skin test a pati- ent received an allergen subcutaneously, after \twhich \tthe \tpatient \tdeveloped \tskin redness, edema, and pain due to histami- ne action. This biogenic amine is produced as the result of the following transformation of histidine amino acid:",
+      "correct": 0,
+      "answers": [
+        "Decarboxylation",
+        "Methylation",
+        "Phosphorilation",
+        "Isomerization",
+        "Deaminization"
+      ]
+    },
+    {
+      "number": 131,
+      "question": "During the fight a man has received a strong blow to the upper anterior abdomi- nal wall, which resulted in the cardiac arrest. What mechanism has led to the cardiac arrest in this case?",
+      "correct": 0,
+      "answers": [
+        "Parasympathetic unconditioned",
+        "Sympathetic unconditioned",
+        "Parasympathetic conditioned",
+        "Sympathetic conditioned",
+        "Peripheral"
+      ]
+    },
+    {
+      "number": 132,
+      "question": "A woman has lost a lot of blood duri- ng the childbirth. Her blood group needs to be determined. Erythrocyte agglutination occurred with standard serums 0 (I) and А (II) and did not occur with standard serum B (III). What blood group does this woman have?",
+      "correct": 0,
+      "answers": [
+        "B (III)",
+        "0 (I)",
+        "А (II)",
+        "АВ (IV)",
+        "-"
+      ]
+    },
+    {
+      "number": 133,
+      "question": "A 60-year-old man diagnosed with chronic heart failure was brought to the hospital. After a long course of treatment the patient developed signs of intoxicati- on: dyspnea, extrasystole, nausea, and di- sturbed perception of colors. What medici- ne has caused such side-effects?",
+      "correct": 0,
+      "answers": [
+        "Digoxin",
+        "Anaprilin (Propranolol)",
+        "Nitroglycerine",
+        "Drotaverine",
+        "Furosemide"
+      ]
+    },
+    {
+      "number": 134,
+      "question": "A patient with exacerbated peptic ulcer disease of the stomach has made an appoi- ntment with the doctor. What type of drugs should be included in the complex therapy of this patient?",
+      "correct": 0,
+      "answers": [
+        "H2 antagonists",
+        "H1 antagonists",
+        "α-adrenergic antagonists",
+        "β-adrenergic antagonists",
+        "α-adrenergic agonists"
+      ]
+    },
+    {
+      "number": 135,
+      "question": "Autopsy of the body revealed waxy degeneration \tof \tthe \trectus \tabdominis muscles. In the terminal segment of the small intestine there are ulcers 3-5 cm in diameter. The ulcer walls are covered in a crumbling grayish-white substance. The ulcer edges are markedly raised above the mucosa. Widal test is positive. Make the di- agnosis:",
+      "correct": 0,
+      "answers": [
+        "Typhoid fever",
+        "Nonspecific ulcerative colitis",
+        "Relapsing fever",
+        "Crohn’s disease",
+        "Dysentery"
+      ]
+    },
+    {
+      "number": 136,
+      "question": "Genealogical analysis of a child with myotonic dystrophy determined that this di- sease is present in every generation, equally presented by the relatives of both genders, the risk of inheriting this disease is equal no matter which parent is affected. If one of the parents is heterozygous for this disease and the other parent is healthy, the risk of them giving birth to a sick child is 50%. What type of disease inheritance is it?",
+      "correct": 0,
+      "answers": [
+        "Autosomal dominant",
+        "Autosomal recessive",
+        "X-linked dominant",
+        "X-linked recessive",
+        "Y-linked"
+      ]
+    },
+    {
+      "number": 137,
+      "question": "A \t30-year-old \tman \thas \tundergone surgical removal of a thyroid tumor. Hi- stologically the tumor is made up of papi- llary structures varying in size that emerge from the inner surface of dilated cystic folli- cles and are covered with atypical epitheli- um. What is the most likely diagnosis?",
+      "correct": 0,
+      "answers": [
+        "Papillary carcinoma",
+        "Colloid nodular goiter",
+        "Macrofollicular adenoma",
+        "Follicular carcinoma",
+        "Medullary carcinoma"
+      ]
+    },
+    {
+      "number": 138,
+      "question": "A young woman, a foreign student from Tehran, has made an appointment with the urologist. She complains of the sensati- on of heaviness in her lower abdomen and a small amount of blood being excreted with urine at the end of each urination. Microscopy of urine detects the presence of parasite eggs, approximately 140х70 mi- cron in size, with a terminal spike. What diagnosis can be made by the infectious di- seases specialist?",
+      "correct": 0,
+      "answers": [
+        "Schistosomiasis",
+        "Opisthorchiasis",
+        "Dicroceliasis",
+        "Paragonimiasis",
+        "Fascioliasis"
+      ]
+    },
+    {
+      "number": 139,
+      "question": "Various biological preparations can be used \tfor poliomyelitis \tprevention. What drug induces the type of local intestinal mucosal immunity that lasts the longest?",
+      "correct": 0,
+      "answers": [
+        "Oral vaccination with live vaccine",
+        "Parenteral vaccination with inactivated vaccine",
+        "Oral introduction of poliovirus-specific immunoglobulin",
+        "Parenteral vaccination with live vaccine",
+        "Parenteral introduction of normal human immunoglobulin"
+      ]
+    },
+    {
+      "number": 140,
+      "question": "Histological analysis of a removed skin tumor shows clusters and bands composed of atypical stratified squamous epithelium cells that penetrate into the underlying ti- ssue. What preliminary diagnosis can be made?",
+      "correct": 0,
+      "answers": [
+        "Non-keratinizing \tsquamous \tcell \tcarci- noma",
+        "Solid cancer",
+        "Carcinoma in situ",
+        "Papilloma",
+        "Adenoma"
+      ]
+    },
+    {
+      "number": 141,
+      "question": "Autopsy of a patient, who died of bi- lateral bronchopneumonia, shows in the left lung lower lobe a cavity 5 cm in diameter, filled \twith \tyellowish-white \tliquid. \tWhat complication of the patient’s pneumonia had developed?",
+      "correct": 0,
+      "answers": [
+        "Abscess",
+        "Gangrene",
+        "Granuloma",
+        "Sequestrum",
+        "Tuberculoma"
+      ]
+    },
+    {
+      "number": 142,
+      "question": "A \tpatient \twith \tparkinsonism \twas prescribed levodopa, which led to rapid improvement \tof \tthe \tpatient’s \tcondition. What is the mechanism of action of this drug?",
+      "correct": 0,
+      "answers": [
+        "Stimulation of dopamine synthesis",
+        "Muscarinic \tacetylcholine \treceptor blockade",
+        "Stimulation of dopamine receptors",
+        "Anticholinesterase action",
+        "Muscarinic \tacetylcholine \treceptor \tsti- mulation"
+      ]
+    },
+    {
+      "number": 143,
+      "question": "A sick child presents with high content of phenyl pyruvate in urine (normally it is practically absent). Blood phenylalanine level is 350 mg/L (norm - 15 mg/L). What di- sease are these symptoms characteristic of?",
+      "correct": 0,
+      "answers": [
+        "Phenylketonuria",
+        "Albinism",
+        "Tyrosinosis",
+        "Alkaptonuria",
+        "Gout"
+      ]
+    },
+    {
+      "number": 144,
+      "question": "An oncology patient is to undergo a surgery on the descending colon. Name the main source of blood supply to this organ:",
+      "correct": 0,
+      "answers": [
+        "Inferior mesenteric artery",
+        "Superior mesenteric artery",
+        "Celiac trunk",
+        "Middle colic artery",
+        "Splenic artery"
+      ]
+    },
+    {
+      "number": 145,
+      "question": "A patient presents with enlarged cervi- cal lymph nodes. Other lymph nodes and internal organs are without changes. Peri- pheral blood test results are normal. Hi- stological examination of biopsy material taken from the cervical lymph node shows smoothed-out \tpattern, \tabsent \tfollicles, homogeneous cell composition represented by lymphoblasts. The cells penetrate into the lymph node capsule. What diagnosis can be made?",
+      "correct": 0,
+      "answers": [
+        "Lymphoblastic leukemia",
+        "Myeloblastic leukemia",
+        "Erythroblastic leukemia",
+        "Sezary disease",
+        "Burkitt lymphoma"
+      ]
+    },
+    {
+      "number": 146,
+      "question": "When studying the pulmonary venti- lation values, the reduction of forced expi- ratory volume has been detected. What is the likely cause of this phenomenon?",
+      "correct": 0,
+      "answers": [
+        "Obstructive pulmonary disease",
+        "Increase of respiratory volume",
+        "Increase of inspiratory reserve volume",
+        "Increase of pulmonary residual volume",
+        "Increase \tof \tfunctional \tresidual \tlung capacity"
+      ]
+    },
+    {
+      "number": 147,
+      "question": "A man is a carrier of HIV that is an RNA virus. The cells of this patient synthesize viral DNA. This process is based on:",
+      "correct": 0,
+      "answers": [
+        "Reverse transcription",
+        "Replication",
+        "Transcription",
+        "Repair",
+        "Translation"
+      ]
+    },
+    {
+      "number": 148,
+      "question": "Sanitary assessment of a pond, where the \tchildren \tfrom \ta \trecreation \tsummer camp take their swims, detected there oval cysts 50-60 micron in diameter, with 2 nuclei visible in their cytoplasm (macronucleus and micronucleus). What protozoa do these cysts belong to?",
+      "correct": 0,
+      "answers": [
+        "Balantidium",
+        "Lamblia",
+        "Toxoplasma",
+        "Amoeba",
+        "Euglena"
+      ]
+    },
+    {
+      "number": 149,
+      "question": "A hospital has received a 24-year-old man, who had received a penetrating wound to the eye, which has caused the vitreous body to run out. As the result of this, reti- nal detachment occurred. What retinal layer was tightly adherent to the vascular tunic of the eye and did not detach?",
+      "correct": 0,
+      "answers": [
+        "Retinal pigment epithelium",
+        "Layer of rods and cones",
+        "Ganglion cell layer",
+        "Outer nuclear layer",
+        "Inner nuclear layer"
+      ]
+    },
+    {
+      "number": 150,
+      "question": "A newborn presents with weak suckli- ng, \tfrequent \tvomiting, \tand \thypotonia. Blood and urine citrulline are very high. What metabolic process is disturbed?",
+      "correct": 0,
+      "answers": [
+        "Ornithine cycle",
+        "Tricarboxylic acid cycle",
+        "Glycolysis",
+        "Gluconeogenesis",
+        "Cori cycle"
+      ]
+    },
+    {
+      "number": 151,
+      "question": "Stool test detects in the patients feces a large amount of undigested fats.This patient is the most likely to have disturbed secreti- on of the following enzymes:",
+      "correct": 0,
+      "answers": [
+        "Pancreatic lipases",
+        "Pancreatic amylase",
+        "Pancreatic proteases",
+        "Bile lipase",
+        "Gastric protease"
+      ]
+    },
+    {
+      "number": 152,
+      "question": "A 19-year-old young man was exami- ned in the nephrology clinic. High calcium was detected in his secondary urine. What hormone is likely to cause such change, if it is produced in excess?",
+      "correct": 0,
+      "answers": [
+        "Aldosterone",
+        "Oxytocin",
+        "Adrenaline",
+        "Glucagon",
+        "Testosterone"
+      ]
+    },
+    {
+      "number": 153,
+      "question": "A \tyoung \twoman \tpresents \twith \ta tumor along the auditory nerve. The tumor is \tnode-shaped, \t3 \tcm \tin \tdiameter, \tsoft and elastic, pink-white colored, and has homogeneous \tstructure. \tMicroscopically the tumor contains bundles of cells with oval nuclei. These cellular fibrous bundles form regular structures made up of parallel rows of regularly oriented cells arranged in the form of a palisade with acellular homogeneous area in between (Verocay bodies). Name this type of tumor:",
+      "correct": 0,
+      "answers": [
+        "Neurinoma",
+        "Malignant neurinoma",
+        "Ganglioneuroma",
+        "Neuroblastoma",
+        "Ganglioneuroblastoma"
+      ]
+    },
+    {
+      "number": 154,
+      "question": "A \tpatient \thas \tundergone \tsurgical removal of the pylorus. Decreased secretion of the following hormone can be expected:",
+      "correct": 0,
+      "answers": [
+        "Gastrin",
+        "Histamine",
+        "Secretin",
+        "Cholecystokinin",
+        "Gastric inhibitory polypeptide"
+      ]
+    },
+    {
+      "number": 155,
+      "question": "An \telectron \tmicrograph \tshows \ta small vessel with endothelial layer but wi- thout basement membrane and pericytes; anchoring fibrils are present. Name this vessel:",
+      "correct": 0,
+      "answers": [
+        "Lymph capillary",
+        "Arteriole",
+        "Venule",
+        "Sinusoid hemocapillary",
+        "Visceral hemocapillary"
+      ]
+    },
+    {
+      "number": 156,
+      "question": "One of the causes of pernicious anemia is \tdisturbed \tsynthesis \tof \ttranscorrin \t- Castle’s intrinsic factor - by the parietal cells of the stomach. What substance is called Castle’s extrinsic factor?",
+      "correct": 0,
+      "answers": [
+        "Cobalamin",
+        "Folic acid",
+        "Pyridoxine",
+        "Riboflavin",
+        "Biotin"
+      ]
+    },
+    {
+      "number": 157,
+      "question": "A patient with contact dermatitis needs to be prescribed an antihistamine drug wi- thout somnolescent effect. Select this drug from the list:",
+      "correct": 0,
+      "answers": [
+        "Loratadine",
+        "Dimedrol (Benadryl)",
+        "Suprastin (Chloropyramine)",
+        "Diprazine (Promethazine)",
+        "Ranitidine"
+      ]
+    },
+    {
+      "number": 158,
+      "question": "Congenital pyruvate carboxylase defi- ciency causes physical and mental retardati- on in children and leads to early death. It is characterized by lactic acidemia, lactaci- duria, and a number of metabolic disorders. Among others, inhibition of the following occurs:",
+      "correct": 0,
+      "answers": [
+        "Citric acid cycle and gluconeogenesis",
+        "Glycolysis and glycogenolysis",
+        "Glycogenesis and glycogenolysis",
+        "Lipolysis and lipogenesis",
+        "Pentose-phosphate \tpathway \tand glycolysis"
+      ]
+    },
+    {
+      "number": 159,
+      "question": "A woman with enteritis accompani- ed by severe diarrhea presents with loss of water in the extracellular space, increased water content in the cells, and decreasing blood osmolarity. Name this type of water- electrolyte imbalance:",
+      "correct": 0,
+      "answers": [
+        "Hypoosmolar hypohydration",
+        "Hyperosmolar hyperhydration",
+        "Hyperosmolar hypohydration",
+        "Hypoosmolar hyperhydration",
+        "Isoosmolar hypohydration"
+      ]
+    },
+    {
+      "number": 160,
+      "question": "To stimulate the labor activity a parturi- ent \twoman \twas \tprescribed \ta \tdrug \t- \ta posterior pituitary hormone that does not affect the blood pressure. As the pregnancy progresses, the sensitivity to this hormone increases. Name the prescribed drug:",
+      "correct": 0,
+      "answers": [
+        "Oxytocin",
+        "Dinoprostone",
+        "Dinoprost",
+        "Pituitrin",
+        "Ergotal"
+      ]
+    },
+    {
+      "number": 161,
+      "question": "Cell membrane rest potential changed from -85 to -90 mV. It can be caused by activation of the following cell membrane channels:",
+      "correct": 0,
+      "answers": [
+        "Potassium",
+        "Sodium",
+        "Potassium and sodium",
+        "Calcium",
+        "Potassium and calcium"
+      ]
+    },
+    {
+      "number": 162,
+      "question": "Ionizing radiation or vitamin E defici- ency affect the cell by increasing lysosome membrane permeability. What are the possi- ble consequences of this pathology?",
+      "correct": 0,
+      "answers": [
+        "Partial or complete cell destruction",
+        "Intensive protein synthesis",
+        "Intensive energy production",
+        "Restoration of cytoplasmic membrane",
+        "Formation of maturation spindle"
+      ]
+    },
+    {
+      "number": 163,
+      "question": "A \tpatient \tis \tdiagnosed \twith glucocerebroside lipidosis \t(Gaucher’s \tdi- sease) that manifests as splenomegaly, li- ver enlargement, affected bone tissue, and neuropathies. What enzyme of complex li- pid catabolism is deficient, thus causing this disease?",
+      "correct": 0,
+      "answers": [
+        "Glucocerebrosidase",
+        "Hexosaminidase",
+        "Sphingomyelinase",
+        "β-galactosidase",
+        "Hyaluronidase"
+      ]
+    },
+    {
+      "number": 164,
+      "question": "A 3-year-old girl with mental retardati- on has been diagnosed with sphingomyelin lipidosis (Niemann-Pick disease). In this condition the synthesis of the following substance is disturbed:",
+      "correct": 0,
+      "answers": [
+        "Sphingomyelinase",
+        "Glycosyltransferase",
+        "Sphingosine",
+        "Ceramides",
+        "Gangliosides"
+      ]
+    },
+    {
+      "number": 165,
+      "question": "A traumatology unit has received a patient with a wrist trauma and a clinical presentation of the damage to the nerve that passes through the carpal tunnel. Name this nerve:",
+      "correct": 0,
+      "answers": [
+        "N. medianus",
+        "N. ulnaris",
+        "N. radialis",
+        "N. axillaris",
+        "N. musculocutaneus"
+      ]
+    },
+    {
+      "number": 166,
+      "question": "A patient, who has been taking β- adrenergic blockers, developed a bronchi- al spasm. What group of bronchodilators should be chosen to stop the bronchial spasm?",
+      "correct": 0,
+      "answers": [
+        "Myotropic antispasmodics",
+        "β-adrenergic blockers",
+        "Indirect adrenergic agonists",
+        "Muscarinic cholinomimetic agents",
+        "Cholinesterase inhibitors"
+      ]
+    },
+    {
+      "number": 167,
+      "question": "A man has an inguinal hernia. The hernial \tsac \texits \tthrough \tthe \tfollowing opening:",
+      "correct": 0,
+      "answers": [
+        "Anulus superficialis canalis inguinalis",
+        "Foramen suprapiriforme",
+        "Linea alba",
+        "Anulus profundus canalis inguinalis",
+        "Anulus femoralis"
+      ]
+    },
+    {
+      "number": 168,
+      "question": "After \ta \tnephrectomy \tthe \tpatient developed enteroparesis. What cholinergic agent with anticholinesterase action should be prescribed in this case?",
+      "correct": 0,
+      "answers": [
+        "Proserin",
+        "Carbacholine",
+        "Aceclidine",
+        "Pilocarpine",
+        "Acetylcholine"
+      ]
+    },
+    {
+      "number": 169,
+      "question": "Parenchyma of an organ is composed of pseudounipolar neurons localized under the capsule of connective tissue. Central place belongs to nerve fibers. Name this organ:",
+      "correct": 0,
+      "answers": [
+        "Spinal ganglion",
+        "Sympathetic ganglion",
+        "Intramural ganglion",
+        "Nerve trunk",
+        "Spinal cord"
+      ]
+    },
+    {
+      "number": 170,
+      "question": "An obstetrician-gynecologist measures pelvis size of a pregnant woman. A caliper was used to measure the distance between the two iliac crests. What measurement of large pelvis was made?",
+      "correct": 0,
+      "answers": [
+        "Distantia cristarum",
+        "Distantia throchanterica",
+        "Distantia spinarum",
+        "Conjugata vera",
+        "Conjugata anatomica"
+      ]
+    },
+    {
+      "number": 171,
+      "question": "Genetic recombination is achieved via several mechanisms. One such mechanism is crossingover. It occurs at the following stage of prophase in the first meiotic divisi- on:",
+      "correct": 0,
+      "answers": [
+        "Pachynema",
+        "Leptonema",
+        "Zygonema",
+        "Diplonema",
+        "Diakinesis"
+      ]
+    },
+    {
+      "number": 172,
+      "question": "ECG of the patient shows increased duration of the QRS complex. What is the most likely cause?",
+      "correct": 0,
+      "answers": [
+        "Increased period of ventricular excitation",
+        "Disturbed conduction in the atrioventri- cular node",
+        "Increased atrial excitability",
+        "Increased atrial and ventricular excitabili- ty",
+        "Increased period of atrial excitation"
+      ]
+    },
+    {
+      "number": 173,
+      "question": "A 50-year-old inpatient during exami- nation presents with glucosuria and blood glucose of 3.0 mmol/L, which are the most likely to be caused by:",
+      "correct": 0,
+      "answers": [
+        "Renal disorder",
+        "Diabetes insipidus",
+        "Myxedema",
+        "Essential hypertension",
+        "Pellagra"
+      ]
+    },
+    {
+      "number": 174,
+      "question": "A 40-year-old woman was diagnosed with glomerulonephritis based on her cli- nical symptoms and the results of urine analysis. Anamnesis states chronic tonsilli- tis. What microorganisms are the most likely cause for her kidney damage?",
+      "correct": 0,
+      "answers": [
+        "Streptococci",
+        "Staphylococci",
+        "Escherichia",
+        "Mycoplasma",
+        "Meningococci"
+      ]
+    },
+    {
+      "number": 175,
+      "question": "A \t7-year-old \tchild \tpresents \twith marked \tsigns \tof \themolytic \tanemia. \tBi- ochemical analysis of erythrocytes determi- ned \tlow \tconcentration \tof \tNADPH \tand reduced glutathione. What enzyme is defi- cient in this case leading to the biochemical changes and their clinical manifestations?",
+      "correct": 0,
+      "answers": [
+        "Glucose-6-phosphate dehydrogenase",
+        "Hexokinase",
+        "Fructokinase",
+        "Pyruvate kinase",
+        "Lactate dehydrogenase"
+      ]
+    },
+    {
+      "number": 176,
+      "question": "When \texamining \ta \tbiopsy \tmateri- al obtained from the thyroid gland, the pathologist \tdiscovered \tlymphocyte \tinfi- ltration of the thyroid tissues and destructi- on of the parenchymal elements. Diffuse lymphocyte infiltration with lymphoid folli- cles was detected in the stroma. What is the most likely diagnosis?",
+      "correct": 0,
+      "answers": [
+        "Hashimoto’s \tthyroiditis \t(chronic lymphocytic thyroiditis)",
+        "Papillary thyroid cancer",
+        "Undifferentiated thyroid carcinoma",
+        "Solid adenoma of the thyroid",
+        "Graves’ disease (toxic diffuse goiter)"
+      ]
+    },
+    {
+      "number": 177,
+      "question": "An 8-year-old girl presents with signs of disturbed twilight vision. This condition is caused by the deficiency of vitamin:",
+      "correct": 0,
+      "answers": [
+        "A",
+        "E",
+        "D",
+        "K",
+        "F"
+      ]
+    },
+    {
+      "number": 178,
+      "question": "A 25-year-old young man came to the doctor complaining of general weakness, rapid fatigability, irritability, reduced worki- ng ability, and bleeding gums. What vitamin is likely to be deficient in this case?",
+      "correct": 0,
+      "answers": [
+        "Ascorbic acid",
+        "Riboflavin",
+        "Thiamine",
+        "Retinol",
+        "Folic acid"
+      ]
+    },
+    {
+      "number": 179,
+      "question": "A 52-year-old man presents with fever and pain \tin \tthe \tjoints. \tBoth \tof his \tfi- rst metatarsophalangeal articulations are deformed, swollen, and reddened. Blood urea is high. The patient is diagnosed wi- th gout. What is the main developmental factor in the pathogenesis of this disease?",
+      "correct": 0,
+      "answers": [
+        "Hyperuricemy",
+        "Argininosuccinic aciduria",
+        "Hyperazotemia",
+        "Hyperaminoacidemia",
+        "Citrullinuria"
+      ]
+    },
+    {
+      "number": 180,
+      "question": "A person with the fourth blood group (genotype IAIB) has in erythrocytes both antigen \tA \tcontrolled \tby \tallele \tIA \tand antigen B \tcontrolled by allele \tIB. This phenomenon is an example of the following gene interaction:",
+      "correct": 0,
+      "answers": [
+        "Codominance",
+        "Complementarity",
+        "Semidominance",
+        "Polymery",
+        "Epistasis"
+      ]
+    },
+    {
+      "number": 181,
+      "question": "Vascular endothelium is characterized by high metabolic activity and synthesi- zes \tvasoactive substances. \tAmong these substances there is a potent vasodilator synthesized \tfrom \tL-arginine. \tName \tthis vasodilator:",
+      "correct": 0,
+      "answers": [
+        "Nitrogen oxide",
+        "Histamine",
+        "Bradykinin",
+        "Acetylcholine",
+        "Adrenaline"
+      ]
+    },
+    {
+      "number": 182,
+      "question": "A victim of a traffic accident was recei- ved by the intensive care unit. The patient is in a grave condition that can be characteri- zed as a severe pathologic process that leads to exhaustion of vital functions and puts the patient into the marginal state between life and death due to critical reduction of capi- llary circulation in the affected organs. The patient is in the state of:",
+      "correct": 0,
+      "answers": [
+        "Shock",
+        "Collapse",
+        "Coma",
+        "Agony",
+        "Preagony"
+      ]
+    },
+    {
+      "number": 183,
+      "question": "A person becomes less receptive to pain in physically or emotionally straining situations due to activation of:",
+      "correct": 0,
+      "answers": [
+        "Antinociceptive system",
+        "Thyroid gland functions",
+        "Nociceptive system",
+        "Adrenal glands functions",
+        "Parasympathetic nervous system"
+      ]
+    },
+    {
+      "number": 184,
+      "question": "A patient suffers from posttraumatic hemorrhage that resulted in development of hemorrhagic shock. What volume of ci- rculating blood was lost by the patient?",
+      "correct": 0,
+      "answers": [
+        "25-40%",
+        "40-50%",
+        "12-25%",
+        "50-75%",
+        "3-20%"
+      ]
+    },
+    {
+      "number": 185,
+      "question": "A patient with pulmonary tuberculosis is \tprescribed \tthe \tmost \teffective \tanti- tuberculous antibiotic. Name this drug:",
+      "correct": 0,
+      "answers": [
+        "Rifampicin",
+        "Tetracycline",
+        "Streptocide",
+        "Furasolidone",
+        "Bactrim (Co-trimoxazole)"
+      ]
+    },
+    {
+      "number": 186,
+      "question": "During surgery performed in abdomi- nal cavity a surgeon located the ligament of liver stretching from the anterior abdominal wall (navel) to the inferior surface of liver. What ligament is it?",
+      "correct": 0,
+      "answers": [
+        "Round ligament of the liver",
+        "Falciform ligament of the liver",
+        "Coronary ligament of the liver",
+        "Venous ligament of the liver",
+        "Triangular ligament of the liver"
+      ]
+    },
+    {
+      "number": 187,
+      "question": "A patient has disturbed blood supply to the anterior papillary muscle of the left ventricle. What cardiac artery supplies this muscle with blood?",
+      "correct": 0,
+      "answers": [
+        "Ramus interventricularis anterior",
+        "Ramus interventricularis posterior",
+        "A. coronaria dextra",
+        "Ramus circumflexus",
+        "Ramus marginalis"
+      ]
+    },
+    {
+      "number": 188,
+      "question": "Autopsy of the body of an elderly man revealed yellow spots and streaks in the aortic intima and white-yellow protruding plaques in the area of aortic bifurcation. Microscopy (with hematoxylin and eosin staining) shows round cavities in the thi- ckened aortic intima. The cavities color orange when stained with sudan 3 and are surrounded with overgrown connective ti- ssue. What process developed in the aortic intima?",
+      "correct": 0,
+      "answers": [
+        "Metabolic disorder of cholesterol and cholesterol ethers",
+        "Local hyalinosis",
+        "Metabolic disorder of neutral fat",
+        "Systemic hyalinosis",
+        "Secondary amyloidosis"
+      ]
+    },
+    {
+      "number": 189,
+      "question": "An 18-year-old patient has developed candidiasis after the case of pneumonia treated with β-lactam antibiotic. What anti- mycotic agent should be prescribed?",
+      "correct": 0,
+      "answers": [
+        "Fluconazole",
+        "Streptomycin",
+        "Ampicillin",
+        "Phthalylsulfathiazole",
+        "Trimethoprim/sulfamethoxazole \t(Bi- septol)"
+      ]
+    },
+    {
+      "number": 190,
+      "question": "Preventive vaccination against poli- omyelitis \tis \tmade \twith \tinactivated vaccine \tintroduced \tparenterally. \tWhat immunoglobulins \tcreate the postvaccinal immunity in this case?",
+      "correct": 0,
+      "answers": [
+        "IgM, IgG",
+        "IgG, secretory IgA",
+        "IgM, secretory IgA",
+        "Serum IgА, IgM",
+        "IgЕ, IgM"
+      ]
+    },
+    {
+      "number": 191,
+      "question": "During pregnancy a woman has been taking \tan \tantiepileptic \tdrug \t- \tsodium valproate. It resulted in her child developing a vertebral column malformation - spina bi- fida. Name the described effect of the drug:",
+      "correct": 0,
+      "answers": [
+        "Teratogenic effect",
+        "Immunosuppressive effect",
+        "Acquired tolerance",
+        "Dependence",
+        "Sensitizing effect"
+      ]
+    },
+    {
+      "number": 192,
+      "question": "A \tpatient \twas \tprescribed \tatropi- ne sulfate to treat intestinal colic. What concomitant disease can be a contraindi- cation for this drug?",
+      "correct": 0,
+      "answers": [
+        "Glaucoma",
+        "Bronchial asthma",
+        "Sinus bradycardia",
+        "Hypotension",
+        "Vertigo"
+      ]
+    },
+    {
+      "number": 193,
+      "question": "A patient has developed status epilepti- cus. What medicine should be used in this case to stop the seizures?",
+      "correct": 0,
+      "answers": [
+        "Diazepam",
+        "Cyclodol (Trihexyphenidyl)",
+        "Diprazine (Promethazine)",
+        "Sodium bromide",
+        "Valerian extract"
+      ]
+    },
+    {
+      "number": 194,
+      "question": "A \t48-year-old man \tis \tunconscious. He \thas \ta \thistory \tof \tseveral \tsyncopal episodes \twith \tconvulsions. \tECG \tshows deformed QRS complexes unconnected wi- th P waves, atrial contractions are approxi- mately 70/min., ventricular contractions - 25-30/min. Name the type of arrhythmia in this case:",
+      "correct": 0,
+      "answers": [
+        "Complete atrioventricular block",
+        "First-degree atrioventricular block",
+        "Second-degree atrioventricular block",
+        "Intraatrial block",
+        "Intraventricular block"
+      ]
+    },
+    {
+      "number": 195,
+      "question": "In human organism significant blood loss \tleads \tto \tdecreased \tblood \tpressure, tachycardia, and weakness. Eventually the sensation of thirst appears. What hormone participates \tin \tthe \tdevelopment \tof \tthis sensation?",
+      "correct": 0,
+      "answers": [
+        "Angiotensin 2",
+        "Cortisol",
+        "Serotonin",
+        "Dopamine",
+        "Adrenalin"
+      ]
+    },
+    {
+      "number": 196,
+      "question": "After a trauma the man has lost skin sensitivity \ton \tthe \tlateral surface \tof \this forearm. What nerve of the brachial plexus provides sensitivity of the affected area?",
+      "correct": 0,
+      "answers": [
+        "N. musculocutaneus",
+        "N. medianus",
+        "N. ulnaris",
+        "N. axillaris",
+        "N. radialis"
+      ]
+    },
+    {
+      "number": 197,
+      "question": "Autopsy \tof \ta \t50-year-old \twoman, who \thad \tbeen \tsuffering \tfrom \tsystemic connective \ttissue \tdisease, \treveals \tsmall dense \tkidneys \twith \tlumpy \tsurface. \tMi- croscopy \tof \tthe renal glomeruli \tdetects there \tfoci \tof \tfibrinoid \tnecrosis, \thyali- ne \tthrombi, \thematoxylin \tbodies, \tand so-called \t”wire \tloop \tthickening” \tof \tthe basement membranes. What disease can be characterized by such changes in the ki- dneys?",
+      "correct": 0,
+      "answers": [
+        "Systemic lupus erythematosus",
+        "Rheumatism",
+        "Scleroderma",
+        "Rheumatoid arthritis",
+        "Dermatomyositis"
+      ]
+    },
+    {
+      "number": 198,
+      "question": "A \t4-year-old \tchild \tpresents \twith numerous \tcarious \tcavities \tand \tyellow- colored teeth. The mother has a history of antibiotic treatment during her pregnancy. What antibiotic was the most likely taken by the child’s mother?",
+      "correct": 0,
+      "answers": [
+        "Doxycycline",
+        "Streptomycin sulfate",
+        "Ampicillin",
+        "Erythromycin",
+        "Cefazolin"
+      ]
+    },
+    {
+      "number": 199,
+      "question": "A patient developed pyoinflammatory process of periodontal tissues caused by activation of the microorganisms inherent in the body, which are a part of oral mucosal microflora. What type of infection is it?",
+      "correct": 0,
+      "answers": [
+        "Autoinfection",
+        "Exogenous infection",
+        "Reinfection",
+        "Superinfection",
+        "Relapse"
+      ]
+    },
+    {
+      "number": 200,
+      "question": "After a hand fracture the man has lost the ability to touch his little finger with the thumb on the affected hand. Examination of the palmar surface shows one of the palmar muscles to be atrophied. Name the affected muscle:",
+      "correct": 0,
+      "answers": [
+        "M. opponens policis",
+        "Mm. lumbricales",
+        "Mm. interossei",
+        "M. flexor digiti minimi",
+        "M. palmaris brevis"
+      ]
+    }
+  ]
+}
