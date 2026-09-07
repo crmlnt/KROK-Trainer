@@ -18,6 +18,8 @@ let examTimerInterval = null;
 let examTimeRemaining = 0;
 let aiUserAnswer = null;
 let aiExplanationLoaded = false;
+let practiceSessionConfirmedCount = 0;
+let isNormalPracticeSession = false;
 let selectedAnswerButton = null;
 let selectedAnswerIsCorrect = null;
 
@@ -595,6 +597,22 @@ function checkAnswer(button, isCorrect) {
   scoreText.textContent = `Score: ${score}`;
 
   nextBtn.style.display = "block";
+
+  if (isNormalPracticeSession && !examMode && !reviewMode) {
+    practiceSessionConfirmedCount++;
+    if (practiceSessionConfirmedCount === 5) {
+      const lastShown = localStorage.getItem("krokSupportPromptLastShown");
+      const now = Date.now();
+      const sevenDays = 7 * 24 * 60 * 60 * 1000;
+      if (!lastShown || (now - parseInt(lastShown, 10)) > sevenDays) {
+        const supportModal = document.getElementById("supportModal");
+        if (supportModal) {
+          supportModal.hidden = false;
+          localStorage.setItem("krokSupportPromptLastShown", now.toString());
+        }
+      }
+    }
+  }
 }
 
 function updateErrorLog() {
@@ -1825,6 +1843,9 @@ if (startPracticeBtn) {
     // Clear session errors
     sessionErrors = [];
     
+    isNormalPracticeSession = true;
+    practiceSessionConfirmedCount = 0;
+
     // Start session
     resetTrainer(true);
   });
@@ -1952,4 +1973,20 @@ if (customSelect && customSelectValue && customSelectOptions && hiddenSubjectSel
     hiddenSubjectSelect.value = targetOpt.dataset.value;
     targetOpt.scrollIntoView({ block: "nearest" });
   }
+}
+
+// --- Support Modal Handlers ---
+const supportModal = document.getElementById("supportModal");
+const supportModalCloseBtn = document.getElementById("supportModalCloseBtn");
+const supportModalDonateBtn = document.getElementById("supportModalDonateBtn");
+
+if (supportModalCloseBtn) {
+  supportModalCloseBtn.addEventListener("click", () => {
+    if (supportModal) supportModal.hidden = true;
+  });
+}
+if (supportModalDonateBtn) {
+  supportModalDonateBtn.addEventListener("click", () => {
+    if (supportModal) supportModal.hidden = true;
+  });
 }

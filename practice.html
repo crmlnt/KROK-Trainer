@@ -99,7 +99,19 @@
     </div> <!-- end practiceSessionUI -->
   </div></div>
 
-  <div id="questionNoteModal" class="question-note-modal" hidden>
+  
+  <div id="supportModal" class="support-modal-overlay" hidden>
+    <div class="support-modal-card" role="dialog" aria-modal="true" aria-labelledby="supportModalTitle">
+      <h3 id="supportModalTitle">Help keep KROK Trainer free 💙</h3>
+      <p>KROK Trainer is free and will stay free.<br>If it helps you study, you can support the project with a small donation.</p>
+      <div class="support-modal-actions">
+        <a href="https://buymeacoffee.com/crmlnt" target="_blank" rel="noopener noreferrer" class="support-primary-btn" id="supportModalDonateBtn">☕ Support KROK Trainer</a>
+        <button type="button" class="support-secondary-btn" id="supportModalCloseBtn">Continue for free</button>
+      </div>
+      <p class="support-friendly-msg">Not interested? Never mind &mdash; you can continue using KROK Trainer for free ^^</p>
+    </div>
+  </div>
+<div id="questionNoteModal" class="question-note-modal" hidden>
     <div class="question-note-dialog" role="dialog" aria-modal="true" aria-labelledby="questionNoteTitle">
       <div class="question-note-dialog-header"><h3 id="questionNoteTitle">Add note</h3><button class="question-note-close" type="button" data-close-question-note aria-label="Close note">×</button></div>
       <p id="questionNoteHelper" class="question-note-helper">Add a personal note to this question.</p>

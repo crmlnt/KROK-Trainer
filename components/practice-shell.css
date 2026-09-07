@@ -565,3 +565,101 @@ body.dark-mode .setup-subtitle {
   height: auto;
   display: block;
 }
+
+/* --- Support Modal --- */
+.support-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.support-modal-overlay[hidden] {
+  display: none;
+}
+.support-modal-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+body.dark-mode .support-modal-card {
+  background: #1e2329;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+.support-modal-card h3 {
+  margin: 0 0 16px 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+body.dark-mode .support-modal-card h3 {
+  color: #f8fafc;
+}
+.support-modal-card p {
+  margin: 0 0 24px 0;
+  font-size: 1rem;
+  color: #475569;
+  line-height: 1.5;
+}
+body.dark-mode .support-modal-card p {
+  color: #94a3b8;
+}
+.support-modal-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.support-primary-btn {
+  display: block;
+  background: #ffdd00;
+  color: #222;
+  padding: 14px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.support-primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0,0,0,.15);
+  color: #222;
+}
+.support-secondary-btn {
+  background: #ffffff;
+  color: #0f172a;
+  border: 1px solid #cbd5e1;
+  padding: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: background 0.2s, border-color 0.2s;
+}
+.support-secondary-btn:hover {
+  background: #f8fafc;
+  border-color: #94a3b8;
+}
+body.dark-mode .support-secondary-btn {
+  background: #1e2329;
+  color: #f8fafc;
+  border-color: #3f464e;
+}
+body.dark-mode .support-secondary-btn:hover {
+  background: #2a2e33;
+  border-color: #475569;
+}
+.support-friendly-msg {
+  margin: 0 !important;
+  font-size: 0.85rem !important;
+  color: #64748b !important;
+}
+body.dark-mode .support-friendly-msg {
+  color: #94a3b8 !important;
+}
