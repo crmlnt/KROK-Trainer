@@ -120,7 +120,7 @@
     </div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="supabase.js"></script><script src="app.js"></script><script src="exam-persistence.js"></script><script src="exam-subjects.js"></script><script src="components/practice-shell.js"></script><script src="components/question-notes.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="supabase.js"></script><script src="active-session.js"></script><script src="app.js"></script><script src="exam-persistence.js"></script><script src="exam-subjects.js"></script><script src="components/practice-shell.js"></script><script src="components/question-notes.js"></script>
   <script>
     const practiceSidebar=document.getElementById("appSidebar"),practiceBreadcrumb=document.getElementById("appBreadcrumb"),practiceParams=new URLSearchParams(window.location.search),isKrok2=practiceParams.get("exam")==="krok2",isExamMode=practiceParams.get("mode")==="exam";
     if(practiceSidebar)practiceSidebar.dataset.active=isKrok2?(isExamMode?"krok2-exam":"krok2-practice"):(isExamMode?"krok1-exam":"krok1-practice");

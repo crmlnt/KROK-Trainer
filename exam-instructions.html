@@ -106,6 +106,8 @@
     document.getElementById("examTime").textContent = `${count} minutes`;
 
     startExamNowBtn.addEventListener("click", () => {
+      const krok = examType === "krok2" ? "krok2" : "krok1";
+      localStorage.removeItem(`${krok}_active_exam`);
       const nextParams = new URLSearchParams();
       nextParams.set("mode", "exam");
       nextParams.set("year", year);
@@ -137,6 +139,8 @@
     document.getElementById("examTime").textContent = `${questions} minutes`;
 
     startExamNowBtn.addEventListener("click", () => {
+      const krok = examType === "krok2" ? "krok2" : "krok1";
+      localStorage.removeItem(`${krok}_active_exam`);
       const nextParams = new URLSearchParams();
       nextParams.set("mode", "exam");
       nextParams.set("topic", topic);

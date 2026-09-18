@@ -20,6 +20,8 @@ let aiUserAnswer = null;
 let aiExplanationLoaded = false;
 let practiceSessionConfirmedCount = 0;
 let isNormalPracticeSession = false;
+window.activeSessionExpiresAt = null;
+window.restoredCurrentOptions = null;
 let selectedAnswerButton = null;
 let selectedAnswerIsCorrect = null;
 
@@ -178,6 +180,10 @@ async function loadQuestions() {
       [...new Set(allQuestions.map(q => q.subject))]
     );
     populateSubjectFilter();
+  }
+
+  if (typeof restoreActiveSession !== "undefined" && restoreActiveSession()) {
+    return;
   }
 
   if (params.get("mode") === "exam") {
@@ -380,7 +386,12 @@ const confirmAnswerBtn =
     };
   });
 
-  shuffledAnswers.sort(() => Math.random() - 0.5);
+  if (window.restoredCurrentOptions) {
+    shuffledAnswers.sort((a, b) => window.restoredCurrentOptions.indexOf(a.text) - window.restoredCurrentOptions.indexOf(b.text));
+    window.restoredCurrentOptions = null;
+  } else {
+    shuffledAnswers.sort(() => Math.random() - 0.5);
+  }
 
   shuffledAnswers.forEach((answer) => {
     const button = document.createElement("button");
@@ -416,13 +427,22 @@ const confirmAnswerBtn =
   updateProgressBar();
 }
 
-function startExamTimer(questionCount) {
+function startExamTimer(questionCount, isRestore = false) {
   console.log("TIMER STARTED", questionCount);
 
-  // 1 minute per question
-  examTimeRemaining = questionCount * 60;
+  if (!isRestore) {
+    examTimeRemaining = questionCount * 60;
+    window.activeSessionExpiresAt = Date.now() + examTimeRemaining * 1000;
+  }
 
   examTimer.style.display = "block";
+
+  if (examTimeRemaining <= 0) {
+    examTimeRemaining = 0;
+    updateExamTimerDisplay();
+    finishExamByTimer();
+    return;
+  }
 
   updateExamTimerDisplay();
 
@@ -431,19 +451,14 @@ function startExamTimer(questionCount) {
   }
 
   examTimerInterval = setInterval(() => {
-
     examTimeRemaining--;
-
     updateExamTimerDisplay();
-
     if (examTimeRemaining <= 0) {
       examTimeRemaining = 0;
       clearInterval(examTimerInterval);
       examTimerInterval = null;
-
       finishExamByTimer();
     }
-
   }, 1000);
 }
 
@@ -543,6 +558,7 @@ function checkAnswer(button, isCorrect) {
 
     // Allow user to continue
     nextBtn.style.display = "block";
+    if (typeof ActiveSession !== "undefined") ActiveSession.save();
 
     return;
   }
@@ -622,6 +638,8 @@ function checkAnswer(button, isCorrect) {
   scoreText.textContent = `Score: ${score}`;
 
   nextBtn.style.display = "block";
+
+  if (typeof ActiveSession !== "undefined") ActiveSession.save();
 
   if (isNormalPracticeSession && !examMode && !reviewMode) {
     practiceSessionConfirmedCount++;
@@ -1165,6 +1183,7 @@ function resetTrainer(fromSetup = false) {
 
   if (questions.length > 0) {
     showQuestion();
+    if (typeof ActiveSession !== "undefined") ActiveSession.save();
   } else {
     questionText.textContent = "No questions found for this subject.";
     questionNumber.textContent = "";
@@ -1577,7 +1596,9 @@ nextBtn.addEventListener("click", () => {
 
   if (currentQuestionIndex < questions.length) {
     showQuestion();
+    if (typeof ActiveSession !== "undefined") ActiveSession.save();
   } else {
+    if (typeof ActiveSession !== "undefined") ActiveSession.clear();
     if (examMode) {
       questionText.textContent = "";
       questionNumber.textContent = "";
@@ -2012,3 +2033,83 @@ if (supportModalDonateBtn) {
     if (supportModal) supportModal.hidden = true;
   });
 }
+
+function restoreActiveSession() {
+  if (typeof ActiveSession === "undefined") return false;
+  const state = ActiveSession.load();
+  if (!state) return false;
+  
+  const restoredQuestions = [];
+  for (const id of state.questionsIds) {
+    const q = allQuestions.find(aq => (aq.id || aq.question) == id);
+    if (q) restoredQuestions.push(q);
+  }
+  if (restoredQuestions.length === 0) return false;
+  
+  questions = restoredQuestions;
+  currentQuestionIndex = state.currentQuestionIndex || 0;
+  score = state.score || 0;
+  correctAnswers = state.correctAnswers || 0;
+  wrongAnswers = state.wrongAnswers || 0;
+  sessionLength = state.sessionLength || "unlimited";
+  isNormalPracticeSession = !!state.isNormalPracticeSession;
+  practiceSessionConfirmedCount = state.practiceSessionConfirmedCount || 0;
+  sessionErrors = state.sessionErrors || [];
+  examSessionLog = state.examSessionLog || [];
+  
+  if (state.mode === "exam") {
+    examMode = true;
+    if (state.expiresAt) {
+      window.activeSessionExpiresAt = state.expiresAt;
+      const elapsed = Math.floor((state.expiresAt - Date.now()) / 1000);
+      examTimeRemaining = elapsed > 0 ? elapsed : 0;
+    }
+    document.getElementById("practice-tools").style.display = "none";
+  } else {
+    document.getElementById("practiceSessionUI").style.display = "block";
+    const setupUI = document.getElementById("practiceSetupUI");
+    if (setupUI) setupUI.hidden = true;
+  }
+  
+  window.restoredCurrentOptions = state.currentOptionsOrder;
+  showQuestion();
+  
+  if (state.answered) {
+     answered = true;
+     aiUserAnswer = state.aiUserAnswer;
+     const allBtns = Array.from(document.querySelectorAll(".answer-btn"));
+     const userBtn = allBtns.find(b => b.textContent === aiUserAnswer);
+     const currentQ = questions[currentQuestionIndex];
+     const correctText = currentQ.answers[currentQ.correct];
+     
+     if (examMode) {
+        if (userBtn) userBtn.classList.add("selected");
+        nextBtn.style.display = "block";
+     } else {
+        const isCorrect = aiUserAnswer === correctText;
+        if (userBtn) userBtn.classList.add(isCorrect ? "correct" : "wrong");
+        allBtns.forEach(b => {
+           if (b.textContent === correctText) b.classList.add("correct");
+        });
+        feedback.textContent = isCorrect ? "Correct!" : "Wrong!";
+        scoreText.textContent = `Score: ${score}`;
+        nextBtn.style.display = "block";
+        const aiExplainBtn = document.getElementById("aiExplainBtn");
+        if (aiExplainBtn) aiExplainBtn.style.display = "inline-flex";
+     }
+  }
+  
+  if (examMode) {
+      startExamTimer(questions.length, true);
+      updateStats();
+  } else {
+      updateStats();
+      scoreText.textContent = `Score: ${score}`;
+  }
+  
+  return true;
+}
+
+window.addEventListener("pagehide", () => {
+  if (typeof ActiveSession !== "undefined") ActiveSession.save();
+});
