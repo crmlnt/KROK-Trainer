@@ -54,7 +54,7 @@
       </div>
       <button id="sidebarKrokCollapsedBtn" class="sidebar-krok-collapsed-btn" type="button" aria-label="Open KROK menu" title="KROK">K</button>
       <div class="sidebar-section"><span class="sidebar-section-title">My Account</span>${link("account", "account.html", "Account", "user")}${link("history", "history/history.html", "Exam History", "history")}${link("statistics", "statistics/statistics.html", "Statistics", "stats")}${link("notes", "notes/index.html", "My Notes", "notes")}</div>
-      <div class="sidebar-section"><span class="sidebar-section-title">Resources</span>${link("tutorial", "guide.html", "Tutorial", "tutorial")}${link("news", "news.html", "News / Updates", "news")}</div>
+      <div class="sidebar-section"><span class="sidebar-section-title">Resources</span>${link("tutorial", "guide.html", "Tutorial", "tutorial")}${link("news", "news/index.html", "News & Articles", "news")}</div>
     </div>
     <div class="sidebar-footer"><button id="sidebarThemeBtn" class="sidebar-theme-btn" type="button"><span id="sidebarThemeIcon" class="sidebar-icon"></span><span id="sidebarThemeLabel" class="sidebar-theme-label">Dark Mode</span></button><a id="sidebarUser" class="sidebar-user" href="${root}account.html"><span class="sidebar-status-dot" aria-hidden="true"></span><span class="sidebar-user-copy"><strong id="sidebarUserEmail">Not signed in</strong><span id="sidebarUserStatus">Sign in →</span></span></a></div>`;
 
