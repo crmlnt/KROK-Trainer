@@ -1,0 +1,2079 @@
+[
+  {
+    "id": "lung",
+    "term": "lung",
+    "aliases": [
+      "lungs"
+    ],
+    "category": "respiratory",
+    "sourceRefs": {
+      "ta98": "A06.5.01.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "uterus",
+    "term": "uterus",
+    "aliases": [],
+    "category": "reproductive",
+    "sourceRefs": {
+      "ta98": "A09.1.03.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "spleen",
+    "term": "spleen",
+    "aliases": [],
+    "category": "lymphatic_and_immune",
+    "sourceRefs": {
+      "ta98": "A13.2.01.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "thyroid_gland",
+    "term": "thyroid gland",
+    "aliases": [],
+    "category": "endocrine",
+    "sourceRefs": {
+      "ta98": "A11.3.00.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "right_lung",
+    "term": "right lung",
+    "aliases": [],
+    "category": "respiratory",
+    "sourceRefs": {
+      "ta98": "A06.5.01.002"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "left_lung",
+    "term": "left lung",
+    "aliases": [],
+    "category": "respiratory",
+    "sourceRefs": {
+      "ta98": "A06.5.01.003"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "breast",
+    "term": "breast",
+    "aliases": [
+      "mammary gland",
+      "mammary glands",
+      "breasts"
+    ],
+    "category": "integumentary",
+    "sourceRefs": {
+      "ta98": "A16.0.02.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "colon",
+    "term": "colon",
+    "aliases": [],
+    "category": "gastrointestinal",
+    "sourceRefs": {
+      "ta98": "A05.7.03.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "thigh",
+    "term": "thigh",
+    "aliases": [],
+    "category": "musculoskeletal",
+    "sourceRefs": {
+      "ta98": "A01.1.00.035"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "lymph_node",
+    "term": "lymph node",
+    "aliases": [
+      "lymph nodes",
+      "regional lymph nodes",
+      "regional lymph node"
+    ],
+    "category": "lymphatic_and_immune",
+    "sourceRefs": {
+      "ta98": "A13.2.03.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "myocardium",
+    "term": "myocardium",
+    "aliases": [],
+    "category": "cardiovascular",
+    "sourceRefs": {
+      "ta98": "A12.1.06.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "bone_marrow",
+    "term": "bone marrow",
+    "aliases": [
+      "red bone marrow"
+    ],
+    "category": "lymphatic_and_immune",
+    "sourceRefs": {
+      "ta98": "A13.1.01.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "spinal_cord",
+    "term": "spinal cord",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A14.1.02.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "cerebral_cortex",
+    "term": "cerebral cortex",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A14.1.09.301"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "aorta",
+    "term": "aorta",
+    "aliases": [],
+    "category": "cardiovascular",
+    "sourceRefs": {
+      "ta98": "A12.2.02.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "thymus",
+    "term": "thymus",
+    "aliases": [],
+    "category": "lymphatic_and_immune",
+    "sourceRefs": {
+      "ta98": "A13.1.02.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "vagina",
+    "term": "vagina",
+    "aliases": [],
+    "category": "reproductive",
+    "sourceRefs": {
+      "ta98": "A09.1.04.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "cerebellum",
+    "term": "cerebellum",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A14.1.07.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "knee_joint",
+    "term": "knee joint",
+    "aliases": [],
+    "category": "musculoskeletal",
+    "sourceRefs": {
+      "ta98": "A03.6.08.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "ovary",
+    "term": "ovary",
+    "aliases": [
+      "ovaries"
+    ],
+    "category": "reproductive",
+    "sourceRefs": {
+      "ta98": "A09.1.01.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "pleural_cavity",
+    "term": "pleural cavity",
+    "aliases": [],
+    "category": "respiratory",
+    "sourceRefs": {
+      "ta98": "A07.1.01.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "uterine_cavity",
+    "term": "uterine cavity",
+    "aliases": [],
+    "category": "reproductive",
+    "sourceRefs": {
+      "ta98": "A09.1.03.007"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "sigmoid_colon",
+    "term": "sigmoid colon",
+    "aliases": [],
+    "category": "gastrointestinal",
+    "sourceRefs": {
+      "ta98": "A05.7.03.007"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "urinary_bladder",
+    "term": "urinary bladder",
+    "aliases": [],
+    "category": "genitourinary",
+    "sourceRefs": {
+      "ta98": "A08.3.01.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "substantia_nigra",
+    "term": "substantia nigra",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A14.1.06.111"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "left_ventricle",
+    "term": "left ventricle",
+    "aliases": [],
+    "category": "cardiovascular",
+    "sourceRefs": {
+      "ta98": "A12.1.04.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "right_ventricle",
+    "term": "right ventricle",
+    "aliases": [],
+    "category": "cardiovascular",
+    "sourceRefs": {
+      "ta98": "A12.1.02.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "small_intestine",
+    "term": "small intestine",
+    "aliases": [],
+    "category": "gastrointestinal",
+    "sourceRefs": {
+      "ta98": "A05.6.01.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "nervous_system",
+    "term": "nervous system",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A14.0.00.000"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "central_nervous_system",
+    "term": "central nervous system",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A14.1.00.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "peripheral_nervous_system",
+    "term": "peripheral nervous system",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A14.2.00.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "cerebrospinal_fluid",
+    "term": "cerebrospinal fluid",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A14.1.01.203"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "lumbar_region",
+    "term": "lumbar region",
+    "aliases": [],
+    "category": "musculoskeletal",
+    "sourceRefs": {
+      "ta98": "A01.2.05.008"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "atrioventricular_node",
+    "term": "atrioventricular node",
+    "aliases": [],
+    "category": "cardiovascular",
+    "sourceRefs": {
+      "ta98": "A12.1.06.004"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "sinoatrial_node",
+    "term": "sinoatrial node",
+    "aliases": [],
+    "category": "cardiovascular",
+    "sourceRefs": {
+      "ta98": "A12.1.06.002"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "mitral_valve",
+    "term": "mitral valve",
+    "aliases": [],
+    "category": "cardiovascular",
+    "sourceRefs": {
+      "ta98": "A12.1.04.003"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "medulla_oblongata",
+    "term": "medulla oblongata",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A14.1.03.003"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "pancreatic_islets",
+    "term": "pancreatic islets",
+    "aliases": [
+      "islets of langerhans",
+      "islets of Langerhans"
+    ],
+    "category": "endocrine",
+    "sourceRefs": {
+      "ta98": "A05.9.01.019"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "glomerular_capsule",
+    "term": "glomerular capsule",
+    "aliases": [
+      "bowman's capsule",
+      "bowman’s capsule",
+      "capsule of bowman"
+    ],
+    "category": "genitourinary",
+    "sourceRefs": {
+      "ta98": "A08.1.01.017"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "lip",
+    "term": "lip",
+    "aliases": [
+      "lips"
+    ],
+    "category": "gastrointestinal",
+    "sourceRefs": {
+      "ta98": "A05.1.01.005"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "pancreas",
+    "term": "pancreas",
+    "aliases": [],
+    "category": "gastrointestinal",
+    "sourceRefs": {
+      "ta98": "A05.9.01.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "abdominal_cavity",
+    "term": "abdominal cavity",
+    "aliases": [],
+    "category": "gastrointestinal",
+    "sourceRefs": {
+      "ta98": "A01.1.00.051"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "forearm",
+    "term": "forearm",
+    "aliases": [],
+    "category": "musculoskeletal",
+    "sourceRefs": {
+      "ta98": "A01.1.00.024"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "thorax",
+    "term": "thorax",
+    "aliases": [],
+    "category": "musculoskeletal",
+    "sourceRefs": {
+      "ta98": "A01.1.00.014"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "hypothalamus",
+    "term": "hypothalamus",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A14.1.08.401"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "gallbladder",
+    "term": "gallbladder",
+    "aliases": [],
+    "category": "gastrointestinal",
+    "sourceRefs": {
+      "ta98": "A05.8.02.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "tooth",
+    "term": "tooth",
+    "aliases": [
+      "teeth"
+    ],
+    "category": "gastrointestinal",
+    "sourceRefs": {
+      "ta98": "A05.1.03.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "trachea",
+    "term": "trachea",
+    "aliases": [],
+    "category": "respiratory",
+    "sourceRefs": {
+      "ta98": "A06.3.01.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "mediastinum",
+    "term": "mediastinum",
+    "aliases": [],
+    "category": "respiratory",
+    "sourceRefs": {
+      "ta98": "A07.1.02.101"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "pubis",
+    "term": "pubis",
+    "aliases": [],
+    "category": "musculoskeletal",
+    "sourceRefs": {
+      "ta98": "A02.5.01.301"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "pupil",
+    "term": "pupil",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A15.2.03.028"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "sclera",
+    "term": "sclera",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A15.2.02.002"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "bronchus",
+    "term": "bronchus",
+    "aliases": [
+      "bronchi"
+    ],
+    "category": "respiratory",
+    "sourceRefs": {
+      "ta98": "A06.4.01.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "pharynx",
+    "term": "pharynx",
+    "aliases": [],
+    "category": "gastrointestinal",
+    "sourceRefs": {
+      "ta98": "A05.3.01.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "intercostal_space",
+    "term": "intercostal space",
+    "aliases": [],
+    "category": "musculoskeletal",
+    "sourceRefs": {
+      "ta98": "A02.3.04.007"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "scapula",
+    "term": "scapula",
+    "aliases": [],
+    "category": "musculoskeletal",
+    "sourceRefs": {
+      "ta98": "A02.4.01.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "duodenum",
+    "term": "duodenum",
+    "aliases": [],
+    "category": "gastrointestinal",
+    "sourceRefs": {
+      "ta98": "A05.6.02.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "toe",
+    "term": "toe",
+    "aliases": [
+      "toes"
+    ],
+    "category": "musculoskeletal",
+    "sourceRefs": {
+      "ta98": "A01.1.00.046"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "pleura",
+    "term": "pleura",
+    "aliases": [],
+    "category": "respiratory",
+    "sourceRefs": {
+      "ta98": "A07.1.02.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "peritoneum",
+    "term": "peritoneum",
+    "aliases": [],
+    "category": "gastrointestinal",
+    "sourceRefs": {
+      "ta98": "A10.1.02.002"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "sternum",
+    "term": "sternum",
+    "aliases": [],
+    "category": "musculoskeletal",
+    "sourceRefs": {
+      "ta98": "A02.3.03.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "lesser_pelvis",
+    "term": "lesser pelvis",
+    "aliases": [],
+    "category": "musculoskeletal",
+    "sourceRefs": {
+      "ta98": "A02.5.02.006"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "vestibular_nucleus",
+    "term": "vestibular nucleus",
+    "aliases": [
+      "vestibular nuclei"
+    ],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A14.1.04.242"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "palate",
+    "term": "palate",
+    "aliases": [],
+    "category": "gastrointestinal",
+    "sourceRefs": {
+      "ta98": "A05.1.01.102"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "large_intestine",
+    "term": "large intestine",
+    "aliases": [],
+    "category": "gastrointestinal",
+    "sourceRefs": {
+      "ta98": "A05.7.01.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "epidermis",
+    "term": "epidermis",
+    "aliases": [],
+    "category": "integumentary",
+    "sourceRefs": {
+      "ta98": "A16.0.00.009"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "prostate",
+    "term": "prostate",
+    "aliases": [],
+    "category": "reproductive",
+    "sourceRefs": {
+      "ta98": "A09.3.08.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "costal_arch",
+    "term": "costal arch",
+    "aliases": [
+      "costal margin"
+    ],
+    "category": "musculoskeletal",
+    "sourceRefs": {
+      "ta98": "A02.3.04.006"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "nipple",
+    "term": "nipple",
+    "aliases": [],
+    "category": "integumentary",
+    "sourceRefs": {
+      "ta98": "A16.0.02.004"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "mesencephalon",
+    "term": "mesencephalon",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A14.1.03.005"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "occipital_region",
+    "term": "occipital region",
+    "aliases": [],
+    "category": "musculoskeletal",
+    "sourceRefs": {
+      "ta98": "A01.2.01.004"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "rectum",
+    "term": "rectum",
+    "aliases": [],
+    "category": "gastrointestinal",
+    "sourceRefs": {
+      "ta98": "A05.7.04.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "cervical_canal",
+    "term": "cervical canal",
+    "aliases": [],
+    "category": "reproductive",
+    "sourceRefs": {
+      "ta98": "A09.1.03.018"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "reticular_formation",
+    "term": "reticular formation",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A14.1.00.021"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "supramarginal_gyrus",
+    "term": "supramarginal gyrus",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A14.1.09.131"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "superior_parietal_lobule",
+    "term": "superior parietal lobule",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A14.1.09.130"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "angular_gyrus",
+    "term": "angular gyrus",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A14.1.09.124"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "brainstem",
+    "term": "brainstem",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A14.1.03.009"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "postcentral_gyrus",
+    "term": "postcentral gyrus",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A14.1.09.128"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "ankle",
+    "term": "ankle",
+    "aliases": [],
+    "category": "musculoskeletal",
+    "sourceRefs": {
+      "ta98": "A01.1.00.041"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "oral_cavity",
+    "term": "oral cavity",
+    "aliases": [],
+    "category": "gastrointestinal",
+    "sourceRefs": {
+      "ta98": "A05.1.01.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "femur",
+    "term": "femur",
+    "aliases": [],
+    "category": "musculoskeletal",
+    "sourceRefs": {
+      "ta98": "A02.5.04.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "cornea",
+    "term": "cornea",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A15.2.02.012"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "hypochondrium",
+    "term": "hypochondrium",
+    "aliases": [],
+    "category": "musculoskeletal",
+    "sourceRefs": {
+      "ta98": "A01.2.04.002"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "inguinal_lymph_node",
+    "term": "inguinal lymph node",
+    "aliases": [
+      "inguinal lymph nodes"
+    ],
+    "category": "lymphatic_and_immune",
+    "sourceRefs": {
+      "ta98": "A13.3.05.002"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "bile_duct",
+    "term": "bile duct",
+    "aliases": [],
+    "category": "gastrointestinal",
+    "sourceRefs": {
+      "ta98": "A05.8.02.013"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "precentral_gyrus",
+    "term": "precentral gyrus",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A14.1.09.119"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "red_nucleus",
+    "term": "red nucleus",
+    "aliases": [
+      "red nuclei"
+    ],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A14.1.06.323"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "middle_ear",
+    "term": "middle ear",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A15.3.02.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "humerus",
+    "term": "humerus",
+    "aliases": [],
+    "category": "musculoskeletal",
+    "sourceRefs": {
+      "ta98": "A02.4.04.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "retina",
+    "term": "retina",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A15.2.04.002"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "renal_pelvis",
+    "term": "renal pelvis",
+    "aliases": [],
+    "category": "genitourinary",
+    "sourceRefs": {
+      "ta98": "A08.1.05.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "eyeball",
+    "term": "eyeball",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A15.2.01.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "interventricular_septum",
+    "term": "interventricular septum",
+    "aliases": [],
+    "category": "cardiovascular",
+    "sourceRefs": {
+      "ta98": "A12.1.00.013"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "femoral_artery",
+    "term": "femoral artery",
+    "aliases": [],
+    "category": "cardiovascular",
+    "sourceRefs": {
+      "ta98": "A12.2.16.010"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "ureter",
+    "term": "ureter",
+    "aliases": [],
+    "category": "genitourinary",
+    "sourceRefs": {
+      "ta98": "A08.2.01.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "pelvic_inlet",
+    "term": "pelvic inlet",
+    "aliases": [],
+    "category": "musculoskeletal",
+    "sourceRefs": {
+      "ta98": "A02.5.02.008"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "occipital_lobe",
+    "term": "occipital lobe",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A14.1.09.132"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "parathyroid_gland",
+    "term": "parathyroid gland",
+    "aliases": [],
+    "category": "endocrine",
+    "sourceRefs": {
+      "ta98": "A11.4.00.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "vertebral_column",
+    "term": "vertebral column",
+    "aliases": [],
+    "category": "musculoskeletal",
+    "sourceRefs": {
+      "ta98": "A02.2.00.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "optic_nerve",
+    "term": "optic nerve",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A15.2.04.024"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "adrenal_gland",
+    "term": "adrenal gland",
+    "aliases": [],
+    "category": "endocrine",
+    "sourceRefs": {
+      "ta98": "A11.5.00.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "buttock",
+    "term": "buttock",
+    "aliases": [
+      "buttocks"
+    ],
+    "category": "musculoskeletal",
+    "sourceRefs": {
+      "ta98": "A01.1.00.033"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "pelvic_outlet",
+    "term": "pelvic outlet",
+    "aliases": [],
+    "category": "musculoskeletal",
+    "sourceRefs": {
+      "ta98": "A02.5.02.009"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "sagittal_suture",
+    "term": "sagittal suture",
+    "aliases": [],
+    "category": "musculoskeletal",
+    "sourceRefs": {
+      "ta98": "A03.1.02.003"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "parietal_lobe",
+    "term": "parietal lobe",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A14.1.09.123"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "frontal_lobe",
+    "term": "frontal lobe",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A14.1.09.110"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "temporal_lobe",
+    "term": "temporal lobe",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A14.1.09.136"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "enamel",
+    "term": "enamel",
+    "aliases": [],
+    "category": "gastrointestinal",
+    "sourceRefs": {
+      "ta98": "A05.1.03.056"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "ileum",
+    "term": "ileum",
+    "aliases": [],
+    "category": "gastrointestinal",
+    "sourceRefs": {
+      "ta98": "A05.6.04.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "popliteal_artery",
+    "term": "popliteal artery",
+    "aliases": [],
+    "category": "cardiovascular",
+    "sourceRefs": {
+      "ta98": "A12.2.16.033"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "eyelid",
+    "term": "eyelid",
+    "aliases": [
+      "eyelids"
+    ],
+    "category": "integumentary",
+    "sourceRefs": {
+      "ta98": "A15.2.07.024"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "scrotum",
+    "term": "scrotum",
+    "aliases": [],
+    "category": "reproductive",
+    "sourceRefs": {
+      "ta98": "A09.4.03.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "thalamus",
+    "term": "thalamus",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A14.1.08.101"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "pericardium",
+    "term": "pericardium",
+    "aliases": [],
+    "category": "cardiovascular",
+    "sourceRefs": {
+      "ta98": "A12.1.08.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "soft_palate",
+    "term": "soft palate",
+    "aliases": [],
+    "category": "gastrointestinal",
+    "sourceRefs": {
+      "ta98": "A05.1.01.104"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "adenohypophysis",
+    "term": "adenohypophysis",
+    "aliases": [],
+    "category": "endocrine",
+    "sourceRefs": {
+      "ta98": "A11.1.00.002"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "lower_limb",
+    "term": "lower limb",
+    "aliases": [],
+    "category": "musculoskeletal",
+    "sourceRefs": {
+      "ta98": "A01.1.00.031"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "bronchiole",
+    "term": "bronchiole",
+    "aliases": [
+      "bronchioles"
+    ],
+    "category": "respiratory",
+    "sourceRefs": {
+      "ta98": "A06.5.02.026"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "larynx",
+    "term": "larynx",
+    "aliases": [],
+    "category": "respiratory",
+    "sourceRefs": {
+      "ta98": "A06.2.01.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "trapezius",
+    "term": "trapezius",
+    "aliases": [
+      "trapezius muscle",
+      "trapezius muscles"
+    ],
+    "category": "musculoskeletal",
+    "sourceRefs": {
+      "ta98": "A04.3.01.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "saccule",
+    "term": "saccule",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A15.3.03.065"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "caecum",
+    "term": "caecum",
+    "aliases": [],
+    "category": "gastrointestinal",
+    "sourceRefs": {
+      "ta98": "A05.7.02.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "descending_colon",
+    "term": "descending colon",
+    "aliases": [],
+    "category": "gastrointestinal",
+    "sourceRefs": {
+      "ta98": "A05.7.03.006"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "helix",
+    "term": "helix",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A15.3.01.005"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "facial_muscle",
+    "term": "facial muscle",
+    "aliases": [
+      "facial muscles"
+    ],
+    "category": "musculoskeletal",
+    "sourceRefs": {
+      "ta98": "A04.1.03.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "axillary_region",
+    "term": "axillary region",
+    "aliases": [],
+    "category": "musculoskeletal",
+    "sourceRefs": {
+      "ta98": "A01.2.03.009"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "gastrocnemius",
+    "term": "gastrocnemius",
+    "aliases": [
+      "gastrocnemius muscle",
+      "gastrocnemius muscles"
+    ],
+    "category": "musculoskeletal",
+    "sourceRefs": {
+      "ta98": "A04.7.02.044"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "shoulder_girdle",
+    "term": "shoulder girdle",
+    "aliases": [
+      "pectoral girdle"
+    ],
+    "category": "musculoskeletal",
+    "sourceRefs": {
+      "ta98": "A01.1.00.020"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "inguinal_region",
+    "term": "inguinal region",
+    "aliases": [],
+    "category": "musculoskeletal",
+    "sourceRefs": {
+      "ta98": "A01.2.04.006"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "perineum",
+    "term": "perineum",
+    "aliases": [],
+    "category": "reproductive",
+    "sourceRefs": {
+      "ta98": "A09.5.00.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "upper_limb",
+    "term": "upper limb",
+    "aliases": [],
+    "category": "musculoskeletal",
+    "sourceRefs": {
+      "ta98": "A01.1.00.019"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "helicotrema",
+    "term": "helicotrema",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A15.3.03.044"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "renal_artery",
+    "term": "renal artery",
+    "aliases": [],
+    "category": "cardiovascular",
+    "sourceRefs": {
+      "ta98": "A12.2.12.075"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "choroid",
+    "term": "choroid",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A15.2.03.002"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "left_atrium",
+    "term": "left atrium",
+    "aliases": [],
+    "category": "cardiovascular",
+    "sourceRefs": {
+      "ta98": "A12.1.03.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "forehead",
+    "term": "forehead",
+    "aliases": [],
+    "category": "musculoskeletal",
+    "sourceRefs": {
+      "ta98": "A01.1.00.002"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "oropharynx",
+    "term": "oropharynx",
+    "aliases": [],
+    "category": "gastrointestinal",
+    "sourceRefs": {
+      "ta98": "A05.3.01.019"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "pituitary_gland",
+    "term": "pituitary gland",
+    "aliases": [
+      "hypophysis"
+    ],
+    "category": "endocrine",
+    "sourceRefs": {
+      "ta98": "A11.1.00.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "diaphragm",
+    "term": "diaphragm",
+    "aliases": [],
+    "category": "musculoskeletal",
+    "sourceRefs": {
+      "ta98": "A04.4.02.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "conjunctiva",
+    "term": "conjunctiva",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A15.2.07.047"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "masticatory_muscle",
+    "term": "masticatory muscle",
+    "aliases": [
+      "masticatory muscles"
+    ],
+    "category": "musculoskeletal",
+    "sourceRefs": {
+      "ta98": "A04.1.04.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "posterior_mediastinum",
+    "term": "posterior mediastinum",
+    "aliases": [],
+    "category": "musculoskeletal",
+    "sourceRefs": {
+      "ta98": "A07.1.02.106"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "umbilical_region",
+    "term": "umbilical region",
+    "aliases": [],
+    "category": "musculoskeletal",
+    "sourceRefs": {
+      "ta98": "A01.2.04.005"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "transverse_colon",
+    "term": "transverse colon",
+    "aliases": [],
+    "category": "gastrointestinal",
+    "sourceRefs": {
+      "ta98": "A05.7.03.004"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "jejunum",
+    "term": "jejunum",
+    "aliases": [],
+    "category": "gastrointestinal",
+    "sourceRefs": {
+      "ta98": "A05.6.03.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "hip_joint",
+    "term": "hip joint",
+    "aliases": [],
+    "category": "musculoskeletal",
+    "sourceRefs": {
+      "ta98": "A03.6.07.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "vulva",
+    "term": "vulva",
+    "aliases": [],
+    "category": "reproductive",
+    "sourceRefs": {
+      "ta98": "A09.2.01.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "axillary_lymph_node",
+    "term": "axillary lymph node",
+    "aliases": [
+      "axillary lymph nodes"
+    ],
+    "category": "lymphatic_and_immune",
+    "sourceRefs": {
+      "ta98": "A13.3.01.002"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "interatrial_septum",
+    "term": "interatrial septum",
+    "aliases": [],
+    "category": "cardiovascular",
+    "sourceRefs": {
+      "ta98": "A12.1.00.019"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "midclavicular_line",
+    "term": "midclavicular line",
+    "aliases": [],
+    "category": "musculoskeletal",
+    "sourceRefs": {
+      "ta98": "A01.2.00.015"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "semicircular_canal",
+    "term": "semicircular canal",
+    "aliases": [
+      "semicircular canals"
+    ],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A15.3.03.015"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "cingulate_gyrus",
+    "term": "cingulate gyrus",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A14.1.09.231"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "gingiva",
+    "term": "gingiva",
+    "aliases": [],
+    "category": "gastrointestinal",
+    "sourceRefs": {
+      "ta98": "A03.1.03.003"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "beard",
+    "term": "beard",
+    "aliases": [],
+    "category": "integumentary",
+    "sourceRefs": {
+      "ta98": "A16.0.00.018"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "aortic_valve",
+    "term": "aortic valve",
+    "aliases": [],
+    "category": "cardiovascular",
+    "sourceRefs": {
+      "ta98": "A12.1.04.012"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "meninx",
+    "term": "meninx",
+    "aliases": [
+      "meninges"
+    ],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A14.1.01.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "appendix",
+    "term": "appendix",
+    "aliases": [
+      "vermiform appendix"
+    ],
+    "category": "gastrointestinal",
+    "sourceRefs": {
+      "ta98": "A05.7.02.007"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "optic_tract",
+    "term": "optic tract",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A14.1.08.404"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "tympanic_membrane",
+    "term": "tympanic membrane",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A15.3.01.052"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "iris",
+    "term": "iris",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A15.2.03.020"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "lens",
+    "term": "lens",
+    "aliases": [
+      "crystalline lens"
+    ],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A15.2.05.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "axillary_nerve",
+    "term": "axillary nerve",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A14.2.03.064"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "femoral_nerve",
+    "term": "femoral nerve",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A14.2.07.018"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "ulnar_nerve",
+    "term": "ulnar nerve",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A14.2.03.041"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "trigeminal_nerve",
+    "term": "trigeminal nerve",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A14.2.01.012"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "radial_nerve",
+    "term": "radial nerve",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A14.2.03.049"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "facial_nerve",
+    "term": "facial nerve",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A14.2.01.109"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "obturator_nerve",
+    "term": "obturator nerve",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A14.2.07.012"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "brachial_plexus",
+    "term": "brachial plexus",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A14.2.03.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "vagus_nerve",
+    "term": "vagus nerve",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A14.2.01.153"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "rubrospinal_tract",
+    "term": "rubrospinal tract",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A14.1.02.220"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "tectospinal_tract",
+    "term": "tectospinal tract",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A14.1.02.211"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "maxillary_nerve",
+    "term": "maxillary nerve",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A14.2.01.037"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "mandibular_nerve",
+    "term": "mandibular nerve",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A14.2.01.064"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "ophthalmic_nerve",
+    "term": "ophthalmic nerve",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A14.2.01.016"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "sciatic_nerve",
+    "term": "sciatic nerve",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A14.2.07.046"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "median_nerve",
+    "term": "median nerve",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A14.2.03.031"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "caudate_nucleus",
+    "term": "caudate nucleus",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A14.1.09.501"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "spiral_ganglion",
+    "term": "spiral ganglion",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A15.3.03.125"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "superior_temporal_gyrus",
+    "term": "superior temporal gyrus",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A14.1.09.138"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "pulmonary_artery",
+    "term": "pulmonary artery",
+    "aliases": [],
+    "category": "cardiovascular",
+    "sourceRefs": {
+      "ta98": "A12.2.01.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "lingual_artery",
+    "term": "lingual artery",
+    "aliases": [],
+    "category": "cardiovascular",
+    "sourceRefs": {
+      "ta98": "A12.2.05.015"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "facial_artery",
+    "term": "facial artery",
+    "aliases": [],
+    "category": "cardiovascular",
+    "sourceRefs": {
+      "ta98": "A12.2.05.020"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "right_coronary_artery",
+    "term": "right coronary artery",
+    "aliases": [],
+    "category": "cardiovascular",
+    "sourceRefs": {
+      "ta98": "A12.2.03.101"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "superior_mesenteric_artery",
+    "term": "superior mesenteric artery",
+    "aliases": [],
+    "category": "cardiovascular",
+    "sourceRefs": {
+      "ta98": "A12.2.12.053"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "superficial_temporal_artery",
+    "term": "superficial temporal artery",
+    "aliases": [],
+    "category": "cardiovascular",
+    "sourceRefs": {
+      "ta98": "A12.2.05.045"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "left_coronary_artery",
+    "term": "left coronary artery",
+    "aliases": [],
+    "category": "cardiovascular",
+    "sourceRefs": {
+      "ta98": "A12.2.03.201"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "inferior_mesenteric_artery",
+    "term": "inferior mesenteric artery",
+    "aliases": [],
+    "category": "cardiovascular",
+    "sourceRefs": {
+      "ta98": "A12.2.12.069"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "middle_meningeal_artery",
+    "term": "middle meningeal artery",
+    "aliases": [],
+    "category": "cardiovascular",
+    "sourceRefs": {
+      "ta98": "A12.2.05.067"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "portal_vein",
+    "term": "portal vein",
+    "aliases": [
+      "hepatic portal vein"
+    ],
+    "category": "cardiovascular",
+    "sourceRefs": {
+      "ta98": "A12.3.12.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "parotid_gland",
+    "term": "parotid gland",
+    "aliases": [],
+    "category": "gastrointestinal",
+    "sourceRefs": {
+      "ta98": "A05.1.02.003"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "pineal_gland",
+    "term": "pineal gland",
+    "aliases": [],
+    "category": "endocrine",
+    "sourceRefs": {
+      "ta98": "A11.2.00.001"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "common_hepatic_duct",
+    "term": "common hepatic duct",
+    "aliases": [],
+    "category": "gastrointestinal",
+    "sourceRefs": {
+      "ta98": "A05.8.01.061"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "inguinal_canal",
+    "term": "inguinal canal",
+    "aliases": [],
+    "category": "musculoskeletal",
+    "sourceRefs": {
+      "ta98": "A04.5.01.026"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "foramen_rotundum",
+    "term": "foramen rotundum",
+    "aliases": [
+      "round foramen"
+    ],
+    "category": "musculoskeletal",
+    "sourceRefs": {
+      "ta98": "A02.1.05.035"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "foramen_ovale",
+    "term": "foramen ovale",
+    "aliases": [
+      "oval foramen"
+    ],
+    "category": "musculoskeletal",
+    "sourceRefs": {
+      "ta98": "A02.1.05.036"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "spinal_ganglion",
+    "term": "spinal ganglion",
+    "aliases": [],
+    "category": "nervous",
+    "sourceRefs": {
+      "ta98": "A14.2.00.004"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "greater_vestibular_gland",
+    "term": "greater vestibular gland",
+    "aliases": [
+      "Bartholin gland"
+    ],
+    "category": "reproductive",
+    "sourceRefs": {
+      "ta98": "A09.2.01.016"
+    },
+    "status": "approved"
+  },
+  {
+    "id": "lumbar_triangle",
+    "term": "lumbar triangle",
+    "aliases": [
+      "Petit triangle"
+    ],
+    "category": "musculoskeletal",
+    "sourceRefs": {
+      "ta98": "A01.2.05.009"
+    },
+    "status": "approved"
+  }
+]

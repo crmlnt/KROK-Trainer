@@ -1,4 +1,59 @@
 
+
+// ANATOMY HIGHLIGHTS
+let anatomyMatcher = null;
+function initAnatomyHighlights() {
+  fetch('data/anatomy-dictionary.json')
+    .then(res => {
+      if (!res.ok) throw new Error("Dictionary fetch failed");
+      return res.json();
+    })
+    .then(dictionary => {
+      if (typeof AnatomyMatcher !== 'undefined') {
+        anatomyMatcher = AnatomyMatcher.buildAnatomyMatcher(dictionary);
+      }
+    })
+    .catch(err => {
+      console.warn("Anatomy Highlights dictionary unavailable.", err);
+    });
+}
+initAnatomyHighlights();
+
+function applyAnatomyHighlights(text, element) {
+  element.textContent = "";
+
+  if ((typeof examMode !== 'undefined' && examMode) || !anatomyMatcher) {
+    element.textContent = text;
+    return;
+  }
+
+  const matches = anatomyMatcher(text);
+  if (!matches || matches.length === 0) {
+    element.textContent = text;
+    return;
+  }
+
+  let currentIndex = 0;
+  for (let i = 0; i < matches.length; i++) {
+    const match = matches[i];
+    if (match.start > currentIndex) {
+      element.appendChild(document.createTextNode(text.substring(currentIndex, match.start)));
+    }
+    const span = document.createElement("span");
+    span.className = "anatomy-highlight";
+    span.setAttribute("data-anatomy-id", match.conceptId);
+    span.setAttribute("data-anatomy-term", match.canonicalTerm);
+    span.textContent = match.matchedText;
+    element.appendChild(span);
+    
+    currentIndex = match.end;
+  }
+  
+  if (currentIndex < text.length) {
+    element.appendChild(document.createTextNode(text.substring(currentIndex)));
+  }
+}
+
 //VARIABLES
 let questions = [];
 let allQuestions = [];
@@ -239,6 +294,14 @@ async function loadQuestions() {
         if (topSubjectFilter && topSubjectFilter.parentElement) {
           topSubjectFilter.parentElement.style.display = "none";
         }
+        
+        if (typeof ActiveSession !== "undefined") {
+          const state = ActiveSession.load();
+          const resumeBtn = document.getElementById("resumePracticeBtn");
+          if (resumeBtn) {
+            resumeBtn.style.display = (state && state.mode !== "exam") ? "block" : "none";
+          }
+        }
       } else {
         showQuestion();
       }
@@ -368,7 +431,7 @@ const confirmAnswerBtn =
   }
 
   questionNumber.textContent = `Question ${currentQuestionIndex + 1} of ${questions.length}`;
-  questionText.textContent = currentQuestion.question;
+  applyAnatomyHighlights(currentQuestion.question, questionText);
 
   const questionIdDisplay = document.getElementById("question-id-display");
   if (questionIdDisplay) {
@@ -395,7 +458,7 @@ const confirmAnswerBtn =
 
   shuffledAnswers.forEach((answer) => {
     const button = document.createElement("button");
-    button.textContent = answer.text;
+    applyAnatomyHighlights(answer.text, button);
     button.classList.add("answer-btn");
 
     
@@ -1863,6 +1926,15 @@ updateStats();
 loadQuestions();
 // --- Practice Mode 2.0 UI Handlers ---
 
+const resumePracticeBtn = document.getElementById("resumePracticeBtn");
+if (resumePracticeBtn) {
+  resumePracticeBtn.addEventListener("click", () => {
+    if (typeof restoreActiveSession !== "undefined" && restoreActiveSession(true)) {
+      // Session restored successfully
+    }
+  });
+}
+
 const startPracticeBtn = document.getElementById("startPracticeBtn");
 if (startPracticeBtn) {
   startPracticeBtn.addEventListener("click", () => {
@@ -2034,10 +2106,12 @@ if (supportModalDonateBtn) {
   });
 }
 
-function restoreActiveSession() {
+function restoreActiveSession(forcePracticeRestore = false) {
   if (typeof ActiveSession === "undefined") return false;
   const state = ActiveSession.load();
   if (!state) return false;
+  
+  if (state.mode !== "exam" && !forcePracticeRestore) return false;
   
   const restoredQuestions = [];
   for (const id of state.questionsIds) {
@@ -2069,6 +2143,12 @@ function restoreActiveSession() {
     document.getElementById("practiceSessionUI").style.display = "block";
     const setupUI = document.getElementById("practiceSetupUI");
     if (setupUI) setupUI.hidden = true;
+    
+    // Hide subjectFilter in top-bar during session
+    const topSubjectFilter = document.getElementById("subjectFilter");
+    if (topSubjectFilter && topSubjectFilter.parentElement) {
+      topSubjectFilter.parentElement.style.display = "none";
+    }
   }
   
   window.restoredCurrentOptions = state.currentOptionsOrder;
