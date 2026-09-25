@@ -491,9 +491,21 @@ body.dark-mode .guide-btn {
 }
 
 .exam-icon {
-  font-size: 40px;
   display: block;
-  margin-bottom: 12px;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 12px;
+  background-color: var(--exam-icon-color);
+  -webkit-mask: url("assets/book.svg") center / contain no-repeat;
+  mask: url("assets/book.svg") center / contain no-repeat;
+}
+
+.exam-icon-krok1 {
+  --exam-icon-color: #60a5fa;
+}
+
+.exam-icon-krok2 {
+  --exam-icon-color: #22c55e;
 }
 
 .exam-card h2 {

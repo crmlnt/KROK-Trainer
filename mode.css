@@ -130,8 +130,32 @@ body {
   border-radius: 18px;
 
   background: #f3f4f6;
+}
 
-  font-size: 2rem;
+.mode-icon::before {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 36px;
+  background-color: currentColor;
+}
+
+.mode-icon-practice {
+  color: #2563eb;
+}
+
+.mode-icon-practice::before {
+  -webkit-mask: url("assets/books-study-learning-education-reading-library-svgrepo-com.svg") center / contain no-repeat;
+  mask: url("assets/books-study-learning-education-reading-library-svgrepo-com.svg") center / contain no-repeat;
+}
+
+.mode-icon-exam {
+  color: #4f46e5;
+}
+
+.mode-icon-exam::before {
+  -webkit-mask: url("assets/exam.svg") center / contain no-repeat;
+  mask: url("assets/exam.svg") center / contain no-repeat;
 }
 
 
