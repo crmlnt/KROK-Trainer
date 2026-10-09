@@ -2,6 +2,7 @@
 
 // ANATOMY HIGHLIGHTS
 let anatomyMatcher = null;
+let anatomyContent = null;
 function initAnatomyHighlights() {
   fetch('data/anatomy-dictionary.json')
     .then(res => {
@@ -16,8 +17,97 @@ function initAnatomyHighlights() {
     .catch(err => {
       console.warn("Anatomy Highlights dictionary unavailable.", err);
     });
+
+  fetch('data/anatomy-content.json')
+    .then(res => {
+      if (!res.ok) throw new Error("Content fetch failed");
+      return res.json();
+    })
+    .then(content => {
+      anatomyContent = content;
+    })
+    .catch(err => console.warn("Anatomy Content unavailable.", err));
 }
 initAnatomyHighlights();
+
+let anatomyPopoverEl = null;
+let activeAnatomyPopover = null;
+
+function closeAnatomyPopover() {
+  if (anatomyPopoverEl) {
+    anatomyPopoverEl.style.display = "none";
+    activeAnatomyPopover = null;
+  }
+}
+
+function showAnatomyPopover(event, conceptId) {
+  if (!anatomyContent || !anatomyContent[conceptId]) return;
+
+  if (activeAnatomyPopover === event.target) {
+    closeAnatomyPopover();
+    return;
+  }
+
+  if (!anatomyPopoverEl) {
+    anatomyPopoverEl = document.createElement("div");
+    anatomyPopoverEl.className = "anatomy-popover";
+    document.body.appendChild(anatomyPopoverEl);
+  }
+
+  const content = anatomyContent[conceptId];
+  let imageHtml = "";
+  if (content.image) {
+    imageHtml = `<img class="anatomy-popover-image" src="${content.image}" alt="${content.term} anatomy">`;
+  }
+
+  anatomyPopoverEl.innerHTML = `
+    <button class="anatomy-popover-close" aria-label="Close anatomy card">&times;</button>
+    ${imageHtml}
+    <div class="anatomy-popover-title">${content.term}</div>
+    <div class="anatomy-popover-meta">${content.category} &middot; ${content.location}</div>
+    <div class="anatomy-popover-desc">${content.description}</div>
+  `;
+
+  anatomyPopoverEl.style.display = "block";
+  activeAnatomyPopover = event.target;
+
+  const rect = event.target.getBoundingClientRect();
+  let top = rect.bottom + window.scrollY + 8;
+  let left = rect.left + window.scrollX;
+
+  anatomyPopoverEl.style.top = top + "px";
+  anatomyPopoverEl.style.left = left + "px";
+
+  const popRect = anatomyPopoverEl.getBoundingClientRect();
+  if (popRect.right > window.innerWidth) {
+    left = window.innerWidth - popRect.width - 10;
+    anatomyPopoverEl.style.left = Math.max(10, left) + "px";
+  }
+}
+
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("anatomy-highlight")) {
+    if (typeof examMode !== 'undefined' && examMode) return;
+
+    e.stopPropagation();
+
+    const conceptId = e.target.getAttribute("data-anatomy-id");
+    showAnatomyPopover(e, conceptId);
+  } else if (anatomyPopoverEl && anatomyPopoverEl.style.display === "block") {
+    const isCloseBtn = e.target.closest('.anatomy-popover-close');
+    if (!anatomyPopoverEl.contains(e.target) || isCloseBtn) {
+      closeAnatomyPopover();
+      if (isCloseBtn) e.stopPropagation();
+    }
+  }
+}, true);
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    closeAnatomyPopover();
+  }
+});
+
 
 function applyAnatomyHighlights(text, element) {
   element.textContent = "";
@@ -44,6 +134,9 @@ function applyAnatomyHighlights(text, element) {
     span.setAttribute("data-anatomy-id", match.conceptId);
     span.setAttribute("data-anatomy-term", match.canonicalTerm);
     span.textContent = match.matchedText;
+    if (anatomyContent && anatomyContent[match.conceptId]) {
+      span.classList.add("has-popover");
+    }
     element.appendChild(span);
     
     currentIndex = match.end;

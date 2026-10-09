@@ -1,0 +1,1810 @@
+{
+  "medial_lemniscus": {
+    "term": "Medial lemniscus",
+    "category": "Neural pathway",
+    "location": "Brainstem",
+    "description": "An ascending sensory tract formed after the decussation of internal arcuate fibers in the caudal medulla. It carries fine touch, vibration and conscious proprioception from the contralateral body through the brainstem to the ventral posterolateral nucleus of the thalamus.",
+    "image": null,
+    "status": "approved"
+  },
+  "parotid_gland": {
+    "term": "Parotid gland",
+    "category": "Salivary gland",
+    "location": "Head · Parotid region",
+    "description": "The largest major salivary gland, located anterior and inferior to the ear. Its duct opens into the oral cavity opposite the upper second molar.",
+    "image": "assets/anatomy/parotid.jpg",
+    "wikipedia": null,
+    "status": "approved"
+  },
+  "foramen_ovale": {
+    "term": "Foramen ovale",
+    "category": "Anatomical foramen",
+    "location": "Sphenoid bone · Middle cranial fossa",
+    "description": "Opening in the greater wing of the sphenoid that transmits the mandibular division of the trigeminal nerve (V3), among other structures.",
+    "image": "assets/anatomy/foramen_ovale.jpg",
+    "wikipedia": null,
+    "status": "approved"
+  },
+  "lung": {
+    "term": "Lung",
+    "category": "respiratory organ",
+    "location": "Thoracic cavity",
+    "description": "Paired respiratory organs located on either side of the mediastinum. Their branching airways terminate in alveoli, where gas exchange occurs between inspired air and pulmonary capillary blood.",
+    "image": "assets/anatomy/lung.png",
+    "wikipedia": "https://en.wikipedia.org/wiki/Lung",
+    "status": "approved"
+  },
+  "uterus": {
+    "term": "Uterus",
+    "category": "Reproductive organ",
+    "location": "Female pelvis",
+    "description": "A hollow muscular organ located posterior to the urinary bladder and anterior to the rectum. It consists of the fundus, body, isthmus and cervix and provides the site for implantation and development of the embryo and fetus.",
+    "image": "assets/anatomy/uterus.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Uterus",
+    "status": "approved"
+  },
+  "spleen": {
+    "term": "Spleen",
+    "category": "Lymphatic organ",
+    "location": "Left upper abdomen",
+    "description": "A highly vascular lymphatic organ located between the diaphragm and stomach in the left upper abdomen. It filters blood, removes aged or abnormal blood cells and participates in immune responses to blood-borne antigens.",
+    "image": "assets/anatomy/spleen.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Spleen",
+    "status": "approved"
+  },
+  "thyroid_gland": {
+    "term": "Thyroid gland",
+    "category": "Endocrine gland",
+    "location": "Anterior neck",
+    "description": "An endocrine gland formed by right and left lobes connected by an isthmus across the upper trachea. Its follicles produce thyroid hormones, while parafollicular C cells secrete calcitonin.",
+    "image": "assets/anatomy/thyroid_gland.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Thyroid",
+    "status": "approved"
+  },
+  "right_lung": {
+    "term": "Right lung",
+    "category": "Respiratory organ",
+    "location": "Right thoracic cavity",
+    "description": "The right lung is divided by horizontal and oblique fissures into superior, middle and inferior lobes. Its base rests on the diaphragm, while its medial surface faces the mediastinum.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Lung",
+    "status": "approved"
+  },
+  "left_lung": {
+    "term": "Left lung",
+    "category": "Respiratory organ",
+    "location": "Left thoracic cavity",
+    "description": "The left lung is divided by an oblique fissure into superior and inferior lobes. Its anterior border contains the cardiac notch, and the lingula projects from the inferior part of the superior lobe.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Lung",
+    "status": "approved"
+  },
+  "breast": {
+    "term": "Breast",
+    "category": "Mammary structure",
+    "location": "Anterior thoracic wall",
+    "description": "A superficial structure of the anterior chest wall composed of mammary gland tissue, adipose tissue and supporting connective tissue. Its glandular lobes drain through lactiferous ducts that converge toward the nipple.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Breast",
+    "status": "approved"
+  },
+  "colon": {
+    "term": "Colon",
+    "category": "Gastrointestinal organ",
+    "location": "Abdominal and pelvic cavities",
+    "description": "The major portion of the large intestine between the caecum and rectum. It comprises ascending, transverse, descending and sigmoid segments and is characterized externally by taeniae coli, haustra and epiploic appendages.",
+    "image": "assets/anatomy/colon.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Large_intestine",
+    "status": "approved"
+  },
+  "thigh": {
+    "term": "Thigh",
+    "category": "Anatomical region",
+    "location": "Lower limb",
+    "description": "The region of the lower limb between the hip and knee. It contains the femur and three major muscular compartments—anterior, medial and posterior—containing muscles with distinct actions and neurovascular supply.",
+    "image": "assets/anatomy/thigh.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Thigh",
+    "status": "approved"
+  },
+  "lymph_node": {
+    "term": "Lymph node",
+    "category": "Lymphatic organ",
+    "location": "Along lymphatic vessels",
+    "description": "A small encapsulated lymphatic organ positioned along lymphatic vessels. It filters lymph and contains organized regions populated by lymphocytes and other immune cells involved in recognition and response to antigens.",
+    "image": "assets/anatomy/lymph_node.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Lymph_node",
+    "status": "approved"
+  },
+  "myocardium": {
+    "term": "Myocardium",
+    "category": "Cardiac muscle",
+    "location": "Heart wall",
+    "description": "The muscular middle layer of the heart wall, located between the endocardium and epicardium. It is composed predominantly of cardiac muscle and is thickest in the ventricles, particularly in the left ventricular wall.",
+    "image": "assets/anatomy/myocardium.png",
+    "wikipedia": "https://en.wikipedia.org/wiki/Cardiac_muscle",
+    "status": "approved"
+  },
+  "bone_marrow": {
+    "term": "Bone marrow",
+    "category": "Hematopoietic tissue",
+    "location": "Medullary cavities of bones",
+    "description": "Soft tissue occupying the internal cavities of bones. Red marrow is found within trabecular spaces of spongy bone and is especially abundant in the axial skeleton in adults, while yellow marrow contains a greater proportion of adipose tissue.",
+    "image": "assets/anatomy/bone_marrow.webp",
+    "wikipedia": "https://en.wikipedia.org/wiki/Bone_marrow",
+    "status": "approved"
+  },
+  "spinal_cord": {
+    "term": "Spinal cord",
+    "category": "Central nervous system",
+    "location": "Vertebral canal",
+    "description": "The elongated part of the central nervous system extending from the medulla oblongata through the vertebral canal to approximately the L1–L2 vertebral level in adults. It is organized into cervical, thoracic, lumbar, sacral and coccygeal segments from which spinal nerves arise.",
+    "image": "assets/anatomy/spinal_cord.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Spinal_cord",
+    "status": "approved"
+  },
+  "cerebral_cortex": {
+    "term": "Cerebral cortex",
+    "category": "Central nervous system",
+    "location": "Outer cerebrum",
+    "description": "The outer layer of gray matter covering the cerebral hemispheres. Its folded surface forms gyri and sulci and is divided anatomically into frontal, parietal, temporal, occipital and insular regions.",
+    "image": "assets/anatomy/cerebral_cortex.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Cerebral_cortex",
+    "status": "approved"
+  },
+  "aorta": {
+    "term": "Aorta",
+    "category": "Artery",
+    "location": "Thorax and abdomen",
+    "description": "The largest artery in the body, arising from the left ventricle. It continues as the ascending aorta, aortic arch, descending thoracic aorta and abdominal aorta before dividing into the right and left common iliac arteries.",
+    "image": "assets/anatomy/aorta.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Aorta",
+    "status": "approved"
+  },
+  "thymus": {
+    "term": "Thymus",
+    "category": "Lymphoid organ",
+    "location": "Superior and anterior mediastinum",
+    "description": "A bilobed primary lymphoid organ located in the superior and anterior mediastinal regions, posterior to the sternum. It is prominent in children and progressively undergoes fatty involution after puberty.",
+    "image": "assets/anatomy/thymus.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Thymus",
+    "status": "approved"
+  },
+  "vagina": {
+    "term": "Vagina",
+    "category": "Reproductive organ",
+    "location": "Female pelvis and perineum",
+    "description": "A fibromuscular canal extending from the cervix of the uterus to the vaginal opening. It lies posterior to the urinary bladder and urethra and anterior to the rectum.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Vagina",
+    "status": "approved"
+  },
+  "cerebellum": {
+    "term": "Cerebellum",
+    "category": "Central nervous system",
+    "location": "Posterior cranial fossa",
+    "description": "A part of the hindbrain located posterior to the brainstem and inferior to the occipital lobes. It consists of two cerebellar hemispheres joined by the vermis and is connected to the brainstem by three pairs of cerebellar peduncles.",
+    "image": "assets/anatomy/cerebellum.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Cerebellum",
+    "status": "approved"
+  },
+  "knee_joint": {
+    "term": "Knee joint",
+    "category": "Synovial joint",
+    "location": "Lower limb",
+    "description": "A large synovial joint involving the femur, tibia and patella. Its stability is supported by the menisci, joint capsule and major ligaments, including the anterior and posterior cruciate and medial and lateral collateral ligaments.",
+    "image": "assets/anatomy/knee_joint.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Knee",
+    "status": "approved"
+  },
+  "ovary": {
+    "term": "Ovary",
+    "category": "Reproductive organ",
+    "location": "Female pelvis",
+    "description": "A paired female gonad located lateral to the uterus, typically within the ovarian fossa. Each ovary is attached to the uterus by the ovarian ligament and to the lateral pelvic wall by the suspensory ligament of the ovary.",
+    "image": "assets/anatomy/ovary.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Ovary",
+    "status": "approved"
+  },
+  "pleural_cavity": {
+    "term": "Pleural cavity",
+    "category": "Serous cavity",
+    "location": "Thoracic cavity",
+    "description": "The potential space between the visceral and parietal layers of pleura surrounding each lung. It contains a thin film of serous fluid that allows the pleural surfaces to move smoothly during respiration.",
+    "image": "assets/anatomy/pleural_cavity.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Pleural_cavity",
+    "status": "approved"
+  },
+  "uterine_cavity": {
+    "term": "Uterine cavity",
+    "category": "Reproductive cavity",
+    "location": "Body of the uterus",
+    "description": "The central cavity within the body of the uterus, lined by endometrium. It is approximately triangular in the coronal plane, communicating superiorly with the uterine tubes and inferiorly with the cervical canal.",
+    "image": "assets/anatomy/uterine_cavity.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Uterus",
+    "status": "approved"
+  },
+  "sigmoid_colon": {
+    "term": "Sigmoid colon",
+    "category": "Gastrointestinal organ",
+    "location": "Left lower abdomen and pelvis",
+    "description": "The S-shaped portion of the large intestine connecting the descending colon to the rectum. It is suspended by the sigmoid mesocolon and therefore has considerable mobility within the lower abdomen and pelvis.",
+    "image": "assets/anatomy/sigmoid_colon.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Sigmoid_colon",
+    "status": "approved"
+  },
+  "urinary_bladder": {
+    "term": "Urinary bladder",
+    "category": "Urinary organ",
+    "location": "Lesser pelvis",
+    "description": "A hollow muscular organ that stores urine, located posterior to the pubic symphysis. Its main anatomical regions are the apex, body, fundus and neck; internally, the ureteric openings and internal urethral opening define the trigone.",
+    "image": "assets/anatomy/urinary_bladder.webp",
+    "wikipedia": "https://en.wikipedia.org/wiki/Urinary_bladder",
+    "status": "approved"
+  },
+  "substantia_nigra": {
+    "term": "Substantia nigra",
+    "category": "Central nervous system",
+    "location": "Midbrain",
+    "description": "A paired, pigmented structure of the midbrain located dorsal to the crus cerebri. It comprises the pars compacta and pars reticulata and plays an important role in basal ganglia motor circuitry.\npic: Kenhub",
+    "image": "assets/anatomy/substantia_nigra.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Substantia_nigra",
+    "status": "approved"
+  },
+  "left_ventricle": {
+    "term": "Left ventricle",
+    "category": "Cardiac chamber",
+    "location": "Left side of the heart",
+    "description": "The thick-walled cardiac chamber that receives blood from the left atrium through the mitral valve and ejects it into the aorta through the aortic valve. It forms most of the left border and apex of the heart.",
+    "image": "assets/anatomy/left_ventricle.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Ventricle_(heart)",
+    "status": "approved"
+  },
+  "right_ventricle": {
+    "term": "Right ventricle",
+    "category": "Cardiac chamber",
+    "location": "Anterior part of the heart",
+    "description": "The cardiac chamber that receives blood from the right atrium through the tricuspid valve and ejects it into the pulmonary trunk through the pulmonary valve. It forms most of the anterior surface of the heart.",
+    "image": "assets/anatomy/right_ventricle.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Ventricle_(heart)",
+    "status": "approved"
+  },
+  "small_intestine": {
+    "term": "Small intestine",
+    "category": "Gastrointestinal organ",
+    "location": "Abdominal cavity",
+    "description": "The portion of the gastrointestinal tract extending from the pylorus to the ileocecal junction. It consists of the duodenum, jejunum and ileum and occupies much of the central and lower abdominal cavity.",
+    "image": "assets/anatomy/small_intestine.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Small_intestine",
+    "status": "approved"
+  },
+  "nervous_system": {
+    "term": "Nervous system",
+    "category": "Nervous system",
+    "location": "Throughout the body",
+    "description": "The anatomical system composed of the central and peripheral nervous systems. It includes the brain, spinal cord, peripheral nerves and associated ganglia that provide communication between different regions of the body.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Nervous_system",
+    "status": "approved"
+  },
+  "central_nervous_system": {
+    "term": "Central nervous system",
+    "category": "Central nervous system",
+    "location": "Cranial cavity and vertebral canal",
+    "description": "The division of the nervous system formed by the brain and spinal cord. It is enclosed within the skull and vertebral canal and is surrounded by the meninges and cerebrospinal fluid.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Central_nervous_system",
+    "status": "approved"
+  },
+  "peripheral_nervous_system": {
+    "term": "Peripheral nervous system",
+    "category": "Peripheral nervous system",
+    "location": "Outside the brain and spinal cord",
+    "description": "The division of the nervous system outside the brain and spinal cord. It includes cranial nerves, spinal nerves, peripheral nerves and ganglia, connecting the central nervous system with structures throughout the body.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Peripheral_nervous_system",
+    "status": "approved"
+  },
+  "cerebrospinal_fluid": {
+    "term": "Cerebrospinal fluid",
+    "category": "Central nervous system",
+    "location": "Ventricles and subarachnoid space",
+    "description": "A clear fluid contained within the cerebral ventricles and subarachnoid space surrounding the brain and spinal cord. It is produced mainly by the choroid plexuses and may also occupy the central canal of the spinal cord, which can become partially or completely obliterated in adults.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Cerebrospinal_fluid",
+    "status": "approved"
+  },
+  "lumbar_region": {
+    "term": "Lumbar region",
+    "category": "Anatomical region",
+    "location": "Posterior abdominal wall",
+    "description": "The region of the lower back between the thoracic region and pelvis. It overlies the five lumbar vertebrae and associated muscles and lies posterior to several retroperitoneal structures, including the kidneys.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Lumbar",
+    "status": "approved"
+  },
+  "atrioventricular_node": {
+    "term": "Atrioventricular node",
+    "category": "Cardiac conduction system",
+    "location": "Right atrium",
+    "description": "A specialized component of the cardiac conduction system located in the inferior part of the interatrial septal region, near the opening of the coronary sinus. It conducts impulses from the atria toward the atrioventricular bundle.",
+    "image": "assets/anatomy/atrioventricular_node.png",
+    "wikipedia": "https://en.wikipedia.org/wiki/Atrioventricular_node",
+    "status": "approved"
+  },
+  "sinoatrial_node": {
+    "term": "Sinoatrial node",
+    "category": "Cardiac conduction system",
+    "location": "Right atrium",
+    "description": "A specialized cluster of cardiac cells located near the junction of the superior vena cava and right atrium. It is the normal site of initiation of the electrical impulses that spread through the atrial myocardium.",
+    "image": "assets/anatomy/sinoatrial_node.png",
+    "wikipedia": "https://en.wikipedia.org/wiki/Sinoatrial_node",
+    "status": "approved"
+  },
+  "mitral_valve": {
+    "term": "Mitral valve",
+    "category": "Cardiac valve",
+    "location": "Between left atrium and left ventricle",
+    "description": "The left atrioventricular valve, composed of anterior and posterior leaflets. Its leaflets are connected by chordae tendineae to papillary muscles in the left ventricle, which help prevent valve prolapse during ventricular contraction.",
+    "image": "assets/anatomy/mitral_valve.webp",
+    "wikipedia": "https://en.wikipedia.org/wiki/Mitral_valve",
+    "status": "approved"
+  },
+  "medulla_oblongata": {
+    "term": "Medulla oblongata",
+    "category": "Central nervous system",
+    "location": "Inferior brainstem",
+    "description": "The inferior part of the brainstem, continuous superiorly with the pons and inferiorly with the spinal cord. Its ventral surface contains the pyramids and olives, while its nuclei contribute to several cranial nerves and vital autonomic pathways.",
+    "image": "assets/anatomy/medulla_oblongata.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Medulla_oblongata",
+    "status": "approved"
+  },
+  "pancreatic_islets": {
+    "term": "Pancreatic islets",
+    "category": "Endocrine tissue",
+    "location": "Pancreas",
+    "description": "Clusters of endocrine cells scattered throughout the pancreas and particularly numerous in its tail. Their major cell populations include insulin-secreting beta cells, glucagon-secreting alpha cells and somatostatin-secreting delta cells.",
+    "image": "assets/anatomy/pancreatic_islets.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Pancreatic_islets",
+    "status": "approved"
+  },
+  "glomerular_capsule": {
+    "term": "Glomerular capsule",
+    "category": "Renal structure",
+    "location": "Renal cortex",
+    "description": "A cup-shaped structure forming the expanded beginning of a nephron and enclosing the glomerular capillary tuft. It consists of parietal and visceral layers separated by the capsular space, which receives the glomerular filtrate.",
+    "image": "assets/anatomy/glomerular_capsule.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Bowman%27s_capsule",
+    "status": "approved"
+  },
+  "lip": {
+    "term": "Lip",
+    "category": "Oral structure",
+    "location": "Anterior boundary of the oral cavity",
+    "description": "A mobile musculocutaneous fold forming the anterior boundary of the mouth. Each lip contains the orbicularis oris muscle and transitions externally from skin through the vermilion zone to oral mucosa internally.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Lip",
+    "status": "approved"
+  },
+  "pancreas": {
+    "term": "Pancreas",
+    "category": "Gastrointestinal organ",
+    "location": "Upper abdomen",
+    "description": "An elongated gland located mainly posterior to the stomach. It is divided into head, neck, body and tail; the head lies within the curve of the duodenum, while the tail extends toward the spleen.",
+    "image": "assets/anatomy/pancreas.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Pancreas",
+    "status": "approved"
+  },
+  "abdominal_cavity": {
+    "term": "Abdominal cavity",
+    "category": "Body cavity",
+    "location": "Abdomen",
+    "description": "The abdominal cavity extends from the diaphragm to the pelvic inlet and contains intraperitoneal and retroperitoneal structures. The parietal peritoneum lines the abdominal wall where present and bounds the peritoneal cavity; not all abdominal organs lie within that cavity.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Abdominal_cavity",
+    "status": "approved"
+  },
+  "forearm": {
+    "term": "Forearm",
+    "category": "Anatomical region",
+    "location": "Upper limb",
+    "description": "The region of the upper limb between the elbow and wrist. Its skeleton consists of the radius and ulna, surrounded by anterior and posterior muscular compartments containing the principal flexor-pronator and extensor-supinator muscle groups.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Forearm",
+    "status": "approved"
+  },
+  "thorax": {
+    "term": "Thorax",
+    "category": "Anatomical region",
+    "location": "Trunk",
+    "description": "The region of the trunk between the neck and abdomen. Its walls are formed principally by the thoracic vertebrae, ribs, sternum and associated muscles, enclosing the thoracic cavity and its major respiratory and cardiovascular structures.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Thorax",
+    "status": "approved"
+  },
+  "hypothalamus": {
+    "term": "Hypothalamus",
+    "category": "Central nervous system",
+    "location": "Diencephalon",
+    "description": "A region of the diencephalon located inferior to the thalamus and forming much of the floor and inferolateral walls of the third ventricle. It is connected to the pituitary gland through the infundibulum.",
+    "image": "assets/anatomy/hypothalamus.png",
+    "wikipedia": "https://en.wikipedia.org/wiki/Hypothalamus",
+    "status": "approved"
+  },
+  "gallbladder": {
+    "term": "Gallbladder",
+    "category": "Biliary organ",
+    "location": "Inferior surface of the liver",
+    "description": "A pear-shaped sac located in a fossa on the visceral surface of the liver. It consists of a fundus, body and neck and continues through the cystic duct, which joins the common hepatic duct to form the common bile duct.",
+    "image": "assets/anatomy/gallbladder.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Gallbladder",
+    "status": "approved"
+  },
+  "tooth": {
+    "term": "Tooth",
+    "category": "Oral structure",
+    "location": "Oral cavity",
+    "description": "A calcified structure anchored within an alveolus of the maxilla or mandible. Each tooth consists of a crown, neck and one or more roots and contains enamel, dentin, cementum and a central pulp cavity.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Human_tooth",
+    "status": "approved"
+  },
+  "trachea": {
+    "term": "Trachea",
+    "category": "Respiratory tract",
+    "location": "Neck and superior mediastinum",
+    "description": "A flexible airway extending from the larynx to its bifurcation into the right and left main bronchi. Its wall is supported by C-shaped hyaline cartilage rings, with the open posterior portions bridged by the trachealis muscle.",
+    "image": "assets/anatomy/trachea.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Trachea",
+    "status": "approved"
+  },
+  "mediastinum": {
+    "term": "Mediastinum",
+    "category": "Anatomical compartment",
+    "location": "Thoracic cavity",
+    "description": "The central compartment of the thoracic cavity between the two pleural cavities. It extends from the sternum to the vertebral column and contains the heart, great vessels, trachea, esophagus, thymus and other structures.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Mediastinum",
+    "status": "approved"
+  },
+  "pubis": {
+    "term": "Pubis",
+    "category": "Bone",
+    "location": "Anterior pelvis",
+    "description": "The anterior part of the hip bone, composed of a body and superior and inferior rami. The right and left pubic bones meet anteriorly at the pubic symphysis and contribute to the formation of the obturator foramen.",
+    "image": "assets/anatomy/pubis.webp",
+    "wikipedia": "https://en.wikipedia.org/wiki/Pubis_(bone)",
+    "status": "approved"
+  },
+  "pupil": {
+    "term": "Pupil",
+    "category": "Ocular structure",
+    "location": "Iris of the eye",
+    "description": "The central opening of the iris through which light enters the eye. Its diameter is controlled by the sphincter and dilator muscles of the iris, regulating the amount of light reaching the retina.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Pupil",
+    "status": "approved"
+  },
+  "sclera": {
+    "term": "Sclera",
+    "category": "Ocular structure",
+    "location": "Outer wall of the eyeball",
+    "description": "The tough, opaque fibrous layer forming most of the outer coat of the eyeball. It is continuous anteriorly with the cornea and provides protection, structural support and attachment for the extraocular muscles.",
+    "image": "assets/anatomy/sclera.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Sclera",
+    "status": "approved"
+  },
+  "bronchus": {
+    "term": "Bronchus",
+    "category": "Respiratory tract",
+    "location": "Thorax",
+    "description": "An airway arising from the tracheal bifurcation and conducting air toward the lungs. The right and left main bronchi enter their respective lungs and divide into lobar and subsequently segmental bronchi.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Bronchus",
+    "status": "approved"
+  },
+  "pharynx": {
+    "term": "Pharynx",
+    "category": "Upper aerodigestive tract",
+    "location": "Head and neck",
+    "description": "A muscular tube extending from the base of the skull to the esophagus, posterior to the nasal and oral cavities and larynx. It is divided into the nasopharynx, oropharynx and laryngopharynx.",
+    "image": "assets/anatomy/pharynx.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Pharynx",
+    "status": "approved"
+  },
+  "intercostal_space": {
+    "term": "Intercostal space",
+    "category": "Thoracic region",
+    "location": "Thoracic wall",
+    "description": "The space between adjacent ribs, occupied by intercostal muscles and associated neurovascular structures. The intercostal vein, artery and nerve run together within the costal groove near the inferior border of the rib above.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Intercostal_space",
+    "status": "approved"
+  },
+  "scapula": {
+    "term": "Scapula",
+    "category": "Bone",
+    "location": "Posterior shoulder region",
+    "description": "A flat triangular bone of the pectoral girdle located on the posterolateral thoracic wall. Its major landmarks include the spine, acromion, coracoid process and glenoid cavity, which articulates with the head of the humerus.",
+    "image": "assets/anatomy/scapula.png",
+    "wikipedia": "https://en.wikipedia.org/wiki/Scapula",
+    "status": "approved"
+  },
+  "duodenum": {
+    "term": "Duodenum",
+    "category": "Gastrointestinal organ",
+    "location": "Upper abdomen",
+    "description": "The first and shortest part of the small intestine, extending from the pylorus to the jejunum. It forms a C-shaped loop around the head of the pancreas and is divided into superior, descending, horizontal and ascending parts.",
+    "image": "assets/anatomy/duodenum.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Duodenum",
+    "status": "approved"
+  },
+  "toe": {
+    "term": "Toe",
+    "category": "Anatomical region",
+    "location": "Foot",
+    "description": "One of the five terminal digits of the foot. The great toe contains two phalanges, while the other toes usually contain three; together they contribute to support, balance and propulsion during locomotion.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Toe",
+    "status": "approved"
+  },
+  "pleura": {
+    "term": "Pleura",
+    "category": "Serous membrane",
+    "location": "Thoracic cavity",
+    "description": "A serous membrane consisting of visceral pleura covering the lungs and parietal pleura lining the thoracic wall, diaphragm and mediastinum. The two layers are continuous at the lung root and enclose the pleural cavity.",
+    "image": "assets/anatomy/pleura.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Pleurae",
+    "status": "approved"
+  },
+  "peritoneum": {
+    "term": "Peritoneum",
+    "category": "Serous membrane",
+    "location": "Abdominopelvic cavity",
+    "description": "A continuous serous membrane composed of parietal peritoneum lining the abdominopelvic walls and visceral peritoneum covering many abdominal organs. Reflections of the membrane form structures including mesenteries, omenta and peritoneal ligaments.",
+    "image": "assets/anatomy/peritoneum.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Peritoneum",
+    "status": "approved"
+  },
+  "sternum": {
+    "term": "Sternum",
+    "category": "Bone",
+    "location": "Anterior thoracic wall",
+    "description": "A flat bone forming the central anterior portion of the thoracic cage. It consists of the manubrium, body and xiphoid process and articulates with the clavicles and costal cartilages of the upper seven pairs of ribs.",
+    "image": "assets/anatomy/sternum.png",
+    "wikipedia": "https://en.wikipedia.org/wiki/Sternum",
+    "status": "approved"
+  },
+  "lesser_pelvis": {
+    "term": "Lesser pelvis",
+    "category": "Anatomical region",
+    "location": "Inferior pelvis",
+    "description": "The portion of the pelvic cavity below the pelvic inlet, bounded by the sacrum, coccyx and hip bones. It contains the pelvic viscera and extends inferiorly toward the pelvic outlet and pelvic floor.",
+    "image": "assets/anatomy/lesser_pelvis.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Pelvic_cavity",
+    "status": "approved"
+  },
+  "vestibular_nucleus": {
+    "term": "Vestibular nucleus",
+    "category": "Central nervous system",
+    "location": "Pons and medulla oblongata",
+    "description": "One of four paired vestibular nuclei located near the floor of the fourth ventricle. These nuclei receive input from the vestibular apparatus through the vestibular nerve and connect with ocular motor nuclei, the cerebellum and spinal cord.",
+    "image": "assets/anatomy/vestibular_nucleus.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Vestibular_nuclei",
+    "status": "approved"
+  },
+  "palate": {
+    "term": "Palate",
+    "category": "Oral structure",
+    "location": "Roof of the oral cavity",
+    "description": "The structure separating the oral cavity from the nasal cavity. Its anterior hard portion contains bone covered by mucosa, while its posterior soft portion consists mainly of muscle and ends in the uvula.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Palate",
+    "status": "approved"
+  },
+  "large_intestine": {
+    "term": "Large intestine",
+    "category": "Gastrointestinal organ",
+    "location": "Abdominal and pelvic cavities",
+    "description": "The terminal portion of the gastrointestinal tract extending from the ileocecal junction to the anus. It includes the cecum, colon, rectum and anal canal and is chiefly involved in water absorption, fecal formation and storage.",
+    "image": "assets/anatomy/large_intestine.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Large_intestine",
+    "status": "approved"
+  },
+  "epidermis": {
+    "term": "Epidermis",
+    "category": "Integumentary tissue",
+    "location": "Outer layer of the skin",
+    "description": "The superficial, avascular layer of the skin, composed of keratinized stratified squamous epithelium. Its principal layers extend from the stratum basale to the stratum corneum, with a distinct stratum lucidum present in thick skin.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Epidermis",
+    "status": "approved"
+  },
+  "prostate": {
+    "term": "Prostate",
+    "category": "Reproductive gland",
+    "location": "Male pelvis",
+    "description": "A fibromuscular gland situated immediately inferior to the urinary bladder and anterior to the rectum. It surrounds the proximal urethra and contains ducts that empty into the prostatic urethra.",
+    "image": "assets/anatomy/prostate.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Prostate",
+    "status": "approved"
+  },
+  "costal_arch": {
+    "term": "Costal arch",
+    "category": "Skeletal structure",
+    "location": "Inferior anterior thoracic wall",
+    "description": "The curved inferior border of the anterior thoracic cage, formed on each side by the costal cartilages of ribs seven through ten. The right and left costal margins meet near the xiphoid process to form the infrasternal angle.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Costal_margin",
+    "status": "approved"
+  },
+  "nipple": {
+    "term": "Nipple",
+    "category": "Mammary structure",
+    "location": "Anterior surface of the breast",
+    "description": "A small projection near the center of the areola through which the lactiferous ducts open onto the skin surface. It contains smooth muscle fibers and is surrounded by pigmented areolar skin containing specialized glands.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Nipple",
+    "status": "approved"
+  },
+  "mesencephalon": {
+    "term": "Mesencephalon",
+    "category": "Central nervous system",
+    "location": "Upper brainstem",
+    "description": "The midbrain, situated between the pons and diencephalon. It contains the cerebral aqueduct, tectum, tegmentum and cerebral peduncles, together with structures including the superior and inferior colliculi, red nucleus and substantia nigra.",
+    "image": "assets/anatomy/mesencephalon.png",
+    "wikipedia": "https://en.wikipedia.org/wiki/Midbrain",
+    "status": "approved"
+  },
+  "occipital_region": {
+    "term": "Occipital region",
+    "category": "Anatomical region",
+    "location": "Posterior head",
+    "description": "The posterior region of the head overlying the occipital bone. It extends toward the superior part of the neck and includes the external occipital protuberance and superior nuchal lines, which provide attachment for muscles and ligaments.",
+    "image": "assets/anatomy/occipital_region.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Occipital_bone",
+    "status": "approved"
+  },
+  "rectum": {
+    "term": "Rectum",
+    "category": "Gastrointestinal organ",
+    "location": "Posterior lesser pelvis",
+    "description": "The terminal segment of the large intestine between the sigmoid colon and anal canal. It follows the curvature of the sacrum and contains transverse rectal folds and an expanded distal portion called the rectal ampulla.",
+    "image": "assets/anatomy/rectum.webp",
+    "wikipedia": "https://en.wikipedia.org/wiki/Rectum",
+    "status": "approved"
+  },
+  "cervical_canal": {
+    "term": "Cervical canal",
+    "category": "Reproductive structure",
+    "location": "Cervix of the uterus",
+    "description": "The narrow passage extending through the cervix between the uterine cavity and vagina. It communicates with the uterine cavity through the internal os and with the vagina through the external os and is lined predominantly by mucus-secreting columnar epithelium.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Cervical_canal",
+    "status": "approved"
+  },
+  "reticular_formation": {
+    "term": "Reticular formation",
+    "category": "Central nervous system",
+    "location": "Brainstem",
+    "description": "A diffuse network of interconnected neurons extending through the tegmentum of the medulla oblongata, pons and midbrain. It contains multiple nuclei and pathways involved in arousal, autonomic regulation, motor control and pain modulation.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Reticular_formation",
+    "status": "approved"
+  },
+  "supramarginal_gyrus": {
+    "term": "Supramarginal gyrus",
+    "category": "Cerebral cortex",
+    "location": "Inferior parietal lobule",
+    "description": "A cortical gyrus of the inferior parietal lobule that curves around the posterior end of the lateral sulcus. It lies anterior to the angular gyrus and contributes to the cortical network involved in language and somatosensory integration.",
+    "image": "assets/anatomy/supramarginal_gyrus.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Supramarginal_gyrus",
+    "status": "approved"
+  },
+  "superior_parietal_lobule": {
+    "term": "Superior parietal lobule",
+    "category": "Cerebral cortex",
+    "location": "Parietal lobe",
+    "description": "A cortical region located posterior to the postcentral gyrus and superior to the intraparietal sulcus. It extends toward the medial surface of the hemisphere, where it continues as the precuneus, and participates in spatial and sensorimotor integration.",
+    "image": "assets/anatomy/superior_parietal_lobule.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Superior_parietal_lobule",
+    "status": "approved"
+  },
+  "angular_gyrus": {
+    "term": "Angular gyrus",
+    "category": "Cerebral cortex",
+    "location": "Inferior parietal lobule",
+    "description": "A cortical gyrus that curves around the posterior end of the superior temporal sulcus. It lies posterior to the supramarginal gyrus and forms part of the inferior parietal lobule, contributing to networks involved in language, reading and multimodal integration.",
+    "image": "assets/anatomy/angular_gyrus.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Angular_gyrus",
+    "status": "approved"
+  },
+  "brainstem": {
+    "term": "Brainstem",
+    "category": "Central nervous system",
+    "location": "Base of the brain",
+    "description": "The portion of the central nervous system connecting the diencephalon with the spinal cord. It consists of the midbrain, pons and medulla oblongata and contains major ascending and descending pathways, cranial nerve nuclei and the reticular formation.",
+    "image": "assets/anatomy/brainstem.webp",
+    "wikipedia": "https://en.wikipedia.org/wiki/Brainstem",
+    "status": "approved"
+  },
+  "postcentral_gyrus": {
+    "term": "Postcentral gyrus",
+    "category": "Cerebral cortex",
+    "location": "Parietal lobe",
+    "description": "A cortical gyrus immediately posterior to the central sulcus and anterior to the postcentral sulcus. It contains the primary somatosensory cortex, where sensory information from the contralateral body is represented in an organized somatotopic arrangement.",
+    "image": "assets/anatomy/postcentral_gyrus.png",
+    "wikipedia": "https://en.wikipedia.org/wiki/Postcentral_gyrus",
+    "status": "approved"
+  },
+  "ankle": {
+    "term": "Ankle",
+    "category": "Anatomical region",
+    "location": "Junction of leg and foot",
+    "description": "The region connecting the leg and foot, centered on the talocrural joint formed by the distal tibia, fibula and talus. The medial and lateral malleoli flank the joint, while surrounding ligaments provide stability during movement.",
+    "image": "assets/anatomy/ankle.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Ankle",
+    "status": "approved"
+  },
+  "oral_cavity": {
+    "term": "Oral cavity",
+    "category": "Oral structure",
+    "location": "Head, inferior to the nasal cavity",
+    "description": "The initial compartment of the digestive tract, bounded by the lips, cheeks, palate and floor of the mouth. It is divided into the oral vestibule and oral cavity proper, contains the teeth and tongue, and communicates posteriorly with the oropharynx through the isthmus of the fauces.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/oral_cavity",
+    "status": "approved"
+  },
+  "femur": {
+    "term": "Femur",
+    "category": "Bone",
+    "location": "Thigh",
+    "description": "The longest bone of the body, extending from the hip to the knee. Its head articulates with the acetabulum, while its distal condyles articulate with the tibia and patella.",
+    "image": "assets/anatomy/femur.webp",
+    "wikipedia": "https://en.wikipedia.org/wiki/femur",
+    "status": "approved"
+  },
+  "cornea": {
+    "term": "Cornea",
+    "category": "Ocular structure",
+    "location": "Anterior surface of the eyeball",
+    "description": "The transparent, avascular anterior part of the fibrous coat of the eye. It is continuous with the sclera at the limbus and provides much of the eye's refractive power.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/cornea",
+    "status": "approved"
+  },
+  "hypochondrium": {
+    "term": "Hypochondrium",
+    "category": "Anatomical region",
+    "location": "Upper lateral abdomen",
+    "description": "Either of the right and left upper lateral abdominal regions beneath the costal margins. The right overlies much of the liver, while the left overlies portions of the stomach and spleen.",
+    "image": "assets/anatomy/hypochondrium.webp",
+    "wikipedia": "https://en.wikipedia.org/wiki/Hypochondrium",
+    "status": "approved"
+  },
+  "inguinal_lymph_node": {
+    "term": "Inguinal_Lymph_Node",
+    "category": "Lymphatic structure",
+    "location": "Groin",
+    "description": "A lymph node in the inguinal region, belonging to superficial or deep groups. These nodes receive lymph from much of the lower limb and selected superficial regions of the lower abdominal wall, perineum and external genitalia.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Inguinal_lymph_nodes",
+    "status": "approved"
+  },
+  "bile_duct": {
+    "term": "Bile_Duct",
+    "category": "Biliary structure",
+    "location": "Liver and extrahepatic biliary tract",
+    "description": "A channel conveying bile from the liver toward the duodenum. Intrahepatic ducts merge into the right and left hepatic ducts; the common hepatic duct joins the cystic duct to form the common bile duct.",
+    "image": "assets/anatomy/bile_duct.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Bile_duct",
+    "status": "approved"
+  },
+  "precentral_gyrus": {
+    "term": "Precentral_Gyrus",
+    "category": "Cerebral cortex",
+    "location": "Frontal lobe",
+    "description": "A gyrus immediately anterior to the central sulcus that contains the primary motor cortex. Its neurons contribute to voluntary movement of the predominantly contralateral body in a somatotopic arrangement.",
+    "image": "assets/anatomy/precentral_gyrus.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Precentral_gyrus",
+    "status": "approved"
+  },
+  "red_nucleus": {
+    "term": "Red nucleus",
+    "category": "Central nervous system",
+    "location": "Midbrain tegmentum",
+    "description": "A paired, iron-rich nucleus in the rostral midbrain tegmentum. It receives cerebellar and cortical connections and participates in motor coordination through pathways including the rubrospinal tract.",
+    "image": "assets/anatomy/red_nucleus.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Red_nucleus",
+    "status": "approved"
+  },
+  "middle_ear": {
+    "term": "Middle_Ear",
+    "category": "Auditory structure",
+    "location": "Temporal bone",
+    "description": "An air-filled cavity between the tympanic membrane and inner ear. It contains the malleus, incus and stapes, communicates with the nasopharynx through the auditory tube and transmits sound vibrations to the oval window.",
+    "image": "assets/anatomy/middle_ear.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Middle_ear",
+    "status": "approved"
+  },
+  "humerus": {
+    "term": "Humerus",
+    "category": "Bone",
+    "location": "Arm",
+    "description": "The long bone of the arm, articulating proximally with the scapula at the shoulder and distally with the radius and ulna at the elbow. Its shaft bears the radial groove and deltoid tuberosity.",
+    "image": "assets/anatomy/humerus.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/humerus",
+    "status": "approved"
+  },
+  "retina": {
+    "term": "Retina",
+    "category": "Ocular neural tissue",
+    "location": "Inner layer of the eyeball",
+    "description": "The light-sensitive neural layer lining the posterior interior of the eye. It contains photoreceptors and associated neurons that process visual signals and transmit them through retinal ganglion cell axons into the optic nerve.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/retina",
+    "status": "approved"
+  },
+  "renal_pelvis": {
+    "term": "Renal_Pelvis",
+    "category": "Urinary collecting structure",
+    "location": "Renal sinus",
+    "description": "The funnel-shaped upper expansion of the ureter within the renal sinus. It collects urine from the major calyces and narrows at the ureteropelvic junction to become the ureter.",
+    "image": "assets/anatomy/renal_pelvis.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Renal_pelvis",
+    "status": "approved"
+  },
+  "eyeball": {
+    "term": "Eyeball",
+    "category": "Ocular organ",
+    "location": "Orbit",
+    "description": "The globe of the eye, enclosed by fibrous, vascular and neural coats. It contains the lens and aqueous and vitreous compartments, which direct light toward the retina.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/eyeball",
+    "status": "approved"
+  },
+  "interventricular_septum": {
+    "term": "Interventricular_Septum",
+    "category": "Cardiac structure",
+    "location": "Between the cardiac ventricles",
+    "description": "The partition separating the right and left ventricles of the heart. It consists mainly of a thick muscular portion and a smaller membranous portion near the atrioventricular and semilunar valves.",
+    "image": "assets/anatomy/interventricular_septum.webp",
+    "wikipedia": "https://en.wikipedia.org/wiki/interventricular_septum",
+    "status": "approved"
+  },
+  "femoral_artery": {
+    "term": "Femoral_Artery",
+    "category": "Artery",
+    "location": "Anterior thigh",
+    "description": "The continuation of the external iliac artery distal to the inguinal ligament. It passes through the femoral triangle and adductor canal and becomes the popliteal artery after traversing the adductor hiatus.",
+    "image": "assets/anatomy/femoral_artery.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/femoral_artery",
+    "status": "approved"
+  },
+  "ureter": {
+    "term": "Ureter",
+    "category": "Urinary duct",
+    "location": "Retroperitoneum and pelvis",
+    "description": "A paired muscular tube carrying urine from the renal pelvis to the urinary bladder by peristalsis. It descends retroperitoneally, crosses the pelvic brim and enters the bladder wall obliquely.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/ureter",
+    "status": "approved"
+  },
+  "pelvic_inlet": {
+    "term": "Pelvic_Inlet",
+    "category": "Anatomical boundary",
+    "location": "Superior opening of the lesser pelvis",
+    "description": "The superior aperture of the true pelvis, bounded by the sacral promontory, arcuate and pectineal lines and superior border of the pubic symphysis. It separates the greater and lesser pelvis.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Pelvic_inlet",
+    "status": "approved"
+  },
+  "occipital_lobe": {
+    "term": "Occipital_Lobe",
+    "category": "Cerebral cortex",
+    "location": "Posterior cerebral hemisphere",
+    "description": "The posterior lobe of the cerebral hemisphere, containing the primary visual cortex along the calcarine sulcus. It participates in processing visual information received through the geniculocalcarine pathway.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/occipital_lobe",
+    "status": "approved"
+  },
+  "parathyroid_gland": {
+    "term": "Parathyroid_Gland",
+    "category": "Endocrine gland",
+    "location": "Posterior aspect of the thyroid gland",
+    "description": "A small endocrine gland, usually one of four, situated near the posterior thyroid surface. Its chief cells secrete parathyroid hormone, which regulates extracellular calcium and phosphate balance.",
+    "image": "assets/anatomy/parathyroid_gland.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/parathyroid_gland",
+    "status": "approved"
+  },
+  "vertebral_column": {
+    "term": "Vertebral_Column",
+    "category": "Axial skeleton",
+    "location": "Posterior trunk",
+    "description": "The articulated series of vertebrae extending from the skull to the pelvis. It supports the trunk, protects the spinal cord within the vertebral canal and provides attachment for ribs, muscles and ligaments.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/vertebral_column",
+    "status": "approved"
+  },
+  "optic_nerve": {
+    "term": "Optic_Nerve",
+    "category": "Cranial nerve",
+    "location": "Orbit to optic chiasm",
+    "description": "Cranial nerve II, formed by axons of retinal ganglion cells. It exits the orbit through the optic canal and reaches the optic chiasm, where fibers from the nasal halves of the retinas cross.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/optic_nerve",
+    "status": "approved"
+  },
+  "adrenal_gland": {
+    "term": "Adrenal_Gland",
+    "category": "Endocrine gland",
+    "location": "Superior to each kidney",
+    "description": "A paired retroperitoneal gland enclosed by a fibrous capsule. Its cortex produces steroid hormones, while its medulla contains chromaffin cells that secrete catecholamines.",
+    "image": "assets/anatomy/adrenal_gland.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/adrenal_gland",
+    "status": "approved"
+  },
+  "buttock": {
+    "term": "Buttock",
+    "category": "Anatomical region",
+    "location": "Posterior hip",
+    "description": "The rounded gluteal region overlying the posterior pelvis and proximal femur. It contains the gluteal muscles, associated fascia and major neurovascular structures passing toward the lower limb.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/buttock",
+    "status": "approved"
+  },
+  "pelvic_outlet": {
+    "term": "Pelvic_Outlet",
+    "category": "Anatomical boundary",
+    "location": "Inferior opening of the lesser pelvis",
+    "description": "The inferior aperture of the bony pelvis, bounded by the pubic arch, ischial tuberosities, sacrotuberous ligaments and coccyx. It is largely closed by the pelvic floor and related soft tissues.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Pelvic_outlet",
+    "status": "approved"
+  },
+  "sagittal_suture": {
+    "term": "Sagittal_Suture",
+    "category": "Cranial suture",
+    "location": "Midline of cranial vault",
+    "description": "A fibrous joint between the right and left parietal bones. It extends from the coronal suture at bregma to the lambdoid suture at lambda.",
+    "image": "assets/anatomy/sagittal_suture.png",
+    "wikipedia": "https://en.wikipedia.org/wiki/sagittal_suture",
+    "status": "approved"
+  },
+  "parietal_lobe": {
+    "term": "Parietal_Lobe",
+    "category": "Cerebral cortex",
+    "location": "Superior posterior cerebral hemisphere",
+    "description": "A cerebral lobe posterior to the central sulcus and superior to the lateral sulcus. It contains the primary somatosensory cortex and association regions involved in spatial attention and sensory integration.",
+    "image": "assets/anatomy/parietal_lobe.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/parietal_lobe",
+    "status": "approved"
+  },
+  "frontal_lobe": {
+    "term": "Frontal_Lobe",
+    "category": "Cerebral cortex",
+    "location": "Anterior cerebral hemisphere",
+    "description": "The cerebral lobe anterior to the central sulcus. It contains primary motor and premotor areas, prefrontal association cortex and, in the dominant hemisphere, regions important for speech production.",
+    "image": "assets/anatomy/frontal_lobe.webp",
+    "wikipedia": "https://en.wikipedia.org/wiki/frontal_lobe",
+    "status": "approved"
+  },
+  "temporal_lobe": {
+    "term": "Temporal_Lobe",
+    "category": "Cerebral cortex",
+    "location": "Inferolateral cerebral hemisphere",
+    "description": "A cerebral lobe inferior to the lateral sulcus. It contains auditory cortical areas and medial temporal structures involved in memory, with additional roles in language and object recognition.",
+    "image": "assets/anatomy/temporal_lobe.webp",
+    "wikipedia": "https://en.wikipedia.org/wiki/temporal_lobe",
+    "status": "approved"
+  },
+  "enamel": {
+    "term": "Enamel",
+    "category": "Dental tissue",
+    "location": "Outer surface of the tooth crown",
+    "description": "The highly mineralized, acellular covering of the anatomical crown of a tooth. It is produced by ameloblasts during tooth development and protects the underlying dentin from mechanical and chemical wear.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/enamel",
+    "status": "approved"
+  },
+  "ileum": {
+    "term": "Ileum",
+    "category": "Gastrointestinal segment",
+    "location": "Lower abdomen and pelvis",
+    "description": "The distal part of the small intestine, extending from the jejunum to the ileocecal junction. It has mesenteric attachment and contains aggregated lymphoid nodules known as Peyer patches.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/ileum",
+    "status": "approved"
+  },
+  "popliteal_artery": {
+    "term": "Popliteal_Artery",
+    "category": "Artery",
+    "location": "Popliteal fossa",
+    "description": "The continuation of the femoral artery after it passes through the adductor hiatus. It courses behind the knee and typically divides into anterior and posterior tibial arteries near the inferior border of popliteus.",
+    "image": "assets/anatomy/popliteal_artery.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/popliteal_artery",
+    "status": "approved"
+  },
+  "eyelid": {
+    "term": "Eyelid",
+    "category": "Ocular accessory structure",
+    "location": "Anterior orbit",
+    "description": "A movable fold of skin and supporting tissue protecting the anterior eye. It contains the tarsal plates, orbicularis oculi muscle and glands that contribute to the tear film.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/eyelid",
+    "status": "approved"
+  },
+  "scrotum": {
+    "term": "Scrotum",
+    "category": "Reproductive structure",
+    "location": "External male genitalia",
+    "description": "A cutaneous and fibromuscular sac inferior to the penis that contains the testes, epididymides and distal spermatic cords. Its dartos muscle and associated mechanisms help regulate testicular temperature.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/scrotum",
+    "status": "approved"
+  },
+  "thalamus": {
+    "term": "Thalamus",
+    "category": "Central nervous system",
+    "location": "Diencephalon",
+    "description": "A paired mass of gray matter forming much of the lateral wall of the third ventricle. Its nuclei relay and integrate sensory, motor and limbic information with the cerebral cortex.",
+    "image": "assets/anatomy/thalamus.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/thalamus",
+    "status": "approved"
+  },
+  "pericardium": {
+    "term": "Pericardium",
+    "category": "Serous and fibrous sac",
+    "location": "Middle mediastinum",
+    "description": "The sac surrounding the heart and roots of the great vessels. It has an outer fibrous layer and an inner serous layer with parietal and visceral portions enclosing a potential fluid-filled cavity.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/pericardium",
+    "status": "approved"
+  },
+  "soft_palate": {
+    "term": "Soft_Palate",
+    "category": "Oral structure",
+    "location": "Posterior roof of the mouth",
+    "description": "A movable muscular fold extending posteriorly from the hard palate and ending in the uvula. It elevates during swallowing to help separate the nasopharynx from the oropharynx.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/soft_palate",
+    "status": "approved"
+  },
+  "adenohypophysis": {
+    "term": "Adenohypophysis",
+    "category": "Endocrine tissue",
+    "location": "Anterior pituitary gland",
+    "description": "The glandular portion of the pituitary, comprising the pars distalis, pars intermedia and pars tuberalis. Its endocrine cells secrete hormones including ACTH, TSH, GH, prolactin, FSH and LH.",
+    "image": "assets/anatomy/adenohypophysis.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Anterior_pituitary",
+    "status": "approved"
+  },
+  "lower_limb": {
+    "term": "Lower_Limb",
+    "category": "Anatomical region",
+    "location": "Hip to foot",
+    "description": "The appendicular region extending from the hip through the thigh, leg and foot. Its bones, joints, muscles and neurovascular structures support weight-bearing and locomotion.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/lower_limb",
+    "status": "approved"
+  },
+  "bronchiole": {
+    "term": "Bronchiole",
+    "category": "Respiratory airway",
+    "location": "Within the lungs",
+    "description": "A small airway distal to the bronchi that lacks cartilage and submucosal glands. Terminal bronchioles lead to respiratory bronchioles, where alveoli first appear in the airway walls.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/bronchiole",
+    "status": "approved"
+  },
+  "larynx": {
+    "term": "Larynx",
+    "category": "Respiratory and phonatory organ",
+    "location": "Anterior neck",
+    "description": "A cartilaginous and muscular airway between the pharynx and trachea. It contains the vocal folds and epiglottis and contributes to phonation, airway protection and breathing.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/larynx",
+    "status": "approved"
+  },
+  "trapezius": {
+    "term": "Trapezius",
+    "category": "Skeletal muscle",
+    "location": "Posterior neck and upper back",
+    "description": "A broad superficial muscle extending from the occipital region and vertebral midline to the clavicle, acromion and scapular spine. Its fibers elevate, retract, depress and upwardly rotate the scapula.",
+    "image": "assets/anatomy/trapezius.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/trapezius",
+    "status": "approved"
+  },
+  "saccule": {
+    "term": "Saccule",
+    "category": "Vestibular structure",
+    "location": "Vestibule of the inner ear",
+    "description": "One of the two otolith organs of the membranous labyrinth. Its macula detects linear acceleration and head position relative to gravity, particularly in the vertical plane.",
+    "image": "assets/anatomy/saccule.webp",
+    "wikipedia": "https://en.wikipedia.org/wiki/saccule",
+    "status": "approved"
+  },
+  "caecum": {
+    "term": "Caecum",
+    "category": "Gastrointestinal segment",
+    "location": "Right iliac fossa",
+    "description": "The blind proximal pouch of the large intestine immediately inferior to the ileocecal junction. The vermiform appendix arises from its posteromedial wall near the convergence of the taeniae coli.",
+    "image": "assets/anatomy/caecum.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Cecum",
+    "status": "approved"
+  },
+  "descending_colon": {
+    "term": "Descending_Colon",
+    "category": "Gastrointestinal segment",
+    "location": "Left abdomen",
+    "description": "The segment of colon extending from the left colic flexure to the sigmoid colon. It is usually secondarily retroperitoneal and descends along the left side of the posterior abdominal wall.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/descending_colon",
+    "status": "approved"
+  },
+  "helix": {
+    "term": "Helix",
+    "category": "Auricular structure",
+    "location": "Outer rim of the external ear",
+    "description": "The curved outer margin of the auricle formed by elastic cartilage covered with skin. It begins near the crus of the helix and continues around the superior and posterior ear toward the lobule.",
+    "image": "assets/anatomy/helix.webp",
+    "wikipedia": "https://en.wikipedia.org/wiki/helix",
+    "status": "approved"
+  },
+  "facial_muscle": {
+    "term": "Facial_Muscle",
+    "category": "Skeletal muscle group",
+    "location": "Face and scalp",
+    "description": "A member of the muscles of facial expression, typically arising from bone or fascia and inserting into the skin. These muscles are innervated by branches of the facial nerve and move facial soft tissues.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Muscles_of_facial_expression",
+    "status": "approved"
+  },
+  "axillary_region": {
+    "term": "Axillary_Region",
+    "category": "Anatomical region",
+    "location": "Between thoracic wall and upper arm",
+    "description": "The pyramidal region forming the armpit, bounded by the chest wall, scapular muscles and proximal arm. It contains the axillary vessels, brachial plexus cords and lymph nodes.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/axillary_region",
+    "status": "approved"
+  },
+  "gastrocnemius": {
+    "term": "Gastrocnemius",
+    "category": "Skeletal muscle",
+    "location": "Superficial posterior leg",
+    "description": "A two-headed calf muscle arising from the femoral condylar region and joining soleus in the calcaneal tendon. It plantarflexes the ankle and assists knee flexion.",
+    "image": "assets/anatomy/gastrocnemius.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/gastrocnemius",
+    "status": "approved"
+  },
+  "shoulder_girdle": {
+    "term": "Shoulder_Girdle",
+    "category": "Skeletal structure",
+    "location": "Junction of upper limb and trunk",
+    "description": "The pectoral girdle consists of the clavicle and scapula on each side. It links the upper limb to the axial skeleton through the sternoclavicular joint and provides a mobile base for shoulder movement.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Pectoral_girdle",
+    "status": "approved"
+  },
+  "inguinal_region": {
+    "term": "Inguinal_Region",
+    "category": "Anatomical region",
+    "location": "Lower anterior abdominal wall",
+    "description": "The groin region at the junction of the anterior abdominal wall and thigh. It contains the inguinal ligament and canal and overlies structures passing between the abdomen, pelvis and lower limb.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/inguinal_region",
+    "status": "approved"
+  },
+  "perineum": {
+    "term": "Perineum",
+    "category": "Anatomical region",
+    "location": "Inferior pelvic outlet",
+    "description": "The diamond-shaped region between the thighs inferior to the pelvic diaphragm. A line joining the ischial tuberosities divides it into anterior urogenital and posterior anal triangles.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/perineum",
+    "status": "approved"
+  },
+  "upper_limb": {
+    "term": "Upper_Limb",
+    "category": "Anatomical region",
+    "location": "Shoulder to hand",
+    "description": "The appendicular region consisting of the shoulder, arm, forearm and hand. Its skeleton and muscles enable positioning, reaching and precise manipulation of objects.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/upper_limb",
+    "status": "approved"
+  },
+  "helicotrema": {
+    "term": "Helicotrema",
+    "category": "Cochlear structure",
+    "location": "Apex of the cochlea",
+    "description": "The small opening at the cochlear apex where the scala vestibuli communicates with the scala tympani. It allows pressure waves to pass between these perilymph-filled compartments.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Helicotrema",
+    "status": "approved"
+  },
+  "renal_artery": {
+    "term": "Renal_Artery",
+    "category": "Artery",
+    "location": "Retroperitoneum at the renal hilum",
+    "description": "A paired lateral branch of the abdominal aorta supplying a kidney. Each typically divides into segmental branches near the hilum; the right renal artery passes posterior to the inferior vena cava.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/renal_artery",
+    "status": "approved"
+  },
+  "choroid": {
+    "term": "Choroid",
+    "category": "Ocular vascular layer",
+    "location": "Between sclera and retina",
+    "description": "The highly vascular posterior part of the uveal tract between the sclera and retina. It nourishes the outer retina, particularly the photoreceptors, and contains pigment that limits internal light scatter.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/choroid",
+    "status": "approved"
+  },
+  "left_atrium": {
+    "term": "Left_Atrium",
+    "category": "Cardiac chamber",
+    "location": "Posterosuperior heart",
+    "description": "The thin-walled chamber receiving oxygenated blood from the pulmonary veins. It communicates with the left ventricle through the mitral valve and forms much of the posterior base of the heart.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/left_atrium",
+    "status": "approved"
+  },
+  "forehead": {
+    "term": "Forehead",
+    "category": "Anatomical region",
+    "location": "Anterior head above the orbits",
+    "description": "The frontal region extending from the eyebrows toward the anterior hairline. It overlies the frontal bone and contains the frontalis portion of occipitofrontalis, vessels and cutaneous nerves.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/forehead",
+    "status": "approved"
+  },
+  "oropharynx": {
+    "term": "Oropharynx",
+    "category": "Pharyngeal segment",
+    "location": "Posterior to the oral cavity",
+    "description": "The middle part of the pharynx extending from the soft palate to the superior border of the epiglottis. It communicates anteriorly with the oral cavity through the oropharyngeal isthmus and contains the palatine tonsils.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/oropharynx",
+    "status": "approved"
+  },
+  "pituitary_gland": {
+    "term": "Pituitary_Gland",
+    "category": "Endocrine gland",
+    "location": "Sella turcica of the sphenoid bone",
+    "description": "A small endocrine organ connected to the hypothalamus by the infundibulum. Its anterior glandular lobe and posterior neural lobe participate in the regulation and release of multiple hormones.",
+    "image": "assets/anatomy/pituitary_gland.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Pituitary_gland",
+    "status": "approved"
+  },
+  "diaphragm": {
+    "term": "Diaphragm",
+    "category": "Skeletal muscle",
+    "location": "Between thoracic and abdominal cavities",
+    "description": "A dome-shaped musculotendinous partition and principal muscle of inspiration. Its fibers arise from the sternum, lower ribs and lumbar region and converge on a central tendon; major openings transmit the vena cava, esophagus and aorta.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/diaphragm",
+    "status": "approved"
+  },
+  "conjunctiva": {
+    "term": "conjunctiva",
+    "category": "nervous",
+    "location": "Inner surfaces of the eyelids and anterior sclera, excluding the cornea",
+    "description": "The conjunctiva is a thin, transparent mucous membrane that lines the inner eyelids and reflects onto the anterior surface of the eyeball. Its goblet cells contribute mucin to the tear film, helping maintain ocular surface lubrication.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Conjunctiva",
+    "status": "approved"
+  },
+  "masticatory_muscle": {
+    "term": "masticatory muscle",
+    "category": "musculoskeletal",
+    "location": "Head, around the mandible and temporomandibular joint",
+    "description": "The muscles of mastication comprise the masseter, temporalis, medial pterygoid, and lateral pterygoid. Supplied mainly by the mandibular division of the trigeminal nerve, they elevate, protrude, retract, and move the mandible during chewing.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Muscles_of_mastication",
+    "status": "approved"
+  },
+  "posterior_mediastinum": {
+    "term": "posterior mediastinum",
+    "category": "musculoskeletal",
+    "location": "Thorax, behind the pericardium and in front of the thoracic vertebral bodies",
+    "description": "The posterior mediastinum is the posterior part of the inferior mediastinum. It contains the thoracic aorta, esophagus, thoracic duct, azygos venous system, vagus nerves, and sympathetic trunks.",
+    "image": "assets/anatomy/posterior_mediastinum.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Posterior_mediastinum",
+    "status": "approved"
+  },
+  "umbilical_region": {
+    "term": "umbilical region",
+    "category": "musculoskeletal",
+    "location": "Central region of the anterior abdominal wall, around the umbilicus",
+    "description": "The umbilical region is the central area in the nine-region division of the abdomen. It surrounds the umbilicus and overlies portions of the small intestine and transverse colon, although organ positions vary.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Umbilical_region",
+    "status": "approved"
+  },
+  "transverse_colon": {
+    "term": "transverse colon",
+    "category": "gastrointestinal",
+    "location": "Abdominal cavity, crossing between the right and left colic flexures",
+    "description": "The transverse colon extends from the hepatic flexure to the splenic flexure. It is usually suspended by the transverse mesocolon and participates in absorption of water and electrolytes and movement of intestinal contents.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Transverse_colon",
+    "status": "approved"
+  },
+  "jejunum": {
+    "term": "jejunum",
+    "category": "gastrointestinal",
+    "location": "Abdominal cavity, predominantly upper left and central abdomen",
+    "description": "The jejunum is the middle segment of the small intestine, between the duodenum and ileum. Its prominent circular folds and villi support nutrient absorption, and it is suspended by the mesentery.",
+    "image": "assets/anatomy/jejunum.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Jejunum",
+    "status": "approved"
+  },
+  "hip_joint": {
+    "term": "hip joint",
+    "category": "musculoskeletal",
+    "location": "Pelvis and proximal thigh, between acetabulum and femoral head",
+    "description": "The hip joint is a synovial ball-and-socket articulation between the femoral head and acetabulum. Its strong capsule and surrounding ligaments provide stability while permitting flexion, extension, abduction, adduction, and rotation.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Hip",
+    "status": "approved"
+  },
+  "vulva": {
+    "term": "vulva",
+    "category": "reproductive",
+    "location": "External female genital region, anterior to the perineal body",
+    "description": "The vulva comprises the external female genital structures, including the mons pubis, labia majora and minora, clitoris, and vestibule. It surrounds the external urethral and vaginal openings and has protective and sensory functions.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Vulva",
+    "status": "approved"
+  },
+  "axillary_lymph_node": {
+    "term": "axillary lymph node",
+    "category": "lymphatic_and_immune",
+    "location": "Axilla, embedded in fat around axillary vessels",
+    "description": "Axillary lymph nodes are groups of lymph nodes that drain much of the upper limb, breast, and superficial thoracic wall. They are commonly described as pectoral, subscapular, humeral, central, and apical groups.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Axillary_lymph_nodes",
+    "status": "approved"
+  },
+  "interatrial_septum": {
+    "term": "interatrial septum",
+    "category": "cardiovascular",
+    "location": "Heart, between the right and left atria",
+    "description": "The interatrial septum separates the right and left atrial chambers. The fossa ovalis on its right atrial surface marks the site of the fetal foramen ovale.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Interatrial_septum",
+    "status": "approved"
+  },
+  "midclavicular_line": {
+    "term": "midclavicular line",
+    "category": "musculoskeletal",
+    "location": "Anterior thoracic and abdominal surface, through midpoint of clavicle",
+    "description": "The midclavicular line is an imaginary vertical surface landmark passing through the midpoint of the clavicle. It is used to describe anatomical locations and clinical examination findings.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Midclavicular_line",
+    "status": "approved"
+  },
+  "semicircular_canal": {
+    "term": "semicircular canal",
+    "category": "nervous",
+    "location": "Bony labyrinth of the inner ear, within the temporal bone",
+    "description": "The three semicircular canals are approximately perpendicular bony channels containing membranous semicircular ducts. Movement of endolymph stimulates sensory hair cells in the ampullae, contributing to detection of angular head acceleration.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Semicircular_canals",
+    "status": "approved"
+  },
+  "cingulate_gyrus": {
+    "term": "cingulate gyrus",
+    "category": "nervous",
+    "location": "Medial cerebral hemisphere, arching above the corpus callosum",
+    "description": "The cingulate gyrus is a cortical region of the limbic system on the medial surface of each cerebral hemisphere. It participates in attention, emotion, pain processing, and aspects of autonomic and behavioral regulation.",
+    "image": "assets/anatomy/cingulate_gyrus.png",
+    "wikipedia": "https://en.wikipedia.org/wiki/Cingulate_gyrus",
+    "status": "approved"
+  },
+  "gingiva": {
+    "term": "gingiva",
+    "category": "gastrointestinal",
+    "location": "Oral cavity, surrounding the cervical portions of teeth and covering alveolar processes",
+    "description": "The gingiva is specialized oral mucosa surrounding the teeth and covering parts of the alveolar processes. Its keratinized attached portion helps protect the underlying periodontal tissues during mastication.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Gums",
+    "status": "approved"
+  },
+  "beard": {
+    "term": "beard",
+    "category": "integumentary",
+    "location": "Lower facial skin, chiefly chin, jaw, cheeks, and upper neck",
+    "description": "A beard is facial hair that develops from follicles in the lower face, especially under androgen influence after puberty. Hair follicles are skin appendages associated with sebaceous glands and arrector pili muscles.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Beard",
+    "status": "approved"
+  },
+  "aortic_valve": {
+    "term": "aortic valve",
+    "category": "cardiovascular",
+    "location": "Heart, between left ventricle and ascending aorta",
+    "description": "The aortic valve is a semilunar valve with three cusps situated at the left ventricular outflow tract. It opens during ventricular systole and closes during diastole to prevent blood returning from the aorta to the ventricle.",
+    "image": "assets/anatomy/aortic_valve.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Aortic_valve",
+    "status": "approved"
+  },
+  "meninx": {
+    "term": "meninx",
+    "category": "nervous",
+    "location": "Around the brain and spinal cord, within the cranial cavity and vertebral canal",
+    "description": "The meninges are three connective-tissue coverings of the central nervous system: dura mater, arachnoid mater, and pia mater. The subarachnoid space between arachnoid and pia contains cerebrospinal fluid.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Meninges",
+    "status": "approved"
+  },
+  "appendix": {
+    "term": "appendix",
+    "category": "gastrointestinal",
+    "location": "Right lower abdomen, arising from the cecum",
+    "description": "The vermiform appendix is a narrow, blind-ended tube attached to the posteromedial cecum near the ileocecal junction. Its position varies, and its wall contains abundant lymphoid tissue.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Appendix_(anatomy)",
+    "status": "approved"
+  },
+  "optic_tract": {
+    "term": "optic tract",
+    "category": "nervous",
+    "location": "Base of the brain, between optic chiasm and lateral geniculate nucleus",
+    "description": "Each optic tract carries retinal ganglion cell axons from the optic chiasm toward visual relay nuclei, particularly the lateral geniculate nucleus. It conveys information from the contralateral visual hemifield.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Optic_tract",
+    "status": "approved"
+  },
+  "tympanic_membrane": {
+    "term": "tympanic membrane",
+    "category": "nervous",
+    "location": "At the boundary between external auditory canal and middle ear",
+    "description": "The tympanic membrane is a thin, cone-shaped membrane separating the external acoustic meatus from the middle-ear cavity. Sound-induced vibration is transmitted to the auditory ossicles through the attached malleus.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Eardrum",
+    "status": "approved"
+  },
+  "iris": {
+    "term": "iris",
+    "category": "nervous",
+    "location": "Anterior eye, between cornea and lens, surrounding pupil",
+    "description": "The iris is the pigmented diaphragm of the eye with a central opening called the pupil. Its sphincter and dilator muscles regulate pupil diameter and thus the amount of light entering the eye.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Iris_(anatomy)",
+    "status": "approved"
+  },
+  "lens": {
+    "term": "lens",
+    "category": "nervous",
+    "location": "Eye, posterior to iris and anterior to vitreous body",
+    "description": "The crystalline lens is a transparent, biconvex structure suspended by zonular fibers from the ciliary body. Changes in its curvature enable accommodation and help focus light on the retina.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Lens_(vertebrate_anatomy)",
+    "status": "approved"
+  },
+  "axillary_nerve": {
+    "term": "axillary nerve",
+    "category": "nervous",
+    "location": "Shoulder and axilla, passing through quadrangular space",
+    "description": "The axillary nerve arises from the posterior cord of the brachial plexus, mainly C5–C6. It winds around the surgical neck of the humerus and supplies the deltoid, teres minor, and skin over the lateral shoulder.",
+    "image": "assets/anatomy/axillary_nerve.png",
+    "wikipedia": "https://en.wikipedia.org/wiki/Axillary_nerve",
+    "status": "approved"
+  },
+  "femoral_nerve": {
+    "term": "femoral nerve",
+    "category": "nervous",
+    "location": "Pelvis and anterior thigh, passing deep to inguinal ligament",
+    "description": "The femoral nerve arises from posterior divisions of L2–L4 in the lumbar plexus. It supplies the anterior thigh muscles, including quadriceps femoris, and sensation to the anterior thigh and medial leg through its branches.",
+    "image": "assets/anatomy/femoral_nerve.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Femoral_nerve",
+    "status": "approved"
+  },
+  "ulnar_nerve": {
+    "term": "ulnar nerve",
+    "category": "nervous",
+    "location": "Medial upper limb, behind medial epicondyle and into hand",
+    "description": "The ulnar nerve arises mainly from C8–T1 fibers of the medial cord of the brachial plexus. It supplies several forearm flexors and most intrinsic hand muscles, with cutaneous sensation over the medial hand.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Ulnar_nerve",
+    "status": "approved"
+  },
+  "trigeminal_nerve": {
+    "term": "trigeminal nerve",
+    "category": "nervous",
+    "location": "Brainstem and face, emerging from lateral pons",
+    "description": "The trigeminal nerve is cranial nerve V and provides most general sensation from the face, cornea, nasal cavity, and oral cavity. Its mandibular division also carries motor fibers to the muscles of mastication.",
+    "image": "assets/anatomy/trigeminal_nerve.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Trigeminal_nerve",
+    "status": "approved"
+  },
+  "radial_nerve": {
+    "term": "radial nerve",
+    "category": "nervous",
+    "location": "Posterior arm, radial groove, lateral elbow, and forearm",
+    "description": "The radial nerve arises from the posterior cord of the brachial plexus, chiefly C5–T1. It supplies extensor muscles of the arm and forearm and provides cutaneous sensation to parts of the posterior limb and dorsolateral hand.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Radial_nerve",
+    "status": "approved"
+  },
+  "facial_nerve": {
+    "term": "facial nerve",
+    "category": "nervous",
+    "location": "Brainstem, temporal bone, and face",
+    "description": "The facial nerve, cranial nerve VII, supplies the muscles of facial expression. It also carries taste from the anterior two-thirds of the tongue and parasympathetic fibers to the lacrimal, submandibular, and sublingual glands.",
+    "image": "assets/anatomy/facial_nerve.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Facial_nerve",
+    "status": "approved"
+  },
+  "obturator_nerve": {
+    "term": "obturator nerve",
+    "category": "nervous",
+    "location": "Pelvis and medial thigh, passing through obturator canal",
+    "description": "The obturator nerve arises from the lumbar plexus, mainly L2–L4. It passes through the obturator canal to supply most thigh adductor muscles and a variable area of skin on the medial thigh.",
+    "image": "assets/anatomy/obturator_nerve.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Obturator_nerve",
+    "status": "approved"
+  },
+  "brachial_plexus": {
+    "term": "brachial plexus",
+    "category": "nervous",
+    "location": "Lower neck and axilla, between cervical spine and upper limb",
+    "description": "The brachial plexus is a network formed mainly by anterior rami of spinal nerves C5–T1. Its roots, trunks, divisions, cords, and terminal branches provide motor and sensory innervation to most of the upper limb.",
+    "image": "assets/anatomy/brachial_plexus.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Brachial_plexus",
+    "status": "approved"
+  },
+  "vagus_nerve": {
+    "term": "vagus nerve",
+    "category": "nervous",
+    "location": "From medulla through neck and thorax into abdomen",
+    "description": "The vagus nerve, cranial nerve X, carries parasympathetic fibers to thoracic and much of the abdominal viscera. It also contributes motor innervation to the pharynx and larynx and conveys visceral sensory information.",
+    "image": "assets/anatomy/vagus_nerve.webp",
+    "wikipedia": "https://en.wikipedia.org/wiki/Vagus_nerve",
+    "status": "approved"
+  },
+  "rubrospinal_tract": {
+    "term": "rubrospinal tract",
+    "category": "nervous",
+    "location": "Brainstem and spinal cord, descending from red nucleus",
+    "description": "The rubrospinal tract is a descending motor pathway originating in the red nucleus of the midbrain. Its fibers cross in the ventral tegmental decussation and descend mainly in the lateral spinal cord, contributing to motor control.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Rubrospinal_tract",
+    "status": "approved"
+  },
+  "tectospinal_tract": {
+    "term": "tectospinal tract",
+    "category": "nervous",
+    "location": "Midbrain and upper cervical spinal cord",
+    "description": "The tectospinal tract originates predominantly in the superior colliculus and crosses in the dorsal tegmental decussation. It descends toward cervical spinal levels and contributes to reflex orienting movements of the head and neck.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Tectospinal_tract",
+    "status": "approved"
+  },
+  "maxillary_nerve": {
+    "term": "maxillary nerve",
+    "category": "nervous",
+    "location": "Middle cranial fossa, pterygopalatine fossa, and midface",
+    "description": "The maxillary nerve is the sensory second division of the trigeminal nerve (V2). It exits the skull through the foramen rotundum and supplies sensation to the midface, upper teeth, palate, and parts of the nasal cavity.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Maxillary_nerve",
+    "status": "approved"
+  },
+  "mandibular_nerve": {
+    "term": "mandibular nerve",
+    "category": "nervous",
+    "location": "Infratemporal fossa and lower face",
+    "description": "The mandibular nerve is the third division of the trigeminal nerve (V3), emerging through the foramen ovale. It provides sensation to the lower face and mandibular teeth and motor innervation to the muscles of mastication.",
+    "image": "assets/anatomy/mandibular_nerve.png",
+    "wikipedia": "https://en.wikipedia.org/wiki/Mandibular_nerve",
+    "status": "approved"
+  },
+  "ophthalmic_nerve": {
+    "term": "ophthalmic nerve",
+    "category": "nervous",
+    "location": "Cavernous sinus, superior orbital fissure, and orbit",
+    "description": "The ophthalmic nerve is the sensory first division of the trigeminal nerve (V1). Its branches supply the cornea, upper eyelid, forehead, and portions of the nose and anterior scalp.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Ophthalmic_nerve",
+    "status": "approved"
+  },
+  "sciatic_nerve": {
+    "term": "sciatic nerve",
+    "category": "nervous",
+    "location": "Gluteal region and posterior thigh, extending toward popliteal fossa",
+    "description": "The sciatic nerve is formed from the sacral plexus, mainly L4–S3, and is the largest peripheral nerve. It usually exits below piriformis and divides into tibial and common fibular components that innervate much of the leg and foot.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Sciatic_nerve",
+    "status": "approved"
+  },
+  "median_nerve": {
+    "term": "median nerve",
+    "category": "nervous",
+    "location": "Anterior forearm and hand, passing through carpal tunnel",
+    "description": "The median nerve arises from lateral and medial cords of the brachial plexus, chiefly C6–T1. It supplies most forearm flexors, several thenar muscles, and sensation to the lateral palm and lateral three and a half digits.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Median_nerve",
+    "status": "approved"
+  },
+  "caudate_nucleus": {
+    "term": "caudate nucleus",
+    "category": "nervous",
+    "location": "Deep cerebral hemispheres, adjacent to lateral ventricles",
+    "description": "The caudate nucleus is a C-shaped gray-matter structure of the basal ganglia with head, body, and tail. Together with the putamen it forms the striatum, involved in motor, cognitive, and reward-related circuits.",
+    "image": "assets/anatomy/caudate_nucleus.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Caudate_nucleus",
+    "status": "approved"
+  },
+  "spiral_ganglion": {
+    "term": "spiral ganglion",
+    "category": "nervous",
+    "location": "Cochlea of inner ear, within the modiolus",
+    "description": "The spiral ganglion contains the cell bodies of primary auditory sensory neurons. Their peripheral processes contact cochlear hair cells, and central axons form the cochlear component of cranial nerve VIII.",
+    "image": "assets/anatomy/spiral_ganglion.webp",
+    "wikipedia": "https://en.wikipedia.org/wiki/Spiral_ganglion",
+    "status": "approved"
+  },
+  "superior_temporal_gyrus": {
+    "term": "superior temporal gyrus",
+    "category": "nervous",
+    "location": "Lateral temporal lobe, inferior to lateral sulcus",
+    "description": "The superior temporal gyrus lies on the upper lateral surface of the temporal lobe. Its regions participate in auditory processing and, particularly in the dominant hemisphere, aspects of spoken-language comprehension.",
+    "image": "assets/anatomy/superior_temporal_gyrus.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Superior_temporal_gyrus",
+    "status": "approved"
+  },
+  "pulmonary_artery": {
+    "term": "pulmonary artery",
+    "category": "cardiovascular",
+    "location": "Thorax, from right ventricular outflow toward lungs",
+    "description": "The pulmonary trunk leaves the right ventricle and divides into right and left pulmonary arteries. These arteries carry deoxygenated blood to the pulmonary circulation for gas exchange.",
+    "image": "assets/anatomy/pulmonary_artery.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Pulmonary_artery",
+    "status": "approved"
+  },
+  "lingual_artery": {
+    "term": "lingual artery",
+    "category": "cardiovascular",
+    "location": "Neck and floor of mouth, supplying tongue",
+    "description": "The lingual artery usually arises from the external carotid artery and passes deep to the hyoglossus muscle. Its branches supply the tongue, floor of the mouth, and adjacent structures.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Lingual_artery",
+    "status": "approved"
+  },
+  "facial_artery": {
+    "term": "facial artery",
+    "category": "cardiovascular",
+    "location": "Neck and face, crossing inferior border of mandible",
+    "description": "The facial artery is a branch of the external carotid artery that winds around the inferior margin of the mandible anterior to the masseter. It supplies the superficial face and gives branches to structures in the neck and oral region.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Facial_artery",
+    "status": "approved"
+  },
+  "right_coronary_artery": {
+    "term": "right coronary artery",
+    "category": "cardiovascular",
+    "location": "Coronary sulcus on right side of heart",
+    "description": "The right coronary artery arises from the right aortic sinus and travels in the right atrioventricular groove. Its branches commonly supply the right atrium, much of the right ventricle, and portions of the cardiac conduction system; dominance varies.",
+    "image": "assets/anatomy/right_coronary_artery.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Right_coronary_artery",
+    "status": "approved"
+  },
+  "superior_mesenteric_artery": {
+    "term": "superior mesenteric artery",
+    "category": "cardiovascular",
+    "location": "Abdomen, arising from anterior abdominal aorta below celiac trunk",
+    "description": "The superior mesenteric artery supplies the midgut, including most of the small intestine, cecum, ascending colon, and proximal two-thirds of the transverse colon. It passes anterior to the third part of the duodenum.",
+    "image": "assets/anatomy/superior_mesenteric_artery.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Superior_mesenteric_artery",
+    "status": "approved"
+  },
+  "superficial_temporal_artery": {
+    "term": "superficial temporal artery",
+    "category": "cardiovascular",
+    "location": "Temple and lateral scalp, anterior to ear",
+    "description": "The superficial temporal artery is a terminal branch of the external carotid artery. It ascends anterior to the ear and supplies the temporal and frontal scalp through its branches.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Superficial_temporal_artery",
+    "status": "approved"
+  },
+  "left_coronary_artery": {
+    "term": "left coronary artery",
+    "category": "cardiovascular",
+    "location": "Heart, arising from left aortic sinus",
+    "description": "The left coronary artery arises from the left aortic sinus and typically divides into anterior interventricular and circumflex branches. It supplies much of the left ventricle, left atrium, and interventricular septum, with variation in coronary dominance.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Left_coronary_artery",
+    "status": "approved"
+  },
+  "inferior_mesenteric_artery": {
+    "term": "inferior mesenteric artery",
+    "category": "cardiovascular",
+    "location": "Abdomen, arising from lower anterior abdominal aorta",
+    "description": "The inferior mesenteric artery supplies the hindgut, including distal transverse colon, descending colon, sigmoid colon, and upper rectum. Its principal branches include the left colic, sigmoid, and superior rectal arteries.",
+    "image": "assets/anatomy/inferior_mesenteric_artery.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Inferior_mesenteric_artery",
+    "status": "approved"
+  },
+  "middle_meningeal_artery": {
+    "term": "middle meningeal artery",
+    "category": "cardiovascular",
+    "location": "Middle cranial fossa, between skull and dura mater",
+    "description": "The middle meningeal artery usually arises from the maxillary artery and enters the cranial cavity through the foramen spinosum. It supplies the dura mater and runs deep to the pterion, where injury may cause an epidural hematoma.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Middle_meningeal_artery",
+    "status": "approved"
+  },
+  "portal_vein": {
+    "term": "portal vein",
+    "category": "cardiovascular",
+    "location": "Upper abdomen, from pancreas to liver",
+    "description": "The hepatic portal vein is formed mainly by union of the superior mesenteric and splenic veins behind the neck of the pancreas. It carries nutrient-rich venous blood from abdominal digestive organs and spleen to the liver.",
+    "image": "assets/anatomy/portal_vein.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Portal_vein",
+    "status": "approved"
+  },
+  "pineal_gland": {
+    "term": "pineal gland",
+    "category": "endocrine",
+    "location": "Roof of third ventricle, posterior diencephalon",
+    "description": "The pineal gland is a small endocrine organ attached to the posterior roof of the third ventricle. Its pinealocytes secrete melatonin, helping regulate circadian rhythms in response to light-dark cycles.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Pineal_gland",
+    "status": "approved"
+  },
+  "common_hepatic_duct": {
+    "term": "common hepatic duct",
+    "category": "gastrointestinal",
+    "location": "Hepatoduodenal ligament, below the liver",
+    "description": "The common hepatic duct is formed by union of the right and left hepatic ducts. It conveys bile from the liver and joins the cystic duct to form the common bile duct.",
+    "image": "assets/anatomy/common_hepatic_duct.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Common_hepatic_duct",
+    "status": "approved"
+  },
+  "inguinal_canal": {
+    "term": "inguinal canal",
+    "category": "musculoskeletal",
+    "location": "Lower anterior abdominal wall, superior to medial inguinal ligament",
+    "description": "The inguinal canal is an oblique passage through the lower anterior abdominal wall. It transmits the spermatic cord in males or round ligament of the uterus in females, along with the ilioinguinal nerve for part of its course.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Inguinal_canal",
+    "status": "approved"
+  },
+  "foramen_rotundum": {
+    "term": "foramen rotundum",
+    "category": "musculoskeletal",
+    "location": "Greater wing of sphenoid bone, between middle cranial and pterygopalatine fossae",
+    "description": "The foramen rotundum is a round opening in the sphenoid bone. It transmits the maxillary division of the trigeminal nerve (V2) from the middle cranial fossa into the pterygopalatine fossa.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Foramen_rotundum",
+    "status": "approved"
+  },
+  "spinal_ganglion": {
+    "term": "spinal ganglion",
+    "category": "nervous",
+    "location": "Intervertebral foramina along dorsal roots of spinal nerves",
+    "description": "A spinal ganglion, or dorsal root ganglion, contains cell bodies of primary sensory pseudounipolar neurons. Their peripheral processes receive somatic and visceral sensory information, while central processes enter the spinal cord.",
+    "image": "assets/anatomy/spinal_ganglion.jpg",
+    "wikipedia": "https://en.wikipedia.org/wiki/Dorsal_root_ganglion",
+    "status": "approved"
+  },
+  "greater_vestibular_gland": {
+    "term": "greater vestibular gland",
+    "category": "reproductive",
+    "location": "Posterolateral vaginal vestibule, deep to posterior labia majora",
+    "description": "The greater vestibular glands, also called Bartholin glands, are paired mucus-secreting glands near the vaginal opening. Their ducts open into the posterolateral vestibule and contribute lubrication.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Bartholin%27s_gland",
+    "status": "approved"
+  },
+  "lumbar_triangle": {
+    "term": "lumbar triangle",
+    "category": "musculoskeletal",
+    "location": "Posterolateral abdominal wall, above iliac crest",
+    "description": "The inferior lumbar triangle, or triangle of Petit, is bounded by latissimus dorsi posteriorly, external oblique anteriorly, and iliac crest inferiorly. Its floor is formed by internal oblique and it is a potential site of lumbar hernia.",
+    "image": null,
+    "wikipedia": "https://en.wikipedia.org/wiki/Lumbar_triangle",
+    "status": "approved"
+  }
+}

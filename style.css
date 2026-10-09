@@ -2189,3 +2189,91 @@ body.dark-mode .resume-practice-btn {
 body.dark-mode .resume-practice-btn:hover {
   background-color: rgba(96, 165, 250, 0.1);
 }
+
+/* ANATOMY POPOVER */
+.anatomy-popover {
+  position: absolute;
+  z-index: 1000;
+  width: 280px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  padding: 16px;
+  font-family: inherit;
+  color: #111827;
+}
+
+@media (max-width: 600px) {
+  .anatomy-popover {
+    width: calc(100vw - 20px);
+    max-width: 340px;
+    max-height: 85vh;
+    overflow-y: auto;
+  }
+}
+
+body.dark-mode .anatomy-popover {
+  background: #1f2937;
+  border-color: #374151;
+  color: #f9fafb;
+}
+
+.anatomy-popover-title {
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-bottom: 4px;
+}
+
+.anatomy-popover-meta {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+body.dark-mode .anatomy-popover-meta {
+  color: #9ca3af;
+}
+
+.anatomy-popover-desc {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.anatomy-highlight.has-popover {
+  cursor: pointer;
+}
+
+.anatomy-popover-image {
+  width: 100%;
+  height: auto;
+  max-height: 190px;
+  object-fit: contain;
+  margin-bottom: 12px;
+  border-radius: 4px;
+}
+
+.anatomy-popover-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #111827;
+  padding: 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+body.dark-mode .anatomy-popover-close {
+  background: rgba(31, 41, 55, 0.8);
+  color: #f9fafb;
+}
