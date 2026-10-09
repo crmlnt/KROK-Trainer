@@ -2240,6 +2240,23 @@ body.dark-mode .anatomy-popover-meta {
   line-height: 1.4;
 }
 
+.anatomy-popover-wikipedia {
+  display: inline-block;
+  margin-top: 12px;
+  color: #2563eb;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.anatomy-popover-wikipedia:hover {
+  text-decoration: underline;
+}
+
+body.dark-mode .anatomy-popover-wikipedia {
+  color: #60a5fa;
+}
+
 .anatomy-highlight.has-popover {
   cursor: pointer;
 }

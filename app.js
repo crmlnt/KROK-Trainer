@@ -40,6 +40,19 @@ function closeAnatomyPopover() {
   }
 }
 
+function getValidWikipediaUrl(value) {
+  if (typeof value !== "string") return null;
+
+  try {
+    const url = new URL(value);
+    const hostname = url.hostname.toLowerCase();
+    const isWikipedia = hostname === "wikipedia.org" || hostname.endsWith(".wikipedia.org");
+    return url.protocol === "https:" && isWikipedia ? url.href : null;
+  } catch {
+    return null;
+  }
+}
+
 function showAnatomyPopover(event, conceptId) {
   if (!anatomyContent || !anatomyContent[conceptId]) return;
 
@@ -55,18 +68,48 @@ function showAnatomyPopover(event, conceptId) {
   }
 
   const content = anatomyContent[conceptId];
-  let imageHtml = "";
+  anatomyPopoverEl.replaceChildren();
+
+  const closeButton = document.createElement("button");
+  closeButton.className = "anatomy-popover-close";
+  closeButton.type = "button";
+  closeButton.setAttribute("aria-label", "Close anatomy card");
+  closeButton.textContent = "×";
+  anatomyPopoverEl.appendChild(closeButton);
+
   if (content.image) {
-    imageHtml = `<img class="anatomy-popover-image" src="${content.image}" alt="${content.term} anatomy">`;
+    const image = document.createElement("img");
+    image.className = "anatomy-popover-image";
+    image.src = content.image;
+    image.alt = `${content.term} anatomy`;
+    anatomyPopoverEl.appendChild(image);
   }
 
-  anatomyPopoverEl.innerHTML = `
-    <button class="anatomy-popover-close" aria-label="Close anatomy card">&times;</button>
-    ${imageHtml}
-    <div class="anatomy-popover-title">${content.term}</div>
-    <div class="anatomy-popover-meta">${content.category} &middot; ${content.location}</div>
-    <div class="anatomy-popover-desc">${content.description}</div>
-  `;
+  const title = document.createElement("div");
+  title.className = "anatomy-popover-title";
+  title.textContent = content.term;
+  anatomyPopoverEl.appendChild(title);
+
+  const meta = document.createElement("div");
+  meta.className = "anatomy-popover-meta";
+  meta.textContent = `${content.category} · ${content.location}`;
+  anatomyPopoverEl.appendChild(meta);
+
+  const description = document.createElement("div");
+  description.className = "anatomy-popover-desc";
+  description.textContent = content.description;
+  anatomyPopoverEl.appendChild(description);
+
+  const wikipediaUrl = getValidWikipediaUrl(content.wikipedia);
+  if (wikipediaUrl) {
+    const wikipediaLink = document.createElement("a");
+    wikipediaLink.className = "anatomy-popover-wikipedia";
+    wikipediaLink.href = wikipediaUrl;
+    wikipediaLink.target = "_blank";
+    wikipediaLink.rel = "noopener noreferrer";
+    wikipediaLink.textContent = "Read more on Wikipedia ↗";
+    anatomyPopoverEl.appendChild(wikipediaLink);
+  }
 
   anatomyPopoverEl.style.display = "block";
   activeAnatomyPopover = event.target;
