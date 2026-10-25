@@ -703,3 +703,91 @@ test("subject trends exclude Past Paper metadata and sessions with missing or in
   );
   assert.deepEqual(result.subjects, []);
 });
+
+test("subject exam series groups normalized subject questions per session with deterministic ordering", () => {
+  const sessions = [
+    session("10", { created_at: "2026-01-20T12:00:00Z", subject: "All Topics", questions_total: 3, correct: 2 }),
+    session("2", { created_at: "2026-01-20T12:00:00Z", subject: "Normal Physiology", questions_total: 1, correct: 0 }),
+    session("earlier", { created_at: "2026-01-19T12:00:00Z", subject: "Normal Physiology", questions_total: 2, correct: 1 })
+  ];
+  const questions = [
+    question("10", "p1", { subject: "Normal Phisiology", is_correct: true }),
+    question("10", "p2", { subject: "Normal Physiology", is_correct: false }),
+    question("10", "a1", { subject: "Anatomy", is_correct: true }),
+    question("2", "p1", { subject: "Normal Physiology", is_correct: false }),
+    question("earlier", "p1", { subject: "Normal Physiology", is_correct: true }),
+    question("earlier", "p2", { subject: "Normal Physiology", is_correct: false })
+  ];
+
+  const result = analytics.calculateSubjectExamSeries(sessions, questions, options({
+    subject: "Normal Phisiology"
+  }));
+
+  assert.equal(result.subject, "Normal Physiology");
+  assert.equal(result.krok, 1);
+  assert.deepEqual(result.points.map(point => point.sessionId), ["earlier", "2", "10"]);
+  assert.deepEqual(result.points.map(point => [point.questionCount, point.correctCount, point.accuracy]), [
+    [2, 1, 50],
+    [1, 0, 0],
+    [2, 1, 50]
+  ]);
+});
+
+test("subject exam series isolates KROK, Exam Mode, and temporal boundaries", () => {
+  const sessions = [
+    session("at-start", { created_at: isoDaysBefore(7), questions_total: 1, correct: 1 }),
+    session("before-start", { created_at: isoDaysBefore(7, -1), questions_total: 1, correct: 1 }),
+    session("future", { created_at: REFERENCE, questions_total: 1, correct: 1 }),
+    session("practice", { created_at: isoDaysBefore(1), mode: "practice", questions_total: 1, correct: 1 }),
+    session("krok-2", { created_at: isoDaysBefore(1), krok: 2, questions_total: 1, correct: 1 })
+  ];
+  const questions = sessions.map(item => question(item.id, "q1"));
+
+  const krok1 = analytics.calculateSubjectExamSeries(sessions, questions, options({
+    subject: "Anatomy",
+    filter: analytics.TIME_FILTERS.LAST_7_DAYS
+  }));
+  const krok2 = analytics.calculateSubjectExamSeries(sessions, questions, options({
+    subject: "Anatomy",
+    krok: 2,
+    filter: analytics.TIME_FILTERS.LAST_7_DAYS
+  }));
+
+  assert.deepEqual(krok1.points.map(point => point.sessionId), ["at-start"]);
+  assert.deepEqual(krok2.points.map(point => point.sessionId), ["krok-2"]);
+  assert.equal(krok1.window.start, Date.parse(isoDaysBefore(7)));
+});
+
+test("subject exam series excludes every non-complete or unattributed detail set", () => {
+  const sessions = [
+    session("valid", { questions_total: 1, correct: 1 }),
+    session("missing", { questions_total: 1, correct: 1 }),
+    session("partial", { questions_total: 2, correct: 1 }),
+    session("duplicate", { questions_total: 2, correct: 2 }),
+    session("inconsistent", { questions_total: 1, correct: 0 }),
+    session("unattributed", { subject: "Past Paper 2024", questions_total: 1, correct: 1 })
+  ];
+  const questions = [
+    question("valid", "q1"),
+    question("partial", "q1"),
+    question("duplicate", "q1"),
+    question("duplicate", "q1", { id: "duplicate-second" }),
+    question("inconsistent", "q1", { is_correct: true }),
+    question("unattributed", "q1", { subject: "Past Paper 2024" })
+  ];
+
+  const result = analytics.calculateSubjectExamSeries(sessions, questions, options({
+    subject: "Anatomy"
+  }));
+  assert.deepEqual(result.points.map(point => point.sessionId), ["valid"]);
+
+  const empty = analytics.calculateSubjectExamSeries(sessions, questions, options({
+    subject: "Histology",
+    filter: analytics.TIME_FILTERS.LAST_7_DAYS
+  }));
+  assert.deepEqual(empty.points, []);
+  assert.throws(
+    () => analytics.calculateSubjectExamSeries(sessions, questions, options({ subject: "Past Paper 2024" })),
+    /valid medical subject/
+  );
+});

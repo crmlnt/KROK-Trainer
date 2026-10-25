@@ -27,14 +27,29 @@
             <button type="button" class="temporal-filter-button" data-time-filter="last_7_days" aria-pressed="false">Last 7 Days</button>
           </div>
         </div>
-        <section class="statistics-overview"><div class="stat-card stat-card-exams"><strong id="totalExams">0</strong><span>Exams Completed</span></div><div class="stat-card stat-card-questions"><strong id="totalQuestions">0</strong><span>Questions Answered</span></div><div class="stat-card stat-card-accuracy"><strong id="overallAccuracy">0%</strong><span>Overall Accuracy</span></div><div class="stat-card stat-card-best"><strong id="bestScore">0%</strong><span>Best Score</span></div></section>
-        <section class="statistics-panel"><div class="panel-header"><div><span class="panel-label">PROGRESS</span><h2>Performance over time</h2></div></div><div id="progressChart" class="progress-chart"><canvas id="progressCanvas"></canvas><p id="progressEmpty" class="period-empty" hidden></p></div></section>
-        <section class="statistics-panel"><div class="panel-header"><div><span class="panel-label">SUBJECTS</span><h2>Performance by subject</h2></div></div><div id="subjectStats" class="subject-stats"></div></section>
-        <section class="statistics-panel weak-subjects-panel">
-          <div class="panel-header weak-subjects-header"><div><span class="panel-label">FOCUS AREAS</span><h2>Weak Subjects</h2><p>Subjects are classified after at least 10 answered exam questions. The current KROK pass threshold is 64%.</p></div><div class="weak-legend"><span class="weak-legend-item weak">Weak &lt;50%</span><span class="weak-legend-item risk">At risk 50–63%</span><span class="weak-legend-item strong">On track ≥64%</span></div></div>
-          <div id="weakSubjects" class="weak-subjects"></div>
+        <div id="statisticsDashboard">
+          <section class="statistics-overview"><div class="stat-card stat-card-exams"><strong id="totalExams">0</strong><span>Exams Completed</span></div><div class="stat-card stat-card-questions"><strong id="totalQuestions">0</strong><span>Questions Answered</span></div><div class="stat-card stat-card-accuracy"><strong id="overallAccuracy">0%</strong><span>Overall Accuracy</span></div><div class="stat-card stat-card-best"><strong id="bestScore">0%</strong><span>Best Score</span></div></section>
+          <section class="statistics-panel"><div class="panel-header"><div><span class="panel-label">PROGRESS</span><h2>Performance over time</h2></div></div><div id="progressChart" class="progress-chart"><canvas id="progressCanvas"></canvas><p id="progressEmpty" class="period-empty" hidden></p></div></section>
+          <section class="statistics-panel"><div class="panel-header"><div><span class="panel-label">SUBJECTS</span><h2>Performance by subject</h2></div></div><div id="subjectStats" class="subject-stats"></div></section>
+          <section class="statistics-panel weak-subjects-panel">
+            <div class="panel-header weak-subjects-header"><div><span class="panel-label">FOCUS AREAS</span><h2>Weak Subjects</h2><p>Subjects are classified after at least 10 answered exam questions. The current KROK pass threshold is 64%.</p></div><div class="weak-legend"><span class="weak-legend-item weak">Weak &lt;50%</span><span class="weak-legend-item risk">At risk 50–63%</span><span class="weak-legend-item strong">On track ≥64%</span></div></div>
+            <div id="weakSubjects" class="weak-subjects"></div>
+          </section>
+          <section class="statistics-panel"><div class="panel-header"><div><span class="panel-label">EXAMS</span><h2>KROK breakdown</h2></div></div><div class="krok-breakdown"><div class="krok-stat-card"><span>KROK 1</span><strong id="krok1Accuracy">—</strong><small id="krok1Exams">0 exams</small></div><div class="krok-stat-card"><span>KROK 2</span><strong id="krok2Accuracy">—</strong><small id="krok2Exams">0 exams</small></div></div></section>
+        </div>
+        <section id="subjectDetail" class="subject-detail" aria-labelledby="subjectDetailTitle" hidden>
+          <button id="subjectDetailBack" class="subject-detail-back" type="button">← Back to Statistics</button>
+          <header class="subject-detail-header"><span class="statistics-eyebrow">SUBJECT DETAIL</span><h2 id="subjectDetailTitle"></h2><p id="subjectDetailKrok"></p></header>
+          <section class="statistics-overview subject-detail-overview">
+            <div class="stat-card stat-card-accuracy"><strong id="subjectDetailAccuracy">—</strong><span>Subject Accuracy</span></div>
+            <div class="stat-card stat-card-questions"><strong id="subjectDetailQuestions">0</strong><span>Questions Answered</span></div>
+            <div class="stat-card stat-card-exams"><strong id="subjectDetailExams">0</strong><span>Exams With Subject Questions</span></div>
+            <div class="stat-card stat-card-best"><strong id="subjectDetailDistance">—</strong><span>Distance to 64%</span></div>
+          </section>
+          <section class="statistics-panel"><div class="panel-header"><div><span class="panel-label">SUBJECT PROGRESS</span><h2>Performance over time</h2></div></div><div class="progress-chart"><canvas id="subjectProgressCanvas"></canvas><p id="subjectProgressEmpty" class="period-empty" hidden></p></div></section>
+          <section class="statistics-panel"><div class="panel-header"><div><span class="panel-label">LEARNING TREND</span><h2>Recent versus earlier questions</h2></div></div><div id="subjectDetailTrend" class="subject-detail-trend"></div></section>
+          <section class="statistics-panel"><div class="panel-header"><div><span class="panel-label">DATA COVERAGE</span><h2>KROK-period coverage</h2></div></div><p id="subjectDetailCoverage" class="subject-detail-coverage"></p></section>
         </section>
-        <section class="statistics-panel"><div class="panel-header"><div><span class="panel-label">EXAMS</span><h2>KROK breakdown</h2></div></div><div class="krok-breakdown"><div class="krok-stat-card"><span>KROK 1</span><strong id="krok1Accuracy">—</strong><small id="krok1Exams">0 exams</small></div><div class="krok-stat-card"><span>KROK 2</span><strong id="krok2Accuracy">—</strong><small id="krok2Exams">0 exams</small></div></div></section>
       </section>
     </main>
   </div>

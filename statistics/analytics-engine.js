@@ -538,6 +538,50 @@
     };
   }
 
+  function calculateSubjectExamSeries(sessions, questionRecords, options) {
+    const settings = options || {};
+    const subject = normalizeSubject(settings.subject);
+    if (subject === null || isMetadataSubject(subject)) {
+      throw new TypeError("subject must be a valid medical subject");
+    }
+    const krok = requireKrok(settings.krok);
+    const result = selectSessions(sessions, { ...settings, krok }, structuralSession);
+    const questionIndex = indexQuestionRecords(questionRecords);
+    const points = [];
+
+    for (const session of result.selected) {
+      const coverage = classifyCoverageForSession(session, questionIndex.get(session.id));
+      if (!coverage.eligibleForQuestionAnalytics) continue;
+      const matching = coverage.records.filter(
+        record => normalizeSubject(record.subject) === subject
+      );
+      if (matching.length === 0) continue;
+      const correctCount = matching.reduce(
+        (sum, record) => sum + (record.is_correct === true ? 1 : 0),
+        0
+      );
+      points.push({
+        sessionId: session.id,
+        createdAtTimestamp: session.createdAt,
+        questionCount: matching.length,
+        correctCount,
+        accuracy: accuracy(correctCount, matching.length)
+      });
+    }
+
+    points.sort((left, right) =>
+      left.createdAtTimestamp - right.createdAtTimestamp ||
+      compareIdentifiers(left.sessionId, right.sessionId)
+    );
+    return {
+      subject,
+      krok,
+      points,
+      integrity: integritySummary(result),
+      window: result.window
+    };
+  }
+
   function compareIdentifiers(left, right) {
     return String(left).localeCompare(String(right), "en", { numeric: true });
   }
@@ -781,6 +825,7 @@
     calculateOverallPerformance,
     classifyHistoricalCoverage,
     calculateSubjectPerformance,
+    calculateSubjectExamSeries,
     calculateSubjectTrends,
     compareRecentToPrevious,
     generateLearningTrend,

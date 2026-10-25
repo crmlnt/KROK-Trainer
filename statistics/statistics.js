@@ -18,6 +18,19 @@ const weakSubjectsEl = document.getElementById("weakSubjects");
 const progressCanvas = document.getElementById("progressCanvas");
 const progressEmptyEl = document.getElementById("progressEmpty");
 const temporalFilterButtons = Array.from(document.querySelectorAll("[data-time-filter]"));
+const statisticsDashboard = document.getElementById("statisticsDashboard");
+const subjectDetail = document.getElementById("subjectDetail");
+const subjectDetailBack = document.getElementById("subjectDetailBack");
+const subjectDetailTitle = document.getElementById("subjectDetailTitle");
+const subjectDetailKrok = document.getElementById("subjectDetailKrok");
+const subjectDetailAccuracy = document.getElementById("subjectDetailAccuracy");
+const subjectDetailQuestions = document.getElementById("subjectDetailQuestions");
+const subjectDetailExams = document.getElementById("subjectDetailExams");
+const subjectDetailDistance = document.getElementById("subjectDetailDistance");
+const subjectDetailTrend = document.getElementById("subjectDetailTrend");
+const subjectDetailCoverage = document.getElementById("subjectDetailCoverage");
+const subjectProgressCanvas = document.getElementById("subjectProgressCanvas");
+const subjectProgressEmpty = document.getElementById("subjectProgressEmpty");
 
 const WEAK_SUBJECT_MIN_QUESTIONS = StatisticsIntegration.WEAK_SUBJECT_MIN_QUESTIONS;
 const KROK_PASS_THRESHOLD = StatisticsIntegration.KROK_PASS_THRESHOLD;
@@ -30,9 +43,13 @@ const TIME_FILTER_LABELS = Object.freeze({
   [KrokAnalytics.TIME_FILTERS.LAST_7_DAYS]: "Last 7 Days"
 });
 let weakSubjectsExpanded = false;
-let selectedTimeFilter = DEFAULT_TIME_FILTER;
 let periodViewStore = null;
 let progressChartInstance = null;
+let subjectProgressChartInstance = null;
+const viewNavigator = StatisticsPageController.createViewNavigator({
+  engine: KrokAnalytics,
+  initialFilter: DEFAULT_TIME_FILTER
+});
 
 function getWeakSubjectStatus(stat) {
   return StatisticsIntegration.getWeakSubjectStatus(stat);
@@ -117,7 +134,7 @@ function renderWeakSubjects(subjectStats, filter, emptyMessage) {
     card.innerHTML = `
       <div class="weak-subject-main">
         <div class="weak-subject-title-row">
-          <h3>${stat.subject}</h3>
+          <h3></h3>
           <span class="weak-subject-badge">${badge}</span>
         </div>
         <div class="weak-subject-meta">${stat.questions} questions · ${stat.correct} correct · ${stat.exams} ${stat.exams === 1 ? "exam" : "exams"}</div>
@@ -125,6 +142,7 @@ function renderWeakSubjects(subjectStats, filter, emptyMessage) {
         ${trendMarkup(stat.trend, filter)}
       </div>
       <div class="weak-subject-score">${displayPercentage(stat.accuracy)}</div>`;
+    card.querySelector("h3").textContent = stat.subject;
 
     weakSubjectsEl.appendChild(card);
   });
@@ -215,7 +233,22 @@ function renderStatisticsView(view) {
     view.subjectStats.forEach(stat => {
       const row = document.createElement("div");
       row.className = "subject-stat-row";
-      row.innerHTML = `<div class="subject-stat-name">${stat.subject}<small>${stat.questions} questions · ${stat.exams} ${stat.exams === 1 ? "exam" : "exams"}</small></div><div class="subject-stat-track"><div class="subject-stat-fill" style="width:${stat.accuracy}%"></div></div><div class="subject-stat-value">${displayPercentage(stat.accuracy)}</div>`;
+      row.innerHTML = `<div class="subject-stat-name"><span class="subject-stat-label"></span><small>${stat.questions} questions · ${stat.exams} ${stat.exams === 1 ? "exam" : "exams"}</small></div><div class="subject-stat-track"><div class="subject-stat-fill" style="width:${stat.accuracy}%"></div></div><div class="subject-stat-value">${displayPercentage(stat.accuracy)}</div>`;
+      row.querySelector(".subject-stat-label").textContent = stat.subject;
+      const actions = document.createElement("div");
+      actions.className = "subject-stat-actions";
+      stat.byKrok.forEach(variant => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "subject-detail-action";
+        button.textContent = stat.byKrok.length > 1
+          ? `View KROK ${variant.krok} details`
+          : "View subject details";
+        button.setAttribute("aria-label", `View ${stat.subject} KROK ${variant.krok} details`);
+        button.addEventListener("click", () => openSubjectDetail(stat.subject, variant.krok));
+        actions.appendChild(button);
+      });
+      row.appendChild(actions);
       subjectStatsEl.appendChild(row);
     });
   }
@@ -243,15 +276,133 @@ function renderStatisticsView(view) {
   );
 }
 
+function subjectProgressChartConfig(view) {
+  const labels = view.series.map(point =>
+    new Date(point.createdAtTimestamp).toLocaleDateString("en-GB", {
+      day: "2-digit",
+      month: "short",
+      hour: "2-digit",
+      minute: "2-digit"
+    })
+  );
+  return {
+    type: "line",
+    data: {
+      labels,
+      datasets: [{
+        label: `${view.subject} accuracy`,
+        data: view.series.map(point => point.accuracy),
+        borderColor: "#16a34a",
+        backgroundColor: "rgba(22, 163, 74, 0.08)",
+        borderWidth: 3,
+        pointRadius: 5,
+        pointHoverRadius: 7,
+        tension: 0.3,
+        fill: true
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: context => `Accuracy: ${displayPercentage(context.raw)}`,
+            afterLabel: context => {
+              const point = view.series[context.dataIndex];
+              return `${point.correctCount}/${point.questionCount} correct · ${point.questionCount} ${point.questionCount === 1 ? "question" : "questions"}`;
+            }
+          }
+        }
+      },
+      scales: {
+        y: { min: 0, max: 100, ticks: { callback: value => `${value}%` } },
+        x: { grid: { display: false } }
+      }
+    }
+  };
+}
+
+function renderSubjectDetailView(view) {
+  const periodLabel = TIME_FILTER_LABELS[view.filter];
+  statisticsDashboard.hidden = true;
+  subjectDetail.hidden = false;
+  setTemporalSelectorState(view.filter);
+  window.KrokStatisticsCoverage = {
+    ...view.periodCoverage,
+    filter: view.filter,
+    window: view.window,
+    krok: view.krok,
+    scope: "krok_period"
+  };
+
+  subjectDetailTitle.textContent = view.subject;
+  subjectDetailKrok.textContent = `KROK ${view.krok} · ${periodLabel}`;
+  subjectDetailAccuracy.textContent = displayPercentage(view.accuracy);
+  subjectDetailQuestions.textContent = view.questionCount.toLocaleString();
+  subjectDetailExams.textContent = view.examCount.toLocaleString();
+  subjectDetailDistance.textContent = view.thresholdDistance;
+
+  const classificationNote = view.classification === "insufficient"
+    ? `<p class="subject-detail-coverage">Classification requires 10 eligible questions; ${view.questionCount} available in this period.</p>`
+    : "";
+  subjectDetailTrend.innerHTML = `${classificationNote}${trendMarkup(view.trend, view.filter)}`;
+
+  const coverage = view.periodCoverage;
+  subjectDetailCoverage.textContent =
+    `Across all KROK ${view.krok} Exam Mode sessions in ${periodLabel}, ` +
+    `${coverage.analyzedSessionCount} of ${coverage.selectedSessionCount} sessions had complete, usable question details. ` +
+    `${coverage.missingDetailSessionCount} had missing details and ${coverage.unattributedSessionCount} lacked usable subject attribution. ` +
+    "These coverage figures describe the selected KROK and period, not this subject alone.";
+
+  const hasSeries = view.series.length > 0;
+  subjectProgressCanvas.hidden = !hasSeries;
+  subjectProgressEmpty.hidden = hasSeries;
+  subjectProgressEmpty.textContent = hasSeries
+    ? ""
+    : `No eligible ${view.subject} question data is available for KROK ${view.krok} in ${periodLabel}.`;
+  subjectProgressChartInstance = StatisticsPageController.updateChartInstance(
+    subjectProgressChartInstance,
+    Chart,
+    subjectProgressCanvas,
+    subjectProgressChartConfig(view)
+  );
+}
+
+function renderActiveView() {
+  if (!periodViewStore) return;
+  const state = viewNavigator.getState();
+  if (state.mode === "subject") {
+    renderSubjectDetailView(
+      periodViewStore.getSubjectView(state.filter, state.subject, state.krok)
+    );
+    return;
+  }
+  subjectDetail.hidden = true;
+  statisticsDashboard.hidden = false;
+  renderStatisticsView(periodViewStore.getView(state.filter));
+}
+
+function openSubjectDetail(subject, krok) {
+  viewNavigator.openSubject(subject, krok);
+  renderActiveView();
+}
+
 function selectTimeFilter(filter) {
   if (!periodViewStore) return;
-  selectedTimeFilter = filter;
+  viewNavigator.selectFilter(filter);
   weakSubjectsExpanded = false;
-  renderStatisticsView(periodViewStore.getView(filter));
+  renderActiveView();
 }
 
 temporalFilterButtons.forEach(button => {
   button.addEventListener("click", () => selectTimeFilter(button.dataset.timeFilter));
+});
+
+subjectDetailBack.addEventListener("click", () => {
+  viewNavigator.showDashboard();
+  renderActiveView();
 });
 
 async function loadStatistics() {
@@ -284,7 +435,6 @@ async function loadStatistics() {
       return;
     }
 
-    selectedTimeFilter = DEFAULT_TIME_FILTER;
     renderStatisticsView(allTimeView);
 
     loadingSection.hidden = true;

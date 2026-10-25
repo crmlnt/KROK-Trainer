@@ -189,8 +189,9 @@ body {
   font-weight: 600;
 }
 
-#progressCanvas[hidden] {
-    display: none !important;
+#progressCanvas[hidden],
+#subjectProgressCanvas[hidden] {
+  display: none !important;
 }
 
 .subject-stats {
@@ -238,6 +239,71 @@ body {
   font-size: 0.82rem;
   font-weight: 800;
 }
+
+.subject-stat-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: -3px;
+}
+
+.subject-detail-action,
+.subject-detail-back {
+  border: 1px solid #86cfa5;
+  background: #f0fdf4;
+  color: #15803d;
+  font: inherit;
+  font-size: 0.72rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.subject-detail-action {
+  padding: 6px 9px;
+  border-radius: 8px;
+}
+
+.subject-detail-action:hover,
+.subject-detail-back:hover { background: #dcfce7; }
+.subject-detail-action:focus-visible,
+.subject-detail-back:focus-visible {
+  outline: 3px solid rgba(22, 163, 74, 0.3);
+  outline-offset: 2px;
+}
+
+.subject-detail-back {
+  margin-bottom: 20px;
+  padding: 9px 12px;
+  border-radius: 10px;
+}
+
+.subject-detail-header {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.subject-detail-header h2 {
+  margin: 8px 0 4px;
+  font-size: clamp(1.65rem, 4vw, 2.3rem);
+  letter-spacing: -0.035em;
+}
+
+.subject-detail-header p,
+.subject-detail-coverage {
+  color: #6b7280;
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+.subject-detail-header p { margin: 0; }
+.subject-detail-coverage { margin: 0; }
+.subject-detail-overview .stat-card-best strong {
+  font-size: 0.9rem;
+  line-height: 1.35;
+}
+.subject-detail-trend .weak-subject-trend { margin-top: 0; }
 
 .weak-subjects-header {
   align-items: flex-start;
@@ -414,6 +480,8 @@ body.dark-mode .weak-subjects-header p,
 body.dark-mode .weak-subject-meta,
 body.dark-mode .weak-subject-detail,
 body.dark-mode .weak-subjects-toggle,
+body.dark-mode .subject-detail-header p,
+body.dark-mode .subject-detail-coverage,
 body.dark-mode #statisticsLoading p,
 body.dark-mode #loginRequired p,
 body.dark-mode #emptyStatistics p {
@@ -473,6 +541,14 @@ body.dark-mode .trend-declining strong,
 body.dark-mode .trend-declining .trend-delta { color: #fca5a5; }
 body.dark-mode .trend-stable strong,
 body.dark-mode .trend-stable .trend-delta { color: #d1d5db; }
+body.dark-mode .subject-detail-action,
+body.dark-mode .subject-detail-back {
+  background: #183124;
+  border-color: #4f8f69;
+  color: #86cfa5;
+}
+body.dark-mode .subject-detail-action:hover,
+body.dark-mode .subject-detail-back:hover { background: #203d2c; }
 
 @media (max-width: 850px) {
   .statistics-overview { grid-template-columns: repeat(2, 1fr); }

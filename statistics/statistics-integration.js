@@ -317,22 +317,30 @@
 
   function mergeSubjects(subjectGroups, trendGroups) {
     const merged = new Map();
-    for (const subjects of subjectGroups) {
+    subjectGroups.forEach((subjects, index) => {
       for (const subject of subjects) {
         if (!merged.has(subject.subject)) {
           merged.set(subject.subject, {
             subject: subject.subject,
             questions: 0,
             correct: 0,
-            exams: 0
+            exams: 0,
+            byKrok: []
           });
         }
         const item = merged.get(subject.subject);
         item.questions += subject.questionCount;
         item.correct += subject.correctCount;
         item.exams += subject.sessionCount;
+        item.byKrok.push({
+          krok: index + 1,
+          questions: subject.questionCount,
+          correct: subject.correctCount,
+          exams: subject.sessionCount,
+          accuracy: subject.accuracy
+        });
       }
-    }
+    });
     const trendsBySubject = new Map();
     trendGroups.forEach((subjects, index) => {
       for (const trend of subjects) {
@@ -354,12 +362,99 @@
       return {
         ...item,
         accuracy: item.questions > 0 ? (item.correct / item.questions) * 100 : null,
-        trend
+        trend,
+        byKrok: item.byKrok.map(variant => ({
+          ...variant,
+          trend: trends.find(itemTrend => itemTrend.krok === variant.krok) || {
+            subject: item.subject,
+            status: "insufficient_data",
+            older: { questionCount: 0, correctCount: 0, accuracy: null },
+            newer: { questionCount: 0, correctCount: 0, accuracy: null },
+            differencePercentagePoints: null,
+            eligibleQuestionCount: 0,
+            krok: variant.krok
+          }
+        }))
       };
     }).sort((left, right) =>
       right.accuracy - left.accuracy || right.questions - left.questions ||
       left.subject.localeCompare(right.subject, "en")
     );
+  }
+
+  function adaptSubjectDetailView(sessions, questionRecords, engine, options) {
+    if (
+      !engine ||
+      typeof engine.buildAnalytics !== "function" ||
+      typeof engine.calculateSubjectExamSeries !== "function" ||
+      typeof engine.normalizeSubject !== "function" ||
+      typeof engine.getTimeWindow !== "function"
+    ) {
+      throw new TypeError("The KROK analytics engine is required");
+    }
+    const subject = engine.normalizeSubject(options?.subject);
+    const krok = options?.krok;
+    if (subject === null) throw new TypeError("A normalized subject is required");
+    if (krok !== 1 && krok !== 2) throw new TypeError("krok must be either 1 or 2");
+    const referenceTime = options?.referenceTime === undefined
+      ? Date.now()
+      : options.referenceTime;
+    const filter = options?.filter || engine.TIME_FILTERS.ALL_TIME;
+    engine.getTimeWindow(filter, referenceTime);
+    const analyticsOptions = { subject, krok, filter, referenceTime };
+    const analytics = engine.buildAnalytics(sessions, questionRecords, analyticsOptions);
+    const series = engine.calculateSubjectExamSeries(
+      sessions,
+      questionRecords,
+      analyticsOptions
+    );
+    const summary = analytics.subjects.subjects.find(item => item.subject === subject) || null;
+    const calculatedTrend = analytics.subjectTrends.subjects.find(
+      item => item.subject === subject
+    );
+    const trend = {
+      ...(calculatedTrend || {
+        subject,
+        status: "insufficient_data",
+        older: { questionCount: 0, correctCount: 0, accuracy: null },
+        newer: { questionCount: 0, correctCount: 0, accuracy: null },
+        differencePercentagePoints: null,
+        eligibleQuestionCount: 0
+      }),
+      krok
+    };
+    const questionCount = summary?.questionCount || 0;
+    const correctCount = summary?.correctCount || 0;
+    const accuracy = summary?.accuracy ?? null;
+    const coverage = analytics.coverage;
+
+    return {
+      subject,
+      krok,
+      filter,
+      window: series.window,
+      accuracy,
+      correctCount,
+      questionCount,
+      examCount: summary?.sessionCount || 0,
+      thresholdDistance: formatThresholdDistance(accuracy, KROK_PASS_THRESHOLD),
+      classification: getWeakSubjectStatus({ questions: questionCount, accuracy }),
+      trend,
+      series: series.points.map(point => ({
+        ...point,
+        createdAt: new Date(point.createdAtTimestamp).toISOString()
+      })),
+      periodCoverage: {
+        counts: coverage.counts,
+        selectedSessionCount: coverage.sessionLevel.selectedSessionCount,
+        meaningfulPerformanceSessionCount:
+          coverage.sessionLevel.meaningfulPerformanceSessionCount,
+        analyzedSessionCount: coverage.questionLevel.analyzedSessionCount,
+        missingDetailSessionCount: coverage.questionLevel.missingDetailSessionCount,
+        unattributedSessionCount: coverage.questionLevel.unattributedSessionCount,
+        excludedDetailSessionCount: coverage.questionLevel.excludedDetailSessionCount
+      }
+    };
   }
 
   function adaptAnalyticsToLegacyView(sessions, questionRecords, engine, options) {
@@ -463,6 +558,7 @@
     formatPercentage,
     formatThresholdDistance,
     getWeakSubjectStatus,
-    adaptAnalyticsToLegacyView
+    adaptAnalyticsToLegacyView,
+    adaptSubjectDetailView
   });
 });

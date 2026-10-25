@@ -507,11 +507,12 @@ test("adapter returns the legacy renderer field names and exact internal accurac
   });
   const subject = view.subjectStats[0];
 
-  assert.deepEqual(Object.keys(subject).sort(), ["accuracy", "correct", "exams", "questions", "subject", "trend"]);
+  assert.deepEqual(Object.keys(subject).sort(), ["accuracy", "byKrok", "correct", "exams", "questions", "subject", "trend"]);
   assert.equal(subject.questions, 3);
   assert.equal(subject.correct, 2);
   assert.equal(subject.exams, 1);
   assert.equal(subject.accuracy, (2 / 3) * 100);
+  assert.deepEqual(subject.byKrok.map(item => item.krok), [1]);
   assert.equal(view.progress[0].accuracy, (2 / 3) * 100);
 });
 
@@ -705,6 +706,74 @@ test("subject trends are recalculated from only the selected period", () => {
   assert.equal(lastSeven.subjectStats[0].trend.differencePercentagePoints, null);
 });
 
+test("subject detail contract is KROK-specific, exact, and coverage-transparent", () => {
+  const sessions = [
+    session("k1-complete", { created_at: "2026-12-30T10:00:00Z", subject: "All Topics", questions_total: 3, correct: 2, wrong: 1 }),
+    session("k1-missing", { created_at: "2026-12-30T11:00:00Z", questions_total: 10, correct: 7, wrong: 3 }),
+    session("k2-complete", { created_at: "2026-12-30T12:00:00Z", krok: 2, questions_total: 1, correct: 1, wrong: 0 })
+  ];
+  const questions = [
+    question("k1-a1", "k1-complete", "a1", { subject: "Anatomy", is_correct: true }),
+    question("k1-a2", "k1-complete", "a2", { subject: "Anatomy", is_correct: false }),
+    question("k1-p1", "k1-complete", "p1", { subject: "Normal Phisiology", is_correct: true }),
+    question("k2-a1", "k2-complete", "a1", { subject: "Anatomy", is_correct: true })
+  ];
+
+  const detail = integration.adaptSubjectDetailView(sessions, questions, engine, {
+    subject: "Anatomy",
+    krok: 1,
+    filter: engine.TIME_FILTERS.LAST_7_DAYS,
+    referenceTime: REFERENCE
+  });
+  const krok2 = integration.adaptSubjectDetailView(sessions, questions, engine, {
+    subject: "Anatomy",
+    krok: 2,
+    filter: engine.TIME_FILTERS.LAST_7_DAYS,
+    referenceTime: REFERENCE
+  });
+
+  assert.equal(detail.subject, "Anatomy");
+  assert.equal(detail.krok, 1);
+  assert.equal(detail.questionCount, 2);
+  assert.equal(detail.correctCount, 1);
+  assert.equal(detail.examCount, 1);
+  assert.equal(detail.accuracy, 50);
+  assert.equal(detail.thresholdDistance, "14 percentage points below the 64% pass threshold");
+  assert.equal(detail.classification, "insufficient");
+  assert.equal(detail.trend.krok, 1);
+  assert.deepEqual(detail.series.map(item => [item.sessionId, item.correctCount, item.questionCount]), [
+    ["k1-complete", 1, 2]
+  ]);
+  assert.equal(detail.periodCoverage.selectedSessionCount, 2);
+  assert.equal(detail.periodCoverage.analyzedSessionCount, 1);
+  assert.equal(detail.periodCoverage.missingDetailSessionCount, 1);
+  assert.equal(krok2.questionCount, 1);
+  assert.equal(krok2.accuracy, 100);
+});
+
+test("subject detail returns explicit null and insufficient states for an empty period", () => {
+  const detail = integration.adaptSubjectDetailView([
+    session("historical", { created_at: "2026-01-01T12:00:00Z" })
+  ], [
+    question("historical-row", "historical", "q1")
+  ], engine, {
+    subject: "Normal Phisiology",
+    krok: 1,
+    filter: engine.TIME_FILTERS.LAST_7_DAYS,
+    referenceTime: REFERENCE
+  });
+
+  assert.equal(detail.subject, "Normal Physiology");
+  assert.equal(detail.accuracy, null);
+  assert.equal(detail.questionCount, 0);
+  assert.equal(detail.examCount, 0);
+  assert.equal(detail.thresholdDistance, "—");
+  assert.equal(detail.classification, "insufficient");
+  assert.equal(detail.trend.status, "insufficient_data");
+  assert.equal(detail.trend.krok, 1);
+  assert.deepEqual(detail.series, []);
+});
+
 test("period switching caches four views without issuing additional Supabase queries", async () => {
   const client = createMockSupabase({
     exam_sessions: [session(1, { created_at: "2026-12-30T12:00:00Z" })],
@@ -732,6 +801,60 @@ test("period switching caches four views without issuing additional Supabase que
   assert.equal(restoredAllTime.window.end, Date.parse(REFERENCE));
 });
 
+test("subject detail cache is isolated by period, normalized subject, and KROK without new queries", async () => {
+  const client = createMockSupabase({
+    exam_sessions: [session(1, { created_at: "2026-12-30T12:00:00Z" })],
+    exam_session_questions: [question(1, 1, "q1")]
+  });
+  const data = await integration.loadStatisticsData(client, "user-1");
+  const callsAfterLoad = client.calls.length;
+  const store = pageController.createPeriodViewStore({
+    data,
+    engine,
+    integration,
+    referenceTime: Date.parse(REFERENCE)
+  });
+  const original = store.getSubjectView(
+    engine.TIME_FILTERS.ALL_TIME,
+    "Normal Phisiology",
+    1
+  );
+  const aliasHit = store.getSubjectView(
+    engine.TIME_FILTERS.ALL_TIME,
+    "Normal Physiology",
+    1
+  );
+  store.getSubjectView(engine.TIME_FILTERS.LAST_7_DAYS, "Normal Physiology", 1);
+  store.getSubjectView(engine.TIME_FILTERS.ALL_TIME, "Normal Physiology", 2);
+  store.getSubjectView(engine.TIME_FILTERS.ALL_TIME, "Anatomy", 1);
+
+  assert.strictEqual(aliasHit, original);
+  assert.equal(store.cachedSubjectViewCount, 4);
+  assert.equal(client.calls.length, callsAfterLoad);
+  assert.equal(store.cachedViewCount, 0);
+});
+
+test("view navigation preserves the selected period and returns to the dashboard", () => {
+  const navigator = pageController.createViewNavigator({
+    engine,
+    initialFilter: engine.TIME_FILTERS.ALL_TIME
+  });
+  navigator.openSubject("Normal Phisiology", 2);
+  const filtered = navigator.selectFilter(engine.TIME_FILTERS.LAST_30_DAYS);
+  assert.deepEqual(filtered, {
+    mode: "subject",
+    filter: engine.TIME_FILTERS.LAST_30_DAYS,
+    subject: "Normal Physiology",
+    krok: 2
+  });
+  assert.deepEqual(navigator.showDashboard(), {
+    mode: "dashboard",
+    filter: engine.TIME_FILTERS.LAST_30_DAYS,
+    subject: null,
+    krok: null
+  });
+});
+
 test("chart updates reuse a single Chart.js instance", () => {
   let constructions = 0;
   class FakeChart {
@@ -754,4 +877,28 @@ test("chart updates reuse a single Chart.js instance", () => {
   assert.equal(constructions, 1);
   assert.equal(second.updateCount, 1);
   assert.deepEqual(second.data, secondConfig.data);
+});
+
+test("dashboard and subject charts retain independent single instances", () => {
+  let constructions = 0;
+  class FakeChart {
+    constructor(canvas, config) {
+      constructions += 1;
+      this.canvas = canvas;
+      this.data = config.data;
+      this.options = config.options;
+      this.updateCount = 0;
+    }
+    update() { this.updateCount += 1; }
+  }
+  const config = { data: { labels: [], datasets: [] }, options: {} };
+  let dashboard = pageController.updateChartInstance(null, FakeChart, { id: "dashboard" }, config);
+  let subject = pageController.updateChartInstance(null, FakeChart, { id: "subject" }, config);
+  dashboard = pageController.updateChartInstance(dashboard, FakeChart, dashboard.canvas, config);
+  subject = pageController.updateChartInstance(subject, FakeChart, subject.canvas, config);
+
+  assert.equal(constructions, 2);
+  assert.equal(dashboard.updateCount, 1);
+  assert.equal(subject.updateCount, 1);
+  assert.notStrictEqual(dashboard, subject);
 });
