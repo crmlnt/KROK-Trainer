@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="description" content="Introducing Analytics 2.0 on KROK Trainer: a redesigned Statistics dashboard with temporal filters, Weak Subjects insights, KROK 1 and KROK 2 separation, and dedicated Subject Detail views.">
+  <title>Introducing Analytics 2.0: A Smarter Way to Track Your KROK Preparation — KROK Trainer</title>
+  <link rel="canonical" href="https://kroktrainer.com/news/analytics-2-0.html">
+  <link rel="stylesheet" href="../components/sidebar.css">
+  <link rel="stylesheet" href="../components/breadcrumb.css">
+  <link rel="stylesheet" href="news.css">
+</head>
+<body>
+  <aside id="appSidebar" data-root="../" data-active="news"></aside>
+  <div class="sidebar-page-shell">
+    <article class="article-page">
+      <nav id="appBreadcrumb" data-root="../" data-section="News & Articles" data-section-href="news/index.html" data-page="Introducing Analytics 2.0"></nav>
+      <a class="article-back" href="index.html">← Back to News & Updates</a>
+      <header class="article-header">
+        <div class="article-meta"><span>NEW RELEASE</span><time datetime="2026-10-25">25 October 2026</time></div>
+        <h1>Introducing Analytics 2.0: A Smarter Way to Track Your KROK Preparation</h1>
+        <p class="article-lead">Preparing for KROK takes more than answering hundreds of questions. Analytics 2.0 turns your completed Exam Mode sessions into clear, honest, subject-by-subject insights so you can decide where your next study hour matters most.</p>
+      </header>
+
+      <div class="article-body">
+        <h2>Introduction</h2>
+        <p>When you are preparing for KROK 1 or KROK 2, it is easy to measure effort by volume alone: how many tests you finished this week, or whether your last score happened to cross 64%. Yet a single exam score rarely tells the whole story. You might score 70% overall while consistently missing Pathomorphology questions, or feel stuck at 61% without realizing your recent sessions are much stronger than your earliest attempts.</p>
+        <p>Today we are releasing <strong>Analytics 2.0</strong>, a redesigned Statistics experience built to help registered students understand how their exam preparation is evolving across subjects, across time periods, and within each individual discipline.</p>
+
+        <h2>A clearer view of your progress</h2>
+        <p>The updated Statistics dashboard brings your core Exam Mode indicators together in a clean, scannable layout. At a glance, four color-accented summary cards highlight your <strong>Completed Exams</strong>, <strong>Answered Questions</strong>, question-weighted <strong>Overall Accuracy</strong>, and <strong>Best Exam Score</strong> for the selected period.</p>
+        <p>Because KROK exams vary in length—from focused 25-question subject tests to full 150-question Past Papers—Analytics 2.0 calculates overall accuracy across all answered exam questions rather than averaging session percentages. That means a full-length simulation carries its true weight alongside shorter subject tests.</p>
+
+        <figure class="a2-illustration" aria-label="Illustrative example of the Analytics 2.0 dashboard overview and temporal filters">
+          <div class="a2-illustration-header">
+            <span class="a2-illustration-badge">ILLUSTRATIVE PREVIEW</span>
+            <span class="a2-illustration-caption">Dashboard KPIs &amp; Time Range Filter</span>
+          </div>
+          <div class="a2-filter-bar" role="img" aria-label="Time range options: All Time, Last 90 Days, Last 30 Days selected, Last 7 Days">
+            <span class="a2-filter-label">Time range</span>
+            <div class="a2-filter-pills">
+              <span class="a2-pill">All Time</span>
+              <span class="a2-pill">Last 90 Days</span>
+              <span class="a2-pill active">Last 30 Days</span>
+              <span class="a2-pill">Last 7 Days</span>
+            </div>
+          </div>
+          <div class="a2-kpi-grid">
+            <div class="a2-kpi-card a2-kpi-exams">
+              <strong>14</strong>
+              <span>Completed Exams</span>
+            </div>
+            <div class="a2-kpi-card a2-kpi-questions">
+              <strong>520</strong>
+              <span>Answered Questions</span>
+            </div>
+            <div class="a2-kpi-card a2-kpi-accuracy">
+              <strong>68.5%</strong>
+              <span>Overall Accuracy</span>
+            </div>
+            <div class="a2-kpi-card a2-kpi-best">
+              <strong>82%</strong>
+              <span>Best Exam Score</span>
+            </div>
+          </div>
+          <figcaption class="a2-figcaption">Illustrative example showing how summary KPIs update together when you switch time ranges.</figcaption>
+        </figure>
+
+        <h2>Discover your strengths and weaknesses</h2>
+        <p>Below the overview and progress chart, Analytics 2.0 organizes your question-level results by medical discipline. Every question from completed Exam Mode sessions with full question details—including <strong>All Topics</strong> simulations and <strong>Past Paper</strong> exams where subject attribution is available—contributes to its corresponding subject.</p>
+        <p>Once you have answered at least 10 exam questions in a subject within the selected time window, that discipline appears in <strong>Weak Subjects</strong> and is classified against the 64% KROK passing benchmark:</p>
+        <ul>
+          <li><strong>Critical (&lt;50%)</strong> — subjects where foundational review and mistake analysis should take priority.</li>
+          <li><strong>Improve (50–63%)</strong> — subjects approaching the benchmark that need targeted reinforcement to reach passing level.</li>
+          <li><strong>On track (≥64%)</strong> — subjects currently meeting or exceeding the 64% threshold.</li>
+        </ul>
+
+        <figure class="a2-illustration" aria-label="Illustrative example of Weak Subjects cards and subject performance bars">
+          <div class="a2-illustration-header">
+            <span class="a2-illustration-badge">ILLUSTRATIVE PREVIEW</span>
+            <span class="a2-illustration-caption">Weak Subjects &amp; Subject Breakdown</span>
+          </div>
+          <div class="a2-weak-grid">
+            <div class="a2-weak-card a2-weak-critical">
+              <div class="a2-weak-top">
+                <strong>Pharmacology</strong>
+                <span class="a2-status-badge critical">Critical</span>
+              </div>
+              <div class="a2-weak-score">46.7%</div>
+              <div class="a2-weak-meta">21/45 correct · 17.3% below 64% target</div>
+              <div class="a2-trend-line">
+                <span class="a2-trend-pill improving">Improving</span>
+                <span>+8.5 pts vs earlier responses</span>
+              </div>
+            </div>
+            <div class="a2-weak-card a2-weak-improve">
+              <div class="a2-weak-top">
+                <strong>Pathomorphology</strong>
+                <span class="a2-status-badge improve">Improve</span>
+              </div>
+              <div class="a2-weak-score">58.3%</div>
+              <div class="a2-weak-meta">35/60 correct · 5.7% below 64% target</div>
+              <div class="a2-trend-line">
+                <span class="a2-trend-pill stable">Stable</span>
+                <span>+1.7 pts across 60 responses</span>
+              </div>
+            </div>
+            <div class="a2-weak-card a2-weak-ontrack">
+              <div class="a2-weak-top">
+                <strong>Normal Physiology</strong>
+                <span class="a2-status-badge ontrack">On track</span>
+              </div>
+              <div class="a2-weak-score">73.8%</div>
+              <div class="a2-weak-meta">59/80 correct · Meets 64% target</div>
+              <div class="a2-trend-line">
+                <span class="a2-trend-pill improving">Improving</span>
+                <span>+7.5 pts vs earlier responses</span>
+              </div>
+            </div>
+          </div>
+          <div class="a2-bars-list">
+            <div class="a2-bar-row">
+              <div class="a2-bar-label">Normal Physiology <small>80 questions · 6 exams</small></div>
+              <div class="a2-bar-track"><div class="a2-bar-fill" style="width:73.8%"></div></div>
+              <div class="a2-bar-value">73.8%</div>
+            </div>
+            <div class="a2-bar-row">
+              <div class="a2-bar-label">Pathomorphology <small>60 questions · 5 exams</small></div>
+              <div class="a2-bar-track"><div class="a2-bar-fill" style="width:58.3%"></div></div>
+              <div class="a2-bar-value">58.3%</div>
+            </div>
+            <div class="a2-bar-row">
+              <div class="a2-bar-label">Pharmacology <small>45 questions · 4 exams</small></div>
+              <div class="a2-bar-track"><div class="a2-bar-fill" style="width:46.7%"></div></div>
+              <div class="a2-bar-value">46.7%</div>
+            </div>
+          </div>
+          <figcaption class="a2-figcaption">Sample subject cards and progress bars illustrating classification badges and response trends.</figcaption>
+        </figure>
+
+        <h2>Track your progress over time</h2>
+        <p>All-time averages are helpful for the big picture, but they can also hide recent progress if you struggled during your first weeks of studying. Analytics 2.0 adds four temporal filters directly at the top of the Statistics page:</p>
+        <ul>
+          <li><strong>All Time</strong> — your complete validated Exam Mode history.</li>
+          <li><strong>Last 90 Days</strong> — a quarterly view suited for semester-long exam preparation.</li>
+          <li><strong>Last 30 Days</strong> — a monthly window to evaluate your current study routine.</li>
+          <li><strong>Last 7 Days</strong> — a focused look at your most recent revision week.</li>
+        </ul>
+        <p>Switching between time windows updates every section of the page—overall KPIs, the chronological progress chart, Weak Subjects, subject accuracy bars, and KROK 1 / KROK 2 summaries—instantly in your browser without reloading data from the server.</p>
+
+        <h2>Go deeper with Subject Detail</h2>
+        <p>Sometimes knowing your average in a subject is only the starting point. You may want to see whether your Anatomy or Internal Medicine accuracy has been climbing from exam to exam, or how far you currently stand from the 64% passing mark.</p>
+        <p>Every subject row now includes a dedicated <strong>Subject Detail</strong> view. Opening a subject displays:</p>
+        <ul>
+          <li><strong>Subject-specific KPIs</strong> — accuracy, answered questions, correct answers, and contributing exams for that discipline and KROK version.</li>
+          <li><strong>64% target distance</strong> — an explicit readout showing whether the subject meets the 64% threshold or how many percentage points remain.</li>
+          <li><strong>Per-exam accuracy chart</strong> — a chronological chart plotting your accuracy in that subject across each eligible completed exam in the selected period.</li>
+          <li><strong>Subject trend &amp; period coverage</strong> — clear status information showing how recent responses compare with earlier ones and how complete the underlying period dataset is.</li>
+        </ul>
+
+        <figure class="a2-illustration" aria-label="Illustrative example of the Subject Detail view and chronological per-exam chart">
+          <div class="a2-illustration-header">
+            <span class="a2-illustration-badge">ILLUSTRATIVE PREVIEW</span>
+            <span class="a2-illustration-caption">Subject Detail · KROK 1 · Pathomorphology</span>
+          </div>
+          <div class="a2-detail-preview">
+            <div class="a2-detail-summary">
+              <div class="a2-detail-stat">
+                <span>Subject Accuracy</span>
+                <strong>65.0%</strong>
+              </div>
+              <div class="a2-detail-stat">
+                <span>Answered Questions</span>
+                <strong>60</strong>
+              </div>
+              <div class="a2-detail-stat">
+                <span>64% Target Distance</span>
+                <strong class="a2-text-green">+1.0% vs 64%</strong>
+              </div>
+            </div>
+            <div class="a2-chart-box">
+              <div class="a2-chart-title">
+                <span>Per-exam accuracy progression</span>
+                <span class="a2-chart-target">--- 64% benchmark</span>
+              </div>
+              <svg class="a2-trend-svg" viewBox="0 0 520 150" role="img" aria-label="Illustrative chart showing per-exam accuracy rising from 48 percent to 72 percent across five exams">
+                <line x1="36" y1="25" x2="494" y2="25" class="a2-grid-line" />
+                <line x1="36" y1="68" x2="494" y2="68" class="a2-grid-line" />
+                <line x1="36" y1="115" x2="494" y2="115" class="a2-grid-line" />
+                <line x1="36" y1="58" x2="494" y2="58" class="a2-threshold-line" />
+                <polyline points="60,94 162,80 265,64 368,49 470,38" class="a2-series-line" fill="none" />
+                <circle cx="60" cy="94" r="5" class="a2-series-dot" />
+                <circle cx="162" cy="80" r="5" class="a2-series-dot" />
+                <circle cx="265" cy="64" r="5" class="a2-series-dot" />
+                <circle cx="368" cy="49" r="5" class="a2-series-dot" />
+                <circle cx="470" cy="38" r="5" class="a2-series-dot" />
+                <text x="60" y="136" text-anchor="middle" class="a2-axis-label">Exam 1 (48%)</text>
+                <text x="162" y="136" text-anchor="middle" class="a2-axis-label">Exam 2 (55%)</text>
+                <text x="265" y="136" text-anchor="middle" class="a2-axis-label">Exam 3 (62%)</text>
+                <text x="368" y="136" text-anchor="middle" class="a2-axis-label">Exam 4 (68%)</text>
+                <text x="470" y="136" text-anchor="middle" class="a2-axis-label">Exam 5 (72%)</text>
+              </svg>
+            </div>
+          </div>
+          <figcaption class="a2-figcaption">Illustrative Subject Detail chart showing per-exam accuracy progression relative to the 64% threshold.</figcaption>
+        </figure>
+
+        <h2>Reliable and transparent statistics</h2>
+        <p>Study analytics are only useful when you can trust how the numbers are calculated. While designing Analytics 2.0, we focused on making sure every metric reflects verified examination data rather than noisy approximations:</p>
+
+        <div class="a2-feature-cards">
+          <div class="a2-feature-card">
+            <div class="a2-feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V2h6v2M9 12l2 2 4-4"/></svg>
+            </div>
+            <h3>Exam Mode focus</h3>
+            <p>Statistics are calculated exclusively from completed Exam Mode sessions. Casual Practice Mode browsing stays separate so you can explore questions freely without worrying about lowering your exam metrics.</p>
+          </div>
+          <div class="a2-feature-card">
+            <div class="a2-feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>
+            </div>
+            <h3>KROK 1 &amp; KROK 2 separation</h3>
+            <p>KROK 1 and KROK 2 analytics are tracked independently. If a subject appears in both examinations, its trends and Subject Detail views remain strictly separated by KROK version.</p>
+          </div>
+          <div class="a2-feature-card">
+            <div class="a2-feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M17 7h4v4"/></svg>
+            </div>
+            <h3>Honest trend thresholds</h3>
+            <p>Subject trends (<em>Improving</em>, <em>Stable</em>, or <em>Declining</em>) require at least 40 validated responses in that subject and KROK version (comparing 20 older and 20 newer responses). Smaller samples are transparently labeled <em>Not enough data</em>.</p>
+          </div>
+          <div class="a2-feature-card">
+            <div class="a2-feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 3"/></svg>
+            </div>
+            <h3>Transparent historical coverage</h3>
+            <p>Older exam sessions saved before question-level tracking was introduced still count toward your overall Exam Mode totals, while coverage notes clearly indicate which sessions include detailed subject attribution.</p>
+          </div>
+        </div>
+
+        <div class="article-callout">
+          <strong>A tool for reflection, not a prediction</strong>
+          Analytics 2.0 is designed to help you organize your study priorities and see how your Exam Mode results evolve over time. It does not predict official examination outcomes, and it works best when combined with active mistake review and consistent practice.
+        </div>
+
+        <h2>Start exploring Analytics 2.0</h2>
+        <p>Analytics 2.0 is live now for all registered KROK Trainer users. Sign in to your account, complete an Exam Mode session or review your existing history, and explore your updated dashboard and Subject Detail views.</p>
+
+        <div class="a2-cta-box">
+          <div class="a2-cta-copy">
+            <strong>Ready to see your performance breakdown?</strong>
+            <span>Open the redesigned Statistics dashboard to explore your time filters, Weak Subjects, and Subject Detail views.</span>
+          </div>
+          <a class="a2-cta-button" href="../statistics/statistics.html">Open Statistics →</a>
+        </div>
+      </div>
+
+      <footer class="article-footer">
+        <a href="../statistics/statistics.html">Open Statistics →</a> &nbsp; · &nbsp; <a href="../news.html">View the release timeline →</a> &nbsp; · &nbsp; <a href="index.html">More KROK Trainer articles →</a>
+      </footer>
+    </article>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../supabase.js"></script>
+  <script src="../components/sidebar.js"></script>
+  <script src="../components/breadcrumb.js"></script>
+</body>
+</html>
