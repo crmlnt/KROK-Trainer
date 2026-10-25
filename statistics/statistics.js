@@ -16,25 +16,86 @@ const krok2ExamsEl = document.getElementById("krok2Exams");
 const subjectStatsEl = document.getElementById("subjectStats");
 const weakSubjectsEl = document.getElementById("weakSubjects");
 const progressCanvas = document.getElementById("progressCanvas");
+const progressEmptyEl = document.getElementById("progressEmpty");
+const temporalFilterButtons = Array.from(document.querySelectorAll("[data-time-filter]"));
+const statisticsDashboard = document.getElementById("statisticsDashboard");
+const subjectDetail = document.getElementById("subjectDetail");
+const subjectDetailBack = document.getElementById("subjectDetailBack");
+const subjectDetailTitle = document.getElementById("subjectDetailTitle");
+const subjectDetailKrok = document.getElementById("subjectDetailKrok");
+const subjectDetailAccuracy = document.getElementById("subjectDetailAccuracy");
+const subjectDetailQuestions = document.getElementById("subjectDetailQuestions");
+const subjectDetailExams = document.getElementById("subjectDetailExams");
+const subjectDetailDistance = document.getElementById("subjectDetailDistance");
+const subjectDetailTrend = document.getElementById("subjectDetailTrend");
+const subjectDetailCoverage = document.getElementById("subjectDetailCoverage");
+const subjectProgressCanvas = document.getElementById("subjectProgressCanvas");
+const subjectProgressEmpty = document.getElementById("subjectProgressEmpty");
 
-const WEAK_SUBJECT_MIN_QUESTIONS = 10;
-const KROK_PASS_THRESHOLD = 64;
+const WEAK_SUBJECT_MIN_QUESTIONS = StatisticsIntegration.WEAK_SUBJECT_MIN_QUESTIONS;
+const KROK_PASS_THRESHOLD = StatisticsIntegration.KROK_PASS_THRESHOLD;
 const WEAK_SUBJECT_PREVIEW_COUNT = 2;
+const DEFAULT_TIME_FILTER = KrokAnalytics.TIME_FILTERS.ALL_TIME;
+const TIME_FILTER_LABELS = Object.freeze({
+  [KrokAnalytics.TIME_FILTERS.ALL_TIME]: "All Time",
+  [KrokAnalytics.TIME_FILTERS.LAST_90_DAYS]: "Last 90 Days",
+  [KrokAnalytics.TIME_FILTERS.LAST_30_DAYS]: "Last 30 Days",
+  [KrokAnalytics.TIME_FILTERS.LAST_7_DAYS]: "Last 7 Days"
+});
 let weakSubjectsExpanded = false;
+let periodViewStore = null;
+let progressChartInstance = null;
+let subjectProgressChartInstance = null;
+const viewNavigator = StatisticsPageController.createViewNavigator({
+  engine: KrokAnalytics,
+  initialFilter: DEFAULT_TIME_FILTER
+});
 
 function getWeakSubjectStatus(stat) {
-  if (stat.questions < WEAK_SUBJECT_MIN_QUESTIONS) return "insufficient";
-  if (stat.accuracy < 50) return "weak";
-  if (stat.accuracy < KROK_PASS_THRESHOLD) return "risk";
-  return "strong";
+  return StatisticsIntegration.getWeakSubjectStatus(stat);
 }
 
-function renderWeakSubjects(subjectStats) {
+function displayPercentage(value, emptyValue = "—") {
+  return StatisticsIntegration.formatPercentage(value, emptyValue);
+}
+
+function percentagePointText(value, signed = false) {
+  const absolute = displayPercentage(Math.abs(value)).replace("%", "");
+  const sign = signed ? (value > 0 ? "+" : value < 0 ? "−" : "") : "";
+  return `${sign}${absolute} percentage points`;
+}
+
+function passThresholdDistance(accuracy) {
+  return StatisticsIntegration.formatThresholdDistance(accuracy, KROK_PASS_THRESHOLD);
+}
+
+function trendMarkup(trend, filter) {
+  const data = trend || { status: "insufficient_data" };
+  const content = {
+    improving: { label: "Improving", icon: "↗" },
+    stable: { label: "Stable", icon: "→" },
+    declining: { label: "Declining", icon: "↘" },
+    insufficient_data: { label: "Not enough data", icon: "—" }
+  }[data.status] || { label: "Not enough data", icon: "—" };
+  const scope = data.krok ? ` in KROK ${data.krok}` : "";
+  const periodScope = filter === KrokAnalytics.TIME_FILTERS.ALL_TIME
+    ? "across all eligible history"
+    : `within ${TIME_FILTER_LABELS[filter]}`;
+  if (data.status === "insufficient_data") {
+    const explanation = data.reason === "separate_krok_histories"
+      ? `KROK 1 and KROK 2 trend histories are kept separate ${periodScope}.`
+      : `Requires 20 earlier and 20 recent eligible responses${scope} ${periodScope}.`;
+    return `<div class="weak-subject-trend trend-insufficient"><span class="trend-icon" aria-hidden="true">${content.icon}</span><strong>${content.label}</strong><span>${explanation}</span></div>`;
+  }
+  return `<div class="weak-subject-trend trend-${data.status}"><span class="trend-icon" aria-hidden="true">${content.icon}</span><strong>${content.label}</strong><span class="trend-delta">${percentagePointText(data.differencePercentagePoints, true)}</span><span>Recent versus earlier eligible responses${scope} ${periodScope}.</span></div>`;
+}
+
+function renderWeakSubjects(subjectStats, filter, emptyMessage) {
   if (!weakSubjectsEl) return;
   weakSubjectsEl.innerHTML = "";
 
   if (!subjectStats.length) {
-    weakSubjectsEl.innerHTML = '<div class="weak-subjects-empty">Complete Exam Mode sessions to start identifying your focus areas.</div>';
+    weakSubjectsEl.innerHTML = `<div class="weak-subjects-empty">${emptyMessage}</div>`;
     return;
   }
 
@@ -57,30 +118,31 @@ function renderWeakSubjects(subjectStats) {
     card.className = `weak-subject-card status-${status}`;
 
     let badge = "Not enough data";
-    let detail = `${remaining} more question${remaining === 1 ? "" : "s"} needed`;
+    let detail = `${remaining} more question${remaining === 1 ? "" : "s"} needed · ${passThresholdDistance(stat.accuracy)}`;
 
     if (status === "weak") {
       badge = "Weak";
-      detail = "Priority review recommended";
+      detail = passThresholdDistance(stat.accuracy);
     } else if (status === "risk") {
       badge = "At risk";
-      detail = `Below the ${KROK_PASS_THRESHOLD}% pass threshold`;
+      detail = passThresholdDistance(stat.accuracy);
     } else if (status === "strong") {
       badge = "On track";
-      detail = `At or above the ${KROK_PASS_THRESHOLD}% pass threshold`;
+      detail = passThresholdDistance(stat.accuracy);
     }
 
     card.innerHTML = `
       <div class="weak-subject-main">
         <div class="weak-subject-title-row">
-          <h3>${stat.subject}</h3>
+          <h3></h3>
           <span class="weak-subject-badge">${badge}</span>
         </div>
         <div class="weak-subject-meta">${stat.questions} questions · ${stat.correct} correct · ${stat.exams} ${stat.exams === 1 ? "exam" : "exams"}</div>
-        <div class="weak-subject-track" aria-hidden="true"><div class="weak-subject-fill" style="width:${Math.min(stat.accuracy, 100)}%"></div></div>
         <div class="weak-subject-detail">${detail}</div>
+        ${trendMarkup(stat.trend, filter)}
       </div>
-      <div class="weak-subject-score">${stat.accuracy}%</div>`;
+      <div class="weak-subject-score">${displayPercentage(stat.accuracy)}</div>`;
+    card.querySelector("h3").textContent = stat.subject;
 
     weakSubjectsEl.appendChild(card);
   });
@@ -97,105 +159,292 @@ function renderWeakSubjects(subjectStats) {
       </svg>`;
     toggle.addEventListener("click", () => {
       weakSubjectsExpanded = !weakSubjectsExpanded;
-      renderWeakSubjects(subjectStats);
+      renderWeakSubjects(subjectStats, filter, emptyMessage);
     });
     weakSubjectsEl.appendChild(toggle);
   }
 }
 
-async function loadStatistics() {
-  const { data: { user }, error: userError } = await supabaseClient.auth.getUser();
-  if (userError || !user) { loadingSection.hidden = true; loginRequired.hidden = false; return; }
+function setTemporalSelectorState(filter) {
+  temporalFilterButtons.forEach(button => {
+    button.setAttribute("aria-pressed", String(button.dataset.timeFilter === filter));
+  });
+}
 
-  const { data: sessions, error } = await supabaseClient.from("exam_sessions").select("*").eq("user_id", user.id).order("created_at", { ascending: true });
-  if (error) { console.error("Error loading statistics:", error); loadingSection.innerHTML = "<p>Unable to load statistics.</p>"; return; }
-  if (!sessions || sessions.length === 0) { loadingSection.hidden = true; emptyStatistics.hidden = false; return; }
+function progressChartConfig(labels, scores) {
+  return {
+    type: "line",
+    data: {
+      labels,
+      datasets: [{
+        label: "Exam Score",
+        data: scores,
+        borderColor: "#16a34a",
+        backgroundColor: "rgba(22, 163, 74, 0.08)",
+        borderWidth: 3,
+        pointRadius: 5,
+        pointHoverRadius: 7,
+        tension: 0.3,
+        fill: true
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: { callbacks: { label: context => `Score: ${displayPercentage(context.raw)}` } }
+      },
+      scales: {
+        y: { min: 0, max: 100, ticks: { callback: value => `${value}%` } },
+        x: { grid: { display: false } }
+      }
+    }
+  };
+}
 
-  const { data: questionRows, error: questionError } = await supabaseClient
-    .from("exam_session_questions")
-    .select("exam_session_id, subject, is_correct")
-    .eq("user_id", user.id);
+function renderStatisticsView(view) {
+  const periodLabel = TIME_FILTER_LABELS[view.filter];
+  const hasExams = view.totalExams > 0;
+  const subjectEmptyMessage = hasExams
+    ? `No eligible question-level subject data is available for ${periodLabel}. Overall exam metrics remain available.`
+    : `No Exam Mode sessions are available for ${periodLabel}.`;
 
-  if (questionError) console.error("Error loading question-level statistics:", questionError);
+  setTemporalSelectorState(view.filter);
+  window.KrokStatisticsCoverage = {
+    ...view.coverage,
+    filter: view.filter,
+    window: view.window
+  };
 
-  const totalExams = sessions.length;
-  const totalQuestions = sessions.reduce((sum, session) => sum + Number(session.questions_total || 0), 0);
-  const totalCorrect = sessions.reduce((sum, session) => sum + Number(session.correct || 0), 0);
-  const overallAccuracy = totalQuestions > 0 ? Math.round((totalCorrect / totalQuestions) * 100) : 0;
-  const bestScore = Math.max(...sessions.map(session => Number(session.score || 0)));
-
-  function calculateKrokStats(krokNumber) {
-    const krokSessions = sessions.filter(session => Number(session.krok) === krokNumber);
-    if (!krokSessions.length) return { exams: 0, accuracy: null };
-    const questions = krokSessions.reduce((sum, session) => sum + Number(session.questions_total || 0), 0);
-    const correct = krokSessions.reduce((sum, session) => sum + Number(session.correct || 0), 0);
-    return { exams: krokSessions.length, accuracy: questions ? Math.round((correct / questions) * 100) : 0 };
-  }
-
-  const krok1Stats = calculateKrokStats(1);
-  const krok2Stats = calculateKrokStats(2);
-
-  const subjectMap = {};
-  if (!questionError && questionRows?.length) {
-    questionRows.forEach(row => {
-      const subject = row.subject || "Unknown";
-      if (!subjectMap[subject]) subjectMap[subject] = { questions: 0, correct: 0, sessionIds: new Set() };
-      subjectMap[subject].questions += 1;
-      if (row.is_correct) subjectMap[subject].correct += 1;
-      subjectMap[subject].sessionIds.add(String(row.exam_session_id));
-    });
-  } else {
-    sessions.forEach(session => {
-      const subject = session.subject || "Unknown";
-      if (subject === "All Topics") return;
-      if (!subjectMap[subject]) subjectMap[subject] = { questions: 0, correct: 0, sessionIds: new Set() };
-      subjectMap[subject].questions += Number(session.questions_total || 0);
-      subjectMap[subject].correct += Number(session.correct || 0);
-      subjectMap[subject].sessionIds.add(String(session.id));
-    });
-  }
-
-  const subjectStats = Object.entries(subjectMap).map(([subject, data]) => ({
-    subject,
-    questions: data.questions,
-    correct: data.correct,
-    exams: data.sessionIds.size,
-    accuracy: data.questions ? Math.round((data.correct / data.questions) * 100) : 0
-  })).sort((a, b) => b.accuracy - a.accuracy || b.questions - a.questions);
-
-  const progressLabels = sessions.map(session => new Date(session.created_at).toLocaleDateString("en-GB", { day: "2-digit", month: "short", hour: "2-digit", minute: "2-digit" }));
-  const progressScores = sessions.map(session => Number(session.score || 0));
-
-  totalExamsEl.textContent = totalExams;
-  totalQuestionsEl.textContent = totalQuestions.toLocaleString();
-  overallAccuracyEl.textContent = `${overallAccuracy}%`;
-  bestScoreEl.textContent = `${bestScore}%`;
-  krok1AccuracyEl.textContent = krok1Stats.accuracy === null ? "—" : `${krok1Stats.accuracy}%`;
-  krok1ExamsEl.textContent = `${krok1Stats.exams} ${krok1Stats.exams === 1 ? "exam" : "exams"}`;
-  krok2AccuracyEl.textContent = krok2Stats.accuracy === null ? "—" : `${krok2Stats.accuracy}%`;
-  krok2ExamsEl.textContent = `${krok2Stats.exams} ${krok2Stats.exams === 1 ? "exam" : "exams"}`;
+  totalExamsEl.textContent = view.totalExams;
+  totalQuestionsEl.textContent = view.totalQuestions.toLocaleString();
+  overallAccuracyEl.textContent = displayPercentage(view.overallAccuracy);
+  bestScoreEl.textContent = displayPercentage(view.bestScore);
+  krok1AccuracyEl.textContent = displayPercentage(view.krok1.accuracy);
+  krok1ExamsEl.textContent = `${view.krok1.exams} ${view.krok1.exams === 1 ? "exam" : "exams"}`;
+  krok2AccuracyEl.textContent = displayPercentage(view.krok2.accuracy);
+  krok2ExamsEl.textContent = `${view.krok2.exams} ${view.krok2.exams === 1 ? "exam" : "exams"}`;
 
   subjectStatsEl.innerHTML = "";
-  if (!subjectStats.length) {
-    subjectStatsEl.innerHTML = '<p class="subject-stats-empty">Complete a new exam to start building question-level subject statistics.</p>';
+  if (!view.subjectStats.length) {
+    subjectStatsEl.innerHTML = `<p class="subject-stats-empty">${subjectEmptyMessage}</p>`;
   } else {
-    subjectStats.forEach(stat => {
+    view.subjectStats.forEach(stat => {
       const row = document.createElement("div");
       row.className = "subject-stat-row";
-      row.innerHTML = `<div class="subject-stat-name">${stat.subject}<small>${stat.questions} questions · ${stat.exams} ${stat.exams === 1 ? "exam" : "exams"}</small></div><div class="subject-stat-track"><div class="subject-stat-fill" style="width:${stat.accuracy}%"></div></div><div class="subject-stat-value">${stat.accuracy}%</div>`;
+      row.innerHTML = `<div class="subject-stat-name"><span class="subject-stat-label"></span><small>${stat.questions} questions · ${stat.exams} ${stat.exams === 1 ? "exam" : "exams"}</small></div><div class="subject-stat-track"><div class="subject-stat-fill" style="width:${stat.accuracy}%"></div></div><div class="subject-stat-value">${displayPercentage(stat.accuracy)}</div>`;
+      row.querySelector(".subject-stat-label").textContent = stat.subject;
+      const actions = document.createElement("div");
+      actions.className = "subject-stat-actions";
+      stat.byKrok.forEach(variant => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "subject-detail-action";
+        button.textContent = stat.byKrok.length > 1
+          ? `View KROK ${variant.krok} details`
+          : "View subject details";
+        button.setAttribute("aria-label", `View ${stat.subject} KROK ${variant.krok} details`);
+        button.addEventListener("click", () => openSubjectDetail(stat.subject, variant.krok));
+        actions.appendChild(button);
+      });
+      row.appendChild(actions);
       subjectStatsEl.appendChild(row);
     });
   }
 
-  renderWeakSubjects(subjectStats);
+  renderWeakSubjects(view.subjectStats, view.filter, subjectEmptyMessage);
 
-  new Chart(progressCanvas, {
+  const progressLabels = view.progress.map(item =>
+    new Date(item.createdAtTimestamp).toLocaleDateString("en-GB", {
+      day: "2-digit",
+      month: "short",
+      hour: "2-digit",
+      minute: "2-digit"
+    })
+  );
+  const progressScores = view.progress.map(item => item.accuracy);
+  const hasProgress = progressScores.length > 0;
+  progressCanvas.hidden = !hasProgress;
+  progressEmptyEl.hidden = hasProgress;
+  progressEmptyEl.textContent = hasProgress ? "" : `No Exam Mode sessions are available for ${periodLabel}.`;
+  progressChartInstance = StatisticsPageController.updateChartInstance(
+    progressChartInstance,
+    Chart,
+    progressCanvas,
+    progressChartConfig(progressLabels, progressScores)
+  );
+}
+
+function subjectProgressChartConfig(view) {
+  const labels = view.series.map(point =>
+    new Date(point.createdAtTimestamp).toLocaleDateString("en-GB", {
+      day: "2-digit",
+      month: "short",
+      hour: "2-digit",
+      minute: "2-digit"
+    })
+  );
+  return {
     type: "line",
-    data: { labels: progressLabels, datasets: [{ label: "Exam Score", data: progressScores, borderColor: "#16a34a", backgroundColor: "rgba(22, 163, 74, 0.08)", borderWidth: 3, pointRadius: 5, pointHoverRadius: 7, tension: 0.3, fill: true }] },
-    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false }, tooltip: { callbacks: { label: context => `Score: ${context.raw}%` } } }, scales: { y: { min: 0, max: 100, ticks: { callback: value => `${value}%` } }, x: { grid: { display: false } } } }
-  });
+    data: {
+      labels,
+      datasets: [{
+        label: `${view.subject} accuracy`,
+        data: view.series.map(point => point.accuracy),
+        borderColor: "#16a34a",
+        backgroundColor: "rgba(22, 163, 74, 0.08)",
+        borderWidth: 3,
+        pointRadius: 5,
+        pointHoverRadius: 7,
+        tension: 0.3,
+        fill: true
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: context => `Accuracy: ${displayPercentage(context.raw)}`,
+            afterLabel: context => {
+              const point = view.series[context.dataIndex];
+              return `${point.correctCount}/${point.questionCount} correct · ${point.questionCount} ${point.questionCount === 1 ? "question" : "questions"}`;
+            }
+          }
+        }
+      },
+      scales: {
+        y: { min: 0, max: 100, ticks: { callback: value => `${value}%` } },
+        x: { grid: { display: false } }
+      }
+    }
+  };
+}
 
-  loadingSection.hidden = true;
-  statisticsContent.hidden = false;
+function renderSubjectDetailView(view) {
+  const periodLabel = TIME_FILTER_LABELS[view.filter];
+  statisticsDashboard.hidden = true;
+  subjectDetail.hidden = false;
+  setTemporalSelectorState(view.filter);
+  window.KrokStatisticsCoverage = {
+    ...view.periodCoverage,
+    filter: view.filter,
+    window: view.window,
+    krok: view.krok,
+    scope: "krok_period"
+  };
+
+  subjectDetailTitle.textContent = view.subject;
+  subjectDetailKrok.textContent = `KROK ${view.krok} · ${periodLabel}`;
+  subjectDetailAccuracy.textContent = displayPercentage(view.accuracy);
+  subjectDetailQuestions.textContent = view.questionCount.toLocaleString();
+  subjectDetailExams.textContent = view.examCount.toLocaleString();
+  subjectDetailDistance.textContent = view.thresholdDistance;
+
+  const classificationNote = view.classification === "insufficient"
+    ? `<p class="subject-detail-coverage">Classification requires 10 eligible questions; ${view.questionCount} available in this period.</p>`
+    : "";
+  subjectDetailTrend.innerHTML = `${classificationNote}${trendMarkup(view.trend, view.filter)}`;
+
+  const coverage = view.periodCoverage;
+  subjectDetailCoverage.textContent =
+    `Across all KROK ${view.krok} Exam Mode sessions in ${periodLabel}, ` +
+    `${coverage.analyzedSessionCount} of ${coverage.selectedSessionCount} sessions had complete, usable question details. ` +
+    `${coverage.missingDetailSessionCount} had missing details and ${coverage.unattributedSessionCount} lacked usable subject attribution. ` +
+    "These coverage figures describe the selected KROK and period, not this subject alone.";
+
+  const hasSeries = view.series.length > 0;
+  subjectProgressCanvas.hidden = !hasSeries;
+  subjectProgressEmpty.hidden = hasSeries;
+  subjectProgressEmpty.textContent = hasSeries
+    ? ""
+    : `No eligible ${view.subject} question data is available for KROK ${view.krok} in ${periodLabel}.`;
+  subjectProgressChartInstance = StatisticsPageController.updateChartInstance(
+    subjectProgressChartInstance,
+    Chart,
+    subjectProgressCanvas,
+    subjectProgressChartConfig(view)
+  );
+}
+
+function renderActiveView() {
+  if (!periodViewStore) return;
+  const state = viewNavigator.getState();
+  if (state.mode === "subject") {
+    renderSubjectDetailView(
+      periodViewStore.getSubjectView(state.filter, state.subject, state.krok)
+    );
+    return;
+  }
+  subjectDetail.hidden = true;
+  statisticsDashboard.hidden = false;
+  renderStatisticsView(periodViewStore.getView(state.filter));
+}
+
+function openSubjectDetail(subject, krok) {
+  viewNavigator.openSubject(subject, krok);
+  renderActiveView();
+}
+
+function selectTimeFilter(filter) {
+  if (!periodViewStore) return;
+  viewNavigator.selectFilter(filter);
+  weakSubjectsExpanded = false;
+  renderActiveView();
+}
+
+temporalFilterButtons.forEach(button => {
+  button.addEventListener("click", () => selectTimeFilter(button.dataset.timeFilter));
+});
+
+subjectDetailBack.addEventListener("click", () => {
+  viewNavigator.showDashboard();
+  renderActiveView();
+});
+
+async function loadStatistics() {
+  try {
+    const { data: { user }, error: userError } = await supabaseClient.auth.getUser();
+    if (userError) throw userError;
+    if (!user) {
+      loadingSection.hidden = true;
+      loginRequired.hidden = false;
+      return;
+    }
+
+    const data = await StatisticsIntegration.loadStatisticsData(supabaseClient, user.id);
+    if (data.sessions.length === 0) {
+      loadingSection.hidden = true;
+      emptyStatistics.hidden = false;
+      return;
+    }
+    const referenceTime = Date.now();
+    periodViewStore = StatisticsPageController.createPeriodViewStore({
+      data,
+      engine: KrokAnalytics,
+      integration: StatisticsIntegration,
+      referenceTime
+    });
+    const allTimeView = periodViewStore.getView(DEFAULT_TIME_FILTER);
+    if (allTimeView.totalExams === 0) {
+      loadingSection.hidden = true;
+      emptyStatistics.hidden = false;
+      return;
+    }
+
+    renderStatisticsView(allTimeView);
+
+    loadingSection.hidden = true;
+    statisticsContent.hidden = false;
+  } catch (error) {
+    console.error("Error loading complete statistics:", error);
+    loadingSection.hidden = false;
+    loadingSection.innerHTML = "<p>Unable to load complete statistics. Please try again.</p>";
+    statisticsContent.hidden = true;
+    emptyStatistics.hidden = true;
+  }
 }
 loadStatistics();
