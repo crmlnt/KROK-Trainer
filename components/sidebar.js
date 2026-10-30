@@ -36,6 +36,7 @@
 
   const krok1Active = active.startsWith("krok1-");
   const krok2Active = active.startsWith("krok2-");
+  const tutorialActive = active === "tutorial" || active === "study-guide";
 
   host.className = "app-sidebar";
   host.innerHTML = `
@@ -54,7 +55,7 @@
       </div>
       <button id="sidebarKrokCollapsedBtn" class="sidebar-krok-collapsed-btn" type="button" aria-label="Open KROK menu" title="KROK">K</button>
       <div class="sidebar-section"><span class="sidebar-section-title">My Account</span>${link("account", "account.html", "Account", "user")}${link("history", "history/history.html", "Exam History", "history")}${link("statistics", "statistics/statistics.html", "Statistics", "stats")}${link("notes", "notes/index.html", "My Notes", "notes")}</div>
-      <div class="sidebar-section"><span class="sidebar-section-title">Resources</span>${link("tutorial", "guide.html", "Tutorial", "tutorial")}${link("news", "news/index.html", "News & Articles", "news")}</div>
+      <div class="sidebar-section"><span class="sidebar-section-title">Resources</span><button class="sidebar-krok-toggle sidebar-tutorial-toggle ${tutorialActive ? "open" : ""}" type="button" data-krok="tutorial" aria-label="Tutorial" title="Tutorial" aria-expanded="${tutorialActive}"><span class="sidebar-icon">${icon("tutorial")}</span><span class="sidebar-link-label">Tutorial</span><span class="sidebar-chevron" aria-hidden="true">›</span></button><div class="sidebar-krok-children sidebar-tutorial-children ${tutorialActive ? "open" : ""}" data-krok-panel="tutorial">${link("tutorial", "guide.html", "How to Use KROK Trainer", "tutorial", true)}${link("study-guide", "study-guide.html", "How to Study for KROK 1", "book", true)}</div>${link("news", "news/index.html", "News & Articles", "news")}</div>
     </div>
     <div class="sidebar-footer"><button id="sidebarThemeBtn" class="sidebar-theme-btn" type="button"><span id="sidebarThemeIcon" class="sidebar-icon"></span><span id="sidebarThemeLabel" class="sidebar-theme-label">Dark Mode</span></button><a id="sidebarUser" class="sidebar-user" href="${root}account.html"><span class="sidebar-status-dot" aria-hidden="true"></span><span class="sidebar-user-copy"><strong id="sidebarUserEmail">Not signed in</strong><span id="sidebarUserStatus">Sign in →</span></span></a></div>`;
 
@@ -159,20 +160,34 @@
   }));
 
   const krokToggles = [...host.querySelectorAll(".sidebar-krok-toggle")];
+  const syncPanel = toggle => {
+    const panel = host.querySelector(`[data-krok-panel="${toggle.dataset.krok}"]`);
+    panel.id = `sidebar-panel-${toggle.dataset.krok}`;
+    toggle.setAttribute("aria-controls", panel.id);
+    panel.inert = !toggle.classList.contains("open");
+  };
+  krokToggles.forEach(syncPanel);
   krokToggles.forEach(toggle => toggle.addEventListener("click", () => {
     const id = toggle.dataset.krok;
     const panel = host.querySelector(`[data-krok-panel="${id}"]`);
-    const willOpen = !toggle.classList.contains("open");
+    const wasCollapsed = document.body.classList.contains("sidebar-collapsed") && window.innerWidth > 900 && !drawerOnly;
+    if (wasCollapsed) {
+      document.body.classList.remove("sidebar-collapsed");
+      localStorage.setItem("krokSidebarCollapsed", "false");
+    }
+    const willOpen = wasCollapsed || !toggle.classList.contains("open");
     krokToggles.forEach(other => {
       const otherPanel = host.querySelector(`[data-krok-panel="${other.dataset.krok}"]`);
       other.classList.remove("open");
       other.setAttribute("aria-expanded", "false");
       otherPanel?.classList.remove("open");
+      syncPanel(other);
     });
     if (willOpen) {
       toggle.classList.add("open");
       toggle.setAttribute("aria-expanded", "true");
       panel?.classList.add("open");
+      syncPanel(toggle);
     }
   }));
 
