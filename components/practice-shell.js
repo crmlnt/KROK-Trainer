@@ -15,76 +15,61 @@
   let reviewingMistakes = false;
   let practiceSnapshot = null;
 
-  const hasSavedMistakes = () => {
-    try {
-      const saved = JSON.parse(localStorage.getItem("errors") || "[]");
-      return Array.isArray(saved) && saved.length > 0;
-    } catch {
-      return false;
-    }
-  };
+  const reviewQuestions = records => records.map(readPracticeMistake)
+    .filter(record => record.correct >= 0 && record.answers.length > 0)
+    .map(record => ({
+      id: record.id,
+      subject: record.subject || "Unknown",
+      question: record.question,
+      answers: [...record.answers],
+      correct: record.correct
+    }));
 
-  const setBreadcrumbLabel = (label) => {
+  const setBreadcrumbLabel = label => {
     const current = document.querySelector(".app-breadcrumb-current");
     if (current) current.textContent = label;
   };
 
   const syncReviewUi = () => {
-    const canReview = hasSavedMistakes();
-
+    const canReview = reviewQuestions(errors).length > 0;
     reviewLauncher.hidden = reviewingMistakes || !canReview;
     reviewBtn.style.display = !reviewingMistakes && canReview ? "inline-block" : "none";
-
     if (reviewBanner) reviewBanner.hidden = !reviewingMistakes;
     document.body.classList.toggle("review-mistakes-active", reviewingMistakes);
   };
 
-  const restorePracticeCounters = () => {
-    if (!practiceSnapshot) return;
+  const startReview = records => {
+    if (reviewingMistakes) return;
+    const selected = reviewQuestions(records);
+    if (!selected.length) return;
 
-    score = practiceSnapshot.score;
-    correctAnswers = practiceSnapshot.correctAnswers;
-    wrongAnswers = practiceSnapshot.wrongAnswers;
-
-    errors = practiceSnapshot.errors.map(item => ({ ...item }));
-    updateErrorLog();
-    updateStats();
-
-    const scoreEl = document.getElementById("score");
-    if (scoreEl) scoreEl.textContent = `Score: ${score}`;
+    // Keep review questions separate from both the archive and sessionErrors.
+    // Preserve the live answer nodes too: returning must not let a confirmed
+    // Practice answer be submitted a second time, or lose a pending selection.
+    practiceSnapshot = {
+      questions, currentQuestionIndex, answered, aiUserAnswer,
+      selectedAnswerButton, selectedAnswerIsCorrect,
+      answerNodes: [...answersContainer.childNodes],
+      feedback: feedbackEl.textContent,
+      nextDisplay: nextBtn.style.display,
+      confirmDisplay: confirmAnswerBtn.style.display,
+      fromCompletion: !document.getElementById("practiceCompletionUI").hidden
+    };
+    reviewingMistakes = true;
+    reviewMode = true;
+    questions = selected;
+    currentQuestionIndex = 0;
+    answered = false;
+    setBreadcrumbLabel("Review Mistakes");
+    showQuestion();
+    syncReviewUi();
   };
 
-  syncReviewUi();
+  reviewBtn.addEventListener("click", () => startReview(errors));
+  document.addEventListener("practice-review-mistakes", event => startReview(event.detail.mistakes));
 
-  /* Review Mistakes is deliberately kept outside the normal Practice scoring.
-     The quiz engine can still render/check answers, while this shell restores
-     the original session counters and error log immediately afterwards. */
-  confirmAnswerBtn?.addEventListener("click", () => {
-    if (!reviewingMistakes) {
-      queueMicrotask(syncReviewUi);
-      return;
-    }
-
-    const originalSaveSubjectStats = saveSubjectStats;
-    saveSubjectStats = () => {};
-
-    queueMicrotask(() => {
-      saveSubjectStats = originalSaveSubjectStats;
-      restorePracticeCounters();
-      syncReviewUi();
-    });
-  }, true);
-
-  nextBtn?.addEventListener("click", () => {
-    queueMicrotask(() => {
-      if (reviewingMistakes && currentQuestionIndex >= questions.length) {
-        if (feedbackEl) {
-          feedbackEl.textContent = "Review complete. You have reviewed all saved mistakes.";
-        }
-      }
-      syncReviewUi();
-    });
-  });
+  confirmAnswerBtn?.addEventListener("click", () => queueMicrotask(syncReviewUi));
+  nextBtn?.addEventListener("click", () => queueMicrotask(syncReviewUi));
 
   subjectFilter?.addEventListener("change", () => {
     reviewingMistakes = false;
@@ -93,66 +78,35 @@
     queueMicrotask(syncReviewUi);
   });
 
-  /* Capture the Practice session before app.js handles the Review button. */
-  reviewBtn.addEventListener("click", () => {
-    practiceSnapshot = {
-      questions: questions.map(question => ({ ...question, answers: [...question.answers] })),
-      currentQuestionIndex,
-      score,
-      correctAnswers,
-      wrongAnswers,
-      errors: errors.map(item => ({ ...item, answers: [...item.answers] }))
-    };
-  }, true);
-
-  reviewBtn.addEventListener("click", () => {
-    reviewingMistakes = true;
-    setBreadcrumbLabel("Review Mistakes");
-
-    /* app.js starts review first. Rebuild the review question objects here with
-       their subject metadata, which the legacy review mapper omits. */
-    questions = errors.map(error => ({
-      id: error.id,
-      subject: error.subject || "Unknown",
-      question: error.question,
-      answers: error.answers,
-      correct: error.correct
-    }));
-    currentQuestionIndex = 0;
-    answered = false;
-    reviewMode = true;
-
-    if (questions.length > 0) showQuestion();
-    queueMicrotask(syncReviewUi);
-  });
-
   backToPracticeBtn?.addEventListener("click", () => {
+    if (!practiceSnapshot) return;
+    const snapshot = practiceSnapshot;
+    questions = snapshot.questions;
+    currentQuestionIndex = snapshot.currentQuestionIndex;
+    reviewMode = false;
     reviewingMistakes = false;
     setBreadcrumbLabel("Practice Mode");
 
-    if (practiceSnapshot) {
-      questions = practiceSnapshot.questions.map(question => ({ ...question, answers: [...question.answers] }));
-      currentQuestionIndex = Math.min(practiceSnapshot.currentQuestionIndex, Math.max(questions.length - 1, 0));
-      reviewMode = false;
-      answered = false;
-
-      restorePracticeCounters();
-
-      if (questions.length > 0) {
-        feedbackEl.textContent = "";
-        showQuestion();
-      }
-    } else if (typeof resetTrainer === "function") {
-      resetTrainer();
+    if (snapshot.fromCompletion) {
+      document.getElementById("practiceSessionUI").style.display = "none";
+      document.getElementById("practiceCompletionUI").hidden = false;
+    } else {
+      showQuestion();
+      answersContainer.replaceChildren(...snapshot.answerNodes);
     }
-
+    answered = snapshot.answered;
+    aiUserAnswer = snapshot.aiUserAnswer;
+    selectedAnswerButton = snapshot.selectedAnswerButton;
+    selectedAnswerIsCorrect = snapshot.selectedAnswerIsCorrect;
+    feedbackEl.textContent = snapshot.feedback;
+    nextBtn.style.display = snapshot.nextDisplay;
+    confirmAnswerBtn.style.display = snapshot.confirmDisplay;
     practiceSnapshot = null;
     syncReviewUi();
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
   const clearErrorsBtn = document.getElementById("clear-errors-btn");
-  clearErrorsBtn?.addEventListener("click", () => {
-    setTimeout(syncReviewUi, 0);
-  });
+  clearErrorsBtn?.addEventListener("click", () => queueMicrotask(syncReviewUi));
+  syncReviewUi();
 })();
