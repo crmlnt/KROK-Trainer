@@ -190,6 +190,49 @@ function applyAnatomyHighlights(text, element) {
   }
 }
 
+// Read compatibility is intentionally separate from persistence: never migrate an archive on load.
+function loadPracticeMistakes() {
+  try {
+    const raw = localStorage.getItem("errors");
+    if (raw === null) return { records: [], writable: true };
+    const records = JSON.parse(raw);
+    if (!Array.isArray(records) || !records.every(record =>
+      record && typeof record === "object" && !Array.isArray(record) &&
+      typeof record.question === "string" && Array.isArray(record.answers) &&
+      record.answers.every(answer => typeof answer === "string")
+    )) throw new Error("Unexpected Practice mistake archive format");
+    return { records, writable: true };
+  } catch (error) {
+    console.warn("Practice mistake archive could not be loaded; stored data will be preserved.", error);
+    return { records: [], writable: false };
+  }
+}
+
+function readPracticeMistake(record) {
+  // `correct` is an original answer index; `correctAnswer` is answer text.
+  const correct = Number.isInteger(record.correct) && record.correct >= 0 && record.correct < record.answers.length
+    ? record.correct
+    : (typeof record.correctAnswer === "string" ? record.answers.indexOf(record.correctAnswer) : -1);
+  return {
+    ...record,
+    id: record.questionId ?? record.id,
+    correct,
+    userAnswer: typeof record.userAnswer === "string" ? record.userAnswer
+      : (typeof record.yourAnswer === "string" ? record.yourAnswer : "Not recorded"),
+    correctAnswer: typeof record.correctAnswer === "string" ? record.correctAnswer
+      : (record.answers[correct] ?? "Not recorded")
+  };
+}
+
+function persistPracticeMistakes() {
+  if (!practiceMistakeArchive.writable || !loadPracticeMistakes().writable) return;
+  try {
+    localStorage.setItem("errors", JSON.stringify(errors));
+  } catch (error) {
+    console.warn("Practice mistakes could not be saved; current session remains available.", error);
+  }
+}
+
 //VARIABLES
 let questions = [];
 let allQuestions = [];
@@ -197,7 +240,8 @@ let sessionLength = "unlimited";
 let sessionErrors = [];
 let currentQuestionIndex = 0;
 let score = 0;
-let errors = JSON.parse(localStorage.getItem("errors")) || [];
+const practiceMistakeArchive = loadPracticeMistakes();
+let errors = practiceMistakeArchive.records;
 let answered = false;
 let reviewMode = false;
 let correctAnswers = 0;
@@ -715,7 +759,7 @@ function checkAnswer(button, isCorrect) {
   let year = params.get("year");
   if (examType === "krok2") year = null;
   
-  if (!year) {
+  if (!year && (examMode || !reviewMode)) {
     saveSubjectStats(currentQuestion.subject, isCorrect);
   }
 
@@ -767,6 +811,19 @@ function checkAnswer(button, isCorrect) {
     btn.classList.remove("selected");
   });
 
+  // Review is study-only. Do not mutate counters, session mistakes, archive or statistics.
+  if (reviewMode) {
+    button.classList.add(isCorrect ? "correct" : "wrong");
+    allButtons.forEach(btn => {
+      if (btn.textContent === currentQuestion.answers[currentQuestion.correct]) btn.classList.add("correct");
+    });
+    feedback.textContent = isCorrect ? "Correct!" : "Wrong!";
+    const explainBtn = document.getElementById("aiExplainBtn");
+    if (explainBtn) explainBtn.style.display = "inline-flex";
+    nextBtn.style.display = "block";
+    return;
+  }
+
   // =========================
   // PRACTICE MODE
   // =========================
@@ -808,10 +865,12 @@ function checkAnswer(button, isCorrect) {
       question: currentQuestion.question,
       answers: currentQuestion.answers,
       correct: currentQuestion.correct,
+      questionId: currentQuestion.id,
       yourAnswer: button.textContent,
       correctAnswer: currentQuestion.answers[currentQuestion.correct]
     });
 
+    persistPracticeMistakes();
     updateErrorLog();
 
 
@@ -858,15 +917,15 @@ function checkAnswer(button, isCorrect) {
 }
 
 function updateErrorLog() {
-  localStorage.setItem("errors", JSON.stringify(errors));  
   errorCount.textContent = `Errors: ${errors.length}`;
   errorLog.innerHTML = "";
 
   errors.forEach((error) => {
     const li = document.createElement("li");
 
+    const record = readPracticeMistake(error);
     li.textContent =
-      `Q: ${error.question} | Your answer: ${error.yourAnswer} | Correct: ${error.correctAnswer}`;
+      `Q: ${record.question} | Your answer: ${record.userAnswer} | Correct: ${record.correctAnswer}`;
 
     errorLog.appendChild(li);
   });
@@ -1273,7 +1332,8 @@ function exportErrorLog() {
   let logText = "Date\tSubject\tQuestion\tYour Answer\tCorrect Answer\tNotes\n";
 
   errors.forEach(error => {
-    logText += `${error.date || ""}\t${error.subject || ""}\t${error.question}\t${error.yourAnswer}\t${error.correctAnswer}\t\n`;
+    const record = readPracticeMistake(error);
+    logText += `${record.date || ""}\t${record.subject || ""}\t${record.question}\t${record.userAnswer}\t${record.correctAnswer}\t\n`;
   });
 
   navigator.clipboard.writeText(logText);
@@ -1797,6 +1857,12 @@ nextBtn.addEventListener("click", () => {
     showQuestion();
     if (typeof ActiveSession !== "undefined") ActiveSession.save();
   } else {
+    if (reviewMode && !examMode) {
+      currentQuestionIndex = Math.max(0, questions.length - 1);
+      feedback.textContent = "Review complete. You have reviewed all selected mistakes.";
+      nextBtn.style.display = "none";
+      return;
+    }
     if (typeof ActiveSession !== "undefined") ActiveSession.clear();
     if (examMode) {
       questionText.textContent = "";
@@ -1976,26 +2042,6 @@ if (closeAiExplanation) {
   });
 }
 
-reviewBtn.addEventListener("click", () => {
-  questions = errors.map((error) => {
-    return {
-      question: error.question,
-      answers: error.answers,
-      correct: error.correct
-    };
-  });
-
-  currentQuestionIndex = 0;
-  score = 0;
-  answered = false;
-  reviewMode = true;
-
-  scoreText.textContent = "Score: 0";
-
-  showQuestion();
-});
-
-
 function clearErrorLog() {
   const confirmDelete = confirm(
     "Are you sure you want to delete the entire Error Log? This action cannot be undone."
@@ -2008,6 +2054,7 @@ function clearErrorLog() {
   errors = [];
 
   localStorage.removeItem("errors");
+  practiceMistakeArchive.writable = true;
 
   updateErrorLog();
 
@@ -2126,18 +2173,8 @@ if (backToSetupBtn) {
 const reviewSessionMistakesBtn = document.getElementById("reviewSessionMistakesBtn");
 if (reviewSessionMistakesBtn) {
   reviewSessionMistakesBtn.addEventListener("click", () => {
-    // Reuse the existing Review Mistakes system by temporarily overriding the global errors array
-    const originalErrors = errors;
-    errors = sessionErrors;
-    
-    const legacyReviewBtn = document.getElementById("review-btn");
-    if (legacyReviewBtn) {
-      legacyReviewBtn.click();
-    }
-    
-    // Restore global errors
-    errors = originalErrors;
-    
+    document.dispatchEvent(new CustomEvent("practice-review-mistakes", { detail: { mistakes: sessionErrors } }));
+
     // Switch views
     document.getElementById("practiceCompletionUI").hidden = true;
     document.getElementById("practiceSessionUI").style.display = "block";
