@@ -941,8 +941,11 @@ function updateStats() {
     accuracy = Math.round((correctAnswers / total) * 100);
   }
 
-  statsText.textContent =
-    `Correct: ${correctAnswers} | Wrong: ${wrongAnswers} | Accuracy: ${accuracy}%`;
+  statsText.innerHTML = `
+    <div class="practice-metric practice-metric-correct"><strong>${correctAnswers}</strong><span>Correct</span></div>
+    <div class="practice-metric practice-metric-wrong"><strong>${wrongAnswers}</strong><span>Wrong</span></div>
+    <div class="practice-metric"><strong>${accuracy}%</strong><span>Accuracy</span></div>`;
+  return accuracy;
 }
 
 /*function startExamMode() {
@@ -1878,6 +1881,18 @@ nextBtn.addEventListener("click", () => {
       const completionUI = document.getElementById("practiceCompletionUI");
       if (completionUI) {
         completionUI.hidden = false;
+        const accuracy = updateStats();
+        const performance = document.getElementById("completionPerformance");
+        if (performance) {
+          performance.textContent = accuracy >= 64 ? "≥64%" : "<64%";
+          performance.dataset.category = accuracy >= 64 ? "above" : "below";
+        }
+        const encouragement = document.getElementById("completionEncouragement");
+        if (encouragement) encouragement.textContent = accuracy >= 64
+          ? "Great job! Keep practicing!"
+          : "Keep going! You're a superhero! Every question helps you improve.";
+        const illustration = document.getElementById("completionIllustration");
+        if (illustration) illustration.src = accuracy >= 64 ? "assets/goodjob.svg" : "assets/keepworking.svg";
         const msg = document.getElementById("completionMessage");
         if (msg) msg.textContent = sessionLength === "unlimited" ? "You've completed your open-ended practice session." : `You've completed your ${sessionLength}-question practice session.`;
         

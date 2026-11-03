@@ -3,7 +3,25 @@ let savedQuestions=[],questionBank=[],retryQuestions=[],retryIndex=0,retryCorrec
 function escapeHtml(v){return String(v??"").replace(/[&<>'"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"})[c]);}
 function showUnavailable(m){reviewLoading.hidden=true;reviewContent.hidden=true;reviewUnavailableText.textContent=m;reviewUnavailable.hidden=false;}
 function findQuestion(s){return questionBank.find(q=>String(q.id)===String(s.question_id));}
-function renderQuestions(mistakesOnly=false){const rows=mistakesOnly?savedQuestions.filter(i=>!i.is_correct):savedQuestions;reviewQuestions.innerHTML="";rows.forEach((s,i)=>{const q=findQuestion(s),card=document.createElement("article");card.className=`review-question-card ${s.is_correct?"review-correct":"review-wrong"}`;card.innerHTML=`<div class="review-question-meta"><span>Question ${i+1}</span><span>${escapeHtml(s.subject)}</span><span class="review-result">${s.is_correct?"Correct":"Incorrect"}</span></div><h3>${escapeHtml(q?.question||"Question text is not available in the current question bank.")}</h3><div class="review-answer review-user-answer"><strong>Your answer</strong><span>${s.user_answer?escapeHtml(s.user_answer):"Not answered"}</span></div><div class="review-answer review-correct-answer"><strong>Correct answer</strong><span>${escapeHtml(s.correct_answer)}</span></div>`;reviewQuestions.appendChild(card);});if(!rows.length)reviewQuestions.innerHTML='<div class="review-empty">No incorrect answers in this exam. Great job!</div>';}
+function renderQuestions(mistakesOnly = false) {
+  const rows = mistakesOnly ? savedQuestions.filter(i => !i.is_correct) : savedQuestions;
+  reviewQuestions.innerHTML = "";
+  rows.forEach((s, i) => {
+    const q = findQuestion(s), card = document.createElement("article");
+    const answered = s.user_answer != null && s.user_answer !== "";
+    const duplicateCorrect = answered && s.is_correct && s.user_answer === s.correct_answer;
+    const state = !answered ? "review-unanswered" : (s.is_correct ? "review-correct" : "review-wrong");
+    const userClass = !answered ? "" : (s.is_correct ? "review-correct-answer" : "review-wrong-answer");
+    card.className = `review-question-card ${state}`;
+    card.innerHTML = `
+      <div class="review-question-meta"><span>Question ${i + 1}</span><span>${escapeHtml(s.subject)}</span><span class="review-result">${!answered ? "Not answered" : (s.is_correct ? "Correct" : "Incorrect")}</span></div>
+      <h3>${escapeHtml(q?.question || "Question text is not available in the current question bank.")}</h3>
+      <div class="review-answer review-user-answer ${userClass}"><strong>${duplicateCorrect ? "Your answer · Correct" : "Your answer"}</strong><span>${answered ? escapeHtml(s.user_answer) : "Not answered"}</span></div>
+      ${duplicateCorrect ? "" : `<div class="review-answer review-correct-answer"><strong>Correct answer</strong><span>${escapeHtml(s.correct_answer)}</span></div>`}`;
+    reviewQuestions.appendChild(card);
+  });
+  if (!rows.length) reviewQuestions.innerHTML = '<div class="review-empty">No incorrect answers in this exam. Great job!</div>';
+}
 function buildRetryQuestions(){return savedQuestions.filter(s=>!s.is_correct).map(s=>findQuestion(s)).filter(Boolean);}
 function showRetryQuestion(){retryAnswered=false;retryFeedback.textContent="";retryNextBtn.hidden=true;const q=retryQuestions[retryIndex];retryProgress.textContent=`Question ${retryIndex+1} of ${retryQuestions.length}`;retrySubject.textContent=q.subject||"";retryQuestion.textContent=q.question;retryAnswers.innerHTML="";q.answers.map((text,index)=>({text,isCorrect:index===q.correct})).sort(()=>Math.random()-.5).forEach(a=>{const b=document.createElement("button");b.type="button";b.className="retry-answer-btn";b.textContent=a.text;b.addEventListener("click",()=>{if(retryAnswered)return;retryAnswered=true;if(a.isCorrect){retryCorrect++;b.classList.add("correct");retryFeedback.textContent="Correct!";}else{b.classList.add("wrong");retryFeedback.textContent=`Correct answer: ${q.answers[q.correct]}`;[...retryAnswers.children].forEach(x=>{if(x.textContent===q.answers[q.correct])x.classList.add("correct");});}retryNextBtn.hidden=false;});retryAnswers.appendChild(b);});}
 function startRetry(){retryQuestions=buildRetryQuestions();if(!retryQuestions.length)return;retryIndex=0;retryCorrect=0;retryResult.hidden=true;reviewContent.hidden=true;retryContent.hidden=false;reviewSubtitle.textContent="Study-only retry session";showRetryQuestion();window.scrollTo({top:0,behavior:"smooth"});}

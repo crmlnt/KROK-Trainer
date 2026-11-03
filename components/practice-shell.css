@@ -663,3 +663,55 @@ body.dark-mode .support-secondary-btn:hover {
 body.dark-mode .support-friendly-msg {
   color: #94a3b8 !important;
 }
+
+/* Shared quiz branding; the existing sidebar continues to provide navigation. */
+.quiz-container #appTitle{margin:0;line-height:1;letter-spacing:normal}
+.quiz-brand-logo{display:block;width:48px;height:48px;object-fit:contain;border-radius:13px}
+body.practice-session .header-row{justify-content:center;padding-block:4px}
+
+/* Practice-only summary and archive controls: IDs and handlers remain unchanged. */
+body.practice-session .practice-summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:24px 0 16px}
+body.practice-session #stats{display:contents}
+body.practice-session .practice-score,body.practice-session .practice-metric{margin:0;padding:20px 12px;border:1px solid #e5e7eb;border-radius:15px;background:#fff;box-shadow:0 4px 14px rgba(15,23,42,.03);text-align:center;color:#111827}
+body.practice-session .practice-score{display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:800}
+.practice-metric strong,.practice-metric span{display:block}
+.practice-metric strong{font-size:1.6rem;line-height:1.2;font-weight:800}
+.practice-metric span{margin-top:6px;font-size:.76rem;color:#6b7280;font-weight:600}
+.practice-metric-correct strong{color:#15803d}.practice-metric-wrong strong{color:#b91c1c}
+body.practice-session .practice-error-card{padding:22px;border:1px solid #e5e7eb;border-radius:16px;background:#fff}
+.practice-error-heading{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.practice-error-heading h3{margin:0;font-size:1rem;color:#111827}
+body.practice-session #error-count{margin:0;padding:5px 10px;border-radius:999px;background:#f1f5f9;color:#475569;font-size:.76rem;font-weight:700}
+.practice-error-description{margin:12px 0 0;color:#6b7280;font-size:.82rem;line-height:1.5}
+body.practice-session .practice-error-card .action-buttons{margin-top:0;gap:0}
+body.practice-session .practice-error-card .export-actions{flex-wrap:wrap;justify-content:center}
+body.practice-session .practice-error-card .danger-zone{margin:18px 0 0;padding:16px 0 0;border-top:1px solid #e5e7eb;text-align:right}
+body.practice-session #clear-errors-btn{border:1px solid #fecaca;background:#fef2f2;color:#b91c1c;font-size:.8rem;font-family:inherit}
+body.practice-session #clear-errors-btn:hover{background:#fee2e2}
+body.dark-mode.practice-session .practice-score,body.dark-mode.practice-session .practice-metric,body.dark-mode.practice-session .practice-error-card{background:#171a1d;border-color:#2a2e33;color:#f3f4f6}
+body.dark-mode .practice-error-heading h3{color:#f3f4f6}
+body.dark-mode .practice-metric span,body.dark-mode .practice-error-description{color:#9ca3af}
+body.dark-mode .practice-metric-correct strong{color:#86efac}body.dark-mode .practice-metric-wrong strong{color:#fca5a5}
+body.dark-mode.practice-session #error-count{background:#202429;color:#cbd5e1}
+body.dark-mode.practice-session .practice-error-card .danger-zone{border-color:#2a2e33}
+body.dark-mode.practice-session #clear-errors-btn{background:#35191b;border-color:#5d2529;color:#fecaca}
+body.dark-mode.practice-session #clear-errors-btn:hover{background:#482025}
+.completion-encouragement{font-size:1.1rem;font-weight:700;line-height:1.5;color:#15803d;margin:0 0 10px}
+body.dark-mode .completion-encouragement{color:#86efac}
+#practiceCompletionUI .setup-illustration{margin-top:24px}
+#completionIllustration{max-width:320px;aspect-ratio:1;object-fit:contain}
+@media(max-width:600px){
+  .quiz-brand-logo{width:40px;height:40px;border-radius:11px}
+  body.practice-session .practice-summary{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  body.practice-session .practice-error-card{padding:18px}
+  body.practice-session .practice-error-card .danger-zone{text-align:center}
+  #practiceCompletionUI{padding:26px 18px;margin:24px auto}
+  #completionIllustration{max-width:260px}
+}
+
+.completion-category{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:8px;margin:0 0 16px;color:#64748b;font-size:.78rem}
+.completion-performance{display:inline-block;padding:5px 12px;border:1px solid #fecaca;border-radius:999px;background:#fef2f2;color:#b91c1c;font-size:1rem;line-height:1.4}
+.completion-performance[data-category="above"]{background:#f0fdf4;border-color:#bbf7d0;color:#15803d}
+body.dark-mode .completion-category{color:#94a3b8}
+body.dark-mode .completion-performance{background:#35191b;border-color:#5d2529;color:#fecaca}
+body.dark-mode .completion-performance[data-category="above"]{background:#17311f;border-color:#24552f;color:#86efac}

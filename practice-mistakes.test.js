@@ -11,7 +11,7 @@ const shell = fs.readFileSync('components/practice-shell.js', 'utf8');
 const archiveRecord = (id = 'old') => ({ questionId: id, subject: 'Physiology', question: `Archived ${id}`, answers: ['Right', 'Wrong'], correct: 0, userAnswer: 'Wrong' });
 const tick = () => new Promise(resolve => setImmediate(resolve));
 
-async function createHarness(t, { krok = 1, storage = {}, exam = false } = {}) {
+async function createHarness(t, { krok = 1, storage = {}, exam = false, questionCount = 2 } = {}) {
   const dom = new JSDOM(html, { runScripts: 'outside-only', url: `https://example.test/practice.html?exam=krok${krok}${exam ? '&mode=exam&questions=2' : ''}` });
   const w = dom.window;
   const runtimeErrors = [];
@@ -19,7 +19,7 @@ async function createHarness(t, { krok = 1, storage = {}, exam = false } = {}) {
   t.after(() => { w.close(); assert.deepEqual(runtimeErrors, [], 'no uncaught UI handler errors'); });
   w.document.body.classList.toggle('practice-session', !exam);
   for (const [key, value] of Object.entries(storage)) w.localStorage.setItem(key, value);
-  const bank = [1, 2].map(id => ({ id: krok === 2 ? `krok2-000${id}` : String(id), subject: 'Physiology', question: `Question ${id}`, answers: ['Right', 'Wrong'], correct: 0 }));
+  const bank = Array.from({ length: questionCount }, (_, index) => index + 1).map(id => ({ id: krok === 2 ? `krok2-000${id}` : String(id), subject: 'Physiology', question: `Question ${id}`, answers: ['Right', 'Wrong'], correct: 0 }));
   w.fetch = async url => ({ ok: true, json: async () => [], text: async () => JSON.stringify(bank) });
   w.console = { log() {}, warn() {}, error() {} };
   w.alert = () => {};
@@ -250,4 +250,40 @@ test('malformed archive introduced after page load is not overwritten by a new m
   await h.answer(false);
   assert.equal(h.raw(), '{changed elsewhere');
   assert.equal(h.state().sessionErrors.length, 1);
+});
+
+
+for (const correct of [31, 32, 33]) {
+  test(`Practice Complete: ${correct}/50 chooses motivation using existing rounded accuracy`, async t => {
+    const h = await createHarness(t, { questionCount: 50 });
+    h.w.document.getElementById('len50').checked = true;
+    h.click('startPracticeBtn');
+    for (let i = 0; i < 50; i++) {
+      await h.answer(i < correct);
+      h.click('next-btn');
+    }
+    const success = correct >= 32;
+    assert.equal(h.w.document.getElementById('completionEncouragement').textContent, success
+      ? 'Great job! Keep practicing!' : "Keep going! You're a superhero! Every question helps you improve.");
+    assert.equal(h.w.document.getElementById('completionIllustration').getAttribute('src'), success ? 'assets/goodjob.svg' : 'assets/keepworking.svg');
+    assert.equal(h.w.document.getElementById('completionPerformance').textContent, success ? '≥64%' : '<64%');
+    assert.equal(h.w.document.getElementById('completionPerformance').dataset.category, success ? 'above' : 'below');
+    assert.equal(h.w.document.getElementById('completionMessage').textContent, "You've completed your 50-question practice session.");
+    assert.equal(h.w.document.querySelector('#stats .practice-metric:last-child strong').textContent, `${correct * 2}%`);
+    assert.equal(h.state().score, correct);
+    assert.equal(h.w.document.getElementById('reviewSessionMistakesBtn').hidden, false);
+    assert.ok(h.w.document.getElementById('tryExamBtn'));
+    assert.ok(h.w.document.getElementById('backToSetupBtn'));
+  });
+}
+
+test('unlimited completion preserves session information and empty summary shows zero', async t => {
+  const h = await createHarness(t);
+  assert.equal(h.w.document.querySelector('#stats .practice-metric:last-child strong').textContent, '0%');
+  h.w.document.getElementById('lenInf').checked = true;
+  h.click('startPracticeBtn');
+  await h.answer(true); h.click('next-btn');
+  await h.answer(true); h.click('next-btn');
+  assert.equal(h.w.document.getElementById('completionMessage').textContent, "You've completed your open-ended practice session.");
+  assert.equal(h.w.document.getElementById('reviewSessionMistakesBtn').hidden, true);
 });
