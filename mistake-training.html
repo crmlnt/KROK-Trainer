@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mistake Training — KROK Trainer</title>
+<link rel="stylesheet" href="style.css"><link rel="stylesheet" href="components/sidebar.css"><link rel="stylesheet" href="components/mistake-training.css">
+</head>
+<body>
+<aside id="appSidebar" data-root="" data-active="mistake-training"></aside>
+<div class="sidebar-page-shell"><main class="training-page">
+<header><a href="index.html" class="training-brand"><img src="assets/logoK.png" width="40" height="40" alt="KROK Trainer"></a><p class="training-eyebrow">YOUR STUDY SPACE</p><h1>Mistake Training</h1><p>Revisit your Practice mistakes. Earn three credits per question across three completed sessions.</p></header>
+<div class="training-toolbar"><label for="trainingKrok">Question bank</label><select id="trainingKrok"><option value="1">KROK 1</option><option value="2">KROK 2</option></select><a id="trainingPracticeLink" href="practice.html">Back to Practice →</a><button id="trainingReload" type="button">Refresh / retry</button></div>
+<p id="trainingStatus" role="status" aria-live="polite">Loading training…</p>
+<p id="trainingSync" role="status" aria-live="polite"></p>
+<section id="trainingContent" aria-label="Mistake Training"></section>
+<noscript>Enable JavaScript to use Mistake Training.</noscript>
+</main></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="supabase.js"></script><script src="question-identity.js"></script><script src="mistake-training.js"></script><script src="mistake-training-runtime.js"></script><script src="components/mistake-training-page.js"></script><script src="components/sidebar.js"></script>
+</body>
+</html>

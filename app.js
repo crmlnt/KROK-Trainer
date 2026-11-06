@@ -872,6 +872,12 @@ function checkAnswer(button, isCorrect) {
 
     persistPracticeMistakes();
     updateErrorLog();
+    // Separate authenticated training sync; existing archive/counters remain authoritative here.
+    document.dispatchEvent(new CustomEvent("practice-mistake-recorded", { detail: {
+      krok: examType === "krok2" ? 2 : 1,
+      record: { id: currentQuestion.id, subject: currentQuestion.subject },
+      pastPaper: Boolean(year)
+    } }));
 
 
     allButtons.forEach((btn) => {

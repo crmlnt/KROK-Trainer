@@ -119,3 +119,45 @@ test('client forwards stable retry identifiers and propagates RPC failures', asy
  const broken=require('../../mistake-training').createClient({rpc:async()=>({data:null,error})});
  await assert.rejects(broken.finalize(1,sid(1)),e=>e===error);
 });
+
+test('Practice enrollment SQL: server-approved IDs, account binding, resets and event retries', async () => {
+ const db=new PGlite();
+ try {
+  await db.exec(`create role anon;create role authenticated;create schema auth;
+   create table auth.users(id uuid primary key);
+   create function auth.uid() returns uuid language sql as $$select nullif(current_setting('request.jwt.claim.sub',true),'')::uuid$$;
+   grant usage on schema auth to authenticated,anon;
+   grant execute on function auth.uid() to authenticated,anon;
+   insert into auth.users values('${user1}'),('${user2}');`);
+  await db.exec(fs.readFileSync(path.join(root,'docs/migrations/20261106_mistake_training.sql'),'utf8'));
+  await db.exec(catalogSQL());
+  await db.exec(fs.readFileSync(path.join(root,'docs/migrations/20261106_mistake_training_practice.sql'),'utf8'));
+  const login=async user=>{await db.exec('reset role');await db.query("select set_config('request.jwt.claim.sub',$1,false)",[user]);await db.exec('set role authenticated');};
+  const record=(event,krok,q,owner=user1)=>db.query('select public.mistake_training_record_practice($1,$2,$3,$4) as result',[owner,sid(event),krok,q]);
+  await login(user1);
+  await record(1,1,'main:1');
+  await record(2,1,'main:2');
+  await record(3,2,'main:krok2-0001');
+  assert.equal((await db.query('select count(*)::int as n from public.mistake_training_progress')).rows[0].n,3);
+  await assert.rejects(record(1,1,'main:2'),/idempotency_conflict/);
+  await assert.rejects(record(4,1,'paper:2015:8'),/invalid_question/);
+  await assert.rejects(record(4,1,'main:999999'),/invalid_question/);
+  await assert.rejects(record(4,2,'main:1'),/invalid_question/);
+  await assert.rejects(record(4,1,'main:1',user2),/authentication_required/);
+  await db.exec('reset role');
+  await db.query("update public.mistake_training_progress set valid_sessions=3 where user_id=$1 and krok=1 and question_id='main:1'",[user1]);
+  await login(user1);
+  await record(1,1,'main:1'); // lost response retry must preserve newer mastery
+  assert.equal((await db.query("select valid_sessions from public.mistake_training_progress where krok=1 and question_id='main:1'")).rows[0].valid_sessions,3);
+  await record(5,1,'main:1'); // genuinely new Practice error resets immediately
+  assert.equal((await db.query("select valid_sessions from public.mistake_training_progress where krok=1 and question_id='main:1'")).rows[0].valid_sessions,0);
+  await assert.rejects(db.query('select * from mistake_private.practice_events'),/permission denied/);
+  await login(user2);
+  assert.equal((await db.query('select * from public.mistake_training_progress')).rows.length,0);
+  await assert.rejects(record(6,1,'main:1'),/authentication_required/);
+  await record(1,1,'main:1',user2); // same event ID is scoped to the account
+  assert.equal((await db.query('select * from public.mistake_training_progress')).rows.length,1);
+  await db.exec('reset role;set role anon');
+  await assert.rejects(record(7,1,'main:1'),/permission denied/);
+ } finally {await db.close();}
+});

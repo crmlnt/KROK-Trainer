@@ -287,3 +287,20 @@ test('unlimited completion preserves session information and empty summary shows
   assert.equal(h.w.document.getElementById('completionMessage').textContent, "You've completed your open-ended practice session.");
   assert.equal(h.w.document.getElementById('reviewSessionMistakesBtn').hidden, true);
 });
+
+test('Practice emits a separate training event only for a new wrong answer, never Review or Exam', async t => {
+ const h=await createHarness(t);
+ const events=[];
+ h.w.document.addEventListener('practice-mistake-recorded',e=>events.push(JSON.parse(JSON.stringify(e.detail))));
+ h.click('startPracticeBtn');await h.answer(false);
+ assert.equal(events.length,1);
+ assert.equal(events[0].krok,1);
+ assert.equal(events[0].pastPaper,false);
+ assert.equal(events[0].record.id,h.state().sessionErrors[0].questionId);
+ h.click('review-btn');await h.answer(false);
+ assert.equal(events.length,1);
+ const exam=await createHarness(t,{exam:true});
+ exam.w.document.addEventListener('practice-mistake-recorded',()=>events.push('exam'));
+ await exam.answer(false);
+ assert.equal(events.length,1);
+});

@@ -1,9 +1,12 @@
-# Mistake Training — Tappa 1
+# Mistake Training — Tappe 1 e 2
 
-Implemented engine; SQL is prepared, NOT applied. No page loads the client yet.
+Tappa 1 SQL and catalog were applied successfully to Supabase, as confirmed by
+the project owner. Tappa 2 adds `mistake-training.html` and the Practice hook;
+the additional Practice enrollment migration was also applied successfully, as
+confirmed by the project owner on 2026-11-06. These migrations must not be rerun.
 No changes to Notes, History, Analytics, Practice counters or question banks.
 
-## Installation after SQL review
+## Migration order (reference for fresh environments)
 
 Apply `docs/migrations/20261106_mistake_training.sql`, then
 `docs/migrations/20261106_mistake_training_catalog.sql`, as the database owner.
@@ -102,7 +105,89 @@ connection: queued duplicate requests are tested, but true multi-connection lock
 contention and Supabase/PostgREST integration still require a staging smoke test
 after authorized migration. No production schema was inspected or modified.
 
-Remaining integration work: an explicit training UI must choose resolved mistakes,
-persist its session UUID and map shuffled answers back to original indices. This
-increment delivers the engine and client API; it does not auto-load a UI or deploy
-SQL. Session abandonment/expiry and automatic archive import are not included.
+## Tappa 2 — usable MVP
+
+Open `mistake-training.html` from the shared sidebar or Practice saved mistakes.
+Choose KROK 1/2, select 5–50 distinct questions, and start training. Unmastered
+questions are selected by default (up to ten). Answers use original bank order
+and indices; feedback uses the server result. Finalization updates the displayed
+credits. Progress is read in stable 500-row pages to avoid PostgREST truncation.
+Return/refresh discovers the active session on the server. An unanswered
+session remains resumable; there is no abandonment or expiry operation.
+
+### Practice enrollment migration (applied)
+
+The original RPC cannot register a Practice error outside a session. The minimal
+reviewable addition is:
+
+`docs/migrations/20261106_mistake_training_practice.sql`
+
+Applied after both Tappa 1 migrations, as confirmed by the project owner. It adds one
+private event ledger and one RPC, `mistake_training_record_practice`. No existing
+table, policy or training RPC is altered. The RPC validates auth.uid() against
+the expected account and validates the canonical identity against the catalog.
+It locks the same user/KROK state row as the training engine and upserts progress
+to zero. The private ledger makes identical error-event retries no-ops, including
+retries received after newer mastery credits. Reusing an event ID for a different
+identity is rejected. Registration earns no credits. It records a self-study
+Practice mistake; it does not prove a server-graded examination result.
+
+If the RPC is unavailable in an environment, new Practice errors remain in the
+per-account local outbox and the UI explains the missing RPC. New sessions are
+blocked while pending sync cannot complete, preventing a delayed reset after
+training credits. Existing server sessions can still be resumed and completed.
+This fallback preserves pending errors without bypassing server registration.
+
+### Practice and auth boundaries
+
+The hook emits a separate event after the original mistake archive is saved.
+It runs only for new wrong Practice answers, never Exam or Review answers.
+Past Papers are excluded by both paper mode and subject; canonical identity uses
+the explicit numeric KROK and exact typed bank ID. The server accepts only catalog
+identities. Identical content with different IDs is never merged. Guests' errors
+stay in the existing browser archive; signing in does not import earlier errors.
+
+The account available at the new error event owns its outbox. No auth token is
+stored in training keys. Network requests obtain a token for the captured account
+through a scoped SDK client and reject a mismatching current account. Auth changes
+invalidate rendered state immediately; late responses cannot overwrite the new
+account's view. Auth callbacks defer network work outside the SDK auth lock.
+
+Local keys are separate from every existing Practice storage key:
+
+- `krok.mt.events.v1:<user>`: stable error-event UUIDs and canonical identities.
+- `krok.mt.command.v1:<user>:<krok>`: one pending start/answer/finalize command.
+
+Commands are persisted before dispatch; retry/refresh reuses the exact payload.
+Storage failure prevents dispatch and is surfaced instead of inventing a new ID.
+Network errors retain pending data. A server response reconciles a duplicate
+submission, while first accepted answers remain immutable. Server active sessions
+also support resume on another browser/device without a local command. Online
+reconnection and Refresh / retry attempt synchronization again. Clearing browser
+data before pending errors are synchronized loses that outbox; the old Practice
+archive still follows its existing independent storage behavior.
+
+### Verification and remaining manual check
+
+Local tests cover the actual new SQL on embedded PostgreSQL, RLS/EXECUTE denial,
+account binding, catalog rejection, immediate reset, event retry after newer
+mastery, Practice event boundaries, per-account outboxes, token switching, UI
+selection limits, session resume after a lost answer response, feedback,
+finalization, logout and KROK separation. Chromium smoke checks use a local HTTP
+server and simulated auth/API data; they do not contact Supabase.
+
+Per the project owner's instruction, real Auth/PostgREST testing is deferred.
+With a dedicated test account, through the application interface:
+
+1. Sign in through Account; make five distinct mistakes in KROK 1 Practice.
+2. Confirm each appears once in training, with 0/3 credits and unchanged local
+   Practice archive/counters. Check one Past Paper error does not appear.
+3. Start training, answer, refresh/close/reopen, resume and finalize. Repeat
+   finalization/retry and confirm credits do not increase twice.
+4. Repeat for KROK 2; sign out/switch account and confirm isolation.
+5. Disable network, answer or make a Practice error, restore network and retry;
+   verify one accepted answer/event and eventual sync without duplicate credit.
+
+No test users or authentication configuration were changed, and no live database
+writes were performed by the local verification. Auth/PostgREST smoke testing and
+true multi-connection contention testing remain pending.

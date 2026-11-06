@@ -12,6 +12,13 @@
       return data;
     }
     return Object.freeze({
+      async recordPractice(userId, eventId, krok, questionId) {
+        const { data, error } = await supabase.rpc('mistake_training_record_practice', {
+          p_user_id: userId, p_event_id: eventId, p_krok: krok, p_question_id: questionId
+        });
+        if (error) throw error;
+        return data;
+      },
       // Persist sessionId BEFORE starting; reuse it on network retries.
       start: (krok, sessionId, questionIds) => call('start', krok, sessionId, { p_question_ids: questionIds }),
       resume: (krok, sessionId) => call('resume', krok, sessionId),
@@ -23,9 +30,16 @@
         return data;
       },
       async progress(krok) {
-        const { data, error } = await supabase.from('mistake_training_progress').select('question_id,valid_sessions,updated_at').eq('krok', krok);
-        if (error) throw error;
-        return data;
+        const progress = [];
+        // Stay below PostgREST's default row limit; preserve all saved identities.
+        for (let offset = 0; ; offset += 500) {
+          const { data, error } = await supabase.from('mistake_training_progress')
+            .select('question_id,valid_sessions,updated_at').eq('krok', krok)
+            .order('question_id').range(offset, offset + 499);
+          if (error) throw error;
+          progress.push(...data);
+          if (data.length < 500) return progress;
+        }
       }
     });
   }
