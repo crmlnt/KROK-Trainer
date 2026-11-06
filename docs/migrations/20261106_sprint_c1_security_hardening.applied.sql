@@ -1,0 +1,53 @@
+-- KROK Trainer - Sprint C1: Security Hardening
+-- STATO: GIA' ESEGUITA SU SUPABASE DI PRODUZIONE IL 2026-11-06.
+-- NON RIESEGUIRE IN PRODUZIONE. Non aggiungere alle migrazioni da applicare.
+-- Archivio documentale: tutte le istruzioni sono commentate intenzionalmente.
+-- I nomi e le definizioni seguono la patch finale concordata per Sprint C1.
+-- Esecuzione e verifiche confermate dal responsabile del progetto.
+-- Questo checkpoint non ha eseguito SQL o nuove verifiche sul database.
+--
+-- Modifiche applicate:
+-- 1. Revoca TRUNCATE ai soli ruoli anon e authenticated sulle tre tabelle.
+-- 2. Vincolo UNIQUE sul proprietario e sull'ID della sessione.
+-- 3. Vincolo contro chiavi di proprieta' nulle nei dettagli.
+-- 4. FK composita proprietario/sessione con ON DELETE CASCADE.
+-- Le FK preesistenti, le policy RLS e i grant di service_role sono preservati.
+--
+-- DDL APPLICATO (documentazione; non eseguibile in questo file):
+--
+-- REVOKE TRUNCATE
+-- ON TABLE public.exam_sessions,
+--          public.exam_session_questions,
+--          public.question_notes
+-- FROM anon, authenticated
+-- RESTRICT;
+--
+-- ALTER TABLE public.exam_sessions
+--     ADD CONSTRAINT exam_sessions_user_id_id_key
+--     UNIQUE (user_id, id);
+--
+-- ALTER TABLE public.exam_session_questions
+--     ADD CONSTRAINT exam_session_questions_owner_keys_nonnull
+--     CHECK (user_id IS NOT NULL AND exam_session_id IS NOT NULL)
+--     NOT VALID;
+--
+-- ALTER TABLE public.exam_session_questions
+--     ADD CONSTRAINT exam_session_questions_parent_owner_fkey
+--     FOREIGN KEY (user_id, exam_session_id)
+--     REFERENCES public.exam_sessions (user_id, id)
+--     ON UPDATE NO ACTION
+--     ON DELETE CASCADE
+--     NOT DEFERRABLE
+--     NOT VALID;
+--
+-- ALTER TABLE public.exam_session_questions
+--     VALIDATE CONSTRAINT exam_session_questions_owner_keys_nonnull;
+--
+-- ALTER TABLE public.exam_session_questions
+--     VALIDATE CONSTRAINT exam_session_questions_parent_owner_fkey;
+--
+-- VERIFICHE POST-MIGRAZIONE COMPLETATE IL 2026-11-06:
+-- - TRUNCATE revocato per anon e authenticated su tutte e tre le tabelle.
+-- - Tre nuovi vincoli installati e validati, inclusa la FK composita CASCADE.
+-- - 560 record di risposte verificati: zero anomalie.
+-- - Test funzionali positivi: Exam Mode, Exam History, Statistics, Question Notes.
