@@ -28,6 +28,7 @@ validate.js
 # Local npm files
 package.json
 package-lock.json
+!/scripts/mistake-training/package.json
 
 # Generated exports
 exports/

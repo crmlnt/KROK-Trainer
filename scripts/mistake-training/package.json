@@ -1,0 +1,6 @@
+{
+  "name": "krok-mistake-training-tests",
+  "private": true,
+  "scripts": { "test": "node --test engine.test.js" },
+  "devDependencies": { "@electric-sql/pglite": "0.5.15" }
+}
