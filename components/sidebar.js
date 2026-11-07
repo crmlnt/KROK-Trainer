@@ -13,6 +13,7 @@
 
   const icon = (name) => {
     const icons = {
+      target: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg>',
       home: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 11 9-8 9 8"/><path d="M5 10v10h14V10"/></svg>',
       book: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4.5A2.5 2.5 0 0 1 4.5 2H11v18H4.5A2.5 2.5 0 0 0 2 22z"/><path d="M22 4.5A2.5 2.5 0 0 0 19.5 2H13v18h6.5A2.5 2.5 0 0 1 22 22z"/></svg>',
       exam: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V2h6v2M9 9h6M9 13h6M9 17h4"/></svg>',
@@ -46,7 +47,7 @@
       <button id="sidebarMobileCloseBtn" class="sidebar-mobile-close" type="button" aria-label="Close menu">×</button>
     </div>
     <div class="sidebar-scroll">
-      <div class="sidebar-section">${link("home", "index.html", "Home", "home")}</div>
+      <div class="sidebar-section">${link("home", "index.html", "Home", "home")}${link("mistake-training", "mistake-training.html", "Mistake Training", "target")}</div>
       <div class="sidebar-section sidebar-krok-section"><span class="sidebar-section-title">KROK</span>
         <button class="sidebar-krok-toggle ${krok1Active ? "open" : ""}" type="button" data-krok="1" aria-expanded="${krok1Active}"><span>KROK 1</span><span class="sidebar-chevron">›</span></button>
         <div class="sidebar-krok-children ${krok1Active ? "open" : ""}" data-krok-panel="1">${link("krok1-practice", "practice.html", "Practice Mode", "book", true)}${link("krok1-exam", "exam.html", "Exam Mode", "exam", true)}</div>
@@ -54,7 +55,7 @@
         <div class="sidebar-krok-children ${krok2Active ? "open" : ""}" data-krok-panel="2">${link("krok2-practice", "practice.html?exam=krok2", "Practice Mode", "book", true)}${link("krok2-exam", "exam.html?exam=krok2", "Exam Mode", "exam", true)}</div>
       </div>
       <button id="sidebarKrokCollapsedBtn" class="sidebar-krok-collapsed-btn" type="button" aria-label="Open KROK menu" title="KROK">K</button>
-      <div class="sidebar-section"><span class="sidebar-section-title">My Account</span>${link("account", "account.html", "Account", "user")}${link("history", "history/history.html", "Exam History", "history")}${link("statistics", "statistics/statistics.html", "Statistics", "stats")}${link("notes", "notes/index.html", "My Notes", "notes")}${link("mistake-training", "mistake-training.html", "Mistake Training", "book")}</div>
+      <div class="sidebar-section"><span class="sidebar-section-title">My Account</span>${link("account", "account.html", "Account", "user")}${link("history", "history/history.html", "Exam History", "history")}${link("statistics", "statistics/statistics.html", "Statistics", "stats")}${link("notes", "notes/index.html", "My Notes", "notes")}</div>
       <div class="sidebar-section"><span class="sidebar-section-title">Resources</span><button class="sidebar-krok-toggle sidebar-tutorial-toggle ${tutorialActive ? "open" : ""}" type="button" data-krok="tutorial" aria-label="Tutorial" title="Tutorial" aria-expanded="${tutorialActive}"><span class="sidebar-icon">${icon("tutorial")}</span><span class="sidebar-link-label">Tutorial</span><span class="sidebar-chevron" aria-hidden="true">›</span></button><div class="sidebar-krok-children sidebar-tutorial-children ${tutorialActive ? "open" : ""}" data-krok-panel="tutorial">${link("tutorial", "guide.html", "How to Use KROK Trainer", "tutorial", true)}${link("study-guide", "study-guide.html", "How to Study for KROK 1", "book", true)}</div>${link("news", "news/index.html", "News & Articles", "news")}</div>
     </div>
     <div class="sidebar-footer"><button id="sidebarThemeBtn" class="sidebar-theme-btn" type="button"><span id="sidebarThemeIcon" class="sidebar-icon"></span><span id="sidebarThemeLabel" class="sidebar-theme-label">Dark Mode</span></button><a id="sidebarUser" class="sidebar-user" href="${root}account.html"><span class="sidebar-status-dot" aria-hidden="true"></span><span class="sidebar-user-copy"><strong id="sidebarUserEmail">Not signed in</strong><span id="sidebarUserStatus">Sign in →</span></span></a></div>`;

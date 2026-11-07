@@ -50,11 +50,30 @@
         typeof detail.record?.subject !== 'string' || detail.record.subject.startsWith('Past Paper')) return null;
     try { return identity.canonicalId(detail.krok, detail.record.id); } catch (_) { return null; }
   }
+  // Versioned presentation order: do not change this seed/PRNG for active sessions.
+  // Same Fisher–Yates algorithm as app.js shuffleArray, with a seeded random source.
+  function answerOptions({ sessionId, krok, questionId, revision }, answers) {
+    const seed = JSON.stringify(['training-options-v1', sessionId, krok, questionId, revision]);
+    let value = 2166136261;
+    for (let i = 0; i < seed.length; i++) value = Math.imul(value ^ seed.charCodeAt(i), 16777619) >>> 0;
+    const random = () => {
+      value = (value + 0x6D2B79F5) >>> 0;
+      let mixed = Math.imul(value ^ (value >>> 15), 1 | value);
+      mixed ^= mixed + Math.imul(mixed ^ (mixed >>> 7), 61 | mixed);
+      return ((mixed ^ (mixed >>> 14)) >>> 0) / 4294967296;
+    };
+    const options = answers.map((text, originalIndex) => ({ text, originalIndex }));
+    for (let i = options.length - 1; i > 0; i--) {
+      const other = Math.floor(random() * (i + 1));
+      [options[i], options[other]] = [options[other], options[i]];
+    }
+    return options;
+  }
   function friendlyError(error) {
     if (error?.code === 'PGRST202' || /could not find.*mistake_training_record_practice/i.test(error?.message || '')) {
       return 'Practice sync is awaiting the approved database update. Your pending mistakes are saved on this browser.';
     }
     return error?.message || 'Connection failed. Retry safely; your saved session is preserved.';
   }
-  return Object.freeze({ scopedClient, createQueue, practiceIdentity, friendlyError });
+  return Object.freeze({ scopedClient, createQueue, practiceIdentity, answerOptions, friendlyError });
 });

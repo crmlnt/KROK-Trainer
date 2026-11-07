@@ -107,10 +107,11 @@ after authorized migration. No production schema was inspected or modified.
 
 ## Tappa 2 — usable MVP
 
-Open `mistake-training.html` from the shared sidebar or Practice saved mistakes.
+Open `mistake-training.html` from the permanent target-icon item beside Home in
+the shared desktop/mobile navigation. It is independent of Practice completion.
 Choose KROK 1/2, select 5–50 distinct questions, and start training. Unmastered
-questions are selected by default (up to ten). Answers use original bank order
-and indices; feedback uses the server result. Finalization updates the displayed
+questions are selected by default (up to ten). Answers are shuffled deterministically per session/question while retaining
+original bank indices; feedback uses the server result. Finalization updates the displayed
 credits. Progress is read in stable 500-row pages to avoid PostgREST truncation.
 Return/refresh discovers the active session on the server. An unanswered
 session remains resumable; there is no abandonment or expiry operation.
@@ -191,3 +192,80 @@ With a dedicated test account, through the application interface:
 No test users or authentication configuration were changed, and no live database
 writes were performed by the local verification. Auth/PostgREST smoke testing and
 true multi-connection contention testing remain pending.
+
+
+## Sprint C — UI/UX 2.0
+
+Dashboard and training visuals follow the existing Statistics design language:
+light background, white bordered cards, blue actions and pastel semantic status.
+The referenced approved mockup was not included in the supplied attachment; the
+written requirements and local Statistics styles are the implementation reference.
+
+The four KPI cards read only the selected account/KROK server progress rows:
+Need Review (0), In Progress (1–2), Mastered (3), and Total Questions. The mastery
+percentage is mastered/total, rounded for display, or 0% for an empty archive.
+The recommended session uses up to ten available unmastered identities, with
+0-credit questions first. It is disabled below five; no extra questions are added.
+Custom Training retains selection of 5–50 actual saved identities. An active
+session is offered through Resume Training on the dashboard after refresh/return.
+
+Browse Questions provides independent categories, local subject/search filters,
+canonical IDs and 0/3–3/3 badges. View Question shows the question and answers as
+read-only consultation without invoking a write RPC. Mastered records remain
+browsable; different canonical IDs are never deduplicated by content. Refresh
+reloads current server progress, including Practice resets.
+
+The session view includes question position, answered-count progress, subject,
+deterministically shuffled lettered options, semantic feedback and Next Question. Correct
+response feedback explains that a credit is pending finalization, while wrong
+feedback explains the immediate per-question reset. Backend, RPC signatures,
+mastery rules, bank files and storage/auth boundaries are unchanged.
+
+Practice keeps Review Mistakes. The redundant Saved mistakes card and direct
+training link were removed. Existing export, clear, error count and sync controls
+remain available inside the collapsed Practice error log tools disclosure. Guest
+and legacy browser mistakes are not imported into account progress.
+
+Verification: focused dashboard/library tests cover live-data counts, empty/guest
+and network states, minimum session size, mastered consultation without writes,
+subject/text filtering, duplicate identities, server resets and active resume.
+Existing Practice regression tests cover review, exports, clear and counters.
+Chromium desktop/mobile checks use simulated Auth/API responses and local files;
+real Auth/PostgREST testing remains deferred to the dedicated account smoke test.
+
+
+### Answer shuffle correction
+
+Published banks intentionally keep original answer order (2,889/2,890 KROK 1
+questions and all 2,409 KROK 2 questions have correct index 0). The previous training
+renderer displayed this order directly. Practice already shuffled presentation;
+its random comparator and text-based restore are not suitable for deterministic
+training resume or duplicate answer text. Training now uses the Fisher–Yates
+algorithm already present in app.js, with a versioned seeded random source.
+
+The `training-options-v1` seed contains the session UUID, explicit KROK, canonical
+question ID and start-time revision. Re-render, refresh and server resume rebuild
+the same permutation without storage or SQL changes. Every option retains its
+original integer bank index; displayed A–E letters are presentation positions.
+RPC submission, accepted answer highlights and correct-answer highlights all use
+the original index. Pending commands remain in their existing original-index
+format. Session IDs and grading snapshots are unchanged. A correct answer can
+legitimately appear in A; across sessions/questions it is no longer fixed there.
+The pinned v1 permutation test protects resume order from accidental algorithm
+changes. Tests cover correct answers at A/B/C/D/E, refresh before/after submission,
+response-loss retries with identical RPC payloads, wrong feedback, and credits
+awarded once on finalization. No Practice/Exam implementation was modified.
+
+
+### Approved dashboard refinements
+
+Your Progress now uses a compact circular indicator beside Your Next Training
+on desktop; the two cards stack on mobile. The percentage calculation and
+account/KROK server source remain unchanged, including 0% for an empty archive.
+All four KPI cards are native keyboard-accessible buttons. Each opens the matching
+mastery category; Total Questions opens All Questions. KPI entry clears subject
+and text filters, so the full requested category is shown for the selected KROK.
+The library includes an All Questions category while retaining all earlier filters.
+The dashboard Practice Mode backlink was removed. The permanent shared sidebar
+remains the entry point on desktop and mobile. Deterministic answer shuffle and
+server-side grading/mastery are unchanged.

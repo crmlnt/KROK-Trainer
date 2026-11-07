@@ -70,14 +70,14 @@ function backend(){
  };
  return {banks,calls,createClient,get,loseNextAnswer(){failNextAnswer=true;}};
 }
-async function page(t,server,{storage={},user='A',krok=1}={}){
+async function page(t,server,{storage={},user='A',krok=1,fetchError=false}={}){
  const dom=new JSDOM(fs.readFileSync(path.join(root,'mistake-training.html'),'utf8'),{runScripts:'outside-only',url:`https://example.test/mistake-training.html?krok=${krok}`});
  const w=dom.window,errors=[];w.addEventListener('error',e=>errors.push(e.error));t.after(()=>{w.close();assert.deepEqual(errors,[]);});
  for(const [k,v] of Object.entries(storage))w.localStorage.setItem(k,v);
  let session=user?{user:{id:user},access_token:`token-${user}`}:null,listener;
  w.stub={auth:{getSession:async()=>({data:{session},error:null}),onAuthStateChange(fn){listener=fn;}}};
  w.supabase={createClient:server.createClient};
- w.fetch=async url=>({ok:true,json:async()=>JSON.parse(fs.readFileSync(path.join(root,url),'utf8'))});
+ w.fetch=async url=>({ok:!fetchError,json:async()=>url==='questions.json'?server.banks.get(1):url==='krok2/questions-krok2.json'?server.banks.get(2):JSON.parse(fs.readFileSync(path.join(root,url),'utf8'))});
  vm.runInContext('const supabaseClient=window.stub;const SUPABASE_URL="https://test.invalid";const SUPABASE_KEY="public";',dom.getInternalVMContext());
  for(const file of ['question-identity.js','mistake-training.js','mistake-training-runtime.js','components/mistake-training-page.js'])w.eval(fs.readFileSync(path.join(root,file),'utf8'));
  await until(()=>!w.document.getElementById('trainingStatus').textContent.startsWith('Loading'));
@@ -87,24 +87,26 @@ async function page(t,server,{storage={},user='A',krok=1}={}){
 
 test('UI selects five, starts, recovers a lost answer across refresh, finalizes and isolates accounts/KROKs',async t=>{
  const server=backend();const p=await page(t,server);
+ p.click('Custom Training');
  assert.equal(p.w.document.querySelectorAll('input:checked').length,5);
  const first=p.w.document.querySelector('input');first.checked=false;first.dispatchEvent(new p.w.Event('change'));
- assert.equal(p.buttons().find(b=>b.textContent==='Start training').disabled,true);
- first.checked=true;first.dispatchEvent(new p.w.Event('change'));p.click('Start training');
+ assert.equal(p.buttons().find(b=>b.textContent==='Start Training').disabled,true);
+ first.checked=true;first.dispatchEvent(new p.w.Event('change'));p.click('Start Training');
  await until(()=>p.w.document.querySelectorAll('.training-answer').length===5);
- server.loseNextAnswer();p.w.document.querySelectorAll('.training-answer')[0].click();
+ server.loseNextAnswer();p.w.document.querySelector('.training-answer[data-original-index="0"]').click();
  await until(()=>p.w.document.getElementById('trainingStatus').textContent==='response lost');
  assert.ok(Object.keys(p.snapshot()).some(k=>k.startsWith('krok.mt.command')));
  const r=await page(t,server,{storage:p.snapshot()});
- await until(()=>r.buttons().some(b=>b.textContent==='Next question'));
+ r.click('Resume Training');
+ await until(()=>r.buttons().some(b=>b.textContent==='Next Question'));
  assert.equal(server.get('A',1).sessions.length,1);
  const answers=server.calls.filter(c=>c.args.p_action==='answer');assert.deepEqual(JSON.parse(JSON.stringify(answers[0])),JSON.parse(JSON.stringify(answers[1])));
- r.click('Next question');
+ r.click('Next Question');
  for(let i=1;i<5;i++){
   await until(()=>r.w.document.querySelector('.training-answer:not(:disabled)'));
-  r.w.document.querySelector('.training-answer').click();
-  await until(()=>r.buttons().some(b=>b.textContent===(i===4?'Finish session':'Next question')&&!b.disabled));
-  r.click(i===4?'Finish session':'Next question');
+  r.w.document.querySelector('.training-answer[data-original-index="0"]').click();
+  await until(()=>r.buttons().some(b=>b.textContent===(i===4?'Finish session':'Next Question')&&!b.disabled));
+  r.click(i===4?'Finish session':'Next Question');
  }
  r.click('Finalize session');await until(()=>r.w.document.getElementById('trainingStatus').textContent.includes('Session completed'));
  assert.ok(server.get('A',1).progress.every(p=>p.valid_sessions===1));
@@ -113,8 +115,9 @@ test('UI selects five, starts, recovers a lost answer across refresh, finalizes 
  assert.ok(!r.w.document.getElementById('trainingContent').textContent.includes('1 / 3 credits'));
  r.account(null);await until(()=>r.w.document.getElementById('trainingStatus').textContent.includes('Sign in'));
  const k2=await page(t,server,{krok:2});
+ k2.click('Custom Training');
  assert.ok([...k2.w.document.querySelectorAll('input')].every(input=>input.value.startsWith('main:krok2-')));
- k2.click('Start training');await until(()=>k2.w.document.querySelectorAll('.training-answer').length===5);
+ k2.click('Start Training');await until(()=>k2.w.document.querySelectorAll('.training-answer').length===5);
  assert.equal(server.get('A',2).sessions.length,1);
  assert.equal(server.get('A',1).sessions[0].status,'completed');
 });
@@ -167,17 +170,172 @@ test('a stale answer from another tab reconciles even after server finalization'
 test('UI sends the original nonzero bank answer index and displays server feedback',async t=>{
  const server=backend();
  const p=await page(t,server);
- p.click('Start training');
+ p.click('Start Training');
  await until(()=>p.w.document.querySelectorAll('.training-answer').length===5);
- const options=p.w.document.querySelectorAll('.training-answer');
+ const option=p.w.document.querySelector('.training-answer[data-original-index="3"]');
  const question=server.banks.get(1)[0];
- assert.equal(options[3].textContent,question.answers[3]);
- options[3].click();
+ assert.equal(option.querySelector('.training-option-text').textContent,question.answers[3]);
+ option.click();
  await until(()=>p.w.document.querySelector('.training-feedback'));
  const request=server.calls.find(c=>c.args.p_action==='answer');
  assert.equal(request.args.p_selected_index,3);
  assert.equal('is_correct' in request.args,false);
  assert.match(p.w.document.querySelector('.training-feedback').textContent,/Incorrect/);
- assert.equal(p.w.document.querySelector('.training-wrong').textContent,question.answers[3]);
- assert.equal(p.w.document.querySelector('.training-correct').textContent,question.answers[question.correct]);
+ assert.equal(p.w.document.querySelector('.training-wrong .training-option-text').textContent,question.answers[3]);
+ assert.equal(p.w.document.querySelector('.training-correct .training-option-text').textContent,question.answers[question.correct]);
+});
+
+test('dashboard KPIs use account progress, handle zero and fewer than five eligible questions',async t=>{
+ const server=backend();
+ server.get('A',1).progress.forEach((row,i)=>{row.valid_sessions=[0,1,2,3,3][i];});
+ const p=await page(t,server,{storage:{errors:JSON.stringify(Array(80).fill({question:'Legacy mistake'}))}});
+ const kpi=name=>p.w.document.querySelector(`[data-kpi="${name}"] strong`).textContent;
+ assert.equal(kpi('Need Review'),'1');assert.equal(kpi('In Progress'),'2');assert.equal(kpi('Mastered'),'2');assert.equal(kpi('Total Questions'),'5');
+ assert.equal(p.w.document.querySelector('.training-progress-ring').getAttribute('aria-valuenow'),'40');
+ assert.equal(p.buttons().find(b=>b.textContent==='Start Training').disabled,true);
+ assert.match(p.w.document.querySelector('.training-next').textContent,/At least 5 distinct unmastered/);
+ assert.equal(server.calls.length,0);
+ const empty=await page(t,server,{user:'B'});
+ assert.equal(empty.w.document.querySelector('[data-kpi="Total Questions"] strong').textContent,'0');
+ assert.equal(empty.w.document.querySelector('.training-progress-ring').getAttribute('aria-valuenow'),'0');
+ assert.equal(empty.w.document.querySelector('.training-progress-ring').style.getPropertyValue('--mastered-percent'),'0%');
+ assert.equal(empty.buttons().find(b=>b.textContent==='Start Training').disabled,true);
+ const guest=await page(t,server,{user:null});
+ assert.match(guest.w.document.getElementById('trainingContent').textContent,/Sign in/);
+ assert.equal(guest.w.document.querySelector('[data-kpi]'),null);
+});
+
+test('library filters preserve duplicate IDs and mastered questions; consultation has no write effects',async t=>{
+ const server=backend();
+ server.banks.get(1)[1]={...server.banks.get(1)[1],question:server.banks.get(1)[0].question,subject:'Other subject'};
+ server.get('A',1).progress.forEach((row,i)=>{row.valid_sessions=[0,0,1,2,3][i];});
+ const p=await page(t,server);
+ p.click('Browse Questions');
+ assert.equal(p.w.document.querySelectorAll('.training-list li').length,2);
+ assert.match(p.w.document.querySelector('.training-list').textContent,/main:1/);
+ assert.match(p.w.document.querySelector('.training-list').textContent,/main:2/);
+ const search=p.w.document.getElementById('trainingSearch');search.value='main:2';search.dispatchEvent(new p.w.Event('input'));
+ assert.equal(p.w.document.querySelectorAll('.training-list button').length,1);
+ const subject=p.w.document.getElementById('trainingSubject');subject.value='Other subject';subject.dispatchEvent(new p.w.Event('change'));
+ assert.match(p.w.document.querySelector('.training-list').textContent,/main:2/);
+ search.value='nothing matches this';search.dispatchEvent(new p.w.Event('input'));
+ assert.match(p.w.document.querySelector('.training-list').textContent,/No questions match/);
+ search.value='';search.dispatchEvent(new p.w.Event('input'));subject.value='';subject.dispatchEvent(new p.w.Event('change'));
+ p.click('Mastered (1)');p.click('View Question');
+ assert.match(p.w.document.querySelector('.training-question-detail').textContent,/3\/3 · Mastered/);
+ assert.match(p.w.document.querySelector('.training-question-detail').textContent,/No answer is submitted/);
+ assert.equal(server.calls.length,0);
+ assert.equal(server.get('A',1).progress[4].valid_sessions,3);
+ p.click('Close question');assert.equal(p.w.document.querySelector('.training-question-detail'),null);
+ server.get('A',1).progress[4].valid_sessions=0; // server-side reset from a new Practice error
+ p.w.document.getElementById('trainingReload').click();
+ await until(()=>p.w.document.querySelector('[data-kpi="Need Review"] strong')?.textContent==='3');
+ assert.equal(p.w.document.querySelector('[data-kpi="Mastered"] strong').textContent,'0');
+});
+
+test('active session has an independent dashboard resume action and correct question progress',async t=>{
+ const server=backend(),ids=[1,2,3,4,5].map(n=>`main:${n}`);
+ server.get('A',1).sessions.push({sessionId:'10000000-0000-0000-0000-000000000010',krok:1,status:'active',questionIds:ids,answers:ids.map((questionId,i)=>({questionId,revision:1,selectedIndex:i===0?0:null,isCorrect:i===0?true:null}))});
+ const p=await page(t,server);p.click('Resume Training');
+ assert.match(p.w.document.querySelector('.training-question-position').textContent,/Question 2 of 5/);
+ assert.equal(p.w.document.querySelector('.training-session progress').value,1);
+ p.click('← Dashboard');
+ assert.ok(p.buttons().some(b=>b.textContent==='Resume Training'));
+ assert.ok(server.calls.every(c=>c.args.p_action==='resume'));
+ const offline=await page(t,backend(),{fetchError:true});
+ assert.match(offline.w.document.getElementById('trainingStatus').textContent,/could not be loaded/);
+ assert.match(offline.w.document.getElementById('trainingContent').textContent,/Refresh \/ retry/);
+});
+
+test('autonomous target navigation and Practice tools preserve the original review path',()=>{
+ const html=fs.readFileSync(path.join(root,'practice.html'),'utf8');
+ const dom=new JSDOM(html);
+ assert.equal(dom.window.document.querySelector('.practice-error-card'),null);
+ assert.equal(dom.window.document.getElementById('mistakeTrainingLink'),null);
+ for(const id of ['review-btn','export-errors-btn','clear-errors-btn','exportExamLogBtn','error-count'])assert.ok(dom.window.document.getElementById(id));
+ assert.equal(dom.window.document.querySelector('.practice-archive-tools').open,false);
+ dom.window.close();
+ const nav=new JSDOM('<aside id="appSidebar" data-root="../" data-active="mistake-training"></aside>',{runScripts:'outside-only',url:'https://example.test/notes/index.html'});
+ nav.window.eval(fs.readFileSync(path.join(root,'components/sidebar.js'),'utf8'));
+ const link=nav.window.document.querySelector('.sidebar-section:first-child a[href="../mistake-training.html"]');
+ assert.ok(link);assert.equal(link.getAttribute('aria-current'),'page');assert.equal(link.querySelectorAll('circle').length,3);
+ nav.window.close();
+});
+
+test('answer permutation is stable, versioned, nonmutating and preserves duplicate answer indices',()=>{
+ const context={sessionId:'10000000-0000-0000-0000-000000000001',krok:1,questionId:'main:1',revision:1};
+ const answers=['Same','Same','Third','Fourth','Fifth'];
+ const options=Runtime.answerOptions(context,answers);
+ assert.deepEqual(Runtime.answerOptions(context,answers),options);
+ assert.deepEqual(options.map(o=>o.originalIndex).sort((a,b)=>a-b),[0,1,2,3,4]);
+ assert.deepEqual(answers,['Same','Same','Third','Fourth','Fifth']);
+ for(const option of options)assert.equal(option.text,answers[option.originalIndex]);
+ // Pin the v1 order so a later refactor cannot silently reshuffle resumed sessions.
+ assert.deepEqual(options.map(o=>o.originalIndex),[1,2,4,3,0]);
+});
+
+for(let position=0;position<5;position++)test(`correct answer in ${'ABCDE'[position]}: original RPC index, feedback, resume, retry and credits`,async t=>{
+ const server=backend(),question=server.banks.get(1)[0],ids=[1,2,3,4,5].map(n=>`main:${n}`);
+ let sessionId;
+ for(let n=1;n<=500;n++){
+  const candidate=`20000000-0000-0000-0000-${String(n).padStart(12,'0')}`;
+  if(Runtime.answerOptions({sessionId:candidate,krok:1,questionId:ids[0],revision:1},question.answers)[position].originalIndex===question.correct){sessionId=candidate;break;}
+ }
+ assert.ok(sessionId);
+ server.get('A',1).sessions.push({sessionId,krok:1,status:'active',questionIds:ids,answers:ids.map(questionId=>({questionId,revision:1,selectedIndex:null,isCorrect:null}))});
+ const p=await page(t,server);p.click('Resume Training');
+ const order=()=>[...p.w.document.querySelectorAll('.training-answer')].map(o=>o.dataset.originalIndex);
+ const before=order();
+ assert.equal(Number(before[position]),question.correct);
+ assert.equal(p.w.document.querySelectorAll('.training-option-letter')[position].textContent,'ABCDE'[position]);
+ // Re-rendering and a refresh before answering must preserve exactly the same order.
+ p.click('← Dashboard');p.click('Resume Training');assert.deepEqual(order(),before);
+ const refreshed=await page(t,server);refreshed.click('Resume Training');
+ assert.deepEqual([...refreshed.w.document.querySelectorAll('.training-answer')].map(o=>o.dataset.originalIndex),before);
+ server.loseNextAnswer();refreshed.w.document.querySelectorAll('.training-answer')[position].click();
+ await until(()=>refreshed.w.document.getElementById('trainingStatus').textContent==='response lost');
+ const retry=await page(t,server,{storage:refreshed.snapshot()});retry.click('Resume Training');
+ assert.deepEqual([...retry.w.document.querySelectorAll('.training-answer')].map(o=>o.dataset.originalIndex),before);
+ assert.match(retry.w.document.querySelector('.training-feedback').textContent,/Correct answer/);
+ assert.equal(retry.w.document.querySelectorAll('.training-answer')[position].classList.contains('training-correct'),true);
+ const requests=server.calls.filter(c=>c.args.p_action==='answer');
+ assert.equal(requests.length,2);
+ assert.equal(requests[0].args.p_selected_index,question.correct);
+ assert.deepEqual(JSON.parse(JSON.stringify(requests[0])),JSON.parse(JSON.stringify(requests[1])));
+ assert.ok(server.get('A',1).progress.every(p=>p.valid_sessions===0));
+ retry.click('Next Question');
+ for(let i=1;i<5;i++){
+  await until(()=>retry.w.document.querySelector('.training-answer:not(:disabled)'));
+  retry.w.document.querySelector('.training-answer[data-original-index="0"]').click();
+  await until(()=>retry.buttons().some(b=>b.textContent===(i===4?'Finish session':'Next Question')&&!b.disabled));
+  retry.click(i===4?'Finish session':'Next Question');
+ }
+ retry.click('Finalize session');
+ await until(()=>retry.w.document.getElementById('trainingStatus').textContent.includes('Session completed'));
+ assert.ok(server.get('A',1).progress.every(p=>p.valid_sessions===1));
+});
+
+test('KPI buttons open exact categories or the full library, clearing stale filters per KROK',async t=>{
+ const server=backend();server.get('A',1).progress.forEach((row,i)=>{row.valid_sessions=[0,1,2,3,3][i];});
+ server.get('A',2).progress.forEach(row=>{row.valid_sessions=0;});
+ const p=await page(t,server);
+ for(const [name,tab,count] of [['Need Review','Need Review (1)',1],['In Progress','In Progress (2)',2],['Mastered','Mastered (2)',2],['Total Questions','All Questions (5)',5]]){
+  const kpi=p.w.document.querySelector(`[data-kpi="${name}"]`);
+  assert.equal(kpi.tagName,'BUTTON');assert.equal(kpi.type,'button');assert.equal(kpi.tabIndex,0);
+  kpi.focus();assert.equal(p.w.document.activeElement,kpi);kpi.click();
+  assert.equal(p.w.document.querySelector('.training-tab[aria-pressed="true"]').textContent,tab);
+  assert.equal(p.w.document.querySelectorAll('.training-list button').length,count);
+  const search=p.w.document.getElementById('trainingSearch');search.value='no matching text';search.dispatchEvent(new p.w.Event('input'));
+  p.click('← Dashboard');
+ }
+ p.w.document.querySelector('[data-kpi="Total Questions"]').click();
+ assert.equal(p.w.document.getElementById('trainingSearch').value,'');
+ assert.equal(p.w.document.querySelectorAll('.training-list button').length,5);
+ p.click('← Dashboard');
+ const selector=p.w.document.getElementById('trainingKrok');selector.value='2';selector.dispatchEvent(new p.w.Event('change'));
+ await until(()=>p.w.document.querySelector('[data-kpi="Need Review"] strong')?.textContent==='5');
+ p.w.document.querySelector('[data-kpi="Total Questions"]').click();
+ assert.ok([...p.w.document.querySelectorAll('.training-question-copy')].every(row=>row.textContent.includes('main:krok2-')));
+ assert.equal(p.w.document.getElementById('trainingPracticeLink'),null);
+ assert.equal(server.calls.length,0);
 });

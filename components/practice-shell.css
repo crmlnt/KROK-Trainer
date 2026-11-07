@@ -715,3 +715,11 @@ body.dark-mode .completion-encouragement{color:#86efac}
 body.dark-mode .completion-category{color:#94a3b8}
 body.dark-mode .completion-performance{background:#35191b;border-color:#5d2529;color:#fecaca}
 body.dark-mode .completion-performance[data-category="above"]{background:#17311f;border-color:#24552f;color:#86efac}
+
+/* Keep the existing archive tools available without a second mistakes card. */
+body.practice-session .practice-archive-tools{margin-top:16px;color:inherit}
+body.practice-session .practice-archive-tools summary{cursor:pointer;color:#64748b;font-size:.8rem;font-weight:600;padding:10px 0}
+body.practice-session .practice-archive-tools[open]{padding-bottom:12px}
+body.practice-session .practice-archive-tools .action-buttons{margin-top:12px}
+body.practice-session .practice-archive-tools #trainingSyncStatus{font-size:.78rem;color:#64748b}
+body.dark-mode.practice-session .practice-archive-tools summary,body.dark-mode.practice-session .practice-archive-tools #trainingSyncStatus{color:#a1adc0}
