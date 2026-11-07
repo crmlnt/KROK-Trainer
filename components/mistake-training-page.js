@@ -246,9 +246,9 @@
     if(!owner){
       status.textContent='Sign in to access your Mistake Training.';
       content.setAttribute('aria-busy','false');
-      const card=node('section',null,'training-card');
-      const link=node('a','Sign in →');link.href='account.html';
-      card.append(heading('Your progress, across every visit'),node('p','Sign in to review your saved Practice mistakes and continue your training. Browser-only guest mistakes stay in Practice Review Mistakes.'),link);
+      const card=node('section',null,'account-state');
+      const link=node('a','Sign In','account-state-action');link.href='account.html';
+      card.append(heading('Sign in required'),node('p','Sign in to your KROK Trainer account to access Mistake Training.'),link);
       content.append(card);return;
     }
     status.textContent='Loading your saved training…';

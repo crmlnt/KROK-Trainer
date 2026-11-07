@@ -2,6 +2,9 @@
 // STATISTICS
 // =========================
 const loadingSection = document.getElementById("statisticsLoading");
+const statisticsError = document.getElementById("statisticsError");
+const statisticsRetry = document.getElementById("statisticsRetry");
+let statisticsRequestPending = false;
 const loginRequired = document.getElementById("loginRequired");
 const emptyStatistics = document.getElementById("emptyStatistics");
 const statisticsContent = document.getElementById("statisticsContent");
@@ -406,24 +409,34 @@ subjectDetailBack.addEventListener("click", () => {
 });
 
 async function loadStatistics() {
+  if (statisticsRequestPending) return;
+  statisticsRequestPending = true;
+  statisticsRetry.disabled = true;
+  loadingSection.hidden = false;
+  loginRequired.hidden = true;
+  statisticsError.hidden = true;
+  statisticsContent.hidden = true;
+  emptyStatistics.hidden = true;
   try {
-    const { data: { user }, error: userError } = await supabaseClient.auth.getUser();
-    if (userError) throw userError;
+    const { data, error: userError } = await supabaseClient.auth.getUser();
+    // The SDK reports a missing local auth session as an error; it is a sign-in state.
+    if (userError && userError.name !== 'AuthSessionMissingError') throw userError;
+    const user = userError ? null : data?.user;
     if (!user) {
       loadingSection.hidden = true;
       loginRequired.hidden = false;
       return;
     }
 
-    const data = await StatisticsIntegration.loadStatisticsData(supabaseClient, user.id);
-    if (data.sessions.length === 0) {
+    const statisticsData = await StatisticsIntegration.loadStatisticsData(supabaseClient, user.id);
+    if (statisticsData.sessions.length === 0) {
       loadingSection.hidden = true;
       emptyStatistics.hidden = false;
       return;
     }
     const referenceTime = Date.now();
     periodViewStore = StatisticsPageController.createPeriodViewStore({
-      data,
+      data: statisticsData,
       engine: KrokAnalytics,
       integration: StatisticsIntegration,
       referenceTime
@@ -441,10 +454,15 @@ async function loadStatistics() {
     statisticsContent.hidden = false;
   } catch (error) {
     console.error("Error loading complete statistics:", error);
-    loadingSection.hidden = false;
-    loadingSection.innerHTML = "<p>Unable to load complete statistics. Please try again.</p>";
+    loadingSection.hidden = true;
+    loginRequired.hidden = true;
+    statisticsError.hidden = false;
     statisticsContent.hidden = true;
     emptyStatistics.hidden = true;
+  } finally {
+    statisticsRequestPending = false;
+    statisticsRetry.disabled = false;
   }
 }
+statisticsRetry.addEventListener("click", () => void loadStatistics());
 loadStatistics();

@@ -7,7 +7,7 @@ const { JSDOM } = require("jsdom");
 const html = fs.readFileSync(path.join(__dirname, "statistics.html"), "utf8");
 const script = fs.readFileSync(path.join(__dirname, "statistics.js"), "utf8");
 
-function createStatisticsDom() {
+function createStatisticsDom({ getUser = async () => ({ data: { user: null }, error: null }), loadStatisticsData } = {}) {
   const dom = new JSDOM(html, {
     runScripts: "outside-only",
     url: "https://example.test/statistics/statistics.html"
@@ -21,6 +21,7 @@ function createStatisticsDom() {
   };
   window.KrokAnalytics = { TIME_FILTERS: filters };
   window.StatisticsIntegration = {
+    loadStatisticsData,
     WEAK_SUBJECT_MIN_QUESTIONS: 10,
     KROK_PASS_THRESHOLD: 64,
     getWeakSubjectStatus: () => "strong",
@@ -41,7 +42,7 @@ function createStatisticsDom() {
   };
   window.Chart = function Chart() {};
   window.supabaseClient = {
-    auth: { getUser: async () => ({ data: { user: null }, error: null }) }
+    auth: { getUser }
   };
   window.eval(script);
   return dom;
@@ -81,4 +82,50 @@ test("subject names render as text in Weak Subjects and Performance by Subject",
   assert.equal(dom.window.document.querySelector(".subject-stat-label").textContent, maliciousSubject);
   assert.equal(dom.window.document.querySelector('[data-xss="subject"]'), null);
   dom.window.close();
+});
+
+const settle = () => new Promise(resolve => setImmediate(resolve));
+for (const missingError of [false,true]) test(`Statistics: missing session is sign-in, not load error (SDK error=${missingError})`,async t=>{
+ let reads=0;
+ const dom=createStatisticsDom({getUser:async()=>({data:{user:null},error:missingError?{name:'AuthSessionMissingError',message:'Auth session missing!'}:null}),loadStatisticsData:async()=>{reads++;}});
+ t.after(()=>dom.window.close());await settle();
+ const d=dom.window.document;
+ assert.equal(d.getElementById('loginRequired').hidden,false);
+ assert.equal(d.getElementById('statisticsError').hidden,true);
+ assert.equal(d.getElementById('statisticsLoading').hidden,true);
+ assert.equal(d.querySelector('#loginRequired h2').textContent,'Sign in required');
+ assert.equal(d.querySelector('#loginRequired a').textContent,'Sign In');
+ assert.equal(reads,0);
+});
+
+test('Statistics: real Auth failure shows dedicated error and retry can recover to sign-in',async t=>{
+ let failure=true;
+ const dom=createStatisticsDom({getUser:async()=>({data:{user:null},error:failure?{name:'AuthRetryableFetchError',message:'Network unavailable'}:null})});
+ dom.window.console.error=()=>{};t.after(()=>dom.window.close());await settle();
+ const d=dom.window.document;
+ assert.equal(d.getElementById('statisticsError').hidden,false);
+ assert.equal(d.getElementById('loginRequired').hidden,true);
+ assert.equal(d.getElementById('statisticsLoading').hidden,true);
+ assert.equal(d.querySelector('#statisticsError h2').textContent,'Unable to load statistics');
+ assert.equal(d.querySelector('#statisticsError p').textContent,"We couldn't load your statistics right now. Please try again.");
+ failure=false;d.getElementById('statisticsRetry').click();await settle();
+ assert.equal(d.getElementById('statisticsError').hidden,true);
+ assert.equal(d.getElementById('loginRequired').hidden,false);
+ assert.match(d.querySelector('#statisticsLoading p').textContent,/Loading/);
+});
+
+test('Statistics: data failure is distinct from empty and duplicate retries do not overlap',async t=>{
+ let failure=true,reads=0,release;
+ const dom=createStatisticsDom({getUser:async()=>({data:{user:{id:'test-user'}},error:null}),loadStatisticsData:async()=>{reads++;if(failure)throw Error('Data unavailable');return new Promise(resolve=>{release=()=>resolve({sessions:[],questionRecords:[]});});}});
+ dom.window.console.error=()=>{};t.after(()=>dom.window.close());await settle();
+ const d=dom.window.document;
+ assert.equal(d.getElementById('statisticsError').hidden,false);
+ assert.equal(d.getElementById('emptyStatistics').hidden,true);
+ failure=false;d.getElementById('statisticsRetry').click();await settle();
+ d.getElementById('statisticsRetry').click();await settle();assert.equal(reads,2);
+ assert.equal(d.getElementById('statisticsLoading').hidden,false);
+ release();await settle();
+ assert.equal(d.getElementById('emptyStatistics').hidden,false);
+ assert.equal(d.getElementById('statisticsError').hidden,true);
+ assert.equal(d.getElementById('statisticsContent').hidden,true);
 });

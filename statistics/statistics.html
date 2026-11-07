@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="../components/sidebar.css">
   <link rel="stylesheet" href="../components/breadcrumb.css">
   <link rel="stylesheet" href="statistics.css">
+  <link rel="stylesheet" href="../components/account-state.css">
 </head>
 <body>
   <aside id="appSidebar" data-root="../" data-active="statistics"></aside>
@@ -14,9 +15,10 @@
     <main class="statistics-page">
       <nav id="appBreadcrumb" data-root="../" data-section="My Account" data-section-href="account.html" data-page="Statistics"></nav>
       <header class="statistics-header"><span class="statistics-eyebrow">KROK TRAINER</span><h1>Statistics</h1><p>Track your exam performance and monitor your progress over time.</p></header>
-      <section id="loginRequired" hidden><h2>Sign in required</h2><p>Sign in to your KROK Trainer account to view your statistics.</p><a href="../account.html">Sign In</a></section>
-      <section id="statisticsLoading"><p>Loading your statistics...</p></section>
-      <section id="emptyStatistics" hidden><h2>No statistics yet</h2><p>Complete your first Exam Mode session and your statistics will appear here.</p></section>
+      <section id="loginRequired" class="account-state" hidden><h2>Sign in required</h2><p>Sign in to your KROK Trainer account to view your statistics.</p><a class="account-state-action" href="../account.html">Sign In</a></section>
+      <section class="account-state" id="statisticsLoading"><p>Loading your statistics...</p></section>
+      <section id="emptyStatistics" class="account-state" hidden><h2>No statistics yet</h2><p>Complete your first Exam Mode session and your statistics will appear here.</p></section>
+      <section id="statisticsError" class="account-state" role="alert" hidden><h2>Unable to load statistics</h2><p>We couldn't load your statistics right now. Please try again.</p><button id="statisticsRetry" class="account-state-action" type="button">Try Again</button></section>
       <section id="statisticsContent" hidden>
         <div class="temporal-filter" role="group" aria-labelledby="temporalFilterLabel">
           <span id="temporalFilterLabel" class="temporal-filter-label">Time period</span>

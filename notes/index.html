@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="../components/sidebar.css" />
   <link rel="stylesheet" href="../components/breadcrumb.css" />
   <link rel="stylesheet" href="notes.css" />
+  <link rel="stylesheet" href="../components/account-state.css">
 </head>
 <body>
   <aside id="appSidebar" data-root="../" data-active="notes"></aside>
@@ -20,10 +21,10 @@
         <p>Your saved notes from KROK questions, synced across devices.</p>
       </header>
 
-      <section id="notesAuthGate" class="notes-empty" hidden>
-        <h2>Sign in to view your notes</h2>
-        <p>My Notes is available to registered users so your study notes can be saved securely in the cloud.</p>
-        <a href="../account.html" class="notes-primary-link">Sign in →</a>
+      <section id="notesAuthGate" class="account-state" hidden>
+        <h2>Sign in required</h2>
+        <p>Sign in to your KROK Trainer account to view and manage your saved notes.</p>
+        <a href="../account.html" class="account-state-action">Sign In</a>
       </section>
 
       <section id="notesContent" hidden>
@@ -41,7 +42,7 @@
 
         <div class="notes-summary"><span id="notesCount">0 notes</span></div>
         <div id="notesList" class="notes-list"></div>
-        <div id="notesEmpty" class="notes-empty" hidden>
+        <div id="notesEmpty" class="account-state" hidden>
           <h2>No notes yet</h2>
           <p>Add notes while studying in Practice Mode and they will appear here automatically.</p>
         </div>
